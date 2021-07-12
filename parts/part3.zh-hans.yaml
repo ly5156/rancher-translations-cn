@@ -1,0 +1,1108 @@
+action:
+  activate: 激活
+  addContainer: 部署 Pod
+  addHost: 添加主机
+  addSidekick: 添加 Sidecar
+  auditlog: 审计日志
+  backupEtcd: 备份
+  backupEtcdMessage:
+    fail:
+      message: 备份{ clusterId }到{ backupType }存储
+      title: 备份失败
+    success:
+      message: 已备份 { clusterId } 到 { backupType } 存储。
+      start: 开始备份
+      title: 备份成功
+  clone: 克隆
+  cloneCrossCluster: 跨集群克隆
+  cloneRevision: 克隆修订
+  console: 打开控制台
+  convertToService: 转换为服务
+  cordon: 暂停
+  deactivate: 停用
+  disableAutoInject: 禁用 Istio 自动注入
+  download: 下载
+  downloadFile: 下载文件
+  downloadYaml: 下载 YAML
+  drain: 驱散
+  edit: 编辑
+  editConfig: 编辑配置
+  editService: 编辑服务
+  editVsAnnotaionForGlobalDns: 添加/删除 Global DNS Record
+  editYaml: 查看/编辑 YAML
+  enableAutoInject: 启用 Istio 自动注入
+  evacuate: 疏散
+  execute: 执行命令行
+  exportConfig: 导出配置
+  garbageCollect: 清理
+  importHost: 导入主机
+  logs: 查看日志
+  makeDefault: 设置为默认
+  move: 移动
+  mute: 静默
+  nodeConfig: 下载 Keys
+  pause: 暂停编排
+  pauseAll: 全部暂停
+  redeploy: 重新部署
+  refreshAuthProviderAccess:
+    allSuccess:
+      message: 已为所有用户触发组成员更新。
+      title: 更新成功
+    label: 刷新组成员
+    success:
+      message: 已触发组成员刷新
+      title: Refresh Successful
+  registration: Registration Cmd
+  remove: 删除
+  replay: 重播
+  rerun: 重新运行
+  resetDefault: 恢复默认值
+  resize: 扩容
+  restart: 重启
+  restoreFromEtcdBackup: 恢复
+  resume: 恢复编排
+  resumeCronjob: 重新开始
+  retry: 重试
+  revert: 恢复默认值
+  revision: 新修订的默认值
+  rollback: 回滚
+  rotate: 更新证书
+  rotateEncryption: 轮换加密密钥
+  run: 运行
+  runCISScan: 运行 CIS 扫描
+  saveAsTemplate: 另存为 RKE 模板
+  scaledown: Scale Down
+  setDefault: 设置为默认值
+  setDefaultRevision:
+    success:
+      message: 已在 {ctName} 的默认修订中设置了 {name}。
+      title: 成功
+  setting: 设置
+  start: 启动
+  startAll: 全部开始
+  stop: 停止
+  stopAll: 全部停止
+  stopDrain: 停止驱散
+  suspend: 暂停
+  test: 测试
+  uncordon: 激活
+  unmute: 取消静默
+  upgrade: 升级
+  upgradeOrEdit: 升级/编辑
+  viewConfig: 查看配置
+  viewGraph: 查看图形
+  viewInApi: API 查看
+  viewInGrafana: 查看 Grafana
+  viewInstance: 查看实例
+  viewYaml: 查看 YAML
+clusterDrivers:
+  add: 添加集群驱动
+  builtIn: 内置
+  refresh: 刷新 Kubernetes 元数据
+  table:
+    noData: 当前集群没有配置任何节点
+    noMatch: 没有节点匹配当前搜索
+clusterTemplateRevisionUpgradeNotification:
+  tooltip: 修订 {revision} 可用于升级。
+clusterTemplatesPage:
+  headers:
+    created: 创建时间
+    defaultRevisionId: 默认修订
+    revisionsCount: 修订版本
+  index:
+    header: RKE 集群模板列表
+    newTemplate: 添加模板
+  new:
+    header: 添加模板
+  newRevision:
+    header: 新集群模板修订
+  select:
+    label: 从模板修订克隆
+  table:
+    name: 修订版本名称
+containersSection:
+  detail: Pod 中的容器
+  initContainer: Init 容器
+  noData: 没有容器
+  noMatch: 没有容器与当前搜索匹配
+  title: 容器
+copyToClipboard:
+  copied: 已复制
+  tooltip: 复制到剪贴板
+cruPersistentVolumeClaim:
+  capacity:
+    help: 帮助
+    label: 容量
+    unit: GiB
+  define:
+    addActionLabel: 配置
+  name:
+    placeholder: "例如: myvol"
+  pv:
+    label: 持久卷 (PV)
+    prompt: 选择持久卷 (PV)…
+  secretRequired:
+    name: 密文名称
+    namespace: 密文命名空间
+  source:
+    label: 来源
+    pv: 使用现有的持久卷 (PV)
+    storageClass: 使用存储类创建新的持久卷 (PV)
+  storageClass:
+    label: 存储类 (Storage Class)
+    prompt: 使用默认 storage class
+  title:
+    define: 配置 PVC
+    edit: "编辑 PVC: {name}"
+    new: 添加 PVC
+    view: "PVC: {name}"
+  volumeHandleRequired:
+    label: Volume Handle
+editCertificate:
+  description:
+    placeholder: "例如: Mydomain.com 的 EV 证书。"
+  name:
+    placeholder: e.g. mydomain.com
+  noteKeyWriteOnly: "注意: Private Key 部分为只写 (write only) 因而显示为空白。更新证书时您需要重新上传 Private Key，即便 Private Key 未发生变化。"
+  title: 编辑证书
+editCluster:
+  description:
+    label: 描述
+    placeholder: "例如: 开发人员所共享的集群。"
+  modal:
+    onCluster: "注意: 您正在尝试删除当前环境所在的集群。请在删除该集群之前，先选择其他集群的环境。"
+  name:
+    label: 名称
+    placeholder: "例如: Sandbox"
+  systemStacks:
+    add: 添加应用
+    cancel: 取消添加系统应用
+    detail: 这些应用将会被自动部署到该集群的 System 环境中。
+    hr: 集群选项
+    noData: 没有应用将会被部署到系统环境中。
+    title: 系统应用
+  title:
+    edit: 编辑集群
+    new: 添加集群
+editPipelineConfig:
+  download: 仅下载流水线配置。
+  header: 修改流水线配置
+  pushToReop: 将如下的流水线配置自动推送到远端代码库。
+  timeout:
+    helpText: 如果构建在该时间内没有执行完成，则终止本次构建。
+    label: 超时时间
+enablePipeline:
+  configNow: 立即设置
+  header: 启用代码库认证
+  helpText: 代码库认证尚未开启,需要先开启代码库认证。
+  noPermission: 代码库认证尚未开启,需要联系项目管理员设置认证。
+formBalancerListeners:
+  access:
+    internal: 内部
+    label: 访问
+    public: 公开
+  addPortLabel: 添加监听端口
+  detail: 配置负载均衡，使其将请求转发到目标地址。
+  help: 主机及路径规则将根据显示的顺序自上而下进行匹配，后端默认将随机命名。要自定义生成的后端，提供一个名称并在您自定义的 haproxy.cfg 文件中引用该名称。
+  label: 监听器与目标规则
+  noRules: 没有端口
+  protocol:
+    label: 协议
+  removePortLabel: 删除这个监听端口
+  showBackendLabel: 自定义 backend 名称
+  sourceIp:
+    label: 主机 IP
+    placeholder: "例如: 1.2.3.4; Default: All"
+  sourcePort:
+    label: 监听端口
+    placeholder: "例如: 80"
+  status: "{count, plural,\n=0{ 无规则 }\n=1{#条规则 }\nother {#条规则 }\n}\n"
+formHealthCheck:
+  checkType:
+    command: 容器中进程退出状态码检查(0)
+    http: HTTP 请求状态检查(2xx 或 3xx)
+    https: HTTPS 请求状态检查(2xx 或 3xx)
+    none: 无
+    tcp: TCP 端口检查
+  combinedLivenessCheck: 使用相同的就绪状态(readiness)与存活状态(liveness)配置。
+  command:
+    label: 命令
+    placeholder: "例如: cat /tmp/health"
+  detail: 周期性向容器发出请求，以检测其健康状态。默认设置下，readiness 和 liveness 使用相同的配置参数。对于应用初始化较长的容器，需要增加就绪检测时间。
+  failureThreshold:
+    label: 不健康阈值
+    unit: 失败
+  host:
+    label: 主机 Header
+    placeholder: "例如: example.com"
+  httpHeaders:
+    addActionLabel: 添加 Header
+    keyLabel: Header 名称
+    keyPlaceholder: "例如: 用户代理"
+    label: 其他的 HTTP Headers
+    valuePlaceholder: "例如: 健康检查"
+  initialDelaySeconds:
+    label: 运行多少时间后开始检测
+  liveness: 存活状态检查 (Liveness)
+  path:
+    label: 请求路径
+    placeholder: "例如: /health"
+  periodSeconds:
+    label: 检查间隔
+  port:
+    label: 容器端口
+    placeholder: "例如: 80"
+  readiness: 就绪状态检查 (Readiness)
+  reinitializingTimeout:
+    label: 重新检查时间
+  separateLivenessCheck: 单独配置存活状态(liveness)检查。
+  successThreshold:
+    label: 健康阈值
+    unit: 成功
+  timeoutSeconds:
+    label: 检查超时
+  title: 健康检查
+formNodeTaints:
+  addAction: 添加污点（Taint）
+  detail: 污点标记的节点不接受未配置容忍（tolerate）的 Pods 调度。
+  effect:
+    label: 影响
+  key:
+    label: 键
+    placeholder: "例如: foo"
+  protip: 必须是唯一的键值对
+  title: 污点（Taints）
+  value:
+    label: 值
+    placeholder: "例如: bar"
+formPorts:
+  addAction: 添加规则
+  containerPort:
+    label: 容器端口
+    placeholder: "例如: 8080"
+  dnsName:
+    label: DNS 记录
+    placeholder: "例如: example"
+  error:
+    hostPort:
+      sourcePortRequired: 必须设置主机端口。
+    loadBalancer:
+      sourcePortRequired: 每条规则必须设置源端口。
+    mixedIpPort: Port{ip}:{port}/{proto} 有超过一条映射规则。
+    mixedPort: Port{port}/{proto} 有超过一条映射规则。
+    privateRequired: 每条映射规则必须设置容器端口。
+    publicRequired: 如果指定了主机 IP，则需要源端口。
+  header: 端口映射
+  hostPortWarning: "Host Port 模式不支持 Windows 节点。了解更多关于 Windows 在 Kubernetes 中的<a href=\"https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#limitations\" target=\"_blank\">支持限制</a>。"
+  kind:
+    ClusterIP: 集群 IP (集群内部访问)
+    HostPort: HostPort (仅 Pod 所在主机端口可访问)
+    HostPortDisbaled: HostPort
+    LoadBalancer: L4 层负载均衡器 (对接公有云负载均衡服务)
+    LoadBalancerDisbaled: Layer-4 Load Balancer
+    NodePort: NodePort (所有主机端口均可访问)
+    label: 网络模式
+  name:
+    label: 名称
+    placeholder: "例如: backend"
+  noPorts: 此容器没有端口映射。
+  nodePort:
+    customPortRangePlaceholder: "端口范围 {range}，例如: {port}"
+    placeholder: "默认端口范围 30000-32767，例如: 30000"
+  protocol:
+    label: 协议
+  showAdvanced: 显示端口命名选项
+  sourcePort:
+    clusterIpDefault: 与容器端口相同
+    ipPlaceholder: "例如: 80 或 19.82.2.24:80"
+    label: 主机端口监听
+    placeholder: "例如: 80"
+  warning: 这个工作负载不是由 {appName} 或 {appName} API 创建的，{appName} 不会自动为端口映射创建相关服务。
+formReservation:
+  limitCpu:
+    label: "{component} CPU 限制"
+    placeholder: "例如: 1000"
+  limitMemory:
+    label: "{component} Memory 限制"
+    placeholder: "例如: 1000"
+  requestCpu:
+    label: "{component} CPU 预留"
+    placeholder: "例如: 1000"
+  requestMemory:
+    label: "{component} Memory 预留"
+    placeholder: "例如: 1000"
+formScheduling:
+  addCustom: 添加自定义规则
+  addRule: 添加规则
+  autoPick:
+    container: 每个 Pod 自动匹配主机
+    host: 自动选择符合调度规则的主机
+    vm: 为每一个虚拟机自动选择符合调度规则的主机
+  autoRun: 在匹配调度规则的每个主机上自动运行
+  canRequestHost:
+    containers: 指定主机运行 <b>所有 Pods</b>
+    vm: 在指定主机上运行 <b>所有</b> 虚拟机
+  condition: 条件
+  detail: 配置 Pod 对应的主机调度规则。
+  effect: 影响
+  field: 字段
+  hostMax: 最大主机数
+  key: 键
+  noRules: 没有配置规则
+  noToleration: 未配置节点污点
+  nodeSelector:
+    custom:
+      placeholder: "例如: foo>42 && bar != baz"
+    multiple:
+      placeholder: "例如: foo，bar，baz"
+    operator:
+      eq: =
+      exists: 已设置
+      ge: "&ge;\n"
+      gt: ">"
+      in: 在列表中
+      le: "&le;\n"
+      lt: <
+      ne: "&ne;\n"
+      notExists: 未设置
+      notIn: 不在列表中
+    preferred: 首选
+    requireAll: 必须
+    requireAny: 最好
+  operator: 操作符
+  perHost: 每个主机
+  priority:
+    label: 优先级
+    placeholder: "例如: 3"
+  priorityClassName:
+    label: 优先级显示名称
+    placeholder: "例如: 高"
+  runSpecific: 在指定主机上运行此 Pod
+  scaleIncrement: 伸缩增量
+  scaleMax: 最大数量
+  scaleMin: 最小数量
+  scaling:
+    hostMaxDetail: 如果设置，容器将最多被运行在这个数量的主机上。
+    incrementDetail: 如果设置，容器数量必须是它的倍数。
+    minMaxDetail: 如果设置，用户将无法通过界面或 API 请求使容器数量低于最小数量或超过最大数量。
+  scheduler:
+    label: 调度
+    placeholder: e.g. myScheduler
+  status: "{count, plural,\n=0{ 无规则 }\n=1{#条规则 }\nother {#条规则 }\n}\n"
+  time: 时间
+  title: 主机调度
+  toleration:
+    add: 添加调度容忍
+    title: 调度容忍
+    workloadTitle: "{workload} Pod 的容忍"
+  value: 值
+formScopedRoles:
+  description: 控制用户对 {type} 的访问权限。
+  mode:
+    admin:
+      detail: 所有者可以完全控制 {type} 和内部的所有资源。
+      label: 所有者
+    custom:
+      detail: 为用户选择单个角色
+      label: 自定义
+    readOnly:
+      detail: 成员仅可以查看 {type} 中的资源，但不能更改 {type} 本身。
+      label: 只读
+    role:
+      read-only:
+        detail: 允许查看所有，但不能修改。
+        label: 只读
+    user:
+      detail: 成员可以管理 {type} 内部的资源，但不能更改 {type} 本身。
+      label: 成员
+    userDef:
+      detail: 用户配置的角色
+  title: "{type} 权限"
+formServicePorts:
+  addAction: 添加
+  header: 端口映射
+  name:
+    label: 端口名称
+    placeholder: "例如: myport"
+  noPorts: 此服务没有端口映射。
+  nodePort:
+    label: 主机端口
+    placeholder: "例如: 30000"
+  port:
+    label: 服务端口
+    placeholder: "例如: 8088"
+  protocol:
+    label: 协议
+  targetPort:
+    default: 默认与服务端口相同
+    label: 目标端口（容器端口）
+    placeholder: "例如: 80"
+formShareMember:
+  add: 添加成员
+  helpText: 在分配所有者时，用户必须具有<a href="/g/security/roles">Create Cluster Template</a>全局角色，以便创建新的修订。这些权限可以由管理员授予。
+  public: 转换为公有 (只读)
+  table:
+    headers:
+      accessType: 访问类型
+      name: 名称
+    noData: 您没有与任何人共享此集群模板。
+    noMatch: 没有成员匹配您的搜索
+formValueArray:
+  addActionLabel: 添加值
+  noData: 没有数据
+  protip: "高级技巧: 在任意输入栏中粘贴一行或多行的 value 能够批量输入。"
+  valueLabel: 值
+  valuePlaceholder: 值
+formVolumePodSecurityPolicy:
+  detail: 控制卷类型的使用
+  title: 卷策略
+  volumes: 数据卷
+hostSettings:
+  badTld:
+    alert: "'<code>.local</code>顶级域名根据 RFC6762 被保留为用于多播 DNS。不推荐使用.local 域名作为注册 URL，该设置可能导致 DNS 解析问题。请选择其他的主机名或者 IP 地址。'\n\n"
+  header: 主机注册 URL
+  helpText:
+    isRancher: <a href="{docsBase}/installing-rancher/installing-server/basic-ssl-config/" target="_blank">SSL 终止</a>
+    sslTerm: SSL 终止
+    static1: 不要包含<code>/v1</code>或任何其他路径，但如果您设置了
+    static2: 在 {appName} 前面，请确保使用 <code>https://</code>.
+  hostUrl:
+    local: "当前站点地址:"
+    new:
+      labelText: "其他地址:"
+      placeholder: "例如: http://example.com:8080"
+  notPublic:
+    alert: |
+      确定要创建的所有主机都能够连接 <code>{activeValue}</code>？<br/> 当前地址似乎是私有 IP 或内部网络。
+  subtext: 主机连接 {appName} API 的 Base URL 是？
+ingressPage:
+  gkeIngressWarning: Kubernetes Engine 可能需要几分钟才能分配外部 IP 地址并准备负载均衡器。与此同时，您可能会收到 HTTP 404 和 HTTP 500 等错误，直到负载平衡器准备好为流量提供服务。
+  header: "Ingress: {name}"
+  table:
+    noData: 没有配置 ingress 规则
+    noMatch: 没有 ingresses 匹配当前搜索。
+    targets:
+      label: 目标
+inputAnswers:
+  config: 配置选项
+  editAsForm: 编辑表单
+  noConfig: 该模板没有配置选项
+  protip: 粘贴和读取操作要求应答为 yml/yaml 格式
+  unknownType: "未识别问题类型:"
+  yaml: 编辑 YAML
+  yamlConfig: 粘贴或者上传 yml/yaml 格式的应答参数
+  yamlProtip: 您可以在下面的预览部分，找到该应用的默认应答值
+inputIdentity:
+  dropdownLabel:
+    groups: 组织
+    teams: 团队和组织
+  placeholder:
+    generic: 添加用户名或组名
+    github: 添加 GitHub 用户或组织名称
+k8sImport:
+  actionLabel: 导入
+  header: 导入现有的 Kubernetes
+  kubeConfig:
+    label: 要导入的 Kubeconfig 文件
+    placeholder: 导入或粘贴集群的 Kubeconfig 文件以供使用。
+  name:
+    label: 集群名称
+    placeholder: e.g. my-imported-cluster
+loginShibboleth:
+  buttonText: 用 Shibboleth 登录
+managedImportClusterInfo:
+  detail: 自定义 {provider} 集群选项
+  drainServerNodes: 驱散 Control Plane 节点
+  drainWorkerNodes: 驱散 Worker 节点
+  error:
+    int: 并发数必须是整数值
+  kubernetesVersion: Kubernetes 版本
+  serverConcurrency: Control Plane 并发数
+  title: "{provider} 选项"
+  workerConcurrency: Worker 并发数
+metrics:
+  apiserver-request-count: API Server 请求速率
+  apiserver-request-latency: API Server 请求延迟
+  cluster-cpu-load: 集群负载
+  cluster-cpu-usage: CPU 使用率
+  cluster-disk-io: 磁盘 I/O
+  cluster-fs-usage-percent: 磁盘使用率
+  cluster-gpu-memory-usage: GPU 内存使用率
+  cluster-memory-usage: 内存使用率
+  cluster-network-io: 网络 I/O
+  cluster-network-packet: 网络数据包
+  container-cpu-usage: CPU
+  container-disk-io: 磁盘 I/O
+  container-memory-usage-bytes-sum: 内存
+  controllermanager-queue-depth: 控制器队列深度
+  etcd-db-bytes-sum: 数据库大小
+  etcd-disk-operate: 磁盘操作
+  etcd-grpc-client: GRPC 客户端流量
+  etcd-leader-change: Leader 变更
+  etcd-peer-traffic: 传输流量
+  etcd-raft-proposals: Raft 提议
+  etcd-rpc-rate: RPC 速率
+  etcd-stream: 活动流
+  etcd-sync-duration: 磁盘同步周期
+  fluentd-buffer-queue-length: Fluentd 缓存区队列长度
+  fluentd-input-record-number: Fluentd 输入速率
+  fluentd-output-errors: Fluentd 输出错误速率
+  fluentd-output-record-number: Fluentd 输出速率
+  global-cluster-cpu-usage: 集群 CPU 使用量 Top 5
+  global-cluster-disk-usage: 集群磁盘使用量 Top 5
+  global-cluster-memory-usage: 集群内存使用量 Top 5
+  global-node-cpu-usage: 节点 CPU 使用量 Top 5
+  global-node-disk-usage: 节点磁盘使用量 Top 5
+  global-node-memory-usage: 节点内存使用量 Top 5
+  global-pod-cpu-usage: Pod CPU 使用量 Top 5
+  global-pod-memory-usage: Pod 内存使用量 Top 5
+  global-pod-restart: 集群 Pod 重启次数 Top 5
+  global-pod-unhealthy: 集群异常 Pod 数量 Top 5
+  global-pod-unschedulable: 集群不可调度 Pod 数量 Top 5
+  ingresscontroller-nginx-connection: Ingress 控制器连接数
+  ingresscontroller-request-process-time: Ingress 控制器请求处理时长
+  istio-4xxs: 项目 4xx 错误代码计数
+  istio-4xxs-top10: 服务 4xx 错误代码计数
+  istio-5xxs: 项目 5xx 错误代码计数
+  istio-5xxs-top10: 服务 5xx 错误代码计数
+  istio-global-request-volume: Project Request Volume
+  istio-global-request-volume-top10: Request Volume by Service
+  istio-global-success-rate: Project Success Rate
+  istio-request-duration-p50-top10: P50 Request Latency by Service
+  istio-request-duration-p90-top10: P90 Request Latency by Service
+  istio-request-duration-p99-top10: P99 Request Latency by Service
+  node-cpu-load: 节点负载
+  node-cpu-usage: CPU 使用率
+  node-disk-io: 磁盘 I/O
+  node-fs-usage-percent: 磁盘使用率
+  node-gpu-memory-total: GPU 内存总量
+  node-gpu-memory-usage: GPU 内存使用率
+  node-memory-usage: 内存使用率
+  node-network-io: 网络 I/O
+  node-network-packet: 网络数据包
+  pod-cpu-usage: CPU
+  pod-disk-io: 磁盘 I/O
+  pod-memory-usage-bytes-sum: 内存
+  pod-network-io: 网络 I/O
+  pod-network-packet: 网络数据包
+  scheduler-e-2-e-scheduling-latency-seconds-quantile: 调度器 e2e 调度延迟
+  scheduler-pod-unscheduler: 调度失败的 Pod
+  scheduler-total-preemption-attempts: 调度器尝试调度次数
+  workload-cpu-usage: CPU
+  workload-disk-io: 磁盘 I/O
+  workload-memory-usage-bytes-sum: 内存
+  workload-network-io: 网络 I/O
+  workload-network-packet: 网络数据包
+modalDeleteGroupRoleBinding:
+  createLabel: 确定删除
+  header: "您确定要删除组的所有权限吗: {groupName}"
+modalDeleteIstio:
+  disable: 禁用
+  disabling: 禁用中
+  onlyIstio:
+    "false": 包括 Istio 和 Monitoring
+    "true": 仅 Istio
+  title: "您确定要禁用:"
+modalFeedback:
+  header: 欢迎使用 {appName}!
+  send: 开始使用
+  subtitle: 在开始使用前，请让我们了解关于您的信息...
+modalRollbackService:
+  action: 回滚
+  current:
+    label: 当前版本
+  difference:
+    label: 区别
+  revisionId:
+    label: 回滚到版本
+    prompt: 选择版本..
+  title: 回滚 "{instanceName}"
+  titleWithSidekicks: "回滚 \"{instanceName}\"&{count, plural,=1{#个 sidecar} other {#个 sidecars}}"
+modalShell:
+  title: "命令行: "
+moveNamespace:
+  actionLabel: 移动
+  title: "移动 {count, plural,\n=1 { 命名空间: {name}}\nother {#个命名空间: }}\n"
+  to: "到目标项目: "
+namespacesPage:
+  addNamespace: 添加命名空间
+  header: 命名空间
+  noData: 此集群未创建任何命名空间。
+  noMatch: 没有符合搜索的命名空间。
+  table:
+    created:
+      label: 创建时间
+    description:
+      label: 描述
+    name:
+      label: 命名空间
+    pods:
+      label: Pods
+    project:
+      label: 项目
+    workloads:
+      label: 工作负载
+nav:
+  admin:
+    catalogs: 商店设置
+    clusters:
+      rkeTemplate: RKE 集群模板
+      tab: 集群
+    drivers: 驱动管理
+    globalDns: 全局 DNS 服务
+    globalDnsEntries: 全局 DNS 服务
+    globalDnsProviders: 全局 DNS 提供商
+    globalMonitoring: 全局监控
+    globalRegistry: 全局镜像库
+    imageRepo:
+      config: Harbor 配置
+      logs: 日志
+      projects: 镜像管理
+      registries: 仓库管理
+      tab: 镜像仓库
+    machines: 主机
+    multiClusterApps: 多集群应用
+    security:
+      accounts: 用户
+      authentication: 认证
+      cloudCredentials: 云凭证
+      groupAccounts: 用户组
+      members: 成员
+      podSecurityPolicies: Pod 安全策略
+      roles: 角色
+      tab: 安全
+    settings:
+      advanced: 高级
+      auth: 访问控制
+      registration: 主机注册
+      tab: 系统设置
+    tab: 全局
+  api:
+    link: API & Keys
+  apps:
+    apps: 应用列表
+    launch: 启动
+    manage: 管理
+    noData: 目前没有运行应用程序
+    noMatch: 没有应用程序匹配当前搜索
+    tab: 应用商店
+  auditLog:
+    tab: 审计日志
+  catalog:
+    all: 全部
+    community: 社区贡献
+    library: 官方认证
+  cluster:
+    dashboard: 集群
+    members: 成员
+    namespaces: 命名空间
+    nodes: 主机
+    projects: 项目/命名空间
+    staticPods: Static Pods
+    storage:
+      classes: 存储类
+      tab: 存储
+      volumes: 持久卷
+    vlansubnet: 扁平网络
+  clusterTemplates:
+    link: 集群模板
+  containers:
+    addBalancer: 添加负载均衡
+    addContainer: 添加容器
+    addDns: 添加 DNS 记录
+    addHpa: 添加 HPA
+    addIngress: 添加规则
+    addVolume: 添加 PVC
+    containers: 工作负载
+    deploy: 部署服务
+    dns: 服务发现
+    hpa: HPA
+    importCompose: 导入 YAML
+    ingresses: 负载均衡
+    pipelines: 流水线
+    systemTab: 系统
+    tab: 工作负载
+    volumes: PVC
+  dashboard:
+    try: 仪表盘
+  f5:
+    controllers: F5 负载均衡
+    tls: TLS
+  group:
+    namespace: 按命名空间分组
+    namespaceWorkload: 按命名空间/工作负载分组
+    node: 按主机分组
+    none: 列表视图
+    workload: 按负载量分组
+  hosts:
+    addHost: 添加主机
+    tab: 主机
+  infra:
+    certificates: 证书
+    configMaps: 配置映射
+    f5Ingresses: F5 负载均衡
+    hpa: HPA
+    members: 成员
+    pipelines: 流水线
+    registries: 镜像库凭证
+    secrets: 密文
+    storagePage: 存储
+    tab: 资源
+  nodeTemplates:
+    link: 主机模板
+  project:
+    namespaces: 命名空间
+    none: 项目/命名空间
+  projectDropdown:
+    clusters: 集群
+    clustersNoData: 没有集群。
+    clustersNoMatch: 没有与 "{searchInput}" 匹配的集群。
+    label: 范围
+    projectInCluster: 在集群 {cluster} 中的项目。
+    projectNoData: 当前集群没有项目。
+    projectNotReady: 集群未就绪。
+    projects: 项目
+    projectsIn: 集群 {cluster} 中的项目。
+    projectsNoData: 选择集群来查看项目。
+    projectsNoMatch: 没有与 "{searchInput}" 匹配的项目。
+    search: 搜索...
+  settings:
+    advanced: 高级
+    tab: 系统设置
+  srToggleDropdown: 切换下拉菜单
+  tools:
+    alerts: 告警
+    backup: Rancher 备份
+    backups: 备份
+    catalogs: 商店设置
+    cisF5: F5 负载均衡服务
+    cisScans: CIS 扫描
+    fleet: 持续交付
+    gatekeeper: OPA Gatekeeper
+    istio: Istio
+    logging: 日志
+    monitoring: 监控
+    notifiers: 通知
+    pipeline: 流水线
+    rio: Rio
+    tab: 工具
+  user:
+    label: "用户菜单: {username}"
+    logout: 注销
+  userPreferences:
+    link: 设置
+newStack:
+  answers:
+    addActionLabel: 添加应答
+    label: 应答(变量替换)
+  description:
+    placeholder: e.g. MyApp Stack
+  files:
+    addActionLabel: 添加文件
+    label: 额外的 Compose 文件
+    namePlaceholder: 文件名
+    protipLabel: 支持 {appName}<code>compose.yml</code>，<code>docker-compose.yml</code> 和 Kubernetes 清单文件。
+    uploadActionLabel: 从磁盘读取
+    valuePlaceholder: 文件内容
+  header: 导入 YAML
+  name:
+    placeholder: e.g. myapp
+pagination:
+  catalog: "{pages, plural,\n=0{ 无应用商店 }\n=1{ 选中 {count}{count, plural,=1{ 个应用商店 } other { 个应用商店 }}}\nother { 当前显示 {count} 个应用商店中的 {from} 到 {to} 个 }}\n"
+  certificate: "{pages, plural,\n=0{ 无证书 }\n=1{ 选中 {count}{count, plural,=1{ 个证书 } other { 个证书 }}}\nother { 当前显示 {count} 个证书中的 {from} 到 {to} 个 }}\n"
+  cluster: "{pages, plural,\n=0{ 没有集群 }\n=1{ 选中 {count}{count, plural,=1{ 个集群 } other { 个集群 }}}\nother { 当前显示 {count} 个集群中的 {from} 到 {to} 个 }}\n"
+  clusterTemplates: "{pages, plural,\n=0 {No Template Revisions}\n=1 {{count} {count, plural, =1 {Template Revision} other {Template Revisions}}}\nother {{from} - {to} of {count} Template Revisions}}\n"
+  container: "{pages, plural,\n=0 { 无容器 }\n=1{ 选中 {count} {count, plural, =1{ 个容器 } other { 个容器 }}}\nother { 当前显示 {count} 个容器中的 {from} 到 {to} 个 }}\n"
+  destinationRules: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Destination Rule} other {Destination Rules}}}\nother {{from} - {to} of {count} Destination Rules}}\n"
+  dnsProvider: "{pages, plural,\n=0{ 无 DNS 提供商 }\n=1{ 选中 {count}{count, plural,=1{ 条 DNS 提供商 } other { 条 DNS 提供商 }}}\nother { 当前显示 {count} 条 DNS 提供商 中的 {from} 到 {to} 条 }}\n"
+  dnsRecord: "{pages, plural,\n=0{ 无 DNS 记录 }\n=1{ 选中 {count}{count, plural,=1{ 条 DNS 记录 } other { 条 DNS 记录 }}}\nother { 当前显示 {count} 条 DNS Records 中的 {from} 到 {to} 条 }}\n"
+  driver: "{pages, plural,\n=0{ 无驱动 }\n=1{ 选中 {count}{count, plural,=1{ 个驱动 } other { 个驱动 }}}\n  other { 当前显示 {count} 个驱动中的 {from} 到 {to} 个 }}\n"
+  driverOptions: "{pages, plural,\n=0{ 无驱动选项 }\n=1{ 选中 {count}{count, plural,=1{ 个驱动选项 } other { 个驱动选项 }}}\nother { 当前显示 {count} 个驱动选项中的 {from} 到 {to} 个 }}\n"
+  entry: "{pages, plural,\n=0{ 无条目 }\n=1{ 选中 {count}{count, plural,=1{ 个条目 } other { 个条目 }}}\nother { 当前显示 {count} 个条目中的 {from} 到 {to} 个 }}\n"
+  event: "{pages, plural,\n=0{ 无事件 }\n=1{ 选中 {count}{count, plural,=1{ 个事件 } other { 个事件 }}}\nother { 当前显示 {count} 个事件中的 {from} 到 {to} 个 }}\n"
+  f5Ctl: "{pages, plural,\n=0{ 无 F5负载均衡}\n=1{ 选中 {count}{count, plural,=1{ 个 F5负载均衡} other { 个 F5负载均衡}}}\nother { 当前显示 {count} 个 F5负载均衡 中的 {from} 到 {to} 个 }}\n"
+  f5Tls: "{pages, plural,\n=0{ 无 TLS证书}\n=1{ 选中 {count}{count, plural,=1{ 个 TLS证书} other { 个 TLS证书}}}\nother { 当前显示 {count} 个 TLS证书 中的 {from} 到 {to} 个 }}\n"
+  features: "{pages, plural,\n=0 {No Features}\n=1 {{count} {count, plural, =1 {Feature} other {Features}}}\nother {{from} - {to} of {count} Features}}\n"
+  gateways: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Gateway} other {Gateways}}}\nother {{from} - {to} of {count} Gateways}}\n"
+  generic: "{pages, plural,\n=0{ 无条目 }\n=1{ 选中 {count}{count, plural, =1{ 个条目 } other { 个条目 }}}\nother { 当前显示 {count} 个条目中的 {from} 到 {to} 个 }}\n"
+  hpa: "{pages, plural,\n=0 { 没有 Pod 自动水平伸缩规则 }\n=1 { 选中 {count} {count, plural, =1 { 条 Pod 自动水平伸缩规则 } other { 条 Pod 自动水平伸缩规则 }}}\nother { 当前显示 {count} 条 Pod 自动水平伸缩规则中的 {from} 到 {to} 条 }}\n"
+  image: "{pages, plural,\n=0{ 无镜像 }\n=1{ 选中 {count}{count, plural,=1{ 个镜像 } other { 个镜像 }}}\nother { 当前显示 {count} 个镜像中的 {from} 到 {to} 个 }}\n"
+  ingress: "{pages, plural,\n=0{ 无 Ingresses}\n=1{ 选中 {count}{count, plural,=1{ 个 Ingresses} other { 个 Ingresses}}}\nother { 当前显示 {count} 个 Ingresses 中的 {from} 到 {to} 个 }}\n"
+  istioRule: "{pages, plural,\n=0 {No Traffic Rules}\n=1 {{count} {count, plural, =1 {Traffic Rule} other {Traffic Rules}}}\nother {{from} - {to} of {count} Traffic Rules}}\n"
+  link: "{pages, plural,\n=0{ 无链接 }\n=1{ 选中 {count}{count, plural,=1{ 个链接 } other { 个链接 }}}\nother { 当前显示 {count} 个 Links 中的 {from} 到 {to} 个 }}\n"
+  loadBalancer: "{pages, plural,\n=0{ 无负载均衡 }\n=1{ 选中 {count}{count, plural,=1{ 条负载均衡 } other { 条负载均衡 }}}\nother { 当前显示 {count} 条负载均衡中的 {from} 到 {to} 条 }}\n"
+  member: "{pages, plural,\n=0{ 无成员 }\n=1{ 选中 {count}{count, plural,=1{ 个成员 } other { 个成员 }}}\nother { 当前显示 {count} 个成员中的 {from} 到 {to} 个 }}\n"
+  mount: "{pages, plural,\n=0{ 无挂载 }\n=1{ 选中 {count}{count, plural,=1{ 个挂载 } other { 个挂载 }}}\nother { 当前显示 {count} 个挂载中的 {from} 到 {to} 个 }}\n"
+  namespace: "{pages, plural,\n=0{ 无命名空间 }\n=1{ 选中 {count}{count, plural,=1{ 个命名空间 } other { 个命名空间 }}}\nother { 当前显示 {count} 个命名空间中的 {from} 到 {to} 个 }}\n"
+  node: "{pages, plural,\n=0{ 无主机 }\n=1{{count}{count, plural,=1{ 台主机 } other { 台主机 }}}\nother { 当前显示 {count} 个 Nodes 中的 {from} 到 {to} 个 }}\n"
+  nodePool: "{pages, plural,\n=0{ 无主机池 }\n=1{ 选中 {count}{count, plural,=1{ 个主机池 } other { 个主机池 }}}\nother { 当前显示 {count} 个 Node Pools 中的 {from} 到 {to} 个 }}\n"
+  nodeTemplate: "{pages, plural,\n=0{ 无主机模板 }\n=1{ 选中 {count}{count, plural,=1{ 个主机模板 } other { 个主机模板 }}}\nother { 当前显示 {count} 个主机模板中的 {from} 到 {to} 个 }}\n"
+  pod: "{pages, plural,\n=0 { 没有 Pods}\n=1{{count}{count, plural, =1{ 个 Pod} other { 个 Pods}}}\nother { 当前显示 {count} 个 Pods 中的 {from} 到 {to} 个 }}\n"
+  podHighlightSubset: <b>{subset} of {count}</b> Pods
+  podLabel: "{count, plural,\n  =1{ 个 Pod}\n  other { 个 Pods}\n}\n"
+  podNoSubset: 0 of {count} Pods
+  port: "{pages, plural,\n=0{ 无端口 }\n=1{ 选中 {count}{count, plural,=1{ 个端口 } other { 个端口 }}}\nother { 当前显示 {count} 个端口中的 {from} 到 {to} 个 }}\n"
+  project: "{pages, plural,\n=0{ 无项目 }\n=1{ 选中 {count}{count, plural,=1{ 个项目 } other { 个项目 }}}\nother { 当前显示 {count} 个项目中的 {from} 到 {to} 个 }}\n"
+  role: "{pages, plural,\n=0 { 没有角色 }\n=1 { 选中 {count} {count, plural, =1 { 条角色 } other { 条角色 }}}\nother { 当前显示 {count} 条角色中的 {from} 到 {to} 条 }}\n"
+  rule: "{pages, plural,\n=0{ 无规则 }\n=1{ 选中 {count}{count, plural,=1{ 条规则 } other { 条规则 }}}\nother { 当前显示 {count} 条规则中的 {from} 到 {to} 条 }}\n"
+  service: "{pages, plural,\n=0{ 无服务 }\n=1{ 选中 {count}{count, plural,=1{ 个服务 } other { 个服务 }}}\nother { 当前显示 {count} 个服务中的 {from} 到 {to} 个 }}\n"
+  storageClass: "{pages, plural,\n=0{ 无存储类 }\n=1{ 选中 {count}{count, plural,=1{ 个存储类 } other { 个存储类 }}}\nother { 当前显示 {count} 个 Storage Classes 中的 {from} 到 {to} 个 }}\n"
+  virtualServices: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Virtual Service} other {Virtual Services}}}\nother {{from} - {to} of {count} Virtual Services}}\n"
+  volume: "{pages, plural,\n=0{ 没有卷 }\n=1{ 选中 {count}{count, plural,=1{ 个卷 } other { 个卷 }}}\nother { 当前显示 {count} 个数据卷中的 {from} 到 {to} 个 }}\n"
+  workload: "{pages, plural,\n=0{ 无工作负载 }\n=1{ 选中 {count}{count, plural,=1{ 个工作负载 } other { 个工作负载 }}}\nother { 当前显示 {count} 个工作负载中的 {from} 到 {to} 个 }}\n\n"
+pipelineNotification:
+  asMessage: 发送信息到
+  condition:
+    changed:
+      label: 改变
+    failed:
+      label: 失败
+    required: 构建状态必选
+    success:
+      label: 成功
+  header: 通知
+  recipients:
+    required: 接受者必填
+  when: 当构建状态为
+projectIstioPage:
+  info:
+    noPermission: 您没有配置 Istio 的权限。
+    notEnabled: Istio 尚未启用。点击 <a href="/c/{clusterId}/istio/cluster-setting">此处</a> 启用它。
+    notOwner: Istio 尚未启用，请与集群管理员联系。
+registriesPage:
+  index:
+    header: 镜像库凭证列表
+    linkTo: 添加凭证
+    noData: 没有镜像库凭证
+    noMatch: 没有镜像库凭据匹配当前搜索
+    table:
+      header:
+        address: 地址
+        created: 创建时间
+        state: 状态
+        username: 用户名
+  new:
+    form:
+      custom:
+        help: 仅添加域名或 IP 地址，不要包含协议头(https://)。
+        labelText: 地址
+        placeholder: "例如: registry.example.com"
+      password:
+        labelText: 密码
+        placeholder: "例如: password"
+      username:
+        labelText: 用户名
+        placeholder: "例如: username"
+    header: 添加镜像库凭证
+reservationParameters:
+  label: 资源限制
+  memory:
+    labelText: 内存
+    placeholder: "默认: 整个主机"
+    unit: MB
+  milliCpu:
+    labelText: 处理器
+    placeholder: "默认: 整个主机"
+    unit: mCPU
+rkeConfigComment:
+  clusterConfig: "\"\"\n\"Cluster Config\"\n\n"
+  ingress: "\"\"\n\"  # 当前仅支持 nginx 的 ingress\"\n\"  # 设置`provider: none`禁用 ingress 控制器\"\n\"  # 通过 node_selector 可以指定在某些节点上运行 ingress 控制器，例如: \"\n\"   provider: nginx\"\n\"   node_selector:\"\n\"     app: ingress\"\n"
+  network: "\"\"\n\"  # 如果您在 AWS 上使用 calico\"\n\"\"\n\"   network:\"\n\"     plugin: calico\"\n\"     calico_network_provider:\"\n\"       cloud_provider: aws\"\n\"\"\n\"  # 指定 flannel 网络接口\"\n\"\"\n\"   network:\"\n\"     plugin: flannel\"\n\"     flannel_network_provider:\"\n\"     iface: eth1\"\n\"\"\n\"  # 指定 canal 网络插件的 flannel 网络接口\"\n\"\"\n\"   network:\"\n\"     plugin: canal\"\n\"     canal_network_provider:\"\n\"       iface: eth1\"\n"
+  rancher_kubernetes_engine_config: "\"\"\n\"Rancher Config\"\n"
+  services: "\"\"\n\" # 自定义服务参数，仅适用于 Linux 环境\"\n\"   services:\"\n\"     kube-api:\"\n\"       service_cluster_ip_range: 10.43.0.0/16\"\n\"       extra_args: \"\n\"         default-not-ready-toleration-seconds: '60' # 默认 300 秒 \"\n\"         default-unreachable-toleration-seconds: '30' # 默认 300 秒 \"\n\"         watch-cache: true   \"\n\"     kube-controller:\"\n\"       cluster_cidr: 10.42.0.0/16\"\n\"       service_cluster_ip_range: 10.43.0.0/16\"\n\"       extra_args:     \"\n\"         # 修改每个节点子网大小(cidr 掩码长度)，默认为 24，可用 IP 为 254 个；23，可用 IP 为 510 个；22，可用 IP 为 1022 个；\"\n\"         node-cidr-mask-size: 24  \"\n\"         # 控制器定时与节点通信以检查通信是否正常，周期默认 5s  \"\n\"         node-monitor-period: '5s'  \"\n\"         # 当节点通信失败后，再等一段时间 kubernetes 判定节点为 notready 状态。这个时间段必须是 kubelet 的 nodeStatusUpdateFrequency(默认 10s)的 N 倍，其中 N 表示允许 kubelet 同步节点状态的重试次数，默认 40s。\"\n\"         node-monitor-grace-period: '20s' \"\n\"         # 再持续通信失败一段时间后，kubernetes 判定节点为 unhealthy 状态，默认 1m0s。\"\n\"         node-startup-grace-period: '30s' \"\n\"         # 再持续失联一段时间，kubernetes 开始迁移失联节点的 Pod，默认 5m0s。\"\n\"         pod-eviction-timeout: '1m'   \"\n\"     kubelet:\"\n\"       cluster_domain: cluster.local\"\n\"       cluster_dns_server: 10.43.0.10\"\n\"       # 扩展变量 \"\n\"       extra_args:\"\n\"         # 与 apiserver 会话时的并发数，默认是 10 \"\n\"         kube-api-burst: '30'      \"\n\"         # 与 apiserver 会话时的 QPS,默认是 5   \"\n\"         kube-api-qps: '15'  \"\n\"         # 修改节点最大 Pod 数量\"\n\"         max-pods: '250' \"\n\"         # secrets 和 configmaps 同步到 Pod 需要的时间，默认一分钟\"\n\"         sync-frequency: '3s'\"\n\"         # kubelet 默认一次拉取一个镜像，设置为 false 可以同时拉取多个镜像，前提是存储驱动要为 overlay2，对应的 Docker 也需要增加下载并发数     \"\n\"         serialize-image-pulls: false  \"\n\"         # 拉取镜像的最大并发数，registry-burst 不能超过 registry-qps ，仅当 registry-qps 大于 0(零)时生效，(默认 10)。如果 registry-qps 为 0 则不限制(默认 5)。\"\n\"         registry-burst: '10' \"\n\"         registry-qps: '0'   \"\n\"         # 以下配置用于配置节点资源预留和限制  \"\n\"         cgroups-per-qos: 'true'   \"\n\"         cgroup-driver: cgroupfs   \"\n\"         # 以下两个参数指明为相关服务预留多少资源，仅用于调度，不做实际限制\"\n\"         system-reserved: 'memory=300Mi'   \"\n\"         kube-reserved: 'memory=2Gi'  \"\n\"         enforce-node-allocatable: 'pods'  \"\n\"         # 硬驱逐阈值，当节点上的可用资源少于这个值时，就会触发强制驱逐。强制驱逐会强制 kill 掉 POD，不会等 POD 自动退出。\"\n\"         eviction-hard: 'memory.available<300Mi,nodefs.available<10%,imagefs.available<10%,nodefs.inodesFree<5%'   \"\n\"         # 软驱逐阈值  \"\n\"         ## 以下四个参数配套使用，当节点上的可用资源少于这个值时但大于硬驱逐阈值时候，会等待 eviction-soft-grace-period 设置的时长；\"\n\"         ## 等待中每 10s 检查一次，当最后一次检查还触发了软驱逐阈值就会开始驱逐，驱逐不会直接 Kill POD，先发送停止信号给 POD，然后等待 eviction-max-pod-grace-period 设置的时长； \"\n\"         ## 在 eviction-max-pod-grace-period 时长之后，如果 POD 还未退出则发送强制 kill POD\"\n\"         eviction-soft: 'memory.available<500Mi,nodefs.available<15%,imagefs.available<15%,nodefs.inodesFree<10%'   \"\n\"         eviction-soft-grace-period: 'memory.available=1m30s'    \"\n\"         eviction-max-pod-grace-period: '30'      \"\n\"         ## 当处于驱逐状态的节点不可调度，当节点恢复正常状态后\"\n\"         eviction-pressure-transition-period: '5m0s'       \"\n\"       extra_binds:      \"\n\"         - \"/usr/libexec/kubernetes/kubelet-plugins:/usr/libexec/kubernetes/kubelet-plugins\"    \"\n\"         - \"/etc/iscsi:/etc/iscsi\"     \"\n\"         - \"/sbin/iscsiadm:/sbin/iscsiadm\"       \"\n\"     etcd:     \"\n\"       # 修改空间配额为$((4*1024*1024*1024))，默认 2G,最大 8G    \"\n\"       extra_args:\"\n\"         quota-backend-bytes: '4294967296'        \"\n\"         auto-compaction-retention: 240 #(单位小时)      \"\n\"     kubeproxy:    \"\n\"       extra_args:     \"\n\"       # 默认使用 iptables 进行数据转发    \"\n\"         proxy-mode: \"\"    # 如果要启用 ipvs，则此处设置为`ipvs` \"\n"
+runPipeline:
+  branch:
+    label: 分支
+  noBranch: 该代码库没有发现 <code>.rancher-pipeline.yml</code>文件。您可以点击 <b>编辑配置</b> 通过向导的方式配置流水线，也可以点击 <b>查看/编辑 YAML</b> 直接修改配置。
+  title: 运行 {name}
+servicePage:
+  certsTab:
+    additional: 其他 SNI 证书
+    default: 默认证书
+    detail: TLS 请求所使用的证书
+    title: 证书
+  containersTab:
+    detail: 组成该服务的容器列表
+    title: 容器
+  endpoints: 访问端口
+  external:
+    externalHostname: "外部主机名: "
+    externalIp: "{count, plural,\n=1{ 个外部 IP }\nother { 个外部 IP }\n}\n"
+  globalScale: 每个主机 {scale}
+  header: "工作负载: {name}"
+  linksTab:
+    detail: 这些属性显示当前服务中容器之间的链接
+    header: 链接
+    noData: 当前服务没有链接
+  logTab:
+    detail: 这项服务最近发生的编排事件
+    title: 服务日志
+  multistat:
+    created: 创建时间
+    cronSchedule: 定时调度
+    currentScale: "Pod 可用副本数: {count}"
+    daemonSetScale: 每主机 1 个 Pod
+    fqdn: FQDN
+    image: 镜像名
+    namespace: 命名空间
+    podNum:
+      error:
+        required: pod 个数不能为空
+        typeError: pod 个数值为大于 0 的整数
+      label: pod 个数
+    scale: Pod 配置副本数
+    type: 类型
+  new:
+    form:
+      description:
+        placeholder: e.g. My application
+      name:
+        placeholder: e.g. myapp
+  newBalancer:
+    form:
+      description:
+        placeholder: "例如: Mycompany.com 的负载均衡"
+      name:
+        placeholder: e.g. website
+    upgradeImage: 负载均衡器镜像版本将由 <code>{from}</code> 升级到 <code>{to}</code>。
+  newIngress:
+    form:
+      description:
+        placeholder: "例如: Mycompany.com 的 Ingress"
+      load:
+        label: 扁平网络负载
+      name:
+        placeholder: e.g. website
+  portsTab:
+    detail: 从主机 IP 映射到容器监听的端口
+    notActive: 端口仅当服务处于活动状态时可见
+    title: 端口
+  selector:
+    label: "选择器: "
+  serviceType:
+    cronJob: Cron Job (定时运行 Pod)
+    daemonSet: Daemon Set (每个主机一个 Pod)
+    deployment: Deployment (无状态)
+    job: Job (一次性运行 Pod)
+    pod: 独立 Pod
+    replicaSet: Replica Set
+    replicationController: Replication Controller
+    statefulSet: Stateful Set (有状态)
+  sidekick:
+    header: 工作负载与 Sidecars
+    helpBlock: 选择主容器或其中一个 sidecars 容器
+    tabHeader: Sidecars
+  type:
+    composeservice: Compose 服务
+    dnsservice: 服务别名
+    externalservice-host: 外部名称
+    externalservice-ip: 外部 IP
+    kubernetesservice: K8s 服务
+    loadbalancerservice: 负载均衡
+    networkdriverservice: 网络服务
+    selectorservice: 选择器
+    service: 服务
+    storagedriverservice: 存储服务
+settingsPage:
+  tabs:
+    feature: 功能选项
+    settings: 高级设置
+shareMemberRow:
+  accessType:
+    member: 成员
+    owner: 所有者
+    read-only: 只读用户
+  table:
+    public:
+      accessType: 只读
+      name: 公有 (all members & groups)
+stackHeader:
+  outputs: 输出
+  title: "命名空间: {name}"
+stackPage:
+  basics:
+    tagsCopy: 复制用逗号分隔的标签
+  containers:
+    detail: 应用中所包含的独立容器和服务。
+    header: 容器
+    status: "{count, plural,\n=0{ 无容器 }\n=1{#个容器 }\nother {#个容器 }\n}\n"
+  dnsServices:
+    detail: 属于该应用的 DNS 记录
+    header: DNS 记录
+    status: "{count, plural,\n=0{ 无记录 }\n=1{#条记录 }\nother {#条记录 }\n}\n"
+  header:
+    backLink: 返回所有应用
+    singleBanner: 查看单个应用
+  loadBalancers:
+    detail: 属于该应用的负载均衡容器
+    header: 负载均衡
+    status: "{count, plural,\n=0{ 无负载均衡 }\n=1{#条负载均衡 }\nother {#条负载均衡 }\n}\n"
+  scalingGroups:
+    detail: 属于该扩容组的容器
+    header: 扩容组
+    status: "{count, plural,\n=0{ 无容器 }\n=1{#个容器 }\nother {#个容器 }\n}\n"
+  volumesTab:
+    detail: 该应用挂载到容器中的卷
+    header: 卷
+    table:
+      noData: 这个应用没有挂载任何卷
+      noMatch: 没有匹配当前搜索的卷
+      path: 挂载点
+      shared: 共享
+      writable: 可写
+telemetryOpt:
+  eula:
+    link: 条款和条件
+    prefix: 我同意
+    suffix: ""
+  header: 统计数据
+  label: 允许收集匿名统计信息
+  learnMore:
+    label: 了解更多
+  subtext: |
+    Rancher Labs 希望能够收集您环境的匿名配置信息以帮助改进 {appName} 产品。<br/>信息不会被提供给任何第三方，收集的信息不包含特定的资源名称或地址。
+time:
+  mins: "{mins, plural,\n=1{#分钟 }\nother {#分钟 }\n}\n"
+  minsAgo: "{mins, plural,\n=1{#分钟前 }\nother {#分钟前 }\n}\n"
+  now: 现在
+  secsAgo: "{secs, plural,\n=1{#秒前 }\nother {#秒前 }\n}\n\n"
+tooltipToggleOverride:
+  label: 是否允许用户修改当前参数?
+tooltipWarning:
+  dismiss: 取消
+  notConfigured: 没有配置访问控制
+units:
+  cpu: milli CPUs
+  percent: "%"
+viewEditDescription:
+  form:
+    description:
+      placeholder: "例如: 开发实验环境"
+    name:
+      placeholder: "例如: lab"
+virtualServicePage:
+  noData: 没有定义虚拟服务
+  noMatch: 没有虚拟服务匹配当前搜索
+  notSupported: networking.istio.io/v1alpha3 API 在集群中不可用。
+  table:
+    hosts:
+      label: 主机
+volumesPage:
+  addActionLabel: 添加 PVC
+  claimName:
+    label: PVC 名称
+  noData: 没有配置 PVC
+  noMatch: 没有符合当前搜索的持久卷 (PV)
+  storageClass:
+    label: 存储类
+  title: PVC
+  volume:
+    label: 持久卷(PV)
+windowsCluster:
+  istio: 在 Windows 集群中不支持 Istio。
+  logging:
+    helpText: 我们将使用 fluentd 从每个容器中收集 stdout/stderr 日志，以及收集每个 <b>Linux</b> 主机 <code >/var/log/containers/</code> 路径和每个<b>Windows</b>主机<code >c:/var/log/containers/</code>路径下的日志文件，并且可以将日志发送到下面配置的目标日志收集服务。
+    kafka:
+      brokerTypeHelpText: 使用 Broker 列表作为 Kafka 连接入口点。
+    vxlanWarning: "由于 <a href=\"https://github.com/kubernetes/kubernetes/issues/79359\" target=\"_blank\">kubernetes/kubernetes#79359</a> 这个问题，{appName} Logging 目前无法运行在 VxLan 模式下。我们正在与微软合作， 以修复 Kubernetes 相关的问题。\n"
+  pipelines: 在 Windows 集群中不支持 pipelines。

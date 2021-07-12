@@ -1,0 +1,1242 @@
+backupsPage:
+  detail: etcd snapshots, if enabled, are cluster snapshots periodicaly taken at predefined intervals that can be used to restore clusters from a previous version.
+  header: etcd Snapshots
+  table:
+    created: Created
+    name: Name
+    noData: There are no etcd snapshots defined.
+    state: State
+    target:
+      label: Target
+      local: Local
+      s3: S3
+balancerPage:
+  noData: There are no balancers to show.
+  noMatch: No balancers match the current search
+  table:
+    target: Target
+clusterTemplateQuestions:
+  detail: Parameters and default values that you would like the end consumer to provide data for.
+  label: Cluster Option Overrides
+  schemaLabels:
+    addonJobTimeout: Addon Job Timeout
+    addons: Addons
+    addonsInclude: Addons Include
+    authentication: Authentication
+    authorization: Authorization
+    bastionHost: Bastion Host
+    caCerts: CA Certs
+    cloudProvider: Cloud Provider
+    defaultClusterRoleForProjectMembers: Default Cluster Role For Project Members
+    defaultPodSecurityPolicyTemplateId: Default Pod Security Policy Template Id
+    desiredAgentImage: Desired Agent Image
+    desiredAuthImage: Desired Auth Image
+    dns: DNS Config
+    dockerRootDir: Docker Root Directory
+    enableClusterAlerting: Enable Cluster Alerting
+    enableClusterMonitoring: Enable Cluster Monitoring
+    enableNetworkPolicy: Enable Network Policy
+    fqdn: FQDN
+    ignoreDockerVersion: Ignore Docker Version
+    ingress: Ingress
+    kubernetesVersion: Kubernetes Version
+    localClusterAuthEndpoint: Enable Local CLuster Auth Endpoint
+    monitoring: Monitoring Config
+    network: Network Config
+    prefixPath: Prefix Path
+    privateRegistries: Private Registry Config
+    restore: Restore
+    rotateCertificates: Rotate Certificates
+    services: Services
+    sshAgentAuth: Enable SSH Agent Auth
+    sshCertPath: SSH Certificate Path
+    sshKeyPath: SSH Key Path
+  table:
+    answer: Default Value
+    noData: No overrides
+    noMatch: No overrides match the current search
+    question: Override Parameter
+    required: Required
+    type: Type
+clustersPage:
+  cluster:
+    label: Cluster Name
+  clusterLaunchDisabled: You have not been granted access to any RKE Templates.
+  cpu:
+    label: CPU
+  editClusterName: "Edit Cluster: {name}"
+  header: Clusters
+  kubernetesVersion:
+    label: Kubernetes Version
+  launch:
+    import: Import Cluster
+    importEks: Import Amazon EKS
+    importGke: Import Google GKE
+    new: Add Cluster
+    register: Register Cluster
+  memory:
+    label: RAM
+  metricsHeader: Metrics
+  newCluster: Add Cluster
+  newClusterName: "Add Cluster: {name}"
+  newTemplate: Add Template
+  nodes:
+    label: Nodes
+  pod:
+    label: Pods
+  provider:
+    label: Provider
+  rkeTemplate:
+    label: RKE Template
+  select:
+    provider:
+      label: Add Cluster - Select Cluster Type
+    template:
+      label: Add Cluster - Select RKE Template
+  storage:
+    label: Disk
+  templateRevision:
+    label: Template/Revision
+cruPersistentVolume:
+  awsElasticBlockStore:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    partition:
+      label: Partition
+      placeholder: e.g. 1; 0 for entire device
+    readOnly:
+      label: Read Only
+    volumeID:
+      label: Volume ID
+      placeholder: e.g. volume1
+  azureDisk:
+    cachingMode:
+      label: Caching Mode
+      none: None
+      readOnly: Read Only
+      readWrite: Read Write
+    diskName:
+      label: Disk Name
+      placeholder: e.g. kubernetes-pvc
+    diskURI:
+      label: Disk URI
+      placeholder: e.g. https://example.com/disk
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    kind:
+      dedicated: Dedicated
+      label: Kind
+      managed: Managed
+      shared: Shared
+    readOnly:
+      label: Read Only
+  azureFile:
+    readOnly:
+      label: Read Only
+    secretName:
+      label: Secret Name
+      placeholder: e.g. secret
+    secretNamespace:
+      label: Secret Namespace
+      placeholder: e.g. default
+    shareName:
+      label: Share Name
+      placeholder: e.g. abc
+  capacity:
+    label: Capacity
+    protip: Updating a PVs capacity may not update the size of the underlying PVCs if any are attached. Volume Expansion workflows vary depending on the storage class, PV Provisioner, and if any attached PVCs also have workloads attached. It is highly recommended you visit the <a href='{docsBase}/cluster-admin/volumes-and-storage/' target='_blank' rel='nofollow noreferrer'>the Rancher Storage docs</a> and <a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/' target='_blank' rel='nofollow noreferrer'>the Kubernetes Persistent Volume docs</a> before changing the capacity of the volume.
+    unit: GiB
+  cephfs:
+    monitors:
+      addActionLabel: Add
+      label: Monitors
+    path:
+      label: Path
+      placeholder: e.g. /var
+    readOnly:
+      label: Read Only
+    secretFile:
+      label: Secret File
+      placeholder: e.g. secret
+    secretRef:
+      label: Secret Name
+      name:
+        label: Secret Name
+        placeholder: e.g. abc
+      namespace:
+        label: Secret Namespace
+        placeholder: e.g. default
+    user:
+      label: User
+      placeholder: e.g. root
+  cinder:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    readOnly:
+      label: Read Only
+    secretRef:
+      label: Secret Name
+      name:
+        label: Secret Name
+        placeholder: e.g. abc
+      namespace:
+        label: Secret Namespace
+        placeholder: e.g. default
+    volumeID:
+      label: Volume ID
+      placeholder: e.g. vol
+  configMap:
+    defaultMode:
+      label: Default Mode
+      placeholder: e.g. 256
+    items:
+      label: Items
+    name:
+      label: Config Map Name
+    optional:
+      label: Optional
+  csi:
+    controllerExpandSecretRef:
+      name:
+        label: Controller Expand Secret Name
+        placeholder: e.g. secret
+      namespace:
+        label: Controller Expand Secret Namespace
+        placeholder: e.g. default
+    controllerPublishSecretRef:
+      name:
+        label: Controller Publish Secret Name
+        placeholder: e.g. secret
+      namespace:
+        label: Controller Publish Secret Namespace
+        placeholder: e.g. default
+    driver:
+      label: Driver
+      placeholder: e.g. driver.longhorn.io
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    nodePublishSecretRef:
+      name:
+        label: Node Publish Secret Name
+        placeholder: e.g. secret
+      namespace:
+        label: Node Publish Secret Namespace
+        placeholder: e.g. default
+    nodeStageSecretRef:
+      name:
+        label: Node Stage Secret Name
+        placeholder: e.g. secret
+      namespace:
+        label: Node Stage Secret Namespace
+        placeholder: e.g. default
+    readOnly:
+      label: Read Only
+    volumeAttributes:
+      addActionLabel: Add Volume Attribute
+      label: Volume Attributes
+    volumeHandle:
+      label: Volume Handle
+      placeholder: e.g. pvc-xxxx
+  customize:
+    detail: Customize Advanced options
+    title: Customize
+  description:
+    placeholder: e.g. Volume for production database
+  emptyDir:
+    medium:
+      default: Node's Default Medium
+      label: Medium
+      memory: Memory
+    sizeLimit:
+      label: Size Limit
+      placeholder: e.g. 300Mi
+  fc:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    lun:
+      label: Lun
+      placeholder: e.g. 2
+    readOnly:
+      label: Read Only
+    targetWWNs:
+      addActionLabel: Add
+      label: Target WWNs
+    wwids:
+      addActionLabel: Add
+      label: Wwids
+  flexVolume:
+    driver:
+      label: Driver
+      placeholder: e.g. driver
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    options:
+      addActionLabel: Add
+      label: Options
+    readOnly:
+      label: Read Only
+    secretRef:
+      label: Secret Name
+      placeholder: e.g. secret
+  flocker:
+    datasetName:
+      label: Dataset Name
+      placeholder: e.g. dataset
+    datasetUUID:
+      label: Dataset UUID
+      placeholder: e.g. uuid
+  gcePersistentDisk:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    partition:
+      label: Partition
+      placeholder: e.g. 1; 0 for entire device
+    pdName:
+      label: Persistent Disk Name
+      placeholder: e.g. abc
+    readOnly:
+      label: Read Only
+  glusterfs:
+    endpoints:
+      label: Endpoints
+      placeholder: e.g. glusterfs-cluster
+    path:
+      label: Path
+      placeholder: e.g. kube_vol
+    readOnly:
+      label: Read Only
+  iscsi:
+    chapAuthDiscovery:
+      label: Chap Auth Discovery
+    chapAuthSession:
+      label: Chap Auth Session
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    initiatorName:
+      label: Initiator Name
+      placeholder: e.g. abc
+    iqn:
+      label: IQN
+      placeholder: e.g. 2
+    iscsiInterface:
+      label: iSCSI Interface
+      placeholder: e.g. interface
+    lun:
+      label: Lun
+      placeholder: e.g. 2
+    portals:
+      addActionLabel: Add
+      label: Portals
+    readOnly:
+      label: Read Only
+    secretRef:
+      label: Secret Name
+      placeholder: e.g. secret
+    targetPortal:
+      label: Target Portal
+      placeholder: e.g. portal
+  local:
+    path:
+      label: Path
+      placeholder: e.g. /mnt/disks/ssd1
+  mountOptions:
+    addActionLabel: Add Option
+    label: Mount Options
+    noData: No Mount Options
+  name:
+    placeholder: e.g. myvolume
+  nfs:
+    path:
+      label: Path
+      placeholder: e.g. /var
+    readOnly:
+      label: Read Only
+    server:
+      label: Server
+      placeholder: e.g. 10.244.1.4
+  nodeAffinity:
+    label: Node Affinity
+  photonPersistentDisk:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    pdID:
+      label: PD ID
+      placeholder: e.g. abc
+  portworxVolume:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    readOnly:
+      label: Read Only
+    volumeID:
+      label: Volume ID
+      placeholder: e.g. abc
+  pvc: Persistent Volume Claim
+  quobyte:
+    group:
+      label: Group
+      placeholder: e.g. abc
+    readOnly:
+      label: Read Only
+    registry:
+      label: Registry
+      placeholder: e.g. abc
+    user:
+      label: User
+      placeholder: e.g. root
+    volume:
+      label: Volume
+      placeholder: e.g. vol
+  rbd:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    image:
+      label: Image
+      placeholder: e.g. image
+    keyring:
+      label: Key Ring
+      placeholder: e.g. /etc/ceph/keyring
+    monitors:
+      addActionLabel: Add
+      label: Monitors
+    pool:
+      label: Pool
+      placeholder: e.g. rbd
+    readOnly:
+      label: Read Only
+    secretRef:
+      label: Secret Name
+      placeholder: e.g. secret
+    user:
+      label: User
+      placeholder: e.g. root
+  reclaimPolicy: Reclaim Policy
+  scaleIO:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    gateway:
+      label: Gateway
+      placeholder: e.g. https://localhost:443/api
+    protectionDomain:
+      label: Protection Domain
+      placeholder: e.g. pd01
+    readOnly:
+      label: Read Only
+    secretRef:
+      label: Secret Name
+      name:
+        label: Secret Name
+        placeholder: e.g. secret
+      namespace:
+        label: Secret Namespace
+        placeholder: e.g. default
+    sslEnabled:
+      label: SSL Enabled
+    storageMode:
+      label: Storage Mode
+      placeholder: e.g. ThinProvisioned
+    storagePool:
+      label: Storage Pool
+      placeholder: e.g. sp01
+    system:
+      label: System
+      placeholder: e.g. scaleio
+    volumeName:
+      label: Volume Name
+      placeholder: e.g. vol-0
+  secret:
+    certificateName:
+      label: Certificate
+    defaultMode:
+      label: Default Mode
+      placeholder: e.g. 256
+    items:
+      label: Items
+    optional:
+      label: Optional
+    secretName:
+      label: Secret
+  source:
+    detail: Configure options for the selected volume plugin
+    label: Volume Plugin
+    prompt: Choose a volume plugin...
+    title: Plugin Configuration
+  storageClass:
+    label: Assign to Storage Class
+    prompt: None
+  storageos:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    readOnly:
+      label: Read Only
+    secretRef:
+      label: Secret Name
+      name:
+        label: Secret Name
+        placeholder: e.g. secret
+      namespace:
+        label: Secret Namespace
+        placeholder: e.g. default
+    volumeName:
+      label: Volume Name
+      placeholder: e.g. vol
+    volumeNamespace:
+      label: Volume Namespace
+      placeholder: e.g. default
+  title:
+    edit: "Edit Persistent Volume: {name}"
+    new: Add Persistent Volume
+    view: "Persistent Volume: {name}"
+  vsphereVolume:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    storagePolicyID:
+      label: Storage Policy ID
+      placeholder: e.g. sp1
+    storagePolicyName:
+      label: Storage Policy Name
+      placeholder: e.g. sp
+    volumePath:
+      label: Volume Path
+      placeholder: e.g. /
+customDrivers:
+  clusters: Cluster Drivers
+  nodes: Node Drivers
+editStack:
+  autoInject:
+    label: Istio sidecar auto injection
+    warning: Any existing workloads in the namespace will need to be re-deployed to leverage the sidecar auto injection.
+  description:
+    label: Description
+    placeholder: e.g. MyApp namespace
+  group:
+    help: Comma-separated list of tags for the new Stack.  The workload lists can be filtered by individual tags.
+    label: Tags
+    placeholder: e.g. frontend, production
+  name:
+    error: Namespace name is already in use. Please choose a new namespace name.
+    label: Name
+    placeholder: e.g. myapp
+  project:
+    label: Project
+    prompt: Select a Project...
+  resourceQuota:
+    detail: Configure how much of the resources the namespace as a whole can consume
+    title: Resource Quotas
+  title: Edit Namespace
+envCatalog:
+  addActionLabel: Add Catalog
+  header: Catalog
+  subtext: "You can define your own custom catalog sources here. Catalogs added here will only be available to the environment in which they were added. Each one needs a unique name and a URL that <code>git clone</code> can handle (see <a href=\"https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">docs</a> for more info)."
+f5CtlPage:
+  addCtl: Create F5 Ingress
+  form:
+    domain:
+      label: Host
+      placeholder: e.g. example.com
+    http:
+      label: Http Port
+      placeholder: e.g. 80
+    https:
+      label: Https Port
+      placeholder: e.g. 443
+    interval:
+      label: Interval
+      placeholder: e.g. 20
+    mode: Mode
+    monitor:
+      disable: Disable
+      enable: Enable
+      label: Enable Monitor
+    monitorType: Type
+    name:
+      label: Name
+      placeholder: e.g. F5 Ingress Name
+    path:
+      label: Path
+    port:
+      label: Port
+      placeholder: e.g. 8080
+    receive:
+      label: Receive
+      placeholder: ""
+    rewrite:
+      label: Rewrite
+      placeholder: e.g. /foo
+    root:
+      label: Rewrite APP Root
+      placeholder: e.g. /foo
+    send:
+      label: Send
+      placeholder: e.g. GET /
+    snat:
+      label: SNAT
+      placeholder: ""
+    timeout:
+      label: Timeout
+      placeholder: e.g. 20
+    tls:
+      label: TLS Profile
+      placeholder: Choose...
+    type:
+      label: F5 Ingress Type
+      transport: L4 (TransportServer)
+      virtual: L7 (VirtualServer)
+    url:
+      label: Url
+      placeholder: e.g. 8.8.8.8
+    waf:
+      label: WAF
+      placeholder: ""
+  globalDnsModel:
+    description: A successful save will add the annotation <code>rancher.io/globalDNS.hostname='hostname'</code> (clearing will remove this annotation).
+    label: Domain Name
+    placeholder: e.g. VirtualServer host
+  header:
+    edit: Edit F5 Ingress
+    new: Create F5 Ingress
+    view: "F5 Ingress: {name}"
+  notEnabled: F5 CIS is disabled. Click <a href="/c/{clusterId}/cis/f5">here</a> to enable it。
+  table:
+    noData: There are no F5 Ingress
+  validation:
+    path:
+      duplicated: Paths in Pools are duplicated
+      relative: "Pools[{index}]: \"Path in Pools must be absolute path\""
+      relativeInPool: Path must be absolute path
+    pool: "Pools[{index}]: \"{key}\" is required"
+    waf: "\"WAF\" must be started with /"
+formContainerLog:
+  detail: Configure container log
+  excludeContainer:
+    "false": Enable
+    label: Collect Container stdout log
+    "true": Disable
+  title: Container Log
+formSslTermination:
+  addAlternate: Add Alternate Certificate
+  addCertLabel: Add Certificate
+  addHostLabel: Add Hosts
+  alternateCertificate:
+    prompt: Choose a Certificate...
+  alternateCerts: Alternate Certs
+  certNotMatch: A mismatch has been detected between the certificate hostname and the rule hostname. Please confirm that the selected is a valid certificate
+  certificate: Certificate
+  custom:
+    label: Choose a certificate
+    required: Please select a certificate
+  default:
+    label: Use default ingress controller certificate
+    noHosts: Please provide at least one host for the default ingress controller certificate
+  defaultCertificate:
+    prompt: Default ingress certificate selected...
+  detail: Configure the certificates that will be presented for requests to encrypted ports.
+  helpBlock: "\"Note: Some older SSL/TLS clients do not support <a href=\"https://en.wikipedia.org/wiki/Server_Name_Indication\" target=\"_blank\">Server Name Indication (SNI)</a>; these clients will always be offered the main Certificate.  Modern clients will be offered an appropriate certificate from the Alternate Certificates list if a match is found.\"\n"
+  host:
+    label: Host
+    placeholder: e.g. example.com
+  hosts: Hosts
+  noAlternateCertificates: There are no other certificates to use.
+  noCertificates: There are no certificates to use.
+  noCertificatesConfiged: No Certificates.
+  noHosts: No Hosts
+  notNeeded: There are no SSL/TLS Listening Ports configured with a valid Target Rule.
+  removeCertLabel: Remove this Certificate
+  title: SSL/TLS Certificates
+  wildcardCert: Please provide at least one host as {name} is a wildcard certificate.
+formSupplementalGroupsPodSecurityPolicy:
+  detail: Configuring allowable supplemental groups
+  range:
+    addLabel: Add Range
+    max:
+      label: Max
+      placeholder: e.g. 6
+    min:
+      label: Min
+      placeholder: e.g. 1
+  rule:
+    mustRunAs: MustRunAs - Requires at least one range to be specified. Uses the minimum value of the first range as the default. Validates against all ranges.
+    runAsAny: RunAsAny - No default provided. Allows any supplementalGroups to be specified.
+  title: Supplemental Groups Policy
+globalDnsPage:
+  entriesPage:
+    access:
+      noAccessAddProvider: You do not have access to add a provider
+      noAccessMulti: You do not have access to the target app
+      noAccessProject: You do not have access to the target project
+      noAccessProvider: You do not have access to the provider
+    config:
+      configType: Resolves To
+      detail: Provide your configuration details to add a new global DNS entry
+      fqdn:
+        label: FQDN
+        placeholder: dev.example.com
+      multi: Multi-Cluster App
+      multiCluster:
+        add:
+          label: Add Target
+        label: Multi-Cluster App Target
+        placeholder: Select a multi-cluster app
+      project: Projects
+      projects:
+        label: Target Projects
+      provider:
+        label: Provider
+        placeholder: Select a provider
+      title: Configure DNS Entry
+      ttl:
+        label: DNS TTL
+    header:
+      edit: Edit Global DNS Entry
+      new: Add Global DNS Entry
+    istioHelp: To make catalog template visable in Traffic Rules Catalog, you must add the following label ( <code>io.rancher.istio=true</code> ) in <code>questions.yaml</code> file of your catalog template.
+    options:
+      detail: Customize options for the DNS entry
+      title: Entry Options
+    projectF5bigipHelp: You have chosen a provider for F5bigip, where load balancing is done by a custom CRD VirtualServer. To finalize configuring this Global DNS entry, you must add the following annotation ( <code>rancher.io/globalDNS.hostname</code> ) on the VirtualServer in your application or in your project. The value of this annotation should be the hostname used in the routing rules of your ingress and match the FQDN of this Global DNS entry.
+    projectHelp: To finalize configuring this Global DNS entry, you must add the following annotation ( <code>rancher.io/globalDNS.hostname</code> ) on the ingress in your application or in your project. The value of this annotation should be the hostname used in the routing rules of your ingress and match the FQDN of this Global DNS entry.
+    table:
+      fqdn: FQDN
+      name: Name
+      provider: Provider ID
+      target: Target
+  header: Global DNS Entries
+  newDns: Add DNS Entry
+  newProvider: Add DNS Provider
+  noApps: No Accessible Multi-Cluster Apps
+  noDnsData: There are no global DNS entries defined.
+  noDnsMatch: No DNS entries match the current search.
+  noDnsProviderData: There are no global DNS providers defined.
+  noDnsProviderMatch: No DNS providers match the current search.
+  noProjects: There are no projects to select
+  noProviders: No Accessible Providers
+  providersPage:
+    additionalOptions:
+      button: Add Option
+      detail: Add addtional options for the Provider configuration not available in the UI.
+      title: Additional Options
+    config:
+      accessKey:
+        label: Access Key
+        placeholder: Your access key
+      apiEmail:
+        label: API Email
+        placeholder: Your API Email
+      apiKey:
+        label: API Key
+        placeholder: Your API Key
+      bigip:
+        addDeviceIP: Add Device IP
+        datacenterDescription: Description of the Datacenter
+        deviceIPDescription: Description of the device IP
+        deviceNameDescription: Description of the device name
+        deviceTranslationDescription: Description of the Device Translation
+        serverDescription: Description of the Server
+        validation:
+          deviceIPFormatError: Device IP format error
+          deviceIPMustUnique: Device IP Must Unique
+          mustHasDeviceIP: Device IP/Device Name must be configured
+          translationFormatError: Device Translation format error
+      credentialsPath:
+        label: Credential Path
+        placeholder: /.aws
+      proxySetting:
+        label: Proxy Setting
+      region:
+        label: Region
+        placeholder: us-west-2
+      roleArn:
+        label: Role ARN
+        placeholder: arn:partition:service:region:account-id:resource
+      root:
+        label: Root Domain
+        placeholder: Your root domain
+      secretKey:
+        info: Secret key already provided. It is only required when updating the keys themselves.
+        label: Secret Key
+        placeholder: Your secret key
+      zone:
+        label: Zone
+        placeholder: public
+    header:
+      edit: Edit Global DNS Provider
+      new: Add Global DNS Provider
+    members:
+      detail: Control who has access to the resource
+      title: Member Access
+    options:
+      detail: Customize options for the DNS provider
+      title: Provider Options
+    table:
+      name: Name
+      provider: Provider Name
+      rootDomain: Root Domain
+    title: Global DNS Providers
+globalRegistryPage:
+  command:
+    detail: Docker commands for the registry
+    dockerLogin: Log in to the registry
+    dockerPull: Pull an image from the registry
+    dockerPush: Push an image to the registry
+    dockerTag: Tag an image for the registry
+    title: Docker Commands
+  config:
+    clairEnabled:
+      label: Enable Clair
+    database:
+      existingClaim:
+        label: Existing Claim for PostgreSQL
+      external:
+        clairDatabase:
+          label: Clair Database
+          placeholder: e.g. clair
+        coreDatabase:
+          label: Core Database
+          placeholder: e.g. registry
+        host:
+          label: Host for PostgreSQL
+          placeholder: e.g. 192.168.0.1
+        notaryServerDatabase:
+          label: Notary Server Database
+          placeholder: e.g. notary_server
+        notarySignerDatabase:
+          label: Notary Signer Database
+          placeholder: e.g. notary_signer
+        password:
+          label: Password for PostgreSQL
+          placeholder: e.g. password
+        port:
+          label: Port for PostgreSQL
+          placeholder: e.g. 5432
+        sslmode:
+          label: SSL Mode for PostgreSQL
+        username:
+          label: Username for PostgreSQL
+          placeholder: e.g. user
+    databaseLimitCpu:
+      label: Database CPU Limit
+      placeholder: e.g. 1000
+    databaseLimitMemory:
+      label: Database Memory Limit
+      placeholder: e.g. 1000
+    databaseRequestCpu:
+      label: Database CPU Request
+      placeholder: e.g. 1000
+    databaseRequestMemory:
+      label: Database Memory Request
+      placeholder: e.g. 1000
+    databaseType:
+      label: Config Database Type
+    exposeIngressHost:
+      error: "\"{hostName}\" is a host name. Require domain name for expose.ingress.host"
+    header:
+      clair: Clair
+      notary: Notary
+      postgresql: PostgreSQL Database
+      redis: Redis
+      registryPersistence: Registry
+    notaryEnabled:
+      label: Enable Notary
+    persistenceStorageclass:
+      label: Storage Class
+    redis:
+      external:
+        coreDatabaseIndex:
+          label: Core Database Index
+          placeholder: e.g. 0
+        host:
+          label: Host for Redis
+          placeholder: e.g. 192.168.0.2
+        jobserviceDatabaseIndex:
+          label: Jobservice Database Index
+          placeholder: e.g. 1
+        password:
+          label: Password for Redis
+          placeholder: Your redis password
+        port:
+          label: Port for Redis
+          placeholder: e.g. 6379
+        registryDatabaseIndex:
+          label: Registry Database Index
+          placeholder: e.g. 2
+    redisLimitCpu:
+      label: Redis CPU Limit
+      placeholder: e.g. 1000
+    redisLimitMemory:
+      label: Redis Memory Limit
+      placeholder: e.g. 1000
+    redisRequestCpu:
+      label: Redis CPU Request
+      placeholder: e.g. 1000
+    redisRequestMemory:
+      label: Redis Memory Request
+      placeholder: e.g. 1000
+    redisType:
+      label: Config Redis Type
+    registryExistingClaim:
+      label: Existing Claim
+      prompt: Select a Existing Claim...
+    registryPVSize:
+      label: Persistent Volume Size
+    s3:
+      accesskey:
+        label: S3 Access Key
+        placeholder: Your S3 Access Key
+      bucket:
+        label: S3 Bucket Name
+        placeholder: Your Bucket Name
+      region:
+        label: S3 Region
+        placeholder: e.g. us-west-2
+      regionendpoint:
+        label: S3 Region Endpoint
+        placeholder: e.g. s3.us-west-2.amazonaws.com
+      secretkey:
+        label: S3 Secret Key
+        placeholder: Your S3 Secret Key
+    secretKey:
+      description: The key used for encryption. Must be a string of 16 chars
+      error: "\"Encryption Key For Harbor\" must be a string of 16 chars."
+      label: Encryption Key For Harbor
+    source:
+      pvc: Use an existing persistent volume claim
+    storageClass:
+      emptyError: At least one default storage class is required in "local" cluster
+      sizeRequired: "\"{component} Persistent Volume Size\" is required"
+    storageType:
+      label: Storage Backend Type
+  confirmDisable: Are you sure?  Click again to disable Global Registry
+  disable: Disable registry
+  disabled: Registry is not enabled yet.
+  enableActionLabel: Enable
+  enabled: Registry is enabled. Click <a href="{url}/registry" target="_blank" rel="nofollow noopener noreferrer">here</a> to open Harbor UI in a new tab.
+  globalRegistryEnabled:
+    error: Error saving global-registry-enabled
+  header: Global Registry
+  insufficientSize:
+    selectors:
+      all: Please make sure you have at least one node matches node selectors with {cpu} milli CPUs and {memory} MiB of memory available to enable {component} workload.
+      cpu: Please make sure you have at least one node matches node selectors with {cpu} milli CPUs available to enable {component} workload.
+      memory: Please make sure you have at least one node matches node selectors with {memory} MiB of memory available to enable {component} workload.
+    total:
+      all: Please make sure you have at least {minCpu} milli CPUs and {minMemory} MiB of memory available to {action} registry.
+      cpu: Please make sure you have at least {minCpu} milli CPUs available to {action} registry.
+      memory: Please make sure you have at least {minMemory} MiB of memory available to {action} registry.
+    workload:
+      all: Please make sure you have at least one node with {cpu} milli CPUs and {memory} MiB of memory available to enable {component} workload.
+      cpu: Please make sure you have at least one node with {cpu} milli CPUs available to enable {component} workload.
+      memory: Please make sure you have at least one node with {memory} MiB of memory available to enable {component} workload.
+  nodeSelector:
+    addSelectorLabel: Add Selector
+    helpText: Select the nodes where {component} workloads will be scheduled to
+  notReady: Installing registry into the system project of the local cluster...
+  notaryAndSigner: Notary server and Notary signer
+  setting:
+    adminPassword:
+      helpText: If you are using an existing PVC with initialized Harbor data, the password will not take effect.
+      label: Admin Password
+      placeholder: Harbor Admin password
+growl:
+  autoLogout:
+    message: You have not operated in the last {autoLogoutTime} minutes, so we will auto log out
+    title: Auto logout
+  dismiss: Dismiss All Notifications
+  webSocket:
+    connecting:
+      disconnectedWarning: Disconnected from server, attempting to reconnect...
+      safariCertWarning: Another possible cause is that Safari does not allow WebSocket connections using an unrecognized certificate, even if you say to Continue to bypass the warning.  The server must have a certificate signed by a recognized authority Safari automatically trusts.
+      title: Error connecting to WebSocket
+      warning: Unable to establish a WebSocket connection to the server.  If your server is behind a proxy or SSL-termination device, Browser can not connect to WebSocket. If you run the server behind a proxy, please make sure the proxy supports WebSockets.  Streaming stats, logs, shell/console, and auto-updating of the state of resources may not work until this is resolved.
+hostPod:
+  groupedInstances:
+    namespace: "Namespace:"
+    stack: "Stack:"
+    standalone: Standalone Containers
+  supportState:
+    unsupported: Unsupported Docker version
+    untested: Untested Docker version
+ingressResponse:
+  detail: Top 10 ingress upstream response time
+  host: Host
+  noData: No Data
+  noMatch: No records match the current search
+  path: Path
+  responseTime: Response Time
+  title: Ingress Upstream Response Time
+istio:
+  kiali: Powered by Kiali
+  nav:
+    destinationRules:
+      add: Add Destination Rule
+      label: Destination Rules
+    gateways:
+      add: Add Gateway
+      label: Gateways
+    graph: Traffic Graph
+    metrics: Traffic Metrics
+    rules: Traffic Rules
+    virtualServices:
+      add: Add Virtual Service
+      label: Virtual Services
+  noData: Not enough data for graph
+  period: Period
+  refreshGraph: Refresh Graph
+  table:
+    host: Host
+    template: Template
+  trafficMonitoring:
+    duration: Last {time}
+loginGoogle:
+  buttonText: Log In with Google
+loginPage:
+  error:
+    authFailed: "Logging in failed: Your account may not be authorized to log in."
+    authFailedCreds: "Logging in failed: Check credentials, or your account may not be authorized to log in."
+    invalidSamlAttrs: Invalid saml attributes
+    noResponse: No response received
+    unknown: An unknown error occured while attempting to login. Please contact your system administrator.
+  githubMessage: "{appName} uses GitHub to manage accounts and teams.  Click the button below to log in and give us read-only access to your basic GitHub account information."
+  greeting: Howdy!<br><span>Welcome to {appName}</span>
+  insecure: "{appName} only works over a <code>https://</code> connection.  You must either:<br><br>Use the TLS support built-in to the server, or <br><br> Provide your own TLS termination in front of the container."
+  readableProviders:
+    ad: Active Directory
+    azureAd: Azure AD
+    freeipa: FreeIPA
+    local: a Local User
+    openldap: OpenLDAP
+  shibbolethError:
+    "401": Unauthorized
+    "500": Internal Server Error
+    generic: There was an error ({errorCode}) while trying to log you in. Please try again.
+  shibbolethMessage: "{appName} uses Shibboleth to manage accounts.  Click the button below to log in to the configured Shibboleth IDP."
+modalContainerStop:
+  button: Stop
+  header: Are you sure you want to stop
+  helpText: The container will be forcibly terminated if it does not stop itself before the timeout expires
+  label: Timeout
+  protip: "ProTip: Hold the {key} key while clicking stop to bypass this confirmation."
+modalEditDriver:
+  checksum:
+    help: "Optional: Verify that the downloaded driver matches the expected checksum."
+    label: Checksum
+  header:
+    create: Add {type} Driver
+    edit: Edit {type} Driver
+  uiUrl:
+    help: "Optional: The URL to load for customized Add Nodes screen for this driver."
+    label: Custom UI URL
+    link: See <a href="https://github.com/rancher/ui-driver-skel" target="_blank">ui-driver-skel</a> for more info.
+  url:
+    help: The URL to download the machine driver binary for 64-bit Linux.
+    label: Download URL
+  whitelist:
+    addActionLabel: Add Domain
+    label: Whitelist Domains
+    noData: No Domains
+modalRotateCertificates:
+  caCerts: Rotate the CA and all service certificates
+  dropdownLabel: Services
+  expiring:
+    from: "{ cert } (expired { expiresIn })"
+    until: "{ cert } (expires { expiresIn })"
+  select:
+    all: Select a service
+  services: Rotate all service certificates
+  servicesCa: Rotate all service certificates (keep the same CA)
+  single: Rotate an individual service
+  title: Rotate Cluster Certificates
+newMultiClusterApp:
+  access:
+    noAccessLink: You do not have access to the target project
+  answers:
+    addAction: Add Answer
+    label: Answers
+  appInfo: Detailed Descriptions
+  appInfoDetail: Application information and user guide
+  catalog: "Catalog:"
+  category: "Category:"
+  config: Configuration Options
+  customizeNamespace: This application will be deployed into the <code>{namespaceId}</code> namespace
+  helm:
+    label: Configuration Options
+    protip: Helm templates accept a comma separated list of strings
+  kind: "Catalog Kind:"
+  license: "License:"
+  maintainedBy: Maintained by community members
+  maintainer: "Maintainer:"
+  members:
+    detail: Select members who can view this application
+    table:
+      accessType: Access Type
+      name: Name
+      noData: There are no members
+      noMatch: No members match the current search
+      prompt: Select a Value...
+      type: Member Type
+    title: Members
+  newAppDetail: Choose application version and namespace for the application
+  newNamespace: New Namespace
+  noConfig: This template has no configuration options
+  official: Officially Certified
+  overrides:
+    add:
+      label: Add Override
+    answerOverride:
+      placeholder: Question required
+    detail: Override individual answers on a per cluster/project basis
+    dropdown:
+      allProjects: All projects in cluster {clusterName}
+      clusterGroup: "Cluster: {clusterName}"
+    label: Answer Overrides
+    questionOverride:
+      placeholder: Select a question
+    scopeOverride:
+      placeholder: Select a scope
+    table:
+      answer: Answer
+      noData: There are no overrides
+      noMatch: No overrides match the current search
+      question: Question
+      scope: Scope
+  preview: Preview
+  roles:
+    additionalRoles: Existing Roles
+    detail: Select a role to assign this app given this app the selected access.
+    help: "Note: This may not be the full list of roles. The list is limited to the roles available to your user. If you are missing a required role, please ask your system administrator."
+    label: Available Roles
+    noRoles: You can not add new roles because you do not have any roles available. Please speak to your system administrator about gaining role access.
+    radios:
+      cluster: Cluster - This app will be able access and manage all resources in the clusters in which it is deployed
+      project: Project - This app will be able to access and manage resources in the projects in which it is deployed
+    table:
+      builtIn: Built In
+      external: External
+      name: Name
+      noData: There are no roles yet
+      noMatch: No roles match the current search
+      prompt: Select a Role...
+      role: Role
+    title: Application Access Roles
+  rolesDivider:
+    label: Roles
+  saveConfigure: Configure
+  saveNew: Launch
+  saveUpgrade: Upgrade
+  seeMore: More information...
+  selectVersionAdd: Select a version of the template to deploy
+  selectVersionConfigure: Select a version of the template to configure
+  selectVersionUpgrade: Select a version of the template to upgrade to
+  startService: Start services after creating
+  support: "Support:"
+  targetDivider:
+    label: Targets
+  targets:
+    add: Add Target
+    cluster: Cluster
+    label: Target Projects
+    noData: There are no targets
+    project: Project
+    prompt: Add a target project
+    target: Target
+  templateFiles: Template Files
+  templateVersion: Template Version
+  titleAdd: Add {name} App
+  titleConfigure: Configure {name} App
+  titleUpgrade: Upgrade {name} App
+  txt: answers.txt
+  unknownType: "Unrecognized question type:"
+  upgrade: "Upgrade:"
+  upgradeApp:
+    batch: Batch size
+    disabled: Upgrade all apps simultaneously
+    enabled: Rolling update (batched)
+    interval: Interval
+    title: Upgrade Strategy
+  upgradeDivider:
+    label: Upgrades
+  url: "Project URL:"
+  version:
+    default: The default at the time (currently {version})
+    prompt: Choose a version...
+newSecret:
+  addActionLabel: Add Secret Value
+  description:
+    placeholder: e.g. S3 key pair
+  name:
+    placeholder: e.g. api-key
+  title:
+    edit: "Edit Secret: {name}"
+    new: Add Secret
+    view: "Secret: {name}"
+  values:
+    label: Secrets Values
+podsSection:
+  detail: Pods in this workload
+  title: Pods
+ruleDetailPage:
+  answers:
+    detail: Customized answers of this traffic rules
+    title: Answers
+    variable: Variable
+  header: "Traffic Rules: {appName}"
+  rules:
+    destinationrules: Destination Rules
+    envoyfilters: Envoy Filters
+    gateways: Gateways
+    serviceentries: Service Entries
+    virtualservices: Virtual Services
+secretsPage:
+  index:
+    header: Secrets
+    linkTo: Add Secret
+    noData: There are no secrets defined
+    noMatch: No Secrets match the current search
+  table:
+    keys: Keys
+storageClass:
+  aws-ebs:
+    title: Amazon EBS Disk
+  azure-disk:
+    title: Azure Disk
+  azure-file:
+    title: Azure File
+  cinder:
+    title: Openstack Cinder Volume
+  gce-pd:
+    title: Google Persistent Disk
+  glusterfs:
+    title: Gluster Volume
+  local:
+    title: Local
+  local-storage:
+    title: Local Storage
+  longhorn:
+    title: Longhorn
+  portworx-volume:
+    title: Portworx Volume
+  quobyte:
+    title: Quobyte Volume
+  rbd:
+    title: Ceph RBD
+  scaleio:
+    title: ScaleIO Volume
+  storageos:
+    title: StorageOS
+  vsphere-volume:
+    title: VMWare vSphere Volume
+tooltipLink:
+  composeYaml: Compose YAML
+  list: List

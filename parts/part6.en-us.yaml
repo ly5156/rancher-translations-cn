@@ -1,0 +1,1173 @@
+accordionRow:
+  status:
+    any: Any
+    configured: Configured
+    countConfigured: "{count} Configured"
+    custom: Customized
+    error: Error
+    incomplete: Incomplete
+    none: None
+    notConfigured: Not Configured
+    rule: "{count, plural, =1 {# Rule} other {# Rules}}"
+    specific: Specific
+    standard: Default
+batchDelete:
+  headerSuffix: Name
+billingInfo:
+  addNew: Add Payment Method
+  card: "{brand}: ...{last}"
+  header: Billing Info
+  noSub: You don't have an active payment method
+  table:
+    title:
+      actions: Actions
+      cardType: "Brand: {brand}"
+      exp: "Exp Date: {exp}"
+      last4: "Last Four: {last}"
+      name: "Name On Card: {name}"
+catalogSettings:
+  certified:
+    detail:
+      pl: Officially maintained templates required for core features such as Kubernetes.
+      rancher: Templates required for core features such as Kubernetes orchestration support.  Maintained and supported by Rancher Labs.
+    header:
+      pl: Certified Library
+      rancher: "{appName} Certified Library"
+  community:
+    detail:
+      pl: Templates created and maintained by community members.
+      rancher: Templates created and maintained by community members.  Not certified by Rancher Labs.
+    header:
+      pl: Community Contributed
+      rancher: Community Contributed
+  currentCluster: Cluster
+  currentProject: Project
+  errors:
+    nameInExists: You cannot enable {key} as there is a custom catalog already with name {key}.
+  globalCatalog: Global
+  header: Catalogs
+  helm:
+    incubator:
+      detail: Additional beta-quality Helm application templates which are not ready to be promoted to Stable yet.
+      label: Helm Incubator
+    stable:
+      detail: Official repository of curated applications maintained by the Kubernetes community.
+      label: Helm Stable
+  helpText: Currently only Helm catalogs are supported
+  library:
+    detail: Official repository of curated application templates maintained by {appName}.
+    label: Library
+  more:
+    addActionLabel: Add Catalog
+    addHeader: Add Catalog
+    branch:
+      label: Branch
+      placeholder: e.g. master
+    editHeader: Edit Catalog
+    header: Custom
+    helmVersion:
+      label: Helm Version
+    helpText:
+      header: "You can define your own additional custom catalog sources. Each custom catalog needs the following:"
+      help-chart: "Helm Charts server URL, <em>e.g. https://kubernetes-charts.storage.googleapis.com/ (see <a href=\"https://docs.helm.sh/developing_charts/#hosting-chart-repositories\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Hosting Chart Repositories</a> for specifics)</em>"
+      help-git: Git-based catalog URL, <em class='text-lowercase'>e.g. https://github.com/{appName}/charts.git</em>
+      help-name: <strong>Unique name</strong>
+      help-repo: <strong>Repository URL:</strong>
+    kind:
+      helm: Helm
+      label: Kind
+      native: Native
+    name:
+      label: Name
+      placeholder: e.g. mycatalog
+    noData: There are no custom catalogs defined.
+    noMatch: No catalogs match the current search.
+    password:
+      label: Password
+      placeholder: Your password
+      required: "\"Password\" is required"
+    private:
+      label: Use private catalog
+    url:
+      label: Catalog URL
+    username:
+      label: Username
+      placeholder: Your username
+      required: "\"Username\" is required"
+  notAvailable: "Not available: there is a custom catalog called <code>{name}</code>"
+editContainer:
+  description:
+    placeholder: e.g. My Application
+  name:
+    placeholder: e.g. myapp
+  title:
+    container: Edit Container
+    vm: Edit VM
+formEnvVar:
+  detail: Environment Variables that were added at creation.
+  labels:
+    key: Key
+    value: Value
+  noData: No Environment Variables
+  status: "{count, plural,\n=0 {Not Configured}\n=1 {# variable}\nother {# variables}\n}\n"
+  title: Environment Variables
+formJobConfig:
+  activeDeadlineSeconds:
+    detail: The duration that the job may be active before the system tries to terminate it.
+    label: Active Deadline Seconds
+  backoffLimit:
+    detail: The number of retries before marking this job failed.
+    label: Back Off Limit
+  completions:
+    detail: The number of successfully finished pods the job should be run with.
+    label: Completions
+  detail: Configure the desired behavior of jobs.
+  failedJobsHistoryLimit:
+    detail: The number of failed finished jobs to retain.
+    label: Failed Jobs History Limit
+  parallelism:
+    detail: The maximum number of pods the job should run at any given time.
+    label: Parallelism
+  seconds: "{count, plural,\n  =1 {Second}\n  other {Seconds}\n}\n"
+  successfulJobsHistoryLimit:
+    detail: The number of successful finished jobs to retain.
+    label: Successful Jobs History Limit
+  suspend:
+    label: Suspend
+  times: "{count, plural,\n  =1 {Time}\n  other {Times}\n}\n"
+  title: Job Configuration
+formKeyValue:
+  addAction: Add Pair
+  binary:
+    byte: "{length, plural,\n=1 {# byte}\nother {# bytes}\n}\n\n\n"
+  key:
+    label: Key
+    placeholder: Key
+  protip: "ProTip: Paste lines of key=value pairs into any key field for easy bulk entry."
+  separator: =
+  value:
+    label: Value
+    placeholder: Value
+formNamespace:
+  create:
+    placeholder: e.g. myapp
+  errors:
+    noneChosen: You must choose a namespace.
+    validation: "Namespace: {error}"
+  label:
+    create: Namespace
+    default: Default Namespace
+    reuse: Namespace
+  reuse:
+    prompt: Choose a Namespace...
+  toggle:
+    create: Add to a new namespace
+    reuse: Use an existing namespace
+    simple: Customize
+formNetwork:
+  container:
+    label: Container
+  detail: Configure the networking and DNS options for the container.
+  dns:
+    disable: Disable discovery and directly use remote resolving servers
+    enable: Enable discovery and use local caching resolver
+    label: Service Discovery
+  dnsConfig:
+    nameservers:
+      addActionLabel: Add Name Server
+      label: DNS Name Server IP Addresses
+      placeholder: e.g. 192.168.2.1
+    options:
+      addActionLabel: Add Option
+      label: DNS Resolver Options
+      name:
+        label: Name
+        placeholder: e.g. ndots
+      value:
+        label: Value
+        placeholder: e.g. 5
+    searches:
+      addActionLabel: Add Search Domain
+      label: DNS Search Domains
+      placeholder: e.g. example.com
+  dnsPolicy:
+    clusterFirst: Cluster first
+    clusterFirstWithHostNet: Cluster first with host network
+    label: DNS Policy
+  domainName:
+    label: Domain Name
+    placeholder: e.g. example.com
+  hostAlias:
+    addActionLabel: Add Host Alias
+    host:
+      label: Hostname
+      placeholder: e.g. database
+    ip:
+      label: IP Address
+      placeholder: e.g. 192.168.0.1
+    label: Host Aliases (/etc/hosts entries)
+  hostname:
+    containerName: Use the container name
+    custom: Set a specific hostname
+    dockerId: Use the Docker container ID
+    hostName: Use the host's hostname
+    label: Hostname
+    placeholder: e.g. web
+  netMode:
+    disable: No
+    enable: Yes
+    label: Use Host's Network Namespace
+  requestedIp:
+    help: Request a specific IP in the 10.42.0.0/16 block.  If already in use, a random one will be assigned.
+    label: Request IP
+    placeholder: Optional; e.g. 10.42.2.24
+  resolvingServers:
+    addActionLabel: Add Server
+    label: Resolving Servers
+    placeholder: e.g. 8.8.4.4
+  retainIp:
+    label: Retain IP
+    reuse: Reuse existing IP on upgrade or replace
+  searchDomains:
+    addActionLabel: Add Domain
+    label: Search Domains
+    placeholder: e.g. prod.example.com
+  subdomain:
+    label: Subdomain
+    placeholder: e.g. foo
+  subnet:
+    form:
+      ip:
+        label: IP
+        placeholder: e.g. 192.168.1.100,Multiple ips are connected by commas
+      mac:
+        label: MAC
+        placeholder: "例如: 0a:00:27:00:00:00, Multiple MACs are connected by commas"
+      subnet:
+        label: Subnet
+        placeholder: Please choose a MacvlanSubnet
+    msg: "The upgrade strategy has been changed to: stop the old Pod and start the new Pod"
+  title: Networking
+formRunAsGroupPodSecurityPolicy:
+  detail: Controls which primary group ID the containers are run with.
+  range:
+    addLabel: Add Range
+    max:
+      label: Max
+      placeholder: e.g. 65535
+    min:
+      label: Min
+      placeholder: e.g. 1
+  rule:
+    mayRunAs: MayRunAs - Does not require that RunAsGroup be specified. However, when RunAsGroup is specified, they have to fall in the defined range.
+    mustRunAs: MustRunAs - Requires a range to be configured. Uses the first value of the range as the default. Validates against the configured range.
+    runAsAny: RunAsAny - No default provided. Allows any runAsGroup to be specified.
+  title: Run As Group Policy
+formScale:
+  label: Workload Type
+  scaleMode:
+    cronJob: Run on a cron schedule
+    daemonSet: Run one pod on each node
+    deploymentPrefix: Scalable deployment of
+    job: Job
+    replicaSetPrefix: Replica Set of
+    replicationControllerPrefix: Replication Controller of
+    scaleSuffix: "{scale, plural,\n  =1 {pod}\n  other {pods}\n}\n"
+    sidekickInactive: "Sidecar: Add a container to an existing workload"
+    sidekickPrefix: "Sidecar: Add a container to"
+    sidekickSuffix: ""
+    statefulSetPrefix: Stateful set of
+  showAdvanced: More options
+formUserLabels:
+  addAction: Add Label
+  detail: Labels are key/value pairs that can be used to annotate containers and make scheduling decisions.
+  key:
+    label: Key
+    placeholder: e.g. foo
+  nodeDetail: Labels are key/value pairs that can be applied to nodes and used to make scheduling decisions for containers.
+  protip: "ProTip: Paste one or more lines of key=value pairs into any key field for easy bulk entry."
+  separator: =
+  title: Labels
+  value:
+    label: Value
+    placeholder: e.g. bar
+formVolumes:
+  add:
+    bindMount: Bind-mount a directory from the node
+    certificate: Use a certificate
+    configMap: Use a config map
+    customLogPath: Read log files from a directory
+    existingPvc: Use an existing persistent volume (claim)
+    existingVolume: Existing ephemeral volume
+    label: Add Volume...
+    newPvc: Add a new persistent volume (claim)
+    newVolume: Add an ephemeral volume
+    secret: Use a secret
+    tmpfs: Add an in-memory tmpfs
+    vct: Add a Volume Claim Template
+  detail: Persist and share data separate from the lifecycle of an individual container.
+  errors:
+    absoluteMountPoint: Volume mount points must be absolute paths
+    incomplete: Incomplete volume definition
+  noHostContainers: This host has no containers to use the volumes from.
+  noLaunchConfigs: There are no other launch configs in this service to share volumes with.
+  onlySingleHost: Only available when adding a container to a particular host.
+  table:
+    kind: Kind
+    mountPoint: Mount Point
+    opts: Access/Options
+    source: Source
+  title: Volumes
+  value:
+    prompt: Select a Container...
+  volumeDriver:
+    label: Driver for custom volumes
+    placeholder: "e.g. rancher-nfs; Default: local"
+    suggestion: "Volume drivers in use:"
+  volumes: Volumes
+  volumesFrom: Volumes From
+k8sPage:
+  configFile:
+    button: Kubeconfig File
+    detail: Generate a Kubernetes config file to use <code>kubectl</code> on your desktop.
+    generating: Generating...
+    title: Config File
+    usage:
+      downloadText: |
+        Then <a href="{downloadUrl}" target="_blank">download</a> (if needed) and run <code>kubectl</code>
+      helpText: |
+        Put this into <code>~/.kube/config</code>:
+  dashboard:
+    button: Launch Dashboard
+    detail: Access the native Kubernetes dashboard.
+    title: Dashboard
+  header: Kubernetes
+  shell:
+    button: Launch kubectl
+    detail: Run <code>kubectl</code> commands from your browser.
+    title: Shell
+  toolbox: TOOL
+modalAddPayment:
+  currencies:
+    dollar: US Dollar ($)
+    euro: Euro (€)
+    yuan: Chinese Yuan (¥)
+  errors:
+    cc: Invalid credit card number
+    city: A city is required.
+    cvc: Invalid CVC number
+    exp: Invalid Expiry
+    state: A state is required.
+    street: A street is required.
+    zip: A zipcode is required.
+  form:
+    address:
+      addressLine1:
+        label: Address
+        placeholder: 742 Evergreen Terrace
+      addressLine2:
+        label: Address (cont)
+        placeholder: Apt. 123
+      city:
+        label: City
+        placeholder: Springfield
+      country:
+        label: Country
+        placeholder: United States
+      state:
+        label: State
+        placeholder: OR
+      zip:
+        label: Zip Code
+        placeholder: "99999"
+    cc:
+      label: Credit Card Number
+      placeholder: •••• •••• •••• ••••
+    currency:
+      label: Select your currency
+    cvc:
+      label: CVC
+      placeholder: •••
+    default:
+      label: Default Card
+    exp:
+      label: Expiration
+      placeholder: ••/••
+    name:
+      label: Name On Credit Card
+      placeholder: John Smith
+  header: Add New Payment Method
+  save: Save
+modalRotateEncryption:
+  backupWarning: Before proceeding, ensure a successful ETCD backup of the cluster has been completed.
+  lastBackup: The last backup {backupName} was performed on {backupTime}
+  title: Rotate Encryption Keys
+modalWelcome:
+  closeModal: Got It
+  header: Welcome to {appName}!
+multiClusterAppsPage:
+  error:
+    appData: Error loading global app data
+  header: Multi-Cluster Apps
+  noData: There are no multi-cluster apps launched
+  noMatch: No multi-cluster apps match the current search
+newCatalog:
+  answers:
+    addAction: Add Answer
+    label: Answers
+  appInfo: Detailed Descriptions
+  appInfoDetail: Application information and user guide
+  catalog: "Catalog:"
+  category: "Category:"
+  config: Configuration Options
+  customizeNamespace: This application will be deployed into the <code>{namespaceId}</code> namespace
+  error:
+    appData: Error loading app data
+  forceRollback: Delete and recreate resources if needed during the rollback (uses helm --force)
+  forceUpgrade: Delete and recreate resources if needed during the upgrade (uses helm --force)
+  helm:
+    label: Configuration Options
+    options:
+      label: Helm Options
+      timeout:
+        help: A value in seconds to wait for Kubernetes commands to complete.
+        label: Helm Timeout
+      wait:
+        help: Waits until all Kubernetes resources are ready before marking the app as active. If the timeout value is exceeded the application install will fail.
+        label: Helm Wait
+    protip: Helm templates accept a comma separated list of strings
+  istio:
+    catalog: "Traffic Rules Catalog:"
+    saveNew: Create
+  kind: "Catalog Kind:"
+  license: "License:"
+  maintainedBy: Maintained by community members
+  maintainer: "Maintainer:"
+  newAppDetail: Choose application version and namespace for the application
+  newNamespace: New Namespace
+  noConfig: This template has no configuration options
+  official: Officially Certified
+  preview: Preview
+  requiredNamespace: Required Namespace
+  saveConfigure: Configure
+  saveNew: Launch
+  saveUpgrade: Upgrade
+  seeMore: More information...
+  selectVersionAdd: Select a version of the template to deploy
+  selectVersionConfigure: Select a version of the template to configure
+  selectVersionUpgrade: Select a version of the template to upgrade to
+  startService: Start services after creating
+  support: "Support:"
+  templateFiles: Template Files
+  templateVersion: Template Version
+  titleAdd: Add {name} App
+  titleConfigure: Configure {name} App
+  titleUpgrade: Upgrade {name} App
+  txt: answers.txt
+  unknownType: "Unrecognized question type:"
+  upgrade: "Upgrade:"
+  url: "Project URL:"
+  version:
+    default: The default at the time (currently {version})
+    prompt: Choose a version...
+  warning:
+    monitoring: Configuration of monitoring should go to <b>cluster->tools->monitoring</b>，changes made on the current page may be overridden.
+nodeDriver:
+  addTemplate: Add Node Template
+  amazonec2:
+    access:
+      detail: Choose the region and API Key that will be used to launch EC2 Instances
+      help: Paste in your AWS key pair here. We'll use this key to create your new Instances.
+      loading: Loading Availability Zone and VPC info from EC2...
+      next: "Next: Authenticate & configure nodes"
+      title: 1. Account Access
+    accessKey:
+      label: Access Key
+      placeholder: Your AWS access key
+    ami:
+      label: AMI
+      placeholder: An Ubuntu AMI
+      rancherList: RancherOS AMI List
+    availabilityZone: Availability Zone
+    encryptEbsVolume:
+      label: Encryption
+      radioLabel: Encrypt EBS Volume
+    iam:
+      label: IAM Instance Profile Name
+      placeholder: my-k8s-profile
+    instance:
+      detail: Customize the EC2 Instance that will be created.
+      title: 4. Instance
+    instanceType:
+      label: Instance Type
+    metadata:
+      httpEndpoint:
+        disabled: Disabled
+        enabled: Enabled
+        label: HTTP Endpoint
+        protip: Enables or disables the HTTP metadata endpoint on your instances
+      httpTokens:
+        label: HTTP Tokens
+        optional: Optional
+        protip: Use HTTP Tokens for Instance Metadata Requests
+        required: Required
+    needs:
+      item1: From the {appName} server to <code>TCP</code> port <code>22</code> <span class="text-muted">(SSH to install and configure Docker)</span>
+      item2: From and To all other hosts on <code>UDP</code> ports <code>500</code> and <code>4500</code> <span class="text-muted">(for IPsec networking)</span></li>
+      item3: These rules will <b>not</b> be added automatically.
+      label: "For {appName} to work correctly your security group will need to allow traffic:"
+    noSubnet: There are no subnets to choose from
+    onlyPrivate:
+      label: Use only private IP address
+    portHelp:
+      link: Learn more
+      text: about the ports that will be opened.
+    privateIp:
+      label: Private IP
+    region:
+      label: Region
+    requestSpotInstance:
+      enable: Request spot instance
+      label: Spot Instance
+    rootSize:
+      label: Root Disk Size
+      unit: GB
+    secretKey:
+      label: Secret Key
+      placeholder: Your AWS secret key
+      provided: Provided
+    securityGroup:
+      choose: Choose one or more existing groups
+      defaultCreate: "Standard: Automatically create a <code>{groupName}</code> group"
+      defaultExisting: "Standard: Use the existing <code>{groupName}</code> group"
+      detail: Choose the security groups that will be applied to Instances
+      loading: Loading Instance options...
+      next: "Next: Set Instance options"
+      title: 3. Security Groups
+    spotPrice:
+      label: Spot Price
+      unit: $
+    sshUser:
+      label: SSH User
+      placeholder: e.g. ubuntu
+    subnet: VPC/Subnet
+    tags:
+      addActionLabel: Add AWS Tag
+      placeholder: e.g. dev
+      valueLabel: Tags
+    useEbsOptimizedInstance:
+      label: Optimized Instance
+      radioLabel: Create EBS optimized instance
+    volumeType:
+      label: Amazon EBS volume type
+    zone:
+      detail: Select the Availability Zone and VPC/Subnet for Instances
+      loading: Loading security group info from EC2...
+      next: "Next: Select a Security Group"
+      title: 2. Zone and Network
+  amazoneks:
+    access:
+      help: Paste in your AWS key pair here. Use only IAM access keys, using keys generated from the root user will make the cluster unreachable.
+      loading: Loading Cluster Option from Amazon...
+      next: "Next: Configure Cluster"
+    accessKey:
+      label: Access Key
+      placeholder: Your AWS access key
+    ami:
+      help: You may override the default AMI based on your region
+      label: Custom AMI Override
+    associateWorkerNodePublicIp:
+      radio:
+        default: Yes
+        off: "No: Private IPs only"
+      title: Public IP for Worker Nodes
+    clusterOption:
+      detail: Customize the cluster that will be used to launch EKS Instances
+      title: Cluster Options
+    desired:
+      label: Desired ASG Size
+    encryptEbs:
+      detail: Enables EBS encryption on worker nodes.
+      label: EBS Encryption
+    keyPairs:
+      label: SSH Key
+      prompt: none selected
+      tooltip: You may need to edit the security group's inbound rules to enable the port 22.
+    kubernetesVersion:
+      label: Kubernetes Version
+      placeholder: Select the Kubernetes Version to install
+    max:
+      label: Maximum ASG Size
+    min:
+      label: Minimum ASG Size
+    nodeVolumeSize:
+      label: Node Volume Size
+      placeholder: e.g. 20
+    region:
+      label: Region
+    role:
+      help: You may choose to not select a Service Role and one will be created for you.
+      label: Service Role
+      loading: Loading VPCs from Amazon...
+      next: "Next: Select VPC & Subnet"
+      noneSelected: Rancher created role
+      radio:
+        custom: "Custom: Choose from your existing service roles"
+        default: "Standard: Service role is automatically created"
+    secretKey:
+      label: Secret Key
+      placeholder: Your AWS secret key
+      provided: Provided
+    securityGroup:
+      choose: Choose one or more existing groups
+      defaultCreate: "Standard: Automatically create a new security group"
+      defaultExisting: "Standard: Use the existing <code>{groupName}</code> group"
+      detail: Choose the security groups that will be applied to EKS Instances
+      loading: Loading Instance options...
+      next: "Next: Set Instance options"
+      title: Security Groups
+    sessionToken:
+      label: Session Token  <em class='text-muted'>Optional</em>
+      placeholder: Your AWS session token
+      provided: Provided
+    subnet:
+      help: 2 subnets required
+      loading: Loading Security Groups from Amazon...
+      next: "Next: Select Security Group"
+      title: Subnet
+    userData:
+      help: Pass user-data to the nodes to perform automated configuration tasks
+      label: User Data
+      placeholder: Paste in the script
+    vpc:
+      detail: Choose the VPC for that will be used for EKS Instances
+      loading: Loading Subnets from Amazon...
+      loadingRancherDefault: Loading Instance options...
+      next: "Next: Select Subnets"
+      nextRancherDefault: "Next: Select Instance Options"
+      noneSelected: Rancher created VPC and Subnet
+      radio:
+        custom: "Custom: Choose from your existing VPC and Subnets"
+        default: "Standard: VPC and Subnet are automatically created"
+      title: VPC & Subnet
+  azure:
+    access:
+      detail: API Keys will be used to launch Azure Instances.
+      title: Account Access
+    availabilitySet:
+      label: Availability Set ({type})
+      placeholder: availability-set-name
+    clientId:
+      label: Client ID
+      placeholder: Your Client ID
+    clientSecret:
+      label: Client Secret
+      placeholder: Your Client Secret
+    diskSize:
+      label: Disk Size
+      placeholder: e.g. 30
+    dockerPort:
+      label: Docker Port
+      placeholder: "2376"
+    environment:
+      label: Environment
+      placeholder: AzurePublicCloud
+    faultDomainCount:
+      helpText: If the availability set has already been created, the fault domain count will be ignored.
+      label: Fault Domain Count
+      placeholder: e.g. 3
+    image:
+      helpText: Providing an ARM resource identifier requires using managed disk
+      label: Image
+      placeholder: canonical:UbuntuServer:18.04-LTS:latest
+    instance:
+      detail: Customize the Azure Instance that will be created.
+      title: Instance
+    managedDisks:
+      helpText: Creates a {type} availability set. Changing this value after the availability set has been created may cause errors.
+      label: Disk Type
+      managed: Managed Disk
+      unmanaged: Unmanaged Disk
+    network:
+      detail: Configure the network for the instances that will be created by this template.
+      title: Network
+    noPublicIp:
+      label: No Public IP
+    nsg:
+      helpText: When using a Rancher managed or providing an existing NSG, all nodes using this template will use the supplied NSG. If no NSG is provided, a new NSG will be created for each node.
+      label: Network Security Group
+      openPorts: When using an existing NSG, Open Ports are ignored.
+      placeholder: e.g. AllowVnetOutBound
+    openPort:
+      label: Open Port
+      placeholder: Comma-separated, e.g. 80,443
+    placement:
+      detail: Select the placement for the instances that will be created by this template.
+      title: Placement
+    privateIpAddress:
+      label: Private IP
+      placeholder: 127.0.0.1
+    publishSettingsFile:
+      label: Publish Settings
+      placeholder: Your Publish Settings file
+    region:
+      label: Region
+    resourceGroup:
+      label: Resource Group
+      placeholder: docker-machine
+    size:
+      label: Size
+    sshUser:
+      label: SSH User
+      placeholder: usr1
+    staticPublicIp:
+      label: Public IP
+    storageType:
+      label: Storage Type
+    subnet:
+      label: Subnet
+      placeholder: example-sub-name
+    subnetPrefix:
+      label: Subnet Prefix
+      placeholder: 128.42.0.0/21
+    subscriptionCert:
+      label: Subscription Cert
+      placeholder: Your Azure subscription certificate
+    subscriptionId:
+      label: Subscription ID
+      placeholder: Your Azure subscription ID
+    updateDomainCount:
+      helpText: If the availability set has already been created, the update domain count will be ignored.
+      label: Update Domain Count
+      placeholder: e.g. 5
+    usePrivateIp:
+      label: Use Private IP To Connect
+    vnet:
+      label: VNet
+      placeholder: "[resourcegroup:]name"
+  cloneTemplate: "Clone node template from: {name}"
+  cloudCredentialError: A cloud credential is required
+  digitalocean:
+    accessToken:
+      help: |
+        Paste in a Personal Access Token from the DigitalOcean
+        <a href="https://cloud.digitalocean.com/settings/api/tokens" target="_blank" rel="nofollow noreferrer noopener">Applications & API</a> screen
+      label: Access Token
+      placeholder: Your DigitalOcean API access token
+    authAccountButton: "Next: Configure Droplet"
+    backups:
+      label: Enable Snapshots
+    droplet:
+      detail: Configure the options for the Droplets that will be created by this template.
+      title: Droplet Options
+    errors:
+      hostnamePrefix: "\"Name Prefix\" can not contain \"_\""
+    image:
+      label: Image
+    ipv6:
+      label: Enable IPv6
+    monitoring:
+      label: Enable Monitoring
+    optionsSection: Options
+    privateNetworking:
+      label: Enable Private Networking
+    region:
+      label: Region
+    size:
+      label: Droplet Size
+    sizeLabel: "{highMem, select, true {High Memory: } other {}}{memoryGb} GB RAM, {disk} GB Disk, {vcpus, plural,\n  =1 {# vCPU}\n  other {# vCPUs}\n}\n"
+    sshUser:
+      label: SSH User
+      placeholder: e.g. root
+    tags:
+      addActionLabel: Add Droplet Tag
+      placeholder: e.g. dev
+      valueLabel: Tags
+  displayName:
+    aliyun: Alibaba ACK
+    aliyunecs: Alicloud ECS
+    amazonec2: Amazon EC2
+    amazoneks: Amazon EKS
+    amazoneksv2: Amazon EKS
+    azure: Azure
+    azureaks: Azure AKS
+    baidu: Baidu CCE
+    cloudca: Cloud.ca
+    digitalocean: DigitalOcean
+    exoscale: Exoscale
+    googlegke: Google GKE
+    googlegkev2: Google GKE
+    huawei: Huawei CCE
+    huaweicce: Huawei CCE
+    import: Other
+    importeks: Amazon EKS
+    linode: Linode
+    linodelke: Linode LKE
+    oci: Oracle Cloud Infrastructure
+    openstack: OpenStack
+    oracleoke: Oracle OKE
+    otc: Open Telekom Cloud
+    otccce: Open Telekom Cloud CCE
+    packet: Packet
+    pinganyunecs: Pinganyun ECS
+    pnap: phoenixNAP
+    rackspace: RackSpace
+    rancherkubernetesengine: RKE
+    softlayer: SoftLayer
+    tencent: Tencent TKE
+    tencenttke: Tencent TKE
+    upcloud: UpCloud
+    vmwarevsphere: vSphere
+    zstack: ZStack
+  driverOptions: "{driver} Options"
+  editTemplate: "Edit node template: {name}"
+  editWarning: Editing a node template will only affect new nodes created by a node pool; existing nodes will not be updated or replaced automatically.<br>If you delete nodes from a pool, new ones will be created using the new settings in the template.
+  exoscale:
+    accountHelp: Paste in your Exoscale key pair here.  We'll use this key to create your new Instances.
+    accountSection: Account Access
+    apiKey:
+      label: API Key
+      placeholder: Your Exoscale API Key
+    diskSize:
+      label: Root Size
+    instanceProfile:
+      label: Instance Profile
+    instanceSection: Instance
+    loadingInstance: Fetching available Instance settings...
+    loadingSecurity: Loading security group info from Exoscale...
+    loadingZone: Loading zone info from Exoscale...
+    loginAction: "Next: Authenticate & select a Zone"
+    needs:
+      item1: From the {appName} server to <code>TCP</code> port <code>22</code> <span class="text-muted">(SSH to install and configure Docker)</span>
+      item2: From and To all other hosts on <code>UDP</code> ports <code>500</code> and <code>4500</code> <span class="text-muted">(for IPsec networking)</span></li>
+      item3: These rules will <b>not</b> be added automatically.
+      label: "For {appName} to work correctly your security group will need to allow traffic:"
+    portHelp:
+      link: Learn more
+      text: about the ports that will be opened.
+    secretKey:
+      label: Secret Key
+      placeholder: Your Exoscale secret key
+      provided: Provided
+    securityGroup:
+      creating: Creating Security Group...
+      custom: "Custom: Choose an existing group"
+      defaultCreate: "Standard: Automatically create a <code>{groupName}</code> group"
+      defaultExisting: "Standard: Use the existing <code>{groupName}</code> group"
+      label: Security Group
+      updating: Updating Security Group...
+    securityGroupSection: Security Group
+    selectSecurityGroupAction: "Next: Set Instance options"
+    selectZoneAction: "Next: Select a Security Group"
+    sshUser:
+      label: SSH User
+      placeholder: picked by default by docker-machine
+    template:
+      label: Template
+    zone:
+      label: Zone
+    zoneSection: Zone
+  externalError: There was an error trying to load custom driver { driverName }. Please verify the custom node driver settings.
+  nameError: A name is required
+  oci:
+    access:
+      detail: User Credentials will be used to launch OCI Instances.
+      title: Account Access
+    availabilityDomain:
+      helpText: Must match availability domain of subnet if using AD-specific subnets.
+      label: Availability Domain
+      placeholder: select region to populate options...
+    faultDomainCount:
+      helpText: Each availability domain contains three fault domains.
+      label: Fault Domain
+      placeholder: e.g. 3
+    image:
+      label: Image
+      placeholder: enter valid compartment to populate options...
+    instance:
+      detail: Configure and customize the compute instance(s) that will be created.
+      title: Instance Details
+    network:
+      detail: Configure the VCN for compute instances created by this template.
+      title: Virtual Cloud Network Details
+    nodeCompartment:
+      label: OCID of compartment where compute instance(s) will be created
+      placeholder: ocid1.compartment.oc1....
+    openPort:
+      label: Open Port
+      placeholder: Comma-separated, e.g. 80,443
+    placement:
+      detail: Select placement for compute instance(s) created by this template.
+      title: Placement
+    region:
+      label: Region
+      placeholder: select cloud credential to populate options...
+    shape:
+      label: Shape
+      placeholder: enter valid compartment to populate options...
+    subnet:
+      helpText: If subnet is AD-specific, it must match the AD of the node(s) created by this template.
+      label: OCID of subnet (accessible to Rancher) that compute instance(s) will use
+      placeholder: ocid1.subnet.oc1....
+    usePrivateIp:
+      label: Use private IP address to connect to compute instances(s)
+    vcn:
+      label: OCID of VCN where compute instance will be launched
+      placeholder: ocid1.vcn.oc1....
+    vcnCompartment:
+      label: OCID of compartment where VCN and subnet reside (if different than above)
+      placeholder: ocid1.compartment.oc1....
+  packet:
+    accountSection: Account Access
+    apiKey:
+      label: Account API Key
+      placeholder: Your Packet API key
+    apiKeyHelp: From the Packet <a href="https://app.packet.net/users/0/api-keys" target="_blank">API Keys</a> screen
+    authentication: Authenticating
+    image:
+      label: Image
+    instanceOptionsSection: Instance Options
+    instanceSection: Instance
+    location: Location
+    loginAction: "Next: Authenticate & select an instance"
+    planDetails:
+      cpu: CPUs
+      drives: Drives
+      label: Instance Details
+      memory: Memory
+      network: NICs
+    projectId:
+      label: Project ID
+      placeholder: Your Packet project ID
+    region:
+      label: Region
+    regionSection: Region
+    size:
+      label: Size
+  pnap:
+    access:
+      detail: API Credentials will be used to launch phoenixNAP servers.
+      title: Account Access
+    errors:
+      clientIDRequired: Client ID is required.
+      clientSecretRequired: Client Secret is required.
+      hostnameRequired: Hostname is required.
+      locationRequired: Location is required.
+      osRequired: Operating System is required.
+      typeRequired: Server type is required.
+    location:
+      label: Location
+      placeholder: Please select server location.
+    os:
+      label: OS
+      placeholder: Please select Operating System.
+    serverDetails:
+      detail: Select details of the instances that will be created by this template.
+      title: Server Details
+    type:
+      label: Type
+      placeholder: Please select type of server to provision.
+  rackspace:
+    account:
+      detail: Username and API Key will be used to launch Rackspace Instances.
+      title: 1. Account Access
+    accountHelp: From the Account Settings screen of the RackSpace control panel
+    apiKey:
+      label: API Key
+      placeholder: Your RackSpace API key
+    flavor:
+      label: Flavor
+    region:
+      detail: Choose the region and flavor that will be used to launch Rackspace Instances.
+      label: Region
+      title: 2. Region and Flavor
+    username:
+      label: Username
+      placeholder: Your RackSpace username
+  templateOptions: "{appName} Template"
+  vmwarevsphere:
+    access:
+      detail: Configure where to find the VCenter or ESXi server
+      help: "Note: The free ESXi license does not support API access.  Only servers with a valid or evaluation license are supported."
+      title: 1. Account Access
+    boot2dockerUrl:
+      label: OS ISO URL
+      placeholder: "Default: Latest rancheros-vmware image"
+    cfgparam:
+      addActionLabel: Add Parameter
+      key:
+        placeholder: e.g. guestinfo.hostname
+      label: Configuration Parameters used for guestinfo
+      value:
+        placeholder: e.g. myrancherhost
+    cloneFrom:
+      label: VM/Template
+      placeholder: e.g. http://my_host/template.yml
+    cloudConfig:
+      label: Cloud config
+      placeholder: /etc/kubernetes/vsphere.conf
+    cloudconfig:
+      label: Cloud Config YAML
+    cloudinit:
+      help: Cloud-init file or url to set in the guestinfo
+      label: Cloud Init
+      placeholder: e.g. http://my_host/cloud-config.yml
+    cloudinitType:
+      label: Cloud Init type
+    contentLibrary: "Content library:"
+    cpuCount:
+      label: CPUs
+      unit: "{cores, plural, =1 {Core} other {Cores}}"
+    creationMethod:
+      cloneAnExistingVirtualMachine: Clone an existing virtual machine
+      deployFromTemplateContentLibrary: "Deploy from template: Content Library"
+      deployFromTemplateDataCenter: "Deploy from template: Data Center"
+      label: Creation method
+      rancherOsIso: RancherOS ISO (Deprecated)
+    creationType:
+      label: Creation method
+      legacy: Install from boot2docker ISO (Legacy)
+      library: "Deploy from template: Content Library"
+      template: "Deploy from template: Data Center"
+      vm: Clone an existing virtual machine
+    customAttributes:
+      addActionLabel: Add custom attribute
+      detail: Custom attributes allow you to attach metadata to objects in the vSphere inventory to make it easier to sort and search for these objects.
+      title: 5. Custom attributes (legacy)
+    dataCenter:
+      help: Data Center to create VM in (leave blank for standalone ESXi)
+      label: Data Center
+      placeholder: e.g. datacenter_name
+    dataStore:
+      cluster:
+        help: Datastore cluster to create VM on
+        tooltip: Use datastore cluster?
+      help: Datastore to create VM disk on
+      label: Data Store
+      placeholder: e.g. datastore_cluster_name/datastore_name
+    diskSize:
+      label: Disk
+      unit: MB
+    folder:
+      help: Folder for the VM. This folder must already exist in the datacenter.
+      label: Folder
+      placeholder: e.g. /folder
+    host:
+      help: Specific host to create VM on (leave blank for standalone ESXi or for cluster with DRS)
+      label: Host
+      placeholder: e.g. cluster_name/host_name
+    hostOptions:
+      any:
+        label: Any
+    instance:
+      detail: Choose the size and OS of the virtual machine
+      title: 3. Instance Options
+    instanceOptionsSection: Instance Options
+    instanceSection: Instance
+    library:
+      label: Library
+      placeholder: dsl_linux_v4-4-10.ova
+    libraryTemplate: "Library template:"
+    memorySize:
+      label: Memory
+      unit: MB
+    network:
+      addActionLabel: Add Network
+      help: Networks to attach VM to
+      valueLabel: Networks
+      valuePlaceholder: e.g. VM Network
+    password:
+      label: Password
+    pool:
+      help: Resource Pool to create VM in (leave blank for standalone ESXi)
+      label: Resource Pool
+      placeholder: e.g. /dc_name/host/host_name/Resources/pool_name
+    scheduling:
+      detail: Choose what hypervisor the virtual machine will be scheduled to
+      title: 2. Scheduling
+    schedulingSection: Scheduling
+    tags:
+      addActionLabel: Add tag
+      detail: Tags allow you to attach metadata to objects in the vSphere inventory to make it easier to sort and search for these objects.
+      title: 4. Tags
+    template: "Template:"
+    username:
+      label: Username
+    vappHelp: "Note: standalone ESXI does not support vApp options and network protocol profiles"
+    vappIpallocationpolicy:
+      help: dhcp, fixed, transient or fixedAllocated
+      label: vApp IP allocation policy
+      placeholder: e.g. fixedAllocated
+    vappIpprotocol:
+      help: IPv4 or IPv6
+      label: vApp IP protocol
+      placeholder: e.g. IPv4
+    vappMode:
+      auto: Use vApp to configure networks with network protocol profiles
+      disabled: Do not use vApp
+      manual: Provide a custom vApp config
+    vappOptions:
+      detail: Choose OVF environment properties
+      title: 6. vApp Options
+    vappProperty:
+      addActionLabel: Add Property
+      key:
+        placeholder: e.g. guestinfo.interface.0.ip.0.address
+      label: vApp properties
+      value:
+        placeholder: e.g. ip:VM Network, expression or string
+    vappTransport:
+      help: com.vmware.guestInfo or iso
+      label: OVF environment transport
+      placeholder: e.g. com.vmware.guestInfo
+    vcenter:
+      label: vCenter or ESXi Server
+      placeholder: vcenter.domain.com
+    vcenterPort:
+      label: Port
+    virtualMachine: "Virtual machine:"
+  zstack:
+    access:
+      detail: Choose the endpoint, account name and account password that will be used to launch ZStack Instances
+      loading: Loading Zone, Cluster, Network info from ZStack...
+      next: "Next: Authenticate & select a network"
+      title: 1. Account Access
+    accountName:
+      label: Account Name
+      placeholder: Your account name
+    accountPassword:
+      label: Account Password
+      placeholder: Your account password
+      provided: Provided
+    cluster:
+      label: Cluster
+    dataDiskOffering:
+      label: Data Disk
+    endpoint:
+      label: Endpoint
+      placeholder: e.g. https://192.168.1.42:8443/
+    imageName:
+      label: Image Name
+    instance:
+      detail: Customize the EC2 Instance that will be created.
+      title: 3. Instance
+    instanceOffering:
+      label: Instance Type
+    network:
+      choose: Choose existing network
+      defaultCreate: "Standard: Automatically create a <code>{groupName}</code> network"
+      label: Network
+    portHelp:
+      link: Learn more
+      text: about the ports that will be opened.
+    systemDiskOffering:
+      label: System Disk
+    zone:
+      detail: Select the Zone, Cluster and Network for Instances
+      label: Zone
+      loading: Loading instance options from ZStack...
+      next: "Next: Set Instance options"
+      title: 2. Zone, Cluster and Network
+podSection:
+  detail: Pods of current Node
+  title: Pods

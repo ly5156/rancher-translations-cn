@@ -1,0 +1,1110 @@
+action:
+  activate: Activate
+  addContainer: Deploy Pod
+  addHost: Add Host
+  addSidekick: Add a Sidecar
+  auditlog: Audit Log
+  backupEtcd: Snapshot Now
+  backupEtcdMessage:
+    fail:
+      message: 备份{ clusterId }到{ backupType }存储
+      title: 备份失败
+    success:
+      message: A { backupType } snapshot has been started for { clusterId }
+      start: 开始备份
+      title: Snapshot initiated
+  clone: Clone
+  cloneCrossCluster: Clone Cross Cluster
+  cloneRevision: Clone Revision
+  console: Open Console
+  convertToService: Convert to Service
+  cordon: Cordon
+  deactivate: Deactivate
+  disableAutoInject: Disable Istio Auto Injection
+  download: Download
+  downloadFile: Download File
+  downloadYaml: Download YAML
+  drain: Drain
+  edit: Edit
+  editConfig: Edit Config
+  editService: Edit Service
+  editVsAnnotaionForGlobalDns: Add/Remove Global DNS Record
+  editYaml: View/Edit YAML
+  enableAutoInject: Enable Istio Auto Injection
+  evacuate: Evacuate
+  execute: Execute Shell
+  exportConfig: Export Config
+  garbageCollect: Cleanup
+  importHost: Import Host
+  logs: View Logs
+  makeDefault: Set as Default
+  move: Move
+  mute: Mute
+  nodeConfig: Download Keys
+  pause: Pause Orchestration
+  pauseAll: Pause All
+  redeploy: Redeploy
+  refreshAuthProviderAccess:
+    allSuccess:
+      message: A group membership refresh has been triggered for all users.
+      title: Refresh Successful
+    label: Refresh Group Memberships
+    success:
+      message: A group membership refresh has been triggered
+      title: Refresh Successful
+  registration: Registration Cmd
+  remove: Delete
+  replay: Replay
+  rerun: Rerun
+  resetDefault: Reset default
+  resize: Resize
+  restart: Restart
+  restoreFromEtcdBackup: Restore Snapshot
+  resume: Resume Orchestration
+  resumeCronjob: Resume
+  retry: Retry
+  revert: Revert to Default
+  revision: New Revision from Default
+  rollback: Rollback
+  rotate: Rotate Certificates
+  rotateEncryption: Rotate Encryption Keys
+  run: Run
+  runCISScan: Run CIS Scan
+  saveAsTemplate: Save As RKE Template
+  scaledown: Scale Down
+  setDefault: Set as Login Environment
+  setDefaultRevision:
+    success:
+      message: "{ name } has been set at the default revision on { ctName }."
+      title: Success
+  setting: Setting
+  start: Start
+  startAll: Start All
+  stop: Stop
+  stopAll: Stop All
+  stopDrain: Stop Drain
+  suspend: Suspend
+  test: Test
+  uncordon: Uncordon
+  unmute: Unmute
+  upgrade: Upgrade
+  upgradeOrEdit: Upgrade/Edit
+  viewConfig: View Config
+  viewGraph: View Graph
+  viewInApi: View in API
+  viewInGrafana: Go to Grafana
+  viewInstance: View Instance
+  viewYaml: View YAML
+clusterDrivers:
+  add: Add Cluster Driver
+  builtIn: Built-In
+  refresh: Refresh Kubernetes Metadata
+  table:
+    noData: This cluster does not have any nodes defined
+    noMatch: No nodes match the current search
+clusterTemplateRevisionUpgradeNotification:
+  tooltip: Revision {revision} available for upgrade.
+clusterTemplatesPage:
+  headers:
+    created: Created
+    defaultRevisionId: Default Revision
+    revisionsCount: Revisions
+  index:
+    header: RKE Templates
+    newTemplate: Add Template
+  new:
+    header: Add RKE Template
+  newRevision:
+    header: New RKE Template Revision
+  select:
+    label: Clone from RKE Template Revision
+  table:
+    name: Revision Name
+containersSection:
+  detail: Containers in this pod
+  initContainer: Init Container
+  noData: No Containers
+  noMatch: No Containers match the current search
+  title: Containers
+copyToClipboard:
+  copied: Copied!
+  tooltip: Copy to Clipboard
+cruPersistentVolumeClaim:
+  capacity:
+    help: Req
+    label: Request Storage Capacity
+    unit: GiB
+  define:
+    addActionLabel: Define
+  name:
+    placeholder: e.g. myvol
+  pv:
+    label: Persistent Volume
+    prompt: Select a persistent volume...
+  secretRequired:
+    name: Secret Name
+    namespace: Secret Namespace
+  source:
+    label: Source
+    pv: Use an existing persistent volume
+    storageClass: Use a Storage Class to provision a new persistent volume
+  storageClass:
+    label: Storage Class
+    prompt: Use the default class
+  title:
+    define: Define Volume Claim
+    edit: "Edit Volume Claim: {name}"
+    new: Add Volume Claim
+    view: "Persistent Volume Claim: {name}"
+  volumeHandleRequired:
+    label: Volume Handle
+editCertificate:
+  description:
+    placeholder: e.g. EV cert for mydomain.com
+  name:
+    placeholder: e.g. mydomain.com
+  noteKeyWriteOnly: "Note: The Private Key is intentionally blank because the field is write-only.  You will do not need to provide the Private Key unless you are intending on changing it."
+  title: Edit Certificate
+editCluster:
+  description:
+    label: Description
+    placeholder: e.g. Shared cluster for development
+  modal:
+    onCluster: "Attention: You are trying to delete the cluster that owns your current environment. Please select a new environment in a different cluster before deleting this cluster."
+  name:
+    label: Name
+    placeholder: e.g. Sandbox
+  systemStacks:
+    add: Add Stack
+    cancel: Cancel Add System Stack
+    detail: These stacks will be automatically deployed into the System environment for the cluster.
+    hr: Cluster Options
+    noData: No stacks will be deployed into the System environment.
+    title: System Catalog Stacks
+  title:
+    edit: Edit Cluster
+    new: Add Cluster
+editPipelineConfig:
+  download: Download the modified configuration only.
+  header: Edit Pipeline Configuration
+  pushToReop: Push the modified configuration to remote repository automatically.
+  timeout:
+    helpText: How long to wait without seeing build finished before aborting the build.
+    label: Timeout
+enablePipeline:
+  configNow: Config Now
+  header: Enable Repository Authentication
+  helpText: Repository authentication is not enabled. You need to enable it first.
+  noPermission: Repository authentication is not enabled. You need to contact project owner to enable it first.
+formBalancerListeners:
+  access:
+    internal: Internal
+    label: Access
+    public: Public
+  addPortLabel: Add a Listening Port
+  detail: Control the mapping of requests coming into the balancer to the desired target.
+  help: Host and Path rules are matched top-to-bottom in the order shown.  Backends will be named randomly by default; to customize the generated backends, provide a name and then refer to that name in your custom haproxy.cfg.
+  label: Listeners & Target Rules
+  noRules: No Ports
+  protocol:
+    label: Protocol
+  removePortLabel: Remove this Listening Port
+  showBackendLabel: Customize backend names
+  sourceIp:
+    label: Host IP
+    placeholder: "e.g. 1.2.3.4; Default: All"
+  sourcePort:
+    label: Listening Port
+    placeholder: e.g. 80
+  status: "{count, plural,\n=0 {No rules}\n=1 {# rule}\nother {# rules}\n}\n"
+formHealthCheck:
+  checkType:
+    command: Command run inside the container exits with status 0
+    http: HTTP request returns a successful status (2xx or 3xx)
+    https: HTTPS request returns  a successful status (2xx or 3xx)
+    none: None
+    tcp: TCP connection opens successfully
+  combinedLivenessCheck: Use the same check for liveness and readiness
+  command:
+    label: Command
+    placeholder: e.g. cat /tmp/health
+  detail: Periodically make a request to the container to see if it is alive and responding correctly.
+  failureThreshold:
+    label: Unhealthy After
+    unit: failures
+  host:
+    label: Host Header
+    placeholder: e.g. example.com
+  httpHeaders:
+    addActionLabel: Add Header
+    keyLabel: Header Name
+    keyPlaceholder: e.g. User-Agent
+    label: Additional Headers
+    valuePlaceholder: e.g. Health-Check
+  initialDelaySeconds:
+    label: Start Checking After
+  liveness: Liveness Check
+  path:
+    label: Request Path
+    placeholder: e.g. /healthcheck
+  periodSeconds:
+    label: Check Interval
+  port:
+    label: Target Container Port
+    placeholder: e.g. 80
+  readiness: Readiness Check
+  reinitializingTimeout:
+    label: Reinitializing Timeout
+  separateLivenessCheck: Define a separate liveness check
+  successThreshold:
+    label: Healthy After
+    unit: successes
+  timeoutSeconds:
+    label: Check Timeout
+  title: Health Check
+formNodeTaints:
+  addAction: Add Taint
+  detail: Taints mark that the node should not accept any pods that do not tolerate the taints.
+  effect:
+    label: Effect
+  key:
+    label: Key
+    placeholder: e.g. foo
+  protip: Taint must be unique by key and effect pair.
+  title: Taints
+  value:
+    label: Value
+    placeholder: e.g. bar
+formPorts:
+  addAction: Add Port
+  containerPort:
+    label: Publish the container port
+    placeholder: e.g. 8080
+  dnsName:
+    label: DNS Name
+    placeholder: e.g. example
+  error:
+    hostPort:
+      sourcePortRequired: Source Port is required for Nodes running a pod.
+    loadBalancer:
+      sourcePortRequired: Source Port is required for Load Balancer.
+    mixedIpPort: Port {ip}:{port}/{proto} has more than one mapping.
+    mixedPort: Port {port}/{proto} has more than one mapping.
+    privateRequired: Private Container Port is required for each port rule.
+    publicRequired: Source Port is required if Host IP is specified.
+  header: Port Mapping
+  hostPortWarning: "Host Port is not supported on Windows nodes. See Windows support <a href=\"https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#limitations\" target=\"_blank\">limitations</a> in Kubernetes for more info."
+  kind:
+    ClusterIP: Cluster IP (Internal only)
+    HostPort: HostPort (Nodes running a pod)
+    HostPortDisbaled: HostPort (disabled)
+    LoadBalancer: Layer-4 Load Balancer
+    LoadBalancerDisbaled: Layer-4 Load Balancer (disabled)
+    NodePort: NodePort (On every node)
+    label: As a
+  name:
+    label: Name
+    placeholder: e.g. backend
+  noPorts: This container has no port maps.
+  nodePort:
+    customPortRangePlaceholder: Node port range is {range}, e.g. {port}
+    placeholder: Default node port range is 30000-32767, e.g. 30000
+  protocol:
+    label: Protocol
+  showAdvanced: Show Port Naming Options
+  sourcePort:
+    clusterIpDefault: Same as container port
+    ipPlaceholder: e.g. 80 or 19.82.2.24:80
+    label: On listening port
+    placeholder: e.g. 80
+  warning: This workload is not created by {appName} UI or {appName} API. {appName} will not automatically create related services for port mapping.
+formReservation:
+  limitCpu:
+    label: "{component} CPU Limit"
+    placeholder: e.g. 1000
+  limitMemory:
+    label: "{component} Memory Limit"
+    placeholder: e.g. 1000
+  requestCpu:
+    label: "{component} CPU Reservation"
+    placeholder: e.g. 1000
+  requestMemory:
+    label: "{component} Memory Reservation"
+    placeholder: e.g. 1000
+formScheduling:
+  addCustom: Add Custom Rule
+  addRule: Add Rule
+  autoPick:
+    container: "Automatically pick nodes for each pod matching scheduling rules:"
+    host: "Automatically pick a node matching scheduling rules:"
+    vm: "Automatically pick nodes for each virtual machine matching scheduling rules:"
+  autoRun: "Automatically run on every node matching scheduling rules:"
+  canRequestHost:
+    containers: Run <b>all</b> pods for this workload on a specific node
+    vm: Run <b>all</b> virtual machines on a specific node
+  condition: Condition
+  detail: Configure what nodes the pods can be deployed to.
+  effect: Effect
+  field: Field
+  hostMax: Maximum Nodes
+  key: Label Key
+  noRules: No rules.
+  noToleration: No tolerations.
+  nodeSelector:
+    custom:
+      placeholder: e.g. foo > 42 && bar != baz
+    multiple:
+      placeholder: e.g. foo, bar, baz
+    operator:
+      eq: =
+      exists: is set
+      ge: "&ge;\n"
+      gt: ">"
+      in: in list
+      le: "&le;\n"
+      lt: <
+      ne: "&ne;\n"
+      notExists: is not set
+      notIn: not in list
+    preferred: "Prefer Any of:"
+    requireAll: "Require ALL of:"
+    requireAny: "Require Any of:"
+  operator: Operator
+  perHost: per host
+  priority:
+    label: Priority
+    placeholder: e.g. 3
+  priorityClassName:
+    label: Priority Class Name
+    placeholder: e.g. high
+  runSpecific: Run this pod on a specific node
+  scaleIncrement: Scale Increment
+  scaleMax: Maximum Scale
+  scaleMin: Minimum Scale
+  scaling:
+    hostMaxDetail: If set, schedule containers for this service to a maximum of this many hosts.
+    incrementDetail: If set, the scale must be a multiple of the increment
+    minMaxDetail: If set, the scale will not be allowed to be adjusted by user or API call above or below these limits.
+  scheduler:
+    label: Scheduler
+    placeholder: e.g. myScheduler
+  status: "{count, plural,\n=0 {No rules}\n=1 {# rule}\nother {# rules}\n}\n"
+  time: Toleration Seconds
+  title: Node Scheduling
+  toleration:
+    add: Add Toleration
+    title: Tolerations
+    workloadTitle: Tolerations for {workload} pod
+  value: Value
+formScopedRoles:
+  description: Controls what access users have to the {type}.
+  mode:
+    admin:
+      detail: Owners have full control over the {type} and all resources inside it.
+      label: Owner
+    custom:
+      detail: Choose individual roles for this user
+      label: Custom
+    readOnly:
+      detail: Members can view the resources inside the {type} but not change the {type} itself.
+      label: Read Only
+    role:
+      read-only:
+        detail: Allows seeing everything, but not changing anything.
+        label: Read-Only
+    user:
+      detail: Members can manage the resources inside the {type} but not change the {type} itself.
+      label: Member
+    userDef:
+      detail: User defined role.
+  title: "{type} Permissions"
+formServicePorts:
+  addAction: Add Port
+  header: Port Mapping
+  name:
+    label: Port Name
+    placeholder: e.g. myport
+  noPorts: This service has no port maps.
+  nodePort:
+    label: Node Port
+    placeholder: e.g. 30000
+  port:
+    label: Publish the service port
+    placeholder: e.g. 8088
+  protocol:
+    label: Protocol
+  targetPort:
+    default: Same as service port
+    label: Target Port
+    placeholder: e.g. 80
+formShareMember:
+  add: Add Member
+  helpText: When assigning an Owner, the user must have the <a href="/g/security/roles">Create Cluster Template</a> global role in order to create new revisions. These permissions can be granted by an administrator.
+  public: Make public (read-only)
+  table:
+    headers:
+      accessType: Access Type
+      name: Name
+    noData: You have not shared this RKE Template with anyone
+    noMatch: No member match your search
+formValueArray:
+  addActionLabel: Add Value
+  noData: No Data
+  protip: "ProTip: Paste one or more lines of values into any field for easy bulk entry."
+  valueLabel: Value
+  valuePlaceholder: Value
+formVolumePodSecurityPolicy:
+  detail: Control the usage of volume types
+  title: Volume Policy
+  volumes: Volumes
+hostSettings:
+  badTld:
+    alert: |+
+      The <code>.local</code> Top-Level Domain is reserved by RFC6762 for Multicast DNS.  Using this as your Registration URL is strongly discouraged and may cause DNS resolution issues as well as problems with addons like secrets and networked storage drivers.  Please choose a different hostname or IP.
+
+  header: Host Registration URL
+  helpText:
+    isRancher: <a href="{docsBase}/installing-rancher/installing-server/basic-ssl-config/" target="_blank">SSL termination</a>
+    sslTerm: SSL termination
+    static1: Don't include <code>/v1</code> or any other path, but if you are doing
+    static2: in front of {appName}, be sure to use <code>https://</code>.
+  hostUrl:
+    local: "This site's address:"
+    new:
+      labelText: "Something else:"
+      placeholder: e.g. http://example.com:8080
+  notPublic:
+    alert: |
+      Are you sure all the hosts you will create will be able to reach <code>{activeValue}</code> ?<br/>It looks like a private IP or local network.
+  subtext: What base URL should hosts use to connect to the {appName} API?
+ingressPage:
+  gkeIngressWarning: It may take a few minutes for Kubernetes Engine to allocate an external IP address and prepare the load balancer. In the meanwhile, you may get errors like HTTP 404 and HTTP 500 until the load balancer is ready to serve the traffic.
+  header: "Ingress: {name}"
+  table:
+    noData: There are no ingress rules defined
+    noMatch: No ingresses match the current search.
+    targets:
+      label: Targets
+inputAnswers:
+  config: Configuration Options
+  editAsForm: Edit as a Form
+  noConfig: This template has no configuration options
+  protip: Paste and Read actions require their respective answers to be in a yml/yaml format
+  unknownType: "Unrecognized question type:"
+  yaml: Edit as YAML
+  yamlConfig: Paste or Read answers in a yml/yaml format.
+  yamlProtip: You can find default configuration in PREVIEW section.
+inputIdentity:
+  dropdownLabel:
+    groups: Your Groups
+    teams: Your Teams and Organizations
+  placeholder:
+    generic: Add a user or group by name
+    github: Add a GitHub user or organization name
+k8sImport:
+  actionLabel: Import
+  header: Import Existing Kubernetes
+  kubeConfig:
+    label: Kubeconfig file to import
+    placeholder: Import or paste in the Kubeconfig file of the cluster to use.
+  name:
+    label: Cluster Name
+    placeholder: e.g. my-imported-cluster
+loginShibboleth:
+  buttonText: Log In with Shibboleth
+managedImportClusterInfo:
+  detail: Customize the {provider} cluster options
+  drainServerNodes: Drain Control Plane Nodes
+  drainWorkerNodes: Drain Worker Nodes
+  error:
+    int: Concurrency values must be integer values
+  kubernetesVersion: Kubernetes Version
+  serverConcurrency: Control Plane Concurrency
+  title: "{provider} Options"
+  workerConcurrency: Worker Concurrency
+metrics:
+  apiserver-request-count: API Server Request Rate
+  apiserver-request-latency: API Server Request Latency
+  cluster-cpu-load: Load Average
+  cluster-cpu-usage: CPU Utilization
+  cluster-disk-io: Disk I/O
+  cluster-fs-usage-percent: Disk Utilization
+  cluster-gpu-memory-usage: GPU Memory Utilization
+  cluster-memory-usage: Memory Utilization
+  cluster-network-io: Network I/O
+  cluster-network-packet: Network Packets
+  container-cpu-usage: CPU Utilization
+  container-disk-io: Disk I/O
+  container-memory-usage-bytes-sum: Memory Utilization
+  controllermanager-queue-depth: Controller Manager Queue Depth
+  etcd-db-bytes-sum: DB Size
+  etcd-disk-operate: Disk Operations
+  etcd-grpc-client: GRPC Client Traffic
+  etcd-leader-change: Leader Change
+  etcd-peer-traffic: Peer Traffic
+  etcd-raft-proposals: Raft Proposals
+  etcd-rpc-rate: RPC Rate
+  etcd-stream: Active Streams
+  etcd-sync-duration: Disk Sync Duration
+  fluentd-buffer-queue-length: Fluentd Buffer Queue Rate
+  fluentd-input-record-number: Fluentd Input Rate
+  fluentd-output-errors: Fluentd Output Errors Rate
+  fluentd-output-record-number: Fluentd Output Rate
+  global-cluster-cpu-usage: Cluster CPU Utilization Top 5
+  global-cluster-disk-usage: Cluster Disk Utilization Top 5
+  global-cluster-memory-usage: Cluster Memory Utilization Top 5
+  global-node-cpu-usage: Node CPU Utilization Top 5
+  global-node-disk-usage: Node Disk Utilization Top 5
+  global-node-memory-usage: Node Memory Utilization Top 5
+  global-pod-cpu-usage: Pod CPU Utilization Top 5
+  global-pod-memory-usage: Pod Memory Utilization Top 5
+  global-pod-restart: Cluster Pods Restart Top 5
+  global-pod-unhealthy: Cluster Unhealthy Pods Top 5
+  global-pod-unschedulable: Cluster Unschedulable Pods Top 5
+  ingresscontroller-nginx-connection: Ingress Controller Connections
+  ingresscontroller-request-process-time: Ingress Controller Request Process Time
+  istio-4xxs: Project 4xx Request Count
+  istio-4xxs-top10: 4xx Request Count by Service
+  istio-5xxs: Project 5xx Request Count
+  istio-5xxs-top10: 5xx Request Count by Service
+  istio-global-request-volume: Project Request Volume
+  istio-global-request-volume-top10: Request Volume by Service
+  istio-global-success-rate: Project Success Rate
+  istio-request-duration-p50-top10: P50 Request Latency by Service
+  istio-request-duration-p90-top10: P90 Request Latency by Service
+  istio-request-duration-p99-top10: P99 Request Latency by Service
+  node-cpu-load: Load Average
+  node-cpu-usage: CPU Utilization
+  node-disk-io: Disk I/O
+  node-fs-usage-percent: Disk Utilization
+  node-gpu-memory-total: GPU Memory Total
+  node-gpu-memory-usage: GPU Memory Utilization
+  node-memory-usage: Memory Utilization
+  node-network-io: Network I/O
+  node-network-packet: Network Packets
+  pod-cpu-usage: CPU Utilization
+  pod-disk-io: Disk I/O
+  pod-memory-usage-bytes-sum: Memory Utilization
+  pod-network-io: Network I/O
+  pod-network-packet: Network Packets
+  scheduler-e-2-e-scheduling-latency-seconds-quantile: Scheduler E2E Scheduling Latency
+  scheduler-pod-unscheduler: Scheduling Failed Pods
+  scheduler-total-preemption-attempts: Scheduler Preemption Attempts
+  workload-cpu-usage: CPU Utilization
+  workload-disk-io: Disk I/O
+  workload-memory-usage-bytes-sum: Memory Utilization
+  workload-network-io: Network I/O
+  workload-network-packet: Network Packets
+modalDeleteGroupRoleBinding:
+  createLabel: Delete
+  header: "Are you sure you want to remove all permissions for Group: {groupName}"
+modalDeleteIstio:
+  disable: Disable
+  disabling: Disabling
+  onlyIstio:
+    "false": Istio, Monitoring and remove Istio system namespace
+    "true": Istio and remove Istio system namespace
+  title: "Are you sure you want to disable:"
+modalFeedback:
+  header: Welcome to {appName}!
+  send: Get Started
+  subtitle: Before you get started, please tell us a little about yourself...
+modalRollbackService:
+  action: Rollback
+  current:
+    label: Current Revision
+  difference:
+    label: Differences
+  revisionId:
+    label: Rollback to Revision
+    prompt: Choose a Revision...
+  title: Rollback "{instanceName}"
+  titleWithSidekicks: "Rollback \"{instanceName}\" & {count, plural, =1 {# sidecar} other {# sidecar}}"
+modalShell:
+  title: "Shell: "
+moveNamespace:
+  actionLabel: Move
+  title: "Move {count, plural,\n=1 {namespace: {name}}\nother {# namespaces:}}\n"
+  to: "To project:"
+namespacesPage:
+  addNamespace: Add Namespace
+  header: Namespaces
+  noData: There are no namespaces defined.
+  noMatch: No namespaces match the current search.
+  table:
+    created:
+      label: Created
+    description:
+      label: Description
+    name:
+      label: Namespace
+    pods:
+      label: Pods
+    project:
+      label: Project
+    workloads:
+      label: Workloads
+nav:
+  admin:
+    catalogs: Catalogs
+    clusters:
+      rkeTemplate: RKE Templates
+      tab: Clusters
+    drivers: Drivers
+    globalDns: Global DNS
+    globalDnsEntries: Global DNS Entries
+    globalDnsProviders: Global DNS Providers
+    globalMonitoring: Global Monitoring
+    globalRegistry: Global Registry
+    imageRepo:
+      config: Configuration
+      logs: Logs
+      projects: Image Management
+      registries: Registries
+      tab: Image Repo
+    machines: Nodes
+    multiClusterApps: Apps
+    security:
+      accounts: Users
+      authentication: Authentication
+      cloudCredentials: Cloud Credentials
+      groupAccounts: Groups
+      members: Members
+      podSecurityPolicies: Pod Security Policies
+      roles: Roles
+      tab: Security
+    settings:
+      advanced: Advanced
+      auth: Access Control
+      registration: Host Registration
+      tab: Settings
+    tab: Global
+  api:
+    link: API & Keys
+  apps:
+    apps: Apps
+    launch: Launch
+    manage: Manage Catalogs
+    noData: There are no apps launched.
+    noMatch: No apps match the current search
+    tab: Apps
+  auditLog:
+    tab: Audit Log
+  catalog:
+    all: All
+    community: Community
+    library: Library
+  cluster:
+    dashboard: Cluster
+    members: Members
+    namespaces: Namespaces
+    nodes: Nodes
+    projects: Projects/Namespaces
+    staticPods: Static Pods
+    storage:
+      classes: Storage Classes
+      tab: Storage
+      volumes: Persistent Volumes
+    vlansubnet: Flat Network
+  clusterTemplates:
+    link: RKE Templates
+  containers:
+    addBalancer: Add Balancer
+    addContainer: Add Container
+    addDns: Add Record
+    addHpa: Add HPA
+    addIngress: Add Ingress
+    addVolume: Add Volume
+    containers: Workloads
+    deploy: Deploy
+    dns: Service Discovery
+    hpa: HPA
+    importCompose: Import YAML
+    ingresses: Load Balancing
+    pipelines: Pipelines
+    systemTab: System
+    tab: Workloads
+    volumes: Volumes
+  dashboard:
+    try: Cluster Explorer
+  f5:
+    controllers: F5 Ingress Controllers
+    tls: TLS
+  group:
+    namespace: Group by Namespace
+    namespaceWorkload: Group by Namespace/Workload
+    node: Group by Node
+    none: Flat List
+    workload: Group by Workload
+  hosts:
+    addHost: Add Nodes
+    tab: Nodes
+  infra:
+    certificates: Certificates
+    configMaps: Config
+    f5Ingresses: F5 Ingress Controllers
+    hpa: HPA
+    members: Members
+    pipelines: Pipelines
+    registries: Registries
+    secrets: Secrets
+    storagePage: Storage
+    tab: Resources
+  nodeTemplates:
+    link: Node Templates
+  project:
+    namespaces: Namespaces
+    none: Grouped Projects/Namespaces
+  projectDropdown:
+    clusters: Clusters
+    clustersNoData: You don't have any clusters
+    clustersNoMatch: No clusters match "{searchInput}"
+    label: Scope
+    projectInCluster: in {cluster}
+    projectNoData: This cluster has no projects
+    projectNotReady: Cluster not ready
+    projects: Projects
+    projectsIn: Projects in {cluster}
+    projectsNoData: Select a cluster
+    projectsNoMatch: No projects match "{searchInput}"
+    search: Search...
+  settings:
+    advanced: Advanced
+    tab: Settings
+  srToggleDropdown: Toggle Dropdown
+  tools:
+    alerts: Alerts
+    backup: Rancher Backups
+    backups: Snapshots
+    catalogs: Catalogs
+    cisF5: F5 CIS
+    cisScans: CIS Scans
+    fleet: Continuous Delivery
+    gatekeeper: OPA Gatekeeper
+    istio: Istio
+    logging: Logging
+    monitoring: Monitoring
+    notifiers: Notifiers
+    pipeline: Pipeline
+    rio: Rio
+    tab: Tools
+  user:
+    label: "User Menu: {username}"
+    logout: Log Out
+  userPreferences:
+    link: Preferences
+newStack:
+  answers:
+    addActionLabel: Add Answer
+    label: Answers (variable substitutions)
+  description:
+    placeholder: e.g. MyApp Stack
+  files:
+    addActionLabel: Add a File
+    label: Files
+    namePlaceholder: File Name
+    protipLabel: Supports {appName} <code>compose.yml</code>, <code>docker-compose.yml</code>, and Kubernetes manifest files
+    uploadActionLabel: Read from Disk
+    valuePlaceholder: File Contents
+  header: Import YAML
+  name:
+    placeholder: e.g. myapp
+pagination:
+  catalog: "{pages, plural,\n=0 {No Catalogs}\n=1 {{count} {count, plural, =1 {Catalog} other {Catalogs}}}\nother {{from} - {to} of {count} Catalogs}}\n"
+  certificate: "{pages, plural,\n=0 {No Certificates}\n=1 {{count} {count, plural, =1 {Certificate} other {Certificates}}}\nother {{from} - {to} of {count} Certificates}}\n"
+  cluster: "{pages, plural,\n=0 {No Clusters}\n=1 {{count} {count, plural, =1 {Cluster} other {Clusters}}}\nother {{from} - {to} of {count} Clusters}}\n"
+  clusterTemplates: "{pages, plural,\n=0 {No Template Revisions}\n=1 {{count} {count, plural, =1 {Template Revision} other {Template Revisions}}}\nother {{from} - {to} of {count} Template Revisions}}\n"
+  container: "{pages, plural,\n=0 {No Containers}\n=1 {{count} {count, plural, =1 {Container} other {Containers}}}\nother {{from} - {to} of {count} Containers}}\n"
+  destinationRules: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Destination Rule} other {Destination Rules}}}\nother {{from} - {to} of {count} Destination Rules}}\n"
+  dnsProvider: "{pages, plural,\n=0 {No DNS Records}\n=1 {{count} {count, plural, =1 {DNS Provider} other {DNS Providers}}}\nother {{from} - {to} of {count} DNS Providers}}\n"
+  dnsRecord: "{pages, plural,\n=0 {No DNS Records}\n=1 {{count} {count, plural, =1 {DNS Record} other {DNS Records}}}\nother {{from} - {to} of {count} DNS Records}}\n"
+  driver: "{pages, plural,\n=0 {No Drivers}\n=1 {{count} {count, plural, =1 {Driver} other {Drivers}}}\nother {{from} - {to} of {count} Drivers}}\n"
+  driverOptions: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Driver Option} other {Driver Options}}}\nother {{from} - {to} of {count} Driver Options}}\n"
+  entry: "{pages, plural,\n=0 {No Entries}\n=1 {{count} {count, plural, =1 {Entry} other {Entries}}}\nother {{from} - {to} of {count} Entries}}\n"
+  event: "{pages, plural,\n=0 {No Events}\n=1 {{count} {count, plural, =1 {Event} other {Events}}}\nother {{from} - {to} of {count} Events}}\n"
+  f5Ctl: "{pages, plural,\n=0{ No F5 LB}\n=1 {{count} {count, plural, =1 {F5 LB} other {F5 LB}}}\nother {{from} - {to} of {count} F5 LB}}\n"
+  f5Tls: "{pages, plural,\n=0{ No TLS}\n=1 {{count} {count, plural, =1 {TLS} other {TLS}}}\nother {{from} - {to} of {count} TLS}}\n"
+  features: "{pages, plural,\n=0 {No Features}\n=1 {{count} {count, plural, =1 {Feature} other {Features}}}\nother {{from} - {to} of {count} Features}}\n"
+  gateways: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Gateway} other {Gateways}}}\nother {{from} - {to} of {count} Gateways}}\n"
+  generic: "{pages, plural,\n=0 {No Items}\n=1 {{count} {count, plural, =1 {Item} other {Items}}}\nother {{from} - {to} of {count} Items}}\n"
+  hpa: "{pages, plural,\n=0 {No Horizontal Pod Autoscalers}\n=1 {{count} {count, plural, =1 {Horizontal Pod Autoscaler} other {Horizontal Pod Autoscalers}}}\nother {{from} - {to} of {count} Horizontal Pod Autoscalers}}\n"
+  image: "{pages, plural,\n=0 {No Images}\n=1 {{count} {count, plural, =1 {Image} other {Images}}}\nother {{from} - {to} of {count} Images}}\n"
+  ingress: "{pages, plural,\n=0 {No Ingresses}\n=1 {{count} {count, plural, =1 {Ingress} other {Ingresses}}}\nother {{from} - {to} of {count} Ingresses}}\n"
+  istioRule: "{pages, plural,\n=0 {No Traffic Rules}\n=1 {{count} {count, plural, =1 {Traffic Rule} other {Traffic Rules}}}\nother {{from} - {to} of {count} Traffic Rules}}\n"
+  link: "{pages, plural,\n=0 {No Links}\n=1 {{count} {count, plural, =1 {Link} other {Links}}}\nother {{from} - {to} of {count} Links}}\n"
+  loadBalancer: "{pages, plural,\n=0 {No Load Balancers}\n=1 {{count} {count, plural, =1 {Load Balancer} other {Load Balancers}}}\nother {{from} - {to} of {count} Load Balancers}}\n"
+  member: "{pages, plural,\n=0 {No Members}\n=1 {{count} {count, plural, =1 {Member} other {Members}}}\nother {{from} - {to} of {count} Members}}\n"
+  mount: "{pages, plural,\n=0 {No Mounts}\n=1 {{count} {count, plural, =1 {Mount} other {Mounts}}}\nother {{from} - {to} of {count} Mounts}}\n"
+  namespace: "{pages, plural,\n=0 {No Namespaces}\n=1 {{count} {count, plural, =1 {Namespace} other {Namespaces}}}\nother {{from} - {to} of {count} Namespaces}}\n"
+  node: "{pages, plural,\n=0 {No Nodes}\n=1 {{count} {count, plural, =1 {Node} other {Nodes}}}\nother {{from} - {to} of {count} Nodes}}\n"
+  nodePool: "{pages, plural,\n=0 {No Node Pools}\n=1 {{count} {count, plural, =1 {Node Pool} other {Node Pools}}}\nother {{from} - {to} of {count} Node Pools}}\n"
+  nodeTemplate: "{pages, plural,\n=0 {No Node Templates}\n=1 {{count} {count, plural, =1 {Node Template} other {Node Templates}}}\nother {{from} - {to} of {count} Node NodeTemplates}}\n"
+  pod: "{pages, plural,\n=0 {No Pods}\n=1 {{count} {count, plural, =1 {Pod} other {Pods}}}\nother {{from} - {to} of {count} Pods}}\n"
+  podHighlightSubset: <b>{subset} of {count}</b> Pods
+  podLabel: "{count, plural,\n  =1 {Pod}\n  other {Pods}\n}\n"
+  podNoSubset: 0 of {count} Pods
+  port: "{pages, plural,\n=0 {No Ports}\n=1 {{count} {count, plural, =1 {Port} other {Ports}}}\nother {{from} - {to} of {count} Ports}}\n"
+  project: "{pages, plural,\n=0 {No Projects}\n=1 {{count} {count, plural, =1 {Project} other {Projects}}}\nother {{from} - {to} of {count} Projects}}\n"
+  role: "{pages, plural,\n=0 {No Roles}\n=1 {{count} {count, plural, =1 {Role} other {Roles}}}\nother {{from} - {to} of {count} Roles}}\n"
+  rule: "{pages, plural,\n=0 {No Rules}\n=1 {{count} {count, plural, =1 {Rule} other {Rules}}}\nother {{from} - {to} of {count} Rules}}\n"
+  service: "{pages, plural,\n=0 {No Services}\n=1 {{count} {count, plural, =1 {Service} other {Services}}}\nother {{from} - {to} of {count} Services}}\n"
+  storageClass: "{pages, plural,\n=0 {No Storage Classes}\n=1 {{count} {count, plural, =1 {Storage Class} other {Storage Classes}}}\nother {{from} - {to} of {count} Storage Classes}}\n"
+  virtualServices: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Virtual Service} other {Virtual Services}}}\nother {{from} - {to} of {count} Virtual Services}}\n"
+  volume: "{pages, plural,\n=0 {No Volumes}\n=1 {{count} {count, plural, =1 {Volume} other {Volumes}}}\nother {{from} - {to} of {count} Volumes}}\n"
+  workload: "{pages, plural,\n=0 {No Workloads}\n=1 {{count} {count, plural, =1 {Workload} other {Workloads}}}\nother {{from} - {to} of {count} Workloads}}\n\n"
+pipelineNotification:
+  asMessage: Send a message to
+  condition:
+    changed:
+      label: Changed
+    failed:
+      label: Failed
+    required: Build Status is required
+    success:
+      label: Success
+  header: Notification
+  recipients:
+    required: Recipient is required
+  when: When build status is
+projectIstioPage:
+  info:
+    noPermission: You do not have permission to configure Istio.
+    notEnabled: Istio is not enabled yet. Go <a href="/c/{clusterId}/istio/cluster-setting">here</a> to enable it.
+    notOwner: Istio is not enabled yet. Please contact your cluster administrator.
+registriesPage:
+  index:
+    header: Registry Credentials
+    linkTo: Add Registry
+    noData: There are no registry credentials.
+    noMatch: No registry credentials match the current search
+    table:
+      header:
+        address: Address
+        created: Created
+        state: State
+        username: Username
+  new:
+    form:
+      custom:
+        help: Just the hostname or IP address, do not include the protocol (https://)
+        labelText: Address
+        placeholder: e.g. registry.example.com
+      password:
+        labelText: Password
+        placeholder: e.g. password
+      username:
+        labelText: Username
+        placeholder: e.g. username
+    header: Add Registry
+reservationParameters:
+  label: Resource Limit
+  memory:
+    labelText: Memory
+    placeholder: "Default: Entire host"
+    unit: MB
+  milliCpu:
+    labelText: CPU
+    placeholder: "Default: Entire host"
+    unit: mCPU
+rkeConfigComment:
+  clusterConfig: "\"\"\n\"Cluster Config\"\n\n"
+  ingress: "\"\"\n\"# Currently only nginx ingress provider is supported.\"\n\"# To disable ingress controller, set `provider: none`\"\n\"# To enable ingress on specific nodes, use the node_selector, eg:\"\n\"   provider: nginx\"\n\"   node_selector:\"\n\"     app: ingress\"\n"
+  network: "\"\"\n\"  If you are using calico on AWS\"\n\"\"\n\"   network:\"\n\"     plugin: calico\"\n\"     calico_network_provider:\"\n\"       cloud_provider: aws\"\n\"\"\n\"# To specify flannel interface\"\n\"\"\n\"   network:\"\n\"     plugin: flannel\"\n\"     flannel_network_provider:\"\n\"     iface: eth1\"\n\"\"\n\"# To specify flannel interface for canal plugin\"\n\"\"\n\"   network:\"\n\"     plugin: canal\"\n\"     canal_network_provider:\"\n\"       iface: eth1\"\n"
+  rancher_kubernetes_engine_config: "\"\"\n\"Rancher Config\"\n"
+  services: "\"\"\n\"   services:\"\n\"     kube-api:\"\n\"       service_cluster_ip_range: 10.43.0.0/16\"\n\"     kube-controller:\"\n\"       cluster_cidr: 10.42.0.0/16\"\n\"       service_cluster_ip_range: 10.43.0.0/16\"\n\"     kubelet:\"\n\"       cluster_domain: cluster.local\"\n\"       cluster_dns_server: 10.43.0.10\"\n"
+runPipeline:
+  branch:
+    label: Branch
+  noBranch: There is no <code>.rancher-pipeline.yml</code> file in the repository. You can click <b>Edit Config</b> to edit it in wizard or click <b>View/Edit YAML</b> to edit in YAML.
+  title: Run "{name}"
+servicePage:
+  certsTab:
+    additional: Additional SNI Certificates
+    default: Default Certificate
+    detail: Certificates used for TLS-termination of requests.
+    title: Certificates
+  containersTab:
+    detail: The containers that make up this service.
+    title: Containers
+  endpoints: Endpoints
+  external:
+    externalHostname: "External Hostname:"
+    externalIp: "{count, plural,\n  =1 {External IP:}\n  other {External IPs:}\n}\n"
+  globalScale: "{scale} per host"
+  header: "Workload: {name}"
+  linksTab:
+    detail: These properties show the links between containers in this service.
+    header: Links
+    noData: This Service has no links
+  logTab:
+    detail: Recent orchestration events that have occurred for this service
+    title: Service Log
+  multistat:
+    created: Created
+    cronSchedule: Cron Schedule
+    currentScale: "Ready Scale: {count}"
+    daemonSetScale: 1 per node
+    fqdn: FQDN
+    image: Image
+    namespace: Namespace
+    podNum:
+      error:
+        required: The pod number is required
+        typeError: The pod number value is an integer greater than 0
+      label: The pod number
+    scale: Config Scale
+    type: Workload Type
+  new:
+    form:
+      description:
+        placeholder: e.g. My application
+      name:
+        placeholder: e.g. myapp
+  newBalancer:
+    form:
+      description:
+        placeholder: e.g. Balancer for mycompany.com
+      name:
+        placeholder: e.g. website
+    upgradeImage: The balancer software image will be upgraded from <code>{from}</code> to <code>{to}</code>.
+  newIngress:
+    form:
+      description:
+        placeholder: e.g. Ingress for mycompany.com
+      load:
+        label: Flat network load
+      name:
+        placeholder: e.g. website
+  portsTab:
+    detail: Ports mapped from a host IP to the listening ports of a container.
+    notActive: Ports are only available while the service is Active.
+    title: Ports
+  selector:
+    label: "Selector:"
+  serviceType:
+    cronJob: Cron Job
+    daemonSet: Daemon Set
+    deployment: Deployment
+    job: Job
+    pod: Standalone Pod
+    replicaSet: Replica Set
+    replicationController: Replication Controller
+    statefulSet: Stateful Set
+  sidekick:
+    header: Workload & Sidecars
+    helpBlock: Select the main container or one of the sidecars
+    tabHeader: Sidecars
+  type:
+    composeservice: Compose Service
+    dnsservice: Alias
+    externalservice-host: External Name
+    externalservice-ip: External IP
+    kubernetesservice: K8s Service
+    loadbalancerservice: Load Balancer
+    networkdriverservice: Network Service
+    selectorservice: Selector
+    service: Service
+    storagedriverservice: Storage Service
+settingsPage:
+  tabs:
+    feature: Feature Flags
+    settings: Advanced Settings
+shareMemberRow:
+  accessType:
+    member: Member
+    owner: Owner
+    read-only: User
+  table:
+    public:
+      accessType: Read Only
+      name: Public (all members & groups)
+stackHeader:
+  outputs: Outputs
+  title: "Namespace: {name}"
+stackPage:
+  basics:
+    tagsCopy: Copy Tags as comma separated list
+  containers:
+    detail: Standalone Containers and Services contained in this stack
+    header: Containers
+    status: "{count, plural,\n=0 {No containers}\n=1 {# container}\nother {# containers}\n}\n"
+  dnsServices:
+    detail: Load Balancers that are apart of this stack
+    header: DNS Entries
+    status: "{count, plural,\n=0 {No entries}\n=1 {# entry}\nother {# entries}\n}\n"
+  header:
+    backLink: Back to all stacks
+    singleBanner: Viewing a single Stack
+  loadBalancers:
+    detail: Load Balancer containers that are apart of this stack
+    header: Load Balancers
+    status: "{count, plural,\n=0 {No balancers}\n=1 {# balancer}\nother {# balancers}\n}\n"
+  scalingGroups:
+    detail: Containers existing in this scaling group
+    header: Scaling groups
+    status: "{count, plural,\n=0 {No containers}\n=1 {# container}\nother {# containers}\n}\n"
+  volumesTab:
+    detail: These properties show the volumes attached to your container.
+    header: Volumes
+    table:
+      noData: This stack has no volumes mounted
+      noMatch: No volumes match the current search
+      path: Mount Point
+      shared: Shared With
+      writable: Writable
+telemetryOpt:
+  eula:
+    link: Terms and Conditions
+    prefix: I agree to the
+    suffix: for using {appName}
+  header: Statistics
+  label: Allow collection of anonymous statistics
+  learnMore:
+    label: Learn More
+  subtext: |
+    Rancher Labs would like to collect anonymous information about the configuration of your installation to help make {appName} better.<br/>Your data will not be shared with anyone else, and no specific resource names or addresses are collected.
+time:
+  mins: "{mins, plural,\n=1 {# min}\nother {# mins}\n}\n"
+  minsAgo: "{mins, plural,\n=1 {# min ago}\nother {# mins ago}\n}\n"
+  now: Now
+  secsAgo: "{secs, plural,\n=1 {# second ago}\nother {# seconds ago}\n}\n\n"
+tooltipToggleOverride:
+  label: Allow user override?
+tooltipWarning:
+  dismiss: Dismiss
+  notConfigured: Access Control Not Configured
+units:
+  cpu: milli CPUs
+  percent: "%"
+viewEditDescription:
+  form:
+    description:
+      placeholder: e.g. Environment for developer experimentation
+    name:
+      placeholder: e.g. lab
+virtualServicePage:
+  noData: There are no virtual services defined
+  noMatch: No Virtual Services match the current search
+  notSupported: networking.istio.io/v1alpha3 API is not available in the cluster.
+  table:
+    hosts:
+      label: Hosts
+volumesPage:
+  addActionLabel: Add Volume Claim
+  claimName:
+    label: Claim Name
+  noData: There are no persistent volume claims defined
+  noMatch: No persistent volume claims match the current search
+  storageClass:
+    label: Storage Class
+  title: Volume Claims
+  volume:
+    label: Persistent Volume
+windowsCluster:
+  istio: Istio is not supported in Windows clusters.
+  logging:
+    helpText: We will use fluentd to collect stdout/stderr logs from each container and the log files which exist under path <code >/var/log/containers/</code> on each <b>Linux</b> host and <code >c:/var/log/containers/</code> on each <b>Windows</b> host. The logs can be shipped to a target you configure below.
+    kafka:
+      brokerTypeHelpText: Use the Broker list as the Kafka connection entry point.
+    vxlanWarning: "{appName} Logging doesn't work with VxLan mode currently due to <a href=\"https://github.com/kubernetes/kubernetes/issues/79359\" target=\"_blank\">kubernetes/kubernetes#79359</a>. We are working with Microsoft to fix it in Kubernetes side.\n"
+  pipelines: Pipelines are not supported in Windows clusters.

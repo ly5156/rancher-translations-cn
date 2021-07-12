@@ -1,0 +1,1048 @@
+alertPage:
+  addSelectorLabel: Add Selector
+  alertGroups: Alerts
+  cluster: Cluster
+  commonRules:
+    cpuUsagePercent: CPU usage percent
+    customClusterBackupFailed: Custom cluster Etcd backup failure
+    databaseUsage: Database usage close to the quota 500M
+    diskReadDelay: Disk read delay
+    diskReadIOPS: Disk read IOPS
+    diskReadThroughput: Disk read throughput
+    diskRemainingPercent: Disk remaining percent
+    diskWriteIOPS: Disk write IOPS
+    diskWriteThroughput: Disk write throughput
+    etcdDiskBackend: Etcd latency distributions of commit called by backend
+    etcdDiskWal: Etcd latency distributions of fsync called by wal
+    etcdSnapDelay: Etcd snap delay
+    fileDescriptorUsagePercent: File descriptor usage percent
+    highCpuLoad: High cpu load
+    highNodeMemoryUtilization: High node memory utilization
+    inodesUsagePercent: Inodes usage percent
+    leaderChanges: A high number of leader changes within the etcd cluster are happening
+    noDiskIsRunning: Node disk is running full within 24 hours
+    podRebootTimes: POD reboot times
+    ramUsagePercent: RAM usage percent
+  comparison:
+    equal: Equal
+    greater-or-equal: Greater Or Equal
+    greater-than: Greater Than
+    has-value: Not Null
+    less-or-equal: Less Or Equal
+    less-than: Less Than
+    not-equal: Not Equal
+  config:
+    reset: Reset Config
+    save: Save
+  create: Create
+  customLabel:
+    addText: Add Label and Annotation
+    customStepOneOption:
+      label: Label
+      message: Annotation
+    customStepTwoOption:
+      annotations: Annotation
+      custom: Custom
+      label: Label
+    error:
+      key: Custom label key is invalid
+      uneq: Custom message keys of the same type cannot be the same
+      value: Custom label value cannot be empty
+    note: "Note: The notification.tmpl template currently does not support webhooks. If you need to configure automatic alert labels and messages, please go to 'Tools -> Alerts' to add related configurations."
+    placeholder:
+      key: Key
+      value: Value
+    table:
+      stepOne: Add custom
+      stepThree: Add
+      stepTwo: Select
+    title: Customize alert labels and annotations
+  index:
+    addAlert: Add Alert Rule
+    addAlertGroup: Add Alert Group
+    config: Alert Config
+    noAlerts: There are no alert rules defined.
+    table:
+      condition: Condition
+      displayCondition:
+        available: "{percent}% available"
+        cpuUsage: CPU usage over {percent}%
+        expression: Expression
+        failure: Failure
+        happens: Happens
+        memUsage: MEM usage over {percent}%
+        notReady: Not Ready
+        notRunning: Not Running
+        notScheduled: Not Scheduled
+        notready: Not Ready
+        restarted: Restarted {times} times within the last {interval} minutes
+        unhealthy: Unhealthy
+      noData: There are no alerts defined
+      noGroup: No alert group
+      noMatch: No alerts match the current search.
+      recipients: Notifiers
+      target: Target
+  items: Items
+  na: Not Configured
+  new:
+    addHeader: Add Alert Group
+    addRuleHeader: Add Alert Rule
+    editHeader: Edit Alert Group
+    editRuleHeader: Edit Alert Rule
+  newOrEdit:
+    addRecipient: Add Recipient
+    alert: Alert
+    alertRule: Alert Rule
+    and: And
+    available: available
+    commonRules:
+      error: Failed to fetch metric graph data.
+      label: Common Rules
+      noData: No metric graph data.
+      placeholder: Choose Alert Rule
+      podRebootTimesTips: Please convert symbol in keys to underline(_)
+    cpuUsage: CPU reservation over
+    createOne: create one
+    critical: Critical
+    enableMonitoring: enable monitoring
+    expression:
+      error: Failed to fetch metric graph data.
+      label: Expression
+      noData: No metric graph data.
+      placeholder: Input Expression
+    failed: Has Failure
+    for: For
+    groupIntervalSeconds:
+      helpText: How long to wait before sending an alert that has been added to a group which contains already fired alerts.
+      label: Group Interval Time
+    groupWaitSeconds:
+      helpText: How long to wait to buffer alerts of the same group before sending initially.
+      label: Group Wait Time
+    happens: Happens
+    info: Info
+    inherited:
+      enabled: Enabled - Inheriting the advanced options from group
+      label: Group Inherited
+    initialWait: Initial Wait
+    initialWaitHelpText: How long to wait before sending a notification when an alert is triggered.
+    interval: Interval
+    is: Is
+    lessThan: less than
+    memUsage: Memory reservation over
+    minutes: Minutes
+    monitoringDisabled: Expression is disabled, Go and
+    moreTarget: More targetTypes...
+    nameRequired: Name required
+    noNotifierHelpText: You do not have any notifiers configured. Go here to
+    nodePlaceholder: Choose a Node
+    nodeRequired: Node required
+    nodeSelectorRequired: Node Selector required
+    normal: Normal
+    notReady: Not Ready
+    notRunning: Not Running
+    notScheduled: Not Scheduled
+    notifierPlaceholder: Choose a Notifier
+    podPlaceholder: Choose a Pod
+    recipient:
+      helpText: The value set in the Notifier is used by default. You can override this with another value.
+    removeAlert: Remove this Alert
+    repeatIntervalHelpText: Repeat interval of sending a notification when an alert is active.
+    repeatIntervalSeconds:
+      helpText: How long to wait before re-sending a given alert that has already been sent.
+      label: Repeat Interval Time
+    resourcePlaceholder: Choose a Resource
+    restarted: Restarted
+    restartedTimes: times within the last
+    run: Completed Scan
+    sendA: Send a
+    showAdvanced: Show Advanced Options
+    systemServicePlaceholder: Choose a System Service
+    to: To
+    unhealthy: Unhealthy
+    unit:
+      bytes: Bytes
+      mbPerSecond: MB/S
+      millisecond: MS
+      percent: "%"
+      second: S
+      times: Times
+      timesPerSecond: Times/S
+    warning: Warning
+    whenA: When A
+    whenAn: When An
+    workloadTypePlaceholder: Choose a Workload Type
+  project: Project
+  resourceKinds:
+    DaemonSet: DaemonSet
+    Deployment: Deployment
+    Node: Node
+    Pod: Pod
+    StatefulSet: StatefulSet
+  save: Save
+  targetTypes:
+    cisScan: CIS Scan
+    daemonset: Daemonset
+    deployment: Deployment
+    event: Event
+    metric: Metric
+    node: Node
+    nodeSelector: Node Selector
+    pod: Pod
+    podRebootTimes: Pod Reboot Times
+    statefulset: Statefulset
+    systemService: System Service
+    undefined: None
+    workload: Workload
+    workloadSelector: Workload Selector
+allWorkloads:
+  namespace: "Namespace: {name}"
+appDetailPage:
+  answers:
+    detail: Customized answers of this application
+    title: Answers
+    variable: Variable
+  configMaps:
+    detail: Config Maps associated with this application
+    nodata: This application has no config maps
+    title: Config Maps
+  endpoints:
+    detail: Public Endpoints of this application
+    endpoint: Endpoint
+    noData: No public endpoints were created for this application.
+    noMatch: No public endpoints match the current search.
+    protocol: Protocol
+    title: Endpoints
+  header: "App: {appName}"
+  ingress:
+    detail: Ingress rules created for this application.
+    nodata: No ingress rules were created for this application.
+    title: Ingress Rules
+  notes:
+    detail: Instructions on how to use this application
+    title: Notes
+  secrets:
+    detail: Secrets associated with this application
+    nodata: This application has no secrets
+    title: Secrets
+  services:
+    detail: Services created with this application
+    nodata: No services were created for this application.
+    title: Services
+  volumes:
+    detail: Persistent Volume claims created with this application
+    nodata: No volume claims were made for this application.
+    title: Volumes
+  workloads:
+    detail: Workloads created for this application.
+    nodata: No workloads were created for this application.
+    title: Workloads
+authorizedEndpoint:
+  enabled:
+    label: Authorized Cluster Endpoint
+  fqdn:
+    label: FQDN
+conditionSections:
+  detail: Status of current {resourceType}
+  noData: No Conditions
+  noMatch: No conditions match the current search
+  table:
+    lastState: Last State
+    lastUpdate: Last Update
+    message: Message
+    reason: Reason
+    status: Status
+    type: Type
+  title: Status
+containerChoices:
+  containerOption: "{name}"
+  hostGroup: "Host: {name}"
+  hostGroupWithState: "Host: {name} ({state})"
+  unknownHost: "Host: ???"
+containerLogs:
+  clear: Clear Screen
+  combined: Combined
+  download: Download Logs
+  onlyCombined: <b>Note:</b> Only combined stdout/stderr logs are available for this container because it was run with the TTY (-t) flag.
+  previous: Previous Container
+  protip: "ProTip: Hold the {key} key when opening logs to launch a new window."
+  scrollBottom: Scroll to Bottom
+  scrollTop: Scroll to Top
+  status:
+    closed: Closed
+    connected: Connected
+    connecting: Connecting...
+    disconnected: Disconnected
+    initializing: Initializing...
+  stderr: Standard Error
+  stdout: Standard Out
+  title: "Logs: "
+  wrapLines: Wrap lines
+cruClusterTemplate:
+  default:
+    label: Default Revision
+  edit:
+    label: Edit RKE Template
+  infoBanner: Templates let you save and reuse configuration options for RKE clusters only.
+  members:
+    detail: Share this RKE Template with individual members or make it public to your organization. This affects all template revisions in this RKE Template.
+    label: Share Template
+  name:
+    label: Template Name
+  revisionName:
+    help: Not required but a descriptive name is suggested to help in easily locating the correct revision.
+    label: Template Revision Name
+  selectRevision:
+    label: Select Default Revision
+  source:
+    label: Source Revision
+cruVolume:
+  define:
+    addActionLabel: Define
+  name:
+    placeholder: e.g. myvol
+  source:
+    detail: Configure options for the selected volume source
+    label: Source
+    prompt: Choose a volume source...
+    title: Source Configuration
+  sourcePrompt: Choose a Volume Source above...
+  title:
+    new: Define Ephemeral Volume
+deleteEksCluster:
+  accessKey:
+    label: Access Key
+    placeholder: Your AWS access key
+  deleteCluster: Delete Cluster
+  deletingCluster: Deleting Cluster
+  error:
+    accessKey: Access key is required.
+    secretKey: Secret key is required.
+    sessionToken: Session token is required.
+  help: This cluster was created with a temporary session token. Please provide keys and token to delete the cluster.
+  secretKey:
+    label: Secret Key
+    placeholder: Your AWS secret key
+    provided: Provided
+  sessionToken:
+    deleteLabel: Session Token
+    label: Session Token  <em class='text-muted'>Optional</em>
+    placeholder: Your AWS session token
+    provided: Provided
+  title: Delete {clusterName}?
+  updateKeys: Update Keys
+  updatingKeys: Updating Keys
+dnsPage:
+  noData: There are no DNS records defined
+  noMatch: No records match the current search
+  table:
+    clusterIpDetail: "Cluster IP: {ip}"
+    target: Target
+  type:
+    alias: Alias
+    arecord: External IP
+    clusterIp: Cluster IP
+    cname: Hostname
+    selector: Selector
+    unknown: Unknown
+    workload: Workload
+editDns:
+  add:
+    alias: Add Target Record
+    arecord: Add Target IP
+    selector: Add Target Selector
+    workload: Add Target Workload
+  description:
+    placeholder: e.g. Current version of MyApp
+  errors:
+    mixedAlias: An Alias cannot target a mix of CNAME and other records
+    multipleCname: An Alias cannot target more than one CNAME record
+    selectorRequired: One or more "Pod selectors" are required
+    targetRequired: One or more "Targets" are required
+  externalIPs:
+    addActionLabel: Add External IP
+    placeholder: e.g. 80.11.12.10
+    value: External IPs
+  externalTrafficPolicy:
+    cluster: Cluster
+    label: External Traffic Policy
+    local: Local
+  healthCheckNodePort:
+    label: Health Check Node Port
+    placeholder: e.g. 8080
+  kind:
+    clusterIP: Cluster IP (Internal Only)
+    externalName: ExternalName
+    headless: Headless Service
+    label: As a
+    loadBalancer: Layer-4 Load Balancer
+    nodePort: NodePort(On every node)
+  loadBalancerIP:
+    label: Load Balancer IP
+    placeholder: e.g. 78.11.24.19
+  loadBalancerSourceRanges:
+    addActionLabel: Add Source Range
+    placeholder: e.g. 143.231.0.0/16
+    value: Load Balancer Source Ranges
+  name:
+    placeholder: e.g. myapp
+  placeholder:
+    arecord: e.g. 19.82.2.24
+    cname: e.g. example.com
+  prompt:
+    alias: Select a DNS Record...
+    workload: Select a Workload...
+  publishNotReadyAddresses:
+    all: All endpoints
+    label: Published IP Addresses
+    readyOnly: Only ready endpoints
+  recordType:
+    alias: Alias of another DNS record's value
+    arecord: One or more external IP addresses
+    clusterIp: Cluster IP
+    cname: An external hostname
+    label: Resolves To
+    selector: The set of pods which match a selector
+    workload: One or more workloads
+  selector:
+    addActionLabel: Add Selector
+    keyLabel: Label
+    label: Container Label Selector
+  sessionAffinity:
+    detail: Map connections to a consistent target based on their source IP
+    label: Enable session affinity
+    title: Session Affinity
+  sessionAffinityConfig:
+    label: Session Sticky Time
+    placeholder: e.g. 10800
+  target:
+    alias: Target DNS Records
+    arecord: Target IP Addresses
+    cname: Target Hostname
+    selector: Target Pod Selectors
+    workload: Target Workloads
+  title:
+    edit: Edit Record
+    new: Add Record
+    view: "Record: {name}"
+f5TLSPage:
+  addTLS: Create TLS
+  form:
+    clientSSL:
+      label: Client SSL
+      placeholder: e.g. /Common/clientssl
+    hosts:
+      add: Add Host
+      placeholder: e.g. example.com
+    reference: Reference
+    serverSSL:
+      label: Server SSL
+      placeholder: e.g. /Common/serverssl
+    termination:
+      label: Termination
+      placeholder: Choose...
+  header:
+    edit: Edit TLS
+    new: Create TLS
+    view: "TLS: {name}"
+  table:
+    noData: There are no TLS
+featureFlags:
+  features:
+    fleet: Install Fleet when starting Rancher
+    istioVirtualServiceUi: Exposes a UI that enables users to create, read, update and delete virtual services and destination rules, which are traffic management features of Istio.
+    projectPipelineServiceUI: Expose enable project pipeline UI and allow user to use pipeline with project level.
+    proxy: Use new experimental proxy for Kubernetes API requests.
+    unsupportedStorageDrivers: Allows the use of types for storage providers and provisioners that are not enabled by default.
+    virtaitechGpuServiceUI: Allows user to set vGpus reserved value.
+  table:
+    description: Description
+    name: Name
+    noData: There are no features
+    noMatch: No features match the current search
+    restart: Restart
+    state: State
+  warningHeader: Feature flags allow {appName} to gate certain features behind flags. You should enable these features with caution, and they should be considered beta functionality, which could cause problems for your system. Additionally, some features (non-dynamic) require a restart of the {appName} server to be enabled. Changing non-dynamic features will restart {appName} pods, which will result in a short outage.
+formBasicPodSecurityPolicy:
+  allowPrivilegeEscalation:
+    disable: No
+    enable: "Yes: Running of a container that allow privilege escalation from its parent"
+    label: Allow Privilege Escalation
+  defaultAllowPrivilegeEscalation:
+    disable: No
+    enable: "Yes: Control whether a process can gain more privileges than its parent process"
+    label: Default Allow Privilege Escalation
+  detail: Config basic pod security policies
+  hostIPC:
+    disable: No
+    enable: "Yes: The use of host’s IPC namespace"
+    label: Host IPC
+  hostNetwork:
+    disable: No
+    enable: "Yes: The use of host networking"
+    label: Host Network
+  hostPID:
+    disable: No
+    enable: "Yes: The use of host’s PID namespace"
+    label: Host PID
+  privileged:
+    disable: No
+    enable: "Yes: Running of privileged containers"
+    label: Privileged
+  readOnlyRootFilesystem:
+    disable: No
+    enable: "Yes: Requiring the use of a read only root file system"
+    label: Read Only Root Filesystem
+  title: Basic Policies
+formContainerLinks:
+  addActionLabel: Add Link
+  alias:
+    label: As Name
+    placeholder: e.g. database
+  detail: Define relationships between this and other containers.
+  name:
+    label: Target Container
+  noData: There are no container links
+  noMatch: No links match the current search
+  title: Links
+formCount:
+  label: Count
+formFsGroupPodSecurityPolicy:
+  detail: Allocating an FSGroup that owns the pod’s volumes
+  range:
+    addLabel: Add Range
+    max:
+      label: Max
+      placeholder: e.g. 6
+    min:
+      label: Min
+      placeholder: e.g. 1
+  rule:
+    mustRunAs: MustRunAs - Requires at least one range to be specified. Uses the minimum value of the first range as the default. Validates against the first ID in the first range.
+    runAsAny: RunAsAny - No default provided. Allows any fsGroup ID to be specified.
+  title: FS Group Policy
+formResourceQuota:
+  addQuotaLabel: Add Quota
+  errors:
+    invalidLimit: "{used} of {total} {resource} quota has been used. The value should be less than or equal {left}."
+    limitRequired: "{resource} limit is required."
+    nsDefaultLimitRequired: Namepsace Default Limit for {resource} is required.
+    projectLimitRequired: Project Limit for {resource} is required.
+  resources:
+    configMaps: Config Maps
+    limitsCpu: CPU Limit
+    limitsMemory: Memory Limit
+    persistentVolumeClaims: Persistent Volume Claims
+    pods: Pods
+    replicationControllers: Replication Controllers
+    requestsCpu: CPU Reservation
+    requestsGpuCount: GPU Count
+    requestsGpuMemory: GPU Memory
+    requestsMemory: Memory Reservation
+    requestsStorage: Storage Reservation
+    requestsStorageClassPVC: Storage Class PVC
+    requestsStorageClassStorage: Storage Class Storage
+    secrets: Secrets
+    services: Services
+    servicesLoadBalancers: Services Load Balancers
+    servicesNodePorts: Services Node Ports
+  table:
+    namespaceLimit:
+      label: Namespace Default Limit
+      memoryPlaceholder: e.g. 1024
+      milliCpuPlaceholder: e.g. 500
+      placeholder: e.g. 10
+    noData: There are no resource quotas defined
+    projectLimit:
+      label: Project Limit
+      memoryPlaceholder: e.g. 2048
+      milliCpuPlaceholder: e.g. 2000
+      placeholder: e.g. 50
+      stroageClassPlaceholder: storage class does not exist
+    resources:
+      available: Available
+      label: Project Resource Availability
+      max: Total
+      namespace: This Namespace
+      reserved: Other Namespaces
+    type:
+      label: Resource Type
+    value:
+      label: Limit
+      memoryPlaceholder: e.g. 1Gi
+      milliCpuPlaceholder: e.g. 500
+      placeholder: e.g. 10
+formRunAsUserPodSecurityPolicy:
+  detail: Controls which user ID the containers are run with.
+  range:
+    addLabel: Add Range
+    max:
+      label: Max
+      placeholder: e.g. 6
+    min:
+      label: Min
+      placeholder: e.g. 1
+  rule:
+    mustRunAs: MustRunAs - Requires a range to be configured. Uses the first value of the range as the default. Validates against the configured range.
+    mustRunAsNonRoot: MustRunAsNonRoot - Requires that the pod be submitted with a non-zero runAsUser or have the USER directive defined in the image. No default provided.
+    runAsAny: RunAsAny - No default provided. Allows any runAsUser to be specified.
+  title: Run As User Policy
+formSeLinuxodSecurityPolicy:
+  detail: The SELinux context of the container
+  level:
+    label: Level
+    placeholder: e.g. level
+  role:
+    label: Role
+    placeholder: e.g. role
+  rule:
+    mustRunAs: MustRunAs - Uses seLinuxOptions as the default. Validates against seLinuxOptions.
+    runAsAny: RunAsAny - Allows any seLinuxOptions to be specified
+  title: SELinux Policy
+  user:
+    label: User
+    placeholder: e.g. user
+formUpgrade:
+  detail: Configure how pods are replaced when performing an upgrade.
+  strategy:
+    batchSize:
+      detail: Pods will be started and stopped this many at a time
+      label: Batch Size
+    custom: Custom
+    label: Upgrade Strategy
+    maxSurge:
+      detail: The maximum number of pods allowed beyond the desired scale at any given time.
+      label: Max Surge
+    maxUnavailable:
+      detail: The maximum number of pods which can be unavailable at any given time.
+      label: Max Unavailable
+    minReadySeconds:
+      detail: Containers in the pods must be up for at least this long before the pod is considered available.
+      label: Minimum Ready Time
+    onDelete: Start upgraded pods only when old ones are manually deleted
+    orderedReady: Strict serial update in order and wait for readiness
+    parallel: Start all new and stop all old pods in parallel
+    progressDeadlineSeconds:
+      detail: How long to wait without seeing progress before marking the deployment as stalled.
+      label: Progress Deadline
+    recreate: Kill ALL pods, then start new
+    rollingUpdate: Rolling Update
+    startFirst: "Rolling: start new pods, then stop old"
+    stopFirst: "Rolling: stop old pods, then start new"
+  title: Scaling/Upgrade Policy
+formUserData:
+  isVmPlaceholder: e.g. Configuration information for the virtual machine
+  placeholder: e.g. Configuration information for the container
+formVersions:
+  dotx: Latest {minor} (allows patch version upgrades)
+  downgrade: (can't downgrade)
+  eks:
+    helpBlock: Because Amazon EKS runs a highly available control plane, you can update only one minor version at a time.
+    label: (minor version >1 not allowed by EKS)
+  experimental: (experimental)
+  helpBlock:
+    label: "When upgrading Kubernetes versions, please review the <a href=\"https://groups.google.com/forum/#!forum/kubernetes-announce\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">Kubernetes release notes</a> for any breaking changes."
+  minorWarning: (minor version >1 not allowed)
+  notallowed: (not allowed by template)
+  unsupported: (unsupported)
+generic:
+  Gibibyte: GiB
+  actions: Actions
+  activate: Activate
+  active: Active
+  add: Add
+  advanced: Advanced
+  all: All
+  any: Any
+  application: application
+  as: as
+  authorize: Authorize & Fetch Your Repositories
+  back: Back
+  bitbucket: Bitbucket
+  branch: Branch
+  cancel: Cancel
+  closeModal: Close
+  cluster: Cluster
+  collapse: Collapse
+  collapseAll: Collapse All
+  comingSoon: Coming Soon
+  command: Command
+  commit: Commit
+  completedOf: "{completed} of {total}"
+  confirm: Confirm
+  containers: Containers
+  cpu: CPU
+  created: Created
+  createdDate: Created {date}
+  custom: Custom
+  customize: Customize
+  default: Default
+  description: Description
+  details: Details
+  disable: Disable
+  disabled: Disabled
+  displayName: Display Name
+  dockerId: Docker ID
+  domainName: Domain Name
+  done: Done
+  download: Download
+  edit: Edit
+  emptyString: ""
+  enable: Enable
+  enabled: Enabled
+  entrypoint: Entrypoint
+  environment: Environment
+  expand: Expand
+  expandAll: Expand All
+  experimental: (experimental)
+  "false": "False"
+  from: from
+  full: Full
+  generic: Generic
+  gigabyte: GB
+  github: GitHub
+  gitlab: GitLab
+  group: Group
+  hardware: Hardware
+  healthy: Healthy
+  help: Help
+  host: Host
+  hostname: Hostname
+  hours: hours
+  hpa: HPA
+  id: ID
+  image: Image
+  imageName: Image Name
+  import: Import
+  internal: Internal
+  ipAddress: IP Address
+  is: is
+  isRequired: is required
+  istioHostPlaceholder: Select or input a host
+  istioRule: Traffic Rule
+  key: Key
+  limit: Limit
+  limits: Limits
+  linux: Linux
+  loading: Loading...
+  loggingOut: Logging out...
+  loginIn: Login in
+  logout: Log Out User {user}
+  mbps: Mbps
+  member: Member
+  memory: Memory
+  mibibyte: MiB
+  milliseconds: Milliseconds
+  minutes: minutes
+  missing: "*%MISSING%*"
+  moreActions: More Actions
+  na: n/a
+  name: Name
+  namespace: Namespace
+  namespaces: Namespaces
+  never: Never
+  no: No
+  noBranch: There is no branch in this repository.
+  noData: No Data
+  noRating: No Rating
+  node: Node
+  none: None
+  owner: Owner
+  paste: Paste
+  persistentVolume: persistent volume
+  persistentVolumeClaim: persistent volume claim
+  pipeline: Pipeline
+  pod: pod
+  podRestarts: Pod Restarts
+  port: Port
+  ports: Ports
+  prefix: prefix
+  project: Project
+  push: Push to Repository
+  random: Random
+  readOnly: Read Only
+  readWrite: Read Write
+  registry: Registry
+  remove: Remove
+  repository: Repository
+  required: "{key} is required."
+  restarts: Restarts
+  role: Role
+  run: Run
+  save: Save
+  saved: Saved
+  saving: Saving
+  scope: Scope
+  search: Search
+  searchOrCustomInput: Search or input your custom value.
+  searching: Searching...
+  seconds: seconds
+  select: Select
+  service: Service
+  services: Services
+  size: Size
+  state: State
+  tags: Tags
+  test: Test
+  testing: Testing
+  to: To
+  total: Total
+  "true": "True"
+  type: Type
+  unknown: Unknown
+  unknownUser: Unable to fetch user info
+  upload: Upload
+  url: URL
+  user: User
+  uuid: UUID
+  value: Value
+  version: Version
+  windows: Windows
+  writeOnly: Write Only
+  yes: Yes
+haPage:
+  header: High Availability
+  setup:
+    link: See documentation
+    prefix: Multiple server containers can be deployed on different hosts so that {appName} keeps running even if one of the hosts fail.
+    suffix: for information on setup and usage.
+  table:
+    address: Advertised  Address
+    clustered: Clustered
+    heartbeat: Last Seen
+    port: Port
+inputTextFile:
+  tooltip: Read from a file
+k3sNodeEnvVarSection:
+  detail: Read only list of the K3s startup environment variables for this node.
+  key: Key
+  noData: No environment variables
+  noMatch: No environment variables match the current search
+  title: K3S Node Environment Variables
+  value: Value
+kontainerDriver:
+  displayName:
+    aliyunkubernetescontainerservice: Alibaba ACK
+    amazonElasticContainerService: Amazon EKS
+    azureKubernetesService: Azure AKS
+    baiducloudcontainerengine: Baidu CCE
+    googleKubernetesEngine: Google GKE
+    huaweicontainercloudengine: Huawei CCE
+    import: Import
+    linodekubernetesengine: Linode LKE
+    opentelekomcloudcontainerengine: Open Telekom Cloud CCE
+    oraclecontainerengine: Oracle OKE
+    rancherKubernetesEngine: Rancher RKE
+    tencentkubernetesengine: Tencent TKE
+machinePage:
+  add: Add Node Driver
+  builtin: Built-In
+  header: Node Drivers
+  inactive: Inactive
+  subtext: Additional <code>docker-machine</code> drivers can be loaded here and used in the Add Node screen.
+  url: Location
+modalShowCommand:
+  errors:
+    token: Error fetching Cluster Registration Token - {err}
+  success: Host Registered!
+  title: Cluster Registration Command
+modalYaml:
+  noData: There is no {name} resources.
+  title:
+    edit: "Edit YAML: {name}"
+    new: Import {type} YAML
+    view: "View YAML: {name}"
+newCertificate:
+  cert:
+    invalidFormat: Certificate is invalid.
+    label: Certificate
+    placeholder: Paste in the certificate, starting with -----BEGIN CERTIFICATE-----
+    protip: Please include any chain certificates that are needed.
+    required: Certificate is required.
+    tooltip: "The certificate will be placed in the generated kubeconfig file(s) to validate the certificate (chain) presented by the load balancer which you have configured at the provided FQDN. <a href=\"{docsBase}/cluster-provisioning/rke-clusters/options/#authorized-cluster-endpoint\" target=\"blank\" >More info here.</a>"
+  certChain:
+    label: Chain Certs
+    placeholder: Optional; Paste in the additional chained certificates, starting with -----BEGIN CERTIFICATE-----
+  errors:
+    cert:
+      invalidFormat: Certificate is invalid.
+      required: Certificate is required.
+    encrypted: The private key cannot be password-protected.
+    key:
+      invalidFormat: Private Key is invalid. Please make sure it is a RSA key.
+      required: Private Key is required.
+  key:
+    invalidFormat: Private Key is invalid.
+    label: Private Key
+    placeholder: Paste in the private key, typically starting with -----BEGIN RSA PRIVATE KEY-----
+    required: Private Key is required.
+  metaXML:
+    label: Metadata XML
+    placeholder: Paste in the IDP Metadata XML
+  publicKey:
+    invalidFormat: Public Key is invalid.
+    label: SSH Public Key
+    placeholder: Paste in the public key, typically starting with 'ssh-rsa', 'ssh-dss', 'ssh-ed25519', 'ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', or 'ecdsa-sha2-nistp521'
+    required: Public Key is required.
+  title:
+    edit: "Edit Certificate: {name}"
+    new: Add Certificate
+    view: "Certificate: {name}"
+newIngress:
+  error:
+    noRules: You must have one or more rules
+  header:
+    add: Add Ingress
+    edit: Edit Ingress
+newPipeline:
+  save: Save
+  steps:
+    label: Configuration
+newPipelineStage:
+  addStep: Add a Step
+  errors:
+    name:
+      required: Name is required.
+  header:
+    create: Add Stage
+    edit: Edit Stage
+  name:
+    placeholder: e.g. compile
+  trigger:
+    webhook: Push
+    webhookPR: Pull Request
+    webhookTag: Tag
+projectGroup:
+  label: "Project: {name}"
+  noNS: There are no namespaces defined.
+  none: Namespace
+  project: Not in a project
+resourceEventList:
+  detail: Events of current {resourceType}
+  noData: No Events
+  noMatch: No events match the current search
+  table:
+    lastUpdate: Last Seen
+    message: Message
+    namespace: Namespace
+    object: Object
+    reason: Reason
+    type: Type
+  title: Events
+signupPage:
+  emailSuccess:
+    confirm:
+      resend: Resend Email
+      subtext: Confirm your email by clicking the verification link we just sent to your inbox.
+    header: Welcome to {appName}
+  form:
+    button: Register
+    labels:
+      email: Email
+      loginUsername: Name
+  header: Signup for {appName}
+systemInfoSection:
+  arch: Architecture
+  containerDVersion: Containerd Version
+  detail: System and kubernetes information.
+  dockerVersion: Docker Version
+  kernelVersion: Kernel Version
+  key: Key
+  kubeProxyVersion: Kube Proxy Version
+  kubeletVersion: Kubelet Version
+  noData: No Data
+  noMatch: No system information match the current search
+  operatingSystem: Operating System Image
+  osType: Operating System
+  title: System Information
+  value: Value
+upgradeBtn:
+  status:
+    available: Upgrade available
+    current: Up to date
+    error: Error checking for upgrade
+    inprogress: Upgrade in progress
+    loading: Checking upgrades...
+    none: "Upgrade: None"
+    notfound: Catalog Template not found
+    required: Upgrade required
+    upgraded: "Upgraded: Finish Upgrade"
+  version:
+    current: Current
+uploadFile:
+  label: Read from File
+userPreferencesPage:
+  generalInfo:
+    email:
+      label: Email
+    header: My Account
+    name:
+      label: Name
+    password:
+      text: Change Password
+    username:
+      label: Username
+  header: Preferences
+  menu:
+    header: Menu Position
+    left: Left
+    top: Top
+  theme:
+    auto: Auto
+    autoDetail: Auto will transition to dark from 6pm-6am
+    dark: Dark
+    header: Theme
+    light: Light
+validation:
+  arrayLength:
+    between: "\"{key}\" should contain between {min} and {max} {max, plural, =1 {item} other {items}}"
+    exactly: "\"{key}\" should contain {count, plural, =1 {# item} other {# items}}"
+    max: "\"{key}\" should contain at most {count} {count, plural, =1 {item} other {items}}"
+    min: "\"{key}\" should contain at least {count} {count, plural, =1 {item} other {items}}"
+  chars: "\"{key}\" contains {count, plural, =1 {an invalid character} other {# invalid characters}}: {chars}"
+  dns:
+    doubleHyphen: Cannot contain two consecutive hyphens
+    hostname:
+      empty: "\"{key}\" must be at least one character"
+      emptyLabel: "\"{key}\" cannot contain two consecutive dots"
+      endDot: "\"{key}\" cannot end with a dot"
+      endHyphen: "\"{key}\" cannot end with a hyphen"
+      startDot: "\"{key}\" cannot start with a dot"
+      startHyphen: "\"{key}\" cannot start with a hyphen"
+      startNumber: "\"{key}\" cannot start with a number"
+      tooLong: "\"{key}\" cannot be longer than {max} characters"
+      tooLongLabel: "\"{key}\" cannot contain a section longer than {max} characters"
+    label:
+      emptyLabel: "\"{key}\" cannot be empty"
+      endHyphen: "\"{key}\" cannot end with a hyphen"
+      startHyphen: "\"{key}\" cannot start with a hyphen"
+      startNumber: "\"{key}\" cannot start with a number"
+      tooLongLabel: "\"{key}\" cannot be more than {max} characters"
+  k8s:
+    identifier:
+      emptyLabel: "\"{key}\" cannot have an empty key"
+      emptyPrefix: "\"{key}\" cannot have an empty prefix"
+      endLetter: "\"{key}\" must end with a letter or number"
+      startLetter: "\"{key}\" must start with a letter or number"
+      tooLongKey: "\"{key}\" cannot have a key longer than {max} characters"
+      tooLongPrefix: "\"{key}\" cannot have a prefix longer than {max} characters"
+  number:
+    between: "\"{key}\" should be between {min} and {max}"
+    exactly: "\"{key}\" should be exactly {val}"
+    max: "\"{key}\" should be at most {val}"
+    min: "\"{key}\" should be at least {val}"
+  required: "\"{key}\" is required"
+  requiredOrOverride: "\"{key}\" is required or must allow override"
+  stringLength:
+    between: "\"{key}\" should be between {min} and {max} {max, plural, =1 {character} other {characters}}"
+    exactly: "\"{key}\" should be {count, plural, =1 {# character} other {# characters}}"
+    max: "\"{key}\" should be at most {count} {count, plural, =1 {character} other {characters}}"
+    min: "\"{key}\" should be at least {count} {count, plural, =1 {character} other {characters}}"
+  targets:
+    missingProjectId: A target must have a project selected.
+verifyPage:
+  account:
+    header: Account Created
+    linkText: Login
+    subtext: Click the link below to be to taken to the login page.
+  header: You've successfully verified your email!
+  subtext: We need a few more pieces of information before we can finalize your account.

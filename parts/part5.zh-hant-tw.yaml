@@ -1,0 +1,1208 @@
+annotationsSection:
+  detail: Key/value元數據
+  key: 鍵
+  noData: 沒有注釋
+  noMatch: 沒有符合當前搜索的注釋
+  title: 注釋
+  value: 值
+authPage:
+  adfs:
+    buttonText:
+      post: 等待返回
+      pre: 啟用AD FS認證
+  authenticated:
+    header:
+      clientId:
+        text: "客戶端ID:"
+      enterpriseHostName: "地址:"
+      key:
+        text: "Key:"
+      text: 程式庫認證訊息
+  azuread:
+    configure:
+      applicationId:
+        label: 應用 ID
+        placeholder: UUID字符串
+      applicationSecret:
+        label: 應用 Secret
+      azureADAuthEndpoint:
+        label: Auth Endpoint
+      azureADEndpoint:
+        label: "Endpoint(Azure China地址: https://login.chinacloudapi.cn)"
+      azureADGraphEndpoint:
+        label: "Graph Endpoint(Azure China地址: https://graph.chinacloudapi.cn)"
+      azureADTokenEndpoint:
+        label: Token Endpoint
+      endpoints:
+        label: Azure AD訪問地址
+      header: 設定Azure AD帳戶
+      help: 輸入租戶ID、Client ID和管理用戶詳細資訊，以連接到Azure AD 驗證帳戶資訊。
+      regions:
+        china: China
+        custom: 自定義
+        standard: Standard
+      replyUrl: 在開始設置之前，需要在Azure AD為{appName}設置一個白名單URL。請確保Azure門戶的Reply URL部分設置了以下Reply URL。 請注意，白名單URL設置後可能需要5分鐘生效時間。
+      serverURL:
+        label: Rancher Server Url
+      tenantId:
+        help: 由Azure AD portal獲取
+        label: 租戶ID
+        placeholder: UUID字符串
+    enabled:
+      general:
+        header: 常規
+      header: 危險區域&trade;
+      promptDisable: 關閉訪問控制
+      reallyDisable: 確認? 再次點擊將關閉訪問控制
+    header:
+      disabled:
+        label: Azure AD未設定
+    test:
+      authError: Azure訪問未認證授權
+      header: 2. 測試並啟用認證
+      help: "測試驗證以確認設定是否正確:"
+      password:
+        label: 登入密碼
+      popupError: 請關閉視窗，然後再次點擊認證按鈕進行認證
+      post: 等待Azure返回
+      pre: 啟用Azure認證
+      username:
+        label: 登入用戶名
+        placeholder: "例如: jsmith"
+  bitbucketcloud:
+    auth: <a href="https://bitbucket.org/account" target="_blank" rel="nofollow noreferrer">點擊此處</a>，在彈出的新窗口中進行應用設置。
+    form:
+      clientId:
+        labelText: Key
+      clientSecret:
+        labelText: Secret
+      headerVariable: 3. 完成配置後，使用您的Bitbucket Cloud帳號進行驗證。
+      subtextVariable: 複製並黏貼新創建的consumer的Key和Secret
+    setup: 2. 配置Bitbucket Cloud應用
+    target:
+      bitbucketcloud: 公有Bitbucket Cloud
+      bitbucketserver: 私有Bitbucket Server
+      header: 1. 選擇你要使用的Bitbucket類型
+    ul:
+      li2:
+        text: "點擊\"OAuth\"，然後點擊\"Add consumer\"，並填寫表單內容: "
+        ul:
+          li1: <b>應用名稱:</b> <span class="text-muted">任意名稱，例如 My Pipeline</span>
+          li2: "回調URL:"
+          li3: "<b>權限設置: </b> <b>Account Read</b>, <b>Pull Requests Write</b>, <b>Projects Read</b>和<b>Webhooks Read And Write</b>"
+      li3:
+        text: 點擊 "Save"
+  bitbucketserver:
+    auth: 訪問Bitbucket Server並登陸你的賬戶，點擊Administration，然後點擊Application Links。
+    copy: 點擊複製
+    form:
+      headerVariable: 3. 完成配置後，使用您的Bitbucket Server帳號進行驗證。
+      hostname:
+        labelText: Bitbucket Server主機
+        placeholder: "例如: example.com"
+        required: 必須配置私有Bitbucket Server主機地址。
+      tls:
+        labelText: 使用https連接
+    setup: 2. 配置Bitbucket Server應用
+    target:
+      bitbucketcloud: 公有Bitbucket Cloud
+      bitbucketserver: 私有Bitbucket Server
+      header: 1. 選擇你要使用的Bitbucket類型
+    ul:
+      li2:
+        text: "創建新的應用鏈接:"
+        ul:
+          li1: <b>Link:</b>
+          li2: "<b>應用名稱: </b> <span class=\"text-muted\">任意名稱，例如: My Pipeline</span>"
+          li3: <b>勾選Create incoming link</b>
+          li4: "<b>點擊: \"Continue\"</b>"
+          li5: "Consumer Key:"
+          li6: "<b>Consumer Name:</b> <span class=\"text-muted\">任意名稱, 例如: pipeline</span>"
+          li7: "Public Key:"
+          li8: <b>點擊"Continue"</b>
+    warning: "Bitbucket Server Webhook需要SSL驗證，請確保{appName}服務器的證書在Bitbucket Server中是可信的。點擊<a href=\"https://rancher.com/docs/rancher/v2.x/en/tools/pipelines/configurations/#1-configuring-version-control-providers\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">這裡</a>獲取更多訊息。"
+  cas:
+    authenticated:
+      disableAccess:
+        disable: 禁用 CAS 访问
+    header:
+      disabled:
+        label: CAS 没有配置
+    notAuthenticated:
+      form:
+        callbackURL:
+          label: 服务回调地址
+          placeholder: CAS 服务回调地址
+        connectionTimeout:
+          label: 服务连接超时时间
+          placeholder: 例如：5000
+        header: 配置 Rancher 以使用 CAS 进行身份验证
+        hostUrl:
+          label: CAS 主机
+          placeholder: 例如：cas-server.com
+        port:
+          label: 端口
+          placeholder: 例如： 6379
+    testAuth:
+      authError: 未授权访问 CAS
+      buttonText:
+        post: 等待 CAS 响应
+        pre: 通过 CAS 验证配置
+      header: 测试并启用身份验证
+      popupError: 请禁用弹出窗口阻止程序，然后再次单击“验证”。
+      subtext: 通过测试应用程序的身份验证，来检查应用程序配置是否正确：
+  form:
+    enterprise:
+      labelText: 使用私有{type}企業版部署
+    enterpriseHost:
+      labelText: 企業版主機
+      placeholder: "例如: example.com"
+    headerVariable: 2. 完成配置後，使用您的{SCM}帳號進行驗證。
+    isEnterprise:
+      labelText: 使用https連接
+  github:
+    auth: "标准GitHub: <a href=\"https://github.com/settings/developers\" target=\"_blank\" rel=\"nofollow noreferrer\">点击此处</a>访问開登陆GitHub，在弹出的新窗口中进行应用设置。"
+    authenticated:
+      disableAccess:
+        confirmDisable: 確認? 再次點擊將關閉訪問控制
+        disable: 禁用Github訪問
+        header: 危險區域&trade;
+        warning: <b class="text-danger">警告:</b>禁用訪問控制將導致任何能夠訪問此頁面或API的用戶擁有對{appName}的完全控制權限。
+      header:
+        clientId:
+          helpText: 要修改設置的GitHub應用，請在下方禁用訪問控制後重新設置
+          text: "客戶端ID:"
+        enterpriseHostName: "地址:"
+        text: 認證資訊
+    enterprise: GitHub企業版
+    enterpriseAuth: "企业版GitHub: 通过企业版GitHub地址访问開登陆企业版GitHub，然后点击Settings，再点击Applications进行设置。"
+    form:
+      clientId:
+        labelText: 客户端ID
+      clientSecret:
+        labelText: 客户端秘钥
+      subtextVariable: 将新創建应用的Client ID和Client Secret复制粘贴到对应的输入框中。
+    header:
+      disabled:
+        label: GitHub未設定
+    notAuthenticated:
+      form:
+        clientId:
+          labelText: 客戶端ID
+        clientSecret:
+          labelText: 客戶端密鑰
+        enterpriseHost:
+          labelText: 地址
+          placeholder: "例如: github.example.com"
+        ghEnterprise:
+          labelText: 使用私有GitHub企業版部署
+        header: 2. 設定{appName}以使用GitHub進行身份驗證
+        isGHEnterprise:
+          labelText: 使用安全連接
+        subtext: 將新創建的GitHub應用Client ID和Secret複製貼上到下方的對應輸入框中
+      header: 1. 設置GitHub應用
+      ul:
+        li1:
+          text: 標準GitHub。<a href="https://github.com/settings/developers" target="_blank">點擊此處</a>並在彈出的新視窗中進行應用設置。
+          ul:
+            li1: 企業版GitHub。請登入帳號，點擊Settings，然後點擊Applications進行設置
+        li2:
+          text: "點擊 \"Register new application\" 並填寫表單內容:"
+          ul:
+            li1: "<b>應用名稱: </b><span class=\"text-muted\">應用名稱， 例如: My {appName}</span>"
+            li2: "主頁URL: "
+            li3: "<b>應用描述: </b><span class=\"text-muted\">應用描述，可選</span>"
+            li4: "授權回傳URL: "
+        li3:
+          text: 點擊 "Register Application"
+    standard: GitHub標準版
+    testAuth:
+      authError: 未獲取Github訪問權限
+      buttonText:
+        post: 等待GitHub返回
+        pre: 啟用GitHub認證
+      header: 3. 測試並啟用認證
+      popupError: 請關閉當前視窗，點擊認證按鈕重新認證
+      subtext: 測試以確認設定是否正確
+    ul:
+      li2:
+        text: "点击 \"注册新应用\" 開填写表单内容:"
+        ul:
+          li1: "<b>应用名稱: </b><span class=\"text-muted\">任意名稱，例如: My Pipeline。</span>"
+          li2: "主页URL: "
+          li3: "<b>应用描述: </b><span class=\"text-muted\">应用描述，可選。</span>"
+          li4: "授权回调URL: "
+      li3:
+        text: 点击 注册应用
+  gitlab:
+    auth: "標準GitLab: <a href=\"https://gitlab.com/profile/applications\" target=\"_blank\" rel=\"nofollow noreferrer\">點擊此處</a>訪問並登陸GitLab，在彈出的新窗口中進行應用設置。 "
+    enterpriseAuth: "企業版GitLab: 通過企業版GitLab地址訪問並登陸GitLab，然後點擊Settings，再點擊Applications進行設置。"
+    form:
+      clientId:
+        labelText: Application Id
+      clientSecret:
+        labelText: Secret
+      subtextVariable: 將新創建應用的Application Id和Secret複製黏貼到對應的輸入框中。
+    ul:
+      li2:
+        text: "填寫表單內容:"
+        ul:
+          li1: "<b>應用名稱: </b><span class=\"text-muted\">任意名稱，例如: My Pipeline。 </span>"
+          li2: "回調URL:"
+      li3:
+        text: 點擊Save application
+  googleoauth:
+    authenticated:
+      disableAccess:
+        confirmDisable: 確定關閉嗎?再次單擊將關閉訪問​​控制。
+        disable: 禁用Google訪問
+        header: 危險警告
+        warning: "<b class=\"text-danger\">Caution: </b>禁用訪問控制將為所有能夠訪問此頁面或API的人提供對{appName}的完全控制。 "
+      header:
+        adminEmail:
+          text: "管理員郵箱: "
+        text: 身份驗證
+    header:
+      disabled:
+        label: Google未配置。有關設置身份驗證的更詳細說明，請訪問<a href="https://rancher.com/docs/rancher/v2.x/en/admin-settings/authentication/google/" target="_blankRancher">文檔</a>
+    notAuthenticated:
+      form:
+        adminEmail:
+          helperText: 輸入與您的帳戶相關聯的管理電子郵件。
+          labelText: 管理員郵箱
+        hostname:
+          helperText: 輸入您的帳戶域。
+          labelText: 賬戶域
+        nestedGroupMembershipEnabled:
+          labelText: 嵌套的組成員
+        oauthCredential:
+          helperText: 複製並黏貼OAuth憑證JSON，該JSON可以在您的GoogleAPI開發人員控制台(上面的步驟3)中找到。
+          labelText: OAuth憑證
+        serviceAccountCredential:
+          helperText: 複製並黏貼服務帳戶憑證JSON，可以在GoogleAPI開發人員控制台的服務帳戶部分中找到(上面的步驟4)。
+          labelText: 服務帳戶憑據
+      ul:
+        li1:
+          helpertext: "注意: Rancher URL必須是正確的FQDN格式。 "
+          ul:
+            li1: 登入您的帳戶，切換到 "APIs和服務" 並點擊 "憑證"。
+        li2:
+          text: "點擊 \"OAuth同意屏幕\" 並填寫以下表單: "
+          ul:
+            li1: "<b>授權域名: </b> "
+            li2: "<b>應用首頁: </b> "
+            li3: 在Googleapi的作用域下，啟用 "email"、"profile" 和 "openid"。
+            li4: "授權回調URL: "
+        li3:
+          ul:
+            li1: 選擇 "創建憑據" 下拉框，並選擇 "OAuth客戶端ID"，然後選擇 "Web application"。
+            li2: "<b>授權Javascript來源: </b> "
+            li3: "<b>授權重定向URLs: </b> "
+            li4: 點擊 "創建"，然後點擊"下載JSON"按鈕。
+            li5: 將下載的JSON文件上傳到OAuth憑據框中。
+        li4:
+          ul:
+            li1: <a href="https://cloud.google.com/iam/docs/service-accounts">點擊這裡</a>了解有關創建和管理服務帳戶的訊息。
+            li2: 選擇您的服務帳戶。
+            li3: 選擇JSON作為鍵類型並點擊"創建".
+    stepOne:
+      header: "第一步: "
+      info: 對於標準Google，<a href="https://console.developers.google.com/apis/credentials" target="_blank">點擊這裡</a>訪問Google開發者控制台。
+    stepThree:
+      header: "第三步: "
+      info: 創建服務帳戶憑證
+      subHeader: "查看<a href=\"https://rancher.com/docs/rancher/v2.x/en/admin-settings/authentication/google/#creating-service-account-credentials\" target=\"_blank\" rel =\"nofollow noopener noreferrer\">操作指南</a>:"
+    stepTwo:
+      header: "第二步: "
+      info: 導航到 "OAuth同意畫面" 選項並填寫表單
+    testAuth:
+      authError: 未授權Google訪問
+      buttonText:
+        post: 等待Google返回
+        pre: 啟用Google認證
+      popupError: 請關閉彈出的窗口並點擊認證按鈕重新認證。
+    warning:
+      doc: 有關設置身份驗證的更詳細說明，請訪問<a href="https://rancher.com/docs/rancher/v2.x/en/admin-settings/authentication/google/" target="_blank ">文檔</a>
+  header: 流水線設置
+  keycloak:
+    buttonText:
+      post: 等待返回
+      pre: 啟用Keycloak認證
+  localAuth:
+    accessControl:
+      buttonText:
+        post: 啟用中...
+        pre: 啟用本地認證
+      header: 2. 啟用訪問控制
+      helpText: 點擊以開啟訪問控制並登入
+    accessDisabled:
+      form:
+        confirmPassword:
+          labelText: 確認密碼
+        login:
+          labelText: 登入用戶名
+          placeholder: "例如: jsmith"
+        name:
+          labelText: 全名
+          placeholder: "例如: John Smith"
+        password:
+          labelText: 密碼
+      header: 1. 設置管理員用戶
+      helpText: 該帳號將成為管理員並擁有對{appName}的完全控制權限。
+    accessEnabled:
+      buttonText:
+        disable: 確認? 再次點擊將關閉訪問控制。
+        prompt: 關閉訪問控制
+      header: 危險區域&trade;
+      warning: <b class="text-danger">警告:</b>禁用訪問控制將導致所有能夠訪問此頁面或API的用戶擁有對{appName}的完全控制權限。
+    header:
+      disabled: 本地驗證未設置
+      enabled: 本地驗證已啟用
+    subtext:
+      disabled: "{appName}能夠被設置為僅允許{appName}本地資料庫中定義的用戶訪問。當前系統未進行設置，因此任何可以訪問此頁面(或API)的用戶都具有系統的完全控制權限。"
+      enabled:
+        alwaysOn: 本地身份驗證將始終啟用，您可以在本地認證基礎之上新增其他認證方案
+        linkText: 管理帳號
+        text: "{appName}已設置本地帳號訪問"
+    warning: 当启用外部身份验证时，{appName} 将外部主体与当前用户的本地身份相关联。关联的主体将接收所有全局权限，以及当前用户的项目和集群角色绑定。
+  okta:
+    buttonText:
+      post: 等待返回
+      pre: 啟用Okta認證
+  ping:
+    buttonText:
+      post: 等待返回
+      pre: 啟用Ping認證
+  root:
+    header: 訪問控制
+  saml:
+    accessEnabled:
+      disable: 禁用訪問控制
+      header: 認證
+    authError: 帳號未經授權
+    disabled:
+      entityId:
+        display: "Entity ID Field:"
+        labelText: Entity ID Field
+      groups:
+        display: "組:"
+        labelText: 組
+      header: 1. 設定{providerName}帳號
+      headerDetail: 填寫{providerName}帳號資訊
+      label: "{providerName}未設定"
+      name:
+        display: "顯示名稱:"
+        labelText: 顯示名稱
+      rancherApiHost:
+        display: "{appName} API地址:"
+        labelText: "{appName} API地址"
+      testAuth:
+        header: 2. 測試並啟用認證
+        subtext: 測試以確認設定是否正確
+      uid:
+        display: "UID:"
+        labelText: UID
+      username:
+        display: "用戶名:"
+        labelText: 用戶名
+    enabled:
+      authenticated:
+        header:
+          text: 認證
+      displayName: 顯示名稱
+      groupsField: "組:"
+      userId: "用戶ID:"
+      userName: "用戶名:"
+    header:
+      disabled:
+        label: "{providerName}未設定"
+    popupError: 請關閉彈出驗證視窗，然後再次單擊“驗證”。
+    providerName:
+      adfs: AD FS
+      keycloak: Keycloak
+      okta: Okta
+      ping: Ping
+      shibboleth: Shibboleth
+  setting:
+    cacerts:
+      label: 配置證書，支持從自簽名的Git服務中拉取程式
+      saveActionLabel: 保存證書
+      show: 修改證書
+    executor:
+      label: 最大流水線運行個數
+      scale: 數量
+    limit:
+      label: 為執行程序配置資源預留和限制
+      saveActionLabel: 更新預留和限制
+  setup: 1. 配置{type}應用
+  shibboleth:
+    advanced:
+      hr: 額外的配置參數
+    buttonText:
+      edit: 測試Shibboleth配置
+      post: 等待IDP響應
+      pre: 啟用Shibboleth認證
+    openLdap:
+      detail: 在下面添加OpenLDAP配置來配置搜索功能。
+      header: 2. OpenLDAP搜索配置
+      help: "<span class='text-italic'>注意: 只有在使用Shibboleth授權配置OpenLDAP搜索時，才需要本節中的必需字段。</span>"
+    providerName:
+      shibboleth: Shibboleth
+  testAuth:
+    buttonText:
+      post: 授權中
+      preVariable: 授權
+    header: 3. 測試並啟用驗證
+    subtext: "通過測試認證來檢查配置是否正確: "
+catalogPage:
+  index:
+    action:
+      alreadyDeployed: 已部署
+      launch: 查看詳情
+      notCompatible: 不兼容
+    allCatalogs: 全部應用商店
+    allCategories: 所有分類
+    certified:
+      pl:
+        experimental: 實驗性
+        partner: 官方
+        rancher: 核心
+      rancher:
+        experimental: 實驗性
+        partner: 官方
+        rancher: Rancher Labs
+    filters:
+      label: 應用過濾
+    header: 應用商店
+    manage: 管理
+    noData:
+      plural: 當前目錄下沒有符合的應用模板
+      singular: 沒有符合的應用模板
+    refreshBtn: 刷新
+    search:
+      label: 搜索
+    windowsWarning: 大多數應用程式應該在Linux叢集中運行。因此，如果將它們部署在當前叢集中，則可能無法工作。
+  istio:
+    header: 流量規則商店
+cruStorageClass:
+  allowVolumeExpansion:
+    label: 允許用戶擴展 volumes
+  aws-ebs:
+    encrypted:
+      label: 加密
+    fsType:
+      label: 文件系統
+      placeholder: "例如: ext4"
+    iopsPerGB:
+      label: 預置IOPS
+      unit: GB/s
+    kmsKeyId:
+      automatic: "自動: 生成密鑰"
+      label: 用於加密的KMS Key ID
+      manual: "手動: 使用特定的密鑰(完整的ARN)"
+    type:
+      gp2: GP2 - 通用SSD
+      io1: IO1 - Provisioned IOPS SSD
+      label: volumes 類型
+      sc1: SC1 - Cold-Storage HDD
+      st1: ST1 - Throughput-Optimized HDD
+    zone:
+      automatic: "自動: 叢集中有主機的區域"
+      label: 可用區
+      manual: "手動: 選擇特定區域"
+      placeholder: us-east-1d，us-east-1c
+  azure-disk:
+    kind:
+      dedicated: 專用
+      label: 類型
+      managed: 託管
+      placeholder: "例如: 共享"
+      shared: 共享
+    location:
+      label: 位置
+      placeholder: "例如: eastus"
+    new: 新建Azure
+    skuName:
+      label: Sku名稱
+      placeholder: "例如: Standard_LRS"
+    storageAccount:
+      label: 儲存帳戶
+      placeholder: "例如: azure_storage_account_name"
+    storageaccounttype:
+      label: 儲存帳戶類型
+      placeholder: "例如: Standard_LRS"
+  azure-file:
+    location:
+      label: 位置
+      placeholder: "例如: eastus"
+    skuName:
+      label: Sku名稱
+      placeholder: "例如: Standard_LRS"
+    storageAccount:
+      label: 儲存帳戶
+      placeholder: "例如: azure_storage_account_name"
+  cinder:
+    availability:
+      automatic: "自動: 叢集中有主機的區域"
+      label: 可用區
+      manual: "手動: 選擇特定區域"
+      placeholder: "例如: nova"
+    type:
+      label: volumes 類型
+      placeholder: "例如: fast"
+  customize:
+    detail: 自定義高級選項
+    title: 自定義
+  description:
+    placeholder: "例如: AWS EBS儲存"
+  gce-pd:
+    fsType:
+      label: 文件系統類型
+      placeholder: "例如: ext4"
+    replicationType:
+      label: Replication Type
+      none: Zonal
+      regionalPd: Regional
+    type:
+      label: volumes 類型
+      pd-ssd: SSD
+      pd-standard: 標準
+    zone:
+      automatic: "自動: 叢集中有主機的區域"
+      label: 可用區
+      manual: "手動: 選擇特定區域"
+      placeholder: us-central1-a，us-central1-b
+  glusterfs:
+    clusterid:
+      label: 叢集ID
+      placeholder: "例如: 630372ccdc720a92c681fb928f27b53f"
+    gidMax:
+      label: GID MAX
+      placeholder: "例如: 50000"
+    gidMin:
+      label: GID MIN
+      placeholder: "例如: 40000"
+    resturl:
+      label: REST URL
+      placeholder: "例如: https://127.0.0.1:8081"
+    restuser:
+      label: REST 用戶
+      placeholder: "例如: admin"
+    restuserkey:
+      label: REST 用戶密鑰
+      placeholder: "例如: password"
+    secretName:
+      label: 密文名稱
+      placeholder: "例如: heketi-secret"
+    secretNamespace:
+      label: 密文命名空間
+      placeholder: "例如: default"
+    volumetype:
+      label: volumes 類型
+      placeholder: "例如: replicate:3"
+  longhorn:
+    fromBackup:
+      label: 從備份
+      placeholder: ""
+    numberOfReplicas:
+      label: 副本數量
+      placeholder: "例如: 3"
+    staleReplicaTimeout:
+      label: 陳舊副本超時
+      placeholder: "例如: 30"
+  mountOptions:
+    addActionLabel: 新增
+    label: 掛載選項
+    noData: 沒有掛載選項
+  name:
+    placeholder: "例如: 儲存"
+  parameters:
+    addActionLabel: 新增參數
+    detail: 為儲存類設定特定的參數
+    title: 參數
+  portworx-volume:
+    aggregation_level:
+      label: 聚合級別
+      placeholder: "例如: 0"
+    block_size:
+      label: 塊大小
+      placeholder: "例如: 32"
+    ephemeral:
+      label: 臨時的
+      placeholder: "例如: true"
+    fs:
+      label: 文件系統
+      placeholder: "例如: ext4"
+    io_priority:
+      label: I/O 優先級
+      placeholder: "例如: low"
+    repl:
+      label: Repl
+      placeholder: "例如: 1; 0為整個設備"
+    snap_interval:
+      label: 快照間隔
+      placeholder: "例如: 70"
+  provisioner:
+    label: 提供者
+  pv:
+    detail: 當前儲存類提供的 persistent volume 。
+    title: persistent volume
+  quobyte:
+    adminSecretName:
+      label: 管理密文名稱
+      placeholder: "例如: quobyte-admin-secret"
+    adminSecretNamespace:
+      label: 管理密文命名空間
+      placeholder: "例如: kube-system"
+    group:
+      label: 組
+      placeholder: "例如: root"
+    quobyteAPIServer:
+      label: Quobyte API伺服器
+      placeholder: "例如: https://138.68.74.142:7860"
+    quobyteConfig:
+      label: Quobyte設定
+      placeholder: "例如: BASE"
+    quobyteTenant:
+      label: Quobyte租戶
+      placeholder: "例如: DEFAULT"
+    registry:
+      label: 鏡像庫
+      placeholder: "例如: 138.68.74.142"
+    user:
+      label: 用戶
+      placeholder: "例如: root"
+  rbd:
+    adminId:
+      label: 管理員帳號(ID)
+      placeholder: "例如: kube"
+    adminSecret:
+      label: 管理密文
+      placeholder: "例如: secret"
+    adminSecretName:
+      label: 管理密文
+      placeholder: "例如: secret"
+    adminSecretNamespace:
+      label: 管理密文所在命名空間
+      placeholder: "例如: kube-system"
+    fsType:
+      label: 文件系統類型
+      placeholder: "例如: ext4"
+    imageFeatures:
+      label: 鏡像功能
+      placeholder: "例如: layering"
+    imageFormat:
+      label: 鏡像格式
+      placeholder: "例如: 2"
+    monitors:
+      label: Ceph-Monitor地址
+      placeholder: "例如: 10.16.153.105:6789"
+    pool:
+      label: 池
+      placeholder: "例如: kube"
+    userId:
+      label: 用戶ID
+      placeholder: "例如: kube"
+    userSecretName:
+      label: 用戶密文名稱
+      placeholder: "例如: ceph-secret-user"
+    userSecretNamespace:
+      label: 用戶密文命名空間
+      placeholder: "例如: default"
+  reclaimPolicy:
+    Delete: 在工作負載釋放後刪除 volumes 和底層設備
+    Recycle: "回收: 清空內容，然後為以後的工作負載保留 volumes "
+    Retain: 保留 volumes 以進行手動清理
+    label: 回收策略
+  scaleio:
+    fsType:
+      label: 文件系統類型
+      placeholder: "例如: xfs"
+    gateway:
+      label: 閘道
+      placeholder: "例如: https://192.168.99.200:443/api"
+    protectionDomain:
+      label: 保護域
+      placeholder: "例如: pd0"
+    readOnly:
+      label: 唯讀
+      placeholder: "例如: false"
+    secretRef:
+      label: 密文
+      placeholder: "例如: sio-secret"
+    storageMode:
+      ThickProvisioned: 精簡置備
+      ThinProvisioned: 精簡設定
+      label: 儲存模式
+    storagePool:
+      label: 儲存池
+      placeholder: "例如: sp1"
+    system:
+      label: 系統
+      placeholder: "例如: scaleio"
+  storageos:
+    adminSecretName:
+      label: 管理密文名
+      placeholder: "例如: storageos-secret"
+    adminSecretNamespace:
+      label: 管理密文命名空間
+      placeholder: "例如: default"
+    description:
+      label: 描述
+      placeholder: "例如: Kubernetes volumes "
+    fsType:
+      label: 文件系統類型
+      placeholder: "例如: ext4"
+    pool:
+      label: 池
+      placeholder: "例如: default"
+  title:
+    edit: "編輯儲存類: {name}"
+    new: 新增儲存類
+    view: "儲存類: {name}"
+  volumeBindingMode:
+    immediate: 創建PersistentVolumeClaim後，綁定並提供一個持久volume
+    label: volume綁定模式
+    waitForFirstConsumer: 使用PersistentVolumeClaim創建一個Pod後，綁定並提供一個持久volume
+  vsphere-volume:
+    cachereservation:
+      label: 緩存預留
+      placeholder: "例如: 20"
+    datastore:
+      label: 數據儲存
+      placeholder: "例如: VSANDatastore"
+    diskformat:
+      eagerzeroedthick: 厚置備置零
+      label: 磁盤格式
+      thin: 精簡
+      zeroedthick: 厚置備延遲置零
+    fstype:
+      label: 文件系統類型
+      placeholder: "例如: ext3"
+    hostFailuresToTolerate:
+      label: 主機失敗容忍
+      placeholder: "例如: 2"
+    storagePolicyName:
+      label: 儲存策略名稱
+      placeholder: "例如: gold"
+f5CISPage:
+  authError: local集群不支持F5 CIS 服务
+  confirmDisable: 你确定吗？再次点击将会禁用 F5 负载均衡服务。
+  disable: 禁用
+  disabled: F5 负载均衡服务在当前集群中尚未开启。
+  enableActionLabel: 启用
+  form:
+    flannelName:
+      label: Flannel Name
+      placeholder: "例如: /Common/MyFlannel"
+    partition:
+      label: BIG-IP Partition
+      placeholder: "例如: Common"
+    password:
+      label: BIG-IP 密码
+      placeholder: 密码
+    pool: Pool 成员类型
+    type: 集群网络
+    url:
+      label: BIG-IP URL
+      placeholder: "例如: http://example.com"
+    username:
+      label: BIG-IP 用户名
+      placeholder: "例如: John"
+    version: F5 负载均衡服务组件版本
+  notReady: 未找到F5负载均衡服务Chart, 请确认系统<a href="/g/catalog">应用商店</a>配置是否正确。
+  title: F5 负载均衡服务
+  toUpdate: F5 负载均衡服务已启动。
+  warning: 请注意，当 Pool成员类型 选择 Cluster 时，每个集群需要使用独立的 F5 BIG IP，无法与其它集群共享 F5 BIG IP。
+formCommand:
+  autoRestart:
+    always: 總是
+    label: 自動重啟
+    no: 從不
+    onFailure: 失敗時<span class="text-muted">(非0退出程式)</span>總是
+    onFailureCondPrefix: 失敗時，最多
+    onFailureCondSuffix: "{limit, plural,\n=1{次}\nother{次}\n}\n"
+  command:
+    label: 命令(CMD)
+    placeholder: "例如: /usr/sbin/httpd -f httpd.conf"
+  console:
+    both: 交互&amp;TTY終端<span class="text-muted">(-i -t)</span>
+    interactive: 交互<span class="text-muted">(-i)</span>
+    label: 控制台
+    none: 無
+    terminal: TTY終端<span class="text-muted">(-t)</span>
+  detail: 設定容器啟動時將運行的可執行文件。
+  entryPoint:
+    label: 入口(Entrypoint)
+    placeholder: "例如: /bin/sh"
+  environment:
+    label: 環境標籤
+  fsgid:
+    label: 文件系統組
+    placeholder: "例如: 501"
+  terminationGracePeriodSeconds:
+    helpText: 容器將在強制終止之前自行停止。
+    label: 停止超時
+  title: 命令
+  uid:
+    label: 用戶UID
+    placeholder: "例如: 501"
+  workingDir:
+    label: 工作目錄
+    placeholder: "例如: /myapp"
+formContainerLifecycle:
+  command:
+    label: 命令
+    placeholder: "例如: pre-stop.sh"
+  detail: 回调使容器能够了解其管理生命周期中的事件，并在执行相应的生命周期回调时运行在处理程序中实现的代码。
+  hookType:
+    command: 在容器的 cgroups 和名称空间中执行特定的命令
+    http: 对容器上的特定端点执行 HTTP 请求
+    https: 对容器上的特定端点执行 HTTPS 请求
+    none: 无
+    tcp: TCP 端口检查
+  host:
+    label: Host Header
+    placeholder: "例如: example.com"
+  httpHeaders:
+    addActionLabel: 添加 Headers
+    keyLabel: Http 头字段
+    keyPlaceholder: "例如: User-Agent"
+    label: 其他的 HTTP Headers
+    valuePlaceholder: "例如: value"
+  path:
+    label: HTTP(S)服务器上的访问路径
+    placeholder: "例如: /test"
+  port:
+    label: 容器端口
+    placeholder: "例如: 80"
+  postStartHook: PostStart
+  preStopHook: PreStop
+  title: 容器生命周期回调
+formIngress:
+  addRuleLabel: 新增規則
+  backendType:
+    label: 後端類型
+  defaultBackend:
+    label: 將此規則設置為默認後端
+    mark: 默認後端
+  host:
+    label: 訪問域名
+    placeholder: "例如: example.com"
+  hostMode:
+    automatic: 自動生成<code>.{domain}</code>後綴域名
+    default: 默認後端
+    defaultDisabled: Ingress控制器不支持默認後端
+    existing: 繼續使用當前主機名<code>{domain}</code>
+    manual: 自定義域名
+  label: 規則
+  mode:
+    service: DNS記錄
+    workload: 工作負載
+  noRules: 沒有規則
+  removeRuleLabel: 移除此規則
+formLabelsAnnotations:
+  detail: "用於調度決策的鍵值對。後端重寫請配置註釋: 鍵: nginx.ingress.kubernetes.io/rewrite-target，值: /。 "
+  title: 標籤/註釋
+formNameDescription:
+  description:
+    expand: 新增描述
+    label: 描述
+    placeholder: 描述
+  name:
+    label: 名稱
+    placeholder: 名稱
+formRelatedWorkloads:
+  detail: 正在使用它的工作負載
+  nodata: 沒有相關的工作負載
+  title: 相關的工作負載
+formSecurity:
+  allowPrivilegeEscalation:
+    disable: 否
+    enable: "是: 容器可以獲得比其父進程更多的特權"
+    label: 提升特權
+  capabilities:
+    add: 增加核心功能
+    drop: 移除核心功能
+    helpBlock:
+      link: 更多資訊
+      text: 核心能力能夠對容器所擁有的超級用戶權限進行更細粒度的控制，
+  cpuLimit:
+    label: CPU限制
+    set: 限制為
+    unit: milli CPUs
+    unlimited: 無限制
+  cpuPinning:
+    label: CPU綁定
+    placeholder: "例如: 0,1,3  默認: All"
+  detail: 授予或限制容器影響所運行主機的能力
+  deviceBinding:
+    addActionLabel: 新增綁定
+    label: 設備綁定
+    pathContainer:
+      label: 容器內路徑
+      placeholder: "例如: /dev/xsdc"
+    pathHost:
+      label: 主機內路徑
+      placeholder: "例如: /dev/sdc"
+    permissions:
+      label: 權限
+  gpuReservation:
+    label: NVIDIA GPU預留
+    memUnit: GiB
+    placeholder: "例如: 1"
+    set: 限制为
+    shared: 共享 GPU 内存
+    sharedTips: 设置共享 GPU 内存的同时，Rancher 会自动为工作负载设定 GPU 调度器名称
+    unit: GPUs
+  hostIPC:
+    label: 使用主機的IPC命名空間
+  hostPID:
+    label: 使用主機的PID命名空間
+  isolation:
+    default: 默認(容器)
+    hyperv: HyperV(虛擬機)
+    label: 隔離
+  memoryLimit:
+    label: 記憶體限制
+    set: 限制為
+    unlimited: 無限制
+  memoryReservation:
+    label: 記憶體預留
+    placeholder: "例如: 128"
+  milliCpuReservation:
+    label: CPU預留
+    placeholder: "例如: 1000"
+    unit: milli CPUs
+  privileged:
+    disable: 否
+    enable: "是: 容器具有所有主機訪問權限"
+    label: 特權模式
+  pullImage:
+    always: 總是拉取
+    ifNotPresent: 不存在則拉取
+    label: 鏡像拉取策略
+  readOnlyRootFilesystem:
+    disable: 否
+    enable: "是: 容器有一個唯讀的根文件系統"
+    label: 唯讀根文件系統
+  runAsNonRoot:
+    disable: 否
+    enable: "是: 容器必須以非root用戶身份運行"
+    label: 以非root用戶身份運行
+  shares:
+    label: CPU份額
+    placeholder: "例如: 1024"
+  swapLimit:
+    default: 限制為兩倍物理記憶體
+    label: 交換記憶體
+    none: 不允許使用交換記憶體
+    set: 限制為
+    unlimited: 無限制
+  swappiness:
+    default: 使用主機的默認值
+    label: Swappiness
+    none: 最小
+    set: 自定義(1-100)
+  title: 安全/主機設置
+  vGpuReservation:
+    label: Orion X GPU 预留
+    placeholder: "例如: 1"
+    unit: vGPUs
+formVolumeRow:
+  addMount: 新增映射
+  customLogPath:
+    helpText: 我們將部署一個Flexvolume驅動程式來創建 volumes 並將日誌掛載到主機，GKE叢集現在支持該功能。
+  mode:
+    bindMount: 路徑映射 volumes
+    certificate: 證書 volumes
+    configmap: 設定映射 volumes
+    existingPvc: persistent volume 聲明
+    existingVct: Volume Claim Template
+    existingVolume: 已有的 volumes
+    label: volumes 類型
+    newPvc: volumes 聲明
+    newVolume: 臨時 volumes
+    newVolumeClaimTemplate: New Volume Claim Template
+    secret: 密文 volumes
+    tmpfs: Tmpfs
+  mounts:
+    helper: volumes 不會被掛載到當前容器中，它可能被Pod中的其他容器使用。
+    mountPoint: 容器路徑
+    readOnly: 唯讀
+    subPath: 子路徑(僅適用於數據 volumes 掛載，不適用於主機路徑映射)
+  name:
+    label: volumes name
+    placeholder: "例如: vol1"
+  noVolume: volumes 不會被掛載到當前容器中，它可能被Pod中的其他容器使用。
+  prompt: 選擇一個 persistent volume 聲明...
+  readOnly: 唯讀
+  remove: 刪除 volumes
+  subPath: volumes 中的子路徑
+  volumeClaimTemplateName:
+    label: Volume Claim Template Name
+    placeholder: "例如: vol1"
+    vctWarning: Stateful workloads launched with volume claim templates will become uneditable due to a <a href="https://github.com/kubernetes/kubernetes/issues/69041" target="_blank" rel="nofollow noreferrer noopener">upstream bug</a> in Kubernetes. Please be aware that this limitation exists before launching your new workload.
+loginGithub:
+  buttonText: 用GitHub登入
+loginUserPass:
+  externalProvider: 使用{externalName}使用者
+  genericLoginLabel: 登入
+  local: 使用本地用戶
+  loggingInLabel: 登入中...
+  loginLabel: 登入{provider}
+  passwordLabel: 密碼
+  provider: "{kind}"
+  remember: 記住登入
+  userLabel: 用戶名
+  userPlaceholder: "例如: jsmith"
+metricsAction:
+  description: 查看即時監控指標
+  detail:
+    label: 詳細模式
+  from:
+    label: 起始時間
+  grafana:
+    label: Grafana
+  noData: 没有足夠的數據繪製圖表
+  periods:
+    1h: 1小時
+    24h: 24小時
+    30d: 30天
+    5m: 5分鐘
+    6h: 6小時
+    7d: 7天
+    custom: 自定義時間段
+  sections:
+    container: Container監控
+    pod: Pod監控
+    workload: 工作負載監控
+  summary:
+    label: 預覽模式
+  to:
+    label: 结束時間
+modalConfirmYamlMonitoring2Form:
+  helpText: 请注意，当切换回表单编辑时，非表单数据可能会发生数据丢失。在点击确认之前，请确认不会受影响。
+modalRevertSettings:
+  current: 當前值
+  default: 默認值
+  title: 將{setting}還原為默認值?
+modalWechat:
+  title: 掃碼關注Rancher中國微信技術群
+  wechat: 微信
+newContainer:
+  add:
+    container: 部署Pod
+    globalService: 新增全域工作負載
+    service: 部署工作負載
+    sidekick: 部署Sidecar
+    sidekickName: 部署{name}的Sidecar
+  all: Any
+  containerType:
+    init: Init容器
+    standard: 標準容器
+    title: Sidecar類型
+  description:
+    placeholder: "例如: 我的應用"
+  environment:
+    addAction: 新增變數
+    addFrom: 新增附加資源
+    detail: 設置容器可見的環境變數，包括從其他資源(如密文等)注入的值。
+    from: 引用其他資源
+    keyLabel: 變數
+    keyPlaceholder: "例如: FOO"
+    label: 環境變數
+    valueLabel: 值
+    valuePlaceholder: "例如: bar"
+  errors:
+    duplicateName: 工作負載{service}中已經存在名為{name}的sidecar.
+    noSidekick: 選擇要新增sidecar的工作負載
+    quotaRequired: "\"{key}\"必需設置，因為在專案上執行資源配額。"
+  linux: Linux
+  name:
+    placeholder: "例如: Myapp"
+  os: Target OS
+  saveNew: 啟動
+  saveUpgrade: 升級
+  sidekick:
+    detail: “{service}”有多個容器，希望升級哪個容器?
+    header: 升級服務
+    primary: 主容器
+    sidekick: Sidecars
+    title: 選擇下載設定的服務來升級
+  upgrade:
+    container: 升級容器
+    globalService: 升級全域服務
+    service: 升級服務
+    sidekick: 升級Sidecar
+    sidekickName: 升級{name}的Sidecar
+  windows: Windows
+nodeGroupRow:
+  desired:
+    label: Desired ASG Size
+  gpu:
+    label: 启用GPU实例
+  instance:
+    label: 实例类型
+  labels:
+    addLabel: 添加标签
+    label: 标签
+  max:
+    label: Maximum ASG Size
+  min:
+    label: Minimum ASG Size
+  name:
+    label: 节点组名称
+  nodeVolumeSize:
+    label: Node Volume Size
+    placeholder: e.g. 20
+  remove:
+    label: 删除节点组
+  ssh:
+    label: SSH Key
+  tags:
+    addLabel: Add Tag
+    label: Tags
+  version:
+    label: Kubernetes 版本
+    upgrade: 将节点组版本从 { from } 升级到 { version }。
+    warning: 选择了一个新的集群版本。一旦完成，您可以返回并升级节点组版本。
+optionallyNamespaced:
+  scope:
+    label: 作用域
+    namespace: 單個命名空間
+    project: 此專案所有命名空間
+pageFooter:
+  cnforums: 中文社區
+  download:
+    link: 下載Rancher CLI
+    linux: Linux
+    mac: macOS
+    windows: Windows
+  downloadMirror: 下載Rancher資源
+  forums: 論壇
+  help: 幫助&文檔
+  issues: 提交問題
+  notARelease: (非正式發布)
+  showSystem: 顯示系統容器
+  slack: Slack
+persistentVolumePage:
+  addActionLabel: 新增 volumes
+  header: persistent volume
+  noData: 沒有定義 persistent volume
+  noMatch: 沒有符合當前搜索的 persistent volume
+  source:
+    label: 儲存源
+tooltipNodeGroupUpdate:
+  label: 一个节点组 Kubernetes 版本可以更新。
+  link: 编辑版本
+vmConsole:
+  canvas: 暫不提供Canvas支持
+  footerActions:
+    buttonCancel: 關閉
+    buttonSend: 發送Ctrl-Alt-Delete
+  header: "控制台:"
+  protip: 高級技巧:啟動命令行時按下{key}鍵可在新視窗中打開
+volumeRow:
+  mounts:
+    readOnly: (唯讀)

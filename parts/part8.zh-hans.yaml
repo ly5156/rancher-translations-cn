@@ -1,0 +1,1163 @@
+cis:
+  scan:
+    actions:
+      addAlert: 添加告警
+      addSchedule: 添加调度
+      delete: 删除
+      download: 下载
+      runScan: 运行扫描
+      search:
+        placeholder: 搜索
+    detail:
+      actions:
+        delete: 删除
+        download: 下载
+        runScan: 运行扫描
+        search:
+          placeholder: 搜索
+      error:
+        createDefault: 创建默认的 security-scan-cfg 配置映射失败。
+        parseConfig: 解析 security-scan-cfg 配置映射时出错。
+      table:
+        description: 描述
+        empty: 当前没有测试
+        nodesTable:
+          row:
+            remediation: "修复: {remediation}"
+          title: 节点
+        number: 序号
+        skip: 跳过
+        state: 状态
+        unskip: 不跳过
+    growl:
+      success: 在 '{clusterName}' 上运行 CIS 扫描
+    header: CIS 扫描
+    modal:
+      chooseAProfile: 选择配置文件
+      notApplicableTests: 不适用的测试 ({count})
+      profileDocs: 要了解更多关于配置文件的信息，请访问我们的<a href="https://rancher.com/docs/" target="_blank" rel="nofollow noopener noreferrer">文档</a>。
+      skippedTests: 跳过测试 ({count})
+      tableHeaders:
+        explanation: 解释
+        id: Test Id
+      testDocs: 要了解为什么这些测试不能运行，请访问我们的<a href="https://rancher.com/docs/" target="_blank" rel="nofollow noopener noreferrer">文档 </a>。
+      testsWontRun: 被选择的配置文件，将不会运行测试
+      title: 运行 CIS 扫描
+      userSkippedTestsWontRun: 此外，已将以下测试配置为作为扫描的一部分跳过
+    report:
+      headers:
+        description: 描述
+        failed_nodes: 失败的节点
+        id: id
+        node_type: 节点类型
+        nodes: nodes
+        passed_nodes: 节点密码
+        profile: "配置文件: {profile}"
+        remediation: 修复
+        state: 状态
+    rkeOnly: CIS 扫描只适用于 RKE 集群
+    table:
+      date: 日期
+      empty: 当前没有扫描
+      failed: 失败
+      name: 名称
+      notApplicable: 不适用
+      passed: 通过
+      profile: 配置文件
+      skipped: 跳过
+      state: 状态
+cloudCredentialsPage:
+  header: 云凭证
+  index:
+    table:
+      noData: 当前没有云凭证
+      noMatch: 没有云凭证匹配当前搜索
+  numberNodeTemplates: "# 节点模板"
+  rightButtons:
+    addKey: 添加云凭证
+    nodeTemplates: 管理主机模板
+cloudProvider:
+  amazon: Amazon
+  azure: Azure
+  azureCloudConfig:
+    aadClientCertPassword:
+      description: 具有 RBAC 访问权限的 AAD 应用程序的客户端证书密码，用来与 Azure RM API 通信
+    aadClientCertPath:
+      description: 具有 RBAC 访问权限的 AAD 应用程序的客户端证书路径，用来与 Azure RM API 进行通信
+    aadClientId:
+      description: 具有 RBAC 访问权限的 AAD 应用程序的 Client ID，用于与 Azure RM API 通信
+    aadClientSecret:
+      description: 具有 RBAC 访问权限的 AAD 应用程序的 Client Secret key，用于与 Azure RM API 通信
+    cloud:
+      description: 云环境标识符，请参阅此处了解有效参数
+    cloudProviderBackoff:
+      description: Enable exponential backoff to manage resource request retries
+    cloudProviderBackoffDuration:
+      description: Backoff duration
+    cloudProviderBackoffExponent:
+      description: Backoff exponent
+    cloudProviderBackoffJitter:
+      description: Backoff jitter
+    cloudProviderBackoffRetries:
+      description: Backoff retry limit
+    cloudProviderRateLimit:
+      description: 启用速率限制
+    cloudProviderRateLimitBucket:
+      description: Rate limit Bucket Size
+    cloudProviderRateLimitQPS:
+      description: Rate limit QPS (Read)
+    loadBalancerSku:
+      description: "Sku of Load Balancer and Public IP. Candidate values are: basic and standard"
+    location:
+      description: 部署集群的资源组位置
+    maximumLoadBalancerRuleCount:
+      description: 允许最大的负载均衡器规则计数是 Azure 负载均衡器执行的限制
+    primaryAvailabilitySetName:
+      description: 应用作负载均衡器后端的可用性集的名称
+    primaryScaleSetName:
+      description: 应该用作负载均衡器后端的缩放集的名称
+    resourceGroup:
+      description: 部署集群的资源组名称
+    routeTableName:
+      description: 附加到部署集群的子网的路由表名称
+    securityGroupName:
+      description: 附加到集群子网的安全组名称
+    subnetName:
+      description: 部署集群的子网名称
+    subscriptionId:
+      description: 部署集群的 Azure 订阅的 ID
+    tenantId:
+      description: 部署集群订阅的 AAD 租户 ID
+    useInstanceMetadata:
+      description: 尽可能使用实例元数据服务
+    useManagedIdentityExtension:
+      description: 为虚拟机使用托管服务标识来访问 Azure ARM API
+    vmType:
+      description: "azure 节点类型，可选值为: vmss 和 standard"
+    vnetName:
+      description: 集群部署在 VNet 中的名称
+    vnetResourceGroup:
+      description: 部署 Vnet 的资源组的名称
+  custom:
+    helpText: 请通过编辑 YAML 来添加其他<a href="http://rancher.com/docs/rke/v0.1.x/en/config-options/cloud-providers/" target="_blank" rel="nofollow noopener noreferrer">云提供商</a>
+    label: Custom (In-Tree)
+    notInList: 如果云提供商没有列出，请使用<b>自定义</b>选项。
+  external:
+    helpText: 请编辑 YAML 以指定云控制管理器所需的插件。
+    label: 扩展
+    vsphereHelpText: Out-of-tree cloud provider for vsphere is available through the vsphere-csi and vsphere-cpi helm charts. Please refer to the <a href="{docsBase}/cluster-provisioning/rke-clusters/cloud-providers/vsphere/out-of-tree" target="_blank" rel="nofollow noopener noreferrer">docs</a> for installation.
+  helpText: |
+    详细了解 <a href="https://kubernetes.io/blog/2019/04/17/the-future-of-cloud-providers-in-kubernetes/" target="_blank" rel="nofollow noopener noreferrer">云提供商</a>
+  name: 云提供商名称
+  title: 云提供商
+  warning: 使用云提供程序而不传递云提供程序配置可能会导致集群无法正确配置，推荐您在创建集群之前添加云提供程序配置，文档中可以找到支持的云提供商所需的先决条件。
+clusterRow:
+  addHost: 添加主机...
+  explorer: 仪表盘
+  importCluster: 使用已有的 Kubernetes
+  loginDefault: 登录
+  noClusterData: 没有集群模板
+  noClusterMatch: 没有匹配当前搜索的集群。
+  noData: 集群中还没有任何环境。
+  noHosts: 外部集群没有任何主机
+  noMatch: 没有匹配当前搜索的环境。
+clusterTemplateNew:
+  members:
+    detail: 控制谁有权访问集群模板，以及他们有什么权限来更改它。
+    label: 成员角色
+clusterTemplateRow:
+  label: 集群模板
+  noData: 当前没有配置集群模板。
+  noMatch: 没有集群模板匹配当前搜索。
+cruGateway:
+  hosts:
+    add: Add Host
+    error: "\"Hosts\" is required."
+    label: Hosts
+    placeholder: "例如: *"
+  name:
+    placeholder: 例如：mygateway
+  port:
+    name:
+      error: 端口名称必须设置
+      label: 端口名称
+      placeholder: "例如: http"
+    number:
+      error: 端口号必须设置
+      label: 端口号
+      placeholder: "例如: 80"
+    protocol:
+      label: 端口协议
+  selector:
+    add: Add Key Value
+    error: "\"选择器必需设置."
+    label: 选择器
+  servers:
+    add: 添加 Server
+    error: 请输入至少一个 server
+    label: Servers
+    noServers: 没有 Servers
+    removeServerLabel: 移除 server
+  title:
+    edit: 编辑网关
+    new: 添加网关
+    view: "网关: {name}"
+  tls:
+    caCertificates:
+      label: CA 证书
+      placeholder: "例如: /etc/istio/ingressgateway-ca-certs/ca-chain.cert.pem"
+    credentialName:
+      label: 凭据名称
+      placeholder: "例如: myssl"
+    httpsRedirect:
+      disabled: No
+      enabled: Yes
+      label: HTTPS 重定向
+    mode:
+      label: 运行模式
+      prompt: 选择模式...
+    privateKey:
+      label: 服务私钥
+      placeholder: "例如: /etc/istio/ingressgateway-certs/tls.key"
+    serverCertificate:
+      label: 服务证书
+      placeholder: 例如：/etc/istio/ingressgateway-certs/tls.crt
+cruHpa:
+  description:
+    placeholder: "例如: My scaler"
+  maxReplicas:
+    label: 最大副本
+    placeholder: "例如: 10"
+  metrics:
+    addMetricLabel: 添加指标
+    describedObject:
+      apiVersion:
+        label: 描述对象 API 版本
+        placeholder: "例如: extensions/v1beta1"
+      kind:
+        label: 描述对象类型
+        placeholder: "例如: Ingress"
+      label: 描述对象
+      name:
+        label: 描述对象名称
+        placeholder: "例如: main-route"
+    label: 指标
+    name:
+      label: 指标名称
+      placeholder: "例如: packets-per-second"
+      resources:
+        cpu: CPU
+        memory: Memory
+    noMetrics: 没有指标
+    removeMetricLabel: 删除指标
+    selector:
+      expressions:
+        addSelectorLabel: 添加表达式
+        label: 指标匹配表达式
+      labels:
+        addSelectorLabel: 添加标签
+        label: 指标匹配标签
+    target:
+      label: 目标类型
+      options:
+        averageUtilization: 平均利用率
+        averageValue: 平均值
+        value: 值
+    types:
+      external: 扩展
+      label: 指标类型
+      object: 对象
+      pods: Pods
+      resource: 资源
+      warning:
+        cpu: 未在选定的 deployment 中设置 CPU 预留，HPA 将不能基于 CPU 使用率计算副本数。
+        custom: 为了在 HPA 中使用自定义指标，您需要部署自定义 metrics 服务器，比如 Prometheus Adapter。
+        external: 为了使用 HPA 的扩展指标，您需要部署扩展指标服务器，比如 Prometheus Adapter。
+        memory: 未在选定的 deployment 中设置内存预留，HPA 将不能基于内存使用率计算副本数。
+        resource: 为了在 HPA 中使用资源指标，您需要部署 metrics 服务器。
+    value:
+      cpuPlaceholder: "例如: 200m"
+      label: 数值
+      placeholder: "例如: 200"
+      utilizationPlaceholder: "例如: 50"
+  minReplicas:
+    label: 最小副本
+    placeholder: "例如: 1"
+  name:
+    placeholder: "例如: myscaler"
+  prompt:
+    deployment: 选择工作负载...
+  status:
+    label: 当前状态
+  target:
+    label: 工作负载
+  title:
+    edit: 编辑 Pod 水平自动伸缩
+    new: 添加 Pod 水平自动伸缩
+    view: "Pod 水平伸缩: {name}"
+cruRegistry:
+  address:
+    artifactory: Artifactory
+    custom: 自定义
+    dockerhub: DockerHub
+    globalRegistry: 全局镜像库
+    harbor: Harbor
+    label: 地址
+    placeholder: "例如: registry.example.com"
+    quay: Quay.io
+  auth:
+    label: 认证 Token
+    saved: 已保存
+  multiple: 多个
+  password:
+    label: 密码
+    saved: 已保存
+  title:
+    edit: "编辑镜像库凭证: {name}"
+    new: 添加镜像库凭证
+    view: "镜像库凭证: {name}"
+  username:
+    label: 用户名
+formAgentEnvVar:
+  addActionLabel: Add Environment Variable
+  headers:
+    configMap: Config Map
+    containerName: Container Name
+    key: Key
+    secret: Secret
+    type: Type
+    value: Value
+    variableName: Variable Name
+  placeholders:
+    bar: e.g. bar
+    container: e.g. my-container
+    foo: e.g. FOO
+    key: e.g. metadata.labels['KEY']
+  typeChoices:
+    configMap: ConfigMap Key
+    keyValue: Key/Value Pair
+    notAvailable: "{type} (Not Available)"
+    podField: Pod Field
+    resource: Resource
+    secret: Secret Key
+formAllowedHostPathsPodSecurityPolicy:
+  detail: 允许的主机路径的白名单
+  path:
+    addLabel: 添加路径前缀
+    placeholder: "例如: /foo"
+  title: 允许主机路径策略
+formAuthCloudCredential:
+  add: 添加
+  label: 云凭证
+  selectCreds:
+    prompt: 选择云凭证
+formBalancerConfig:
+  config:
+    prompt: 自定义 haproxy.cfg 内容
+  custom: |
+    请参考 <a href="https://cbonte.github.io/haproxy-dconv/1.6/configuration.html" target="_blank" rel="nofollow noopener noreferrer">haproxy 文档</a>了解更多关于该配置文件的参数。当重写<code>backend</code>或包括目标容器 IP 的某行时，请使用<code>$IP</code>来代替 IP 地址，{appName} 将会自动转换成相应的配置。
+  detail: 提供自定义配置文件，这个配置将会被应用到 {appName} 自动生产的配置上方。
+  title: 自定义配置文件
+formCustomMetrics:
+  addActionLabel: 添加自定义指标
+  addActionregex: 添加标签名
+  delete:
+    label: 删除指标
+  detail: 配置自定义指标端口，监控系统将通过这些端口采集自定义指标。
+  label:
+    placeholder: "例如: (^id$|^image$|^name$|^cpu$)"
+  noPorts: 没有自定义指标
+  path:
+    label: Path
+    placeholder: "例如: /metrics"
+  port:
+    label: 容器端口
+    placeholder: "例如: 8080"
+  protocol:
+    label: 协议
+  regex:
+    description: 可以输入标签名称或者通过表达式匹配标签名
+    label: 删除标签
+  title: 自定义指标
+formDisks:
+  addDiskLabel: 添加磁盘
+  addRootDiskLabel: 添加根磁盘
+  driver:
+    label: 驱动
+  name:
+    label: 名称
+    placeholder: "例如: data"
+    rootDisk: 根磁盘
+  readIops:
+    label: 读取 Iops
+    placeholder: e.g. 1000
+  size:
+    label: 磁盘大小
+    rootDisk: 由系统镜像决定
+  writeIops:
+    label: 写入 Iops
+    placeholder: e.g. 1000
+formEngineOpts:
+  detail: 自定义 Docker 守护进程的配置
+  engineEnv:
+    addActionLabel: 添加环境变量
+    keyLabel: 变量
+    keyPlaceholder: "例如: HTTP_PROXY"
+    label: 引擎变量
+    valuePlaceholder: "例如: http://your-proxy:8080"
+  engineInsecureRegistry:
+    addActionLabel: 添加非安全镜像仓库
+    label: 非安全镜像仓库
+    valueLabel: 镜像库域名
+    valuePlaceholder: "例如: registry.example.com"
+  engineInstallUrl:
+    label: Docker 安装 URL
+    latest: 最新
+    none:
+      help: "Warning: When selecting a value of 'None', Rancher will not install docker under the assumption that the docker is already installed."
+      label: None
+    placeholder: "例如: http://get.docker.com"
+    recommended: 推荐
+    recommendedNoVersion: Recommended
+  engineLabels:
+    addActionLabel: 添加引擎标签
+    keyLabel: 标签
+    label: 引擎标签
+  engineOpts:
+    addActionLabel: 添加引擎参数
+    keyPlaceholder: "例如: log-driver"
+    label: 引擎参数
+    valuePlaceholder: "例如: syslog"
+  engineRegistryMirror:
+    addActionLabel: 添加加速地址
+    label: 镜像加速
+    valueLabel: 镜像加速地址
+    valuePlaceholder: "例如: https://my-mirror.example.com:5000"
+  engineStorageDriver:
+    label: 存储驱动
+    placeholder: "例如: overlay"
+  title: 引擎选项
+formImage:
+  container:
+    placeholder: "例如: ubuntu:xenial"
+  label: Docker 镜像
+  tag:
+    placeholder: 选择镜像标签
+formIngressBackends:
+  addServiceLabel: 服务
+  addWorkloadLabel: 工作负载
+  label: 目标后端
+  noRules: 没有后端
+  path:
+    label: 访问路径(如需使用后端重写功能,请查看下方标签/注释)。
+    placeholder: "例如: /foo"
+  service:
+    label: 服务
+  target: 服务/工作负载
+  targetPort:
+    label: 容器端口
+    placeholder: "例如: 80"
+    prompt: 选择端口 ...
+  warning: 如果目标后端是一个服务，您只可以使用该服务所暴露的端口。您可以在服务发现页找到该服务，然后通过编辑 YAML 的方式添加所需要的端口。
+  workload:
+    label: 工作负载
+formIstioHost:
+  prompt: 选择节点...
+formMembersGlobalAccess:
+  detail: 选择可以查看此应用程序的成员
+  table:
+    accessType: 访问类型
+    name: 名称
+    noData: 当前没有成员
+    noMatch: 没有成员匹配当前搜索
+    prompt: 选择值...
+    type: 成员类型
+  title: 成员
+formNodeAffinity:
+  addRuleLabel: 添加节点选择规则
+  noRules: 没有节点选择器
+  removeRuleLabel: 删除节点选择规则
+formNodeRequirement:
+  addRuleLabel: 添加规则
+  key:
+    label: 键
+    placeholder: "例如: hostname"
+  label: 规则
+  noRules: 没有规则
+  operator:
+    label: 操作符
+  values:
+    label: 值
+    placeholder: "用逗号分割，例如: node1,node2"
+formSources:
+  addLabel: 添加源
+  container:
+    placeholder: "例如: my-container"
+  detail: 来自其他源的环境变量允许您将密码、密钥或其他信息注入需要它们的容器中。
+  field:
+    placeholder: "例如: spec.nodeName"
+  noData: 没有来自其他源的环境变量。
+  noMatch: 没有匹配当前搜索的来自其他源的环境变量。
+  prefix:
+    label: 前缀或别名
+  prefixOrKey:
+    label: 键
+  resource:
+    placeholder: "例如: requests.cpu"
+  source:
+    label: 源
+  title: 来自其他源的环境变量。
+  type:
+    label: 类型
+gatewayPage:
+  noData: 没有配置网关
+  noMatch: 没有网关匹配当前搜索
+  notSupported: 集群 networking.istio.io/v1alpha3 API 不可用。
+  table:
+    hosts:
+      label: Hosts
+jsonEditor:
+  placeholder: 请以 JSON 格式输入
+labelsSection:
+  detail: 键/值 可以被用在主机调度规则里和一些其他的高级设置中。
+  key: 键
+  kind: 类型
+  noData: 没有标签
+  noMatch: 没有标签与当前搜索匹配
+  status: "{count, plural,\n=0{ 无标签 }\n=1{#个标签 }\nother {#个标签 }\n}\n"
+  title: 标签
+  value: 值
+loggingPage:
+  additional:
+    enableExceptionStackMatch:
+      description: "包括Java, JavaScript, C#, Python, Go, Ruby, PHP"
+      label: 自动合并常用语言的异常堆栈信息
+    enableMultiLineFilter:
+      label: 自定义多行日志合并策略
+      required: 需要配置起始行正则表达式或结束行正则表达式
+    enableMultiLineMerge:
+      label: 启用多行日志合并
+    fields:
+      header: 自定义 Log 字段
+      helpText: 以键值对的形式添加自定义字段，以便更好地进行过滤。
+    fluentdLogDir:
+      label: Fluentd的缓冲路径
+    flushInterval:
+      header: 刷新时间间隔
+      helpText: 日志刷新频率
+      label: 刷新时间间隔
+      placeholder: "例如: 1"
+      sec: 秒
+    header: 其他日志配置
+    includeSystemComponent:
+      label: 包含系统日志
+    jsonParsing:
+      label: 支持 JSON 解析
+    multiLineEndRegexp:
+      label: 结束行正则表达式
+    multiLineStartRegexp:
+      label: 起始行正则表达式
+  advanced:
+    cancel: 以表单形式编辑
+    file: 以文件形式编辑
+  clusterHeader: 集群日志收集
+  configureFluentdLogDir: "\"Fluentd的缓冲路径\"目前是 <code>{path}</code>. 去\"集群高级选项\""
+  customTarget:
+    type:
+      error: "@type 不支持, 你可以选择以下类型: ['elasticsearch', 'splunk_hec', 'remote_syslog', 'kafka_buffered', 'forward']"
+  dockerRootDir:
+    header: Docker 配置
+    label: Docker 根目录
+    placeholder: 输入 Docker 根目录，默认值为 {dir}
+  editIt: 修改.
+  elasticsearch:
+    endpoint:
+      required: 必须配置访问地址。
+    endpointHelpText: 输入云端 Elacticsearch 地址，或者私有部署的 Elacticsearch 地址。
+    endpointHostError: 请输入主机名或域名。
+    endpointProtocolError: 访问地址应该以 "http://" 或者 "https://" 开头。
+    generatedIndex: "生成的索引格式为: <code class=\"text-italic text-lowercase\">{esIndex}</code>，默认索引格式为: {indexFormat}。"
+    header: Elasticsearch 配置
+    indexPatterns:
+      dateFormat: "日期格式:"
+      errors:
+        invalidCharacters: 前缀不能包含 '{char}'
+        required: 必须添加前缀
+        startsWith: 前缀不能以 -, _, + 开始
+      header: 索引配置
+      helpText: 配置用于生成 Elacticsearch 索引的参数。
+      prefix: 前缀
+      prefixPlaceholder: "例如: logstash"
+    xpack:
+      header: X-Pack 安全
+      headerOptional: (可选)
+      helpText: 如果您的 Elasticsearch 开启了 X-Pack 内置的本地身份验证功能，请在下面设置用户名和密码。
+      password: 密码
+      passwordPlaceholder: 密码
+      username: 用户名
+      usernamePlaceholder: "例如: John"
+  endpoint: 访问地址
+  endpointPlaceholder: "例如: https://192.168.1.10:9200"
+  fluentd:
+    addServer: 添加 Fluentd 服务
+    certificate:
+      label: PEM 格式的 CA 证书
+    compress:
+      helpText: 启用 Gzip 压缩可减少传输数据大小。
+      label: 启用 Gzip 压缩
+    enableTls:
+      label: 启用 TLS
+    endpoint:
+      invalid: 访问地址需要填写端口
+      label: 访问地址
+      placeholder: "例如: 192.168.1.10:24224"
+      required: 必须配置访问地址。
+    endpointHostError: 访问地址不能以 http 或 https 开头。
+    endpointPortError: 访问地址需要添加端口。
+    header: Fluentd 配置
+    hostname:
+      label: 主机名
+      placeholder: 服务器主机名
+    password:
+      label: 密码
+      placeholder: 用于身份验证的用户名密码
+    removeFluentServers: 删除此 Fluentd 服务
+    sharedKey:
+      label: 共享密钥
+      placeholder: 用于身份验证的共享密钥
+    standby:
+      label: 仅作为备用
+      none: 需要一个非待机访问地址.
+    username:
+      label: 用户名
+      placeholder: 用于身份验证的用户名
+    weight:
+      label: 权重
+      placeholder: 此访问地址的负载平衡权重。
+  helpText:
+    cluster: 我们将使用 fluentd 从每个容器收集 <b>stdout/stderr</b> 日志，以及在每个主机上 <code>/var/log/containers/</code> 路径下的日志文件，日志将被发送到被选择的目标服务。
+    clusterTarget: 当前日志收集目标是 <code class="text-capitalize">{clusterTargetType}</code>。如果项目日志收集启用，日志将被发送到集群目标和项目目标。
+    noClusterTarget: 日志收集默认禁用
+  kafka:
+    addEndpoint: 访问地址
+    broker: Broker
+    brokerHelpText: Kafka 集群由一个或多个 Broker 组成，为每个 Broker 配置主机和端口。
+    brokerTypeHelpText: 使用 Zookeeper 或 Broker 作为 Kafka 连接入口点。
+    endpoint:
+      broker:
+        placeholder: "例如: https://192.168.1.10:9092"
+      required: 必须配置访问地址。
+      zookeeper:
+        placeholder: "例如: https://192.168.1.10:2181"
+    endpointType: 访问端点类型
+    header: Kafka 配置
+    topic:
+      label: 主题
+      required: 主题必须填写
+    topicHelpText: 日志将发送到这个主题。
+    topicPlaceholder: "例如: message"
+    zookeeper: Zookeeper
+    zookeeperHelpText: Zookeeper 用于构建协调、配置管理、master 检测、检测 kafka 集群中的节点更新。
+  keyValueForm:
+    keyPlaceholder: "例如: 192.168.1.10"
+  logPreview:
+    header: 日志格式预览
+  logging: 日志收集
+  projectHeader: 项目日志收集
+  splunk:
+    endpoint:
+      placeholder: "例如: https://192.168.1.10:8088"
+    endpointRequired: 必须配置访问地址。
+    header: Splunk HTTP 事件收集配置
+    helpText: 您可以 <a href="http://docs.splunk.com/Documentation/Splunk/7.0.0/Data/UsetheHTTPEventCollector" target="_blank">点击此处</a> 找到如何配置 Splunk HEC (HTTP 事件收集器) 的说明。
+    index: Index
+    indexHelpText: 您在此处指定的索引必须在此令牌的允许索引列表中，点击 <a href="https://docs.splunk.com/Splexicon:Index" target="_blank">了解详情</a>。
+    indexPlaceholder: "例如: main"
+    source: 日志源
+    sourceHelpText: 标识事件来源的默认字段，即事件发生的位置，点击 <a href="https://docs.splunk.com/Splexicon:Source" target="_blank">了解详情</a>。
+    sourcePlaceholder: "例如: fluentd"
+    token: Token
+    tokenHelpText: "Token 是允许日志收集程序和 HTTP 客户端连接到 HEC 的验证信息，点击 <a href=\"http://docs.splunk.com/Documentation/Splunk/7.0.0/Data/UsetheHTTPEventCollector#Configure_HTTP_Event_Collector_on_Splunk_Enterprise\" target=\"_blank\">了解详情</a>。"
+    tokenPlaceholder: Your Token
+    tokenRequired: 必须配置 Token。
+  ssl:
+    certificate:
+      label: PEM 格式的 CA 证书
+    clientCert:
+      label: 客户端证书
+    clientKey:
+      label: 客户端私钥
+    clientKeyPass:
+      label: 客户端私钥密码
+      password:
+        placeholder: 客户端私钥密码
+    customTarget:
+      copyAll: 复制所有键和值。
+      help: 您可以将路径复制到文件中。
+    headerHelp: 输入 https 地址或选择 TCP 开启 SSL 配置
+    saslPassword:
+      label: 密码
+      placeholder: 密码
+    saslScramMechanism:
+      label: 安全机制
+      sha256: sha256
+      sha512: sha512
+    saslType:
+      label: 类型
+      plain: Plain
+      scram: Scram
+    saslUsername:
+      label: 用户名
+      placeholder: "例如: John"
+    sslHeader: "{authType} 配置"
+    sslVersion:
+      label: SSL 版本
+    verify:
+      disabled: 禁用
+      enabled: 启用
+      label: SSL 校验
+  syslog:
+    endpoint:
+      required: 必须配置访问地址。
+    endpointHelpText: 在此处输入日志服务器的接入地址，选择 TCP 将显示 SSL 证书配置。
+    endpointPlaceholder: "例如: 192.168.1.10:514"
+    header: Syslog 配置
+    program: 程序名
+    programHelpText: 日志中的程序名称。
+    programPlaceholder: "例如: MyProgram"
+    severities:
+      alert: 警报
+      critical: 危险
+      debug: Debug
+      emergency: 紧急
+      error: 错误
+      info: Info
+      notice: 注意
+      warning: 警告
+    severityHelpText: "<p class=\"text-info text-small\">日志的严重性列表可以在此处找到，点击 <a href=\"https://tools.ietf.org/html/rfc5424#section-6.2.1\" target=\"_blank\">了解详情</a>。</p>"
+    tokenHelpText: 将 Token 令牌添加到每个系统日志消息的结构化数据中。对于像 <a href="https://help.sumologic.com/Send-Data/Sources/02Sources-for-Hosted-Collectors/Cloud-Syslog-Source" target="_blank">Sumologic</a>, <a href="https://www.loggly.com/docs/customer-token-authentication-token" target="_blank">Loggly</a> 等云日志系统，您可以在其配置页面上生成 Token 令牌。
+  tags:
+    addActionLabel: 添加字段
+    keyPlaceholder: "例如: foo"
+    valuePlaceholder: "例如: bar"
+  targetKafka:
+    addActionLabel: 添加代理
+    host: 主机
+    port: 端口
+  targetNav:
+    experimental: 实验性
+    tips:
+      caseA: 当前 {pageScope} 未启用日志收集功能。
+      caseB: 当前日志收集目标是 <code class="text-capitalize">{currentTarget}</code>，点击下面的保存按钮将禁止当前 {pageScope} 的日志收集。
+      caseC: 当前日志收集目标是 <code class="text-capitalize">{currentTarget}</code>。
+      caseD: 点击下面的保存按钮去设置 <span class="text-info text-capitalize">{targetType}</span> 为日志收集目标服务。
+      caseE: 点击下面的保存按钮来更新 <span class="text-info text-capitalize">{targetType}</span> 配置。
+      caseF: 没有日志收集目标服务，完成以下设置并保存 <code class="text-capitalize">{targetType}</code> 为日志收集目标服务。
+  targetTypes:
+    disable: 禁用
+    elasticsearch: Elasticsearch
+    embedded: Embedded
+    fluentd: Fluentd
+    kafka: Kafka
+    splunk: Splunk
+    syslog: Syslog
+  testAction:
+    dryRun: 试运行
+    runOk: 试运行成功
+    running: 运行中
+    test: 测试
+    testFailed: 设置验证失败，请检查配置
+    testOk: 设置验证通过
+    testing: 测试
+loginAzure:
+  buttonText: 用 Azure AD 登录
+loginCAS:
+  buttonText: 用 CAS 登录
+loginSaml:
+  adfs:
+    buttonText: 使用 AD FS 登录
+  keycloak:
+    buttonText: 使用 Keycloak 登录
+  okta:
+    buttonText: 使用 Okta 登录
+  ping:
+    buttonText: 使用 Ping 登录
+  shibboleth:
+    buttonText: 通过 Shibboleth 登录
+modalConfirmRemovePayment:
+  card: 以 {card} 结尾的信用卡
+  header: 确认移除付款信息
+  title: 是否确认要删除
+modalEditPassword:
+  actionButton: 确认修改
+  confirm: 确认密码
+  current: 旧密码
+  deleteTokens: 删除所有现有的 API KEY
+  edit:
+    help: 请输入新密码
+    title: 修改密码
+  firstLogin:
+    actionButton: 继续
+    help: "第一步: 请为默认用户 <code>admin</code> 设置新密码"
+    setView: 设置默认视图
+    title: 欢迎使用 {appName}
+  mismatch: 密码不匹配
+  mode:
+    generate: "随机生成新密码: "
+    manual: "自定义新密码: "
+  new: 新密码
+  strength:
+    best: 强
+    good: 中
+    label: 密码强度
+    tooltip1: 密码必须至少包含8个字符
+    tooltip2: 至少包括数字、大写字母、小写字母、符号中的两个类型
+    weak: 弱
+modalProcessError:
+  cause: "原因: "
+  close: 关闭
+  header: 异常信息
+  none: N/A
+  stackTrace: "堆栈跟踪: "
+modalRestoreBackup:
+  backups: 可用备份
+  error: 需要备份
+  fetching: 获取新的备份
+  restoreButton: 恢复
+  select:
+    all: 选择备份
+  title: 数据恢复
+  type:
+    etcd: Restore etcd
+    etcdAndK8sVersion: 恢复 etcd，Kubernetes 版本和 RKE 集群配置
+    k8sVersion: 恢复 etcd 和 Kubernetes 版本
+    k8sVersionUnknown: 我们无法还原此快照的 kubernetes 版本，因为该版本未知。
+    label: 恢复类型
+    versionUnknown: 未知
+modalRollbackApp:
+  action: 回滚
+  current:
+    label: 当前版本
+  difference:
+    label: 差异
+  protip: "\"回滚\" 操作将创建一个与所选修订具有相同配置的新修订。"
+  revision:
+    label: 回滚到版本
+    prompt: 选择版本...
+  title: 回滚 "{appName}"
+namespaceGroup:
+  label: "命名空间: {name}"
+  none: Pod
+  project: "命名空间: 全部"
+newBalancer:
+  error:
+    invalidSourcePort: "不正确的源端口: '{num}'"
+    invalidTargetPort: "不正确的目标端口: '{num}'"
+    mixedPort: 端口 {num} 有多条冲突的访问'/'协议规则
+    needsCertificate: 设置 SSL/TLS 规则时需要证书。
+    noRules: 必须有一个或多个目标规则和监听端口。
+    noSourcePort: 每条规则必须设置源端口。
+    noTarget: 每条规则必须设置目标端口
+    noTargetPort: 每个规则需要设置目标端口。
+    stackName: 请输入新应用的名称
+  header:
+    add: 添加负载均衡
+    edit: 编辑负载均衡
+    upgrade: 升级负载均衡
+nodeTemplatesPage:
+  detail: 主机模板用于在基础设施提供商上部署组成集群的主机。
+  header: 主机模板列表
+  rightButtons:
+    actionButton: 添加模板
+    cloudCredentials: 管理云凭证
+  table:
+    location: 位置
+    name: 名称
+    noData: 没有配置主机模板
+    owner: 所有者
+    provider: 提供者
+    size: 大小
+    state: 状态
+    unknown: 未知
+    usedBy: 使用者
+    usedByNone: 没有集群
+nodesPage:
+  editCluster: 编辑集群
+  header: 主机列表
+  nodePoolGroup: "主机池: {name}"
+  table:
+    clusterName: 集群
+    cpu: 处理器
+    disk: 磁盘
+    docker: Docker
+    instanceState: 容器状态
+    instanceStateWithIcon: 状态
+    memory: 内存
+    noData: 此集群没有配置任何主机
+    noMatch: 没有符合当前搜索的主机
+    pod: Pods
+    role: 角色
+    unschedulable: 不可调度
+    version: 版本
+notFoundPage:
+  header: 当前页面不存在！
+  linkTo: 回到首页
+notifierPage:
+  alertTemplate:
+    customTemplate: 自定义模版
+    defaultTemplate: 默认模版
+    disabled: 禁用
+    enable: 启用
+    error: 添加告警模版失败
+    linkToAlert: 点击配置自定义告警标签和注释
+    linkToNotifier: 点击配置自定义告警模板
+    note: 注意：保存成功后告警模板会使用当前配置
+    placeholder: 请填入自定义模板
+    validateError: 自定义模板不能为空
+  aliyunsms:
+    accessKeyID:
+      label: 访问秘钥
+      placeholder: 阿里云访问秘钥
+    accessKeySecret:
+      label: 访问秘钥令牌
+      placeholder: 阿里云访问秘钥所对应的令牌
+    signName:
+      label: 签名名称
+      placeholder: 签名管理中配置的签名名称
+    templateCode:
+      label: 模版 CODE
+      placeholder: 模版管理中配置的模版对应的 CODE
+    to:
+      action: 添加手机号
+      label: 手机号
+      placeholder: 你要添加的手机号码
+  bearerToken:
+    label: Bearer Token
+    placeholder: Bearer token
+  clone: 克隆
+  deleteErrorMessage: 通知程序 {displayName} 正在由 {alertNames} 使用。
+  dingtalk:
+    secret: 密钥
+    secretPlaceholder: 仅在选择“加签”时需要填写
+    url: Webhook 地址
+    urlPlaceholder: Webhook 地址
+  endpoint:
+    custom: 自定义
+    default: 默认
+    endpoint.placeholder: "例如: https://qyapi.weixin.qq.com/cgi-bin/"
+    label: 接收 API URL
+  index:
+    addActionLabel: 添加通知
+    addAlertTemplate: 添加告警模版
+    table:
+      created: 创建时间
+      noData: 没有配置通知
+      noMatch: 不匹配
+  msteams:
+    url: Webhook 地址
+    urlPlaceholder: Webhook 地址
+  notifierTypes:
+    aliyunsms: 阿里云短信
+    dingtalk: 钉钉
+    email: 电子邮箱
+    msteams: Microsoft Teams
+    pagerduty: PagerDuty
+    servicenow: ServiceNow
+    slack: Slack
+    webhook: Webhook
+    wechat: 企业微信
+  notifiers: 通知
+  pagerduty:
+    helpText: |
+      以下是 <a href="https://www.pagerduty.com/docs/guides/prometheus-integration-guide"> 为 PagerDuty 创建 integration key</a> 的方法。
+    serviceKey:
+      helpText: 在配置告警时，可以覆盖服务密匙。
+      label: 默认服务密匙
+    serviceKeyPlaceholder: 您的 PagerDuty 服务密匙。
+  proxyUrl:
+    label: Proxy URL
+    placeholder: "例如: http://my-proxy/"
+  sendResolved:
+    label: 发送已解决告警
+  servicenow:
+    password: 密码
+    passwordPlaceholder: 密码
+    proxyUrl: Proxy URL
+    proxyUrlPlaceholder: Proxy URL
+    url: Webhook 地址
+    urlPlaceholder: Webhook 地址
+    username: 用户名
+    usernamePlaceholder: 用户名
+  slack:
+    defaultRecipient:
+      helpText: 可选。默认情况下，通知被发送到默认频道。在配置告警时，可以覆盖该频道。
+      label: 默认频道
+    defaultRecipientPlaceholder: "e.g. #example"
+    helpText: |
+      以下是 <a href="https://slack.com/apps/A0F7XDUAZ-incoming-webhooks" target="_blank" rel="nofollow noopener noreferrer"> 创建传入 WebHooks</a> 的方法。
+    url: 访问 URL
+    urlPlaceholder: e.g. https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+  smtp:
+    defaultRecipient:
+      helpText: 在配置告警时，可以覆盖收件人。
+      label: 默认收件人地址
+    defaultRecipientPlaceholder: "例如: you@example.com"
+    host: Smtp 服务器地址
+    hostPlaceholder: "例如: 192.168.1.121"
+    password: 密码
+    passwordPlaceholder: 账号的密码
+    port: 端口
+    portPlaceholder: "例如: 465"
+    sender: 默认发件箱
+    server: Smtp 服务器配置
+    tls: 使用 TLS
+    userName: 用户名
+    userNamePlaceholder: "例如: John"
+  testAction:
+    test: 测试
+    testFailed: 出了点问题，请检查输入的信息。
+    testOk: 设置已验证
+    testing: 测试
+  testedBtnLabel: OK
+  testingBtnLabel: 测试
+  webhook:
+    url: URL
+    urlPlaceholder: webhook URL
+  wechat:
+    agent:
+      helpText: "您可以在 <a href=\"https://work.weixin.qq.com/wework_admin/frame#apps\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">自建应用详情页</a>找到 Agent Id。"
+      label: 自建应用代理 ID
+    agentPlaceholder: "例如: 1000003"
+    corp:
+      helpText: "点击 <a href=\"https://work.weixin.qq.com/wework_admin/frame#profile\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">此处</a> 查看企业 ID。\n"
+      label: 企业 ID
+    corpPlaceholder: "例如: wwc0cc3d58f9b021b6"
+    defaultRecipient:
+      label: 默认接收者
+    defaultRecipientPlaceholder: "例如: 2"
+    endpoint:
+      custom: 自定义
+      default: 默认
+      label: 接收 API URL
+      placeholder: "例如: https://qyapi.weixin.qq.com/cgi-bin/"
+    recipientType:
+      label: 接收者类型
+      party: 部门
+      tag: 标签
+      user: 用户
+    secret:
+      helpText: "您可以在 <a href=\"https://work.weixin.qq.com/wework_admin/frame#apps\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">自建应用详情页</a>找到密文。"
+      label: 自建应用密钥
+    secretPlaceholder: 您的自建应用密钥
+orchestrationWelcome:
+  enhanced:
+    title: 通过 Kubernetes 加强
+  simple:
+    title: 简单
+pipelinesSetting:
+  authenticateWithGit: 用 Git 进行身份验证
+  authenticatedUsers: 已授权的用户
+  clearData: 清除数据
+  clearing: 清除中
+  customConfigChangeLabel: 使用另一个 OAuth 应用程序
+  dataClear: 清除数据
+  disableOAuth: 取消授权
+  error:
+    limit: 保存限制和预留发生错误
+  gitAuthentication: Git 验证
+  globalConfigChangeLabel: 使用 OAuth 应用程序去认证
+  info:
+    noPermission: 您没有配置流水线的权限。
+  resetData: 重置所有与流水线相关的数据
+  sureToClearData: 确定要清除数据吗？
+  sureToDisableOAuth: 您确定要取消授权吗？
+  userGlobalConfig: GitHub 身份验证已启用，您可以使用它来直接启用 Pipline。
+projectsListNamespacePage:
+  current: 当前项目
+  header: 命名空间列表
+  notIn: 不属于任何项目
+publicEndpoints:
+  bindIpAddress: 绑定 IP
+  endpoint: 入口点
+  noData: 无映射端口
+  noMatch: 没有与当前搜索匹配的端口
+  privatePort: 容器端口
+  publicPort: 映射端口
+  target: 目标
+registryRow:
+  address: 地址
+  created: 创建时间
+  username: 用户名
+rulesPage:
+  new: 添加流量规则
+  noData: 当前没有流量规则
+  noMatch: 没有流量规则匹配当前搜索
+selectValueCheck:
+  message: "{values, plural,\n  =1 { 请选择新的值。以下内容不再有效:}\n  other { 请选择新的值。以下内容不再有效:}\n}\n\n"
+serverUrl:
+  button:
+    save: 保存 URL
+  header:
+    detail: "{appName} 安装使用的地址，集群中的所有节点都需要能够访问此地址"
+    label: "{appName} Server URL"
+siteAccess:
+  dupe: 已授权用户访问
+  groups: 用户组
+  header: 站点访问
+  helpLabel: 这是什么?
+  helpText: 配置允许哪些人登录和使用 {appName}
+  listHeader: 授权的 {individuals} 和 {collection}
+  minimum: 您必须至少添加一条授权条目。
+  noIdentity: 无
+  organizations: 组织
+  refreshGroups: 刷新组成员
+  refreshHelp: 这将触发所有组的刷新并更新它们的用户列表。
+  required: 仅允许授权的 {individuals} 和 {collection}
+  restricted: 允许集群成员，项目成员以及授权的 {individuals} 和 {collection}
+  unrestricted: 允许所有有效的 {individuals}
+  users: 用户
+stacksPage:
+  table:
+    endpoints: 终端
+    instanceState: 容器状态
+    instanceStateWithIcon: 状态
+    scale: Pod 副本数
+    standalone: 独立容器
+storageClassPage:
+  addActionLabel: 添加类
+  default:
+    label: 默认
+  header: 存储类列表
+  noData: 没有配置存储类
+  noMatch: 没有存储类别与当前搜索匹配
+  provisioner:
+    label: 提供者
+taintsSection:
+  detail: 通过向节点添加 taints 和 tolerations，确保工作负载只在适当的节点上运行。
+  effect: 影响
+  key: 键
+  noData: 没有 Taints
+  noMatch: 没有符合当前搜索的 Taints
+  title: Taints
+  value: 值
+validationsList:
+  detail: 当前 {resourceType} 的验证检查
+  noData: 没有发现问题
+  noMatch: 没有问题匹配当前搜索
+  noPermission: 您没有权限查看验证。请联系您的集群所有者，让 Kiali 访问您。
+  table:
+    message: 消息
+    path: 路径
+    severity: 严重程度
+  title: 验证检查
+verifyResetPasswordPage:
+  button: 更新密码
+  header: 重置密码
+  success:
+    header: 密码已重置!
+    linkText: 登录
+    subtext: 点击以下链接返回登录页面
+waitingPage:
+  hosts:
+    setup:
+      kubernetes: 设置 Kubernetes

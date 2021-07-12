@@ -1,0 +1,1248 @@
+annotationsSection:
+  detail: Key/value metadata.
+  key: Key
+  noData: No Annotations
+  noMatch: No annotations match the current search
+  title: Annotations
+  value: Value
+authPage:
+  adfs:
+    buttonText:
+      post: Waiting to hear back from IDP
+      pre: Authenticate with AD FS
+  authenticated:
+    header:
+      clientId:
+        text: "Client ID:"
+      enterpriseHostName: "Host:"
+      key:
+        text: "Key:"
+      text: Repository Authentication Information
+  azuread:
+    configure:
+      applicationId:
+        label: Application ID
+        placeholder: A long UUID string
+      applicationSecret:
+        label: Application Secret
+      azureADAuthEndpoint:
+        label: Auth Endpoint
+      azureADEndpoint:
+        label: Endpoint
+      azureADGraphEndpoint:
+        label: Graph Endpoint
+      azureADTokenEndpoint:
+        label: Token Endpoint
+      endpoints:
+        label: Endpoints
+      header: Configure Azure AD Account
+      help: Enter the Tenant ID, Client ID, and Admin user details to connect to your Azure AD auth account.
+      regions:
+        china: China
+        custom: Custom
+        standard: Standard
+      replyUrl: Azure AD requires a whitelisted URL for your {appName} server before beginning this setup. Please ensure that the following URL is set in the Reply URL section of your Azure Portal. Please note that is may take up to 5 minutes for the whitelisted URL to propagate.
+      serverURL:
+        label: Rancher Server Url
+      tenantId:
+        help: From the Azure AD portal
+        label: Tenant ID
+        placeholder: A long UUID string
+    enabled:
+      general:
+        header: General
+      header: Danger Zone&trade;
+      promptDisable: Disable Azure AD
+      reallyDisable: Are you sure?  Click again to disable access control
+    header:
+      disabled:
+        label: Azure AD is not configured
+    test:
+      authError: Azure access was not authorized
+      header: Test and enable authentication
+      help: "Check that everything is configured correctly by testing authentication with your account:"
+      password:
+        label: Login Password
+      popupError: Please disable your pop-up blocker and click "Authenticate" again.
+      post: Waiting to hear back from Azure
+      pre: Authenticate with Azure
+      username:
+        label: Login Username
+        placeholder: e.g. jsmith
+  bitbucketcloud:
+    auth: For Bitbucket Cloud, <a href="https://bitbucket.org/account" target="_blank" rel="nofollow noreferrer">click here</a> to go to user settings in a new window.
+    form:
+      clientId:
+        labelText: Key
+      clientSecret:
+        labelText: Secret
+      headerVariable: 3. Configure the pipeline to use your Bitbucket Cloud for authentication
+      subtextVariable: Copy and paste the Key and Secret from your newly-created consumer.
+    setup: 2. Setup a Bitbucket Cloud application
+    target:
+      bitbucketcloud: Use public Bitbucket Cloud
+      bitbucketserver: Use private Bitbucket Server setup
+      header: 1. Choose the Bitbucket type you want to use
+    ul:
+      li2:
+        text: "Click \"OAuth\", then click \"Add consumer\" and fill out the form:"
+        ul:
+          li1: <b>Name:</b> <span class="text-muted">Anything you like, e.g. My Pipeline</span>
+          li2: Callback URL
+          li3: <b>Select Permissions</b> <b>Account Read</b>, <b>Pull Requests Write</b>, <b>Projects Read</b> and <b>Webhooks Read And Write</b>
+      li3:
+        text: Click "Save"
+  bitbucketserver:
+    auth: For Bitbucket Server, login to your account. Click on Administration, then Application Links.
+    copy: Click the icon to copy it
+    form:
+      headerVariable: 3. Configure the pipeline to use your Bitbucket Server for authentication
+      hostname:
+        labelText: Bitbucket Server Host
+        placeholder: e.g. example.com
+        required: Bitbucket Server Host is required.
+      tls:
+        labelText: Use a https connection
+    setup: 2. Setup a Bitbucket Server application
+    target:
+      bitbucketcloud: Use public Bitbucket Cloud
+      bitbucketserver: Use private Bitbucket Server setup
+      header: 1. Choose the Bitbucket type you want to use
+    ul:
+      li2:
+        text: "Create a new application link:"
+        ul:
+          li1: <b>Link:</b>
+          li2: <b>Application Name:</b> <span class="text-muted">Anything you like, e.g. My Pipeline</span>
+          li3: <b>Select Create incoming link</b>
+          li4: <b>Click "Continue"</b>
+          li5: "Consumer Key:"
+          li6: <b>Consumer Name:</b> <span class="text-muted">Anything you like, e.g. pipeline</span>
+          li7: "Public Key:"
+          li8: <b>Click "Continue"</b>
+    warning: "Bitbucket server webhooks need to do SSL verification, please ensure that {appName} server’s certificate is trusted by the bitbucket server. More info can be found <a href=\"{docsBase}/tools/pipelines/configurations/#1-configuring-version-control-providers\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">here</a>."
+  cas:
+    authenticated:
+      disableAccess:
+        disable: Disable CAS access
+    header:
+      disabled:
+        label: CAS is not configured
+    notAuthenticated:
+      form:
+        callbackURL:
+          label: Service Callback URL
+          placeholder: Your CAS Service Callback URL
+        connectionTimeout:
+          label: Server Connection Timeout
+          placeholder: e.g. 5000
+        header: Configure Rancher to use CAS to authentication
+        hostUrl:
+          label: CAS Host
+          placeholder: e.g. cas-server.com
+        loginEndpoint:
+          label: Login Endpoint
+          placeholder: e.g. /cas/login
+        logoutEndpoint:
+          label: Logout Endpoint
+          placeholder: e.g. /cas/logout
+        passwordField:
+          label: Password Field
+          placeholder: e.g. password
+        port:
+          label: Port
+          placeholder: e.g. 6379
+        usernameField:
+          label: User Name Field
+          placeholder: e.g. username
+    testAuth:
+      authError: CAS access was not authorized
+      buttonText:
+        post: Waiting to hear back from CAS
+        pre: Authenticate with CAS
+      header: Test and enable authentication
+      popupError: Please disable your pop-up blocker and click "Authenticate" again.
+      subtext: "Check that your application is configured correctly by testing authentication with it:"
+  form:
+    enterprise:
+      labelText: Use a private {type} enterprise installation
+    enterpriseHost:
+      labelText: Enterprise Host
+      placeholder: e.g. example.com
+    headerVariable: 2. Configure the pipeline to use your {SCM} for authentication
+    isEnterprise:
+      labelText: Use a https connection
+  github:
+    auth: For standard GitHub, <a href="https://github.com/settings/developers" target="_blank" rel="nofollow noreferrer">click here</a> to go to applications settings in a new window.
+    authenticated:
+      disableAccess:
+        confirmDisable: Are you sure?  Click again to disable access control
+        disable: Disable Github access
+        header: Danger Zone&trade;
+        warning: <b class="text-danger">Caution:</b> Disabling access control will give complete control over {appName} to anyone that can reach this page or the API.
+      header:
+        clientId:
+          helpText: To change the configured GitHub application, disable access control below and then set it up again.
+          text: "Client ID:"
+        enterpriseHostName: "Enterprise Host:"
+        text: Authentication
+    enterprise: GitHub Enterprise
+    enterpriseAuth: For Github Enterprise, login to your account.  Click on Settings, then Developer settings.
+    form:
+      clientId:
+        labelText: Client ID
+      clientSecret:
+        labelText: Client Secret
+      subtextVariable: Copy and paste the Client ID and Secret from your newly-created application.
+    header:
+      disabled:
+        label: GitHub is not configured
+    notAuthenticated:
+      form:
+        clientId:
+          labelText: Client ID
+        clientSecret:
+          labelText: Client Secret
+        enterpriseHost:
+          labelText: Enterprise Host
+          placeholder: e.g. github.example.com
+        ghEnterprise:
+          labelText: Use a private GitHub Enterprise installation
+        header: 2. Configure {appName} to use your application for authentication
+        isGHEnterprise:
+          labelText: Use a secure connection
+        subtext: Copy and paste the Client ID and Client Secret of your newly created application.
+      header: 1. Setup a GitHub Application
+      ul:
+        li1:
+          text: For standard GitHub, <a href="https://github.com/settings/developers" target="_blank" rel="nofollow noopener noreferrer">click here</a> to go applications settings in a new window.
+          ul:
+            li1: For Github Enterprise, login to your account.  Click on Settings, then Developer settings.
+        li2:
+          text: "Click \"Register a new application\" and fill out the form:"
+          ul:
+            li1: <b>Application name:</b> <span class="text-muted">Anything you like, e.g. My {appName}</span>
+            li2: "Homepage URL:"
+            li3: <b>  Application description:</b> <span class="text-muted">Anything you like, optional</span>
+            li4: "Authorization callback URL:"
+        li3:
+          text: Click "Register application"
+    standard: GitHub
+    testAuth:
+      authError: Github access was not authorized
+      buttonText:
+        post: Waiting to hear back from GitHub
+        pre: Authenticate with GitHub
+      header: 3. Test and enable authentication
+      popupError: Please disable your pop-up blocker and click "Authenticate" again.
+      subtext: "Check that your application is configured correctly by testing authentication with it:"
+    ul:
+      li2:
+        text: "Click \"Register new application\" and fill out the form:"
+        ul:
+          li1: <b>Application name:</b> <span class="text-muted">Anything you like, e.g. My Pipeline</span>
+          li2: Homepage URL
+          li3: <b>Application description:</b> <span class="text-muted">Anything you like, optional</span>
+          li4: Authorization callback URL
+      li3:
+        text: Click "Register Application"
+  gitlab:
+    auth: For standard GitLab, <a href="https://gitlab.com/profile/applications" target="_blank" rel="nofollow noreferrer">click here</a> to go to applications settings in a new window.
+    enterpriseAuth: For GitLab Enterprise, login to your account.  Click on Settings, then Applications.
+    form:
+      clientId:
+        labelText: Application Id
+      clientSecret:
+        labelText: Secret
+      subtextVariable: Copy and paste the Application Id and Secret from your newly-created application.
+    ul:
+      li2:
+        text: "Fill out the form:"
+        ul:
+          li1: <b>Name:</b> <span class="text-muted">Anything you like, e.g. My Pipeline</span>
+          li2: Redirect URI
+      li3:
+        text: Click "Save application"
+  googleoauth:
+    authenticated:
+      disableAccess:
+        confirmDisable: Are you sure?  Click again to disable access control
+        disable: Disable Google access
+        header: Danger Zone&trade;
+        warning: <b class="text-danger">Caution:</b> Disabling access control will give complete control over {appName} to anyone that can reach this page or the API.
+      header:
+        adminEmail:
+          text: "Admin Email: "
+        text: Authentication
+    header:
+      disabled:
+        label: Google is not configured. For more detailed directions on setting up authentication visit the <a href="{docsBase}/admin-settings/authentication/google/" target="_blank" rel="nofollow noopener noreferrer">docs</a>
+    notAuthenticated:
+      form:
+        adminEmail:
+          helperText: Enter the Admin Email associated with your account.
+          labelText: Admin Email
+        hostname:
+          helperText: Enter the domain of your account.
+          labelText: Domain
+        nestedGroupMembershipEnabled:
+          labelText: Nested Group Membership
+        oauthCredential:
+          helperText: Copy and paste in the OAuth Credentials JSON which can be found in your Google API developers console.
+          labelText: OAuth Credentials
+        serviceAccountCredential:
+          helperText: Copy and paste in the Service Account Credentials JSON which can be found in the service accounts section of the Google API developers console.
+          labelText: Service Account Credentials
+      ul:
+        li1:
+          helpertext: "Note: The Rancher URL must be proper FQDN."
+          ul:
+            li1: Login to your account. Navigate to "APIs & Services" and then select "OAuth consent screen".
+        li2:
+          text: "Navigate to the \"OAuth consent screen\" tab and fill in the form:"
+          ul:
+            li1: <b>Authorized domains:</b> Top private domain of
+            li2: <b>Application homepage link:</b>
+            li3: Under Scopes for Google APIs, enable "email", "profile", and "openid".
+            li4: Click on "Save".
+        li3:
+          ul:
+            li1: Select the "Create Credentials" dropdown, and select "OAuth clientID", then select "Web application".
+            li2: <b>Authorized Javascript origins:</b>
+            li3: <b>Authorized redirect URIs:</b>
+            li4: Click "Create", and then click on the "Download JSON" button.
+            li5: Upload the downloaded JSON file in the OAuth credentials box.
+        li4:
+          ul:
+            li1: Creating a service account.
+            li2: Generating a key for the service account.
+            li3: Adding the service account as an OAuth client in your google domain.
+    stepOne:
+      header: "Step One:"
+      info: For standard Google, <a href="https://console.developers.google.com/apis/credentials" target="_blank" rel="nofollow noopener noreferrer">click here</a> to go applications settings in a new window
+    stepThree:
+      header: "Step Three:"
+      info: Create Service Account credentials
+      subHeader: "Follow <a href=\"{docsBase}/admin-settings/authentication/google/#creating-service-account-credentials\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">this</a> guide for:"
+    stepTwo:
+      header: "Step Two:"
+      info: Navigate to the "Credentials" tab to create your OAuth client ID
+    testAuth:
+      authError: Google access was not authorized
+      buttonText:
+        post: Waiting to hear back from Google
+        pre: Authenticate with Google
+      popupError: Please disable your pop-up blocker and click "Authenticate" again.
+    warning:
+      doc: For more detailed directions on setting up authentication visit the <a href="{docsBase}/admin-settings/authentication/google/" target="_blank" rel="nofollow noopener noreferrer">docs</a>
+  header: Pipeline Setting
+  keycloak:
+    buttonText:
+      post: Waiting to hear back from IDP
+      pre: Authenticate with Keycloak
+  localAuth:
+    accessControl:
+      buttonText:
+        post: Enabling...
+        pre: Enable Local Auth
+      header: 2. Enable Access Control
+      helpText: Click to enable access control and log in.
+    accessDisabled:
+      form:
+        confirmPassword:
+          labelText: Confirm Password
+        login:
+          labelText: Login Username
+          placeholder: e.g. jsmith
+        name:
+          labelText: Full Name
+          placeholder: e.g. John Smith
+        password:
+          labelText: Password
+      header: 1. Setup an Admin user
+      helpText: This user will become the admin that has full control over {appName}.
+    accessEnabled:
+      buttonText:
+        disable: Are you sure?  Click again to disable access control
+        prompt: Disable access control
+      header: Danger Zone&trade;
+      warning: <b class="text-danger">Caution:</b> Disabling access control will give complete control over {appName} to anyone that can reach this page or the API.
+    header:
+      disabled: Local Authentication is not configured
+      enabled: Local Authentication is enabled
+    subtext:
+      disabled: "{appName} can be configured to restrict access to a set of accounts defined in the {appName} database.  This is not currently set up, so anybody that reach this page (or the API) has full control over the system."
+      enabled:
+        alwaysOn: Local Authentication will always be enabled but you may select another authentication scheme to use in addition to local.
+        linkText: Manage Accounts
+        text: "{appName} is configured to allow access to accounts in its local database."
+    warning: When enabling external authentication, {appName} will associate the external principal with the current user's local identity.  The associated principal will receive all global permissions, as well as the project and cluster roles bindings of the current user.
+  okta:
+    buttonText:
+      post: Waiting to hear back from IDP
+      pre: Authenticate with Okta
+  ping:
+    buttonText:
+      post: Waiting to hear back from IDP
+      pre: Authenticate with Ping
+  root:
+    header: Access Control
+  saml:
+    accessEnabled:
+      disable: Disable access control
+      header: Authentication
+    authError: Access was not authorized
+    disabled:
+      entityId:
+        display: "Entity ID Field:"
+        labelText: Entity ID Field
+      groups:
+        display: "Groups Field:"
+        labelText: Groups Field
+      header: 1. Configure {providerName} Account
+      headerDetail: Enter your {providerName} account details
+      label: "{providerName} is not configured"
+      name:
+        display: "Display Name Field:"
+        labelText: Display Name Field
+      rancherApiHost:
+        display: "{appName} API Host:"
+        labelText: "{appName} API Host"
+      testAuth:
+        header: "{step}. Test and enable authentication"
+        subtext: "Check that your application is configured correctly by testing authentication with it:"
+      uid:
+        display: "UID Field:"
+        labelText: UID Field
+      username:
+        display: "User Name Field:"
+        labelText: User Name Field
+    enabled:
+      authenticated:
+        header:
+          text: Authentication
+      displayName: "Display Name:"
+      groupsField: "Groups:"
+      userId: "User ID:"
+      userName: "Username:"
+    header:
+      disabled:
+        label: "{providerName} is not configured"
+    popupError: Please disable your pop-up blocker and click "Authenticate" again.
+    providerName:
+      adfs: AD FS
+      keycloak: Keycloak
+      okta: Okta
+      ping: Ping
+      shibboleth: Shibboleth
+  setting:
+    cacerts:
+      label: Configure custom CA to support clone from self-signed git service
+      saveActionLabel: Save cacerts
+      show: Edit cacerts
+    executor:
+      label: The maximum number of pipeline executors
+      scale: Scale
+    limit:
+      label: Configure the resource limit and reservation for executors
+      saveActionLabel: Update Limit and Reservation
+  setup: 1. Setup a {type} application
+  shibboleth:
+    advanced:
+      hr: Additional Configuration Parameters
+    buttonText:
+      edit: Test Config with Shibboleth
+      post: Waiting to hear back from IDP
+      pre: Authenticate with Shibboleth
+    openLdap:
+      detail: Add your OpenLDAP configuration below to configure search capabilities.
+      header: 2. OpenLDAP Search Configuration
+      help: "<span class='text-italic'>Note: Required Fields in this section are only required if you are configuring OpenLDAP Search with Shibboleth authorization.</span>"
+    providerName:
+      shibboleth: Shibboleth
+  testAuth:
+    buttonText:
+      post: Authenticating
+      preVariable: Authenticate
+    header: 3. Test and enable authentication
+    subtext: "Check that your application is configured correctly by testing authentication with it:"
+catalogPage:
+  index:
+    action:
+      alreadyDeployed: Already Deployed
+      launch: View Details
+      notCompatible: Not Compatible
+    allCatalogs: All Catalogs
+    allCategories: All Categories
+    certified:
+      pl:
+        experimental: Experimental
+        partner: Partner
+        rancher: Core
+      rancher:
+        experimental: Experimental
+        partner: Partner
+        rancher: Rancher Labs
+    filters:
+      label: Catalog Filter
+    header: Catalog
+    manage: Manage
+    noData:
+      plural: There are no compatible templates in this catalog.
+      singular: There are no compatible templates.
+    refreshBtn: Refresh
+    search:
+      label: Search
+    windowsWarning: Most of the applications should be running in Linux clusters. So it might not work if you deploy them in the current cluster.
+  istio:
+    header: Traffic Rules Catalog
+cruStorageClass:
+  allowVolumeExpansion:
+    label: Allow Volume Expansion
+  aws-ebs:
+    encrypted:
+      label: Encryption
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    iopsPerGB:
+      label: Provisioned IOPS
+      unit: per second, per GB
+    kmsKeyId:
+      automatic: "Automatic: Generate a key"
+      label: KMS Key ID for Encryption
+      manual: "Manual: Use a specific key (full ARN)"
+    type:
+      gp2: GP2 - General Purpose SSD
+      io1: IO1 - Provisioned IOPS SSD
+      label: Volume Type
+      sc1: SC1 - Cold-Storage HDD
+      st1: ST1 - Throughput-Optimized HDD
+    zone:
+      automatic: "Automatic: Zones the cluster has a node in"
+      label: Availability Zone
+      manual: "Manual: Choose specific zones"
+      placeholder: us-east-1d, us-east-1c
+  azure-disk:
+    kind:
+      dedicated: Dedicated (unmanaged disk)
+      label: Kind
+      managed: Managed
+      placeholder: e.g. Shared
+      shared: Shared (unmanaged disk)
+    location:
+      label: Location
+      placeholder: e.g. eastus
+    new: New Azure Disk
+    skuName:
+      label: Sku Name
+      placeholder: e.g. Standard_LRS
+    storageAccount:
+      label: Storage Account
+      placeholder: e.g. azure_storage_account_name
+    storageaccounttype:
+      label: Storage Account Type
+      placeholder: e.g. Standard_LRS
+  azure-file:
+    location:
+      label: Location
+      placeholder: e.g. eastus
+    skuName:
+      label: Sku Name
+      placeholder: e.g. Standard_LRS
+    storageAccount:
+      label: Storage Account
+      placeholder: e.g. azure_storage_account_name
+  cinder:
+    availability:
+      automatic: "Automatic: Zones the cluster has a node in"
+      label: Availability Zone
+      manual: "Manual: Choose specific zones"
+      placeholder: e.g. nova
+    type:
+      label: Volume Type
+      placeholder: e.g. fast
+  customize:
+    detail: Customize Advanced options
+    title: Customize
+  description:
+    placeholder: e.g. AWS EBS Storage
+  gce-pd:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    replicationType:
+      label: Replication Type
+      none: Zonal
+      regionalPd: Regional
+    type:
+      label: Volume Type
+      pd-ssd: SSD
+      pd-standard: Standard
+    zone:
+      automatic: "Automatic: Zones the cluster has a node in"
+      label: Availability Zone
+      manual: "Manual: Choose specific zones"
+      placeholder: us-central1-a, us-central1-b
+  glusterfs:
+    clusterid:
+      label: Cluster ID
+      placeholder: e.g. 630372ccdc720a92c681fb928f27b53f
+    gidMax:
+      label: GID MAX
+      placeholder: e.g. 50000
+    gidMin:
+      label: GID MIN
+      placeholder: e.g. 40000
+    resturl:
+      label: REST URL
+      placeholder: e.g. http://127.0.0.1:8081
+    restuser:
+      label: REST User
+      placeholder: e.g. admin
+    restuserkey:
+      label: REST User Key
+      placeholder: e.g. password
+    secretName:
+      label: Secret Name
+      placeholder: e.g. heketi-secret
+    secretNamespace:
+      label: Secret Namespace
+      placeholder: e.g. default
+    volumetype:
+      label: Volume Type
+      placeholder: e.g. replicate:3
+  longhorn:
+    fromBackup:
+      label: From Snapshot
+      placeholder: ""
+    numberOfReplicas:
+      label: Number Of Replicas
+      placeholder: e.g. 3
+    staleReplicaTimeout:
+      label: Stale Replica Timeout
+      placeholder: e.g. 30
+  mountOptions:
+    addActionLabel: Add Option
+    label: Mount Options
+    noData: No Mount Options
+  name:
+    placeholder: e.g. storage
+  parameters:
+    addActionLabel: Add Parameter
+    detail: Configure the provider-specific parameters for the storage class
+    title: Parameters
+  portworx-volume:
+    aggregation_level:
+      label: Aggregation Level
+      placeholder: e.g. 0
+    block_size:
+      label: Block Size
+      placeholder: e.g. 32
+    ephemeral:
+      label: Ephemeral
+      placeholder: e.g. true
+    fs:
+      label: Filesystem
+      placeholder: e.g. ext4
+    io_priority:
+      label: I/O Priority
+      placeholder: e.g. low
+    repl:
+      label: Repl
+      placeholder: e.g. 1; 0 for entire device
+    snap_interval:
+      label: Snapshots Interval
+      placeholder: e.g. 70
+  provisioner:
+    label: Provisioner
+  pv:
+    detail: Persistent Volumes provisioned by the current storage class.
+    title: Persistent Volumes
+  quobyte:
+    adminSecretName:
+      label: Admin Secret Name
+      placeholder: e.g. quobyte-admin-secret
+    adminSecretNamespace:
+      label: Admin Secret Namespace
+      placeholder: e.g. kube-system
+    group:
+      label: Group
+      placeholder: e.g. root
+    quobyteAPIServer:
+      label: Quobyte API Server
+      placeholder: e.g. http://138.68.74.142:7860
+    quobyteConfig:
+      label: Quobyte Config
+      placeholder: e.g. BASE
+    quobyteTenant:
+      label: Quobyte Tenant
+      placeholder: e.g. DEFAULT
+    registry:
+      label: Registry
+      placeholder: e.g. 138.68.74.142:7861
+    user:
+      label: User
+      placeholder: e.g. root
+  rbd:
+    adminId:
+      label: Admin ID
+      placeholder: e.g. kube
+    adminSecretName:
+      label: Admin Secret
+      placeholder: e.g. secret
+    adminSecretNamespace:
+      label: Admin Secret Namespace
+      placeholder: e.g. kube-system
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    imageFeatures:
+      label: Image Features
+      placeholder: e.g. layering
+    imageFormat:
+      label: Image Format
+      placeholder: e.g. 2
+    monitors:
+      label: Monitors
+      placeholder: e.g. 10.16.153.105:6789
+    pool:
+      label: Pool
+      placeholder: e.g. kube
+    userId:
+      label: User ID
+      placeholder: e.g. kube
+    userSecretName:
+      label: User Secret Name
+      placeholder: e.g. ceph-secret-user
+    userSecretNamespace:
+      label: User Secret Namespace
+      placeholder: e.g. default
+  reclaimPolicy:
+    Delete: Delete volumes and underlying device when volume claim is deleted
+    Recycle: "Recycle: Empty the contents and then preserve the volume for future workloads"
+    Retain: Retain the volume for manual cleanup
+    label: Reclaim Policy
+  scaleio:
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. xfs
+    gateway:
+      label: Gateway
+      placeholder: e.g. https://192.168.99.200:443/api
+    protectionDomain:
+      label: Protection Domain
+      placeholder: e.g. pd0
+    readOnly:
+      label: Read Only
+      placeholder: e.g. false
+    secretRef:
+      label: Secret Ref
+      placeholder: e.g. sio-secret
+    storageMode:
+      ThickProvisioned: Thick Provisioned
+      ThinProvisioned: Thin Provisioned
+      label: Storage Mode
+    storagePool:
+      label: Storage Pool
+      placeholder: e.g. sp1
+    system:
+      label: System
+      placeholder: e.g. scaleio
+  storageos:
+    adminSecretName:
+      label: Admin Secret Name
+      placeholder: e.g. storageos-secret
+    adminSecretNamespace:
+      label: Admin Secret Namespace
+      placeholder: e.g. default
+    description:
+      label: Description
+      placeholder: e.g. Kubernetes volume
+    fsType:
+      label: Filesystem Type
+      placeholder: e.g. ext4
+    pool:
+      label: Pool
+      placeholder: e.g. default
+  title:
+    edit: "Edit Storage Class: {name}"
+    new: Add Storage Class
+    view: "Storage Class: {name}"
+  volumeBindingMode:
+    immediate: Bind and provision a persistent volume once the PersistentVolumeClaim is created
+    label: Volume Binding Mode
+    waitForFirstConsumer: Bind and provision a persistent volume once a Pod using the PersistentVolumeClaim is created
+  vsphere-volume:
+    cachereservation:
+      label: Cache Reservation
+      placeholder: e.g. 20
+    datastore:
+      label: Datastore
+      placeholder: e.g. VSANDatastore
+    diskformat:
+      eagerzeroedthick: Eager Zeroed Thick
+      label: Disk Format
+      thin: Thin
+      zeroedthick: Zeroed Thick
+    fstype:
+      label: Filesystem Type
+      placeholder: e.g. ext3
+    hostFailuresToTolerate:
+      label: Host Failures To Tolerate
+      placeholder: e.g. 2
+    storagePolicyName:
+      label: Storage Policy Name
+      placeholder: e.g. gold
+f5CISPage:
+  authError: F5 CIS service is not supported in local cluster
+  confirmDisable: Are you sure?  Click again to disable F5 CIS.
+  disable: Disable
+  disabled: F5 CIS is disabled in the current cluster.
+  enableActionLabel: Enable
+  form:
+    flannelName:
+      label: Flannel Name
+      placeholder: e.g. /Common/MyFlannel
+    partition:
+      label: BIG-IP Partition
+      placeholder: e.g. Common
+    password:
+      label: BIG-IP Password
+      placeholder: Your Password
+    pool: Pool Member Type
+    type: Network Provider
+    url:
+      label: BIG-IP URL
+      placeholder: e.g. http://example.com
+    username:
+      label: BIG-IP Username
+      placeholder: e.g. John
+    version: F5 CIS Version
+  notReady: F5 CIS Chart not found, check the <a href="/g/catalog">Catalog</a> Url please.
+  title: F5 CIS
+  toUpdate: F5 CIS is enabled.
+  warning: If Pool Member Type is Cluster, each cluster needs to use an independent F5 BIG IP and cannot share with other clusters F5 BIG IP
+formCommand:
+  autoRestart:
+    always: Always
+    label: Auto Restart
+    no: Never
+    onFailure: On failure <span class="text-muted">(non-0 exit code)</span>, forever
+    onFailureCondPrefix: On failure, up to
+    onFailureCondSuffix: "{limit, plural,\n  =1 {time}\n  other {times}\n}\n"
+  command:
+    label: Command
+    placeholder: e.g. /usr/sbin/httpd -f httpd.conf
+  console:
+    both: Interactive &amp; TTY <span class="text-muted">(-i -t)</span>
+    interactive: Interactive <span class="text-muted">(-i)</span>
+    label: Console
+    none: None
+    terminal: TTY <span class="text-muted">(-t)</span>
+  detail: Configuration of the executable that will be run when the container is started.
+  entryPoint:
+    label: Entrypoint
+    placeholder: e.g. /bin/sh
+  environment:
+    label: Environment Labels
+  fsgid:
+    label: Filesystem Group
+    placeholder: e.g. 501
+  terminationGracePeriodSeconds:
+    helpText: The container will have this long to stop on its own before it is forcefully terminated.
+    label: Stop Timeout
+  title: Command
+  uid:
+    label: User ID
+    placeholder: e.g. 501
+  workingDir:
+    label: Working Dir
+    placeholder: e.g. /myapp
+formContainerLifecycle:
+  command:
+    label: Command
+    placeholder: e.g. pre-stop.sh
+  detail: The hooks enable Containers to be aware of events in their management lifecycle and run code implemented in a handler when the corresponding lifecycle hook is executed.
+  hookType:
+    command: Executes a specific command, inside the cgroups and namespaces of the Container
+    http: Executes an HTTP request against a specific endpoint on the Container
+    https: Executes an HTTPS request against a specific endpoint on the Container
+    none: None
+    tcp: TCPSocket specifies an action involving a TCP port.
+  host:
+    label: Host Header
+    placeholder: e.g. example.com
+  httpHeaders:
+    addActionLabel: Add Header
+    keyLabel: Header Name
+    keyPlaceholder: e.g. User-Agent
+    label: Additional Headers
+    valuePlaceholder: e.g. Health-Check
+  path:
+    label: Path to access on the HTTP(S) server.
+    placeholder: e.g. /test
+  port:
+    label: Target Container Port
+    placeholder: e.g. 80
+  postStartHook: PostStart
+  preStopHook: PreStop
+  title: Container Lifecycle Hooks
+formIngress:
+  addRuleLabel: Add Rule
+  backendType:
+    label: Backend Type
+  defaultBackend:
+    label: Set this rule as default backend
+    mark: Default backend
+  host:
+    label: Request Host
+    placeholder: e.g. example.com
+  hostMode:
+    automatic: Automatically generate a <code>.{domain}</code> hostname
+    default: Use as the default backend
+    defaultDisabled: Ingress controller does not support default backend
+    existing: Keep the existing hostname <code>{domain}</code>
+    manual: Specify a hostname to use
+  label: Rules
+  mode:
+    service: DNS Record
+    workload: Workload
+  noRules: No Rules
+  removeRuleLabel: Remove this Rule
+formLabelsAnnotations:
+  detail: Key/Value pairs that can be used to label/annotate resources.
+  title: Labels & Annotations
+formNameDescription:
+  description:
+    expand: Add a Description
+    label: Description
+    placeholder: Description
+  name:
+    label: Name
+    placeholder: Name
+formRelatedWorkloads:
+  detail: Workloads which are using it
+  nodata: No Related Workloads
+  title: Related Workloads
+formSecurity:
+  allowPrivilegeEscalation:
+    disable: No
+    enable: "Yes: container can gain more privileges than its parent process"
+    label: Privilege Escalation
+  capabilities:
+    add: Add Capabilities
+    drop: Drop Capabilities
+    helpBlock:
+      link: More information
+      text: Capabilities allow you to provide fine-grained control over superuser privileges available to the container.
+  cpuLimit:
+    label: CPU Limit
+    set: Limit to
+    unit: milli CPUs
+    unlimited: No Limit
+  cpuPinning:
+    label: CPU Pinning
+    placeholder: "e.g. 0,1,3; Default: All"
+  detail: Grant or limit the abilities of the container to affect the host it is running on.
+  deviceBinding:
+    addActionLabel: Add Binding
+    label: Device Binding
+    pathContainer:
+      label: Path in Container
+      placeholder: e.g. /dev/xsdc
+    pathHost:
+      label: Path in Host
+      placeholder: e.g. /dev/sdc
+    permissions:
+      label: Permissions
+  gpuReservation:
+    label: NVIDIA GPU Reservation
+    memUnit: GiB
+    placeholder: e.g. 1
+    set: Limit to
+    shared: Shared GPU Memory
+    sharedTips: While setting the shared GPU memory, Rancher will automatically set the GPU scheduler name for the workload
+    unit: GPUs
+  hostIPC:
+    label: Use Host's IPC Namespace
+  hostPID:
+    label: Use Host's PID Namespace
+  isolation:
+    default: Default (Container)
+    hyperv: HyperV (VM)
+    label: Isolation
+  memoryLimit:
+    label: Memory Limit
+    set: Limit to
+    unlimited: No Limit
+  memoryReservation:
+    label: Memory Reservation
+    placeholder: e.g. 128
+  milliCpuReservation:
+    label: CPU Reservation
+    placeholder: e.g. 1000
+    unit: milli CPUs
+  privileged:
+    disable: No
+    enable: "Yes: container has full access to the host"
+    label: Privileged
+  pullImage:
+    always: Always
+    ifNotPresent: Only if not already on the node
+    label: Pull Image
+  readOnlyRootFilesystem:
+    disable: No
+    enable: "Yes: container has a read-only root filesystem"
+    label: Read-Only Root Filesystem
+  runAsNonRoot:
+    disable: No
+    enable: "Yes: container must run as a non-root user"
+    label: Run as Non-Root
+  shares:
+    label: CPU Shares
+    placeholder: e.g. 1024
+  swapLimit:
+    default: Limit to double the physical limit
+    label: Swap Memory
+    none: Do not allow swap
+    set: Limit to
+    unlimited: Unlimited
+  swappiness:
+    default: Use the host's default
+    label: Swappiness
+    none: Minimum
+    set: Custom (1-100)
+  title: Security & Host Config
+  vGpuReservation:
+    label: Orion X GPU Reservation
+    placeholder: e.g. 1
+    unit: vGPUs
+formVolumeRow:
+  addMount: Add Mount
+  customLogPath:
+    helpText: A volume will be mounted into the container, and all logs written will be exported to the logging target. This feature is supported on GKE and RKE clusters.
+  mode:
+    bindMount: Bind-Mount
+    certificate: Certificate
+    configmap: Config Map
+    existingPvc: Persistent Volume Claim
+    existingVct: Volume Claim Template
+    existingVolume: Existing Volume
+    label: Volume Type
+    newPvc: New Volume Claim
+    newVolume: Ephemeral Volume
+    newVolumeClaimTemplate: New Volume Claim Template
+    secret: Secret
+    tmpfs: Tmpfs
+  mounts:
+    helper: The volume will not be mounted in the current container.  It may be used by other containers in the pod.
+    mountPoint: Mount Point
+    readOnly: Read-Only
+    subPath: Sub Path in Volume
+  name:
+    label: Volume Name
+    placeholder: e.g. vol1
+  noVolume: The volume will not be mounted in the current container.  It may be used by other containers in the pod.
+  prompt: Select a Persistent Volume Claim...
+  readOnly: Read-Only
+  remove: Remove Volume
+  subPath: Sub Path in Volume
+  volumeClaimTemplateName:
+    label: Volume Claim Template Name
+    placeholder: e.g. vol1
+    vctWarning: Stateful workloads launched with volume claim templates will become uneditable due to a <a href="https://github.com/kubernetes/kubernetes/issues/69041" target="_blank" rel="nofollow noreferrer noopener">upstream bug</a> in Kubernetes. Please be aware that this limitation exists before launching your new workload.
+loginGithub:
+  buttonText: Log In with GitHub
+loginUserPass:
+  externalProvider: Use a {externalName} User
+  genericLoginLabel: Log In
+  local: Use a Local User
+  loggingInLabel: Logging In...
+  loginLabel: Log In  with {provider}
+  passwordLabel: Password
+  provider: "{kind}"
+  remember: Remember
+  userLabel: Username
+  userPlaceholder: e.g. jsmith
+metricsAction:
+  description: Expand to see live metrics
+  detail:
+    label: Detail
+  from:
+    label: From
+  grafana:
+    label: Grafana
+  noData: Not enough data for graph
+  periods:
+    1h: 1 hour
+    24h: 24 hours
+    30d: 30 days
+    5m: 5 minutes
+    6h: 6 hours
+    7d: 7 days
+    custom: Custom
+  sections:
+    container: Container Metrics
+    pod: Pod Metrics
+    workload: Workload Metrics
+  summary:
+    label: Summary
+  to:
+    label: To
+modalConfirmYamlMonitoring2Form:
+  helpText: Data loss may occur when switching back to form based editing. Please make sure you intended to switch before selecting confirm.
+modalRevertSettings:
+  current: Current Value
+  default: Default Value
+  title: Revert {setting} to default value?
+modalWechat:
+  title: Scan the QR code to follow Rancher China WeChat Technology Group
+  wechat: WeChat
+newContainer:
+  add:
+    container: Deploy Pod
+    globalService: Deploy Global Workload
+    service: Deploy Workload
+    sidekick: Deploy Sidecar
+    sidekickName: Deploy Sidecar of "{name}"
+  all: Any
+  containerType:
+    init: Init Container
+    standard: Standard Container
+    title: Sidecar Type
+  description:
+    placeholder: e.g. My Application
+  environment:
+    addAction: Add Variable
+    addFrom: Add From Source
+    detail: Set the environment that will be visible to the container, including injecting values from other resources like Secrets.
+    from: Inject Values From Another Resource
+    keyLabel: Variable
+    keyPlaceholder: e.g. FOO
+    label: Environment Variables
+    valueLabel: Value
+    valuePlaceholder: e.g. bar
+  errors:
+    duplicateName: There is already a sidecar named "{name}" in the workload "{service}"
+    noSidekick: Choose a workload to add the sidecar to
+    quotaRequired: "\"{key}\" is required as resource quota is enforced on the project"
+  linux: Linux
+  name:
+    placeholder: e.g. myapp
+  os: Target OS
+  saveNew: Launch
+  saveUpgrade: Save
+  sidekick:
+    detail: "\"{service}\" has sidecars.  Which container do you want to edit?"
+    header: Edit Workload
+    primary: Primary
+    sidekick: Sidecar
+    title: Select container to edit
+  upgrade:
+    container: Edit Container
+    globalService: Edit Global Service
+    service: Edit Workload
+    sidekick: Edit Sidecar
+    sidekickName: Edit Sidecar of "{name}"
+  windows: Windows
+nodeGroupRow:
+  additional:
+    button: Add Type
+    label: Spot Instance Types
+  desired:
+    label: Desired ASG Size
+  gpu:
+    help: This option will be ignored because the selected launch template includes a custom AMI.
+    label: GPU Enabled Instance
+  groups:
+    label: Group Details
+  images:
+    help: Custom AMIs is an advanced use case. We highly recommended that you read and fully understand the requirements for creating custom EKS AMIs <a href="https://aws.amazon.com/premiumsupport/knowledge-center/eks-custom-linux-ami/" target="_blank">here</a>.
+    label: AMI ID
+  instance:
+    help: "Warning: Instance Type will not be sent when requesting spot instances. You must include Spot Instance types instead."
+    label: Instance Type
+    prompt: Select Instance Type
+  labels:
+    addLabel: Add Label
+    label: Labels
+  launchTemplates:
+    label: Launch Template
+    managed: Rancher Managed Launch Template
+    managedVersion: Managed Version
+    prompt: Select Launch Template
+  max:
+    label: Maximum ASG Size
+  min:
+    label: Minimum ASG Size
+  name:
+    label: Node Group Name
+  nodeVolumeSize:
+    label: Node Volume Size
+    placeholder: e.g. 20
+  nodes:
+    label: Node Details
+  remove:
+    label: Remove Node Group
+  requestSpot:
+    help: Amazon recommends using spot instances in EKS with multiple instance types. Since the selected template can have at most one instance type, your nodes may be interrupted more often.
+    label: Request Spot Instances
+  resourceTags:
+    label: Instance Resource Tags
+  ssh:
+    label: SSH Key
+  tags:
+    addLabel: Add Tag
+    label: Tags
+  templateVersions:
+    label: Template Version
+    prompt: Select Version
+  userData:
+    help: "Pass user data to <a href='https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html#launch-template-user-data' target='_blank'>Amazon using cloud-init</a> to automate common operations."
+    label: User Data
+    placeholder: Paste in the script
+  version:
+    label: Kubernetes Version
+    upgrade: Upgrade Node Group Version from { from } to { version }
+    warning: A new cluster version has been selected. Once completed you may come back and upgrade the node group version.
+optionallyNamespaced:
+  scope:
+    label: Scope
+    namespace: Available to a single namespace
+    project: Available to all namespaces in this project
+pageFooter:
+  cnforums: 中文社区
+  download:
+    link: Download CLI
+    linux: Linux
+    mac: macOS
+    windows: Windows
+  downloadMirror: Download Mirror
+  forums: Forums
+  help: Help & Docs
+  issues: File an Issue
+  notARelease: (Not a Release)
+  showSystem: Show System
+  slack: Slack
+persistentVolumePage:
+  addActionLabel: Add Volume
+  header: Persistent Volumes
+  noData: There are no persistent volumes defined
+  noMatch: No persistent volumes match the current search
+  source:
+    label: Source
+tooltipNodeGroupUpdate:
+  gkeLabel: A node pool Kubernetes version can be updated
+  label: A node group Kubernetes version can be updated
+  link: Edit Version
+vmConsole:
+  canvas: Canvas not supported.
+  footerActions:
+    buttonCancel: Close
+    buttonSend: Send Ctrl-Alt-Delete
+  header: "Console:"
+  protip: "ProTip: Hold the {key} key when opening shell access to launch a new window."
+volumeRow:
+  mounts:
+    readOnly: (read-only)

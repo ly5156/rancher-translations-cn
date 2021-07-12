@@ -1,0 +1,1163 @@
+cis:
+  scan:
+    actions:
+      addAlert: Add Alert
+      addSchedule: Add Schedule
+      delete: Delete
+      download: Download
+      runScan: Run Scan
+      search:
+        placeholder: Search
+    detail:
+      actions:
+        delete: Delete
+        download: Download
+        runScan: Run Scan
+        search:
+          placeholder: Search
+      error:
+        createDefault: Failed to create the default security-scan-cfg config map.
+        parseConfig: There was a problem parsing the security-scan-cfg config map.
+      table:
+        description: Description
+        empty: There are no tests
+        nodesTable:
+          row:
+            remediation: "Remediation: {remediation}"
+          title: Nodes
+        number: Number
+        skip: Skip
+        state: State
+        unskip: Unskip
+    growl:
+      success: Running CIS scan on '{clusterName}'
+    header: CIS Scans
+    modal:
+      chooseAProfile: Choose a profile
+      notApplicableTests: Not Applicable Tests ({count})
+      profileDocs: "To find out more about profiles visit our docs <a href=\"{docsBase}/security/security-scan/#profiles\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">here</a>."
+      skippedTests: Skipped Tests ({count})
+      tableHeaders:
+        explanation: Explanation
+        id: Test Id
+      testDocs: "To find out why these tests won't run visit our docs <a href=\"{docsBase}/security/security-scan/#skipped-and-not-applicable-tests\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">here</a>."
+      testsWontRun: These tests won't run due to the selected profile
+      title: Run CIS Scan
+      userSkippedTestsWontRun: In addition, the following tests have been configured to be skipped as part of the scan
+    report:
+      headers:
+        description: description
+        failed_nodes: failed_nodes
+        id: id
+        node_type: node_type
+        nodes: nodes
+        passed_nodes: passed_nodes
+        profile: "Profile: {profile}"
+        remediation: remediation
+        state: state
+    rkeOnly: This version of CIS scanning is only available for RKE clusters.
+    table:
+      date: Date
+      empty: There are no scans
+      failed: Failed
+      name: Name
+      notApplicable: Not Applicable
+      passed: Passed
+      profile: Profile
+      skipped: Skipped
+      state: State
+cloudCredentialsPage:
+  header: Cloud Credentials
+  index:
+    table:
+      noData: There are no cloud credentials defined.
+      noMatch: No cloud credentials match the current search
+  numberNodeTemplates: "# Node Templates"
+  rightButtons:
+    addKey: Add Cloud Credential
+    nodeTemplates: Manage Node Templates
+cloudProvider:
+  amazon: Amazon (In-Tree)
+  azure: Azure (In-Tree)
+  azureCloudConfig:
+    aadClientCertPassword:
+      description: The password of the client certificate for an AAD application with RBAC access to talk to Azure RM APIs
+    aadClientCertPath:
+      description: The path of a client certificate for an AAD application with RBAC access to talk to Azure RM APIs
+    aadClientId:
+      description: The ClientID for an AAD application with RBAC access to talk to Azure RM APIs
+    aadClientSecret:
+      description: The ClientSecret for an AAD application with RBAC access to talk to Azure RM APIs
+    cloud:
+      description: The cloud environment identifier. See <a href='https://github.com/kubernetes-sigs/cloud-provider-azure/blob/master/docs/cloud-provider-config.md' target='_blank' rel='nofollow noopener noreferrer'>cloud provider config docs</a> for valid entries
+    cloudProviderBackoff:
+      description: Enable exponential backoff to manage resource request retries
+    cloudProviderBackoffDuration:
+      description: Backoff duration
+    cloudProviderBackoffExponent:
+      description: Backoff exponent
+    cloudProviderBackoffJitter:
+      description: Backoff jitter
+    cloudProviderBackoffRetries:
+      description: Backoff retry limit
+    cloudProviderRateLimit:
+      description: Enable rate limiting
+    cloudProviderRateLimitBucket:
+      description: Rate limit Bucket Size
+    cloudProviderRateLimitQPS:
+      description: Rate limit QPS (Read)
+    loadBalancerSku:
+      description: "Sku of Load Balancer and Public IP. Candidate values are: basic and standard"
+    location:
+      description: The location of the resource group that the cluster is deployed in
+    maximumLoadBalancerRuleCount:
+      description: Maximum allowed LoadBalancer Rule Count is the limit enforced by Azure Load balancer
+    primaryAvailabilitySetName:
+      description: The name of the availability set that should be used as the load balancer backend
+    primaryScaleSetName:
+      description: The name of the scale set that should be used as the load balancer backend
+    resourceGroup:
+      description: The name of the resource group that the cluster is deployed in
+    routeTableName:
+      description: The name of the route table attached to the subnet that the cluster is deployed in
+    securityGroupName:
+      description: The name of the security group attached to the cluster's subnet
+    subnetName:
+      description: The name of the subnet that the cluster is deployed in
+    subscriptionId:
+      description: The ID of the Azure Subscription that the cluster is deployed in
+    tenantId:
+      description: The AAD Tenant ID for the Subscription that the cluster is deployed in
+    useInstanceMetadata:
+      description: Use instance metadata service where possible
+    useManagedIdentityExtension:
+      description: Use managed service identity for the virtual machine to access Azure ARM APIs
+    vmType:
+      description: "The type of azure nodes. Candidate values are: vmss and standard"
+    vnetName:
+      description: The name of the VNet that the cluster is deployed in
+    vnetResourceGroup:
+      description: The name of the resource group that the Vnet is deployed in
+  custom:
+    helpText: Please edit the YAML to add in any other <a href="http://rancher.com/docs/rke/v0.1.x/en/config-options/cloud-providers/" target="_blank" rel="nofollow noopener noreferrer">cloud providers</a>
+    label: Custom (In-Tree)
+    notInList: If your cloud provider is not listed, please use the <b>Custom</b> option.
+  external:
+    helpText: Please edit the YAML to specify the required addon for cloud controller manager.
+    label: External (Out-of-tree)
+    vsphereHelpText: Out-of-tree cloud provider for vsphere is available through the vsphere-csi and vsphere-cpi helm charts. Please refer to the <a href="{docsBase}/cluster-provisioning/rke-clusters/cloud-providers/vsphere/out-of-tree" target="_blank" rel="nofollow noopener noreferrer">docs</a> for installation.
+  helpText: |
+    Read more about the state of the <a href="https://kubernetes.io/blog/2019/04/17/the-future-of-cloud-providers-in-kubernetes/" target="_blank" rel="nofollow noopener noreferrer">Kubernetes in-tree cloud providers</a>
+  name: Cloud Provider Name
+  title: Cloud Provider
+  warning: Configuring a Cloud Provider in your cluster without configuring the prerequisites will cause your cluster to not provision correctly. Prerequisites needed for supported cloud providers can be found in the documentation.
+clusterRow:
+  addHost: Add Nodes
+  explorer: Explorer
+  importCluster: Use existing Kubernetes
+  loginDefault: Login
+  noClusterData: There are no clusters defined.
+  noClusterMatch: No clusters match the current search.
+  noData: This cluster doesn't have any environments yet.
+  noHosts: External cluster has no nodes
+  noMatch: No environments match the current search.
+clusterTemplateNew:
+  members:
+    detail: Control who has access to the RKE Template and what permission they have to change it.
+    label: Member Roles
+clusterTemplateRow:
+  label: RKE Template
+  noData: There are no RKE Templates defined.
+  noMatch: No RKE Templates match the current search.
+cruGateway:
+  hosts:
+    add: Add Host
+    error: "\"Hosts\" is required."
+    label: Hosts
+    placeholder: e.g. *
+  name:
+    placeholder: e.g. mygateway
+  port:
+    name:
+      error: "\"Port Name\" is required."
+      label: Port Name
+      placeholder: e.g. http
+    number:
+      error: "\"Port Number\" is required."
+      label: Port Number
+      placeholder: e.g. 80
+    protocol:
+      label: Port Protocol
+  selector:
+    add: Add Key Value
+    error: "\"Selector\" is required."
+    label: Selector
+  servers:
+    add: Add Server
+    error: Please input at least one Server
+    label: Servers
+    noServers: No Servers
+    removeServerLabel: Remove Server
+  title:
+    edit: Edit Gateway
+    new: Add Gateway
+    view: "Gateway: {name}"
+  tls:
+    caCertificates:
+      label: CA Certificates
+      placeholder: e.g. /etc/istio/ingressgateway-ca-certs/ca-chain.cert.pem
+    credentialName:
+      label: Credential Name
+      placeholder: e.g. myssl
+    httpsRedirect:
+      disabled: No
+      enabled: Yes
+      label: HTTPS Redirect
+    mode:
+      label: Mode
+      prompt: Select a mode...
+    privateKey:
+      label: Private Key
+      placeholder: e.g. /etc/istio/ingressgateway-certs/tls.key
+    serverCertificate:
+      label: Server Certificate
+      placeholder: e.g. /etc/istio/ingressgateway-certs/tls.crt
+cruHpa:
+  description:
+    placeholder: e.g. My scaler
+  maxReplicas:
+    label: Max Replicas
+    placeholder: e.g. 10
+  metrics:
+    addMetricLabel: Add Metric
+    describedObject:
+      apiVersion:
+        label: Described Object API Version
+        placeholder: e.g. extensions/v1beta1
+      kind:
+        label: Described Object Kind
+        placeholder: e.g. Ingress
+      label: Described Object
+      name:
+        label: Described Object Name
+        placeholder: e.g. main-route
+    label: Metrics
+    name:
+      label: Metric Name
+      placeholder: e.g. packets-per-second
+      resources:
+        cpu: CPU
+        memory: Memory
+    noMetrics: No Metrics
+    removeMetricLabel: Remove Metric
+    selector:
+      expressions:
+        addSelectorLabel: Add Expression
+        label: Metrics Match Expressions
+      labels:
+        addSelectorLabel: Add Label
+        label: Metrics Match Labels
+    target:
+      label: Target Type
+      options:
+        averageUtilization: Average Utilization
+        averageValue: Average Value
+        value: Value
+    types:
+      external: External
+      label: Metric type
+      object: Object
+      pods: Pods
+      resource: Resource
+      warning:
+        cpu: CPU reservation is not set in the selected deployment. HPA will not be able to compute the replica count based on CPU utilization.
+        custom: In order to use custom metrics with HPA, you need to deploy the custom metrics server such as prometheus adapter.
+        external: In order to use external metrics with HPA, you need to deploy the external metrics server such as prometheus adapter.
+        memory: Memory reservation is not set in the selected deployment. HPA will not be able to compute the replica count based on memory utilization.
+        resource: In order to use resource metrics with HPA, you need to deploy the metrics server.
+    value:
+      cpuPlaceholder: e.g. 200m
+      label: Quantity
+      placeholder: e.g. 200
+      utilizationPlaceholder: e.g. 50
+  minReplicas:
+    label: Min Replicas
+    placeholder: e.g. 1
+  name:
+    placeholder: e.g. myscaler
+  prompt:
+    deployment: Select a Workload...
+  status:
+    label: Current Status
+  target:
+    label: Workload
+  title:
+    edit: Edit Horizontal Pod Autoscaler
+    new: Add Horizontal Pod Autoscaler
+    view: "Horizontal Pod Autoscaler: {name}"
+cruRegistry:
+  address:
+    artifactory: Artifactory
+    custom: Custom
+    dockerhub: DockerHub
+    globalRegistry: Global Registry
+    harbor: Harbor
+    label: Address
+    placeholder: e.g. registry.example.com
+    quay: Quay.io
+  auth:
+    label: Auth token
+    saved: Saved
+  multiple: Multiple
+  password:
+    label: Password
+    saved: Saved
+  title:
+    edit: "Edit Registry: {name}"
+    new: Add Registry
+    view: "Registry: {name}"
+  username:
+    label: Username
+formAgentEnvVar:
+  addActionLabel: Add Environment Variable
+  headers:
+    configMap: Config Map
+    containerName: Container Name
+    key: Key
+    secret: Secret
+    type: Type
+    value: Value
+    variableName: Variable Name
+  placeholders:
+    bar: e.g. bar
+    container: e.g. my-container
+    foo: e.g. FOO
+    key: e.g. metadata.labels['KEY']
+  typeChoices:
+    configMap: ConfigMap Key
+    keyValue: Key/Value Pair
+    notAvailable: "{type} (Not Available)"
+    podField: Pod Field
+    resource: Resource
+    secret: Secret Key
+formAllowedHostPathsPodSecurityPolicy:
+  detail: Whitelist of allowed host paths
+  path:
+    addLabel: Add Path Prefix
+    placeholder: e.g. /foo
+  title: Allowed Host Paths Policy
+formAuthCloudCredential:
+  add: Add New
+  label: Cloud Credentials
+  selectCreds:
+    prompt: Select a cloud credential
+formBalancerConfig:
+  config:
+    prompt: Custom haproxy.cfg content
+  custom: |
+    See <a href="https://cbonte.github.io/haproxy-dconv/1.6/configuration.html" target="_blank" rel="nofollow noopener noreferrer">haproxy documentation</a> for more info about specific options that can go into the the config file.  When overriding the <code>backend</code> or similar lines which include the IP address of the target container, use <code>$IP</code> where the address goes and {appName} will generate the appropriate line(s).
+  detail: Provide your own custom configuration file to be applied on top of the config generated by {appName}
+  title: Custom Config File
+formCustomMetrics:
+  addActionLabel: Add Metrics Endpoint
+  addActionregex: Add Tag Name
+  delete:
+    label: Delete
+  detail: Expose the endpoints for Prometheus to collect custom metrics
+  label:
+    placeholder: e.g. (^id$|^image$|^name$|^cpu$)
+  noPorts: No Endpoints
+  path:
+    label: Path
+    placeholder: e.g. /metrics
+  port:
+    label: Container Port
+    placeholder: e.g. 8080
+  protocol:
+    label: Protocol
+  regex:
+    description: Enter the tag name or match the tag name by expression
+    label: Tag name
+  title: Custom Metrics Endpoints
+formDisks:
+  addDiskLabel: Add Disk
+  addRootDiskLabel: Add Root Disk
+  driver:
+    label: Driver
+  name:
+    label: Name
+    placeholder: e.g. data
+    rootDisk: Root Disk
+  readIops:
+    label: Read Iops
+    placeholder: e.g. 1000
+  size:
+    label: Size
+    rootDisk: Determined by root image
+  writeIops:
+    label: Write Iops
+    placeholder: e.g. 1000
+formEngineOpts:
+  detail: Customize the configuration of the Docker daemon
+  engineEnv:
+    addActionLabel: Add Environment Variable
+    keyLabel: Variable
+    keyPlaceholder: e.g. HTTP_PROXY
+    label: Engine Environment
+    valuePlaceholder: e.g. http://your-proxy:8080
+  engineInsecureRegistry:
+    addActionLabel: Add Insecure Registry
+    label: Insecure Registries
+    valueLabel: Registry Domain
+    valuePlaceholder: e.g. registry.example.com
+  engineInstallUrl:
+    label: Docker Install URL
+    latest: Latest
+    none:
+      help: "Warning: When selecting a value of 'None', Rancher will not install docker under the assumption that the docker is already installed."
+      label: None
+    placeholder: e.g. http://get.docker.com/
+    recommended: v{version}.x ( Recommended )
+    recommendedNoVersion: Recommended
+  engineLabels:
+    addActionLabel: Add Engine Label
+    keyLabel: Label
+    label: Engine Labels
+  engineOpts:
+    addActionLabel: Add Engine Option
+    keyPlaceholder: e.g. log-driver
+    label: Engine Options
+    valuePlaceholder: e.g. syslog
+  engineRegistryMirror:
+    addActionLabel: Add Registry Mirror
+    label: Registry Mirrors
+    valueLabel: Mirror URL
+    valuePlaceholder: e.g. https://my-mirror.example.com:5000
+  engineStorageDriver:
+    label: Storage Driver
+    placeholder: e.g. overlay
+  title: Engine Options
+formImage:
+  container:
+    placeholder: e.g. ubuntu:xenial
+  label: Docker Image
+  tag:
+    placeholder: Choose Image tag
+formIngressBackends:
+  addServiceLabel: Service
+  addWorkloadLabel: Workload
+  label: Target Backend
+  noRules: No Backends
+  path:
+    label: Path
+    placeholder: e.g. /foo
+  service:
+    label: service
+  target: Target
+  targetPort:
+    label: Port
+    placeholder: e.g. 80
+    prompt: Select a Port ...
+  warning: If the target is a service, only the port exposed by the service can be selected. You can go to Service Discovery tab and edit the service to add ports by editing the YAML.
+  workload:
+    label: workload
+formIstioHost:
+  prompt: Select a host...
+formMembersGlobalAccess:
+  detail: Select members who can view this application
+  table:
+    accessType: Access Type
+    name: Name
+    noData: There are no members
+    noMatch: No members match the current search
+    prompt: Select a Value...
+    type: Member Type
+  title: Members
+formNodeAffinity:
+  addRuleLabel: Add Node Selector
+  noRules: No node Selectors
+  removeRuleLabel: Remove this Node Selector
+formNodeRequirement:
+  addRuleLabel: Add Rule
+  key:
+    label: Key
+    placeholder: e.g. kubernetes.io/hostname
+  label: Rules
+  noRules: No Rules
+  operator:
+    label: Operator
+  values:
+    label: Values
+    placeholder: Comma-separated, e.g. node1,node2
+formSources:
+  addLabel: Add Source
+  container:
+    placeholder: e.g. my-container
+  detail: Environments from sources allow you to inject passwords, keys, or other information into the containers that need them.
+  field:
+    placeholder: e.g. spec.nodeName
+  noData: No Environments From Sources
+  noMatch: No Environments From Sources match the current search
+  prefix:
+    label: Prefix or Alias
+  prefixOrKey:
+    label: Key
+  resource:
+    placeholder: e.g. requests.cpu
+  source:
+    label: Source
+  title: Environments From Sources
+  type:
+    label: Type
+gatewayPage:
+  noData: There are no gateways defined
+  noMatch: No Gateways match the current search
+  notSupported: networking.istio.io/v1alpha3 API is not available in the cluster.
+  table:
+    hosts:
+      label: Hosts
+jsonEditor:
+  placeholder: Please input in JSON format
+labelsSection:
+  detail: Key/Value data that can be used in Node Scheduling rules or as part of configuring other advanced options.
+  key: Key
+  kind: Kind
+  noData: No labels
+  noMatch: No labels match the current search
+  status: "{count, plural,\n=0 {No labels}\n=1 {# label}\nother {# labels}\n}\n"
+  title: Labels
+  value: Value
+loggingPage:
+  additional:
+    enableExceptionStackMatch:
+      description: "Includes Java, JavaScript, C#, Python, Go, Ruby, and PHP"
+      label: Enable Exception Stack Match
+    enableMultiLineFilter:
+      label: Custom Multi Line Filter
+      required: "\"Line Start Regexp\" or \"Line End Regexp\" is required"
+    enableMultiLineMerge:
+      label: Enable MultiLine Filter
+    fields:
+      header: Custom Log Fields
+      helpText: You can add custom fields as key/value pairs for better filtering.
+    fluentdLogDir:
+      label: Fluentd Log Directory
+    flushInterval:
+      header: Flush Interval
+      helpText: How often buffered logs would be flushed.
+      label: Flush Interval
+      placeholder: e.g. 1
+      sec: sec
+    header: Additional Logging Configuration
+    includeSystemComponent:
+      label: Include System Log
+    jsonParsing:
+      label: Enable JSON Parsing
+    multiLineEndRegexp:
+      label: Line End Regexp
+    multiLineStartRegexp:
+      label: Line Start Regexp
+  advanced:
+    cancel: Edit as a Form
+    file: Edit as File
+  clusterHeader: Cluster Logging
+  configureFluentdLogDir: "\"Fluentd Log Directory\" currently is <code>{path}</code>. Go to \"Cluster Advanced Options\" to"
+  customTarget:
+    type:
+      error: "@type is not supported, you can chose the following type: ['elasticsearch', 'splunk_hec', 'remote_syslog', 'kafka_buffered', 'forward']"
+  dockerRootDir:
+    header: Docker Configuration
+    label: Docker Root Directory
+    placeholder: Enter docker root Directory, default value is {dir}
+  editIt: edit it.
+  elasticsearch:
+    endpoint:
+      required: "\"Endpoint\" is required"
+    endpointHelpText: Copy your endpoint from Elastic Cloud, or input the reachable endpoint of your self-hosted Elacticsearch.
+    endpointHostError: Please enter host name or domain name.
+    endpointProtocolError: Endpoint should start with "http://" or "https://".
+    generatedIndex: "The generated index will be: <code class=\"text-italic text-lowercase\">{esIndex}</code>, by default the index pattern is {indexFormat}"
+    header: Elasticsearch Configuration
+    indexPatterns:
+      dateFormat: "Date Format:"
+      errors:
+        invalidCharacters: Prefix cannot include '{char}'
+        required: Prefix is required
+        startsWith: Prefix cannot start with -, _, +
+      header: Index Patterns
+      helpText: Index patterns are used to generate Elacticsearch index
+      prefix: Prefix
+      prefixPlaceholder: e.g. logstash
+    xpack:
+      header: X-Pack Security
+      headerOptional: (optional)
+      helpText: If your Elasticsearch use X-Pack built-in native authentication features, put your username and password below.
+      password: Password
+      passwordPlaceholder: Your Password
+      username: Username
+      usernamePlaceholder: e.g. John
+  endpoint: Endpoint
+  endpointPlaceholder: e.g. https://192.168.1.10:9200
+  fluentd:
+    addServer: Add Fluentd Server
+    certificate:
+      label: CA Certificate PEM
+    compress:
+      helpText: Enable this to reduce the transferred payload size.
+      label: Enable Gzip Compression
+    enableTls:
+      label: Use TLS
+    endpoint:
+      invalid: "\"Endpoint\" required end with port."
+      label: Endpoint
+      placeholder: e.g. 192.168.1.10:24224
+      required: "\"Endpoint\" is required"
+    endpointHostError: Endpoint can not start with 'http' or 'https', please use host name.
+    endpointPortError: Endpoint required end with port.
+    header: Fluentd Configuration
+    hostname:
+      label: Hostname
+      placeholder: The hostname of the server.
+    password:
+      label: Password
+      placeholder: The password for authentication.
+    removeFluentServers: Remove this Fluentd Server
+    sharedKey:
+      label: Shared Key
+      placeholder: The Shared key for authentication.
+    standby:
+      label: Use as Standby Only
+      none: Required at least one Non-Standby endpoint.
+    username:
+      label: Username
+      placeholder: The username for authentication.
+    weight:
+      label: Weight
+      placeholder: The load balancing weight of this endpoint.
+  helpText:
+    cluster: We will use fluentd to collect stdout/stderr logs from each container and the log files which exist under path <code >/var/log/containers/</code> on each host. The logs can be shipped to a target you configure below.
+    clusterTarget: The cluster logging target is <code class="text-capitalize">{clusterTargetType}</code>. If project logging is enabled, logs will be shipped to both cluster target and project logging target.
+    noClusterTarget: Logging is disabled at current cluster.
+  kafka:
+    addEndpoint: Add Endpoint
+    broker: Broker
+    brokerHelpText: A Kafka cluster consists of one or more Brokers, config the host and port for each Broker.
+    brokerTypeHelpText: Use either Zookeeper or Broker list as the Kafka connection entrypoint.
+    endpoint:
+      broker:
+        placeholder: e.g. https://192.168.1.10:9092
+      required: "\"Endpoint\" is required"
+      zookeeper:
+        placeholder: e.g. https://192.168.1.10:2181
+    endpointType: Endpoint Type
+    header: Kafka Configuration
+    topic:
+      label: Topic
+      required: "\"Topic\" is required"
+    topicHelpText: Logs will be sent to this topic
+    topicPlaceholder: e.g. message
+    zookeeper: Zookeeper
+    zookeeperHelpText: Zookeeper is for building coordination, configuration management, leader detection, and detecting node updates in a kafka cluster.
+  keyValueForm:
+    keyPlaceholder: e.g. 192.168.1.10
+  logPreview:
+    header: Log Format Preview
+  logging: Logging
+  projectHeader: Project Logging
+  splunk:
+    endpoint:
+      placeholder: e.g. https://192.168.1.10:8088
+    endpointRequired: Endpoint is Required
+    header: Splunk HTTP Event Collector Configuration
+    helpText: You can find instructions on how to configure Splunk HEC(HTTP Event Collector) <a href="http://docs.splunk.com/Documentation/Splunk/7.0.0/Data/UsetheHTTPEventCollector" target="_blank">here</a>.
+    index: Index
+    indexHelpText: The index you specify here must be within the list of this token’s allowed indexes. <a href="https://docs.splunk.com/Splexicon:Index" target="_blank">Detail</a>
+    indexPlaceholder: e.g. main
+    source: Source
+    sourceHelpText: A default field that identifies the source of an event, that is, where the event originated. <a href="https://docs.splunk.com/Splexicon:Source" target="_blank">Detail</a>
+    sourcePlaceholder: e.g. fluentd
+    token: Token
+    tokenHelpText: "Tokens are entities that let logging agents and HTTP clients connect to the HEC input. <a href=\"http://docs.splunk.com/Documentation/Splunk/7.0.0/Data/UsetheHTTPEventCollector#Configure_HTTP_Event_Collector_on_Splunk_Enterprise\" target=\"_blank\">Detail</a>"
+    tokenPlaceholder: Your Token
+    tokenRequired: Token is Required
+  ssl:
+    certificate:
+      label: CA Certificate PEM
+    clientCert:
+      label: Client Certificate
+    clientKey:
+      label: Client Private Key
+    clientKeyPass:
+      label: Client Key Password
+      password:
+        placeholder: Your Client Key Password.
+    customTarget:
+      copyAll: Copy All key and value.
+      help: You can copy the path to the file.
+    headerHelp: Input https endpoint or select TCP to enabled it.
+    saslPassword:
+      label: Password
+      placeholder: Your Password
+    saslScramMechanism:
+      label: Scram Mechanism
+      sha256: sha256
+      sha512: sha512
+    saslType:
+      label: Type
+      plain: Plain
+      scram: Scram
+    saslUsername:
+      label: Username
+      placeholder: e.g. John
+    sslHeader: "{authType} Configuration"
+    sslVersion:
+      label: SSL Version
+    verify:
+      disabled: Disabled
+      enabled: Enabled - Input trusted server certificate
+      label: SSL Verify
+  syslog:
+    endpoint:
+      required: "\"Endpoint\" is required"
+    endpointHelpText: Input your Syslog endpoint, SSL certificates configuration will show up when select TCP.
+    endpointPlaceholder: e.g. 192.168.1.10:514
+    header: Syslog Configuration
+    program: Program
+    programHelpText: The program name of the log.
+    programPlaceholder: e.g. MyProgram
+    severities:
+      alert: Alert
+      critical: Critical
+      debug: Debug
+      emergency: Emergency
+      error: Error
+      info: Info
+      notice: Notice
+      warning: Warning
+    severityHelpText: "<p class=\"text-info text-small\">The severity of logs. The definition of each can be found <a href=\"https://tools.ietf.org/html/rfc5424#section-6.2.1\" target=\"_blank\">here.</a></p>"
+    tokenHelpText: Will add a token to the structured data in every syslog message. For cloud syslog such as <a href="https://help.sumologic.com/Send-Data/Sources/02Sources-for-Hosted-Collectors/Cloud-Syslog-Source" target="_blank">Sumologic</a>, <a href="https://www.loggly.com/docs/customer-token-authentication-token" target="_blank">Loggly</a>, etc, you could generate a token on their respective configuration pages.
+  tags:
+    addActionLabel: Add Field
+    keyPlaceholder: e.g. foo
+    valuePlaceholder: e.g. bar
+  targetKafka:
+    addActionLabel: Add Broker
+    host: Host
+    port: Port
+  targetNav:
+    experimental: Experimental
+    tips:
+      caseA: Logging is disabled in the current {pageScope}.
+      caseB: The current logging target is <code class="text-capitalize">{currentTarget}</code>, Click the Save button below will disable logging in current {pageScope}.
+      caseC: The current logging target is <code class="text-capitalize">{currentTarget}</code>,
+      caseD: click the Save button below to set <span class="text-info text-capitalize">{targetType}</span> as the logging target.
+      caseE: click the Save button below to update the <span class="text-info text-capitalize">{targetType}</span> configuration.
+      caseF: No logging target, click the Save button below to set <code class="text-capitalize">{targetType}</code> as the logging target.
+  targetTypes:
+    disable: None
+    elasticsearch: Elasticsearch
+    embedded: Embedded
+    fluentd: Fluentd
+    kafka: Kafka
+    splunk: Splunk
+    syslog: Syslog
+  testAction:
+    dryRun: Dry Run
+    runOk: Dry run success.
+    running: RUNNING
+    test: TEST
+    testFailed: Something's not quite right. Check your inputs.
+    testOk: Settings validated.
+    testing: TESTING
+loginAzure:
+  buttonText: Log In with Azure AD
+loginCAS:
+  buttonText: Log In with CAS
+loginSaml:
+  adfs:
+    buttonText: Log In with AD FS
+  keycloak:
+    buttonText: Log In with Keycloak
+  okta:
+    buttonText: Log In with Okta
+  ping:
+    buttonText: Log In with Ping
+  shibboleth:
+    buttonText: Log In with Shibboleth
+modalConfirmRemovePayment:
+  card: Card ending in {card}
+  header: Confirm Payment Removal
+  title: Are you sure you want to delete
+modalEditPassword:
+  actionButton: Change
+  confirm: Confirm Password
+  current: Current Password
+  deleteTokens: Delete all existing API keys
+  edit:
+    help: Please choose a new password
+    title: Change Password
+  firstLogin:
+    actionButton: Continue
+    help: Set password for the default <code>admin</code> user
+    setView: Set Default View
+    title: Welcome to {appName}
+  mismatch: Passwords do not match
+  mode:
+    generate: "Use a new randomly generated password:"
+    manual: "Set a specific password to use:"
+  new: New Password
+  strength:
+    best: best
+    good: good
+    label: Password strength
+    tooltip1: Password must contain at least 8 characters
+    tooltip2: Include at least two types of numbers, uppercase letters, lowercase letters, and symbols
+    weak: weak
+modalProcessError:
+  cause: "Cause:"
+  close: Close
+  header: Exception Info
+  none: N/A
+  stackTrace: "Stack Trace:"
+modalRestoreBackup:
+  backups: Available Snapshots
+  error: A snapshot is required
+  fetching: Fetching new snapshots
+  restoreButton: Restore
+  select:
+    all: Select an available snapshot
+  title: Restore Snapshot
+  type:
+    etcd: etcd
+    etcdAndK8sVersion: etcd, Kubernetes Version and cluster config
+    k8sVersion: etcd and Kubernetes Version
+    k8sVersionUnknown: We cannot restore the kubernetes version for this snapshot because the version is unknown.
+    label: Restoration Type
+    versionUnknown: Unknown
+modalRollbackApp:
+  action: Rollback
+  current:
+    label: Current Revision
+  difference:
+    label: Differences
+  protip: The "Rollback" action will create a new revision with the same configuration as the selected revision.
+  revision:
+    label: Rollback to Revision
+    prompt: Choose a Revision...
+  title: Rollback "{appName}"
+namespaceGroup:
+  label: "Namespace: {name}"
+  none: Pod
+  project: "Namespace: All"
+newBalancer:
+  error:
+    invalidSourcePort: "Invalid source port: '{num}'"
+    invalidTargetPort: "Invalid target port: '{num}'"
+    mixedPort: Port {num} has multiple rules with conflicting access/protocols
+    needsCertificate: A certificate is required because there are SSL/TLS port rules
+    noRules: You must have one or more listening ports and target rules
+    noSourcePort: Source Port is required on each rule
+    noTarget: Target is required on each rule
+    noTargetPort: Target Port is required on each rule
+    stackName: A new stack needs a name
+  header:
+    add: Add Load Balancer
+    edit: Edit Load Balancer
+    upgrade: Upgrade Load Balancer
+nodeTemplatesPage:
+  detail: Node Templates are used to deploy the nodes that make up a Cluster on an infrastructure provider.
+  header: Node Templates
+  rightButtons:
+    actionButton: Add Template
+    cloudCredentials: Manage Cloud Credentials
+  table:
+    location: Location
+    name: Name
+    noData: There are no node templates defined
+    owner: Owner
+    provider: Provider
+    size: Size
+    state: State
+    unknown: Unknown
+    usedBy: Used By
+    usedByNone: No Clusters
+nodesPage:
+  editCluster: Edit Cluster
+  header: Nodes
+  nodePoolGroup: "Pool: {name}"
+  table:
+    clusterName: Cluster
+    cpu: CPU
+    disk: Disk
+    docker: Docker
+    instanceState: Container States
+    instanceStateWithIcon: States
+    memory: RAM
+    noData: This cluster does not have any nodes defined
+    noMatch: No nodes match the current search
+    pod: Pods
+    role: Roles
+    unschedulable: Unschedulable
+    version: Version
+notFoundPage:
+  header: The page you were looking for doesn't exist!
+  linkTo: Go Home
+notifierPage:
+  alertTemplate:
+    customTemplate: Custom template
+    defaultTemplate: Default Template
+    disabled: OFF
+    enable: ON
+    error: Failed to add alert template
+    linkToAlert: Click to configure custom alert labels and notes
+    linkToNotifier: Click to configure custom alert templates
+    note: "Note: The custom alarm template will use the current configuration item after a successful save."
+    placeholder: Please fill in custom template
+    validateError: Custom template cannot be empty
+  aliyunsms:
+    accessKeyID:
+      label: Access Key
+      placeholder: Aliyun Access Key
+    accessKeySecret:
+      label: Access Key Secret
+      placeholder: Aliyun Access Key Secret
+    signName:
+      label: Signature Name
+      placeholder: e.g. mysign
+    templateCode:
+      label: Template Code
+      placeholder: e.g. mytemplate
+    to:
+      action: Add Phone Number
+      label: Phone Number
+      placeholder: e.g. 112314
+  bearerToken:
+    label: Bearer Token
+    placeholder: Bearer token
+  clone: Clone
+  deleteErrorMessage: "Notifier {displayName} is in use by: {alertNames}"
+  dingtalk:
+    secret: Secret
+    secretPlaceholder: Only for webhook with sign enabled
+    url: Webhook URL
+    urlPlaceholder: Your webhook URL
+  endpoint:
+    custom: Custom
+    default: Default
+    endpoint.placeholder: e.g. https://qyapi.weixin.qq.com/cgi-bin/
+    label: Receive API URL
+  index:
+    addActionLabel: Add Notifier
+    addAlertTemplate: Add Alarm Template
+    table:
+      created: Created
+      noData: There are no notifiers defined
+      noMatch: No Match
+  msteams:
+    url: Webhook URL
+    urlPlaceholder: Your webhook URL
+  notifierTypes:
+    aliyunsms: Aliyun SMS
+    dingtalk: DingTalk
+    email: Email
+    msteams: Microsoft Teams
+    pagerduty: PagerDuty
+    servicenow: ServiceNow
+    slack: Slack
+    webhook: Webhook
+    wechat: WeChat
+  notifiers: Notifiers
+  pagerduty:
+    helpText: |
+      Here's how you <a href="https://www.pagerduty.com/docs/guides/prometheus-integration-guide/" target="_blank" rel="nofollow noopener noreferrer">create an Integration Key</a> for PagerDuty.
+    serviceKey:
+      helpText: When configuring an Alert, the Integration Key can be overridden.
+      label: Default Integration Key
+    serviceKeyPlaceholder: Your PagerDuty Integration Key
+  proxyUrl:
+    label: Proxy URL
+    placeholder: e.g. http://my-proxy/
+  sendResolved:
+    label: Send Resolved Alerts
+  servicenow:
+    password: Password
+    passwordPlaceholder: Password
+    proxyUrl: Proxy URL
+    proxyUrlPlaceholder: Proxy URL
+    url: Webhook Url
+    urlPlaceholder: Webhook Url
+    username: Username
+    usernamePlaceholder: Username
+  slack:
+    defaultRecipient:
+      helpText: Optional. By default, notifications are sent to the default channel of the Incoming WebHook. When configuring an Alert, the channel can be overridden.
+      label: Default Channel
+    defaultRecipientPlaceholder: "e.g. #example"
+    helpText: |
+      Here's how you <a href="https://slack.com/apps/A0F7XDUAZ-incoming-webhooks" target="_blank" rel="nofollow noopener noreferrer">create Incoming WebHooks</a> for Slack.
+    url: URL
+    urlPlaceholder: e.g. https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+  smtp:
+    defaultRecipient:
+      helpText: When configuring an Alert, the recipient can be overridden.
+      label: Default Recipient Address
+    defaultRecipientPlaceholder: e.g. admin@example.com
+    host: Host
+    hostPlaceholder: e.g. 192.168.1.121
+    password: Password
+    passwordPlaceholder: Your Password
+    port: Port
+    portPlaceholder: e.g. 465
+    sender: Sender
+    server: Smtp Server
+    tls: Use TLS
+    userName: Username
+    userNamePlaceholder: e.g. John
+  testAction:
+    test: TEST
+    testFailed: Something's not quite right. Check your inputs.
+    testOk: Settings validated.
+    testing: TESTING
+  testedBtnLabel: OK
+  testingBtnLabel: Testing
+  webhook:
+    url: URL
+    urlPlaceholder: Your webhook URL
+  wechat:
+    agent:
+      helpText: "You can find AgentId in <a href=\"https://work.weixin.qq.com/wework_admin/frame#apps\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">app detail</a> page."
+      label: Application Agent ID
+    agentPlaceholder: e.g. 1000003
+    corp:
+      helpText: "Click <a href=\"https://work.weixin.qq.com/wework_admin/frame#profile\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">here</a> to find your Corporation ID.\n"
+      label: Corporation ID
+    corpPlaceholder: e.g. wwc0cc3d58f9b021b6
+    defaultRecipient:
+      label: Default Recipient
+    defaultRecipientPlaceholder: e.g. 2
+    endpoint:
+      custom: Custom
+      default: Default
+      label: Endpoint
+      placeholder: e.g. https://qyapi.weixin.qq.com/cgi-bin/
+    recipientType:
+      label: Recipient Type
+      party: Party
+      tag: Tag
+      user: User
+    secret:
+      helpText: "You can find Secret in <a href=\"https://work.weixin.qq.com/wework_admin/frame#apps\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">app detail</a> page."
+      label: Application Secret
+    secretPlaceholder: Your app secret
+orchestrationWelcome:
+  enhanced:
+    title: Enhanced with Kubernetes
+  simple:
+    title: Simple
+pipelinesSetting:
+  authenticateWithGit: Authenticate with git repository
+  authenticatedUsers: Authenticated Users
+  clearData: Clear Data
+  clearing: Clearing
+  customConfigChangeLabel: Use another OAuth Application
+  dataClear: Data Clear
+  disableOAuth: Disable Repository Authentication
+  error:
+    limit: Error saving limit and request
+  gitAuthentication: Git Authentication
+  globalConfigChangeLabel: Use OAuth Application in Authentication
+  info:
+    noPermission: You don't have permission to configure pipelines.
+  resetData: Reset all of the pipeline related data.
+  sureToClearData: Are You Sure To Clear Data?
+  sureToDisableOAuth: Are You Sure You Want To Disable Repository Authentication?
+  userGlobalConfig: GitHub Authentication is enabled, you can use it directly.
+projectsListNamespacePage:
+  current: In this project
+  header: Namespaces
+  notIn: Not in a project
+publicEndpoints:
+  bindIpAddress: Bind IP
+  endpoint: Endpoint
+  noData: There are no published ports
+  noMatch: No ports match the current search
+  privatePort: Container Port
+  publicPort: Public Port
+  target: Target
+registryRow:
+  address: Address
+  created: Created
+  username: Username
+rulesPage:
+  new: Add Traffic Rule
+  noData: There are no traffic rules to show
+  noMatch: No traffic rule match the current search
+selectValueCheck:
+  message: "{values, plural,\n  =1 {Please select a new value. The following is no longer valid:}\n  other {Please select new values. The following are no longer valid:}\n}\n\n"
+serverUrl:
+  button:
+    save: Save URL
+  header:
+    detail: What URL should be used for this {appName} installation? All the nodes in your clusters will need to be able to reach this.
+    label: "{appName} Server URL"
+siteAccess:
+  dupe: User access already enabled
+  groups: Groups
+  header: Site Access
+  helpLabel: Whats this?
+  helpText: Configure who should be allowed to log in and use {appName}.
+  listHeader: Authorized {individuals} and {collection}
+  minimum: You must add at least one authorized entry
+  noIdentity: None
+  organizations: Organizations
+  refreshGroups: Refresh Group Memberships
+  refreshHelp: This will trigger a refresh of all Groups and update their user lists.
+  required: Restrict access to only Authorized {individuals} and {collection}
+  restricted: Allow members of Clusters, Projects, plus Authorized {individuals} and {collection}
+  unrestricted: Allow any valid {individuals}
+  users: Users
+stacksPage:
+  table:
+    endpoints: Endpoints
+    instanceState: Container States
+    instanceStateWithIcon: States
+    scale: Scale
+    standalone: Standalone
+storageClassPage:
+  addActionLabel: Add Class
+  default:
+    label: Default
+  header: Storage Classes
+  noData: There are no storage classes defined
+  noMatch: No storage classes match the current search
+  provisioner:
+    label: Provisioner
+taintsSection:
+  detail: Ensure workloads only run on appropriate nodes by adding taints to nodes and tolerations to workloads
+  effect: Effect
+  key: Key
+  noData: No taints
+  noMatch: No taints match the current search
+  title: Taints
+  value: Value
+validationsList:
+  detail: Validation Checks for current {resourceType}
+  noData: No issues found
+  noMatch: No issues match the current search
+  noPermission: You don't have permission to see the validations. Please contact your cluster owner to give Kiali access to you.
+  table:
+    message: Message
+    path: Path
+    severity: Severity
+  title: Validation Checks
+verifyResetPasswordPage:
+  button: Update password
+  header: Reset Password
+  success:
+    header: Password Reset!
+    linkText: Login
+    subtext: Click the link below to be to taken to the login page.
+waitingPage:
+  hosts:
+    setup:
+      kubernetes: Setting up Kubernetes

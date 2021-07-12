@@ -1,0 +1,1221 @@
+clusterNew:
+  advanced:
+    cancel: 表单输入
+    helpText: 不要使用 Tabs，Tabs 字符在 yaml 中不能解析。
+    viewCancel: 表单查看
+    viewYaml: YAML 查看
+    yaml: 编辑 YAML
+  aliyunack:
+    shortLabel: Alibaba ACK
+  amazoneks:
+    access:
+      detail: 选择将用于启动 Amazon EKS 的区域和 API 密钥
+      next: "下一步: 配置集群"
+      region: 区域
+      title: 账户访问
+    accessKey:
+      label: Access Key
+      placeholder: Your AWS access key
+    ami:
+      help: 您可以根据您的区域重写默认 AMI
+      label: Custom AMI Override
+    associateWorkerNodePublicIp:
+      radio:
+        default: Yes
+        off: "No: 只有私有 IPs"
+      title: Worker 节点的公共IP
+    clusterOption:
+      detail: 自定义将使用 EKS 实例启动的集群。
+      title: 集群配置选项
+    desired:
+      label: Desired ASG Size
+    errors:
+      clusterSpec: Unable to parse the clusters upstream spec. Is the cluster ready?
+    import:
+      clusterSelect:
+        createLabel: 注册集群
+        detail: 选择要注册的 EKS 集群
+        input:
+          label: 要注册的集群名
+        select:
+          label: 集群注册
+        title: 选择集群
+    ingressWarning: "注意: 目前 Amazon EKS 不会在启动新的集群时创建传入控制器。如果需要此功能，则必须在集群创建后手动创建一个传入控制器。"
+    kubernetesVersion:
+      label: Kubernetes 版本
+      placeholder: 选择要安装的 Kubernetes 版本
+      warning: EKS 只允许 Kubernetes 版本大于 1 个小版本。在更新集群版本之前，请先更新节点组版本。
+    label: 为 Kubernetes 提供的 Amazon 弹性容器服务
+    logging:
+      api:
+        label: API
+        tooltip: 集群的 API 服务器是公开 Kubernetes API 控制平面组件。
+      audit:
+        label: 审计
+        tooltip: Kubernetes 审计日志记录了影响集群的单个用户、管理员或系统组件的操作事件。
+      authenticator:
+        label: 身份验证
+        tooltip: Authenticator logs are unique to Amazon EKS. These logs represent the control plane component that Amazon EKS uses for Kubernetes Role Based Access Control (RBAC) authentication using IAM credentials.
+      controllerManager:
+        label: Controller Manager
+        tooltip: The controller manager manages the core control loops that are shipped with Kubernetes.
+      detail: Configure control plane logs to send to Amazon CloudWatch. You are charged the standard CloudWatch Logs data ingestion and storage costs for any logs sent to CloudWatch Logs from your clusters.
+      scheduler:
+        label: Scheduler
+        tooltip: Scheduler 组件管理任何在集群中运行 Pods。
+      title: 日志收集
+    max:
+      label: Maximum ASG Size
+    min:
+      label: Minimum ASG Size
+    nodeGroups:
+      addLabel: 添加节点组
+      detail: 自定义管理节点组
+      noNodes: 没有节点组
+      title: 管理节点组
+    nodeVolumeSize:
+      label: Node Volume Size
+      placeholder: e.g. 20
+    region:
+      label: 区域
+    role:
+      help: 您可以选择不选择服务角色，然后 rancher 将自动为您创建一个服务角色。
+      label: 服务角色
+      loading: 从 Amazon 加载vpc...
+      next: "下一步: 选择 VPC 和子网"
+      noneSelected: Rancher 创建的角色
+      radio:
+        custom: "自定义: 从现有的服务角色中进行选择"
+        default: "标准: 自动创建服务角色"
+    secretKey:
+      label: Secret Key
+      placeholder: Your AWS secret key
+      provided: Provided
+    secretsEncryption:
+      disabled: None
+      failure: 在加载 KMS 加密密钥时出现问题。如果你知道密钥内容，你可以手动输入一个密钥。
+      kms: "KMS Key: 选择或输入用于加密秘密的 KMS 密钥"
+      kmsHelpLabel: KMS Key ARN
+      label: Secrets Encryption
+    securityGroup:
+      choose: 选择一个或多个现有组
+      defaultCreate: "标准: 自动创建新的安全组"
+      defaultExisting: "标准: 使用现有的 <code>{groupName}</code> 组"
+      detail: 选择将应用于 EKS 实例的安全组
+      loading: 加载实例选项...
+      next: "下一步: 设置实例选项"
+      noneSelected: Auto created Security Group
+      title: 安全组
+    sessionToken:
+      label: Session Token  <em class='text-muted'>Optional</em>
+      placeholder: Your AWS session token
+      provided: Provided
+    shortLabel: Amazon EKS
+    subnet:
+      help: EKS requires at least 2 subnets. Subnets should span at least 2 availability zones.
+      loading: 从 Amazon 加载安全组…...
+      next: "下一步: 选择安全组"
+      noneSelected: Rancher 创建 VPC、子网和安全组
+      title: 子网
+    tags:
+      addActionLabel: 添加标签
+      label: 标签
+    userData:
+      help: 将用户数据传递给节点以执行自动配置任务
+      label: User Data
+      placeholder: 粘贴脚本
+    vpc:
+      access:
+        endpoints:
+          addActionLabel: Add Endpoint
+          helpBlock: （可选）配置 CIDR IP 对公共访问地址的访问权限。如果您限制对特定 CIDR 段的访问，那么建议您还启用私有访问，以避免失去对集群的网络通信。
+          label: 公共访问地址
+          valueLabel: Endpoints
+        help: 配置 公共/私有 API 访问是一个高级用例，建议阅读 EKS 集群端点访问控制 <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html" target="_blank"  rel="nofollow noopener noreferrer">文档</a>.
+        private:
+          label: 私有访问
+        public:
+          label: 公共访问
+          tooltip: Rancher 目前依赖公共端点来连接到集群。
+        title: API Server 访问 Endpoint
+      detail: 选择将用于 EKS 实例的网络
+      loading: 从 Amazon 加载子网…...
+      loadingRancherDefault: 加载实例选项……
+      next: "下一步: 选择子网"
+      nextRancherDefault: "下一步: 选择实例选项"
+      noneSelected: Rancher 创建 VPC 和子网
+      radio:
+        custom: "自定义: 从现有的 VPC 和子网中选择"
+        default: "标准: VPC 和子网自动创建"
+      title: 网络
+  azureaks:
+    access:
+      detail: 配置用于与 Azure 通讯的凭据
+      help: 参考 <a href="https://docs.microsoft.com/en-us/azure/aks/kubernetes-service-principal" target="_blank"> 链接文档 </a> 创建客户端 ID 和秘钥。
+      title: 账户访问
+    accountAccessSection:
+      label: 账户访问
+    admin:
+      label: 管理员名称
+      placeholder: user-1
+    authenticate:
+      next: "下一步: 认证 & 配置主机"
+    availabilitySet:
+      label: 可用性集
+      placeholder: 可用集名称
+    clientId:
+      label: 客户端 ID
+      placeholder: 客户端 ID
+    clientSecret:
+      label: 客户端秘钥
+      placeholder: 客户端秘钥
+    count:
+      label: 主机数量
+      placeholder: "例如: 1"
+    diskSizeGb:
+      label: OS 磁盘大小
+      placeholder: "例如: 100"
+    dns:
+      label: DNS 前缀
+      placeholder: "例如: example"
+    dockerPort:
+      label: Docker 端口
+      placeholder: "2376"
+    enableHttpApplicationRouting:
+      label: HTTP 应用程序路由
+    enableMonitoring:
+      label: 监控
+    environment:
+      label: 环境
+    errors:
+      included:
+        dnsServiceIp: Kubernetes DNS 服务 IP 地址必须是有效的 ip 地址。
+        dockerBridgeCidr: Docker bridge 地址必须是有效的 CIDR 格式。
+        parsedDnsServiceIp: Kubernetes DNS 服务 IP 地址必须在 Kubernetes 服务地址范围内。
+        parsedDockerBridgeCidr: Docker bridge 地址不能与选定的虚拟网络或 Kubernetes 服务地址相同
+        parsedServiceCidr: Kubernetes 服务地址范围必须在选定的虚拟网络范围内。
+        serviceCidr: Kubernetes 服务地址范围必须是有效的 CIDR 格式。
+    image:
+      label: 镜像
+      placeholder: "推荐: Ubuntu Server:18.04-LTS:latest"
+    ingressWarning: "注意: 目前 Azure AKS 在启动新集群时不会创建一个传入控制器。如果需要此功能，则必须在集群创建后手动创建一个传入控制器。"
+    kubernetesVersion:
+      label: Kubernetes 版本
+      prompt: 选择版本...
+    label: Azure 容器服务
+    loadBalancerSku:
+      basic: 基本
+      label: LoadBalancer SKU
+      standard: 标准
+    location:
+      label: 位置
+      prompt: 选择位置...
+    machineType:
+      label: VM 规格
+      prompt: 选择规格...
+    members:
+      label: 成员角色
+    networkPolicy:
+      label: 网络策略
+      placeholder: 选择网络策略
+    networking:
+      advanced: 高级
+      default: 默认
+      dnsServiceIp:
+        help: "分配给 Kubernetes DNS 服务的 IP 地址，它必须在 Kubernetes 服务地址范围内。例如: 10.0.0.10."
+        label: Kubernetes DNS 服务 IP 地址
+        placeholder: "例如: 10.0.0.10"
+      dockerBridgeCidr:
+        help: "分配给 Docker Bridge 的 IP 地址和网络掩码，它不能位于任何子网 IP 范围或 Kubernetes 服务地址范围内。例如: 172.17.0.1/16."
+        label: Docker bridge 地址
+        placeholder: "例如: 172.17.0.1/16"
+      label: 网络
+      networkPlugin:
+        label: 网络插件
+        prompt: 选择网络插件
+      podCidr:
+        help: "一个 IP 范围，用于分配 Pod IP。例如: 172.244.0.0/16"
+        label: Kubernetes pod 地址范围
+        placeholder: "例如: 172.244.0.0/16"
+      serviceCidr:
+        help: "CIDR 表示用于分配给 service cluster 的 IP 范围，它不得与任何子网 IP 范围相同。例如: 10.0.0.0/16."
+        label: Kubernetes Service IP 范围
+        prompt: 10.43.0.0/16
+      subnet:
+        label: 子网
+      vnet:
+        label: 虚拟网络-子网(子网 CIDR)
+        prompt: 选择虚拟网络/子网
+      vnetresourcegroup:
+        help: The Resource Group if your Virtual Network does not exist in the same Resource Group as your cluster.
+        label: 虚拟网络资源组
+        prompt: 请选择虚拟网络
+    noPublicIp:
+      label: 无公网 IP
+    openPort:
+      label: 开放端口
+      placeholder: "逗号分隔，例如: 80,443"
+    placement:
+      label: 位置
+    pod:
+      label: Pod 安全策略
+    privateIpAddress:
+      label: 私有 IP
+      placeholder: 127.0.0.1
+    publishSettingsFile:
+      label: 发布配置
+      placeholder: 发布配置文件
+    region:
+      label: 区域
+    resourceGroup:
+      helpText: "使用已有的资源组或者输入新的资源组名称。注意: 如果使用的资源组内已经存有 AKS 集群的话，将会创建新的资源组，Azure AKS 只允许一个资源组有一个 AKS 集群。"
+      label: 资源组
+      placeholder: docker-machine
+    security:
+      label: 安全
+    shortLabel: Azure AKS
+    size:
+      label: 规格
+    ssh:
+      label: 公共密钥
+      placeholder: 粘贴 SSH 公钥
+    sshUser:
+      label: SSH 用户
+      placeholder: usr1
+    staticPublicIp:
+      label: 公网 IP
+    storageType:
+      label: 存储类型
+    subnet:
+      label: 子网
+      placeholder: 示例-子网名称
+    subnetPrefix:
+      label: 子网前缀
+      placeholder: 128.42.0.0/21
+    subscriptionId:
+      label: 订阅 ID
+      placeholder: Azure 订阅 ID
+    tags:
+      addActionLabel: 添加标签
+      label: 标签
+    tenant:
+      label: 租户 ID
+      placeholder: Azure 租户 ID
+    usePrivateIp:
+      label: 使用私有 IP 连接
+    vnet:
+      label: VNet
+      placeholder: "[resourcegroup: ]名称"
+  config:
+    detail: 选择集群主机的来源
+    label: 供应商
+  custom:
+    helpBlock: 使用 RKE 从现有的裸金属服务器或虚拟机中创建一个新的 Kubernetes 集群。
+    label: 自定义
+    shortLabel: 自定义
+    subtitle: 使用现有节点创建自定义（Custom）集群
+    title: 创建新的 Kubernetes 集群
+  customize:
+    title: 集群选项
+  description:
+    placeholder: "例如: 用于开发和测试工作负载的集群"
+  driverLabels:
+    cloud: Kubernetes 托管服务商
+    custom: 添加主机自建 Kubernetes 集群
+    import: 导入现有的 Kubernetes 集群
+    infra: 来自云服务商提供的主机
+    noCloud: 没有启用集群驱动程序。
+    noInfra: 没有启用主机驱动程序。
+  externalError: 无法加载组件，检查 URL。
+  googlegke:
+    access:
+      cloudCred: Cloud Credential
+      detail: Choose the Google Project ID and Cloud Credential that will be used to launch your cluster.
+      next: "Next: Configure Cluster"
+      projectId:
+        help: Must to match Project Id from Credential JSON
+        label: Google Project ID
+      title: Google Account Access
+    alphaFeatures:
+      label: Alpha 功能
+      warning: Warning! <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/alpha-clusters" target="_blank" rel="nofollow noopener noreferrer">Kubernetes Alpha Features</a> should not be used for production clusters. Alpha Clusters expire after 30 days along with other caveats. Ensure you fully understand this feature before enabling it.
+    autoRepairUpgradeWarning:
+      label: When editing an Imported cluster, we recommend that you enable Auto Upgrade and Auto Repair for node pools. These fields are required for clusters launched from the Release channel and recommended otherwise. If these fields are not enabled, you may not be able to recover this node pool.
+    autoscaling:
+      label: Autoscaling
+    bigQuery:
+      label: BigQuery
+    bigtableAdmin:
+      label: Bigtable 管理员
+    bigtableData:
+      label: Bigtable 数据
+    checkServiceAccount: "下一步: 配置主机"
+    checkingServiceAccount: 认证中...
+    cloudDatastore:
+      label: Cloud Datastore
+    cloudDebugger:
+      label: 云调试器
+    cloudPlatform:
+      label: 云平台
+    cloudPub:
+      label: Cloud Pub/Sub
+    cloudSQL:
+      label: Cloud SQL
+    cloudSourceRepositories:
+      label: Cloud Source Repositories
+    clusterAddons:
+      horizontalPodAutoscaling: Horizontal Pod Autoscaling
+      httpLoadBalancing: HTTP (L7) Load Balancing
+      label: Cluster Addons
+      networkPolicyConfig: Network Policy Config (master only)
+    clusterDescription:
+      label: Cluster Description
+    clusterExtras:
+      detail: Configure addtional cluster options and features
+      title: Additional Options
+    clusterFeatures:
+      label: Cluster Features
+    clusterIpv4Cidr:
+      label: 容器地址范围
+      placeholder: "例如: 10.42.0.0/16"
+    clusterLabels:
+      addAction: Add Label
+      label: 集群标签
+    clusterLocation:
+      createLabel: Configure Cluster
+      detail: Configure cluster and node location options
+      savingLabel: Loading Resources
+      title: Cluster Location
+    clusterLogging:
+      label: System Logging Type
+      placeholder: logging.googleapis.com/kubernetes
+    clusterMonitoring:
+      label: System Monitoring Type
+      placeholder: monitoring.googleapis.com/kubernetes
+    clusterOption:
+      detail: Configure your cluster options.
+      title: Cluster Options
+    computeEngine:
+      label: 计算引擎
+    credential:
+      configured: 为 {project} 项目配置
+      helpText: "创建拥有 JSON 私钥的 <a href=\"https://console.cloud.google.com/projectselector/iam-admin/serviceaccounts\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Service Account</a>，并在此处提供 JSON。有关创建服务帐户的更多信息，请参考 <a href=\"https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Google Cloud 文档</a>。需要四个 IAM 角色: Compute Viewer (<code>roles/compute.viewer</code>)，(Project) Viewer (<code>roles/viewer</code>)，Kubernetes Engine Admin (<code>roles/container.admin</code>) 和 Service Account User (<code>roles/iam.serviceAccountUser</code>)，更多关于角色的信息可在 <a href=\"https://cloud.google.com/kubernetes-engine/docs/how-to/iam-integration\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">此处</a> 找到。<a href=\"https://cloud.google.com/kubernetes-engine/docs/how-to/iam-integration\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">\n"
+      label: 服务账号
+      placeholder: 服务帐号私钥 JSON 文件
+    dashboard:
+      label: Kubernetes 仪表盘
+    diskSizeGb:
+      label: 根磁盘大小
+    diskType:
+      label: 根磁盘类型
+      pd-ssd: SSD 持久磁盘
+      pd-standard: 标准持久磁盘
+    enableAutoRepair:
+      label: 自动修复
+    enableAutoUpgrade:
+      label: 自动升级
+    enableHorizontalPodAutoscaling:
+      label: Pod 自动横向伸缩
+    enableMasterAuthorizedNetwork:
+      label: 主节点认证网络
+    enableNodepoolAutoscaling:
+      label: 节点池自动横向伸缩
+    enablePrivateEndpoint:
+      label: 使用内部 IP 地址访问主节点
+    enablePrivateNodes:
+      label: 专用集群
+    header:
+      iPAllocationPolicy: IP 分配策略
+      masteAuth: Master Auth
+      masterAuthorizedNetwork: Master 授权网络
+      nodePoolAutoscaling: 主机池自动伸缩
+      privateCluster: 私有集群
+    httpLB:
+      label: Http 负载均衡
+    imageType:
+      COS: Container-Optimized OS
+      UBUNTU: Ubuntu
+      label: Image 类型
+    imageTypeV2:
+      COS: Container-Optimized OS with Docker
+      COS_D: Container-Optimized OS with Containerd
+      UBUNTU: Ubuntu with Docker
+      UBUNTU_D: Ubuntu with Containerd
+      WINDOWS_LTSC: Windows Long Term Service Channel
+      WINDOWS_SAC: Windows Semi-Annual Channel
+      label: Image Type
+    import:
+      clusterSelect:
+        createLabel: Register Cluster
+        detail: Choose an GKE cluster to register
+        input:
+          label: Cluster Name To register
+        loadLabel: Load Clusters
+        select:
+          label: Cluster To register
+        title: Choose Cluster
+      locations:
+        detail: Choose a region or zone to import an GKE cluster from
+        title: Cluster Location
+    ipAllocationPolicy:
+      clusterIpv4CidrBlock:
+        accesslabel: Cluster Pod address range
+        placeholder: e.g. 10.96.0.0/11
+      clusterSecondaryRange:
+        cidrLabel: Pod Secondary CIDR Block
+        nameLabel: Pod secondary Range Name
+      servicesSecondaryRange:
+        cidrLabel: Service Secondary CIDR Block
+        nameLabel: Services Secondary Range Name
+      title: IP Allocation Policy
+    ipPolicyClusterIpv4CidrBlock:
+      label: Pod 地址范围
+      placeholder: "例如: 10.96.0.0/11"
+    ipPolicyClusterSecondaryRangeName:
+      label: Cluster Secondary Range Name
+      placeholder: Your Cluster Secondary Range Name
+    ipPolicyCreateSubnetwork:
+      autoLabel: 自动创建子网
+      label: 创建子网
+      name: Subnetwork Name
+      placeholder: Your Subnetwork Name
+    ipPolicyNodeIpv4CidrBlock:
+      label: 节点 Ipv4 CIDR 地址
+      placeholder: 节点 Ipv4 CIDR 地址
+    ipPolicyServicesIpv4CidrBlock:
+      label: 服务地址范围
+      placeholder: "例如: 10.94.0.0/18"
+    ipPolicyServicesSecondaryRangeName:
+      label: Services Secondary Range Name
+      placeholder: Your Services Secondary Range Name
+    ipPolicySubnetworkName:
+      label: 子网名称
+      placeholder: 子网名称
+    issueClientCertificate:
+      label: 主节点认证
+    label: Google Kubernetes 引擎
+    legacyAuth:
+      label: 废弃的认证
+    localSsdCount:
+      label: 本地 SSD 磁盘数量
+    locationType:
+      label: 位置类型
+      region: 区域
+      zone: Zonal
+    locations:
+      label: 附加区域
+    loggingMonitoringWarning: Logging and Monitoring service options can be created independently, but they may not be updated separately. They must both either be NONE or have their corresponding service set.
+    loggingService:
+      default: logging.googleapis.com/kubernetes
+      label: Logging Service
+    machineType:
+      label: 虚拟机类型
+      prompt: 选择类型...
+    maintenanceWindow:
+      label: 维护窗口
+    masterAuthPassword:
+      label: 主节点认证密码
+      placeholder: 主节点认证密码
+      required: 主节点认证密码必须填写
+    masterAuthUsername:
+      label: 主节点认证用户名
+      placeholder: 主节点认证用户名
+      required: 主节点认证用户名必须填写
+    masterAuthorizedNetworkCidrBlocks:
+      addActionLabel: 添加 CIDR 地址
+      cidrBlock: CIDR Block
+      label: Master 授权网络 CIDR 地址
+      placeholder: Master 授权网络 CIDR 地址
+    masterIpv4CidrBlock:
+      error: A Master IPV4 CIDR block is required when creating a private cluster
+      help: Master CIDR block mask must be /28
+      label: Master IP 范围
+      placeholder: "例如: 10.42.0.0/28"
+    masterVersion:
+      channel: "{channel} channel"
+      label: Kubernetes 版本
+      prompt: 选择版本...
+      staticRelease: Static version
+      warning: 当您用 GKE 升级 Kubernetes 版本时，只有主 master 节点会被升级。如果您也想升级 worker 节点，则需要通过谷歌云平台手动升级。
+    maxNodeCount:
+      label: 最大节点数
+      minError: 最大节点数应大于最小节点数
+      required: 最大节点数必须填写
+    minNodeCount:
+      label: 最小节点数
+      required: 最小节点数必须填写
+    monitoringService:
+      default: monitoring.googleapis.com/kubernetes
+      label: Monitoring Service
+    network:
+      label: 网络
+    networkPolicy:
+      label: Network Policy
+    nodeCount:
+      label: 主机数量
+      outsideError: 节点池中指定的节点数超出了指定的自动伸缩限制
+      prompt: 选择类型...
+      required: 需要节点计数
+    nodeLabels:
+      addAction: 添加标签
+      label: 主机标签
+    nodePool:
+      addLabel: Add Node Pool
+      detail: Customize node pools.
+      noNodes: No Node Pools
+      remove: Remove Node Pool
+      title: Node Pools
+    nodePools:
+      groups:
+        title: Group Details
+      initialNodeCount:
+        label: Initial Node Count
+      maxPodsConstraint:
+        label: Max Pod Per Node
+      min:
+        label: Min Size
+      name:
+        label: Name
+      nodes:
+        title: Node Details
+    nodeSubNetwork:
+      label: Node Subnet
+    oauthScopes:
+      custom: 针对每个 API 设置访问权限
+      default: 允许默认访问权限
+      full: 允许所有 Cloud APIs 的全面访问权限
+      label: 访问权限范围
+    preemptible:
+      label: 可抢占的节点（测试版）
+      warning: Preemptible nodes will live at most 24 hours.
+    privateCluster:
+      details: GKE private clusters is an advanced and unique use case which requires a special GKE configurations. Before enabling private clusters ensure you have read through the <a href="{docsBase}/cluster-provisioning/hosted-kubernetes-clusters/gke/" target="_blank" rel="nofollow noopener noreferrer">GKE cluster provisioning docs</a> for instructions on configuring GKE so private nodes may communicate with {appName}.
+      privateEndpoint:
+        help: Control plane may only be accessed via the private IP.
+        label: Enable Private Endpoint
+      privateNodes:
+        label: Enable Private Nodes
+    privateEndpoint:
+      label: Private Endpoint
+    project:
+      label: 项目
+      placeholder: e.g. my-project
+    publicEndpoint:
+      label: Public Endpoint
+    region:
+      label: 区域
+      prompt: 选择区域...
+    serviceAccount:
+      label: 服务帐号
+    serviceControl:
+      label: 服务控制
+    serviceManagement:
+      label: 服务管理
+    shortLabel: Google GKE
+    stackDriverLogging:
+      label: Stackdriver 日志
+    stackdriverLoggingAPI:
+      label: Stackdriver Logging API
+    stackdriverMonitor:
+      label: Stackdriver 监控
+    stackdriverMonitoringAPI:
+      label: Stackdriver Monitoring API
+    stackdriverTrace:
+      label: Stackdriver Trace
+    storage:
+      label: 存储
+    subNetwork:
+      label: 主机子网
+    tablesOnly: Tables Only
+    taints:
+      addAction: 添加污点
+      effect:
+        label: 影响
+      key:
+        label: 键
+        placeholder: Key
+      label: 污点
+      required: 污点的 "key" 和 "value" 必须设置。
+      value:
+        label: 值
+        placeholder: Value
+    taskQueue:
+      label: 任务队列
+    useIpAliases:
+      label: 使用 Ip 别名
+    userInfo:
+      label: 用户信息
+    zone:
+      label: 区域
+      prompt: 选择区域...
+  header: 选择集群类型
+  import:
+    command:
+      instructionEksCluster: 您正在创建一个仅具有私有 API 访问权限的 EKS 集群。{appName} 需要访问 Kubernetes 端点才能完成集群创建;您必须手动运行以下命令之一。
+      instructionGkeCluster: You are creating a private GKE cluster, nodes in a private cluster do not have public IP addresses. For {appName} to finish setting up your cluster it must be able to speak to your nodes. Ensure you follow these <a href="{docsBase}/cluster-provisioning/hosted-kubernetes-clusters/gke/" target="_blank" rel="nofollow noopener noreferrer">private cluster provisioning instructions</a> to configure GKE in a way which allows this access.
+      instructions: "在现有的受支持的 Kubernetes 集群上运行下面的 kubectl 命令，将其导入 {appName}: "
+      instructionsAdminRole: "<b>注意: </b> 如果想要导入 Google Kubernetes Engine(GKE) 集群（或一些不提供绑定集群管理角色<b>cluster-admin</b>的 kubectl 配置文件的集群）, 需要通过以下命令来绑定集群管理角色<b>cluster-admin</b>。 用您的谷歌帐户地址替换<b>[USER_ACCOUNT]</b>（您可以使用 <b>gcloud config get-value account</b> 检索这个地址）。如果您不是导入谷歌 Kubernetes 集群，那么用 kubectl 配置文件中配置的执行用户替换<b>[USER_ACCOUNT]</b>。"
+      instructionsInsecure: "如果由于您的 {appName} 安装使用不受信任/自签名的 SSL 证书而出现 由未知权限签名的证书 错误，请运行下面的命令以绕过证书检查: "
+    helpBlock: 导入现有的 Kubernetes 集群。Kubernetes 集群的管理和配置继续由原提供商负责。
+    label: 导入
+    select:
+      eks:
+        helpBlock: 注册现有的 Amazon EKS 集群。
+        title: Amazon EKS
+      other:
+        helpBlock: 注册现在的 Rancher or <a id='k3s-info-external-link' href='https://k3s.io/' target='_blank' rel='nofollow noreferrer'>K3s</a> 支持的集群。
+        title: Rancher or K3s
+    shortLabel: 导入
+  importEks:
+    helpBlock: 注册一个现有的 Amazon EKS Kubernetes 集群。
+    label: 注册现有的 Amazon EKS 集群
+    shortLabel: 已注册
+  k3simport:
+    errors:
+      concurrency:
+        negative: 只有非负和非零的并发值是有效的。
+    label: Rancher K3S
+    shortLabel: K3S
+  kubernetesOptions:
+    detail: 自定义集群功能
+    title: Kubernetes 选项
+  linodelke:
+    accessConfig:
+      description: 为我们提供访问令牌，将用于访问您的 Linode 帐户
+      loading: 验证您的访问令牌
+      next: 继续集群配置
+      title: Linode 帐户访问配置
+    accessToken:
+      invalid: Access Token is invalid
+      label: 访问令牌
+      placeholder: 访问令牌用于访问您的 Linode 帐户
+      required: Access Token is required
+    clusterConfig:
+      description: 配置您的集群
+      loading: 保存集群配置
+      next: 继续选择节点池
+      title: 集群配置
+    kubernetesVersion:
+      label: Kubernetes 版本
+      placeholder: 为您的集群选择一个 kubernetes 版本
+      required: Kubernetes 版本是必需设置
+    label: Linode Kubernetes Engine
+    nodePoolConfig:
+      actions: Actions
+      addNodePool: 添加节点池
+      count: Count
+      cpus: CPUs
+      description: 配置您需要的节点池
+      hourly: Hourly
+      label: Label
+      loading: 创建集群...
+      monthly: Monthly
+      next: 创建
+      ram: RAM
+      storage: Storage
+      title: 节点池配置
+      update: Update
+    nodePools:
+      countError: All node counts must be greater than 0.
+      empty: 没有节点池
+      label: 选择节点池
+      placeholder: Please select a node type to add
+      required: 请至少添加一个节点池
+    region:
+      label: Region
+      placeholder: 为集群选择一个区域
+      required: Region is required
+    selectedNodePoolType:
+      label: 选择类型
+      placeholder: 选择节点池类型
+    shortLabel: Linode LKE
+    tags:
+      label: 标签
+      newTag: 新标签
+      noTags: 不添加任何标签
+      placeholder: 添加新标签
+  members:
+    detail: 控制哪些用户可以访问集群，以及他们拥有的对其进行更改的权限。
+    label: 成员角色
+  name:
+    label: 集群名称
+    placeholder: e.g. sandbox
+    required: 集群名称必须填写
+  nodes:
+    detail: 自定义将要创建的主机
+    title: 主机选项
+  oracleoke:
+    access:
+      detail: 选择用于验证和配置 Oracle 容器引擎的区域和 API 密钥。
+      loading: 从 Oracle 云基础设施加载值
+      next: "下一步: 验证和配置集群"
+      title: 选择用于验证和配置 Oracle 容器引擎的区域和 API 密钥。
+    bootVolumeSize:
+      error: Custom boot volume disk size should be greater than the default (46.6 GB)
+      label: Optionally override default boot volume size for nodes
+    cidr:
+      error: 虚拟云 CIDR 格式错误
+      label: 虚拟云网络 CIDR
+      placeholder: "例如: 172.16.0.0/16"
+      required: 需要虚拟云网络 CIDR
+    cluster:
+      detail: 为集群选择 Kubernetes 版本和每个可用域的节点数。
+      loading: 从 Oracle 云基础设施加载 VCNs
+      next: "下一步: 配置虚拟云网络"
+      title: 集群配置
+    compartmentOCID:
+      help: The compartment in which the cluster will reside
+      label: Compartment OCID
+      placeholder: The OCID of the compartment in which to create the resources
+      required: Compartment OCID is required
+    existingVCNDetails:
+      compartmentOCID: OCID of the VCN's compartment
+      compartmentOCIDHelp: 如果是集群区域，请留空。
+      compartmentOCIDPlaceholder: e.g. ocid1.compartment.oc1..aaaaaaaa...
+      lbSubnetName1: 第一个已存在的 LB 子网名称。
+      lbSubnetName1Placeholder: e.g. my-lb-sub-1
+      lbSubnetName2: 第二个已存在的 LB 子网名称 (如可用)。
+      lbSubnetName2Placeholder: e.g. my-lb-sub-2
+      vcnName: 已存在的 VCN 名称
+      vcnNamePlaceholder: e.g. my-vcn
+    flexShapeConfig:
+      error: Default Persistent Volume Disk Size should be greater than 0
+      label: Specify the number of OCPUs for the flex shape
+      placeholder: e.g. 10
+    instance:
+      detail: 配置将用作集群中的节点的实例。
+      title: 节点实例配置
+    instanceConfig:
+      gpuLabel: 实例配置 (CPU/Memory/GPU Type/GPU Count)
+      label: 实例配置 (CPU/Memory)
+      required: 需要实例配置
+    label: Oracle Container Engine long
+    localDisk:
+      label: Local Disk
+      placeholder: size GB
+    node:
+      detail: 选择将用于这个 Kubernetes 集群的节点类型
+      loading: 从 Oracle 云基础设施加载配置
+      next: "下一步: 配置节点实例"
+      title: 节点类型
+    nodeSSHKey:
+      label: 节点的 SSH 公钥
+      placeholder: 节点的可选 SSH 公钥
+    nodeShape:
+      label: Instance Shape'
+      required: Instance Shape is required
+    os:
+      label: 操作系统
+    quantityPerSubnet:
+      error: 节点数不应大于 {max}
+      help: 要在区域的每个可用性域中运行的节点数量
+      label: Nodes Per AD Count
+      placeholder: e.g. 1
+      required: 每个可用性域都需要节点
+    region:
+      help: The geographic region in which the cluster will run
+      label: 区域
+    secretKey:
+      label: 用户私钥
+      placeholder: 指定 OCI 用户的私有 API 密钥内容(PEM 格式)
+      provided: Provided
+      required: 需要用户私有 API 密钥
+    secretKeyPassphrase:
+      label: 用户私钥密码
+      placeholder: The passphrase (if any) that protects private key file the specified OCI user
+      provided: Provided
+    shortLabel: Oracle OKE
+    storageSize:
+      error: 默认的持久卷磁盘大小应该大于 0
+      label: 默认的持久卷磁盘大小
+      placeholder: e.g. 10
+    storageType:
+      label: 默认的持久卷磁盘类型
+    subnet:
+      label: 子网访问
+      required: Subnet access is required
+    subnetAccessOptions:
+      custom: Custom Create
+      existing: Existing
+      quick: Quick Create
+    tenancyOCID:
+      label: Tenancy OCID
+      placeholder: The OCID of the tenancy in which to create resources
+      required: Tenancy OCID is required
+    userFingerprint:
+      label: 用户指纹
+      placeholder: 与指定用户的私有 API 密钥对应的指纹
+      required: 用户私钥指纹必需设置
+    userOcid:
+      label: User OCID
+      placeholder: The OCID of a user who has access to the specified tenancy/compartment
+      required: Tenancy OCID is required
+    vcn:
+      detail: 配置将用于 Kubernetes 集群的虚拟云网络。
+      label: 虚拟云网络
+      required: VCN is required
+      title: 虚拟云网络
+    version:
+      label: Kubernetes 版本
+      required: Kubernetes 版本必须设置
+  otccce:
+    shortLabel: Open Telekom Cloud CCE
+  psp:
+    label: 默认的 Pod 安全策略
+    none: 没有配置策略
+    prompt: 选择 Pod 安全策略...
+    required: 启用时需要设置默认 Pod 安全策略
+  rancherd:
+    shortLabel: RancherD
+  register:
+    helpBlock: 注册现在的 Rancher、<a href='https://k3s.io/' target='_blank' rel='nofollow noreferrer'>K3s</a> 或者 EKS 集群。
+    label: 注册
+    shortLabel: 已注册
+    title: 使用现有的 Kubernetes 集群
+  rke:
+    address:
+      detail: 为主机配置公网地址和内网地址, 如果为 VPC 网络的云服务器，如果不指定公网地址节点将无法获取到对应公网 IP。
+      private:
+        label: 内网地址
+        placeholder: "例如: 1.2.3.4"
+      public:
+        label: 公网地址
+        placeholder: "例如: 1.2.3.4"
+      title: 主机地址
+      warning: 这似乎不是有效的 IP 地址
+    advanced:
+      detail: 自定义集群参数。
+      label: 高级集群选项
+    agentEnvVars:
+      label: Agent Environment Variables
+    auth:
+      label: 认证提供者
+      x509: x509
+    authorizedEndpoint:
+      detail: 授权集群访问地址可用于直接访问 Kubernetes API SERVER，绕过 Rancher API 代理。
+      label: 授权集群访问地址
+      title: 授权集群访问地址
+    cisScan:
+      scheduled:
+        enabled:
+          label: 启用 CIS 扫描
+        interval:
+          label: CIS 定时扫描间隔
+          placeholder: "例如: 0 0 * * *"
+        profile:
+          label: CIS 扫描配置文件
+        retention:
+          label: CIS 扫描报告保留副本数
+    clusterTempalteMissing: 启用了 Cluster Template Enforcement，您无法访问编辑此集群所需的模板。请与管理员联系。
+    clustersSelectTemplate:
+      label: 使用现有的 RKE 模板和修订版本
+      select:
+        label: 集群模板
+        prompt: 选择 RKE 集群模板
+    clustersSelectTemplateRevision:
+      select:
+        default: "{name} - Default (Created {ago})"
+        other: "{name} (Created {ago})"
+        prompt: 选择 RKE 集群模板修订
+    command:
+      instructions: 复制以下命令在主机的 SSH 终端运行。
+      winInstructions: 在一台或者多台运行了受支持的 Docker 版本的主机上运行 <code>CMD</code> 命令，并且 windows server 版本大于 <code class="code-version">{version}</code>.
+    customize:
+      detail: 自定义 Kubernetes 集群选项
+      label: 集群选项
+    detected: "{count, plural,\n=1{#台新主机注册成功 }\nother {#台新主机注册成功 }\n}\n"
+    dockerRootDir:
+      placeholder: "{dir} 是默认目录"
+    done: 完成
+    errors:
+      controlPlane: 请至少选择一个用于 management 角色的主机。
+      etcd: 请选择 1 个，3 个或 5 个主机用于 etcd。
+      worker: 请至少选择一个用于 worker 角色的主机。
+    etcd:
+      backupConfig:
+        accessKey:
+          label: S3 Access Key
+          placeholder: Your AWS access key
+        bucketName:
+          label: S3 Bucket Name
+          placeholder: e.g. backups
+        customCa:
+          label: 自定义 CA 证书
+          placeholder: 粘贴证书和必要的链证书, 以-----BEGIN CERTIFICATE-----开始
+        endpoint:
+          label: S3 Region Endpoint
+          placeholder: e.g. s3.us-west-2.amazonaws.com
+        folder:
+          label: S3 Folder
+          placeholder: e.g. cluster-backup
+        interval:
+          label: 备份周期
+          placeholder: e.g. 6
+        legacy: 当前集群配置了废弃的 ectd 快照设置。新的设置将创建时间和保留持续时间替换为更简单的创建时间(以小时和保留计数为单位)。系统已自动迁移了您的创建周期，保留计数已配置为默认的 6 个备份(当前保留时间:{duration})，如果您不介意这个设置，那不需要进一步的操作，您也可以在高级设置中更改此设置。
+        region:
+          label: S3 Region
+          placeholder: e.g. us-west-2
+        retention:
+          label: 备份副本
+          placeholder: e.g. 12
+          prefix: 份数
+        secretKey:
+          label: S3 Secret Key
+          placeholder: Your AWS secret key
+          provided: Provided
+      creation:
+        label: 备份创建周期
+        placeholder: 6h
+      election:
+        label: Etcd 选举超时时间
+        placeholder: 选举超时时间
+      enabled:
+        label: Etcd 备份轮换
+      error: "快照 {type} 周期错误: 必须指定一个时间值和时间单位 (s、m、h)，当前输入 {entry}"
+      heartbeat:
+        label: Etcd 心跳间隔时间
+        placeholder: 心跳间隔时间
+      location:
+        label: Etcd 备份存储
+        local:
+          help: Etcd 备份文件只保存在本地 /opt/rke/etcd-snapshots/ 目录，不发送到外部存储。
+          label: local
+        s3:
+          help: Etcd 备份工具将在本地 /opt/rke/etcd-snapshots/ 目录生成备份文件，随后将备份拷贝到 s3 存储。
+          label: s3
+      retention:
+        help: "可用的时间单位: h, m, s"
+        label: Etcd 备份有效期
+        placeholder: 12h
+      snapshot:
+        label: Etcd 备份轮换
+    gpu:
+      enableGPUManagement:
+        label: GPU 共享调度（显存单位）
+      nodePort:
+        label: 设置 GPU 扩展调度器使用的 NodePort 端口
+        placeholder: "例如: 1024"
+    helptext: 更改的主机模板只会影响新创建的节点。
+    ignoreDockerVersion:
+      disabled: 需要支持的版本
+      enabled: 允许不受支持的版本
+      label: 主机 Docker 版本
+    info:
+      text: 编辑主机选项将更新主机注册命令
+    ingress:
+      defaultBackend:
+        label: Nginx Default Backend
+      label: Nginx Ingress
+    kubeApi:
+      ipRange: 服务集群 IP 范围
+      label: Kube API
+      podSecurityPolicy: Pod 安全策略
+    kubeController:
+      cidr: 集群 CIDR
+      ipRange: 服务集群 IP 范围
+      label: Kube Controller
+    kubeProxy:
+      mode:
+        label: Kube Proxy Mode
+    kubelet:
+      dns: 集群 DNS 服务器
+      domain: 集群域
+      label: Kubelet
+    label: "{appName} Kubernetes 引擎"
+    labels:
+      detail: （可选）添加到节点的标签
+      title: 主机标签
+    monitoring:
+      label: 监控指标
+    network:
+      calico: Calico
+      canal: Canal (支持网络隔离)
+      detail: 为集群配置网络驱动
+      flannel: Flannel
+      flannelBackends:
+        hostgw: Host Gateway (L2bridge)
+        label: Flannel Backend
+        vxlan: VXLAN (Overlay)
+      flannelCustom: Flannel
+      label: 网络驱动
+      multusCanal: Canal+Macvlan
+      multusCanalOptions:
+        canalInterfaceName: Canal 接口名称
+        detail: 自定义网络插件选项
+        label: 网络高级选项
+      multusFlannel: Flannel+Macvlan
+      multusFlannelOptions:
+        detail: 自定义网络插件选项
+        flannelInterfaceName: Flannel 接口名称
+        label: 网络高级选项
+      none: None
+      options:
+        calico:
+          cloudProvider:
+            label: 云提供商
+        canal:
+          iface:
+            label: 接口
+        flannel:
+          iface:
+            label: 接口
+      title: 网络驱动
+      type:
+        info: 仅支持 host-gw 后端
+      weave: Weave
+    networkMTU:
+      detail: "例如: 1500"
+      help: 自定义容器网卡 MTU 值。默认网络传输的 MTU 为 1500，对于有些网络驱动(比如 canal)，由于使用 vxlan 后端，会有 50bit 用于传输 vxlan 的 tag，所以在主机上创建的网桥 flannel.1 的 MTU 值是 1450。而默认创建的容器网卡 MTU 值是 1500，为了对应网桥 flannel.1 的 MTU 值，可通过这个参数来自定义容器网卡的 MTU 值。
+      label: 容器网卡 MTU
+    networkPolicy:
+      label: 项目网络隔离
+    nodeName:
+      detail: (可选) 自定义节点显示的名称，不显示实际的主机名
+      placeholder: "例如: My-worker-node"
+      title: 节点名称
+    nodes:
+      add: 添加主机池
+      addTemplate: 添加主机模板
+      count: 数量
+      deleteNotReadyAfterSecs: 自动替换
+      deleteNotReadyAfterSecsTooltip: 如果大于 0，那么长时间无法访问的节点将被自动删除和替换。
+      detail: 配置集群需要的主机节点
+      drainBeforeDelete: Drain Before Delete
+      hostnamePrefix: 主机池名称前缀
+      myTemplatesGroup: 我的模板
+      othersTemplatesGroup: 其他模板
+      taints: Taints
+      template: 主机模板
+      templatePrompt: 选择模板...
+      title: 主机池
+    podSecurityPolicy:
+      label: Pod 安全策略 (需先在全局下创建 Pod 策略)
+    registry:
+      custom: 自定义镜像仓库
+      default: 默认的镜像仓库（DockerHub）
+      label: 从以下仓库拉取 Kubernetes 镜像
+      password:
+        label: 密码
+      url:
+        label: URL
+        placeholder: "例如: quay.io"
+      user:
+        label: 用户名
+    role:
+      detail: "选择主机角色,端口放行请参考: https://rancher.com/docs/rancher/v2.x/en/installation/references/"
+      header:
+        controlplane: Control Plane
+        etcd: Etcd
+        worker: Worker
+      pageheader: 添加主机命令
+      requirements:
+        controlplane: 1 或更多
+        etcd: 1,3 或 5
+        label: "所需主机个数: "
+        worker: 1 或更多
+      sectionheader: 主机选项
+      title: 角色选择（每台主机可以运行多个角色。每个集群至少需要一个 Etcd 角色、一个 Control 角色、一个 Worker 角色）
+      warning: The cluster needs to have at least one node with each role in order for {appName} to finish provisioning.
+    secretsEncryption:
+      label: 加密密文
+    serviceNodePortRange:
+      label: NodePort 范围
+      placeholder: "例如: 30000-32767"
+    shortLabel: 自定义
+    system:
+      detail: 将添加到集群的主机的操作系统
+      linux: Linux
+      title: 主机操作系统
+      windows: Windows
+    taints:
+      detail: （可选）添加到节点的污点（taints）
+      title: 节点污点（Taints）
+    upgradeStrategy:
+      drainNodes:
+        label: 节点驱逐（升级节点之前，是否先驱散节点 Pod）
+      maximumWorkersDown:
+        label: 最大不可用 Worker 节点数
+        mode:
+          count: 台
+          percentage: 百分比
+        placeholder: "例如: 6"
+        view:
+          count: "{value}"
+          percentage: "{value}%"
+    version:
+      label: Kubernetes 版本
+    warning:
+      aws:
+        iam: 使用 Amazon Cloud Provider 时，应在节点模板中配置 IAM 角色名称
+      etcd:
+        even: 设置 {count} 个 etcd 主机是对硬件的浪费，因为它不会增加仲裁，除非它是奇数。
+        noEtcd: 至少需要一个 etcd 主机。
+    windowsSupport:
+      disabled: 不支持 {plugin} 网络提供商。
+      help: 适用于 Kubernetes 1.15 与 Flannel 网络提供商。
+      label: Windows 支持
+  rke2:
+    label: Rancher RKE Government
+    shortLabel: RKE Government
+  rkeWindows:
+    shortLabel: Windows
+  security:
+    detail: 自定义 GKE 服务账号和访问权限
+    title: 安全
+cruPrivateRegistry:
+  add:
+    label: 添加私有镜像仓库
+  defaultError: 您必须指定默认的私有镜像仓库。
+  noData: 当前集群没有配置私有镜像仓库
+  registry:
+    default:
+      label: 默认仓库
+    password:
+      label: 密码
+    url:
+      label: 仓库地址
+    user:
+      label: 用户名
+  title:
+    detail: 给集群配置私有镜像仓库，当开始构建集群时会通过此镜像仓库拉取所需的全部镜像。
+    detailAtImportCluster: 给集群配置私有镜像仓库，部署 Rancher 服务组件时会通过此镜像仓库拉取所需的全部镜像（注意：设置该项会覆盖全局系统设置中的 system-default-registry 参数）。
+    label: 私有镜像仓库
+editApiKey:
+  accessKey: Access Key(用户名)
+  basicAuth: "Access Key 和 Secret Key 可以作为 HTTP 基本身份验证的用户名和密码发送，以授权请求。您也可以将它们组合为 Bearer Token: "
+  description:
+    placeholder: "可选: 例如: 此密钥由应用服务器使用，用于容器部署。"
+  noteOptional: 说明是可选项，以帮助您记住此密钥将用于何种用途。
+  saveWarning1: 请保存上面的信息！这些信息仅显示一次。
+  saveWarning2: 如果忘记了 Secret Key，您需要重新创建新的 API Key。
+  scope: 作用范围
+  scopeSelect:
+    helpText: "集群范围的令牌可用于直接与<a href=\"https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#authorized-cluster-endpoint\" target=\"_blank\" rel=\"nofollow noreferrer\"授权集群端点</a>配置的集群 API 交互。"
+    prompt: 不指定作用范围(默认作用于所有集群)
+  secretKey: Secret Key(密码)
+  title:
+    editing: 编辑 API Key
+    justCreated: API Key 已创建
+    new: 添加 API Key
+  token: Bearer Token
+  ttl:
+    custom: 自定义
+    day: 从现在开始，有效期 1 天
+    label: 自动过期时间
+    max:
+      label: "{time} - 最大允许"
+      unit:
+        days: "{count, plural, =1 {# Day} other {# Days}}"
+        hours: "{count, plural, =1 {# Hour} other {# Hours}}"
+        minutes: "{count, plural, =1 {# Minute} other {# Minutes}}"
+        years: "{count, plural, =1 {# Year} other {# Years}}"
+    month: 从现在开始，有效期 1 个月
+    never: 永不过期
+    year: 从现在开始，有效期 1 年
+formCapabilityPodSecurityPolicy:
+  capabilities:
+    add: 默认添加的能力
+    allow: 启用的功能
+    drop: 必须禁用的内核能力
+  detail: 配置一组功能策略
+  title: 内核安全策略

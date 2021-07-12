@@ -1,0 +1,1221 @@
+clusterNew:
+  advanced:
+    cancel: Edit as a Form
+    helpText: Tabs are not able to be used in the yaml file for parsing.
+    viewCancel: View as a Form
+    viewYaml: View as YAML
+    yaml: Edit as YAML
+  aliyunack:
+    shortLabel: Alibaba ACK
+  amazoneks:
+    access:
+      detail: Choose the region and API Key that will be used to launch Amazon EKS
+      next: "Next: Configure Cluster"
+      region: Region
+      title: Account Access
+    accessKey:
+      label: Access Key
+      placeholder: Your AWS access key
+    ami:
+      help: You may override the default AMI based on your region
+      label: Custom AMI Override
+    associateWorkerNodePublicIp:
+      radio:
+        default: Yes
+        off: "No: Private IPs only"
+      title: Public IP for Worker Nodes
+    clusterOption:
+      detail: Customize the cluster that will be used to launch EKS Instances
+      title: Cluster Options
+    desired:
+      label: Desired ASG Size
+    errors:
+      clusterSpec: Unable to parse the clusters upstream spec. Is the cluster ready?
+    import:
+      clusterSelect:
+        createLabel: Register Cluster
+        detail: Choose an EKS cluster to register
+        input:
+          label: Cluster Name To register
+        select:
+          label: Cluster To register
+        title: Choose Cluster
+    ingressWarning: "Note: Currently Amazon EKS will not create an ingress controller when launching a new cluster. If you need this functionality you will have to create an ingress controller manually after cluster creation."
+    kubernetesVersion:
+      label: Kubernetes Version
+      placeholder: Select the Kubernetes Version to install
+      warning: EKS only allows a Kubernetes version greater than 1 minor release. Please update node group versions before updating the cluster version.
+    label: Amazon Elastic Container Service for Kubernetes
+    logging:
+      api:
+        label: API
+        tooltip: Your cluster's API server is the control plane component that exposes the Kubernetes API.
+      audit:
+        label: Audit
+        tooltip: Kubernetes audit logs provide a record of the individual users, administrators, or system components that have affected your cluster.
+      authenticator:
+        label: Authenticator
+        tooltip: Authenticator logs are unique to Amazon EKS. These logs represent the control plane component that Amazon EKS uses for Kubernetes Role Based Access Control (RBAC) authentication using IAM credentials.
+      controllerManager:
+        label: Controller Manager
+        tooltip: The controller manager manages the core control loops that are shipped with Kubernetes.
+      detail: Configure control plane logs to send to Amazon CloudWatch. You are charged the standard CloudWatch Logs data ingestion and storage costs for any logs sent to CloudWatch Logs from your clusters.
+      scheduler:
+        label: Scheduler
+        tooltip: The scheduler component manages when and where to run pods in your cluster.
+      title: Logging
+    max:
+      label: Maximum ASG Size
+    min:
+      label: Minimum ASG Size
+    nodeGroups:
+      addLabel: Add Node Group
+      detail: Customize managed node groups.
+      noNodes: No Node Groups
+      title: Managed Node Groups
+    nodeVolumeSize:
+      label: Node Volume Size
+      placeholder: e.g. 20
+    region:
+      label: Region
+    role:
+      help: You may choose to not select a Service Role and one will be created for you.
+      label: Service Role
+      loading: Loading network options from Amazon...
+      next: "Next: Configure Network"
+      noneSelected: Rancher created role
+      radio:
+        custom: "Custom: Choose from your existing service roles"
+        default: "Standard: Service role is automatically created"
+    secretKey:
+      label: Secret Key
+      placeholder: Your AWS secret key
+      provided: Provided
+    secretsEncryption:
+      disabled: None
+      failure: There was a problem loading KMS Encryption keys but you may still enter a KeyARN if you know it.
+      kms: "KMS Key: Select or Enter KMS Key that will be used to encrypt secrets"
+      kmsHelpLabel: KMS Key ARN
+      label: Secrets Encryption
+    securityGroup:
+      choose: Choose one or more existing groups
+      defaultCreate: "Standard: Automatically create a new security group"
+      defaultExisting: "Standard: Use the existing <code>{groupName}</code> group"
+      detail: EKS creates a security group for your cluster by default. You may choose additional security groups that will be applied to EKS Instances along side the default security group created by EKS.
+      loading: Loading Instance options...
+      next: "Next: Set Instance options"
+      noneSelected: Auto created Security Group
+      title: Security Groups
+    sessionToken:
+      label: Session Token  <em class='text-muted'>Optional</em>
+      placeholder: Your AWS session token
+      provided: Provided
+    shortLabel: Amazon EKS
+    subnet:
+      help: EKS requires at least 2 subnets. Subnets should span at least 2 availability zones.
+      loading: Loading Security Groups from Amazon...
+      next: "Next: Select Security Group"
+      noneSelected: Rancher created VPC and Subnet
+      title: Subnet
+    tags:
+      addActionLabel: Add Tag
+      label: Tags
+    userData:
+      help: Pass user-data to the nodes to perform automated configuration tasks
+      label: User Data
+      placeholder: Paste in the script
+    vpc:
+      access:
+        endpoints:
+          addActionLabel: Add Endpoint
+          helpBlock: Optionally limit access to the public endpoint via explicit CIDR blocks. If you limit access to specific CIDR blocks, then it is recommended that you also enable the private access to avoid loosing network communitcation to the cluster.
+          label: Public Access Endpoints
+          valueLabel: Endpoints
+        help: Configuring Public/Priavte API access is an advanced use case. Users are encouraged to read the EKS cluster endpoint access control <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html" target="_blank"  rel="nofollow noopener noreferrer">documentation</a>.
+        private:
+          label: Private Access
+        public:
+          label: Public Access
+          tooltip: Rancher needs network access to the Kubernetes endpoint; disabling the public access will prevent Rancher from communicating with the endpoint if Rancher's network is not part of the private network.
+        title: API Server Endpoint Access
+      detail: Choose the network and access options that will be used for EKS Instances
+      loading: Loading Subnets from Amazon...
+      loadingRancherDefault: Loading Instance options...
+      next: "Next: Select Subnets"
+      nextRancherDefault: "Next: Select Instance Options"
+      noneSelected: Rancher created VPC and Subnet
+      radio:
+        custom: "Custom: Choose from your existing VPC and Subnets"
+        default: "Standard: VPC and Subnet are automatically created"
+      title: Networking
+  azureaks:
+    access:
+      detail: Configure the Azure Active Directory (AD) Service Principal that will be used to talk to Azure
+      help: You can find instructions on how to create an Azure AD Service Principal <a href="https://docs.microsoft.com/en-us/azure/aks/kubernetes-service-principal" target="_blank">here</a>.
+      title: Account Access
+    accountAccessSection:
+      label: Account Access
+    admin:
+      label: Admin Username
+      placeholder: user-1
+    authenticate:
+      next: "Next: Authenticate & configure nodes"
+    availabilitySet:
+      label: Availability Set
+      placeholder: availability-set-name
+    clientId:
+      label: Client ID
+      placeholder: Your Client ID
+    clientSecret:
+      label: Client Secret
+      placeholder: Your Client Secret
+    count:
+      label: Node Count
+      placeholder: e.g. 1
+    diskSizeGb:
+      label: OS Disk Size
+      placeholder: e.g. 100
+    dns:
+      label: DNS Prefix
+      placeholder: e.g. example
+    dockerPort:
+      label: Docker Port
+      placeholder: "2376"
+    enableHttpApplicationRouting:
+      label: HTTP Application Routing
+    enableMonitoring:
+      label: Monitoring
+    environment:
+      label: Environment
+    errors:
+      included:
+        dnsServiceIp: Kubernetes DNS service IP address must be valid a ip address.
+        dockerBridgeCidr: Docker bridge address must be valid CIDR format.
+        parsedDnsServiceIp: Kubernetes DNS service IP address must fall within the entered Kubernetes service address range.
+        parsedDockerBridgeCidr: Docker bridge address can not overlap with the selected Virtual Network or the Kubernetes service address range
+        parsedServiceCidr: Kubernetes service address range must fall within the selected Virtual Network range.
+        serviceCidr: Kubernetes service address range must be valid CIDR format.
+    image:
+      label: Image
+      placeholder: canonical:UbuntuServer:18.04-LTS:latest
+    ingressWarning: "Note: Currently Azure AKS will not create an ingress controller when launching a new cluster. If you need this functionality you will have to create an ingress controller manually after cluster creation."
+    kubernetesVersion:
+      label: Kubernetes Version
+      prompt: Choose a Version...
+    label: Azure Container Service
+    loadBalancerSku:
+      basic: 基本
+      label: LoadBalancer SKU
+      standard: 标准
+    location:
+      label: Location
+      prompt: Choose a location...
+    machineType:
+      label: VM Size
+      prompt: Choose a size...
+    members:
+      label: Member Roles
+    networkPolicy:
+      label: Network Policy
+      placeholder: Select a Network Policy
+    networking:
+      advanced: Advanced
+      default: Default
+      dnsServiceIp:
+        help: "An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range. For example: 10.0.0.10."
+        label: Kubernetes DNS service IP address
+        placeholder: e.g. 10.0.0.10
+      dockerBridgeCidr:
+        help: "An IP address and netmask assigned to Docker Bridge. It must not be in any Subnet IP ranges, or the Kubernetes service address range. For example: 172.17.0.1/16."
+        label: Docker bridge address
+        placeholder: e.g. 172.17.0.1/16
+      label: Networking
+      networkPlugin:
+        label: Network Plugin
+        prompt: Select a Network Plugin
+      podCidr:
+        help: "A CIDR notation IP range from which to assign pod IPS. For example: 172.244.0.0/16"
+        label: Kubernetes pod address range
+        placeholder: e.g. 172.244.0.0/16
+      serviceCidr:
+        help: "A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges. For example: 10.0.0.0/16."
+        label: Kubernetes service address range
+        prompt: 10.43.0.0/16
+      subnet:
+        label: Subnet
+      vnet:
+        label: Virtual Network - Subnet (Subnet CIDR)
+        prompt: Select a Virtual Network/Subnet
+      vnetresourcegroup:
+        help: The Resource Group if your Virtual Network does not exist in the same Resource Group as your cluster.
+        label: Virtual Network Resource Group
+        prompt: Please select a Virtual Network
+    noPublicIp:
+      label: No Public IP
+    openPort:
+      label: Open Port
+      placeholder: Comma-separated, e.g. 80,443
+    placement:
+      label: Placement
+    pod:
+      label: Pod Security Policies
+    privateIpAddress:
+      label: Private IP
+      placeholder: 127.0.0.1
+    publishSettingsFile:
+      label: Publish Settings
+      placeholder: Your Publish Settings file
+    region:
+      label: Region
+    resourceGroup:
+      helpText: "Use an existing resource group or enter a new resource group name and one will be created for you. Note: Using a resource group containing an existing AKS cluster will create a new resource group. Azure AKS only allows one AKS cluster per resource group."
+      label: Cluster Resource Group
+      placeholder: docker-machine
+    security:
+      label: Security
+    shortLabel: Azure AKS
+    size:
+      label: Size
+    ssh:
+      label: SSH Public Key
+      placeholder: Paste in your SSH public key
+    sshUser:
+      label: SSH User
+      placeholder: usr1
+    staticPublicIp:
+      label: Public IP
+    storageType:
+      label: Storage Type
+    subnet:
+      label: Subnet
+      placeholder: example-sub-name
+    subnetPrefix:
+      label: Subnet Prefix
+      placeholder: 128.42.0.0/21
+    subscriptionId:
+      label: Subscription ID
+      placeholder: Your Azure subscription ID
+    tags:
+      addActionLabel: Add Tag
+      label: Tags
+    tenant:
+      label: Tenant ID
+      placeholder: Your Azure tenant ID
+    usePrivateIp:
+      label: Use Private IP To Connect
+    vnet:
+      label: VNet
+      placeholder: "[resourcegroup:]name"
+  config:
+    detail: Choose where the nodes for the cluster will come from
+    label: Provider
+  custom:
+    helpBlock: Create a new Kubernetes cluster using RKE, out of existing bare-metal servers or virtual machines.
+    label: Existing nodes
+    shortLabel: Custom
+    subtitle: With RKE and existing bare-metal servers or virtual machines.
+    title: Create a new Kubernetes cluster
+  customize:
+    title: Cluster Options
+  description:
+    placeholder: e.g. Cluster for dev and test workloads
+  driverLabels:
+    cloud: With a hosted Kubernetes provider
+    custom: From my own existing nodes
+    import: Import existing cluster
+    infra: With RKE and new nodes in an infrastructure provider
+    noCloud: There are no cluster drivers enabled.
+    noInfra: There are no node drivers enabled.
+  externalError: Component could not be loaded. Check URL.
+  googlegke:
+    access:
+      cloudCred: Cloud Credential
+      detail: Choose the Google Project ID and Cloud Credential that will be used to launch your cluster.
+      next: "Next: Configure Cluster"
+      projectId:
+        help: Must to match Project Id from Credential JSON
+        label: Google Project ID
+      title: Google Account Access
+    alphaFeatures:
+      label: Alpha Features
+      warning: Warning! <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/alpha-clusters" target="_blank" rel="nofollow noopener noreferrer">Kubernetes Alpha Features</a> should not be used for production clusters. Alpha Clusters expire after 30 days along with other caveats. Ensure you fully understand this feature before enabling it.
+    autoRepairUpgradeWarning:
+      label: When editing an Imported cluster, we recommend that you enable Auto Upgrade and Auto Repair for node pools. These fields are required for clusters launched from the Release channel and recommended otherwise. If these fields are not enabled, you may not be able to recover this node pool.
+    autoscaling:
+      label: Autoscaling
+    bigQuery:
+      label: BigQuery
+    bigtableAdmin:
+      label: Bigtable Admin
+    bigtableData:
+      label: Bigtable Data
+    checkServiceAccount: "Next: Configure Nodes"
+    checkingServiceAccount: Authenticating...
+    cloudDatastore:
+      label: Cloud Datastore
+    cloudDebugger:
+      label: Cloud Debugger
+    cloudPlatform:
+      label: Cloud Platform
+    cloudPub:
+      label: Cloud Pub/Sub
+    cloudSQL:
+      label: Cloud SQL
+    cloudSourceRepositories:
+      label: Cloud Source Repositories
+    clusterAddons:
+      horizontalPodAutoscaling: Horizontal Pod Autoscaling
+      httpLoadBalancing: HTTP (L7) Load Balancing
+      label: Cluster Addons
+      networkPolicyConfig: Network Policy Config (master only)
+    clusterDescription:
+      label: Cluster Description
+    clusterExtras:
+      detail: Configure addtional cluster options and features
+      title: Additional Options
+    clusterFeatures:
+      label: Cluster Features
+    clusterIpv4Cidr:
+      label: Container Address Range
+      placeholder: e.g. 10.42.0.0/16
+    clusterLabels:
+      addAction: Add Label
+      label: Cluster Labels
+    clusterLocation:
+      createLabel: Configure Cluster
+      detail: Configure cluster and node location options
+      savingLabel: Loading Resources
+      title: Cluster Location
+    clusterLogging:
+      label: System Logging Type
+      placeholder: logging.googleapis.com/kubernetes
+    clusterMonitoring:
+      label: System Monitoring Type
+      placeholder: monitoring.googleapis.com/kubernetes
+    clusterOption:
+      detail: Configure your cluster options.
+      title: Cluster Options
+    computeEngine:
+      label: Compute Engine
+    credential:
+      configured: Configured for {project} project
+      helpText: "Create a <a href=\"https://console.cloud.google.com/projectselector/iam-admin/serviceaccounts\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Service Account</a> with a JSON private key and provide the JSON here.  See <a href=\"https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Google Cloud docs</a> for more info about creating a service account. These IAM roles are required: Compute Viewer (<code>roles/compute.viewer</code>), (Project) Viewer (<code>roles/viewer</code>), Kubernetes Engine Admin (<code>roles/container.admin</code>), Service Account User (<code>roles/iam.serviceAccountUser</code>). More info on roles can be found <a href=\"https://cloud.google.com/kubernetes-engine/docs/how-to/iam-integration\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">here.</a>"
+      label: Service Account
+      placeholder: Service account private key JSON file
+    dashboard:
+      label: Kubernetes Dashboard
+    diskSizeGb:
+      label: Root Disk Size
+    diskType:
+      label: Root disk type
+      pd-ssd: SSD persistent disk
+      pd-standard: Standard persistent disk
+    enableAutoRepair:
+      label: Auto Repair
+    enableAutoUpgrade:
+      label: Auto Upgrade
+    enableHorizontalPodAutoscaling:
+      label: Horizontal Pod Autoscaling
+    enableMasterAuthorizedNetwork:
+      label: Master Authorized Network
+    enableNodepoolAutoscaling:
+      label: Node Pool Autoscaling
+    enablePrivateEndpoint:
+      label: Access Master Using Its Internal IP Address
+    enablePrivateNodes:
+      label: Private Cluster
+    header:
+      iPAllocationPolicy: IP Allocation Policy
+      masteAuth: Master Auth
+      masterAuthorizedNetwork: Master Authorized Network
+      nodePoolAutoscaling: Node Pool Autoscaling
+      privateCluster: Private Cluster
+    httpLB:
+      label: Http Load Balancing
+    imageType:
+      COS: Container-Optimized OS
+      UBUNTU: Ubuntu
+      label: Image Type
+    imageTypeV2:
+      COS: Container-Optimized OS with Docker
+      COS_D: Container-Optimized OS with Containerd
+      UBUNTU: Ubuntu with Docker
+      UBUNTU_D: Ubuntu with Containerd
+      WINDOWS_LTSC: Windows Long Term Service Channel
+      WINDOWS_SAC: Windows Semi-Annual Channel
+      label: Image Type
+    import:
+      clusterSelect:
+        createLabel: Register Cluster
+        detail: Choose an GKE cluster to register
+        input:
+          label: Cluster Name To register
+        loadLabel: Load Clusters
+        select:
+          label: Cluster To register
+        title: Choose Cluster
+      locations:
+        detail: Choose a region or zone to import an GKE cluster from
+        title: Cluster Location
+    ipAllocationPolicy:
+      clusterIpv4CidrBlock:
+        accesslabel: Cluster Pod address range
+        placeholder: e.g. 10.96.0.0/11
+      clusterSecondaryRange:
+        cidrLabel: Pod Secondary CIDR Block
+        nameLabel: Pod secondary Range Name
+      servicesSecondaryRange:
+        cidrLabel: Service Secondary CIDR Block
+        nameLabel: Services Secondary Range Name
+      title: IP Allocation Policy
+    ipPolicyClusterIpv4CidrBlock:
+      label: Pod address range
+      placeholder: e.g. 10.96.0.0/11
+    ipPolicyClusterSecondaryRangeName:
+      label: Cluster Secondary Range Name
+      placeholder: Your Cluster Secondary Range Name
+    ipPolicyCreateSubnetwork:
+      autoLabel: Auto Create Subnetwork
+      label: Create Subnetwork
+      name: Subnetwork Name
+      placeholder: Your Subnetwork Name
+    ipPolicyNodeIpv4CidrBlock:
+      label: Node Ipv4 CIDR Block
+      placeholder: Your Node Ipv4 CIDR Block
+    ipPolicyServicesIpv4CidrBlock:
+      label: Service address range
+      placeholder: e.g. 10.94.0.0/18
+    ipPolicyServicesSecondaryRangeName:
+      label: Services Secondary Range Name
+      placeholder: Your Services Secondary Range Name
+    ipPolicySubnetworkName:
+      label: Subnetwork Name
+      placeholder: Your Subnetwork Name
+    issueClientCertificate:
+      label: Master Auth
+    label: Google Kubernetes Engine
+    legacyAuth:
+      label: Legacy Authorization
+    localSsdCount:
+      label: Local SSD disks
+    locationType:
+      label: Location Type
+      region: Regional
+      zone: Zonal
+    locations:
+      label: Additional Zones
+    loggingMonitoringWarning: Logging and Monitoring service options can be created independently, but they may not be updated separately. They must both either be NONE or have their corresponding service set.
+    loggingService:
+      default: logging.googleapis.com/kubernetes
+      label: Logging Service
+    machineType:
+      label: Machine Type
+      prompt: Choose a Type...
+    maintenanceWindow:
+      label: Maintenance Window
+    masterAuthPassword:
+      label: Master Endpoint Password
+      placeholder: Your Master Endpoint Password
+      required: "\"Master Endpoint Password\" is required"
+    masterAuthUsername:
+      label: Master Endpoint Username
+      placeholder: Your Master Endpoint Username
+      required: "\"Master Endpoint Username\" is required"
+    masterAuthorizedNetworkCidrBlocks:
+      addActionLabel: Add CIDR Block
+      cidrBlock: CIDR Block
+      label: Master Authorized Network CIDR Blocks
+      placeholder: Your Master Authorized Network CIDR Blocks
+    masterIpv4CidrBlock:
+      error: A Master IPV4 CIDR block is required when creating a private cluster
+      help: Master CIDR block mask must be /28
+      label: Master IPV4 CIDR Block
+      placeholder: e.g. 10.42.0.0/28
+    masterVersion:
+      channel: "{channel} channel"
+      label: Kubernetes Version
+      prompt: Choose a Version...
+      staticRelease: Static version
+      warning: When you upgrade the Kubernetes version with GKE only the master version will be upgraded. If you would like to upgrade the nodes as well you will need to do this manually via the Google Cloud Platform.
+    maxNodeCount:
+      label: Maximum Node Count
+      minError: Maximum Node Count should greater Minimum Node Count
+      required: "\"Maximum Node Count\" is required"
+    minNodeCount:
+      label: Minimum Node Count
+      required: "\"Minimum Node Count\" is required"
+    monitoringService:
+      default: monitoring.googleapis.com/kubernetes
+      label: Monitoring Service
+    network:
+      label: Network
+    networkPolicy:
+      label: Network Policy
+    nodeCount:
+      label: Node Count
+      outsideError: The specified number of nodes in the node pool is outside the specified autoscaling limits
+      prompt: Choose a Type...
+      required: Node Count is required
+    nodeLabels:
+      addAction: Add Label
+      label: Node Labels
+    nodePool:
+      addLabel: Add Node Pool
+      detail: Customize node pools.
+      noNodes: No Node Pools
+      remove: Remove Node Pool
+      title: Node Pools
+    nodePools:
+      groups:
+        title: Group Details
+      initialNodeCount:
+        label: Initial Node Count
+      maxPodsConstraint:
+        label: Max Pod Per Node
+      min:
+        label: Min Size
+      name:
+        label: Name
+      nodes:
+        title: Node Details
+    nodeSubNetwork:
+      label: Node Subnet
+    oauthScopes:
+      custom: Set access for each API
+      default: Allow default access
+      full: Allow full access to all Cloud APIs
+      label: Access scopes
+    preemptible:
+      label: Preemptible nodes (beta)
+      warning: Preemptible nodes will live at most 24 hours.
+    privateCluster:
+      details: GKE private clusters is an advanced and unique use case which requires a special GKE configurations. Before enabling private clusters ensure you have read through the <a href="{docsBase}/cluster-provisioning/hosted-kubernetes-clusters/gke/" target="_blank" rel="nofollow noopener noreferrer">GKE cluster provisioning docs</a> for instructions on configuring GKE so private nodes may communicate with {appName}.
+      privateEndpoint:
+        help: Control plane may only be accessed via the private IP.
+        label: Enable Private Endpoint
+      privateNodes:
+        label: Enable Private Nodes
+    privateEndpoint:
+      label: Private Endpoint
+    project:
+      label: Project
+      placeholder: e.g. my-project
+    publicEndpoint:
+      label: Public Endpoint
+    region:
+      label: Region
+      prompt: Choose a Region...
+    serviceAccount:
+      label: Service Account
+    serviceControl:
+      label: Service Control
+    serviceManagement:
+      label: Service Management
+    shortLabel: Google GKE
+    stackDriverLogging:
+      label: Stackdriver Logging
+    stackdriverLoggingAPI:
+      label: Stackdriver Logging API
+    stackdriverMonitor:
+      label: Stackdriver Monitoring
+    stackdriverMonitoringAPI:
+      label: Stackdriver Monitoring API
+    stackdriverTrace:
+      label: Stackdriver Trace
+    storage:
+      label: Storage
+    subNetwork:
+      label: Subnet
+    tablesOnly: Tables Only
+    taints:
+      addAction: Add Taint
+      effect:
+        label: Effect
+      key:
+        label: Key
+        placeholder: Key
+      label: Taints
+      required: Taint "key" and "value" are required.
+      value:
+        label: Value
+        placeholder: Value
+    taskQueue:
+      label: Task queue
+    useIpAliases:
+      label: Ip Aliases
+    userInfo:
+      label: User Info
+    zone:
+      label: Zone
+      prompt: Choose a Zone...
+  header: Select Cluster Type
+  import:
+    command:
+      instructionEksCluster: You are creating an EKS cluster that has private API access only. {appName} requires network access to the Kubernetes endpoint to complete cluster creation; You must manually run one of the following commands.
+      instructionGkeCluster: You are creating a private GKE cluster, nodes in a private cluster do not have public IP addresses. For {appName} to finish setting up your cluster it must be able to speak to your nodes. Ensure you follow these <a href="{docsBase}/cluster-provisioning/hosted-kubernetes-clusters/gke/" target="_blank" rel="nofollow noopener noreferrer">private cluster provisioning instructions</a> to configure GKE in a way which allows this access.
+      instructions: "Run the kubectl command below on an existing Kubernetes cluster running a supported Kubernetes version to import it into {appName}:"
+      instructionsAdminRole: <b>Note:</b> If you want to import a Google Kubernetes Engine (GKE) cluster (or any cluster that does not supply you with a kubectl configuration file with the ClusterRole <b>cluster-admin</b> bound to it), you need to bind the ClusterRole <b>cluster-admin</b> using the command below.<br/><br/>Replace <b>[USER_ACCOUNT]</b> with your Google account address (you can retrieve this using <b>gcloud config get-value account</b>). If you are not importing a Google Kubernetes Engine cluster, replace <b>[USER_ACCOUNT]</b> with the executing user configured in your kubectl configuration file.
+      instructionsInsecure: "If you get an error about 'certificate signed by unknown authority' because your {appName} installation is running with an untrusted/self-signed SSL certificate, run the command below instead to bypass the certificate check:"
+    helpBlock: Import an existing CNCF certified Kubernetes cluster. Kubernetes configuration and infrastructure management is managed outside of Rancher.
+    label: Other Cluster
+    select:
+      eks:
+        helpBlock: Register an existing Amazon EKS cluster.
+        title: Amazon EKS
+      other:
+        helpBlock: Register existing Rancher or <a id='k3s-info-external-link' href='https://k3s.io/' target='_blank' rel='nofollow noreferrer'>K3s</a> backed cluster.
+        title: Rancher or K3s
+    shortLabel: Imported
+  importEks:
+    helpBlock: Register an existing Amazon EKS Kubernetes cluster.
+    label: Register an existing Amazon EKS cluster
+    shortLabel: Registered
+  k3simport:
+    errors:
+      concurrency:
+        negative: Only non-negative and non-zero concurrency values are valid.
+    label: Rancher K3S
+    shortLabel: K3S
+  kubernetesOptions:
+    detail: Customize the kubernetes cluster options
+    title: Kubernetes Options
+  linodelke:
+    accessConfig:
+      description: Provide us with the access token that will be used to access your Linode account
+      loading: Verifying your access token
+      next: Proceed to Cluster Configuration
+      title: Linode Account Access Configuration
+    accessToken:
+      invalid: Access Token is invalid
+      label: Access Token
+      placeholder: The access token to use for accessing your Linode account
+      required: Access Token is required
+    clusterConfig:
+      description: Configure your cluster
+      loading: Saving your cluster configuration
+      next: Proceed to Node pool selection
+      title: Cluster Configuration
+    kubernetesVersion:
+      label: Kubernetes Version
+      placeholder: Select a kubernetes version for your cluster
+      required: Kubernetes Version is required
+    label: Linode Kubernetes Engine
+    nodePoolConfig:
+      actions: Actions
+      addNodePool: Add Node Pool
+      count: Count
+      cpus: CPUs
+      description: Configure your desired node pools
+      hourly: Hourly
+      label: Label
+      loading: Creating your cluster
+      monthly: Monthly
+      next: Create
+      ram: RAM
+      storage: Storage
+      title: Node Pool Configuration
+      update: Update
+    nodePools:
+      countError: All node counts must be greater than 0.
+      empty: No Node Pools
+      label: Selected Node Pools
+      placeholder: Please select a node type to add
+      required: Please add at least one node pool
+    region:
+      label: Region
+      placeholder: Select a region for your cluster
+      required: Region is required
+    selectedNodePoolType:
+      label: Select type
+      placeholder: Select a node pool type
+    shortLabel: Linode LKE
+    tags:
+      label: Tags
+      newTag: New tag
+      noTags: No tags added
+      placeholder: Add a new tag
+  members:
+    detail: Control who has access to the cluster and what permission they have to change it.
+    label: Member Roles
+  name:
+    label: Cluster Name
+    placeholder: e.g. sandbox
+    required: "\"Cluster Name\" is required"
+  nodes:
+    detail: Customize the nodes that will be created
+    title: Node Options
+  oracleoke:
+    access:
+      detail: Choose the region and API Key that will be used to authenticate and configure Oracle Container Engine.
+      loading: Loading values from Oracle Cloud Infrastructure
+      next: "Next: Authenticate & Configure Cluster"
+      title: OCI Cloud Credentials
+    bootVolumeSize:
+      error: Custom boot volume disk size should be greater than the default (46.6 GB)
+      label: Optionally override default boot volume size for nodes
+    cidr:
+      error: Virtual Cloud CIDR format error
+      label: Virtual Cloud Network CIDR
+      placeholder: e.g. 172.16.0.0/16
+      required: Virtual Cloud Network CIDR is required
+    cluster:
+      detail: Choose the Kubernetes version, the number of nodes, and the target compartment for the cluster.
+      loading: Loading VCNs from Oracle Cloud Infrastructure
+      next: "Next: Configure Virtual Cloud Network"
+      title: Cluster Configuration
+    compartmentOCID:
+      help: The compartment in which the cluster will reside
+      label: Compartment OCID
+      placeholder: The OCID of the compartment in which to create the resources
+      required: Compartment OCID is required
+    existingVCNDetails:
+      compartmentOCID: OCID of the VCN's compartment
+      compartmentOCIDHelp: leave blank if it's the cluster compartment
+      compartmentOCIDPlaceholder: e.g. ocid1.compartment.oc1..aaaaaaaa...
+      lbSubnetName1: Name of first pre-existing LB subnet
+      lbSubnetName1Placeholder: e.g. my-lb-sub-1
+      lbSubnetName2: Name of second pre-existing LB subnet (if applicable)
+      lbSubnetName2Placeholder: e.g. my-lb-sub-2
+      vcnName: Name of the pre-existing VCN
+      vcnNamePlaceholder: e.g. my-vcn
+    flexShapeConfig:
+      error: Default Persistent Volume Disk Size should be greater than 0
+      label: Specify the number of OCPUs for the flex shape
+      placeholder: e.g. 10
+    instance:
+      detail: Configure the instance that will be used as nodes in the cluster.
+      title: Node Instance Configuration
+    instanceConfig:
+      gpuLabel: Instance Configuration(CPU/Memory/GPU Type/GPU Count)
+      label: Instance Configuration(CPU/Memory)
+      required: Instance Configuration is required
+    label: Oracle Container Engine long
+    localDisk:
+      label: Local Disk
+      placeholder: size GB
+    node:
+      detail: Choose the node type that will be used for this Kubernetes cluster
+      loading: Loading configuration from Oracle Cloud Infrastructure
+      next: "Next: Configure Node Instances"
+      title: Node Type
+    nodeSSHKey:
+      label: SSH public key for nodes
+      placeholder: Optional SSH public key for the nodes
+    nodeShape:
+      label: Instance Shape'
+      required: Instance Shape is required
+    os:
+      label: Operating System
+    quantityPerSubnet:
+      error: The count of nodes should not be greater than {max}
+      help: The quantity of nodes nodes to run in each availability domain in the region
+      label: Nodes Per AD Count
+      placeholder: e.g. 1
+      required: Nodes per availability-domain is required
+    region:
+      help: The geographic region in which the cluster will run
+      label: Region
+    secretKey:
+      label: User Private Key
+      placeholder: The private API key contents for the specified OCI user, in PEM format
+      provided: Provided
+      required: User Private API Key is required
+    secretKeyPassphrase:
+      label: User Private Key Passphrase
+      placeholder: The passphrase (if any) that protects private key file of the specified OCI user
+      provided: Provided
+    shortLabel: Oracle OKE
+    storageSize:
+      error: The default persistent volume disk size should be greater than 0
+      label: Default Persistent Volume Disk Size
+      placeholder: e.g. 10
+    storageType:
+      label: Default Persistent Volume Disk Type
+    subnet:
+      label: Subnet Access
+      required: Subnet access is required
+    subnetAccessOptions:
+      custom: Custom Create
+      existing: Existing
+      quick: Quick Create
+    tenancyOCID:
+      label: Tenancy OCID
+      placeholder: The OCID of the tenancy in which to create resources
+      required: Tenancy OCID is required
+    userFingerprint:
+      label: User fingerprint
+      placeholder: The fingerprint corresponding to the specified user's private API Key
+      required: User private key fingerprint is required
+    userOcid:
+      label: User OCID
+      placeholder: The OCID of a user who has access to the specified tenancy
+      required: Tenancy OCID is required
+    vcn:
+      detail: Configure the virtual cloud network that will be used for your Kubernetes cluster.
+      label: Virtual Cloud Network
+      required: VCN is required
+      title: Virtual Cloud Network
+    version:
+      label: Kubernetes Version
+      required: Kubernetes Version is required
+  otccce:
+    shortLabel: Open Telekom Cloud CCE
+  psp:
+    label: Default Pod Security Policy
+    none: No policies are defined
+    prompt: Select a Pod Security Policy...
+    required: A Default Pod Security Policy is required when support is enabled.
+  rancherd:
+    shortLabel: RancherD
+  register:
+    helpBlock: Register an existing Rancher, <a href='https://k3s.io/' target='_blank' rel='nofollow noreferrer'>K3s</a> or EKS cluster. By registering these type of clusters, Rancher can manage some aspects of the cluster configuration, such as version upgrades.
+    label: Register
+    shortLabel: Registered
+    title: Register an existing Kubernetes cluster
+  rke:
+    address:
+      detail: Optionally configure the public address and internal address for machines
+      private:
+        label: Node Internal Address
+        placeholder: e.g. 1.2.3.4
+      public:
+        label: Node Public Address
+        placeholder: e.g. 1.2.3.4
+      title: Node Address
+      warning: This doesn't look like an address
+    advanced:
+      detail: Customize advanced cluster options
+      label: Advanced Options
+    agentEnvVars:
+      label: Agent Environment Variables
+    auth:
+      label: Auth Provider
+      x509: x509
+    authorizedEndpoint:
+      detail: Enabling the authorized cluster endpoint allows direct communication with the cluster, bypassing the API proxy. Authorized endpoints can be retrieved by generating a kubeconfig for the cluster.
+      label: Authorized Cluster Endpoint
+      title: Authorized Endpoint
+    cisScan:
+      scheduled:
+        enabled:
+          label: Scheduled CIS Scan Enabled
+        interval:
+          label: Scheduled CIS Scan Interval (cron)
+          placeholder: e.g. 0 0 * * *
+        profile:
+          label: Scheduled CIS Scan Profile
+        retention:
+          label: Scheduled CIS Scan Report Retention
+    clusterTempalteMissing: Cluster Template Enforcement is enabled, and you do not have access to the template required to edit this cluster. Please speak to your admin.
+    clustersSelectTemplate:
+      label: Use an existing RKE Template and revision
+      select:
+        label: RKE Templates
+        prompt: Select a RKE Template
+    clustersSelectTemplateRevision:
+      select:
+        default: "{name} - Default (Created {ago})"
+        other: "{name} (Created {ago})"
+        prompt: Select a RKE Template revision
+    command:
+      instructions: Run this command on one or more existing machines already running a supported version of Docker.
+      winInstructions: Run this command in <code>CMD</code> on one or more existing machines already running <a href="{docsBase}/cluster-provisioning/rke-clusters/windows-clusters/" target="_blank" rel="nofollow noopener noreferrer">supported versions of Docker and Windows Server</a>.
+    customize:
+      detail: Customize Kubernetes options for the cluster
+      label: Cluster Options
+    detected: "{count, plural,\n  =1 {# new node has registered}\n  other {# new nodes have registered}\n}\n"
+    dockerRootDir:
+      placeholder: Default directory is {dir}.
+    done: Done
+    errors:
+      controlPlane: Please select at least one node to use for the control plane.
+      etcd: Please select 1, 3, or 5 nodes to use for etcd.
+      worker: Please select at least one node to use as a worker.
+    etcd:
+      backupConfig:
+        accessKey:
+          label: S3 Access Key
+          placeholder: Your AWS access key
+        bucketName:
+          label: S3 Bucket Name
+          placeholder: e.g. backups
+        customCa:
+          label: Custom CA Certificate
+          placeholder: Paste in the certificate and any necessary chain certificates, starting with -----BEGIN CERTIFICATE-----
+        endpoint:
+          label: S3 Region Endpoint
+          placeholder: e.g. s3.us-west-2.amazonaws.com
+        folder:
+          label: S3 Folder
+          placeholder: e.g. cluster-backup
+        interval:
+          label: Recurring etcd Snapshot Interval
+          placeholder: e.g. 6
+        legacy: "This cluster was configured with a legacy etcd snapshot api. The new api replaces the creation time and retention time durations with a simpler creation time in hours and retention count. We have migrated your creation period automatically. Retention count has been configured to the default of 6 snapshots (current retention duration: {duration}), if you're okay with this setting no further action is required. If not, you may change the setting in the advanced settings section."
+        region:
+          label: S3 Region
+          placeholder: e.g. us-west-2
+        retention:
+          label: Recurring etcd Snapshot Retention
+          placeholder: e.g. 12
+          prefix: Keep the last
+        secretKey:
+          label: S3 Secret Key
+          placeholder: Your AWS secret key
+          provided: Provided
+      creation:
+        label: Recurring etcd Snapshot Creation Period
+        placeholder: 6h
+      election:
+        label: etcd Election Timeout
+        placeholder: Time for an election to timeout
+      enabled:
+        label: Recurring etcd Snapshot Enabled
+      error: "etcd Snapshot {type} Period Error: You must specify a valid time duration. You entered {entry}"
+      heartbeat:
+        label: etcd Heartbeat Interval
+        placeholder: Time of a heartbeat interval
+      location:
+        label: etcd Snapshot Backup Target
+        local:
+          help: snapshots only exist locally, no external backups are performed
+          label: local
+        s3:
+          help: etcd snapshots will occur locally, subsequently the snapshot will be backed up to the configured s3 target
+          label: s3
+      retention:
+        help: "acceptable duration units: h, m, s"
+        label: Recurring etcd Snapshot Retention Period
+        placeholder: 12h
+      snapshot:
+        label: Recurring etcd Snapshots
+    gpu:
+      enableGPUManagement:
+        label: GPU shared scheduling (memory unit)
+      nodePort:
+        label: Set the NodePort port used by the GPU expansion scheduler
+        placeholder: e.g. 1024
+    helptext: Changed node template will only affect newly created nodes.
+    ignoreDockerVersion:
+      disabled: Require a supported Docker version
+      enabled: Allow unsupported versions
+      label: Docker version on nodes
+    info:
+      text: Editing node options will update the command you will run on your existing machines
+    ingress:
+      defaultBackend:
+        label: Nginx Default Backend
+      label: Nginx Ingress
+    kubeApi:
+      ipRange: Service Cluster IP Range
+      label: Kube API
+      podSecurityPolicy: Pod Security Policy
+    kubeController:
+      cidr: Cluster CIDR
+      ipRange: Service Cluster IP Range
+      label: Kube Controller
+    kubeProxy:
+      mode:
+        label: Kube Proxy Mode
+    kubelet:
+      dns: Cluster DNS Server
+      domain: Cluster Domain
+      label: Kubelet
+    label: "{appName} Kubernetes Engine"
+    labels:
+      detail: Optional labels to be applied to the node
+      title: Node Labels
+    monitoring:
+      label: Metrics Server Monitoring
+    network:
+      calico: Calico
+      canal: Canal
+      detail: Configure the networking for the cluster
+      flannel: Flannel (Network Isolation Unavailable)
+      flannelBackends:
+        hostgw: Host Gateway (L2bridge)
+        label: Flannel Backend
+        vxlan: VXLAN (Overlay)
+      flannelCustom: Flannel
+      label: Network Provider
+      multusCanal: Canal+Macvlan
+      multusCanalOptions:
+        canalInterfaceName: Canal Interface Name
+        detail: Custom network plug-in options
+        label: Network advanced options
+      multusFlannel: Flannel+Macvlan
+      multusFlannelOptions:
+        detail: Custom network plug-in options
+        flannelInterfaceName: Flannel Interface Name
+        label: Network advanced options
+      none: None
+      options:
+        calico:
+          cloudProvider:
+            label: Cloud Provider
+        canal:
+          iface:
+            label: Interface
+        flannel:
+          iface:
+            label: Interface
+      title: Networking
+      type:
+        info: Only support "host-gw" backend
+      weave: Weave
+    networkMTU:
+      detail: e.g. 1500
+      help: Only applied if the value is non-zero. When applied, the MTU value is explicitly configured for the chosen network provider (disabling auto-discovery). The override must be calculated from the host's MTU minus the CNI plugin's required overhead.
+      label: CNI Plugin MTU Override
+    networkPolicy:
+      label: Project Network Isolation
+    nodeName:
+      detail: Optionally configure the node name as identification instead of the actual hostname
+      placeholder: e.g. my-worker-node
+      title: Node Name
+    nodes:
+      add: Add Node Pool
+      addTemplate: Add Node Template
+      count: Count
+      deleteNotReadyAfterSecs: Auto Replace
+      deleteNotReadyAfterSecsTooltip: If greater than 0, nodes that are unreachable for this long will be automatically deleted and replaced.
+      detail: Configure the machines that will make up the cluster
+      drainBeforeDelete: Drain Before Delete
+      hostnamePrefix: Name Prefix
+      myTemplatesGroup: My Templates
+      othersTemplatesGroup: Other's Templates
+      taints: Taints
+      template: Template
+      templatePrompt: Choose a Template...
+      title: Node Pools
+    podSecurityPolicy:
+      label: Pod Security Policy Support
+    registry:
+      custom: "A custom registry:"
+      default: The default registry (DockerHub)
+      label: Pull Kubernetes Images From
+      password:
+        label: Password
+      url:
+        label: URL
+        placeholder: e.g. quay.io
+      user:
+        label: Username
+    role:
+      detail: Choose what roles the node will have in the cluster.
+      header:
+        controlplane: Control Plane
+        etcd: etcd
+        worker: Worker
+      pageheader: Customize Node Run Command
+      requirements:
+        controlplane: 1 or more
+        etcd: 1, 3, or 5
+        label: "Number of nodes required:"
+        worker: 1 or more
+      sectionheader: Node Options
+      title: Node Role
+      warning: The cluster needs to have at least one node with each role in order for {appName} to finish provisioning.
+    secretsEncryption:
+      label: Secrets Encryption
+    serviceNodePortRange:
+      label: Node Port Range
+      placeholder: e.g. 30000-32767
+    shortLabel: Custom
+    system:
+      detail: The OS of the node which will be added into the cluster
+      linux: Linux
+      title: Node Operating System
+      windows: Windows
+    taints:
+      detail: Optional taints to be applied to the node
+      title: Node Taints
+    upgradeStrategy:
+      drainNodes:
+        label: Drain nodes
+      maximumWorkersDown:
+        label: Maximum Worker Nodes Unavailable
+        mode:
+          count: Count
+          percentage: Percentage
+        placeholder: e.g. 6
+        view:
+          count: "{value}"
+          percentage: "{value}%"
+    version:
+      label: Kubernetes Version
+    warning:
+      aws:
+        iam: An IAM role name should be provided in node template when using the Cloud Provider Amazon
+      etcd:
+        even: Setting {count} etcd nodes is a waste of hardware because it doesn't increase the quorum until you have an odd number.
+        noEtcd: The number of etcd nodes should not be less than 1.
+    windowsSupport:
+      disabled: Not support {plugin} network provider.
+      help: Available for Kubernetes 1.15 or above with Flannel network provider.
+      label: Windows Support
+  rke2:
+    label: Rancher RKE Government
+    shortLabel: RKE Government
+  rkeWindows:
+    shortLabel: Windows
+  security:
+    detail: Customize the Service Account and Access Scopes
+    title: Security Options
+cruPrivateRegistry:
+  add:
+    label: Add Private Registry
+  defaultError: You must designate one private registry as the default
+  noData: This cluster does not have a private registry defined
+  registry:
+    default:
+      label: System Default Registry
+    password:
+      label: Password
+    url:
+      label: URL
+    user:
+      label: User
+  title:
+    detail: Configure a default private registry for provisioning RKE cluster components. When enabled, all system images required for RKE cluster provisioning and system add-ons startup will be pulled from this registry.
+    detailAtImportCluster: "Configure a default private registry for this cluster. When enabled, all images required for cluster provisioning and system add-ons startup will be pulled from this registry(Notice: This config will override system-default-registry in global config)."
+    label: Private Registry
+editApiKey:
+  accessKey: Access Key (username)
+  basicAuth: "Access Key and Secret Key can be sent as the username and password for HTTP Basic auth to authorize requests.  You can also combine them to use as a Bearer token:"
+  description:
+    placeholder: "Optional: e.g. This key is used by the app servers to deploy containers"
+  noteOptional: Description is optional to help you remember what this key will be used for.
+  saveWarning1: Save the info above!  This is the only time you'll be able to see it.
+  saveWarning2: If you lose it, you'll need to create a new API key.
+  scope: Scope
+  scopeSelect:
+    helpText: "Cluster-scoped tokens can be used to interact directly with the Kubernetes API of clusters configured with an <a href=\"{docsBase}/cluster-provisioning/rke-clusters/options/#authorized-cluster-endpoint\" target=\"_blank\" rel=\"nofollow noreferrer\">Authorized Cluster Endpoint</a>"
+    prompt: no scope
+  secretKey: Secret Key (password)
+  title:
+    editing: Edit API Key
+    justCreated: API Key Created
+    new: Add API Key
+  token: Bearer Token
+  ttl:
+    custom: Custom
+    day: A day from now
+    label: Automatically Expire
+    max:
+      label: "{time} - Maximum allowed"
+      unit:
+        days: "{count, plural, =1 {# Day} other {# Days}}"
+        hours: "{count, plural, =1 {# Hour} other {# Hours}}"
+        minutes: "{count, plural, =1 {# Minute} other {# Minutes}}"
+        years: "{count, plural, =1 {# Year} other {# Years}}"
+    month: A month from now
+    never: Never
+    year: A year from now
+formCapabilityPodSecurityPolicy:
+  capabilities:
+    add: Default Add Capabilities
+    allow: Allowed Capabilities
+    drop: Required Drop Capabilities
+  detail: Config set of capability Policies
+  title: Capability Policies

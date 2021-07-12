@@ -1,0 +1,1048 @@
+alertPage:
+  addSelectorLabel: 添加選擇器
+  alertGroups: 告警组
+  alerts: 告警
+  cluster: 集群
+  commonRules:
+    cpuUsagePercent: CPU 使用率
+    customClusterBackupFailed: 自定义集群 Etcd 备份失败告警
+    databaseUsage: 数据库使用率接近配额 500M
+    diskReadDelay: 磁盘读取延迟
+    diskReadIOPS: 磁盘读取 IOPS
+    diskReadThroughput: 磁盘读取吞吐量
+    diskRemainingPercent: 磁盘剩余可用率
+    diskWriteIOPS: 磁盘写入 IOPS
+    diskWriteThroughput: 磁盘写入吞吐量
+    etcdDiskBackend: Etcd latency distributions of commit called by backend
+    etcdDiskWal: Etcd latency distributions of fsync called by wal
+    etcdSnapDelay: etcd 快照延迟时间
+    fileDescriptorUsagePercent: 文件描述符使用率
+    highCpuLoad: 高 CPU 负载
+    highNodeMemoryUtilization: 节点内存利用率高
+    inodesUsagePercent: inodes 使用率
+    leaderChanges: etcd 集群中正在发生大量的 leader 变更
+    noDiskIsRunning: 节点磁盘在 24 小时内已满载
+    podRebootTimes: POD 重启次数
+    ramUsagePercent: 内存使用率
+  comparison:
+    equal: 等于
+    greater-or-equal: 大于或等于
+    greater-than: 大于
+    has-value: 不为空
+    less-or-equal: 小于或等于
+    less-than: 小于
+    not-equal: 不等于
+  config:
+    reset: 重置配置
+    save: 保存
+  create: 創建
+  customLabel:
+    addText: 添加标签和注释
+    customStepOneOption:
+      label: 标签
+      message: 注释
+    customStepTwoOption:
+      annotations: 注释
+      custom: 自定义
+      label: 标签
+    error:
+      key: 不符合自定义标签 '键' 规则
+      uneq: 相同类型的自定义消息 '键' 不能相同
+      value: 自定义标签 '值' 不能为空
+    note: "注意: notification.tmpl 模板目前不支持webhook，如需配置自动告警标签和消息请前往“工具->告警”添加相关配置。"
+    placeholder:
+      key: 键
+      value: 值
+    table:
+      stepOne: 添加自定义
+      stepThree: 添加
+      stepTwo: 选择
+    title: 自定义告警标签和注释
+  index:
+    addAlert: 添加告警
+    addAlertGroup: 添加告警组
+    config: 告警配置
+    noAlerts: 当前没有配置告警规则。
+    table:
+      condition: 條件
+      displayCondition:
+        available: "{percent}%可用"
+        cpuUsage: CPU使用超過{percent}%
+        expression: 表达式
+        failure: 失败
+        happens: 發生
+        memUsage: 內存使用超過{percent}%
+        notReady: 未就緒
+        notRunning: 未運行
+        notScheduled: 未調度
+        notready: 未就緒
+        restarted: 在{interval}分鐘內重啟{times}次
+        unhealthy: 不健康
+      noData: 沒有定義告警規則
+      noGroup: 未分配告警组
+      noMatch: 沒有告警與當前搜索匹配。
+      recipients: 接收者
+      target: 目標
+  items: 項目
+  na: 未配置
+  new:
+    addHeader: 添加告警
+    addRuleHeader: 添加告警规则
+    editHeader: 編輯告警
+    editRuleHeader: 编辑告警规则
+  newOrEdit:
+    addRecipient: 添加接收者
+    alert: 告警
+    alertRule: 告警规则
+    and: 和
+    available: 可用
+    commonRules:
+      error: 获取图表数据失败
+      label: 常用规则
+      noData: 图表无数据
+      placeholder: 选择告警规则
+      podRebootTimesTips: 请将键 (Key) 中的特殊符号转换为下划线 (_)
+    cpuUsage: CPU預留超過
+    createOne: 創建壹條
+    critical: 危險
+    enableMonitoring: 启用监控
+    expression:
+      error: 获取图表数据失败
+      label: 表达式
+      noData: 图表无数据
+      placeholder: 输入表达式
+    failed: 扫描失败
+    for: 持续
+    groupIntervalSeconds:
+      helpText: 添加触发报警的规则进组后，发送告警的间隔。
+      label: 告警组间隔时长
+    groupWaitSeconds:
+      helpText: 告警触发后发送的等待时长。
+      label: 告警组等待时长
+    happens: 發生
+    info: 信息
+    inherited:
+      enabled: 启用 - 从组继承高级选项
+      label: 组继承
+    initialWait: 等待時間
+    initialWaitHelpText: 在觸發告警到發送通知需要等待多長時間
+    interval: 時間間隔
+    is: 是
+    lessThan: 少於
+    memUsage: 內存預留超過
+    minutes: 分鐘
+    monitoringDisabled: 表达式类型不可用，点击
+    moreTarget: 更多的规则类型
+    nameRequired: 需要填写告警标题
+    noNotifierHelpText: 沒有定義通知規則，去
+    nodePlaceholder: 選擇主機
+    nodeRequired: 需要選擇主機
+    nodeSelectorRequired: 需要主機選擇器
+    normal: 正常
+    notReady: 未就緒
+    notRunning: 未運行
+    notScheduled: 未調度
+    notifierPlaceholder: 選擇通知
+    podPlaceholder: 選擇壹個Pod
+    recipient:
+      helpText: 默认情况下使用通知程序中设置的值，您可以用另一个值覆盖它。
+    removeAlert: 删除告警规则
+    repeatIntervalHelpText: 當告警處於活動狀態時，重復發送通知的時間間隔
+    repeatIntervalSeconds:
+      helpText: 告警发送后再次发送的间隔
+      label: 重复间隔
+    resourcePlaceholder: 選擇資源
+    restarted: 重啟
+    restartedTimes: 次在最近的
+    run: 扫描完成
+    sendA: 發送
+    showAdvanced: 顯示高級選項
+    systemServicePlaceholder: 選擇系統服務
+    to: 到
+    unhealthy: 不健康
+    unit:
+      bytes: Bytes
+      mbPerSecond: MB/S
+      millisecond: MS
+      percent: "%"
+      second: S
+      times: 次
+      timesPerSecond: 次/秒
+    warning: 警告
+    whenA: 當
+    whenAn: 当
+    workloadTypePlaceholder: 選擇工作負載類型
+  project: 項目
+  resourceKinds:
+    DaemonSet: DaemonSet
+    Deployment: 部署
+    Node: 主機
+    Pod: Pod
+    StatefulSet: 狀態集
+  save: 保存
+  targetTypes:
+    cisScan: CIS 扫描
+    daemonset: Daemonset
+    deployment: 部署
+    event: 事件
+    metric: Metric
+    node: 主機
+    nodeSelector: 主機選擇
+    pod: Pod
+    podRebootTimes: Pod 重启次数
+    statefulset: 狀態集
+    systemService: 系統服務
+    undefined: 无
+    workload: 工作負載
+    workloadSelector: 工作負載選擇
+allWorkloads:
+  namespace: "命名空間: {name}"
+appDetailPage:
+  answers:
+    detail: 自定義應用應答
+    title: 應答
+    variable: 變量
+  configMaps:
+    detail: 與此應用關聯的配置映射
+    nodata: 此應用程序沒有配置映射
+    title: 配置映射
+  endpoints:
+    detail: 此應用的公共端點
+    endpoint: Endpoint
+    noData: 此應用未創建公開終端
+    noMatch: 沒有滿足當前搜索的公共終端
+    protocol: 協議
+    title: 端點
+  header: "App: {appName}"
+  ingress:
+    detail: 此應用創建的入口規則
+    nodata: 此應用未創建入口規則
+    title: Ingress規則
+  notes:
+    detail: 關於如何使用此應用的說明
+    title: 注釋
+  secrets:
+    detail: 此應用相關的密文(Secrets)
+    nodata: 此應用未使用密文
+    title: 密文
+  services:
+    detail: 此應用創建的服務
+    nodata: 此應用未創建服務
+    title: 服務
+  volumes:
+    detail: 此應用創建的持久卷聲明(Pvc)
+    nodata: 此應用未創建持久卷聲明
+    title: 卷
+  workloads:
+    detail: 此應用創建的工作負載
+    nodata: 此應用未創建工作負載
+    title: 工作負載
+authorizedEndpoint:
+  enabled:
+    label: 此地址必须是能够访问 k8s api-server 的域名或者 IP。在 Rancher Server 不可用时，可使用包含此地址的 kubecfg 文件，通过命令 kubectl --context 直接访问 k8s 集群。
+  fqdn:
+    label: FQDN（此域名和右侧的 CA 证书可不用填写）
+conditionSections:
+  detail: 當前{resourceType}運行狀態
+  noData: 沒有條件
+  noMatch: 沒有條件與當前搜索匹配
+  table:
+    lastState: 上一次状态
+    lastUpdate: 最後更新
+    message: 消息
+    reason: 狀態原因
+    status: 狀態
+    type: 類型
+  title: 狀態
+containerChoices:
+  containerOption: "{name}"
+  hostGroup: 主機:{name}
+  hostGroupWithState: 主機:{name}{state}
+  unknownHost: 主機:???
+containerLogs:
+  clear: 清除屏幕
+  combined: 合并日誌
+  download: 下載日誌
+  onlyCombined: <b>注意:</b>此容器運行時帶有TTY(-t)參數，僅有合并的標準輸出和標準錯誤日誌可見。
+  previous: 以前的容器
+  protip: "高級技巧: 點擊查看日誌時按住{key}鍵在新窗口中打開"
+  scrollBottom: 回到底部
+  scrollTop: 回到頂部
+  status:
+    closed: 已關閉
+    connected: 已連接
+    connecting: 連接中...
+    disconnected: 已斷開
+    initializing: 初始化...
+  stderr: 標準錯誤
+  stdout: 標準輸出
+  title: "日誌: "
+  wrapLines: 自動換行
+cruClusterTemplate:
+  default:
+    label: 默认修订版本
+  edit:
+    label: 编辑集群模板
+  infoBanner: 模板只允许为 RKE 集群保存和重用配置选项。
+  members:
+    detail: 与单个成员共享此集群模板，或将其公开给组织。这将影响此集群模板中的所有模板修订。
+    label: 共享模板
+  name:
+    label: 模板名称
+  revisionName:
+    help: 不是必须，但建议使用描述性名称，以帮助轻松定位正确的修订。
+    label: 模板修订名称
+  selectRevision:
+    label: 选择默认修订
+  source:
+    label: Source Revision
+cruVolume:
+  define:
+    addActionLabel: 確定
+  name:
+    placeholder: "例如: Myvol"
+  source:
+    detail: 配置選定存儲源的選項
+    label: 存儲源
+    prompt: 選擇一個存儲源...
+    title: 源配置
+  sourcePrompt: 需要先在上面選擇一個存儲源...
+  title:
+    new: 定義臨時卷
+deleteEksCluster:
+  accessKey:
+    label: Access Key
+    placeholder: Your AWS access key
+  deleteCluster: 刪除集群
+  deletingCluster: 集群刪除中...
+  error:
+    accessKey: Access key必須填寫。
+    secretKey: Secret key必須填寫。
+    sessionToken: Session token必須填寫。
+  help: 此集群是通過臨時令牌創建的，請提供一個新的令牌來刪除它。
+  secretKey:
+    label: Secret Key
+    placeholder: Your AWS secret key
+    provided: Provided
+  sessionToken:
+    deleteLabel: Session Token
+    label: Session Token  <em class='text-muted'>Optional</em>
+    placeholder: Your AWS session token
+    provided: Provided
+  title: 確定刪除集群{clusterName}嗎?
+  updateKeys: Update Keys
+  updatingKeys: Updating Keys
+dnsPage:
+  noData: 沒有可以顯示的DNS記錄
+  noMatch: 沒有匹配當前搜索的記錄
+  table:
+    clusterIpDetail: "集群IP: {ip}"
+    target: 目標
+  type:
+    alias: 別名
+    arecord: 外部IP
+    clusterIp: Cluster IP
+    cname: 主機名
+    selector: 選擇器
+    unknown: 未知
+    workload: 工作負載
+editDns:
+  add:
+    alias: 添加目標服務
+    arecord: 添加目標IP
+    selector: 添加目標選擇器
+    workload: 添加目標工作負載
+  description:
+    placeholder: "例如: 當前MyApp版本"
+  errors:
+    mixedAlias: 別名不能以CNAME和其他記錄的組合為目標。
+    multipleCname: 別名不能指向多個CNAME記錄
+    selectorRequired: 必須配置一個或多個"目標標籤選擇器"
+    targetRequired: 必須配置一個或多個"目標服務/工作負載/主機名/域名"
+  externalIPs:
+    addActionLabel: 添加外部 IP
+    placeholder: "例如: 80.11.12.10"
+    value: 外部 IPs
+  externalTrafficPolicy:
+    cluster: Cluster
+    label: 外部流量策略
+    local: Local
+  healthCheckNodePort:
+    label: 健康检查节点端口
+    placeholder: "例如: 8080"
+  kind:
+    clusterIP: Cluster IP(仅集群内部通信)
+    externalName: ExternalName
+    headless: Headless Service
+    label: 类型
+    loadBalancer: L4 负载均衡器
+    nodePort: NodePort(所有主机端口均可访问)
+  loadBalancerIP:
+    label: Load Balancer IP
+    placeholder: "例如: 78.11.24.19"
+  loadBalancerSourceRanges:
+    addActionLabel: 添加 ip 源范围
+    placeholder: "例如: 143.231.0.0/16"
+    value: 负载均衡器 ip 源范围
+  name:
+    placeholder: "例如: Myapp"
+  placeholder:
+    arecord: "例如: 19.82.2.24"
+    cname: "例如: example.com"
+  prompt:
+    alias: 選擇目標服務...
+    workload: 選擇工作負載...
+  publishNotReadyAddresses:
+    all: 所有接入点
+    label: 对外发布的地址
+    readyOnly: 仅就绪接入点
+  recordType:
+    alias: 服務別名
+    arecord: 外部IP地址
+    clusterIp: Cluster IP
+    cname: 外部主機名/域名
+    label: 解析到
+    selector: Pod
+    workload: 工作負載
+  selector:
+    addActionLabel: 添加標籤選擇器
+    keyLabel: 標籤
+    label: 容器選擇器
+  sessionAffinity:
+    detail: 根据源 IP 将连接映射到一致的目标
+    label: 启用会话保持
+    title: 会话保持
+  sessionAffinityConfig:
+    label: Session 保持时间
+    placeholder: "例如: 10800"
+  target:
+    alias: 目標DNS記錄
+    arecord: 目標IP地址
+    cname: 目標主機名
+    selector: 目標Pod選擇器
+    workload: 目標工作負載
+  title:
+    edit: 編輯DNS記錄
+    new: 添加DNS記錄
+    view: "記錄: {name}"
+f5TLSPage:
+  addTLS: 添加证书
+  form:
+    clientSSL:
+      label: Client SSL
+      placeholder: "例如: /Common/clientssl"
+    hosts:
+      add: 添加域名
+      placeholder: "例如: example.com"
+    reference: Reference
+    serverSSL:
+      label: Server SSL
+      placeholder: "例如: /Common/serverssl"
+    termination:
+      label: Termination
+      placeholder: 请选择...
+  header:
+    edit: 编辑证书
+    new: 添加证书
+    view: "证书: {name}"
+  table:
+    noData: 没有配置TLS证书
+featureFlags:
+  features:
+    fleet: 啟動 Rancher 時，安裝 Fleet
+    istioVirtualServiceUi: 启用此功能将为Istio公开其他UI页面。
+    projectPipelineServiceUI: 啟用此功能將顯示項目流水線導航菜單
+    proxy: 對 Kubernetes API 請求使用新的實驗性代理。
+    unsupportedStorageDrivers: 启用此功能将为持久卷和存储类公开不受支持的存储驱动程序选项。
+    virtaitechGpuServiceUI: 啟用此功能將在部署服務時允許用戶設置 vGpus 的預留實例數量
+  table:
+    description: 描述
+    name: 名稱
+    noData: 沒有特征數據
+    noMatch: 沒有与当前搜索匹配的功能數據
+    restart: 重启生效
+    state: 狀態
+  warningHeader: Feature flags允许rancher某些功能的使用。您应该谨慎地启用这些功能，它们应该被视为beta功能，这可能会给您的系统带来问题。
+formBasicPodSecurityPolicy:
+  allowPrivilegeEscalation:
+    disable: 否
+    enable: "是: 運行允許從其父級升級特權的容器"
+    label: 允許提升特權
+  defaultAllowPrivilegeEscalation:
+    disable: 否
+    enable: "是: 控制進程可以獲得父進程獲得更多特權"
+    label: 默認允許提升特權
+  detail: 配置基本的Pod安全策略
+  hostIPC:
+    disable: 否
+    enable: "是: 主機IPC命名空間"
+    label: 主機IPC
+  hostNetwork:
+    disable: 否
+    enable: "是: 使用主機網絡"
+    label: 主機網絡
+  hostPID:
+    disable: 否
+    enable: "是: 主機PID名稱空間"
+    label: 主機PID
+  privileged:
+    disable: 否
+    enable: "是: 運行特權容器"
+    label: 特權
+  readOnlyRootFilesystem:
+    disable: 否
+    enable: "是: 需要採用一個只讀根文件系統"
+    label: 只讀根文件系統
+  title: 基本策略
+formContainerLinks:
+  addActionLabel: 添加鏈接
+  alias:
+    label: 名稱
+    placeholder: "例如: database"
+  detail: 定義此容器和其他容器的關聯關係
+  name:
+    label: 目標容器
+  noData: 沒有容器鏈接
+  noMatch: 沒有匹配當前搜索的鏈接
+  title: 鏈接
+formCount:
+  label: 數量
+formFsGroupPodSecurityPolicy:
+  detail: 分配擁有Pod卷的FSGroup
+  range:
+    addLabel: 添加一個範圍
+    max:
+      label: 最大值
+      placeholder: "例如: 6"
+    min:
+      label: 最小值
+      placeholder: "例如: 1"
+  rule:
+    mustRunAs: MustRunAs-至少需要指定一個範圍，使用第一個範圍的最小值作為默認值，對照第一個範圍中的第一個ID進行驗證。
+    runAsAny: RunAsAny - 沒有默認值，允許指定任何fsGroup ID。
+  title: FS組策略
+formResourceQuota:
+  addQuotaLabel: 添加配額
+  errors:
+    invalidLimit: "{resource}配額總共{total}，已使用{used}。該已使用應小於或等於{left}。"
+    limitRequired: "{resource}需要設置。"
+    nsDefaultLimitRequired: 命令空間中{resource}默認限制必需設置。
+    projectLimitRequired: 項目中{resource}必須設置
+  resources:
+    configMaps: Config Maps
+    limitsCpu: CPU限制
+    limitsMemory: 內存限制
+    persistentVolumeClaims: Persistent Volume Claims
+    pods: Pods
+    replicationControllers: Replication Controllers
+    requestsCpu: CPU預留
+    requestsGpuCount: GPU Count
+    requestsGpuMemory: GPU Memory
+    requestsMemory: 內存保留
+    requestsStorage: 存儲預留
+    requestsStorageClassPVC: StorageClassPVC
+    requestsStorageClassStorage: StorageClass存儲
+    secrets: 密文
+    services: 服務
+    servicesLoadBalancers: 服務負載均衡器
+    servicesNodePorts: 服務節點端口
+  table:
+    namespaceLimit:
+      label: 命名空間默認限制
+      memoryPlaceholder: "例如: 1024"
+      milliCpuPlaceholder: "例如: 500"
+      placeholder: "例如: 10"
+    noData: 沒有定義資源配額
+    projectLimit:
+      label: 項目限制
+      memoryPlaceholder: "例如: 2048"
+      milliCpuPlaceholder: "例如: 2000"
+      placeholder: "例如: 50"
+      stroageClassPlaceholder: 存儲類不存在
+    resources:
+      available: 可用
+      label: 項目資源可用性
+      max: 總共
+      namespace: 當前命名空間
+      reserved: 其他命名空間
+    type:
+      label: 資源類型
+    value:
+      label: 限制
+      memoryPlaceholder: "例如: 1Gi"
+      milliCpuPlaceholder: "例如: 500"
+      placeholder: "例如: 10"
+formRunAsUserPodSecurityPolicy:
+  detail: User ID
+  range:
+    addLabel: 添加一個範圍
+    max:
+      label: 最大值
+      placeholder: "例如: 6"
+    min:
+      label: 最小值
+      placeholder: "例如: 1"
+  rule:
+    mustRunAs: MustRunAs - 需要配置一個範圍，使用範圍的第一個值作為默認值。根據配置的範圍進行驗證。
+    mustRunAsNonRoot: MustRunAsNonRoot - 要求使用非零runAsUser啟動Pod，或者在鏡像中定義USER指令，不提供默認值。
+    runAsAny: RunAsAny - 無默認值，允許任何runAsUser來指定。
+  title: 用戶運行策略
+formSeLinuxodSecurityPolicy:
+  detail: 容器的SELinux上下文
+  level:
+    label: 等級
+    placeholder: "例如: dev1"
+  role:
+    label: 角色
+    placeholder: "例如: node"
+  rule:
+    mustRunAs: MustRunAs - 使用seLinuxOptions作為默認值，根據seLinuxOptions進行驗證。
+    runAsAny: RunAsAny - 允許指定任何seLinuxOptions設置
+  title: SELinux策略
+  user:
+    label: 用戶
+    placeholder: "例如: master"
+formUpgrade:
+  detail: 配置升級過程中替換Pod的策略。
+  strategy:
+    batchSize:
+      detail: Pod將批量啟動或停止
+      label: 批量大小
+    custom: 自定義
+    label: 升級策略
+    maxSurge:
+      detail: 在任何給定時間內允許超出所需規模的最大Pod數量。
+      label: 最大浪涌
+    maxUnavailable:
+      detail: 在任意給定時間最大不可用的Pod數量。
+      label: 最大不可用
+    minReadySeconds:
+      detail: 在Pod被視為可用之前，Pod中的容器需至少運行多長時間。
+      label: 最短準備時間
+    onDelete: 僅當手動刪除舊Pod時才啟動升級新Pod
+    orderedReady: 嚴格按順序更新並等待準備就緒
+    parallel: 啟動所有新Pod和停止所有舊Pod並行執行
+    progressDeadlineSeconds:
+      detail: 將部署標記為停滯狀態之前需要等待多久時間才能看到進度。
+      label: 進度截止時間
+    recreate: 刪除所有Pod，然後重新開始
+    rollingUpdate: 滾動更新
+    startFirst: "滾動: 先啟動新Pod，再停止舊Pod"
+    stopFirst: "滾動: 先停止舊Pod，再啟動新Pod"
+  title: 縮放/升級策略
+formUserData:
+  isVmPlaceholder: "例如: 虛擬機的配置信息"
+  placeholder: "例如: 容器的配置信息"
+formVersions:
+  dotx: Latest {minor} (允许补丁版本升级)
+  downgrade: (不能降级)
+  eks:
+    helpBlock: 因为 Amazon EKS 运行一个高可用的控制平面，所以您一次只能更新一个小版本。
+    label: (EKS 不允许次要版本 > 1 )
+  experimental: (实验)
+  helpBlock:
+    label: "升级 Kubernetes 版本时，请查看<a href=\"https://groups.google.com/forum/#!forum/kubernetes-announce\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">Kubernetes release notes</a>了解功能变化。"
+  notallowed: (模板不允许)
+  unsupported: (不支持)
+generic:
+  Gibibyte: GiB
+  actions: 操作
+  activate: 激活
+  active: Active
+  add: 添加
+  advanced: 高級
+  all: 全部
+  any: 任何
+  application: 應用程序
+  as: 以
+  authorize: 認證 & 同步代碼庫
+  back: 返回
+  bitbucket: Bitbucket
+  branch: 分支
+  cancel: 取消
+  closeModal: 關閉
+  cluster: 集群
+  collapse: 折叠
+  collapseAll: 摺疊全部
+  comingSoon: 即將推出
+  command: 命令
+  commit: 提交
+  completedOf: "{completed} of {total}"
+  confirm: 確認
+  containers: 容器
+  cpu: CPU
+  created: 創建時間
+  createdDate: "創建時間: {date}"
+  custom: 自定義
+  customize: 定製
+  default: 默認
+  description: 描述
+  details: 詳情
+  disable: 禁用
+  disabled: 禁用
+  displayName: 顯示名稱
+  dockerId: "容器ID:"
+  domainName: 域名
+  done: 完成
+  download: 下載
+  edit: 編輯
+  emptyString: ""
+  enable: 啟用
+  enabled: 啟用
+  entrypoint: 入口
+  environment: 環境
+  expand: 展开
+  expandAll: 全部展開
+  experimental: (实验)
+  "false": "False"
+  from: 來自
+  full: 完整
+  generic: 常規
+  gigabyte: GB
+  github: GitHub
+  gitlab: GitLab
+  group: Group
+  hardware: 硬件
+  healthy: 健康
+  help: 幫助
+  host: 主机
+  hostname: 主機名
+  hours: 小時
+  hpa: HPA
+  id: 用戶ID
+  image: 鏡像
+  imageName: 鏡像名稱
+  import: 導入
+  internal: 內部
+  ipAddress: Pod IP
+  is: 是
+  isRequired: 必须填写
+  istioHostPlaceholder: 选择或输入主机
+  istioRule: 流量规则
+  key: 鍵
+  limit: 限制
+  limits: 限制
+  linux: Linux
+  loading: 加載中...
+  loggingOut: 註銷...
+  loginIn: 登入
+  logout: 退出用戶{user}
+  mbps: Mbps
+  member: 成員
+  memory: 内存
+  mibibyte: MiB
+  milliseconds: 毫秒
+  minutes: 分鐘
+  missing: "*%缺少%*"
+  moreActions: 更多操作
+  na: n/a
+  name: 名稱
+  namespace: 命名空間
+  namespaces: 命名空間
+  never: 從不
+  no: 否
+  noBranch: 该代码库中没有任何分支。
+  noData: 没有数据
+  noRating: 無評價
+  node: 主機
+  none: 無
+  owner: 所有者
+  paste: 粘貼
+  persistentVolume: 持久卷
+  persistentVolumeClaim: 持久卷claim
+  pipeline: 流水線
+  pod: pod
+  podRestarts: 容器重启次数
+  port: 端口
+  ports: 端口
+  prefix: 前綴
+  project: 項目
+  push: 提交到代碼庫
+  random: 隨機
+  readOnly: 只读
+  readWrite: 读写
+  registry: 鏡像庫
+  remove: 移除
+  repository: 代碼庫
+  required: "{key} 为必填项。"
+  restarts: 重啟次數
+  role: 角色
+  run: 运行
+  save: 保存
+  saved: 已保存
+  saving: 保存中
+  scope: 範圍
+  search: 搜索
+  searchOrCustomInput: 搜索或輸入自定義值
+  searching: 正在搜索...
+  seconds: 秒
+  select: 選擇
+  service: 服務
+  services: 服務
+  size: 大小
+  state: 狀態
+  tags: 標籤
+  test: 測試
+  testing: 測試
+  to: 至
+  total: 合計
+  "true": "True"
+  type: 類型
+  unknown: 未知
+  unknownUser: 無法獲取用戶信息
+  upload: 上傳
+  url: URL
+  user: 用戶
+  uuid: UUID
+  value: 值
+  version: 版本
+  windows: Windows
+  writeOnly: 只写
+  yes: 是
+haPage:
+  header: 高可用性(HA)
+  setup:
+    link: 請參閱文檔
+    prefix: 可以在不同主機上部署多個服務器容器，以便{appName}一直保持運行，即使其中一個主機失敗。
+    suffix: 有關安裝和使用信息
+  table:
+    address: 主機地址
+    clustered: 集群
+    heartbeat: 上次在線
+    port: 端口
+inputTextFile:
+  tooltip: 從文件讀取
+k3sNodeEnvVarSection:
+  detail: 只读取此 K3S 节点的环境变量列表。
+  key: Key
+  noData: 没有环境变量
+  noMatch: 没有环境变量与当前搜索匹配
+  title: K3S 节点环境变量
+  value: Value
+kontainerDriver:
+  displayName:
+    aliyunkubernetescontainerservice: Alibaba ACK
+    amazonElasticContainerService: Amazon EKS
+    azureKubernetesService: Azure AKS
+    baiducloudcontainerengine: Baidu CCE
+    googleKubernetesEngine: Google GKE
+    huaweicontainercloudengine: Huawei CCE
+    import: Import
+    linodekubernetesengine: Linode LKE
+    opentelekomcloudcontainerengine: Open Telekom Cloud CCE
+    oraclecontainerengine: Oracle OKE
+    rancherKubernetesEngine: Rancher RKE
+    tencentkubernetesengine: Tencent TKE
+machinePage:
+  add: 添加主機驅動
+  builtin: 內置
+  header: 主機驅動
+  inactive: 未激活
+  subtext: 另外<code>Docker-machine</code>驅動可在此加載並在添加主機界面使用。
+  url: 位置
+modalShowCommand:
+  errors:
+    token: 获取集群注册令牌错误 - {err}
+  success: 主机已注册!
+  title: 集群注册命令
+modalYaml:
+  noData: 没有 {name} 资源。
+  title:
+    edit: "編輯YAML: {name}"
+    new: 導入{type}YAML
+    view: "查看YAML: {name}"
+newCertificate:
+  cert:
+    invalidFormat: 無效的證書
+    label: 證書
+    placeholder: 粘貼或導入證書，以-----BEGIN CERTIFICATE-----開頭
+    protip: 包括全部所需的證書鏈
+    required: 必須填寫證書
+    tooltip: "粘贴用于验证 server 证书的 CA 证书，它将生成在 kubecfg 文件中。 具体请参考 <a href=\"https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#authorized-cluster-endpoint\" target=\"blank\" >更多信息</a>。"
+  certChain:
+    label: 證書鏈
+    placeholder: 粘貼或導入證書，以-----BEGIN CERTIFICATE-----開頭
+  errors:
+    cert:
+      invalidFormat: 證書無效
+      required: 必須填寫證書
+    encrypted: 私鑰不能被密碼保護
+    key:
+      invalidFormat: 私鑰無效，請確保它是一個RSA密鑰
+      required: 必須填寫私鑰
+  key:
+    invalidFormat: 私鑰無效
+    label: 私鑰
+    placeholder: 粘貼或導入私鑰，以-----BEGIN RSA PRIVATE KEY-----開頭
+    required: 必須填寫私鑰
+  metaXML:
+    label: 元數據XML
+    placeholder: 粘貼IDP Metadata XML
+  publicKey:
+    invalidFormat: 公钥无效
+    label: SSH 公钥
+    placeholder: 粘贴或导入证书，以'ssh-rsa', 'ssh-dss', 'ssh-ed25519', 'ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', or 'ecdsa-sha2-nistp521'开头。
+    required: 必须填写公钥
+  title:
+    edit: "編輯證書: {name}"
+    new: 添加證書
+    view: "證書: {name}"
+newIngress:
+  error:
+    noRules: 您必須有一個或多個規則
+  header:
+    add: 添加Ingress
+    edit: 編輯Ingress
+newPipeline:
+  save: 保存
+  steps:
+    label: 流水線配置
+newPipelineStage:
+  addStep: 添加步驟
+  errors:
+    name:
+      required: 請輸入名稱。
+  header:
+    create: 添加階段
+    edit: 編輯階段
+  name:
+    placeholder: "例如: compile"
+  trigger:
+    webhook: 推送
+    webhookPR: 拉取請求
+    webhookTag: Tag
+projectGroup:
+  label: "項目: {name}"
+  noNS: 此項目下沒有命名空間
+  none: 命名空間
+  project: 不在項目中
+resourceEventList:
+  detail: 當前{resourceType}的事件
+  noData: 當前沒有事件
+  noMatch: 沒有事件與當前搜索匹配
+  table:
+    lastUpdate: 最後更新
+    message: 事件信息
+    namespace: 命名空间
+    object: 对象
+    reason: 事件原因
+    type: 類型
+  title: 事件
+signupPage:
+  emailSuccess:
+    confirm:
+      resend: 重新發送郵件
+      subtext: 已經發送郵件到郵箱，請點擊郵件中的驗證鏈接以確認郵件地址。
+    header: 歡迎使用{appName}
+  form:
+    button: 註冊
+    labels:
+      email: 電子郵箱
+      loginUsername: 姓名
+  header: 註冊{appName}
+systemInfoSection:
+  arch: 系統架構
+  containerDVersion: Containerd 版本
+  detail: 操作系統和kubernetes信息
+  dockerVersion: Docker版本
+  kernelVersion: 內核版本
+  key: 鍵
+  kubeProxyVersion: Kube代理版本
+  kubeletVersion: Kubelet版本
+  noData: 沒有數據
+  noMatch: 沒有與當前搜索匹配的系統信息
+  operatingSystem: 操作系統映像
+  osType: 系統類型
+  title: 系統信息
+  value: 值
+upgradeBtn:
+  status:
+    available: 有可用更新
+    current: 已經是最新版本
+    error: 檢查更新出錯
+    inprogress: 升級進行中
+    loading: 檢查更新...
+    none: "升級: 無"
+    notfound: 未識別模板版本
+    required: 需要升級
+    upgraded: "已升級: 完成升級"
+  version:
+    current: 當前版本
+uploadFile:
+  label: 從文件讀取
+userPreferencesPage:
+  generalInfo:
+    email:
+      label: 郵件地址
+    header: 我的賬號
+    name:
+      label: 姓名
+    password:
+      text: 修改密碼
+    username:
+      label: 用戶名
+  header: 設置
+  menu:
+    header: 菜单位置
+    left: 左侧
+    top: 顶部
+  theme:
+    auto: 自動
+    autoDetail: 自動設置會在晚6點到早6點間自動切換主題到黑色
+    dark: 黑色
+    header: 主題
+    light: 明亮
+validation:
+  arrayLength:
+    between: "\"{key}\"應當介於{min}和{max}之間{max, plural,=1{個條目}other{個條目}}"
+    exactly: "\"{key}\"應當包含{count, plural,=1{#個條目}other{#個條目}}"
+    max: "\"{key}\"應當至多為{count}{count, plural,=1{個條目}other{個條目}}"
+    min: "\"{key}\"應當至少為{count}{count, plural,=1{個條目}other{個條目}}"
+  chars: "\"{key}\"包含{count, plural,=1{個無效字符}other{#個無效字符}}:{chars}"
+  dns:
+    doubleHyphen: 不能包含兩個連續的連字符
+    hostname:
+      empty: “{key}”至少需一個字符
+      emptyLabel: “{key}”不能有兩個連續的點
+      endDot: "\"{key}\"不能以點結尾"
+      endHyphen: “{key}”必須以字母或數字結尾
+      startDot: “{key}”不能以點開頭
+      startHyphen: “{key}”必須以字母或數字開頭
+      startNumber: "\"{key}\"不能以數字開頭"
+      tooLong: “{key}”不能超過{max}個字符
+      tooLongLabel: “{key}”不能超過{max}個字符
+    label:
+      emptyLabel: "\"{key}\"不能為空"
+      endHyphen: “{key}”必須以字母或數字結尾
+      startHyphen: “{key}”必須以字母或數字開頭
+      startNumber: "\"{key}\"不能以數字開頭"
+      tooLongLabel: "\"{key}\"不能超過{max}字符"
+  k8s:
+    identifier:
+      emptyLabel: “{key}”不能有空格鍵
+      emptyPrefix: “{key}”不能有空白的前綴
+      endLetter: “{key}”必須以字母或數字結尾
+      startLetter: “{key}”必須以字母或數字開頭
+      tooLongKey: “{key}”的長度不能超過{max}個字符
+      tooLongPrefix: “{key}”的前綴不能超過{max}個字符
+  number:
+    between: "\"{key}\"應當介於{min}和{max}之間"
+    exactly: "\"{key}\"應當為{val}"
+    max: "\"{key}\"應當至多為{val}"
+    min: "\"{key}\"應當至少為{val}"
+  required: "\"{key}\"必須設置"
+  requiredOrOverride: "\"{key}\" 是必须的或者允许覆盖"
+  stringLength:
+    between: "\"{key}\"應當介於{min}和{max}之間{max, plural,=1{個字符}other{個字符}}"
+    exactly: "\"{key}\"應當為{count, plural,=1{#個字符}other{#個字符}}"
+    max: "\"{key}\"應當至多為{count}{count, plural,=1{個字符}other{個字符}}"
+    min: "\"{key}\"應當至少為{count}{count, plural,=1{個字符}other{個字符}}"
+  targets:
+    missingProjectId: 必须选择目标项目。
+verifyPage:
+  account:
+    header: 賬號創建完成
+    linkText: 登錄
+    subtext: 點擊以下鏈接登錄
+  header: 您已經成功驗證了郵件地址!
+  subtext: 在完成賬號設置前，我們還需要一些信息。

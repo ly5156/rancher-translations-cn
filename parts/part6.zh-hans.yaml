@@ -1,0 +1,1171 @@
+accordionRow:
+  status:
+    any: 任何
+    configured: 已配置
+    countConfigured: "{count} 条规则已配置"
+    custom: 自定义
+    error: 错误
+    incomplete: 未完成
+    none: None
+    notConfigured: 未配置
+    rule: "{count, plural,=1{#条规则 } other {#条规则 }}"
+    specific: 具体
+    standard: 默认
+batchDelete:
+  headerSuffix: 名称
+billingInfo:
+  addNew: 添加支付方式
+  card: "{brand}: ...{last}"
+  header: 账单信息
+  noSub: 您当前没有可用的付款方式
+  table:
+    title:
+      actions: 操作
+      cardType: "信用卡类型: {brand}"
+      exp: "有效期: {exp}"
+      last4: "卡号末 4 位: {last}"
+      name: "持卡人姓名: {name}"
+catalogSettings:
+  certified:
+    detail:
+      pl: "由官方维护的核心功能所需要的模板，例如: Kubernetes/Mesos/Swarm 等。"
+      rancher: "Rancher 核心功能所依赖的模板，例如: Kubernetes/Mesos/Swarm 编排支持，由 Rancher 官方维护并提供支持。"
+    header:
+      pl: 认证的库
+      rancher: "{appName} 认证库"
+  community:
+    detail:
+      pl: 由社区成员创建并维护的模板
+      rancher: 由社区成员创建并维护的模板，未经 Rancher Labs 认证。
+    header:
+      pl: 社区贡献
+      rancher: 社区贡献
+  currentCluster: 当前集群
+  currentProject: 当前项目
+  errors:
+    nameInExists: 在启用 {key} 之前，请移除名称为 {key} 的应用商店。
+  globalCatalog: 全局
+  header: 商店设置
+  helm:
+    incubator:
+      detail: 未经测试验证的应用模板仓库。
+      label: Helm Incubator
+    stable:
+      detail: 由 Kubernetes 社区维护的模板仓库。
+      label: Helm Stable
+  helpText: 目前只支持 Helm 目录
+  library:
+    detail: 由 {appName} 官方维护的模板仓库。
+    label: 官方认证
+  more:
+    addActionLabel: 添加应用商店
+    addHeader: 添加应用商店
+    branch:
+      label: 分支
+      placeholder: "例如: master"
+    editHeader: 编辑应用商店
+    header: 自定义
+    helmVersion:
+      label: Helm 版本
+    helpText:
+      header: "您可以自定义应用商店，每个自定义商店需满足以下要求: "
+      help-chart: "Helm Charts server URL，例如: https://kubernetes-charts.storage.googleapis.com/，详细信息可查看 <a href=\"https://docs.helm.sh/developing_charts/#hosting-chart-repositories\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Chart 托管仓库</a>。"
+      help-git: "基于 Git 的商店地址，例如: https://github.com/{appName}/charts.git。"
+      help-name: 唯一的名称
+      help-repo: "仓库地址: "
+    kind:
+      helm: Helm
+      label: 类型
+      native: 原生
+    name:
+      label: 名称
+      placeholder: e.g. mycatalog
+    noData: 没有自定义应用商店
+    noMatch: 没有与当前搜索匹配的应用商店
+    password:
+      label: 密码
+      placeholder: 输入密码
+      required: 密码必须设置
+    private:
+      label: 使用私有应用商店
+    url:
+      label: 商店 URL 地址
+    username:
+      label: 用户名
+      placeholder: 输入用户名
+      required: 用户名必须设置
+  notAvailable: "不可用: 这是名为<code>{name}</code>的自定义商店"
+editContainer:
+  description:
+    placeholder: "例如: 我的应用"
+  name:
+    placeholder: e.g. myapp
+  title:
+    container: 编辑容器
+    vm: 编辑虚拟机
+formEnvVar:
+  detail: 工作负载配置的环境变量。
+  labels:
+    key: 键
+    value: 值
+  noData: 当前工作负载没有配置环境变量。
+  status: "{count, plural,\n=0{ 无变量 }\n=1{#个变量 }\nother {#个变量 }\n}\n"
+  title: 环境变量
+formJobConfig:
+  activeDeadlineSeconds:
+    detail: 在系统尝试终止 Job 之前，job 可能处于活动状态的持续时间。
+    label: 停止延迟时间
+  backoffLimit:
+    detail: 标记此作业失败之前的重试次数。
+    label: Back Off Limit
+  completions:
+    detail: 成功运行 Job 的 Pods 的数量。
+    label: 完成
+  detail: 配置 Job 需要的参数。
+  failedJobsHistoryLimit:
+    detail: 要保留的未完成 JOBs 的数量。
+    label: 历史失败 Jobs 限制
+  parallelism:
+    detail: Job 在给定时间内应运行的最大 Pods 数。
+    label: 并行数
+  seconds: "{count, plural,\n  =1 {Second}\n  other {Seconds}\n}\n"
+  successfulJobsHistoryLimit:
+    detail: 要保留多少个成功完成的 JOBs。
+    label: 历史成功 Jobs 限制
+  suspend:
+    label: 暂停
+  times: "{count, plural,\n  =1 {Time}\n  other {Times}\n}\n"
+  title: Job 配置
+formKeyValue:
+  addAction: 添加键值对
+  binary:
+    byte: "{length, plural,\n=1 {# byte}\nother {# bytes}\n}\n\n\n"
+  key:
+    label: 键
+    placeholder: 键
+  protip: "高级技巧: 在键(Key)输入栏中粘贴一行或多行的 key=value 键值对能够批量输入。"
+  separator: =
+  value:
+    label: 值
+    placeholder: 值
+formNamespace:
+  create:
+    placeholder: e.g. myapp
+  errors:
+    noneChosen: 您必须选择命名空间。
+    validation: "命名空间: {error}"
+  label:
+    create: 命名空间
+    default: 默认命名空间
+    reuse: 命名空间
+  reuse:
+    prompt: 选择命名空间...
+  toggle:
+    create: 创建新的命名空间
+    reuse: 使用现有的命名空间
+    simple: 自定义
+formNetwork:
+  container:
+    label: 容器
+  detail: 设置容器的网络和 DNS 选项
+  dns:
+    disable: 禁用服务发现并使用外部远端 DNS 服务器。
+    enable: 启用服务发现并使用本地缓存 DNS 服务器。
+    label: 服务发现
+  dnsConfig:
+    nameservers:
+      addActionLabel: 添加 DNS 服务器
+      label: DNS 服务器地址
+      placeholder: "例如: 192.168.2.1"
+    options:
+      addActionLabel: 添加
+      label: DNS 解析选项
+      name:
+        label: 名称
+        placeholder: "例如: ndots"
+      value:
+        label: 值
+        placeholder: "例如: 5"
+    searches:
+      addActionLabel: 添加搜索域
+      label: DNS 搜索域
+      placeholder: "例如: example.com"
+  dnsPolicy:
+    clusterFirst: 集群 DNS 服务器
+    clusterFirstWithHostNet: 主机网络下使用集群 DNS 服务器
+    label: DNS 策略
+  domainName:
+    label: 域名
+    placeholder: "例如: example.com"
+  hostAlias:
+    addActionLabel: 添加主机别名
+    host:
+      label: 主机名
+      placeholder: "例如: database"
+    ip:
+      label: IP 地址
+      placeholder: "例如: 192.168.0.1"
+    label: 主机别名(/etc/hosts 记录)
+  hostname:
+    containerName: 使用容器名称
+    custom: 设置主机名
+    dockerId: 使用 Docker 容器 ID
+    hostName: 使用主机的主机名
+    label: 主机名
+    placeholder: "例如: web"
+  netMode:
+    disable: 否
+    enable: 是
+    label: 使用主机网络
+  requestedIp:
+    help: 从 10.42.0.0/16 网段中请求指定的 IP 地址，如果此 IP 地址已经被使用则会分配随机 IP。
+    label: 请求 IP
+    placeholder: "例如: 10.42.2.24"
+  resolvingServers:
+    addActionLabel: 添加服务器
+    label: 解析服务器
+    placeholder: "例如: 114.114.114.114"
+  retainIp:
+    label: 保持 IP
+    reuse: 当升级或替换不健康的容器实例时保持 IP 地址不变。
+  searchDomains:
+    addActionLabel: 添加搜索域
+    label: 搜索域
+    placeholder: "例如: prod.example.com"
+  subdomain:
+    label: 子域名
+    placeholder: "例如: foo"
+  subnet:
+    form:
+      ip:
+        label: IP
+        placeholder: 例如：192.168.1.100,多个 IP 用逗号连接
+      mac:
+        label: MAC
+        placeholder: "例如: 0a:00:27:00:00:00, 多个 MAC 用逗号连接"
+      subnet:
+        label: Subnet
+        placeholder: 请选择一个 MacvlanSubnet
+    msg: "因扁平网络使用方式限制，Pod 缩放/升级策略已改为: 先停止旧 Pod，再启动新 Pod"
+  title: 网络
+formRunAsGroupPodSecurityPolicy:
+  detail: 控制与容器一起运行的用户组 ID。
+  range:
+    addLabel: 添加范围
+    max:
+      label: 最大
+      placeholder: e.g. 65535
+    min:
+      label: 最小
+      placeholder: e.g. 1
+  rule:
+    mayRunAs: MayRunAs - 不需要指定 RunAsGroup。但是，当指定 RunAsGroup 时，它们必须位于定义的范围内。
+    mustRunAs: MustRunAs - 需要配置一个范围。使用范围的第一个值作为默认值。根据配置的范围进行验证。
+    runAsAny: RunAsAny - 没有提供默认值，允许指定任意 runAsGroup。
+  title: 作为组策略运行
+formScale:
+  label: 工作负载类型
+  scaleMode:
+    cronJob: "CronJob: 定时运行 Pod"
+    daemonSet: "DaemonSet: 每台主机部署 1 个 Pod"
+    deploymentPrefix: "Deployment: 部署无状态应用"
+    job: "Job: 一次性运行 Pod"
+    replicaSetPrefix: 副本集
+    replicationControllerPrefix: 复制控制器
+    scaleSuffix: "{scale, plural,\n=1{ 个 Pod}\nother { 个 Pods}\n}\n"
+    sidekickInactive: "Sidecar: 将容器添加到现有工作负载"
+    sidekickPrefix: "Sidecar: 添加容器到"
+    sidekickSuffix: ""
+    statefulSetPrefix: "StatefulSet: 部署有状态应用"
+  showAdvanced: 更多选项
+formUserLabels:
+  addAction: 添加标签
+  detail: 标签是可用于注释容器并进行调度决策的键值对。
+  key:
+    label: 键
+    placeholder: "例如: foo"
+  nodeDetail: 键/值对形式的标签将应用于主机上，用于容器的调度决策。
+  protip: "高级技巧: 粘贴一行或多行的 key=value 键值对能够批量输入。"
+  separator: =
+  title: 标签
+  value:
+    label: 值
+    placeholder: "例如: bar"
+formVolumes:
+  add:
+    bindMount: 映射主机目录
+    certificate: 证书卷
+    configMap: 配置映射卷
+    customLogPath: 从目录读取日志
+    existingPvc: 使用现有 PVC
+    existingVolume: 现有的临时卷
+    label: 添加卷...
+    newPvc: 添加新的 PVC
+    newVolume: 添加临时卷
+    secret: 密文卷
+    tmpfs: 添加内存 tmpfs
+    vct: 添加 PVC 模板
+  detail: 持久化和共享独立于单个容器生命周期的数据
+  errors:
+    absoluteMountPoint: 卷挂载点必须使用绝对路径。
+    incomplete: 尚未完成卷配置
+  noHostContainers: 该主机没有可以提供共享卷的容器。
+  noLaunchConfigs: 此服务下没有可共享卷的启动配置。
+  onlySingleHost: 仅当添加容器到特定主机时适用。
+  table:
+    kind: 类型
+    mountPoint: 挂载点
+    opts: 权限/选项
+    source: 源
+  title: 数据卷
+  value:
+    prompt: 选择容器...
+  volumeDriver:
+    label: 卷驱动
+    placeholder: "例如: rancher-nfs，默认: local"
+    suggestion: "使用的存储驱动: "
+  volumes: 卷
+  volumesFrom: 卷来自
+k8sPage:
+  configFile:
+    button: Kubeconfig 文件
+    detail: 生成在本机可以使用的 <code>kubectl</code> 配置文件。
+    generating: 生成中...
+    title: 配置文件
+    usage:
+      downloadText: |
+        然后下载<a href="https://www.cnrancher.com/docs/rancher/v2.x/cn/install-prepare/download/kubernetes/" target="_blank"><code>kubectl</code></a>(如有需要)安装并运行。
+      helpText: |
+        将配置保存到 <code>~/.kube/config</code>
+  dashboard:
+    button: 打开仪表盘
+    detail: 访问本地 Kubernetes 仪表盘。
+    title: 控制面板
+  header: Kubernetes
+  shell:
+    button: 执行 kubectl 命令行
+    detail: 在浏览器中执行 Kubernetes 的 <code>kubectl</code> 命令行。
+    title: 命令行
+  toolbox: 工具箱
+modalAddPayment:
+  currencies:
+    dollar: 美元($)
+    euro: 欧元(€)
+    yuan: 人民币(¥)
+  errors:
+    cc: 不正确的信用卡号码
+    city: 城市信息为必填项
+    cvc: 不正确的 CVC number
+    exp: 不正确的有效期
+    state: 省份信息为必填项
+    street: 街道信息为必填项
+    zip: 邮编信息为必填项
+  form:
+    address:
+      addressLine1:
+        label: 地址栏 1
+        placeholder: 742 Evergreen Terrace
+      addressLine2:
+        label: 地址栏 2
+        placeholder: Apt. 123
+      city:
+        label: 城市
+        placeholder: Shanghai
+      country:
+        label: 国家
+        placeholder: 中国
+      state:
+        label: 省
+        placeholder: Shanghai
+      zip:
+        label: 邮编
+        placeholder: "518000"
+    cc:
+      label: 信用卡号码
+      placeholder: • • • • • • • • • • • •
+    currency:
+      label: 选择币种
+    cvc:
+      label: CVC 号码
+      placeholder: •••
+    default:
+      label: 默认卡
+    exp:
+      label: 有效期
+      placeholder: ••/••
+    name:
+      label: 所有者名称
+      placeholder: 约翰 · 史密斯
+  header: 添加新的付款方式
+  save: 保存
+modalRotateEncryption:
+  backupWarning: 在继续之前，请确保集群的 ETCD 备份已经成功完成。
+  lastBackup: 最后一次备份 {backupName} 在 {backupTime} 时执行。
+  title: 轮换加密密钥
+modalWelcome:
+  closeModal: 确认
+  header: 欢迎使用 {appName}!
+multiClusterAppsPage:
+  error:
+    appData: 加载全局应用程序数据出错
+  header: 应用列表
+  noData: 没有启动多集群应用程序
+  noMatch: 没有多集群应用程序匹配当前搜索
+newCatalog:
+  answers:
+    addAction: 添加应答
+    label: 应答
+  appInfo: 详细描述
+  appInfoDetail: 应用程序信息和用户 guid
+  catalog: "应用商店:"
+  category: "类别:"
+  config: 配置选项
+  customizeNamespace: 此应用程序将被部署到 <code>{namespaceId}</code> 命名空间。
+  error:
+    appData: 数据加载错误
+  forceRollback: 如果在回滚期间需要，删除和重新创建资源。
+  forceUpgrade: 如果升级过程中需要，删除和重新创建资源。
+  helm:
+    label: 配置选项
+    options:
+      label: Helm 选项
+      timeout:
+        help: 等待 Kubernetes 命令完成的超时时间。
+        label: Helm 超时
+      wait:
+        help: 在将应用程序标记为激活之前，等待所有的 Kubernetes 资源准备完成，如果超过超时时间，应用程序安装将失败。
+        label: Helm 等待
+    protip: Helm 模板接受逗号做为分隔符的字符串列表。
+  istio:
+    catalog: "Traffic Rules Catalog:"
+    saveNew: 创建
+  kind: "应用商店类型:"
+  license: "授权:"
+  maintainedBy: 由社区成员维护
+  maintainer: "维护者:"
+  newAppDetail: 选择应用程序版本和对应的命名空间。
+  newNamespace: 新的命名空间
+  noConfig: 该模板没有配置选项
+  official: 官方认证
+  preview: 预览
+  requiredNamespace: 需要指定命名空间
+  saveConfigure: 设置
+  saveNew: 启动
+  saveUpgrade: 升级
+  seeMore: 更多信息...
+  selectVersionAdd: 选择模板版本部署
+  selectVersionConfigure: 选择模板版本设置
+  selectVersionUpgrade: 选择版本升级
+  startService: 创建后启动服务
+  support: "支持:"
+  templateFiles: 模版文件
+  templateVersion: 模板版本
+  titleAdd: "添加应用: {name}"
+  titleConfigure: "设置应用: {name}"
+  titleUpgrade: "升级应用: {name}"
+  txt: answers.txt
+  unknownType: "未识别的问题类型:"
+  upgrade: "升级:"
+  url: "项目 URL:"
+  version:
+    default: 当前默认(当前版本 {version})
+    prompt: 选择版本...
+  warning:
+    monitoring: 进行监控相关内容的配置请前往 <b>集群->工具->监控</b>，在当前页面做的修改可能会被覆盖。
+nodeDriver:
+  addTemplate: 添加主机模板
+  amazonec2:
+    access:
+      detail: 选择将用于启动 EC2 实例的区域和 API 密钥
+      help: 在这里粘贴您的 AWS 密钥对。我们将使用此密钥创建新实例。
+      loading: 从 EC2 加载可用性区域和 VPC 信息…
+      next: 下一步:对节点进行身份验证和配置
+      title: 1. 帐户访问
+    accessKey:
+      label: Access Key
+      placeholder: Your AWS access key
+    ami:
+      label: AMI
+      placeholder: An Ubuntu AMI
+      rancherList: RancherOS AMI List
+    availabilityZone: 可用性区域
+    encryptEbsVolume:
+      label: Encryption
+      radioLabel: Encrypt EBS Volume
+    iam:
+      label: IAM 配置文件
+      placeholder: my-k8s-profile
+    instance:
+      detail: 定制将要创建的EC2实例。
+      title: 4. 实例
+    instanceType:
+      label: 实例类型
+    metadata:
+      httpEndpoint:
+        disabled: Disabled
+        enabled: Enabled
+        label: HTTP Endpoint
+        protip: 启用或禁用实例上的HTTP元数据端点。
+      httpTokens:
+        label: HTTP Tokens
+        optional: 可选
+        protip: 对实例元数据请求使用 HTTP 令牌
+        required: 必须
+    needs:
+      item1: From the {appName} server to <code>TCP</code> port <code>22</code> <span class="text-muted">(SSH to install and configure Docker)</span>
+      item2: From and To all other hosts on <code>UDP</code> ports <code>500</code> and <code>4500</code> <span class="text-muted">(for IPsec networking)</span></li>
+      item3: 这些规则 <b>不会</b> 自动添加。
+      label: "要使 {appName} 正常访问，您的安全组将需要允许流量:"
+    noSubnet: 没有子网可供选择
+    onlyPrivate:
+      label: 只使用私有IP地址
+    portHelp:
+      link: 了解更多
+      text: 了解哪些端口需要放行。
+    privateIp:
+      label: 私有 IP
+    region:
+      label: 区域
+    requestSpotInstance:
+      enable: Request spot instance
+      label: Spot 实例
+    rootSize:
+      label: 根磁盘大小
+      unit: GB
+    secretKey:
+      label: Secret Key
+      placeholder: Your AWS secret key
+      provided: Provided
+    securityGroup:
+      choose: 选择一个或多个现有组
+      defaultCreate: "标准: 自动创建 <code>{groupName}</code> 组"
+      defaultExisting: "标准: 使用现有的 <code>{groupName}</code> 组"
+      detail: 选择将应用于实例的安全组
+      loading: 加载实例的选项……
+      next: "下一步: 设置实例选项"
+      title: 3. 安全组
+    spotPrice:
+      label: Spot Price
+      unit: $
+    sshUser:
+      label: SSH User
+      placeholder: e.g. ubuntu
+    subnet: VPC/子网
+    tags:
+      addActionLabel: Add AWS Tag
+      placeholder: e.g. dev
+      valueLabel: Tags
+    useEbsOptimizedInstance:
+      label: 优化实例
+      radioLabel: 创建 EBS 优化的实例
+    volumeType:
+      label: Amazon EBS 卷类型
+    zone:
+      detail: 为实例选择可用性区域和 VPC/子网
+      loading: 从 EC2 加载安全组信息…
+      next: "下一步: 选择安全组"
+      title: 2. 区域和网络
+  amazoneks:
+    access:
+      help: 在此处粘贴 AWS 密钥对，只使用 IAM 访问键，使用根用户生成的键将使集群不可访问。
+      loading: 从亚马逊加载集群选项...
+      next: "下一步: 配置集群"
+    accessKey:
+      label: Access Key
+      placeholder: Your AWS access key
+    ami:
+      help: 您可以覆盖 Rancher 基于区域选择的默认 AMI。
+      label: 自定义 AMI
+    associateWorkerNodePublicIp:
+      radio:
+        default: 是
+        off: "否: 仅私有 IPs"
+      title: Worker 节点的公网 IP
+    clusterOption:
+      detail: 为集群自定义 Kubernetes 选项
+      title: 集群选项
+    desired:
+      label: 预期 ASG 大小
+    encryptEbs:
+      detail: 在工作节点上启用EBS加密。
+      label: EBS Encryption
+    keyPairs:
+      label: SSH Key
+      prompt: 没有选择
+      tooltip: 您可能需要编辑安全组的入站规则来启用 22 端口。
+    kubernetesVersion:
+      label: Kubernetes 版本
+      placeholder: 选择要安装的 Kubernetes 版本
+    max:
+      label: 最大平均比重
+    min:
+      label: 最小平均比重
+    nodeVolumeSize:
+      label: 主机卷大小
+      placeholder: "例如: 20"
+    region:
+      label: 区域
+    role:
+      help: 您可以不选择服务角色，Rancher 会为您自动创建。
+      label: 服务角色
+      loading: 从 Amazon 加载 VPCs...
+      next: "下一步: 选择 VPC & Subnet"
+      noneSelected: Rancher 创建角色
+      radio:
+        custom: "自定义: 从现有服务角色中选择。"
+        default: "标准: Rancher 生成的服务角色。"
+    secretKey:
+      label: Secret Key
+      placeholder: Your AWS secret key
+      provided: Provided
+    securityGroup:
+      choose: 选择一个或多个现有安全组
+      defaultCreate: "标准: 自动创建新的安全组。"
+      defaultExisting: "标准: 使用现有的 {groupName} 组。"
+      detail: 选择将应用于 EKS 实例的安全组
+      loading: 加载设置实例选项...
+      next: "下一步: 设置实例选项"
+      title: 安全组
+    sessionToken:
+      label: Session Token<em class='text-muted'> 可选</em>
+      placeholder: Your AWS session token
+      provided: Provided
+    subnet:
+      help: 2 必须选择子网
+      loading: 从 Amazon 加载安全组...
+      next: 下一步:选择安全组
+      title: 子网
+    userData:
+      help: 将用户数据传递给节点以执行自动配置任务
+      label: 用户数据
+      placeholder: 粘贴脚本
+    vpc:
+      detail: 选择将用于 EKS 实例的 VPC
+      loading: 加载 Subnets...
+      loadingRancherDefault: 加载实例选项...
+      next: "下一步: 选择 Subnet"
+      nextRancherDefault: "下一步: 选择实例选项"
+      noneSelected: Rancher 创建 VPC 和 Subnet
+      radio:
+        custom: "自定义: 从现有 VPC 和子网中选择。"
+        default: "标准: 通过 Rancher 创建 VPC 和子网。"
+      title: VPC & Subnet
+  azure:
+    access:
+      detail: 将用于启动 Azure 实例的 API 密钥。
+      title: 账户访问
+    availabilitySet:
+      label: 可用性集
+      placeholder: 可用集名称
+    clientId:
+      label: 客户端 ID
+      placeholder: 客户端 ID
+    clientSecret:
+      label: 客户端秘钥
+      placeholder: 客户端秘钥
+    diskSize:
+      label: 磁盘大小
+      placeholder: "例如: 30"
+    dockerPort:
+      label: Docker 端口
+      placeholder: "2376"
+    environment:
+      label: 环境
+      placeholder: Azure 公共云
+    faultDomainCount:
+      helpText: 如果已经创建了可用性集，则将忽略故障域计数。
+      label: Fault Domain Count
+      placeholder: "例如: 3"
+    image:
+      helpText: 提供 ARM 资源标识符需要使用托管磁盘。
+      label: 镜像
+      placeholder: "推荐: UbuntuServer:18.04-LTS:latest"
+    instance:
+      detail: 自定义将要创建的 Azure 实例
+      title: 实例
+    managedDisks:
+      helpText: 创建一个 {type} 可用性集。在创建可用性集后更改此值可能会导致错误。
+      label: 磁盘类型
+      managed: 托管的磁盘
+      unmanaged: 非托管的磁盘
+    network:
+      detail: 为此模板创建的实例配置网络
+      title: 网络
+    noPublicIp:
+      label: 无公网 IP
+    nsg:
+      helpText: 当使用一个由 Rancher 管理的或提供一个现有的 NSG 时，使用此模板的所有节点将使用提供的 NSG。如果没有提供 NSG，将为每个节点创建一个新的 NSG。
+      label: 网络安全组
+      openPorts: 当使用一个现有的 NSG 时，打开的端口被忽略。
+      placeholder: e.g. AllowVnetOutBound
+    openPort:
+      label: 开放端口
+      placeholder: "使用逗号分隔符，例如: 80，443"
+    placement:
+      detail: 选择将由此模板创建的实例的区域。
+      title: 区域
+    privateIpAddress:
+      label: 私有 IP
+      placeholder: 127.0.0.1
+    publishSettingsFile:
+      label: 发布配置
+      placeholder: 发布配置文件
+    region:
+      label: 区域
+    resourceGroup:
+      label: 资源组
+      placeholder: docker-machine
+    size:
+      label: 规格
+    sshUser:
+      label: SSH 用户
+      placeholder: usr1
+    staticPublicIp:
+      label: 公网 IP
+    storageType:
+      label: 存储类型
+    subnet:
+      label: 子网
+      placeholder: 示例别名
+    subnetPrefix:
+      label: 子网前缀
+      placeholder: 128.42.0.0/21
+    subscriptionCert:
+      label: 订阅证书
+      placeholder: Azure 订阅证书
+    subscriptionId:
+      label: 订阅 ID
+      placeholder: Azure 订阅 ID
+    updateDomainCount:
+      helpText: 如果已经创建了可用性集，更新域计数将被忽略。
+      label: Update Domain Count
+      placeholder: "例如: 5"
+    usePrivateIp:
+      label: 使用私有 IP 连接
+    vnet:
+      label: VNet
+      placeholder: "[资源组: ]名称"
+  cloneTemplate: 从 {name} 克隆主机模板
+  cloudCredentialError: 云凭证必须设置。
+  digitalocean:
+    accessToken:
+      help: "'从 <a href=\"https://cloud.digitalocean.com/settings/api/tokens\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">Applications&API</a> 页面获取 DigitalOcean 的个人访问 token。'\n"
+      label: 访问令牌
+      placeholder: DigitalOcean API 访问令牌
+    authAccountButton: "下一步: 配置 Droplet"
+    backups:
+      label: 启用备份
+    droplet:
+      detail: 配置将由此模板创建的 Droplets 的选项
+      title: Droplet 选项
+    errors:
+      hostnamePrefix: 名称前缀不能包含 "_"
+    image:
+      label: 镜像
+    ipv6:
+      label: 启用 IPv6
+    monitoring:
+      label: 启用监控
+    optionsSection: 选项
+    privateNetworking:
+      label: 启用私有网络
+    region:
+      label: 区域
+    size:
+      label: Droplet 规格
+    sizeLabel: "{highMem, select, true {High Memory: } other {}}{memoryGb} GB RAM, {disk} GB Disk, {vcpus, plural,\n  =1 {# vCPU}\n  other {# vCPUs}\n}\n"
+    sshUser:
+      label: SSH 用户
+      placeholder: "例如: root"
+    tags:
+      addActionLabel: 添加 Droplet 标签
+      placeholder: "例如: dev"
+      valueLabel: 标签
+  displayName:
+    aliyun: Alibaba ACK
+    aliyunecs: Alicloud ECS
+    amazonec2: Amazon EC2
+    amazoneks: Amazon EKS
+    amazoneksv2: Amazon EKS
+    azure: Azure
+    azureaks: Azure AKS
+    baidu: Baidu CCE
+    cloudca: Cloud.ca
+    digitalocean: DigitalOcean
+    exoscale: Exoscale
+    googlegke: Google GKE
+    googlegkev2: Google GKE
+    huawei: Huawei CCE
+    huaweicce: Huawei CCE
+    import: Other
+    importeks: Amazon EKS
+    linode: Linode
+    linodelke: Linode LKE
+    oci: Oracle Cloud Infrastructure
+    openstack: OpenStack
+    oracleoke: Oracle OKE
+    otc: Open Telekom Cloud
+    otccce: Open Telekom Cloud CCE
+    packet: Packet
+    pinganyunecs: Pinganyun ECS
+    pnap: phoenixNAP
+    rackspace: RackSpace
+    rancherkubernetesengine: RKE
+    softlayer: SoftLayer
+    tencent: Tencent TKE
+    tencenttke: Tencent TKE
+    upcloud: UpCloud
+    vmwarevsphere: vSphere
+    zstack: ZStack
+  driverOptions: "{driver} 选项"
+  editTemplate: "编辑主机模板: {name}"
+  editWarning: 编辑主机模板只会影响由主机池创建的新主机，现有主机将不会自动更新或替换。<br>如果从池中删除主机，将使用模板中的新设置创建新主机。
+  exoscale:
+    accountHelp: 在此粘贴 Exoscale 密钥对，我们将用秘钥创建新的实例
+    accountSection: 账户访问
+    apiKey:
+      label: API Key
+      placeholder: Exoscale API 密钥
+    diskSize:
+      label: 根磁盘大小
+    instanceProfile:
+      label: 实例配置文件
+    instanceSection: 实例
+    loadingInstance: 读取可用实例配置...
+    loadingSecurity: 从 Exoscale 加载安全组...
+    loadingZone: 从 Exoscale 加载区域信息...
+    loginAction: "下一步: 验证并选择安全组"
+    needs:
+      item1: 从 {appName} 服务器到主机的 <code>TCP</code> 端口 <code>22</code><span class="text-muted"> (SSH 连接用于安装 docker)
+      item2: 与其他所有主机之间的 <code>UDP</code> 端口 <code>500</code> 和 <code>4500</code><span class="text-muted"> (用于 IPsec 网络)</span>
+      item3: 这些规则<b>不会</b>自动添加
+      label: "{appName} 正常工作需要安全组允许以下通讯: "
+    portHelp:
+      link: 了解更多
+      text: 关于将要开放的端口信息
+    secretKey:
+      label: 加密秘钥
+      placeholder: Exoscale secret 密钥
+      provided: 已提供
+    securityGroup:
+      creating: 创建安全组...
+      custom: "自定义: 选择现有安全组"
+      defaultCreate: "标准: 自动创建 <code>{groupName}</code> 安全组"
+      defaultExisting: "标准: 使用现有的 <code>{groupName}</code> 安全组"
+      label: 安全组
+      updating: 更新安全组...
+    securityGroupSection: 安全组
+    selectSecurityGroupAction: "下一步: 设置实例选项"
+    selectZoneAction: "下一步: 选择安全组"
+    sshUser:
+      label: SSH 用户
+      placeholder: 默认情况下由 docker-machine 选择
+    template:
+      label: 模板
+    zone:
+      label: 区域
+    zoneSection: 区域
+  externalError: 尝试加载自定义驱动 { driverName } 出错，请验证自定义节点驱动配置。
+  nameError: 名称必须设置。
+  oci:
+    access:
+      detail: 用户凭证将用于启动 OCI 实例
+      title: 帐户访问
+    availabilityDomain:
+      helpText: 如果使用特定于 ad 的子网，则必须匹配子网的可用域。
+      label: 可用性域
+      placeholder: availability-domain-name
+    faultDomainCount:
+      helpText: 每个可用性域包含三个故障域
+      label: 故障域
+      placeholder: e.g. 3
+    image:
+      label: 系统镜像
+      placeholder: Oracle-Linux-7.7-2020.02.21-0
+    instance:
+      detail: 配置和定制将要创建的计算实例
+      title: 实例详情
+    network:
+      detail: 为这个模板创建的计算实例配置 VCN
+      title: 虚拟云网络详细信息
+    nodeCompartment:
+      label: OCID of compartment where compute instance(s) will be created
+      placeholder: ocid1.compartment.oc1....
+    openPort:
+      label: 开放端口
+      placeholder: 逗号分隔, e.g. 80,443
+    placement:
+      detail: 选择此模板创建的计算实例的位置
+      title: Placement
+    region:
+      label: 区域
+      placeholder: select cloud credential to populate options...
+    shape:
+      label: Shape
+      placeholder: enter valid compartment to populate options...
+    subnet:
+      helpText: If subnet is AD-specific, it must match the AD of the node(s) created by this template.
+      label: OCID of subnet (accessible to Rancher) that compute instance(s) will use
+      placeholder: ocid1.subnet.oc1....
+    usePrivateIp:
+      label: 使用私有 IP 地址连接到计算实例
+    vcn:
+      label: 启动计算实例 VCN 的 OCID
+      placeholder: ocid1.vcn.oc1....
+    vcnCompartment:
+      label: OCID of compartment where VCN and subnet reside (if different than above)
+      placeholder: ocid1.compartment.oc1....
+  packet:
+    accountSection: 账户访问
+    apiKey:
+      label: Account API Key
+      placeholder: Your Packet API key
+    apiKeyHelp: 从 Packet 的 <a href="https://app.packet.net/users/0/api-keys" target="_blank">API Keys</a> 页面获取。
+    authentication: 验证
+    image:
+      label: 镜像
+    instanceOptionsSection: 实例选项
+    instanceSection: 实例
+    location: 所在地区
+    loginAction: "下一步: 认证并且选择实例"
+    planDetails:
+      cpu: CPUs
+      drives: 驱动
+      label: 实例详情
+      memory: 内存
+      network: NICs
+    projectId:
+      label: 项目
+      placeholder: Packet 项目 ID
+    region:
+      label: 区域
+    regionSection: 区域
+    size:
+      label: 规格
+  pnap:
+    access:
+      detail: API Credentials will be used to launch phoenixNAP servers.
+      title: Account Access
+    errors:
+      clientIDRequired: Client ID is required.
+      clientSecretRequired: Client Secret is required.
+      hostnameRequired: Hostname is required.
+      locationRequired: Location is required.
+      osRequired: Operating System is required.
+      typeRequired: Server type is required.
+    location:
+      label: Location
+      placeholder: Please select server location.
+    os:
+      label: OS
+      placeholder: Please select Operating System.
+    serverDetails:
+      detail: Select details of the instances that will be created by this template.
+      title: Server Details
+    type:
+      label: Type
+      placeholder: Please select type of server to provision.
+  rackspace:
+    account:
+      detail: 用来创建 RackSpace 实例的用户名和 API Key。
+      title: 1. 账户访问
+    accountHelp: 从 RackSpace 控制面板的帐户设置页面获取。
+    apiKey:
+      label: API Key
+      placeholder: RackSpace APK Key
+    flavor:
+      label: 偏好
+    region:
+      detail: 选择要创建的 RackSpace 实例的区域和偏好。
+      label: 区域
+      title: 2. 区域和偏好
+    username:
+      label: 用户名
+      placeholder: RackSpace 用户名
+  templateOptions: "{appName} 模板"
+  vmwarevsphere:
+    access:
+      detail: 配置在哪里查找 vCenter 或 ESXi 服务器
+      help: "注意: 免费的 ESXi license 不支持 API 访问，只支持具有有效或评估许可证的服务器。"
+      title: 1. 帐户访问
+    boot2dockerUrl:
+      label: 操作系统 ISO 下载地址
+      placeholder: "默认: 最新的 rancheros-vmware 镜像"
+    cfgparam:
+      addActionLabel: 添加参数
+      key:
+        placeholder: e.g. guestinfo.hostname
+      label: 用于 guestinfo 的配置参数
+      value:
+        placeholder: "例如: Myrancherhost"
+    cloneFrom:
+      label: VM/Template
+      placeholder: "例如: http://my_host/template.yml"
+    cloudConfig:
+      label: Cloud config
+      placeholder: /etc/kubernetes/vsphere.conf
+    cloudconfig:
+      label: Cloud Config YAML
+    cloudinit:
+      help: 在 guestinfo 中设置 Cloud-init 文件或 url
+      label: Cloud Init
+      placeholder: "例如: http://my_host/cloud-config.yml"
+    cloudinitType:
+      label: Cloud Init type
+    contentLibrary: "Content library:"
+    cpuCount:
+      label: CPUs
+      unit: "{cores, plural, =1 {Core} other {Cores}}"
+    creationMethod:
+      cloneAnExistingVirtualMachine: Clone an existing virtual machine
+      deployFromTemplateContentLibrary: "Deploy from template: Content Library"
+      deployFromTemplateDataCenter: "Deploy from template: Data Center"
+      label: Creation method
+      rancherOsIso: RancherOS ISO (Deprecated)
+    creationType:
+      label: 创建方法
+      legacy: 从 boot2docker ISO 安装 (Legacy)
+      library: "模板部署: Content Library"
+      template: "模板部署: Data Center"
+      vm: 克隆一个现有的虚拟机
+    customAttributes:
+      addActionLabel: 添加自定义属性
+      detail: 自定义属性允许您将元数据附加到 vSphere 目录中的对象，以便更容易地对这些对象进行排序和搜索。
+      title: 5. 自定义属性 (legacy)
+    dataCenter:
+      help: 用于创建虚拟机的数据中心（对于独立 ESXi 保留空白）。
+      label: 数据中心
+      placeholder: "例如: datacenter_name"
+    dataStore:
+      cluster:
+        help: 在数据存储集群上创建 VM
+        tooltip: 使用数据存储集群?
+      help: 创建 VM 磁盘的数据存储
+      label: 数据存储
+      placeholder: 例如：datastore_cluster_name/datastore_name
+    diskSize:
+      label: 磁盘
+      unit: MB
+    folder:
+      help: VM 的文件夹。该文件夹必须已经存在于数据中心中
+      label: Folder
+      placeholder: "例如: /folder"
+    host:
+      help: 用于创建虚拟机的特定主机(对于独立 ESXi 或具有 DRS 的集群留空)。
+      label: 主机
+      placeholder: "例如: cluster_name/host_name"
+    hostOptions:
+      any:
+        label: Any
+    instance:
+      detail: 选择虚拟机的大小和操作系统
+      title: 3. 实例配置
+    instanceOptionsSection: 实例选项
+    instanceSection: 实例
+    library:
+      label: Library
+      placeholder: dsl_linux_v4-4-10.ova
+    libraryTemplate: "Library template:"
+    memorySize:
+      label: 内存
+      unit: MB
+    network:
+      addActionLabel: 添加网络
+      help: 连接 VM 的网络
+      valueLabel: 网络
+      valuePlaceholder: 例如：VM Network
+    password:
+      label: 密码
+    pool:
+      help: 用于创建 VM 的资源池(对于独立 ESXi 保留空白)。
+      label: 池
+      placeholder: "例如: /dc_name/host/host_name/Resources/pool_name"
+    scheduling:
+      detail: 选择将调度虚拟机的管理程序
+      title: 2. 调度
+    schedulingSection: Scheduling
+    tags:
+      addActionLabel: Add tag
+      detail: 标签允许您将元数据附加到 vSphere 目录中的对象，以便更容易地对这些对象进行排序和搜索。
+      title: 4. 标签
+    template: "模板:"
+    username:
+      label: 用户名
+    vappHelp: "注意: 独立的 ESXI 不支持 vApp 选项和网络协议配置文件"
+    vappIpallocationpolicy:
+      help: dhcp, fixed, transient 或 fixedAllocated
+      label: vApp IP 分配策略
+      placeholder: "例如: fixedAllocated"
+    vappIpprotocol:
+      help: IPv4 或 IPv6
+      label: vApp IP 协议
+      placeholder: "例如: IPv4"
+    vappMode:
+      auto: 使用 vApp 网络协议配置文件去配置网络
+      disabled: 不使用 vApp
+      manual: 使用自定义 vApp 配置
+    vappOptions:
+      detail: 选择 OVF 环境属性
+      title: 6. vApp 选项
+    vappProperty:
+      addActionLabel: 添加参数
+      key:
+        placeholder: e.g. guestinfo.interface.0.ip.0.address
+      label: vApp 属性
+      value:
+        placeholder: "例如: ip:VM Network, expression 或 string"
+    vappTransport:
+      help: com.vmware.guestInfo 或 iso
+      label: OVF environment transport
+      placeholder: e.g. com.vmware.guestInfo
+    vcenter:
+      label: vCenter 或 ESXi 服务器
+      placeholder: vCenter 或者 ESXi 主机名/IP
+    vcenterPort:
+      label: 端口
+    virtualMachine: "虚拟机:"
+  zstack:
+    access:
+      detail: 选择将用于启动 ZStack 实例的 endpoint，帐户名称和帐户密码
+      loading: 从 ZStack 加载区域、集群、网络信息...
+      next: "下一步: 验证&选择网络"
+      title: 1. 帐户访问
+    accountName:
+      label: 帐户名称
+      placeholder: 帐户
+    accountPassword:
+      label: 帐户密码
+      placeholder: 帐户密码
+      provided: 已提供
+    cluster:
+      label: 集群
+    dataDiskOffering:
+      label: 数据磁盘
+    endpoint:
+      label: 终端
+      placeholder: "例如: https://192.168.1.42:8443/"
+    imageName:
+      label: 镜像名称
+    instance:
+      detail: 自定义将要创建的 EC2 实例
+      title: 3. 实例
+    instanceOffering:
+      label: 实例类型
+    network:
+      choose: 连接到现有网络
+      defaultCreate: "标准: 自动创建 <code>{groupName}</code> 安全组。"
+      label: 网络
+    portHelp:
+      link: 了解更多
+      text: 将要开放的端口的详细信息
+    systemDiskOffering:
+      label: 系统磁盘
+    zone:
+      detail: 选择实例的区域，集群和网络
+      label: 区域
+      loading: 从 ZStack 加载实例选项...
+      next: "下一步: 设置实例选项"
+      title: 2. 区域、集群和网络
+podSection:
+  detail: 当前主机的 Pods
+  title: Pods

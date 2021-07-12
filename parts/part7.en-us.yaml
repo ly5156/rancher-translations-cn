@@ -1,0 +1,1235 @@
+advancedSection:
+  hideText: Hide advanced options
+  showText: Show advanced options
+apiPage:
+  actionButton: Add Key
+  currentEndpoint: "Endpoint:"
+  detail: API Keys are tied to your specific user ({name}) and can create, delete, and manipulate all Clusters and Projects which you have access to.
+  header: API & Keys
+  table:
+    created: Created
+    description: Description
+    expires:
+      label: Expires
+      never: Never
+    name: Access Key
+    noData: There are no API keys defined
+    scope: Scope
+    state: State
+banner:
+  alerting: Alerts in Cluster Manager has been deprecated as of Rancher v2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. Check out the updated alerts integration in Rancher <a href="{dashboardLink}/monitoring">monitoring</a> in Cluster Explorer Apps and Marketplace.
+  cis: CIS Scanning in Cluster Manager has been deprecated as of Rancher 2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. For CIS Scanning with benchmark version 1.5 and above, see the updated <a href="{dashboardLink}/cis">CIS scanning</a> functionality in Cluster Explorer Apps and Marketplace.
+  dashboard: Try out the <a href="{dashboardLink}">Cluster Explorer</a> for a new way to view and manage your Kubernetes resources.
+  istio: Istio v1.5 has been declared end of life by the upstream project and is now deprecated as of Rancher 2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. Checkout the new <a href="{dashboardLink}/istio">Istio</a> v1.7 integration in the new Cluster Explorer Apps and Marketplace.
+  logging: Logging in Cluster Manager has been deprecated as of Rancher v2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. Check out the updated version of <a href="{dashboardLink}/logging">logging</a> in Cluster Explorer Apps and Marketplace.
+  monitoring: Monitoring in Cluster Manager has been deprecated as of Rancher v2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. Check out the updated version of <a href="{dashboardLink}/monitoring">monitoring</a> in Cluster Explorer Apps and Marketplace.
+  monitoringV2Warning: Monitoring in Cluster Manager has been deprecated as of Rancher v2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. The updated version of <a href="{dashboardLink}/monitoring">monitoring</a> in Cluster Explorer Apps and Marketplace is currently deployed.
+  multiclusterapp: Multi-Cluster Apps have been deprecated as of Rancher v2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. Check out the new <a href="{dashboardBase}c/local/fleet">Rancher Continuous Delivery</a> capability to deploy apps across multiple clusters through GitOps.
+  notifiers: Notifiers in Cluster Manager has been deprecated as of Rancher v2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. Check out the updated notifier integration in Rancher <a href="{dashboardLink}/monitoring">monitoring</a> in Cluster Explorer Apps and Marketplace.
+  pipeline: Pipelines has been deprecated as of Rancher 2.5.0 - check out the <a href="{docsBase}/faq/deprecated-features-25x" target="_blank">FAQ</a>. For continuous delivery capabilities check out <a href="{dashboardBase}c/local/fleet">Rancher Continuous Delivery</a> in the new Cluster Explorer view.
+certificatesPage:
+  algorithm: Algorithm
+  cn: Domain Name
+  detail:
+    header: "Certificate: {name}"
+  domainNames:
+    labelText: Domain Names
+    single: <a href="https://{cn}" target="_blank" rel="nofollow noreferrer noopener">{cn} <i class="icon icon-sm icon-external-link"/></a>
+    wildcardSingle: "{cn}"
+    wildcardWithSan: "{cn} +\n{sans, plural,\n=1 {1 other}\nother {# others}\n}\n"
+    withSan: "<a href=\"https://{cn}\" target=\"_blank\" rel=\"nofollow nefererrer noopener\">{cn} <i class=\"icon icon-sm icon-external-link\"></i></a> +\n{sans, plural,\n=1 {1 other}\nother {# others}\n}\n"
+  expires: Expires
+  expiresDate: Expires
+  fingerprint: Fingerprint
+  index:
+    header: Certificates
+    linkTo: Add Certificate
+    noData: There are no certificates defined
+    noMatch: No certificates match the current search
+  issuer: Issuer
+  new:
+    form:
+      description:
+        placeholder: e.g. EV cert for mydomain.com
+      name:
+        placeholder: e.g. mydomain.com
+    header: Add Certificate
+  serialNumber: Serial Number
+  valid: Valid Beginning
+clusterIstioPage:
+  allowSystemGroup:
+    "false": Allow cluster owner and <b>specified</b> groups to access Kiali and Jaeger UI.
+    "true": Allow <b>all</b> authenticated members to access Kiali and Jaeger UI.
+  config:
+    gatewayEnabled:
+      label: Enable Ingress Gateway
+    gatewayType:
+      label: Service Type of Ingress Gateway
+    grafanaEnabled:
+      label: Enable Grafana
+    grafanaPersistenceEnabled:
+      label: Enable Persistent Storage for Grafana
+    header:
+      gateway: Ingress Gateway
+      grafana: Grafana
+      mixer: Mixer
+      pilot: Pilot
+      prometheus: Prometheus
+      tracing: Tracing
+    http2Port:
+      label: Http2 Port
+    httpsPort:
+      label: Https Port
+    loadBalancerIP:
+      label: Load Balancer IP
+      placeholder: e.g. 192.0.0.1
+    mixerPolicyEnabled:
+      label: Enable Mixer Policy
+    mtlsEnabled:
+      label: Service to service mutual TLS
+    prometheusRetention:
+      label: Retention for Prometheus
+      placeholder: e.g. 6h
+    traceSampling:
+      label: Trace sampling Percentage
+      placeholder: e.g. 1
+    tracingEnabled:
+      label: Enable Tracing
+  confirmDisable: Are you sure?  Click again to disable Istio
+  customAnswers:
+    detail: Configure custom answers.
+    title: Custom Answers
+    warning: "Custom Answers are an advanced configuration option. {appName} pre-configures custom answers to ensure that specific <a href='https://istio.io/latest/docs/setup/additional-setup/cni/#prerequisites' target='_blank' rel='nofollow noreferrer'>prerequisites</a> are met for the default Istio configuration. Adding or removing custom answers may result in a non-functional Istio configuration. Please ensure you fully understand the changes you are making before you save."
+  disable: Disable
+  disabled: Istio is not enabled yet. Please click Enable button to enable it.
+  enableActionLabel: Enable
+  enableMonitoring:
+    label: Enable Monitoring
+  enabled: Istio is enabled. In order to leverage Istio, you will need to enable Istio sidecar auto injection for each namespace. If you enable it on an existing namespace, any existing workloads will need to be re-deployed to leverage the sidecar auto injection.
+  existingClaim:
+    label: Existing Claim for {component}
+  goToMonitoring: Monitoring needs to be on for istio to work. If you would like to modify the values please go to the <a href="/c/{clusterId}/monitoring/cluster-setting">Monitoring page</a> and save.
+  header: Istio
+  ingress:
+    detail: Monitoring and route rules configuration.
+    title: Ingress Gateway
+  insufficientSize:
+    selectors:
+      all: Please make sure you have at least one node matches node selectors with {cpu} milli CPUs and {memory} MiB of memory available to enable {component} workload.
+      cpu: Please make sure you have at least one node matches node selectors with {cpu} milli CPUs available to enable {component} workload.
+      memory: Please make sure you have at least one node matches node selectors with {memory} MiB of memory available to enable {component} workload.
+      unsupported: Node selector with value "true", "false" or number is not supported
+    total:
+      all: Please make sure you have at least {minCpu} milli CPUs and {minMemory} MiB of memory available to {action} Istio.
+      cpu: Please make sure you have at least {minCpu} milli CPUs available to {action} Istio.
+      memory: Please make sure you have at least {minMemory} MiB of memory available to {action} Istio.
+    workload:
+      all: Please make sure you have at least one node with {cpu} milli CPUs and {memory} MiB of memory available to deploy {component} workload.
+      cpu: Please make sure you have at least one node with {cpu} milli CPUs available to deploy {component} workload.
+      memory: Please make sure you have at least one node with {memory} MiB of memory available to deploy {component} workload.
+  links:
+    grafana:
+      label: Grafana UI
+    jaeger:
+      label: Jaeger UI
+    kiali:
+      label: Kiali UI
+    prometheus:
+      label: Prometheus UI
+  members:
+    detail: Control which groups have access to Kiali and Jaeger UI.
+    title: Group Access
+  mixer:
+    detail: General purpose policy and telemetry configuration.
+    title: Mixer
+  monitoringNotDeployed: Monitoring is still deploying. Please wait for monitoring to finish deploying before enabling Istio to ensure there are enough resources in the cluster.
+  nodeSelector:
+    addSelectorLabel: Add Selector
+    helpText: Select the nodes where {component} workloads will be scheduled to
+  notReady: Installing Istio into the system project of current cluster...
+  pilot:
+    detail: Traffic management configuration.
+    title: Pilot
+  telemetryAndPolicy: Telemetry And Policy
+  tracing:
+    detail: Configure tracking requests.
+    title: Tracing
+  upgradeMonitoring: Before enabling Istio, you need to upgrade cluster monitoring to version 0.0.4 or above first. Go <a href="/c/{clusterId}/monitoring/cluster-setting">here</a> to upgrade cluster monitoring.
+  version: Istio Version
+  warning:
+    mixerBreaking: Istio upgrade to 1.8 requires disabled first and then enable.
+clusterPage:
+  annotationsDetail: Configure labels and annotations for the cluster.
+  edit: Edit Cluster
+  internal: <b>Caution:</b> This is the cluster that {appName} is using as a data store.  Only administrators should be given write access to this cluster.<br>Users with write access to this cluster can use it to grant themselves access to any other cluster managed by this installation.
+  removeMemberNote: "Note: Removing User will not remove their project permissions"
+configMapsPage:
+  index:
+    header: Config Maps
+    linkTo: Add Config Map
+    noData: There are no config maps defined
+    noMatch: No Config Maps match the current search
+  table:
+    keys: Keys
+containersPage:
+  table:
+    noData: There are no workloads deployed.
+    noMatch: No containers match the current search.
+    sparkPrefixCpu: "CPU: "
+    sparkPrefixMemory: "Memory: "
+    sparkPrefixNetwork: "Network: "
+    sparkPrefixStorage: "Storage: "
+  welcome:
+    container: Get started right away
+    containerLink: Add a container
+    kubernetesLink: Install Kubernetes
+    orchestrator: Install another orchestrator
+cruVolumeClaimTemplate:
+  capacity:
+    label: Capacity
+    unit: GiB
+  customize:
+    detail: Customize Advanced options
+    title: Customize
+  define:
+    addActionLabel: Define
+  name:
+    placeholder: e.g. myvol
+  pv:
+    label: Persistent Volume
+    prompt: Select a persistent volume...
+  source:
+    label: Source
+    pv: Use an existing persistent volume to define a template
+    storageClass: Use a Storage Class to define a template
+  storageClass:
+    label: Storage Class
+    prompt: Use the default class
+  title:
+    define: Define Volume Claim Template
+    edit: "Edit Volume Claim Template: {name}"
+    new: Add Volume Claim Template
+    view: "Volume Claim Template: {name}"
+destinationRulePage:
+  noData: There are no destination rules defined.
+  noMatch: No Destination Rules match the current search
+  notSupported: networking.istio.io/v1alpha3 API is not available in the cluster.
+  table:
+    host:
+      label: Host
+    subsets:
+      label: Subsets
+editHost:
+  customName:
+    help: If this is left empty, the Hostname will be shown as the Name.
+    label: Custom Name
+    placeholder: e.g. dev1
+  description:
+    label: Description
+    placeholder: e.g. My development node
+  hostname:
+    help: As reported by the node operating system.
+    label: Hostname
+  ips:
+    addActionLabel: Add IP
+    help: If provided, the scheduler will select and bind published ports to one of the given public IP addresses.
+    label: Scheduler IPs
+    valueLabel: IP Address
+    valuePlaceholder: e.g. 1.2.3.4
+  labels:
+    label: Labels
+  requireAny:
+    addActionLabel: Add Required Label
+    help: If provided, containers must have one or more of the given labels in order to be eligible for scheduling onto this node.  If the value is left empty, a container with a matching key is eligible regardless of value.  <code>io.rancher.container.system</code> is required to allow system containers on to the node.
+    label: Require Container Label
+  title: Edit Node
+editNodePool:
+  title: Node Pool Taints
+editService:
+  title: Edit Service
+editUser:
+  form:
+    name:
+      label: Display Name
+      placeholder: e.g. John Smith
+    otherRoles:
+      label: Remove Roles
+    password:
+      confirm: Confirm New Password
+      error: Passwords must match
+      label: Change Password
+      mustChangePassword:
+        edit: Ask user to change their password on next login
+        new: Ask user to change their password on first login
+      new: New Password
+    username:
+      label: Username
+  title: Edit User
+failWhalePage:
+  header: Error
+  logoutButton: log out
+  reloadButton: "<a href=\"#\" onclick=\"window.location.href = window.location.href; return false;\">Reload</a> to try again or\n"
+formAccessModes:
+  accessROX: Many Nodes Read-Only
+  accessRWO: Single Node Read-Write
+  accessRWX: Many Nodes Read-Write
+  label: Access Modes
+formBalancerRules:
+  access:
+    internal: Internal
+    label: Access
+    public: Public
+  addInstanceLabel: Add a Container
+  addSelectorLabel: Add a Selector
+  addServiceLabel: Add a Service
+  addTargetLabel: Add a Rule
+  backendName:
+    label: Backend
+    placeholder: e.g. webapp
+  detail: Map requests to different targets depending on host, port, path, or IP address.
+  hostname:
+    label: Request Host
+    placeholder: e.g. example.com
+  label: Target Rules
+  noRules: No Rules
+  path:
+    label: Path
+    placeholder: e.g. /foo
+  priority:
+    label: Priority
+  protocol:
+    label: Protocol
+  selector:
+    label: Selector
+    placeholder: e.g. foo=bar
+  sourceIp:
+    label: Host IP
+    placeholder: "e.g. 1.2.3.4; Default: All"
+  sourcePort:
+    label: Listening Port
+    placeholder: e.g. 80
+  status: "{count, plural,\n=0 {No rules}\n=1 {# rule}\nother {# rules}\n}\n"
+  target: Target
+  targetPort:
+    label: Port
+    placeholder: e.g. 80
+formMembers:
+  members:
+    addGroup: Add Group
+    addMember: Add Member
+    addServiceAccount: Add Service Account
+    addUser: Add User
+    customRoles: Custom Roles
+    errors:
+      memberNameReq: Name is required for a member
+      memberRoleReq: Role is required for a member
+      nameInExists: Name is already exists. Please use a new project name.
+      nameReq: Name is required.
+      ownerReq: There must be at least one member with the Owner role.
+    group: Group
+    kind:
+      label: Kind
+    labelText: Members
+    multipleRoles: Multiple Roles
+    name:
+      label: Name
+    noAddUser: You are the only active registered user.
+    role:
+      label: Role
+    serviceaccount: Service Account
+    user: User
+  owner: "{type} Owner"
+formMenu:
+  iframeEnabled:
+    label: Use iframe
+  link:
+    label: Menu Link
+    placeholder: e.g. https://www.example.com
+  menu:
+    add: Add Menus
+  name:
+    label: Menu Name
+  scope:
+    cluster:
+      label: Apply For Cluster
+    project:
+      label: Apply For Project
+globalMonitoringPage:
+  cluster: Global Monitoring Cluster
+  confirmDisable: Are you sure?  Click again to disable global monitoring
+  customAnswers:
+    detail: Configure custom answers.
+    title: Custom Answers
+  disable: Disable
+  disabled: Global Monitoring is not enabled yet. Please click Enable button to enable it. You will be able to query your metrics across multiple clusters if cluster monitoring <code>v0.0.7000</code> or above enabled inside the clusters.
+  enableActionLabel: Enable
+  enabled: Global Monitoring is enabled. You can query your metrics across multiple clusters if cluster monitoring <code>v0.0.7000</code> or above enabled inside the clusters.
+  globalMonitoringClusterUnavailable: Cluster {clusterName} is unavailable.
+  grafana:
+    detail: Global Grafana and {appName} Global Dashboard configuration.
+    enableGrafanaSidecar:
+      label: Enable Grafana Dashboard Provisioning Sidecar
+    enablePersistence:
+      label: Enable Persistent Storage for Grafana
+    serviceType:
+      label: Grafana UI Service
+    size:
+      label: Grafana Persistent Volume Size
+      placeholder: e.g. 10Gi
+    storageClass:
+      label: Default StorageClass for Grafana
+    title: Global Dashboard
+  header: Global Monitoring (Experimental)
+  insufficientSize:
+    selectors:
+      all: Please make sure you have at least one node matches node selectors with {cpu} milli CPUs and {memory} MiB of memory available to enable {component} workload.
+      cpu: Please make sure you have at least one node matches node selectors with {cpu} milli CPUs available to enable {component} workload.
+      memory: Please make sure you have at least one node matches node selectors with {memory} MiB of memory available to enable {component} workload.
+      unsupported: Node selector with value "true", "false" or number is not supported
+    total:
+      all: Please make sure you have at least {minCpu} milli CPUs and {minMemory} MiB of memory available to {action} Global Monitoring.
+      cpu: Please make sure you have at least {minCpu} milli CPUs available to {action} Global Monitoring.
+      memory: Please make sure you have at least {minMemory} MiB of memory available to {action} Global Monitoring.
+    workload:
+      all: Please make sure you have at least one node with {cpu} milli CPUs and {memory} MiB of memory available to deploy {component} workload.
+      cpu: Please make sure you have at least one node with {cpu} milli CPUs available to deploy {component} workload.
+      memory: Please make sure you have at least one node with {memory} MiB of memory available to deploy {component} workload.
+  links:
+    globalMonitoring:
+      label: Global Dashboard
+    grafana:
+      label: Grafana UI
+    thanos:
+      label: Thanos UI
+  noAvailableClusters: No active clusters. Please add a cluster first.
+  noTemplate: Failed to load global monitoring catalog templates.
+  nodeSelector:
+    addSelectorLabel: Add Selector
+    helpText: Select the nodes where {component} workloads will be scheduled to
+  notReady: Installing Global Monitoring into the system project of global monitoring cluster...
+  objectStorageWarning: Thanos sidecar in each cluster requires the object storage crednetials. So cluster owners will also be able to see the object storage crednetials in the System projects.
+  store:
+    aliyunoss:
+      accessKey:
+        label: Aliyun OSS Access Key
+        placeholder: Your Aliyun access key
+      bucketName:
+        label: Aliyun OSS Bucket Name
+        placeholder: e.g. backups
+      endpoint:
+        beijing: oss-cn-beijing
+        chengdu: oss-cn-chengdu
+        east-1: oss-us-east-1
+        eu-central-1: oss-eu-central
+        eu-west-1: oss-eu-west-1
+        hangzhou: oss-cn-hangzhou
+        heyuan: oss-cn-heyuan
+        hongkong: oss-cn-hongkong
+        huhehaote: oss-cn-huhehaote
+        label: Aliyun OSS Region
+        me-east-1: oss-me-east-1
+        northeast-1: oss-ap-northeast-1
+        qingdao: oss-cn-qingdao
+        shanghai: oss-cn-shanghai
+        shenzhen: oss-cn-shenzhen
+        south-1: oss-ap-south-1
+        southeast-1: oss-ap-southeast-1
+        southeast-2: oss-ap-southeast-2
+        southeast-3: oss-ap-southeast-3
+        southeast-5: oss-ap-southeast-5
+        west-1: oss-us-west-1
+        zhangjiakou: oss-cn-zhangjiakou
+      label: Aliyun OSS
+      secretKey:
+        label: Aliyun OSS Secret Key
+        placeholder: Your Aliyun secret key
+        provided: Provided
+    azure:
+      bucketName:
+        label: Container Name
+        placeholder: e.g. mycontainer
+      endpoint:
+        label: Endpoint
+        placeholder: e.g. http://mystorageaccount.blob.core.windows.net
+      label: Azure Storage
+      maxRetries:
+        label: Max Retries
+        placeholder: e.g. 0
+      storageAccount:
+        label: Storage Account
+        placeholder: Your Azure Storage Account
+      storageAccountKey:
+        label: Storage Account Key
+        placeholder: Your Azure Storage Account Key
+    detail: Store Prometheus metrics across multiple clusters to object storage for unlimited time.
+    enabled:
+      label: Store Prometheus metrics to object storage
+    gcs:
+      bucketName:
+        label: Bucket Name
+        placeholder: e.g. backups
+      label: Google Cloud Storage
+      serviceAccount:
+        label: Service Account
+        placeholder: Your Google service account
+    s3:
+      accessKey:
+        label: S3 Access Key
+        placeholder: Your AWS access key
+      bucketName:
+        label: S3 Bucket Name
+        placeholder: e.g. backups
+      endpoint:
+        label: S3 Region Endpoint
+        placeholder: e.g. s3.us-west-2.amazonaws.com
+      label: S3
+      secretKey:
+        label: S3 Secret Key
+        placeholder: Your AWS secret key
+        provided: Provided
+    tencentcloudcos:
+      appid:
+        label: APP ID
+        placeholder: e.g. 1250000000
+      bucketName:
+        label: Bucket Name
+        placeholder: e.g. backups
+      label: Tencent COS
+      region:
+        label: Region
+        placeholder: e.g. cos.ap-beijing-1.myqcloud.com
+      secretId:
+        label: Secret Id
+        placeholder: Your Secret Id
+      secretKey:
+        label: Secret Key
+        placeholder: Your Secret Key
+    title: Object Storage
+  svc:
+    clusterIp: "{appName} Proxy"
+    loadBalancer: L4 Load Balancer
+    nodePort: NodePort
+  thanos:
+    detail: Query Prometheus metrics across multiple clusters.
+    serviceType:
+      label: Thanos Query UI Service
+    title: Thanos Query
+  updating: Updating Global Monitoring in the system project of global monitoring cluster...
+  version: Global Monitoring Version
+hostsPage:
+  addContainer: Add Container
+  cloudHostsPage:
+    addPage:
+      driver: "Driver:"
+      env: "Environment:"
+      header: Add Node
+      instance: "Type:"
+      launch: Launch
+      name:
+        label: Node Name
+        placeholder: e.g. node01
+      os: "OS:"
+      size: "Size:"
+      storage: "Storage:"
+      template: "Template Name:"
+      transfer: "Transfer:"
+      transferUnit: TB
+      zone: "Zone:"
+  hostPage:
+    conditions:
+      diskPressure: Disk Pressure
+      diskSpace: Disk Space
+      memoryPressure: Memory Pressure
+      ready: Kubelet
+    containerDVersion: Containerd Version
+    containersTab:
+      detail: A list of containers running on this host
+      header: Containers
+    dockerVersion: Docker Version
+    header:
+      title: "Node: {name}"
+    hostname: Hostname
+    infoMultiStats:
+      cpu: CPU
+      docker: "Docker:"
+      ip: IP
+      kernel: Kernel
+      memory: Memory
+      milliCpu:
+        labelText: mCPU
+      os: OS
+      provider:
+        labelText: "Provider:"
+        noHost: Custom
+      storage: Volumes
+    ipAddress: IP Address
+    kernelVersion: Kernel Version
+    kubeProxyVersion: Kube Proxy Version
+    kubeletVersion: Kubelet Version
+    limits:
+      cpu: "CPU Limit:"
+      memory: "Memory Limit:"
+      storage: "Volumes Local Limit:"
+    operatingSystem: OS
+    portsTab:
+      detail: These properties show what ports have been mapped and where.
+      header: Ports
+      table:
+        body:
+          noData: This host does not have any ports
+        header:
+          container: Container
+          ip: IP Address
+          port: Port
+          service: Service
+    storageTab:
+      detail: These properties show the volume details of your host.
+      header: Volumes
+      table:
+        body:
+          noData: This host does not have any volumes
+        header:
+          hostPath: Host Path
+          mounts: Mounts
+          state: State
+    version: Version
+  new:
+    addCluster:
+      cluster:
+        label: Cluster
+      description: Attach this new node to a cluster, delegate roles, etc.
+      label: Cluster Options
+      roles:
+        label: Roles
+      table:
+        label:
+          control: Use for management
+          etcd: Use for etcd
+          worker: Use as worker node
+    custom: Add Custom Host
+    header:
+      customText: Add Custom Host
+      text: Add Node
+    manageLink: Manage available machine drivers
+    name:
+      placeholder: e.g. node01
+identityBlock:
+  loading: Loading...
+landingPage:
+  ember: Cluster Manager
+  emberLong: I want to create or manage multiple clusters
+  header: Login Landing Page
+  vue: Cluster Explorer
+  vueLong: I'm only going to use the cluster Rancher was installed on
+languageName: English
+ldap:
+  accessConfig:
+    connectionTimeout:
+      labelText: Server Connection Timeout
+    defaultDomain:
+      helpText: This domain will be used if a user logs in without specifying one.
+      labelText: Default Login Domain
+      placeholder: e.g. mycompany
+    groupSearchBase:
+      helpText: If set, groups will be searched for only under this base instead of under the User Search Base.
+      labelText: Group Search Base
+      placeholder: e.g. ou=Groups,dc=mycompany,dc=com
+    header: 1. Configure an {providerName} server
+    port:
+      labelText: Port
+      radioGroup:
+        label: Encryption
+        none: None
+        starttls: STARTTLS
+        tls: TLS
+    serviceAccountDistinguishedName:
+      labelText: Service Account Distinguished Name
+    starttls:
+      helpText: Upgrades non-encrypted connections by wrapping with TLS during the connection process. Can not be used in conjunction with TLS.
+      label: Start TLS
+    subtext1: Enter the address, port, and protocol to connect to your {providerName} server.  <code>389</code> is the standard port for insecure, <code>636</code> for TLS.
+    subtext2: "{appName} needs a service account that has (read-only) access to all of the domains that will be able to login, so that we can determine what groups a user is a member of when they make a request with an API key."
+    userSearchBase:
+      labelText: User Search Base
+      placeholder: e.g. ou=users,dc=mycompany,dc=com
+  accessEnabled:
+    connectionTimeout:
+      labelText: "Server Connection Timeout:"
+    disable:
+      confirmDisable:
+        pre: Disable access control
+    general:
+      defaultDomain: "Default Domain:"
+      encryption: Encryption
+      header: General
+      searchBase: "Search Base:"
+      server: "Server:"
+      serviceAccount: "Service Account Username:"
+      tls: "TLS:"
+    group:
+      header: Group
+      name: "Name Attribute:"
+      objectClass: "Object Class:"
+      search: "Search Attribute:"
+      searchFilter: "Search Filter:"
+      uniqueId: "Unique Id:"
+    header: Authentication
+    serviceAccountDistinguishedName:
+      labelText: "Service Account Distinguished Name:"
+    subtext: To change the server configuration, disable access control below and then set it up again.
+    users:
+      disabledBitMask: "Disabled BitMask:"
+      enabled: "Status Attribute:"
+      header: Users
+      login: "Login Attribute:"
+      name: "Username Attribute:"
+      objectClass: "Object Class:"
+      search: "Search Attribute:"
+      searchFilter: "Search Filter:"
+      uniqueId: "Unique Id:"
+  customizeSchema:
+    cert:
+      helpText: If needed, enter a CA certificate
+      labelText: CA Certificate
+      placeholder: Paste in the certificate, starting with -----BEGIN CERTIFICATE-----
+    groups:
+      groupDN:
+        labelText: Group DN Attribute
+        placeholder: distinguishedName
+      groupMemberMapping:
+        labelText: Group Member Mapping Attribute
+      groupMemberUser:
+        labelText: Group Member User Attribute
+        placeholder: uid
+      groupUniqueIdAttribute:
+        helpText: Use a globally unique property created by a user group to avoid losing user privileges due to a change in the value of the property
+        labelText: Group unique id
+      header: Groups
+      name:
+        labelText: Name Attribute
+      nestedGroup:
+        disabled:
+          labelText: Search only direct group memberships
+        enabled:
+          helpText: Nested search may be slower in large directories
+          labelText: Search direct and nested group memberships
+        title: Nested Group Membership
+      objectClass:
+        labelText: Object Class
+      search:
+        labelText: Search Attribute
+      searchFilter:
+        labelText: Search Filter
+    header: 2. Customize Schema
+    helpText: If your schema does not match the standard ActiveDirectory format, you can customize it here.
+    users:
+      disabledBitMask:
+        labelText: Disabled Status Bitmask
+      enabledAttribute:
+        labelText: User Enabled Attribute
+      header: Users
+      login:
+        labelText: Login Attribute
+      name:
+        labelText: Username Attribute
+      objectClass:
+        labelText: Object Class
+      search:
+        labelText: Search Attribute
+      searchBase:
+        labelText: User Search Base
+      searchFilter:
+        labelText: Search Filter
+      userMemberAttribute:
+        labelText: User Member Attribute
+      userUniqueIdAttribute:
+        helpText: Use the globally unique user attribute created by the user to avoid losing user permissions due to changes in the value of this attribute
+        labelText: User unique id
+  header:
+    disabled:
+      label: "{providerName} is not configured"
+  providerName:
+    ad: Active Directory
+    freeipa: FreeIPA
+    openldap: OpenLDAP
+    saveLabels:
+      ad: Authenticate with Active Directory
+      freeipa: Authenticate with FreeIPA
+      openldap: Authenticate with OpenLDAP
+  testAuth:
+    authenticate:
+      post: Testing...
+      pre: Authenticate
+    header: 3. Test and enable authentication
+    helpText: "Check that everything is configured correctly by testing authentication with your {providerName} account:"
+    password:
+      labelText: Your Password
+    userName:
+      labelText: Your Username
+machineTemplatesPage:
+  custom: Custom add an existing node that is already running Docker
+  new:
+    btn: Configure
+    helpText: Launch a new node or import one already running Docker via SSH.
+  templateBox:
+    button: Select
+    labels:
+      region: Region
+      zone: Zone
+  title: Add Node
+membersPage:
+  add:
+    form:
+      kind: Kind
+      member: Member
+      role: Role
+    title: Add {type} Member
+  index:
+    localLink: Add Member
+    table:
+      created: Created Time
+      name: Name
+      noData: There are no members
+      noMatch: No members match the current search
+      subjectKind: Kind
+      template: Role
+      userId: User
+  title: Members
+modalAboutComponent:
+  cattle: Cattle
+  cli: CLI
+  component: Component
+  helm: Helm
+  linuxImageList: Linux Image List
+  machine: Machine
+  ui: User Interface
+  version: Version
+  windowsImageList: Windows Image List
+modalAddCloudKey:
+  amazonec2:
+    accessKey:
+      label: Access Key
+      placeholder: Your AWS access key
+    secretKey:
+      label: Secret Key
+      placeholder: Your AWS secret key
+  azure:
+    clientId:
+      label: Client ID
+      placeholder: Your Client ID
+    clientSecret:
+      label: Client Secret
+      placeholder: Your Client Secret
+  description:
+    placeholder: e.g. cloud credential for production
+  digitalocean:
+    accessToken:
+      help: |
+        Paste in a Personal Access Token from the DigitalOcean
+        <a href="https://cloud.digitalocean.com/settings/api/tokens" target="_blank" rel="nofollow noreferrer noopener">Applications & API</a> screen
+      label: Access Token
+      placeholder: Your DigitalOcean API access token
+  errors:
+    region: You must select a region in order to validate your keys
+    validation: "{ status }: There was a problem validating your keys. Enter valid credentials and try again."
+  header:
+    edit: Edit Cloud Credential
+    new: Add Cloud Credential
+  linode:
+    authAccountButton: "Next: Configure Instance"
+    token:
+      help: |
+        Paste in a Personal Access Token from the Linode
+        <a href="https://cloud.linode.com/profile/tokens" target="_blank" rel="nofollow noreferrer noopener">API Tokens</a> screen
+      label: Access Token
+      placeholder: Your Linode API access token
+  name:
+    placeholder: e.g. production-credentials
+  oci:
+    authRegion:
+      help: Any region your tenancy is subscribed to authenticate your credentials.
+      label: Region
+    secretKey:
+      label: User Private Key
+      placeholder: The private API key contents for the specified OCI user, in PEM format
+    secretKeyPassphrase:
+      label: User Private Key Passphrase
+      placeholder: The passphrase (if any) that protects private key file of the specified OCI user
+    tenancyOcid:
+      label: Tenancy OCID
+      placeholder: The OCID of the tenancy containing the user
+    userFingerprint:
+      label: User fingerprint
+      placeholder: The fingerprint corresponding to the specified user's private API Key
+    userOcid:
+      label: User OCID
+      placeholder: The OCID of a user who has access to the specified tenancy
+  pnap:
+    clientIdentifier:
+      label: Client ID
+      placeholder: Your Client ID
+    clientSecret:
+      help: From <a href="https://bmc.phoenixnap.com/applications/" target="_blank" rel="nofollow noreferrer noopener">phoenixNAP BMC Portal</a> Application Credentials
+      label: Client Secret
+      placeholder: Your Client Secret
+  saving:
+    validating: Validating Keys
+  type: Cloud Credential Type
+  typeSelect:
+    prompt: Choose a cloud credential provider type
+  vmwarevsphere:
+    password:
+      label: Password
+modalHostEvacuate:
+  button: Evacuate
+  header: Are you sure you want to evacuate
+  helpText: This will deactivate the host(s) and delete all non-infrastructure containers running on it.
+  protip: "ProTip: Hold the {key} key while clicking stop to bypass this confirmation."
+modalShortcuts:
+  cluster: Cluster
+  delete: Delete selected (in table views)
+  global: Global
+  kubectl: Kubectl Shell
+  nextTab: Next page tab
+  other: Other Stuff
+  project: Project
+  search: Focus the search field
+  shift: Shift-{key}
+  shortcuts: You are here
+  time: Time
+  title:
+    pl: Keyboard Shortcuts
+    rancher: WELCOME TO WARP ZONE!
+  viewGroup: Toggle view grouping
+  world: World
+model:
+  account:
+    kind:
+      admin: Admin
+      agent: Agent
+      project: Environment
+      registeredAgent: Registered Agent
+      service: Service
+      user: User
+  cluster:
+    name: Cluster Name
+  identity:
+    displayType:
+      group: Group
+      localUser: Local User
+      org: Organization
+      team: Team
+      unknown: "{type}?"
+      user: User
+  ingress:
+    displayKind: L7 Ingress
+  machine:
+    role:
+      controlPlane: Control Plane
+      etcd: etcd
+      worker: Worker
+  openldapconfig:
+    domain:
+      help: Only users below this base will be used.
+      label: User Search Base
+      placeholder: e.g. ou=Users,dc=mycompany,dc=com
+    server:
+      label: Hostname or IP Address
+    serviceAccountPassword:
+      label: Service Account Password
+    serviceAccountUsername:
+      label: Service Account Username
+  projectMember:
+    role:
+      member: Member
+      owner: Owner
+      readonly: Read-Only
+      restricted: Restricted
+  service:
+    displayKind:
+      generic: Service
+      loadBalancer: L4 Balancer
+monitoringPage:
+  cluster:
+    disabled: Monitoring is disabled in the current cluster.
+    title: Cluster Monitoring Configuration
+    toDisable: Monitoring is enabled. Click the Save button below will disable monitoring in current cluster.
+  clusterNotEnabled: Cluster level monitoring is not enabled. Only custom metrics will be collected.
+  config:
+    gpuMonitoring:
+      enable: Enable GPU Monitoring
+    grafana:
+      enablePersistence:
+        label: Enable Persistent Storage for Grafana
+      size:
+        label: Grafana Persistent Volume Size
+        placeholder: e.g. 10Gi
+      storageClass:
+        label: Default StorageClass for Grafana
+    header: Prometheus Configuration
+    nodeexporter:
+      cpuLimit:
+        label: Node Exporter CPU Limit
+        placeholder: e.g. 200
+        unit: milli CPUs
+      enable: Enable Node Exporter
+      label: Node Exporter Host Port
+      memoryLimit:
+        label: Node Exporter Memory Limit
+        placeholder: e.g. 200
+    operator:
+      memoryLimit:
+        label: Prometheus Operator Memory Limit
+        placeholder: e.g. 500
+    prometheus:
+      cpuLimit:
+        label: Prometheus CPU Limit
+        placeholder: e.g. 1000
+        unit: milli CPUs
+      cpuRequest:
+        label: Prometheus CPU Reservation
+        placeholder: e.g. 1000
+        unit: milli CPUs
+      enablePersistence:
+        label: Enable Persistent Storage for Prometheus
+      memoryLimit:
+        label: Prometheus Memory Limit
+        placeholder: e.g. 1000
+      memoryRequest:
+        label: Prometheus Memory Reservation
+        placeholder: e.g. 1000
+      size:
+        label: Prometheus Persistent Volume Size
+        placeholder: e.g. 50Gi
+      storageClass:
+        label: Default StorageClass for Prometheus
+    retention:
+      label: Data Retention
+    storageClass:
+      label: Storage Class
+    types:
+      none: None
+      prometheus: Prometheus
+  confirmDisable: Are you sure?  Click again to disable monitoring.
+  disable: Disable
+  enableActionLabel: Enable
+  errors:
+    disableIstioFirst: Before disable cluster monitoring, you need to disable Istio first.
+  insufficientSize:
+    prometheus:
+      all: To enable Prometheus, you need at least one node with {cpu} milli CPUs and {memory} MiB of memory available.
+      cpu: To enable Prometheus, you need at least one node with {cpu} milli CPUs available.
+      memory: To enable Prometheus, you need at least one node with {memory} MiB of memory available.
+    selectors:
+      all: To enable Prometheus, you need at least one node that matches the node selectors, has {cpu} milli CPUs available, and has {memory} MiB of memory available.
+      cpu: To enable Prometheus, you need at least one node that matches the node selectors and has {cpu} milli CPUs available.
+      memory: To enable Prometheus, you need at least one node that matches the node selectors and has {memory} MiB of memory available.
+    total:
+      all: To enable monitoring, you need at least {cpu} milli CPUs and {memory} MiB of memory available.
+      cpu: To enable monitoring, you need at least {cpu} milli CPUs available.
+      memory: To enable monitoring, you need at least {memory} MiB of memory available.
+  noPermission: You do not have permission to configure {level} level monitoring.
+  nodeSelector:
+    addSelectorLabel: Add Selector
+    helpText: Select the nodes where monitoring related workloads will be scheduled to
+  project:
+    disabled: Monitoring is disabled in the current project.
+    title: Project Monitoring Configuration
+    toDisable: Monitoring is enabled. Click the Save button below will disable monitoring in current project.
+  prometheus: Monitoring is not enabled yet, click the Save button below to enable it.
+  resourceLimitsHelp: "When enabling monitoring, you need to ensure your worker nodes and Prometheus pod have enough resources. Please visit <a href=\"{docsBase}/cluster-admin/tools/monitoring/#resource-consumption\" target=\"_blank\" rel=\"nofollow noreferrer\">the Rancher docs</a> for suggested resource limits."
+  systemProject: If you want to collect custom metrics for pods in System Project, please enable cluster level monitoring directly.
+  toUpdate:
+    cluster: Cluster level monitoring is enabled.
+    project: Project level monitoring is enabled.
+  update: Update configuration
+  upgrade: Upgrade monitoring to the latest version {version}
+  upgradeAvailable: ({version} Upgrade Available)
+  version: Monitoring Version
+newConfigMap:
+  addActionLabel: Add Config Map Value
+  description:
+    placeholder: e.g. app
+  name:
+    placeholder: e.g. map
+  title:
+    edit: "Edit Config Map: {name}"
+    new: Add Config Map
+    view: "Config Map: {name}"
+  values:
+    binaryLabel: Config Map Values (binary value)
+    label: Config Map Values
+newPassword:
+  confirmPassword: Confirm Password
+  password: New Password
+  passwordNoMatch: Passwords do not match
+  placeholder: New Password
+pipelinesPage:
+  lastActivity: Last Run
+  pipelines: Pipelines
+  table:
+    noData: There are no pipelines defined.
+    noMatch: No pipelines match the current search.
+    status: Status
+podPage:
+  containerImage: Image of {container}
+  displayImage: "{image} + {sidecar, plural, =1 {1 image} other {# images}}"
+  header: "Pod: {name}"
+  image: Image
+  nodeIp: Node
+  podIp: Pod IP
+podSecurityPoliciesPage:
+  addPodSecurityPolicy: Add Policy
+  detail:
+    header: Policy
+  editPodSecurityPolicy: Edit Policy
+  index:
+    description: Apply Policies to Pods created by a user with this Role
+    header: Pod Security Policies
+    table:
+      created: Created Time
+      name: Name
+      noData: There are no pod security policies defined
+      noMatch: No pod security policies match the current search
+  new:
+    errors:
+      nameInExists: Name is already exists. Please use a new pod security policy name.
+      nameReq: Name is required.
+    form:
+      name:
+        labelText: Name
+        placeholder: e.g. policy
+  saveEdit: Edit
+  saveNew: Create
+projectRow:
+  none: No description
+  orchestration: Orchestration
+realmNames:
+  all: All
+  asia: Asia
+  euEast: EU East
+  euWest: EU West
+  usEast: US East
+  usWest: US West
+repositories:
+  enable: Configure Repositories
+  header: Repositories
+  message: You can select an example repository or fetch your own repositories to setup pipelines.
+  table:
+    noData: There are no repositories
+    noMatch: No repositories match the current search
+    repository: Repository
+saveCancel:
+  cancel: Cancel
+  create: Create
+  edit: Save
+  next: Next
+  saved: Saved!
+  saving: Saving...
+schedulingRuleRow:
+  containerLabel: container with label
+  containerName: container with the name
+  haveA: have a
+  hostLabel: host label
+  must: must
+  mustNot: must not
+  of: of
+  serviceName: service with the name
+  should: should
+  shouldNot: should not
+  theHost: The host
+searchableSelect:
+  noMatch: No match
+  noOptions: No available options
+servicePartial:
+  noContainers:
+    inactive:
+      start: Start
+    label: No containers yet.
+tooltipExpire:
+  label: This cluster has certs that are expiring or have expired.
+  link: Rotate Now
+volumeSource:
+  aws-ebs:
+    title: Amazon EBS Disk
+  azure-disk:
+    title: Azure Disk
+  azure-file:
+    title: Azure Filesystem
+  cephfs:
+    title: Ceph Filesystem
+  cinder:
+    title: Openstack Cinder Volume
+  config-map:
+    title: Config Map Volume
+  csi:
+    title: CSI
+  csi-volume-longhorn:
+    title: Longhorn
+  customLogPath:
+    logFormat:
+      helpText: You can test your regex <a href="http://fluentular.herokuapp.com/" target="_blank">here</a>.
+      label: Log Format
+      useCustomRegex: Use a custom Fluentd regex
+      useExistingLogFormat: Use an existing log format
+    mountPath:
+      helpText: Your log path inside the container.
+      label: Log Path
+      placeholder: e.g. /var/www
+  empty-dir:
+    title: Empty Dir Volume
+  fc:
+    title: Fibre Channel
+  flex-volume:
+    title: Flex Volume
+  flocker:
+    title: Flocker
+  gce-pd:
+    title: Google Persistent Disk
+  glusterfs:
+    title: Gluster Volume
+  host-path:
+    kind:
+      Any: "Anything: do no check the target path"
+      BlockDevice: An existing block device
+      CharDevice: An existing character device
+      Directory: An existing directory
+      DirectoryOrCreate: A directory, or create if it does not exist
+      File: An existing file
+      FileOrCreate: A file, or create if it does not exist
+      Socket: An existing socket
+      label: The Path on the Node must be
+    path:
+      label: Path on the Node
+      placeholder: e.g. /data
+    title: HostPath
+  iscsi:
+    title: iSCSI Target
+  local:
+    title: Local
+  nfs:
+    title: NFS Share
+  photon:
+    title: Photon Volume
+  portworx:
+    title: Portworx Volume
+  quobyte:
+    title: Quobyte Volume
+  rbd:
+    title: Ceph RBD
+  scaleio:
+    title: ScaleIO Volume
+  secret:
+    title: Secret Volume
+  storageos:
+    title: StorageOS
+  vsphere-volume:
+    title: VMWare vSphere Volume
+waitKubernetes:
+  activateHost: Waiting for a host to be active
+  addHost: Add at least one host
+  createStack: Creating Kubernetes system stack
+  startServices: Starting services
+  waitApi: Waiting for Kubernetes API
+yamlPage:
+  errors: There are errors in the yaml.

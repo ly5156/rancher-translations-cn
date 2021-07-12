@@ -1,0 +1,1168 @@
+accountsPage:
+  detail:
+    header: User Details
+    table:
+      cluster:
+        description: Roles granted to this user for individual clusters
+        noRoles: This user has no cluster roles
+        title: Cluster Roles
+      global:
+        admin: This user is an administrator and has all permissions.
+        description: Access to manage things that affect the entire installation
+        noRoles: This user has no global roles
+        readOnlyAdmin: This user is a read-only administrator and has read-only access to subordinate cluster objects
+        title: Global Permissions
+      headers:
+        active: Active
+        clusterName: Cluster
+        created: Granted
+        group: Group
+        permission: Permission
+        projectName: Project
+        role: Role
+      project:
+        description: Roles granted to this user for individual project
+        noRoles: This user has no project roles
+        title: Project Roles
+      roles:
+        title: Roles
+  editGroup:
+    header: Edit Group
+  groups:
+    header: Groups
+    table:
+      globalRole: Global Role Name
+      groupName: Group Name
+      noData: There are no groups defined.
+      noMatch: No groups match the current search
+      noName: None
+  index:
+    groupLink: Assign Global Role
+    header: Users
+    localLink: Add User
+    table:
+      id: ID
+      identity: Identity
+      kind: Kind
+      noData: There are no users defined.
+      noMatch: No users match the current search
+      noName: None
+      username: Local Username
+  modal:
+    password: Change Password
+  new:
+    errors:
+      pwReq: Password is required.
+      role: New users are required to have a role. Select a role from the list.
+      strengthError: Weak password strength
+      usernameInExists: Username is already in use. Please choose a new username.
+      usernameReq: Username is required.
+    form:
+      description:
+        labelText: Description
+        placeholder: e.g. This account is for John Smith
+      name:
+        labelText: Display Name
+        placeholder: e.g. John Smith
+      password:
+        labelText: Password
+      type:
+        labelText: Account Type
+      username:
+        labelText: Username
+        placeholder: e.g. jsmith
+    header: Add User
+  newGroup:
+    errors:
+      group: A group is required.
+      role: A role is required.
+    form:
+      group:
+        labelText: Select Group To Add
+    header: Assign Global Roles To Group
+    warning: Assigning global roles to a group only works with external auth providers that support groups. Local authorization does not support groups.
+buildDetailPage:
+  duration: Duration
+  header: "Pipeline Run: #{name}"
+  log:
+    detail: The detailed log of the current pipeline run.
+    loading: Loading...
+    title: Detailed Log
+    waiting: Waiting...
+  stillRunning: Still Running
+clusterCatalogPage:
+  header: Catalogs
+clusterDashboard:
+  alert:
+    component: "Alert: Component {component} is unhealthy."
+    node: "Alert: Node {node} is not active."
+    nodeCondition:
+      diskPressure: "Alert: Node {node} has disk pressure."
+      memoryPressure: "Alert: Node {node} has memory pressure."
+      outOfDisk: "Alert: Node {node} is out of disk."
+  clusterHasNoNodes: Get Registration Command
+  clusterNotReady: Graph information from Cluster currently not available
+  controllerManager: Controller Manager
+  controllerManagerUnavailable: Controller Manager Not Applicable
+  cpu: CPU
+  enableMonitoring: Enable Monitoring to see live metrics
+  etcd: Etcd
+  etcdUnavailable: Etcd Not Applicable
+  importHost: Import Host
+  k3sInfo:
+    detail: Node system information for K3S imported clusters.
+    nodeArgs:
+      detail: Read only list of the K3s startup arguments for this node.
+      noArgs: No node arguments
+      title: K3S Node Arguments
+    title: K3S Information
+  liveTitle: "{used} of {total} Used"
+  memory: Memory
+  monitoringNotReady: Monitoring API is not ready
+  more: More
+  noRancherComponents: "{appName} Logging is not enabled in this cluster or not enough data for graph."
+  node: Nodes
+  notActive: This cluster is currently <b>{state}</b>.
+  notReady: This cluster is currently <b>{state}</b>; areas that interact directly with it will not be available until the API is ready.
+  pods: Pods
+  reserved: Reserved
+  scheduler: Scheduler
+  schedulerUnavailable: Scheduler Not Applicable
+  sections:
+    cluster: Cluster Metrics
+    etcd: Etcd Metrics
+    k8s: Kubernetes Components Metrics
+    node: Node Metrics
+    rancher: "{appName} Logging Metrics"
+  subtitle:
+    reserved: "{used} of {total} Reserved"
+    used: "{used} of {total} Used"
+  systemProject: This is the system project which has all Kubernetes and {appName} system namespaces. Changes made to resources in the system project may harm the cluster.
+  title: Dashboard
+  upgradeAvailable: Monitoring {version} Upgrade Available
+  used: Used
+  value: Value
+clusterRibbonNav:
+  title: Recent Clusters
+confirmDelete:
+  cancelAction: Cancel
+  clearHarborConfig: Are you sure you want to remove harbor configuration
+  clusterNote: "Note: Associated resources such as volumes, balancers, and networks that were created in the cloud provider will not be automatically removed."
+  clusterRoleTemplateBindingNote: "Note: User's project permissions will not be removed."
+  confirmAction: Delete
+  emptyPod: 0 pod
+  environmentNote: "Note: All resources inside this Project will be permanently removed, including any namespaces that were created through {appName}."
+  forceDelete:
+    label: Force Delete
+    warning: "IMPORTANT: Force deleting pods does not wait for confirmation that the pod's processes have been terminated. This may result in <b>data corruption or inconsistencies</b>."
+  globalRoleNote: "{count, plural,\n=0 {No users are assigned this role.}\n=1 {# user is assigned this role.}\nother {# users are assigned this role.}\n}\n"
+  largeDeleteText: "\"{key}\" and {othersCount} others"
+  protip: "ProTip: Hold the {key} key while clicking Delete to bypass this confirmation."
+  resourceType:
+    cluster: cluster
+    ip: IP
+    namespace: namespace
+    project: project
+    subnet: Subnet
+    workload: workload
+  systemChartNote: You are removing a system app. It may cause issues with the cluster if it is removed.
+  systemProjectNamespaceNote: You are removing the namespaces under system project. It might cause the harmful effects to the cluster if it is removed.
+  systemProjectNote: You are removing the system project. It might cause the harmful effects to the cluster if they are removed.
+  titleWithResourceType: "Are you sure you want to delete the <b>{resourceType}</b>:"
+  titleWithoutResourceType: "Are you sure you want to delete:"
+  twoNodeEtcd: Removing an ETCD node from a two-node cluster is considered unsafe! We highly recommended that you increase the ETCD node count to three or more nodes before deleting one.
+containerPage:
+  envTab:
+    detail: Environment Variables that were added at creation.
+    header: Environment Variables
+  header: "Container: {name}"
+  initContainer:
+    label: initContainer
+  linksTab:
+    detail: These properties show the links between containers in this container.
+    header: Links
+    noData: This Container has no links
+  pod: Pod
+  portsTab:
+    detail: Mappings of container listening ports to host ports on public IP addresses
+    header: Ports
+    hostPrimaryIp: ({ip})
+  volumesTab:
+    detail: These properties show the volumes attached to your container.
+    header: Volumes
+    table:
+      noContainers: No other containers
+      noData: This container has no volumes mounted
+      noMatch: No volumes match the current search
+      path: Mount Point
+      shared: Shared With
+      writable: Writable
+containerShell:
+  permissionDenied: Permission Denied
+  protip: "ProTip: Hold the {key} key when opening shell access to launch a new window."
+  status:
+    closed: Closed
+    code: "Code: {code}"
+    connected: Connected
+    connecting: Connecting...
+    disconnected: Disconnected
+    error: "Error: {error}"
+    initializing: Initializing...
+cruDestinationRule:
+  connectionPool:
+    connectTimeout:
+      help: TCP connection timeout.
+      label: TCP Connection Timeout
+      placeholder: e.g. 30ms
+    detail: Configure the volume of connections to an upstream service
+    http1MaxPendingRequests:
+      help: Maximum number of pending HTTP requests to a destination.
+      label: HTTP1 Max Pending Requests
+      placeholder: e.g. 1024
+    http2MaxRequests:
+      help: Maximum number of requests to a backend.
+      label: HTTP2 Max Requests
+      placeholder: e.g. 1024
+    label: Connection Pool
+    maxConnections:
+      help: Maximum number of HTTP1 /TCP connections to a destination host.
+      label: TCP Max Connections
+      placeholder: e.g. 1024
+    maxRequestsPerConnection:
+      help: Maximum number of requests per connection to a backend. Setting this parameter to 1 disables keep alive.
+      label: HTTP Max Requests Per Connection
+      placeholder: e.g. 10
+    maxRetries:
+      help: Maximum number of retries that can be outstanding to all hosts in a cluster at a given time.
+      label: HTTP Max Retries
+      placeholder: e.g. 1024
+  host:
+    error: Host is required.
+  loadBalancer:
+    consistentHash:
+      httpCookie:
+        name:
+          error: Cookie Name is required.
+          label: Cookie Name
+          placeholder: e.g. username
+        path:
+          label: Cookie Path
+          placeholder: e.g. /
+        ttl:
+          error: TTL is required.
+          label: TTL
+          placeholder: e.g. 0s
+      httpHeaderName:
+        error: HTTP Header Name is required.
+        label: HTTP Header Name
+        placeholder: e.g. end-user
+      label: Use consistent hash-based load balancing for soft session affinity
+      minimumRingSize:
+        label: Minimum Ring Size
+        placeholder: e.g. 1024
+      mode:
+        cookie:
+          label: Hash based on HTTP cookie
+        header:
+          label: Hash based on a specific HTTP header
+        label: Hash Mode
+        sourceIp:
+          label: Hash based on the source IP address
+    detail: Configure the load balancer algorithms
+    label: Load Balancer
+    simple:
+      label: Use standard load balancing algorithms
+      leastConn:
+        label: Least Request Load Balancer
+      passthrough:
+        label: Passthrough
+      random:
+        label: Random Load Balancer
+      roundRobin:
+        label: Round Robin Policy
+  name:
+    placeholder: e.g. myrule
+  outlierDetection:
+    baseEjectionTime:
+      help: Minimum ejection duration. A host will remain ejected for a period equal to the product of minimum ejection duration and the number of times the host has been ejected.
+      label: Base Ejection Time
+      placeholder: e.g. 30s
+    consecutiveErrors:
+      help: Number of errors before a host is ejected from the connection pool.
+      label: Consecutive Errors
+      placeholder: e.g. 5
+    detail: Configure eviction of unhealthy hosts from the load balancing pool
+    interval:
+      help: Time interval between ejection sweep analysis.
+      label: Interval
+      placeholder: e.g. 10s
+    label: Outlier Detection
+    maxEjectionPercent:
+      help: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
+      label: Max Ejection Percent
+      placeholder: e.g. 10
+  port:
+    label: Port
+    placeholder: e.g. 8080 or myport
+  subsets:
+    addSubsetLabel: Add Subset
+    label: Subsets
+    labels:
+      error: Please input at least one label for subset.
+    name:
+      error: Subset Name is required.
+      label: Name
+      placeholder: e.g. v1
+    noSubsets: No Subsets
+    removeSubsetLabel: Remove Subset
+  title:
+    edit: Edit Destination Rule
+    new: Add Destination Rule
+    view: "Destination Rule: {name}"
+  tls:
+    caCertificates:
+      label: CA Certificates
+      placeholder: e.g. /etc/certs/rootcacerts.pem
+    clientCertificate:
+      error: Client Certificate is required.
+      label: Client Certificate
+      placeholder: e.g. /etc/certs/myclientcert.pem
+    detail: Configure TLS related settings for connections to the upstream service
+    label: TLS
+    mode:
+      disable:
+        label: Disable - Do not setup a TLS connection to the upstream endpoint
+      istio:
+        label: Istio Mutual - Secure connections to the upstream using mutual TLS by Istio
+      label: TLS Mode
+      mutual:
+        label: Mutual - Secure connections to the upstream using mutual TLS by presenting client certificates for authentication
+      none:
+        label: NONE
+      simple:
+        label: Simple - Originate a TLS connection to the upstream endpoint
+    privateKey:
+      error: Private Key is required.
+      label: Private Key
+      placeholder: e.g. /etc/certs/client_private_key.pem
+    sni:
+      label: SNI
+      placeholder: e.g. nginx.example.com
+    subjectAltNames:
+      add: Add Subject Alternative Name
+      label: Subject Alternative Names
+      placeholder: e.g. example.com
+cruVirtualService:
+  gateways:
+    add: Add Gateway
+    label: Gateways
+    placeholder: Select or input a gateway
+    prompt: Select a gateway...
+  hosts:
+    add: Add Host
+    error: Please select or input at least one Host
+    label: Hosts
+  http:
+    routes:
+      addRouteLabel: Add HTTP Route
+      destination:
+        addDestinationLabel: Add Destination
+        host:
+          error: Host is required
+          label: Host
+        noDestinations: No Destinations
+        port:
+          label: Port
+          placeholder: e.g. 8080 or myport
+        subset:
+          label: Subset
+          placeholder: e.g. v1
+        weight:
+          error: Weight is required
+          label: Weight
+          placeholder: e.g. 50
+      faultInjection:
+        abort:
+          httpStatus:
+            label: HTTP Status
+            placeholder: e.g. 400
+          label: Fault Injection Abort
+          percent:
+            label: Percent
+            placeholder: e.g. 8
+        delay:
+          fixedDelay:
+            label: Fixed Delay
+            placeholder: e.g. 5s
+          label: Fault Injection Delay
+          percent:
+            label: Percent
+            placeholder: e.g. 8
+      label: HTTP Routes
+      matches:
+        addLabel: Add Another Match
+        addMatchLabel: Add Match Condition
+        condition:
+          exact: Exact Match
+          label: Condition
+          prefix: Prefix Match
+          regex: Regex match
+        error: Please input at least one key value pair for match conditions
+        key:
+          label: Key
+          placeholder: e.g. end-user
+        noData: No Matches
+        noMatches: No Match Conditions
+        port:
+          label: Port
+          placeholder: e.g. 8080
+        removeLabel: Remove Match
+        showMatch: Specify match rules for this route
+        sourceLabels:
+          addActionLabel: Add Source Label
+          label: Source Labels
+        type:
+          authority: Authority
+          headers: Headers
+          label: Match type
+          method: Method
+          scheme: Scheme
+          uri: URI
+        value:
+          authority:
+            exact: e.g. eu.bookinfo.com
+            prefix: e.g. eu
+            regex: e.g. ".*?[.]eu[.]bookinfo[.]com"
+          headers:
+            exact: e.g. jason
+            prefix: e.g. jason
+            regex: e.g. ja.*
+          label: Value
+          method:
+            exact: e.g. GET
+            prefix: e.g. GET
+            regex: e.g. ^.*(GET|POST).*$
+          scheme:
+            exact: e.g. http
+            prefix: e.g. http
+            regex: e.g. h.*
+          uri:
+            exact: e.g. /ratings/v2/
+            prefix: e.g. /ratings
+            regex: e.g. /ratings.*
+      mirror:
+        host:
+          label: Host
+        label: Mirror
+        port:
+          label: Port
+          placeholder: e.g. 8080 or myport
+        subset:
+          label: Subset
+          placeholder: e.g. v2
+      moveDown: Move Down
+      moveUp: Move Up
+      noRoutes: No HTTP Routes
+      redirect:
+        authority:
+          label: Authority
+          placeholder: e.g. newratings.default.svc.cluster.local
+        error: Please do not configure destinations and redirect at the same time.
+        label: Redirect
+        uri:
+          label: URI
+          placeholder: e.g. /v1/bookRatings
+      removeRouteLabel: Remove HTTP Route
+      retries:
+        attempts:
+          label: Attempts
+          placeholder: e.g. 3
+        label: Retries
+        perTryTimeout:
+          label: Timeout Per Retry Attempt
+          placeholder: e.g. 2s
+      rewrite:
+        authority:
+          label: Authority
+          placeholder: e.g. newratings.default.svc.cluster.local
+        label: Rewrite
+        uri:
+          label: URI
+          placeholder: e.g. /v1/bookRatings
+      timeout:
+        label: Timeout
+        placeholder: e.g. 5s
+  name:
+    placeholder: e.g. myservice
+  title:
+    edit: Edit Virtual Service
+    new: Add Virtual Service
+    view: "Virtual Service: {name}"
+customMenus:
+  index:
+    clusterMenu: Cluster level Menu
+    globalMenu: Global level Menu
+    header: Extra Menus
+    projectMenu: Project level Menu
+    protocalInvalid: "\"Menu Link\" should start with \"http://\" or \"https://\""
+dangerZone:
+  description:
+    auditlog-server-url: Configure the audit log service url
+    auth-token-max-ttl-minutes: Custom max TTL (in minutes) on an auth token.
+    auth-user-info-max-age-seconds: The maximum age of a users auth tokens before an auth provider group membership sync will be performed.
+    auth-user-info-resync-cron: Default cron schedule for resyncing auth provider group memberships.
+    auth-user-session-ttl-minutes: Custom TTL (in minutes) on a user auth session.
+    cacerts: CA Certificates needed to verify the server's certificate.
+    cluster-defaults: Override RKE Defaults when creating new clusters.
+    cluster-template-enforcement: Non-admins will be restricted to launching clusters via preapproved RKE Templates only.
+    engine-install-url: Default Docker engine installation URL (for most node drivers).
+    engine-iso-url: Default OS installation URL (for vSphere driver).
+    engine-newest-version: The newest supported version of Docker at the time of this release.  A Docker version that does not satisfy supported docker range but is newer than this will be marked as untested.
+    engine-supported-range: Semver range for supported Docker engine versions.  Versions which do not satisfy this range will be marked unsupported in the UI.
+    extra-menus: Configure custom menus.
+    ingress-ip-domain: Wildcard DNS domain to use for automatically generated Ingress hostnames. <ingress-name>.<namespace-name>.<ip address of ingress controller> will be added to the domain.
+    none-operate-session-time: 用户超过配置时间没有任何操作将自动注销(以秒为单位)
+    rdns-base-url: Configure the rdns service url.
+    rke-metadata-config: Configure RKE metadata refresh parameters.
+    server-url: Default {appName} install url. Must be HTTPS. All nodes in your cluster must be able to reach this.
+    system-default-registry: Private registry to be used for all system Docker images.
+    telemetry-opt: Telemetry reporting opt-in.
+    ui-banners: Classification banner is used to display a custom fixed banner in the header, footer, or both. The setting takes JSON object containing 3 root parameters; <code>banner</code>, <code>showHeader</code>, <code>showFooter</code>. <code>banner</code> is an object containing; <code>textColor</code>, <code>background</code>, and <code>text</code>, where <code>textColor</code> and <code>background</code> are any valid CSS color value.
+    ui-dashboard-index: HTML index location for the Cluster Explorer UI.
+    ui-default-landing: The default page users land on after login.
+    ui-footer-text: Extra text in footer.
+    ui-footer-url: URL for the extra text in footer.
+    ui-index: HTML index location for the Cluster Manager UI.
+    ui-issues: Use a url address to send new 'File an Issue' reports instead of sending users to the Github issues page.
+    ui-offline-preferred: Controls whether UI assets are served locally by the server container or from the remote URL defined in the ui-index and ui-dashboard-index settings.
+    ui-pl: Private-Label company name.
+    ui-session-logout-minutes: User will automatically logout without any operation after the configured time (in minutes)
+  header: Advanced Settings
+  hide: Hide
+  show: Show
+  showLabel: I understand that I can break things by changing advanced settings.
+  subtext: Typical users will not need to change these.  Proceed with caution, incorrect values can break your {appName} installation.<br/>Settings which have been customized from default settings  are shown in <b>bold</b>.
+drainNode:
+  action: Drain
+  aggressive:
+    helpText: <b>Permanently delete</b>:<ul class="m-0"><li>Standalone Pods and their data</li><li>Pods with "Empty Dir" volumes and their data.</li></ul>
+    label: Aggressive
+  deleteLocalData: Delete Empty Dir Data
+  force: Force
+  gracePeriod:
+    custom: "Ignore the defaults and give each pod:"
+    default: Honor the default from each pod
+    placeholder: e.g. 30
+    title: Grace period for pods to terminate themselves
+    view:
+      custom: Ignore the defaults and give each pod {seconds} seconds
+  safe:
+    helpText: If a node has standalone pods or ephemeral data it will be cordoned but not drained.
+    label: Safe
+  timeout:
+    custom: "Give up after:"
+    default: Keep trying forever
+    placeholder: e.g. 60
+    title: Drain timeout
+    view:
+      custom: Give up after {seconds} seconds
+  titleMultiple: Drain {count} Nodes
+  titleOne: Drain "{name}"
+editAccount:
+  form:
+    confirmPassword:
+      label: Confirm Password
+    description:
+      label: Description
+      placeholder: e.g. This account is for John Smith
+    identity:
+      label: Identity
+    kind:
+      admin: "Admin: Full access to manage everything in all clusters"
+      label: Account Type
+      user: Normal User
+    name:
+      label: Display Name
+      placeholder: e.g. John Smith
+    newPassword:
+      label: New Password
+    oldPassword:
+      label: Current Password
+    publicValue:
+      label: Username
+  title: Edit Account
+editYamlPipeline:
+  branch:
+    label: Branch
+  title: View/Edit YAML "{name}"
+etcd:
+  failedProposals:
+    label: Number of failed proposals
+  hasLeader:
+    label: Etcd has a leader
+  leaderChange:
+    label: Number of leader changes
+formAnnotations:
+  addActionLabel: Add Annotation
+  detail: Configure annotations (key/value metadata) for the container.
+  errors:
+    invalidJSON: Annotation JSON format is invalid.
+    topLevelValueInvalid: Annotation JSON top-level value must be an object.
+  title: Annotations
+formGlobalRoles:
+  description: Controls what access the {type} has to administer the overall {appName} installation.
+  loginError: "{type} does not have login access. Administrator, Standard User, or User-Base provide login access."
+  mode:
+    admin:
+      detail: Administrators have full control over the entire installation and all resources in all clusters.
+      label: Administrator
+    custom:
+      detail: Additional roles to define more fine-grain permissions model.
+      label: Built-in
+    readOnlyAdmin:
+      detail: A read-only administrator can access all resources in all downstream clusters, but cannot access the local cluster
+      label: Read-Only Administrator
+    restrictedAdmin:
+      detail: Restricted Admins have full control over all resources in all downstream clusters but no access to the local cluster.
+      label: Restricted Administrator
+    user:
+      detail: Standard Users can create new clusters and manage clusters and projects they have been granted access to.
+      label: Standard User
+    userBase:
+      detail: User-Base users have login-access only.
+      label: User-Base
+    userCreated:
+      detail: Roles not created by Rancher.
+      label: Custom
+      noDescription: No description provided.
+  role:
+    authn-manage:
+      detail: Allows the user to enable, configure, and disable all Authentication provider settings.
+      label: Configure Authentication
+    base:
+      label: Login Access
+    catalogs-manage:
+      detail: Allows the user to add, edit, and remove Catalogs.
+      label: Configure Catalogs
+    catalogs-use:
+      detail: Allows the user to see and deploy Templates from the Catalog.  Standard Users have this permission by default.
+      label: Use Catalogs
+    clusters-create:
+      detail: Allows the user to create new clusters and become the owner of them.  Standard Users have this permission by default.
+      label: Create new Clusters
+    clusters-manage:
+      detail: Allows the user to manage all clusters, including ones they are not a member of.
+      label: Manage all Clusters
+    clusterscans-manage:
+      detail: Allows the user to launch new and manage CIS cluster scans.
+      label: Manage CIS Cluster Scans
+    clustertemplates-create:
+      detail: Allows the user to create new RKE cluster templates and become the owner of them.
+      label: Create new RKE Cluster Templates
+    features-manage:
+      detail: Allows the user to enable and disable custom features via feature flag settings.
+      label: Configure Feature Flags
+    kontainerdrivers-manage:
+      detail: Allows the user to create new cluster drivers and become the owner of them.
+      label: Create new Cluster Drivers
+    nodedrivers-manage:
+      detail: Allows the user to enable, configure, and remove all Node Driver settings.
+      label: Configure Node Drivers
+    nodetemplates-manage:
+      detail: Allows the user to define, edit, and remove Node Templates.
+      label: Manage Node Templates
+    nodetemplates-use:
+      detail: Allows the user to deploy new Nodes using any existing Node Templates.
+      label: Use Node Templates
+    podsecuritypolicytemplates-manage:
+      detail: Allows the user to define, edit, and remove PSPs.
+      label: Manage Pod Security Policies (PSPs)
+    roles-manage:
+      detail: Allows the user to define, edit, and remove Role definitions.
+      label: Manage Roles
+    settings-manage:
+      detail: Allows the user to manage Rancher Settings.
+      label: Manage Settings
+    users-manage:
+      detail: Allows the user to create, remove, and set passwords for all Users.
+      label: Manage Users
+    view-rancher-metrics:
+      detail: Allows the user to view Metrics through the API.
+      label: View Rancher Metrics
+  title: Global Permissions
+formHostPortsPodSecurityPolicy:
+  detail: The use of host ports
+  port:
+    addLabel: Add Port Range
+    max:
+      label: Max
+      placeholder: e.g. 7000
+    min:
+      label: Min
+      placeholder: e.g. 6000
+  title: Host Ports Policy
+formKeyToPath:
+  addAction: Add Item
+  default: All Keys
+  header: Items
+  key:
+    label: Key
+    placeholder: e.g. username
+  mode:
+    label: Mode
+    placeholder: e.g. 400
+  path:
+    label: Path
+    placeholder: e.g. my-group/my-username
+  specific: Select Specific Keys
+formMatchExpressions:
+  addAction: Add Expression
+  key:
+    label: Key
+    placeholder: e.g. region
+  value:
+    label: Values
+    placeholder: e.g. us,eu,ap
+formatIp:
+  noIp: None
+fromSecret:
+  addFrom: Add From Secret
+  keyLabel: Variable
+  keyPlaceholder: e.g. FOO
+  prefix:
+    label: Alias
+  prefixOrKey:
+    label: Key
+  secret:
+    label: Secret
+  valueLabel: Value
+  valuePlaceholder: e.g. bar
+hpaPage:
+  noData: There are no HPA defined
+  noMatch: No HPA match the current search
+  notSupported: autoscaling/v2beta2 API is not available in the cluster.
+  table:
+    lastScaleTime:
+      label: Last Scale
+    replicas:
+      current: Current Replicas
+      desired: Desired
+      range: Replicas Range
+    target:
+      label: Target Workload
+inputPassword:
+  buttonText: Generate
+k3sClusterInfo:
+  detail: Customize K3S cluster options
+  drainServerNodes: Disperse Control Plane nodes before upgrading
+  drainWorkerNodes: Disperse worker nodes before upgrading
+  nodeInfo:
+    datail: Additional K3S master node details
+    detail: Read-only view of K3S master node parameters and environment variables.
+    label: Control Plane Node
+    selectPrompt: Select Node
+    title: K3s Node Information
+  serverConcurrency: Upgrade Several Control Plane Nodes At The Same Time
+  title: K3S Options
+  workerConcurrency: Upgrade Several Worker Nodes At The Same Time
+languageContribute: Help Translate Rancher
+modalConfirmDeactivate:
+  buttons:
+    default:
+      button: Deactivate
+      message: deactivate
+    environment:
+      button: Stop Services
+      message: stop services for
+    project:
+      button: Deactivate
+      message: deactivate your environment
+  cancel: Cancel
+  clusterDriver: You will no longer be able to edit the configuration of clusters using this driver.  Resources in the provider will not be automatically removed.
+  header: Are you sure you want to
+  nodeDriver: You will no longer be able to create, replace or remove nodes in any node pools that are using this driver.
+  protip: "ProTip: Hold the {key} key while clicking {isServiceButton} to bypass this confirmation."
+modalConfirmYaml2Form:
+  confirm: Confirm
+  header: You are about to switch from yaml to form based editing
+  helpText: Data loss may occur when switching back to form based editing. The following fields have been identified as fields that will be lost. Please note this list is not all-inclusive, you should verify your answers before saving the application. Please make sure you intended to switch or that you are okay losing the data before selecting confirm.
+modalDownLoadFileComponent:
+  container: Container
+  filePath: File Path
+  noSuchFile: File does not exist
+  notice: Downloading files over 600MiB may cause your browser to crash.
+  placeholder: Please enter the path of the file in the container
+  serverError: An error occurred on the service break
+  title: Container file download
+  validateContainer: Please select a container
+  validatePath: Please enter the path to the file you want to download.
+modalEditSetting:
+  name:
+    label: Name
+  reset:
+    label: Reset to Default
+  title: Edit Advanced Setting
+  value:
+    label: Value
+    prompt: Select a Value...
+modalImport:
+  detail:
+    cluster1: Namespaces the resources specify will be created as needed, but will not be automatically added to this project.
+    cluster2: If a resource does not specify a namespace, it will be imported into <code>default</code>.
+    cluster3: This mode also supports resources which are not namespaced, e.g. RoleTemplates.
+    namespace1: All resources will be imported into the selected namespace.
+    namespace2: If a resource specifies a different namespace, importing will fail.
+    project1: Resources that do not specify a namespace will be imported into the selected default.
+    project2: If a resource specifies a namespace that doesn't exist, it will be created and added to this project.
+  mode:
+    cluster: "Cluster: Direct import of any resources into this cluster"
+    label: Import Mode
+    namespace: "Namespace: Import all resources into a specific namespace"
+    project: "Project: Import resources into this project"
+  title: Import YAML
+modalResizePVC:
+  currentValue:
+    label: Current Size
+  protip: Volume expansion and resizing are advanced use cases. It is highly recommended that you read and fully understand the requirements for your storage provider. Additionally you should have a disaster recovery plan in place before proceeding.
+  requestedCapacity:
+    help: Updating the PVCs requested storage may not immediatly be reflected upon save. Volume Expansion workflows vary depending on the storage class, PV Provisioner, and if any workloads are attached to the PVC. It is highly recommended you visit the <a href='{docsBase}/cluster-admin/volumes-and-storage/' target='_blank' rel='nofollow noreferrer'>the Rancher Storage docs</a> and <a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/' target='_blank' rel='nofollow noreferrer'>the Kubernetes Persistent Volume docs</a> before changing the capacity of the volume.
+    label: Requested Storage
+  title: "Resize PVC: {name}"
+modalSaveRkeTemplate:
+  name: Cluster Template Name
+  revName: Cluster Template Revision Name
+  subtitle: Create a new RKE cluster template and initial revision from the current cluster configuration. This will modify the current cluster, setting up the cluster to use the newly created cluster template and revision.
+  title: Create RKE Template from {clusterName}
+newPipelineStep:
+  header:
+    create: Add Step
+    edit: Edit Step
+  stepType:
+    applyApp:
+      catalog:
+        label: Catalog
+      catalogTemplate:
+        helpText: You can select an existing template or input a new template name.
+        label: Template Name
+      label: Deploy App
+      name:
+        label: App Name
+        placeholder: e.g. myapp
+      stepName: Deploy Catalog App
+      targetNamespace:
+        helpText: The target namespace where you want to deploy this app.
+        label: Namespace
+      version:
+        helpText: You can select an existing version or input a new version.
+        label: Template Version
+    applyYaml:
+      env:
+        addActionLabel: Add Variable
+        header: Environment Variables
+        keyPlaceholder: IMAGE_TAG
+      errors:
+        path:
+          required: YAML Path is required.
+      label: Deploy YAML
+      yaml: YAML Path
+    build:
+      buildContext: Build Context
+      dockerFilePath: Dockerfile Path
+      errors:
+        dockerfilePath:
+          required: Dockerfile Path is required.
+        registry:
+          required: Registry is required.
+        tag:
+          required: Image Name is required.
+      imageName:
+        placeholder: e.g. example/app:v1
+      label: Build and Publish Image
+      noRegistry: There is no registries. You can click <a href="{route}" target="_blank" rel="nofollow noreferrer">here</a> to add a registry.
+      pushRemote: Push image to remote repository.
+    enableBranch: Configure pipeline for this branch.
+    env: Environment Variables
+    image: Base Image
+    label: Step Type
+    publishCatalog:
+      auth:
+        http: <code>USERNAME</code> and <code>PASSWORD</code> in the secret will be used as username and password.
+        ssh: <code>DEPLOY_KEY</code> in the secret will be used as deploy key.
+      catalogTemplate:
+        helpText: The name of the template want to publish.
+        label: Catalog Template Name
+        placeholder: e.g. wordpress
+      gitAuthor:
+        helpText: The author name used in the commit message.
+        label: Author Name
+        placeholder: e.g. user
+      gitBranch:
+        helpText: The Git branch which the template will be published to.
+        label: Git Branch
+        placeholder: e.g. dev
+      gitEmail:
+        helpText: The author email used in the commit message.
+        label: Author Email
+        placeholder: user@example.com
+      gitUrl:
+        error: The Git URL should start with http or https.
+        helpText: The Git URL where the template will be published to.
+        label: Git URL
+        placeholder:
+          http: e.g. https://github.com/myrepo/charts.git
+          ssh: e.g. git@github.com:myrepo/charts.git
+      label: Publish Template
+      path:
+        helpText: "The folder path where <code style=\"padding: 2px 5px;\">Chart.yaml</code> is in the repository."
+        label: Chart Folder
+        placeholder: e.g. ./charts/wordpress/latest
+      secret:
+        label: Secret
+        missingKey: The selected secret doesn't have {key} key.
+      stepName: Publish Catalog Template
+      targets:
+        http: Push to Git with HTTP(S)
+        label: Protocal
+        ssh: Push to Git with SSH
+      version:
+        helpText: The version of the template you want to publish.
+        label: Catalog Template Version
+        placeholder: e.g. latest
+    scm:
+      add: Select Repository
+      demoGroup: Example repositories
+      noWebhook: No permission to set repository webhooks
+      noYaml: There is no <code>.rancher-pipeline.yml</code> file in the repository.
+      refresh: Refresh Repositories
+      selectRepository: Repository
+      trigger: Pipeline Trigger
+      user: User
+    task:
+      command:
+        label: Command
+        placeholder: Arguments of entrypoint
+      customEntryPoint: Custom Entrypoint
+      entryPoint:
+        label: EntryPoint
+        placeholder: If you want use the default entrypoint, just leave me empty
+      errors:
+        image:
+          required: Base Image is required.
+        shellScript:
+          required: Shell Script is required.
+      label: Run Script
+      privileged:
+        label: Run this step in privileged mode.
+      secret: Inject Environment Variables From Secrets
+      shell:
+        label: Shell
+      shellScript: Shell Script
+nodeGroup:
+  label: "Node: {name}"
+physicalStats:
+  detail: Physical machine attributes
+  title: Physical Attributes
+pipelineDetailPage:
+  activity:
+    detail: Build history of this pipeline.
+    table:
+      branch: Branch
+      commit: Commit
+      noData: There are no activities.
+      noMatch: No activities match the current search.
+      runNumber: Run
+      status: Status
+      triggered: Triggered
+    title: Activities
+  commitMessage: Commit Message
+  header: "Pipeline: {name}"
+  lastRun: Last Run
+  repository: Repository
+  triggered: Triggered
+pipelineSelector:
+  addRule: Add Rule
+  branch: Branch
+  event: Event
+  header: Trigger Rules
+  pr: Pull Request
+  push: Push
+  table:
+    type: Type
+    value: Value
+  tag: Tag
+  title:
+    exclude: "Do Not Run this {type} when:"
+    include: "Run this {type} when:"
+pipelineSetting:
+  title: Pipeline Setting "{name}"
+projectsPage:
+  addProject: Add Project
+  annotationsDetail: Configure labels and annotations for the project.
+  containerDefaultLimit:
+    detail: Configure how much of the resources the container can consume by default
+    title: Container Default Resource Limit
+  created:
+    label: Created
+  editProject: Edit Project
+  groups:
+    namespaces: Grouped Projects/Namespaces
+    none: List Namespaces
+  header: Projects/Namespaces
+  headerNS: Namespaces
+  members:
+    addGroup: Add Group
+    addMember: Add Member
+    addServiceAccount: Add Service Account
+    addUser: Add User
+    customRoles: Custom Roles
+    detail: Configure who has access to the resources in this project and what permissions they have
+    errors:
+      memberNameReq: Name is required for a member
+      memberRoleReq: Role is required for a member
+      nameInExists: Name is already exists. Please use a new project name.
+      nameReq: Name is required.
+    group: Group
+    kind:
+      label: Kind
+    labelText: Members
+    multipleRoles: Multiple Roles
+    name:
+      label: Name
+    noAddUser: You are the only active registered user.
+    role:
+      label: Role
+    serviceaccount: Service Account
+    title: Members
+    user: User
+  name:
+    label: Project Name
+    placeholder: e.g. lab
+  noData: This cluster doesn't have any projects defined
+  noMatch: No projects match the current search.
+  ns:
+    label: Namespace Name
+    placeholder: e.g. lab
+  psp:
+    label: Pod Security Policy
+  quota:
+    label: Resource Quota
+  resourceQuota:
+    detail: Configure how much of the resources the project can consume
+    title: Resource Quotas
+rolesPage:
+  addRole: Add {context} Role
+  editRole: Edit Role
+  headers:
+    cluster: Clusters
+    global: Global
+    project: Projects
+  index:
+    errors:
+      inherited: "Role {displayName} is inherited by: {roleNames}"
+    localLink: Add Role
+    table:
+      builtin: Built-In
+      cluster: Cluster Creator Default
+      created: Created Time
+      enabled: Enabled
+      global: New User Default
+      id: Id
+      name: Name
+      noData: There are no roles defined.
+      noMatch: No roles match the current search
+      project: Project Creator Default
+      showDefaults: Show Only Defaults
+      subjectKind: Kind
+      template: Template
+    warning: No default role exists which can have unintended consequences when a user logs in for the first time. Please set one of the roles to be the new user default.
+  inherit:
+    detail: Include all the permissions of another role
+    title: Inherit from a Role
+  new:
+    errors:
+      memberReq: Member is required.
+      nameInExists: Name is already exists. Please use a new role name.
+      nameReq: Name is required.
+      noSelectedRoles: Please select at least one role for this user.
+      roleAlreadyExists: The user already has the "{key}" role.
+      roleTemplate: Role Template is required.
+      ruleResourceReq: Resource is required for a rule.
+    form:
+      allow:
+        addAction: Add Resource
+        apiGroups: API Groups
+        create: Create
+        delete: Delete
+        deletecollection: Delete Collection
+        get: Get
+        labelText: Allow
+        list: List
+        nonResourceUrl: Non-Resource URLs (path only)
+        patch: Patch
+        resource: Resource
+        update: Update
+        watch: Watch
+      context:
+        detail: What scopes this role is appropriate to be shown in.
+        labelText: Context
+      default:
+        cluster: Cluster Creator Default
+        disabled: No
+        enabled:
+          cluster: "Yes: Default role for new cluster creation"
+          global: "Yes: Default role for new users"
+          project: "Yes: Default role for new project creation"
+        global: New User Default
+        project: Project Creator Default
+      locked:
+        detail: This does not affect any bindings to the role that already exist.
+        disabled: No
+        enabled: "Yes: New bindings are not allowed to use this role"
+        labelText: Locked
+      name:
+        labelText: Name
+        placeholder: e.g. Developers
+      otherRole:
+        addAction: Add Role
+        labelText: Include other roles
+        role: Role
+      policy:
+        addAction: Add Policy
+        policy: Policy
+  resources:
+    detail: Grant access to specific operations on Kubernetes resources
+    title: Grant Resources
+  saveEdit: Edit
+  saveNew: Create
+  title: Role
+schema:
+  inputBoolean:
+    n: "False"
+    y: "True"
+  inputCertificate:
+    prompt: Choose a Certificate...
+  inputConfigMap:
+    prompt: Choose a Config Map...
+  inputContainer:
+    prompt: Choose a Container...
+  inputDnsRecord:
+    prompt: Choose a Service...
+  inputEnum:
+    option: Choose an option...
+  inputHost:
+    label: Choose a Host...
+  inputMacvlansubnet:
+    notSupport: Current cluster not support Macvlansubnet
+    prompt: Choose a Macvlansubnet...
+  inputSecret:
+    certificate: Choose a Certificate...
+    secret: Choose a Secret...
+  inputService:
+    custom: Custom
+    prompt: Choose a Workload...
+  inputStorageClass:
+    prompt: Use the default class...
+tableCountSelect:
+  header: Table Rows per Page
+waitOrchestration:
+  count: ({sub} of {count})

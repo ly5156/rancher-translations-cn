@@ -1,0 +1,1233 @@
+advancedSection:
+  hideText: 隐藏高级选项
+  showText: 显示高级选项
+apiPage:
+  actionButton: 添加 Key
+  currentEndpoint: "API 访问地址:"
+  detail: "API 密钥与特定用户 (例如: {name}) 绑定，可以创建、删除和操作有权访问的所有集群和项目。"
+  header: API & Keys
+  table:
+    created: 创建时间
+    description: 描述
+    expires:
+      label: 过期时间
+      never: 永不过期
+    name: 访问密钥
+    noData: 没有配置 API 密钥
+    scope: 范围
+    state: 状态
+banner:
+  alerting: 从 Rancher v2.5.0 开始，Cluster Manager 中的 Alerts 已不推荐使用 - 请查看 <a href="https://rancher.com/docs/rancher/v2.x/en/faq/deprecated-features-25x" target="_blank">FAQ</a>。请在 Cluster Explorer 应用程序和市场中查看 Rancher 新版<a href="{dashboardLink}/monitoring">监控</a>中 Alerts 的集成。
+  cis: 从 Rancher v2.5.0 开始，Cluster Manager 中的 CIS 扫描功能已不推荐使用 - 请查看 <a href="https://rancher.com/docs/rancher/v2.x/en/faq/deprecated-features-25x" target="_blank">FAQ</a>。对于使用基准版本 1.5 及以上的 CIS 扫描，请参见 Cluster Explorer 应用程序和市场中新版 <a href="{dashboardLink}/cis">CIS 扫描</a>。
+  dashboard: 请尝试使用 <a href="{dashboardLink}">Cluster Explorer</a> 查看和管理 Kubernetes 资源。
+  istio: Istio 已经停止在 Cluster Manager 中维护，请在 Cluster Explorer 应用程序和市场中查看新版的 <a href="{dashboardLink}/istio">Istio</a>。
+  logging: 从 Rancher v2.5.0 开始，Cluster Manager 中的 Logging 已不推荐使用 - 请查看 <a href="https://rancher.com/docs/rancher/v2.x/en/faq/deprecated-features-25x" target="_blank">FAQ</a>。请在 Cluster Explorer 应用程序和市场中查看新版的 <a href="{dashboardLink}/logging">Logging</a>。
+  monitoring: 从 Rancher v2.5.0 开始，Cluster Manager 中的监控已经不推荐使用 - 请查看 <a href="https://rancher.com/docs/rancher/v2.x/en/faq/deprecated-features-25x" target="_blank">FAQ</a>。请在 Cluster Explorer 应用程序和市场中查看新版的<a href="{dashboardLink}/monitoring">监控</a>。
+  monitoringV2Warning: 从 Rancher v2.5.0 开始，Cluster Manager 中的监控已经不推荐使用 - 请查看 <a href="https://rancher.com/docs/rancher/v2.x/en/faq/deprecated-features-25x" target="_blank">FAQ</a>。最新版的Rancher <a href="{dashboardLink}/monitoring">监控</a> 已经部署。
+  multiclusterapp: 从 Rancher v2.5.0 开始，多集群应用已不推荐使用 - 请查看 <a href="https://rancher.com/docs/rancher/v2.x/en/faq/deprecated-features-25x" target="_blank">FAQ</a>。请查看 <a href="{dashboardBase}c/local/fleet">Rancher 持续交付</a>功能，通过 GitOps 实现多集群应用的部署。
+  notifiers: 从 Rancher v2.5.0 开始，Cluster Manager 中的 Notifiers 已经不推荐使用 - 请查看 <a href="https://rancher.com/docs/rancher/v2.x/en/faq/deprecated-features-25x" target="_blank">FAQ</a>。请在 Cluster Explorer 应用程序和市场中查看 Rancher 新版<a href="{dashboardLink}/monitoring">监控</a>中 Notifiers 的集成。
+  pipeline: 从 Rancher v2.5.0 开始，Pipelines 已经不推荐使用 - 请查看 <a href="https://rancher.com/docs/rancher/v2.x/en/faq/deprecated-features-25x" target="_blank">FAQ</a>。有关持续交付功能，请查看 Cluster Explorer 中的 <a href="{dashboardBase}c/local/fleet">Rancher 持续交付</a>。
+certificatesPage:
+  algorithm: 算法
+  cn: 域名
+  detail:
+    header: "证书: {name}"
+  domainNames:
+    labelText: 域名
+    single: <a href="https://{cn}" target="_blank" rel="nofollow noreferrer noopener">{cn} <i class="icon icon-sm icon-external-link"/></a>
+    wildcardSingle: "{cn}"
+    wildcardWithSan: "{cn} +\n{sans, plural,\n=1 {1 other}\nother {# others}\n}\n"
+    withSan: "<a href=\"https://{cn}\" target=\"_blank\" rel=\"nofollow nefererrer noopener\">{cn} <i class=\"icon icon-sm icon-external-link\"></i></a> +\n{sans, plural,\n=1 {1 other}\nother {# others}\n}\n"
+  expires: 过期时间
+  expiresDate: 过期时间
+  fingerprint: 指纹
+  index:
+    header: 证书列表
+    linkTo: 添加证书
+    noData: 没有配置证书
+    noMatch: 没有证书与当前搜索匹配
+  issuer: 发布机构
+  new:
+    form:
+      description:
+        placeholder: "例如: mydomain.com 的 EV 证书"
+      name:
+        placeholder: e.g. mydomain.com
+    header: 添加证书
+  serialNumber: 序列号
+  valid: 生效时间
+clusterIstioPage:
+  allowSystemGroup:
+    "false": 允许集群所有者和指定的</b>成员访问 Kiali 和 Jaeger UI。
+    "true": 允许<b>所有</b>成员访问 Kiali 和 Jaeger UI。
+  config:
+    gatewayEnabled:
+      label: 启用 Ingress 网关
+    gatewayType:
+      label: Ingress 网关的服务类型
+    grafanaEnabled:
+      label: 启用 Grafana
+    grafanaPersistenceEnabled:
+      label: 为 Grafana 启用持久存储
+    header:
+      gateway: Ingress 网关
+      grafana: Grafana
+      mixer: Mixer
+      pilot: Pilot
+      prometheus: Prometheus
+      tracing: 跟踪
+    http2Port:
+      label: Http2 端口
+    httpsPort:
+      label: Https 端口
+    loadBalancerIP:
+      label: Load Balancer IP
+      placeholder: "例如: 192.0.0.1"
+    mixerPolicyEnabled:
+      label: Enable Mixer Policy
+    mtlsEnabled:
+      label: 服务到服务双向 TLS
+    prometheusRetention:
+      label: Prometheus 数据保留
+      placeholder: "例如: 6h"
+    traceSampling:
+      label: 跟踪抽样比例
+      placeholder: "例如: 1"
+    tracingEnabled:
+      label: 启用跟踪
+  confirmDisable: 你确定吗?再次单击将禁用 Istio
+  customAnswers:
+    detail: 配置自定义的应答。
+    title: 自定义应答
+    warning: "自定义应答是一个高级配置选项。{appName}预配置了一些自定义应答, 以保证能满足一些 <a href='https://istio.io/latest/docs/setup/additional-setup/cni/#prerequisites' target='_blank' rel='nofollow noreferrer'>特定</a> 的Istio配置。 添加和移除自定义应答可能会生成一些无效的Istio配置。在保存修改之前，请确保您明白这些改动可能会带来的结果。"
+  disable: 禁用
+  disabled: Istio 尚未启用，请单击“启用”按钮启用它。
+  enableActionLabel: 启用
+  enableMonitoring:
+    label: 启用监控
+  enabled: Istio 已启用。为了利用 Istio，您需要为每个命名空间启用 Istio sidecar 自动注入。如果在现有命名空间上启用它，则需要重新部署现有工作负载，以利用 sidecar 自动注入。
+  existingClaim:
+    label: Existing Claim for {component}
+  goToMonitoring: istio 的工作需要监控。 如果您想修改这些值，请转到 <a href="/c/{clusterId}/monitoring/cluster-setting">监控</a> 页面修改并保存。
+  header: Istio
+  ingress:
+    detail: 监控和路由规则配置。
+    title: Ingress 网关
+  insufficientSize:
+    selectors:
+      all: 请确保至少有一个节点与 {cpu} milli cpu 和 {memory} MiB 内存匹配，以启用 {component} 工作负载。
+      cpu: 请确保至少有一个节点将节点选择器与 {cpu} milli CPUs 匹配，以启用 {component} 工作负载。
+      memory: 请确保至少有一个节点将节点选择器与 {memory} MiB 内存匹配，以启用 {component} 工作负载。
+      unsupported: 不支持值为 true、false 或 number 的节点选择器
+    total:
+      all: 请确保至少有 {minCpu} milli CPUs 和 {minMemory} MiB 内存可供 {action} Istio 使用。
+      cpu: 请确保至少有 {minCpu} milli CPUs 可供 {action} Istio 使用。
+      memory: 请确保您至少有 {minMemory} MiB 的内存可供 {action} Istio 使用。
+    workload:
+      all: 请确保至少有一个节点具有 {cpu} milli CPUs 和 {memory} MiB 内存，可用来部署 {component} 工作负载。
+      cpu: 请确保至少有一个具有 {cpu} milli CPUs 的节点可用来部署 {component} 工作负载。
+      memory: 请确保您至少有一个具有 {memory} MiB 内存的节点可用来部署 {component} 工作负载。
+  links:
+    grafana:
+      label: Grafana UI
+    jaeger:
+      label: Jaeger UI
+    kiali:
+      label: Kiali UI
+    prometheus:
+      label: Prometheus UI
+  members:
+    detail: 控制哪些用户能访问 Kiali 和 Jaeger UI
+    title: 成员访问
+  mixer:
+    detail: 常规策略和遥测配置。
+    title: Mixer
+  monitoringNotDeployed: 监控仍在部署中。 在确保集群中有足够的资源启用 Istio 之前，请等待监控部署完成。
+  nodeSelector:
+    addSelectorLabel: 添加选择器
+    helpText: 选择要运行 {component} 工作负载的节点
+  notReady: 在当前集群中安装 Istio…
+  pilot:
+    detail: 配置流量管理
+    title: Pilot
+  telemetryAndPolicy: Telemetry And Policy
+  tracing:
+    detail: 配置跟踪请求。
+    title: 跟踪
+  upgradeMonitoring: 在启用 Istio 之前，您需要首先将集群监视升级到 0.0.4 或更高版本。访问 <a href="/c/{clusterId}/monitoring/cluster-setting">此处</a> 去升级集群监控。
+  version: Istio 版本
+  warning:
+    mixerBreaking: Istio升级到1.8需要先禁用再重新启用
+clusterPage:
+  annotationsDetail: 为集群配置标签和注释。
+  edit: 编辑集群
+  internal: "<b>警告: </b>{appName} 集群用作数据存储，只应授予管理员拥有写入权限。<br>对此集群具有写入权限的用户，可以使用它授予自己安装并管理的其他集群的访问权限。"
+  removeMemberNote: "注意: 删除成员不会删除其项目权限。"
+configMapsPage:
+  index:
+    header: 配置映射
+    linkTo: 添加配置映射
+    noData: 没有配置配置映射
+    noMatch: 没有配置映射与当前搜索匹配
+  table:
+    keys: 键
+containersPage:
+  table:
+    noData: 没有容器显示
+    noMatch: 没有符合当前搜索的容器
+    sparkPrefixCpu: "CPU: "
+    sparkPrefixMemory: "内存: "
+    sparkPrefixNetwork: "网络: "
+    sparkPrefixStorage: "存储: "
+  welcome:
+    container: 立即开始
+    containerLink: 添加容器
+    kubernetesLink: 安装 Kubernetes
+    orchestrator: Install another orchestrator
+cruVolumeClaimTemplate:
+  capacity:
+    label: 容量
+    unit: GiB
+  customize:
+    detail: 自定义高级设置
+    title: 自定义
+  define:
+    addActionLabel: 确定
+  name:
+    placeholder: e.g. myvol
+  pv:
+    label: 持久卷 (PV)
+    prompt: 选择持久卷 (PV)...
+  source:
+    label: 来源
+    pv: 使用已有的持久卷 (PV)
+    storageClass: 使用存储类创建新的持久卷 (PV)
+  storageClass:
+    label: 存储类 (Storage Class)
+    prompt: 使用默认 (Storage Class)
+  title:
+    define: 配置 PVC 模板
+    edit: "编辑 PVC 模板: {name}"
+    new: 添加 PVC 模板
+    view: "PVC 模板: {name}"
+destinationRulePage:
+  noData: 没有定义目标规则。
+  noMatch: 没有与当前搜索匹配的目标规则
+  notSupported: 集群 networking.istio.io/v1alpha3 API 不可用。
+  table:
+    host:
+      label: Host
+    subsets:
+      label: Subsets
+editHost:
+  customName:
+    help: 如果此处未配置，名称将显示为主机名。
+    label: 自定义名称
+    placeholder: "例如: dev1"
+  description:
+    label: 描述
+    placeholder: "例如: 我的开发主机"
+  hostname:
+    help: 由主机操作系统获取
+    label: 主机名
+  ips:
+    addActionLabel: 添加 IP
+    help: 如果设置，调度器将从中选择一个 IP 地址并将发布的端口绑定到该地址。
+    label: 调度 IP
+    valueLabel: IP 地址
+    valuePlaceholder: "例如: 1.2.3.4"
+  labels:
+    label: 标签
+  requireAny:
+    addActionLabel: 添加标签需求
+    help: 如果设置，容器必须具备设置的一个或者多个标签才能够被调度到该主机。如果仅设置 Key 而 Value 留空，具备相应 Key 的容器可以被调度到该主机而忽略 Value 的值。<code>io.rancher.container.system</code>标签是运行系统容器所必须的。
+    label: 容器标签需求
+  title: 编辑主机
+editNodePool:
+  title: 节点池污点（Taints）
+editService:
+  title: 编辑服务
+editUser:
+  form:
+    name:
+      label: 显示名称
+      placeholder: "例如: John Smith"
+    otherRoles:
+      label: 移除角色
+    password:
+      confirm: 确认密码
+      error: 密码必须相同
+      label: 修改密码
+      mustChangePassword:
+        edit: 要求用户在下次登录时更改密码
+        new: 要求用户在首次登录时更改密码
+      new: 新密码
+    username:
+      label: 用户名
+  title: 编辑用户
+failWhalePage:
+  header: 错误
+  logoutButton: 注销
+  reloadButton: "<a href=\"#\" onclick=\"window.location.href = window.location.href; return false;\"> 重新加载 </a> 或\n"
+formAccessModes:
+  accessROX: 多主机只读
+  accessRWO: 单主机读写
+  accessRWX: 多主机读写
+  label: 访问模式
+formBalancerRules:
+  access:
+    internal: 内部
+    label: 访问
+    public: 公开
+  addInstanceLabel: 添加容器
+  addSelectorLabel: 添加选择器
+  addServiceLabel: 添加服务
+  addTargetLabel: 添加规则
+  backendName:
+    label: 后端
+    placeholder: "例如: webapp"
+  detail: 根据主机、 端口、 路径或 IP 地址映射请求到不同的目标。
+  hostname:
+    label: 请求头信息
+    placeholder: "例如: example.com"
+  label: 目标规则
+  noRules: 无规则
+  path:
+    label: 路径
+    placeholder: "例如: /foo"
+  priority:
+    label: 优先级
+  protocol:
+    label: 协议
+  selector:
+    label: 选择器
+    placeholder: "例如: foo=bar"
+  sourceIp:
+    label: 主机 IP
+    placeholder: "例如: 1.2.3.4， 默认: 所有"
+  sourcePort:
+    label: 监听端口
+    placeholder: "例如: 80"
+  status: "{count, plural,\n=0{ 无规则 }\n=1{#条规则 }\nother {#条规则 }\n}\n"
+  target: 目标
+  targetPort:
+    label: 端口
+    placeholder: "例如: 80"
+formMembers:
+  members:
+    addGroup: 添加组
+    addMember: 添加成员
+    addServiceAccount: 添加服务帐户
+    addUser: 添加用户
+    customRoles: 自定义角色
+    errors:
+      memberNameReq: 必须设置成员名称。
+      memberRoleReq: 必须设置成员角色。
+      nameInExists: 名称已经存在，请使用新的项目名称。
+      nameReq: 名称(必填)
+      ownerReq: 必须至少有一个具有所有者角色的成员。
+    group: 用户组
+    kind:
+      label: 类型
+    labelText: 成员
+    multipleRoles: 多个角色
+    name:
+      label: 名称
+    noAddUser: 您是唯一的活动注册用户。
+    role:
+      label: 角色
+    serviceaccount: 服务账号
+    user: 用户
+  owner: "{type} 所有者"
+formMenu:
+  iframeEnabled:
+    label: 使用 iframe
+  link:
+    label: 链接地址
+    placeholder: e.g. https://www.example.com
+  menu:
+    add: 添加菜单
+  name:
+    label: 菜单名称
+  scope:
+    cluster:
+      label: 应用于集群
+    project:
+      label: 应用于项目
+globalMonitoringPage:
+  cluster: 全局监控所在集群
+  confirmDisable: 你确定吗? 再次单击将禁用全局监控
+  customAnswers:
+    detail: 配置自定义的应答。
+    title: 自定义应答
+  disable: 禁用
+  disabled: 全局监控未启用。点击启用来激活全局监控。 如果在集群中启用了集群监控并且版本不低于<code>v0.0.7000</code>，你将可以通过全局监控查看多个集群的指标。
+  enableActionLabel: 启用
+  enabled: 全局监控已启用。如果在集群中启用了集群监控并且版本不低于<code>v0.0.7000</code>，你可以通过全局监控查看多个集群的指标。
+  globalMonitoringClusterUnavailable: 集群 {clusterName} 不可用。
+  grafana:
+    detail: 全局 Grafana 和{appName}监控大屏的配置。
+    enableGrafanaSidecar:
+      label: Grafana 启用初始化 Sidecar
+    enablePersistence:
+      label: Grafana 启用持久化存储
+    serviceType:
+      label: Grafana UI SVC 类型
+    size:
+      label: Grafana 持久化存储大小
+      placeholder: "例如: 10Gi"
+    storageClass:
+      label: Grafana 默认存储类
+    title: 监控大屏
+  header: 全局监控（实验性）
+  insufficientSize:
+    selectors:
+      all: 请确保至少有一个节点与{cpu} milli cpu 和{memory} MiB 内存匹配，以启用{component}工作负载。
+      cpu: 请确保至少有一个节点将节点选择器与{cpu} milli cpu 匹配，以启用{component}工作负载。
+      memory: 请确保至少有一个节点将节点选择器与{memory} MiB 内存匹配，以启用{component}工作负载。
+      unsupported: 不支持值为“true”、“false”或 number 的节点选择器
+    total:
+      all: 请确保至少有{minCpu} milli cpu 和{minMemory} MiB 内存可供全局监控使用。
+      cpu: 请确保至少有{minCpu} milli cpu 可供全局监控使用。
+      memory: 请确保您至少有{minMemory} MiB 的内存可供全局监控使用。
+    workload:
+      all: 请确保至少有一个节点具有{cpu} milli cpu 和{memory} MiB 内存，可用来部署{component}工作负载。
+      cpu: 请确保至少有一个具有{cpu} milli cpu 的节点可用来部署{component}工作负载。
+      memory: 请确保您至少有一个具有{memory} MiB 内存的节点可用来部署{component}工作负载。
+  links:
+    globalMonitoring:
+      label: 监控大屏
+    grafana:
+      label: Grafana UI
+    thanos:
+      label: Thanos UI
+  noAvailableClusters: 没有可用集群，请先添加一个集群。
+  noTemplate: 无法加载全局监控模版
+  nodeSelector:
+    addSelectorLabel: 添加选择器
+    helpText: 选择要运行 {component} 工作负载的节点。
+  notReady: 正在安装全局监控到指定集群的系统项目里...
+  objectStorageWarning: 每个集群中的 Thanos sidecar 都需要对象存储的密钥。所以这些集群的管理员也可以在集群的系统项目里看到你所配置的存储的密钥。
+  store:
+    aliyunoss:
+      accessKey:
+        label: 阿里云 Access Key
+        placeholder: 你的阿里云 access key
+      bucketName:
+        label: 阿里云存储桶名称
+        placeholder: 例如：backups
+      endpoint:
+        beijing: 华北 2（北京）
+        chengdu: 西南 1（成都）
+        east-1: 美国东部 1 （弗吉尼亚）
+        eu-central-1: 欧洲中部 1 （法兰克福）
+        eu-west-1: 英国（伦敦）
+        hangzhou: 华东 1（杭州）
+        heyuan: 华南 2（河源）
+        hongkong: 中国（香港）
+        huhehaote: 华北 5（呼和浩特）
+        label: 阿里云区域
+        me-east-1: 中东东部 1 （迪拜）
+        northeast-1: 亚太东北 1 （日本）
+        qingdao: 华北 1（青岛）
+        shanghai: 华东 2（上海）
+        shenzhen: 华南 1（深圳）
+        south-1: 亚太南部 1 （孟买）
+        southeast-1: 亚太东南 1 （新加坡）
+        southeast-2: 亚太东南 2 （悉尼）
+        southeast-3: 亚太东南 3 （吉隆坡）
+        southeast-5: 亚太东南 5 （雅加达）
+        west-1: 美国西部 1 （硅谷）
+        zhangjiakou: 华北 3（张家口）
+      label: 阿里云 OSS
+      secretKey:
+        label: 阿里云 Secret Key
+        placeholder: 你的阿里云 secret key
+        provided: 已提供
+    azure:
+      bucketName:
+        label: Container 名称
+        placeholder: 例如：mycontainer
+      endpoint:
+        label: Endpoint
+        placeholder: 例如：http://mystorageaccount.blob.core.windows.net
+      label: Azure 存储
+      maxRetries:
+        label: 最大重试次数
+        placeholder: 例如：0
+      storageAccount:
+        label: Storage Account
+        placeholder: 你的 Storage Account
+      storageAccountKey:
+        label: Storage Account Key
+        placeholder: 你的 Storage Account Key
+    detail: 将多集群的 Prometheus 指标存储到对象存储上。
+    enabled:
+      label: 存储指标到对象存储
+    gcs:
+      bucketName:
+        label: 存储桶名称
+        placeholder: 例如：backups
+      label: Google 云存储
+      serviceAccount:
+        label: Service Account
+        placeholder: 你的 Google service account
+    s3:
+      accessKey:
+        label: S3 Access Key
+        placeholder: 你的 AWS access key
+      bucketName:
+        label: S3 存储桶名称
+        placeholder: 例如：backups
+      endpoint:
+        label: S3 区域地址
+        placeholder: 例如：s3.us-west-2.amazonaws.com
+      label: S3
+      secretKey:
+        label: S3 Secret Key
+        placeholder: 你的 AWS secret key
+        provided: 已提供
+    tencentcloudcos:
+      appid:
+        label: APP ID
+        placeholder: 例如：1250000000
+      bucketName:
+        label: 存储桶名称
+        placeholder: 例如：backups
+      label: 腾讯云 COS
+      region:
+        label: 区域
+        placeholder: 例如：cos.ap-beijing-1.myqcloud.com
+      secretId:
+        label: 密钥 ID
+        placeholder: 腾讯云密钥 ID
+      secretKey:
+        label: 密钥 Key
+        placeholder: 腾讯云密钥 Key
+    title: 对象存储
+  svc:
+    clusterIp: "{appName}代理"
+    loadBalancer: 4 层负载均衡
+    nodePort: NodePort
+  thanos:
+    detail: 查询多集群 Prometheus 指标的组件。
+    serviceType:
+      label: Thanos Query UI 服务类型
+    title: Thanos Query
+  updating: 正在更新全局监控组件...
+  version: 全局监控版本
+hostsPage:
+  addContainer: 添加容器
+  cloudHostsPage:
+    addPage:
+      driver: "驱动: "
+      env: 环境
+      header: 添加主机
+      instance: "类型:"
+      launch: 启动
+      name:
+        label: 主机名称
+        placeholder: "例如: node01"
+      os: "操作系统: "
+      size: "大小: "
+      storage: "存储:"
+      template: "模板名称: "
+      transfer: "流量限制:"
+      transferUnit: TB
+      zone: "区域:"
+  hostPage:
+    conditions:
+      diskPressure: 磁盘负载
+      diskSpace: 磁盘空间
+      memoryPressure: 内存负载
+      ready: Kubelet
+    containerDVersion: Containerd 版本
+    containersTab:
+      detail: 在此主机上运行的容器列表
+      header: 容器
+    dockerVersion: Docker 版本
+    header:
+      title: "主机: {name}"
+    hostname: 主机名
+    infoMultiStats:
+      cpu: CPU
+      docker: "Docker:"
+      ip: IP 地址
+      kernel: 内核
+      memory: 内存
+      milliCpu:
+        labelText: mCPU
+      os: 操作系统
+      provider:
+        labelText: "供应商: "
+        noHost: 自定义
+      storage: 数据卷
+    ipAddress: IP 地址
+    kernelVersion: 内核版本
+    kubeProxyVersion: Kube-Proxy 版本
+    kubeletVersion: Kubelet 版本
+    limits:
+      cpu: "CPU 限制: "
+      memory: "内存限制: "
+      storage: "本地卷限制: "
+    operatingSystem: 操作系统
+    portsTab:
+      detail: 这些属性显示哪些端口已被映射到哪里
+      header: 端口
+      table:
+        body:
+          noData: 主机当前未映射任何端口
+        header:
+          container: 容器
+          ip: IP 地址
+          port: 端口
+          service: 服务
+    storageTab:
+      detail: 这些属性显示主机卷细节
+      header: 卷
+      table:
+        body:
+          noData: 主机未使用任何数据卷
+        header:
+          hostPath: 主机路径
+          mounts: 挂载
+          state: 状态
+    version: 版本
+  new:
+    addCluster:
+      cluster:
+        label: 集群
+      description: 将此新主机附加到集群，委派角色等
+      label: 集群选项
+      roles:
+        label: 角色
+      table:
+        label:
+          control: 用于管理
+          etcd: 用于 etcd
+          worker: 作为 worker 节点使用
+    custom: 添加自定义主机
+    header:
+      customText: 添加自定义主机
+      text: 添加主机
+    manageLink: 管理 Docker-machine 驱动
+    name:
+      placeholder: "例如: node01"
+identityBlock:
+  loading: 加载中...
+landingPage:
+  ember: 集群管理
+  emberLong: Rancher 多集群管理
+  header: 默认登录页面
+  vue: 仪表盘
+  vueLong: Rancher 仪表盘
+languageName: 简体中文
+ldap:
+  accessConfig:
+    connectionTimeout:
+      labelText: 服务器连接超时
+    defaultDomain:
+      helpText: 如果用户登录时没有指定域，则将使用该默认登录域。
+      labelText: 默认登录域
+      placeholder: e.g. mycompany
+    groupSearchBase:
+      helpText: 如果设置，则只在此起点下搜索组，而不是在用户搜索起点下搜索组。
+      labelText: 组搜索起点
+      placeholder: e.g. ou=Groups,dc=mycompany,dc=com
+    header: 1. 配置 {providerName} 服务器
+    port:
+      labelText: 端口
+      radioGroup:
+        label: 加密
+        none: None
+        starttls: STARTTLS
+        tls: TLS
+    serviceAccountDistinguishedName:
+      labelText: 服务帐户用户名
+    starttls:
+      helpText: 通过在连接过程中使用 TLS 来封装未加密的连接。不能与 TLS 一起使用。
+      label: Start TLS
+    subtext1: 输入连接到 {providerName} 服务器的地址、端口和协议。<code>389</code> 是不安全的标准端口，<code>636</code> 用于 TLS。
+    subtext2: "{appName} 需要一个服务帐户，该帐户可以(只读)访问所有能够登录的域，这样我们就可以确定当用户使用 API 密钥发出请求时，该用户属于哪个组。"
+    userSearchBase:
+      labelText: 用户搜索起点
+      placeholder: e.g. ou=users,dc=mycompany,dc=com
+  accessEnabled:
+    connectionTimeout:
+      labelText: "服务器连接超时: "
+    disable:
+      confirmDisable:
+        pre: 禁用访问控制
+    general:
+      defaultDomain: "默认域: "
+      encryption: 加密
+      header: 常规
+      searchBase: "搜索起点:"
+      server: "Server:"
+      serviceAccount: "服务帐户用户名:"
+      tls: "TLS:"
+    group:
+      header: 用户组
+      name: "名称属性:"
+      objectClass: "对象类:"
+      search: "搜索属性:"
+      searchFilter: "搜索过滤器:"
+      uniqueId: "唯一标识:"
+    header: 身份验证
+    serviceAccountDistinguishedName:
+      labelText: "服务帐户识别名:"
+    subtext: 要更改服务器配置，请禁用下面的访问控制，然后重新设置。
+    users:
+      disabledBitMask: "Disabled BitMask:"
+      enabled: "状态属性:"
+      header: 用户
+      login: "登录属性:"
+      name: "用户名属性:"
+      objectClass: "对象类:"
+      search: "搜索属性:"
+      searchFilter: "搜索过滤器:"
+      uniqueId: "唯一标识:"
+  customizeSchema:
+    cert:
+      helpText: 粘贴证书，以 -----BEGIN CERTIFICATE----- 开始。
+      labelText: CA 证书
+      placeholder: 粘贴证书，以 -----BEGIN CERTIFICATE----- 开始。
+    groups:
+      groupDN:
+        labelText: 组 DN 属性
+        placeholder: distinguishedName
+      groupMemberMapping:
+        labelText: 组成员映射属性
+      groupMemberUser:
+        labelText: 组成员用户属性
+        placeholder: uid
+      groupUniqueIdAttribute:
+        helpText: 请使用用户组创建后全局唯一的属性，避免因该属性值变化导致用户权限丢失
+        labelText: 组唯一标识
+      header: 用户组
+      name:
+        labelText: 名称属性
+      nestedGroup:
+        disabled:
+          labelText: 只搜索直接组成员
+        enabled:
+          helpText: 嵌套搜索在大型目录中可能会更慢
+          labelText: 搜索直接和嵌套的组成员
+        title: 嵌套的组成员
+      objectClass:
+        labelText: 对象类
+      search:
+        labelText: 搜索属性
+      searchFilter:
+        labelText: 搜索过滤器
+    header: 2. 自定义模式
+    helpText: 如果您的架构与标准 Active Directory 格式不匹配，您可以在这里自定义。
+    users:
+      disabledBitMask:
+        labelText: Disabled Status Bitmask
+      enabledAttribute:
+        labelText: 用户启用属性
+      header: 用户
+      login:
+        labelText: 登录属性
+      name:
+        labelText: 用户名属性
+      objectClass:
+        labelText: 对象类
+      search:
+        labelText: 搜索属性
+      searchBase:
+        labelText: 用户搜索起点
+      searchFilter:
+        labelText: 搜索过滤器
+      userMemberAttribute:
+        labelText: 用户成员属性
+      userUniqueIdAttribute:
+        helpText: 请使用用户创建后全局唯一的用户属性，避免因该属性值变化导致用户权限丢失
+        labelText: 用户唯一标识
+  header:
+    disabled:
+      label: "{providerName} 未配置"
+  providerName:
+    ad: Active Directory
+    freeipa: FreeIPA
+    openldap: OpenLDAP
+    saveLabels:
+      ad: 启用 Active Directory 认证
+      freeipa: 启用 FreeIPA 认证
+      openldap: 启用 OpenLDAP 认证
+  testAuth:
+    authenticate:
+      post: 测试中...
+      pre: 身份验证
+    header: 3. 测试并启用认证
+    helpText: "通过使用您的 {providerName} 帐户测试身份验证，检查一切配置是否正确:"
+    password:
+      labelText: AD 用户密码
+    userName:
+      labelText: AD 用户名
+machineTemplatesPage:
+  custom: 自定义添加一台现有的正在运行 Docker 的主机。
+  new:
+    btn: 设置
+    helpText: 启动新的主机或通过 SSH 导入已经运行 Docker 的主机。
+  templateBox:
+    button: 选择
+    labels:
+      region: 实例所在地区
+      zone: 区域
+  title: 添加主机
+membersPage:
+  add:
+    form:
+      kind: 类型
+      member: 成员
+      role: 角色
+    title: 添加 {type} 成员
+  index:
+    localLink: 添加成员
+    table:
+      created: 创建时间
+      name: 名称
+      noData: 目前还没有成员
+      noMatch: 没有成员与当前搜索匹配
+      subjectKind: 类型
+      template: 角色
+      userId: 用户
+  title: 成员
+modalAboutComponent:
+  cattle: Cattle
+  cli: 命令行
+  component: 组件
+  helm: Helm
+  linuxImageList: Linux 镜像列表
+  machine: 主机
+  ui: 用户界面
+  version: 版本
+  windowsImageList: Windows 镜像列表
+modalAddCloudKey:
+  amazonec2:
+    accessKey:
+      label: Access Key
+      placeholder: Your AWS access key
+    secretKey:
+      label: Secret Key
+      placeholder: Your AWS secret key
+  azure:
+    clientId:
+      label: Client ID
+      placeholder: Your Client ID
+    clientSecret:
+      label: Client Secret
+      placeholder: Your Client Secret
+  description:
+    placeholder: "例如: cloud credential for production"
+  digitalocean:
+    accessToken:
+      help: |
+        粘贴来自 DigitalOcean 的<a href="https://cloud.digitalocean.com/settings/api/tokens" target="_blank" rel="nofollow noreferrer noopener">Applications & API</a>。
+      label: Access Token
+      placeholder: 您的 DigitalOcean API 访问令牌。
+  errors:
+    region: 您必须选择一个区域来验证您的密钥。
+    validation: "{ status }: 验证密钥时出现问题，请输入有效凭证，然后重试。"
+  header:
+    edit: 编辑云凭证
+    new: 添加云凭证
+  linode:
+    authAccountButton: "下一步: 实例配置"
+    token:
+      help: |
+        从 Linode 粘贴个人访问令牌<a href="https://cloud.linode.com/profile/tokens" target="_blank" rel="nofollow noreferrer noopener">API Tokens</a> screen
+      label: 访问令牌
+      placeholder: 您的 Linode API 访问令牌
+  name:
+    placeholder: "例如: production-credentials"
+  oci:
+    authRegion:
+      help: Any region your tenancy is subscribed to authenticate your credentials.
+      label: Region
+    secretKey:
+      label: 用户私钥
+      placeholder: 指定 OCI 用户的私有 API 密钥内容(PEM 格式)
+    secretKeyPassphrase:
+      label: 用户私钥密码
+      placeholder: 保护指定的 OCI 用户的私钥文件的密码(如果有的话)
+    tenancyOcid:
+      label: Tenancy OCID
+      placeholder: The OCID of the tenancy in the user account exists
+    userFingerprint:
+      label: 用户指纹
+      placeholder: 与指定用户的私有 API 密钥对应的指纹
+    userOcid:
+      label: User OCID
+      placeholder: The OCID of a user
+  pnap:
+    clientIdentifier:
+      label: Client ID
+      placeholder: Your Client ID
+    clientSecret:
+      help: From <a href="https://bmc.phoenixnap.com/applications/" target="_blank" rel="nofollow noreferrer noopener">phoenixNAP BMC Portal</a> Application Credentials
+      label: Client Secret
+      placeholder: Your Client Secret
+  saving:
+    validating: 确认键
+  type: 凭证类型
+  typeSelect:
+    prompt: 选择云凭证提供商类型
+  vmwarevsphere:
+    password:
+      label: 密码
+modalHostEvacuate:
+  button: 疏散
+  header: 确认进行疏散操作
+  helpText: 此操作将停用该主机并删除主机上所有运行的非基础设施容器
+  protip: "进阶提示: 在点击时按住 {key} 键以跳过确认操作"
+modalShortcuts:
+  cluster: 集群
+  delete: 删除所选择的 (在表视图中)
+  global: 全局
+  kubectl: Kubectl Shell
+  nextTab: 下一页
+  other: 其他东西
+  project: 项目
+  search: 聚焦搜索字段
+  shift: Shift-{key}
+  shortcuts: 您在此处
+  time: 时间
+  title:
+    pl: 快捷键
+    rancher: 欢迎来到传送门！
+  viewGroup: 切换分组视图
+  world: 世界
+model:
+  account:
+    kind:
+      admin: 管理员
+      agent: 代理
+      project: 环境
+      registeredAgent: 已注册的代理
+      service: 服务
+      user: 用户
+  cluster:
+    name: 集群名
+  identity:
+    displayType:
+      group: 用户组
+      localUser: 本地用户
+      org: 组织
+      team: 团队
+      unknown: "{type}？"
+      user: 用户
+  ingress:
+    displayKind: L7 Ingress
+  machine:
+    role:
+      controlPlane: Control
+      etcd: etcd
+      worker: Worker
+  openldapconfig:
+    domain:
+      help: 仅该搜索起点下的用户能够访问
+      label: "用户搜索起点:"
+      placeholder: "例如: ou=Users,dc=mycompany,dc=com"
+    server:
+      label: 域名或 IP 地址
+    serviceAccountPassword:
+      label: 服务账号密码
+    serviceAccountUsername:
+      label: 服务账号用户名
+  projectMember:
+    role:
+      member: 成员
+      owner: 所有者
+      readonly: 只读
+      restricted: 受限
+  service:
+    displayKind:
+      generic: 服务
+      loadBalancer: L4 层负载均衡
+monitoringPage:
+  cluster:
+    disabled: 当前集群监控尚未启用。
+    title: 集群监控配置
+    toDisable: 监控已启用。点击下面的保存按钮来禁用当前集群的监控。
+  clusterNotEnabled: 集群级别监控未启用。将只采集自定义指标。
+  config:
+    gpuMonitoring:
+      enable: Enable GPU Monitoring
+    grafana:
+      enablePersistence:
+        label: 为 Grafana 启用持久化存储
+      size:
+        label: Grafana 持久化存储大小
+        placeholder: "例如: 10Gi"
+      storageClass:
+        label: Grafana 默认存储类
+    header: Prometheus 配置
+    nodeexporter:
+      cpuLimit:
+        label: Node Exporter CPU 限制
+        placeholder: "例如: 200"
+        unit: milli CPUs
+      enable: 启用 Node Exporter
+      label: Node Exporter 主机端口
+      memoryLimit:
+        label: Node Exporter 内存限制
+        placeholder: "例如: 200"
+    operator:
+      memoryLimit:
+        label: Prometheus Operator 内存限制
+        placeholder: "例如: 500"
+    prometheus:
+      cpuLimit:
+        label: Prometheus CPU 限制
+        placeholder: "例如: 1000"
+        unit: milli CPUs
+      cpuRequest:
+        label: Prometheus CPU 预留
+        placeholder: "例如: 1000"
+        unit: milli CPUs
+      enablePersistence:
+        label: 为 Prometheus 启用持久化存储
+      memoryLimit:
+        label: Prometheus 内存限制
+        placeholder: "例如: 1000"
+      memoryRequest:
+        label: Prometheus 内存预留
+        placeholder: "例如: 1000"
+      size:
+        label: Prometheus 持久化存储大小
+        placeholder: "例如: 50Gi"
+      storageClass:
+        label: Prometheus 默认存储类
+    retention:
+      label: 数据保存时间
+    storageClass:
+      label: 存储类
+    types:
+      none: None
+      prometheus: Prometheus
+  confirmDisable: 你确定吗？再次点击将会禁用监控。
+  disable: 禁用监控
+  enableActionLabel: 启用监控
+  errors:
+    disableIstioFirst: 在禁用集群监控之前，需要先禁用 Istio。
+  insufficientSize:
+    prometheus:
+      all: 请确保你至少有一个节点有 {cpu} milli CPUs 和 {memory} MiB 内存可用来激活 Prometheus 工作负载。
+      cpu: 请确保你至少有一个节点有 {cpu} milli CPUs 可用来激活 Prometheus 工作负载。
+      memory: 请确保你至少有一个节点有 {memory} MiB 内存可用来激活 Prometheus 工作负载。
+    selectors:
+      all: 请确保你至少有一个匹配节点选择器的节点有 {cpu} milli CPUs 和 {memory} MiB 内存可用来激活 Prometheus 工作负载。
+      cpu: 请确保你至少有一个匹配节点选择器的节点有 {cpu} milli CPUs 可用来激活 Prometheus 工作负载。
+      memory: 请确保你至少有一个匹配节点选择器的节点有 {memory} MiB 内存可用来激活 Prometheus 工作负载。
+    total:
+      all: 请确保你至少有 {cpu} milli CPUs 和 {memory} MiB 内存可用来激活监控。
+      cpu: 请确保你至少有 {cpu} milli CPUs 可用来激活监控。
+      memory: 请确保你至少有 {memory} MiB 内存可用来激活监控。
+  noPermission: 您没有权限配置 {level} 级别监控。
+  nodeSelector:
+    addSelectorLabel: 添加选择器
+    helpText: 选择部署监控相关的工作负载所运行的节点。
+  project:
+    disabled: 当前项目监控尚未启用。
+    title: 项目监控配置
+    toDisable: 监控已启用。点击下面的保存按钮来禁用当前项目的监控。
+  prometheus: 监控尚未启用，点击下面的保存按钮去启用监控。
+  resourceLimitsHelp: "启用集群监视时，需要确保工作节点和 Prometheus pod 具有足够的资源。请访问 <a href=\"https://rancher.com/docs/rancher/v2.x/en/cluster-admin/tools/monitoring/#resource-consumption\" target=\"_blank\" rel=\"nofollow noreferrer\">Rancher docs</a>了解建议的资源限制。"
+  systemProject: 如果您想为系统项目中的 pods 收集自定义指标，请直接启用集群级别监控。
+  toUpdate:
+    cluster: 集群级别监控已启用。
+    project: 项目级别监控已启用。
+  update: 更新监控配置
+  upgrade: 升级监控组件到最新版本 {version}。
+  upgradeAvailable: (最新版本 {version})
+  version: 监控组件版本
+newConfigMap:
+  addActionLabel: 添加配置映射值
+  description:
+    placeholder: "例如: app"
+  name:
+    placeholder: "例如: map"
+  title:
+    edit: "编辑配置映射: {name}"
+    new: 添加配置映射
+    view: "配置映射: {name}"
+  values:
+    binaryLabel: 配置映射值(二进制值)
+    label: 配置映射
+newPassword:
+  confirmPassword: 确认密码
+  password: 新密码
+  passwordNoMatch: 密码不匹配
+  placeholder: 新密码
+pipelinesPage:
+  lastActivity: 最后运行
+  pipelines: 流水线
+  table:
+    noData: 没有配置流水线
+    noMatch: 没有符合当前搜索的流水线规则
+    status: 状态
+podPage:
+  containerImage: "{container} 的镜像"
+  displayImage: "{image} + 其他 {sidecar, plural, =1 {1 个 image} other {#个 images}}"
+  header: "Pod: {name}"
+  image: 镜像
+  nodeIp: Node
+  podIp: Pod IP
+podSecurityPoliciesPage:
+  addPodSecurityPolicy: 添加策略
+  detail:
+    header: 策略
+  editPodSecurityPolicy: 编辑策略
+  index:
+    description: 将策略应用于由具有此角色的用户创建的 Pod。
+    header: Pod 安全策略
+    table:
+      created: 创建时间
+      name: 名称
+      noData: 未配置 Pod 安全策略
+      noMatch: 没有与当前搜索匹配的 Pod 安全策略。
+  new:
+    errors:
+      nameInExists: 名称已存在，请使用新的 Pod 安全策略名称。
+      nameReq: 名称 (必填)
+    form:
+      name:
+        labelText: 名称
+        placeholder: "例如: 策略"
+  saveEdit: 编辑
+  saveNew: 创建
+projectRow:
+  none: 没有描述
+  orchestration: 编排
+realmNames:
+  all: 全部
+  asia: 亚洲
+  euEast: 欧洲东部
+  euWest: 欧洲西部
+  usEast: 美国东部
+  usWest: 美国西部
+repositories:
+  enable: 设置代码库
+  header: 代码库
+  message: 选择示例代码库或者使用您自己的代码库来设置流水线。
+  table:
+    noData: 没有任何代码库
+    noMatch: 没有代码库符合当前搜索
+    repository: 代码库
+saveCancel:
+  cancel: 取消
+  create: 创建
+  edit: 保存
+  next: 下一步
+  saved: 已保存!
+  saving: 保存中...
+schedulingRuleRow:
+  containerLabel: 容器标签
+  containerName: 容器名称
+  haveA: 具有
+  hostLabel: 主机标签
+  must: 必须
+  mustNot: 必须没有
+  of: 其
+  serviceName: 服务名称
+  should: 最好
+  shouldNot: 最好没有
+  theHost: 主机
+searchableSelect:
+  noMatch: 没有匹配
+  noOptions: 没有可用的选项
+servicePartial:
+  noContainers:
+    inactive:
+      start: 启动
+    label: 没有容器
+tooltipExpire:
+  label: 此集群证书即将过期。
+  link: 立即轮换证书
+volumeSource:
+  aws-ebs:
+    title: Amazon EBS Disk
+  azure-disk:
+    title: Azure Disk
+  azure-file:
+    title: Azure Filesystem
+  cephfs:
+    title: Ceph Filesystem
+  cinder:
+    title: Openstack Cinder Volume
+  config-map:
+    title: Config Map Volume
+  csi:
+    title: CSI
+  csi-volume-longhorn:
+    title: Longhorn
+  customLogPath:
+    logFormat:
+      helpText: 您可以在 </a>此处<a href="http://fluentular.herokuapp.com/" target="_blank"> 测试正则表达式。
+      label: 日志格式
+      useCustomRegex: 使用自定义 Fluentd 正则表达式
+      useExistingLogFormat: 使用现有的日志格式
+    mountPath:
+      helpText: 容器中的日志路径
+      label: 日志路径
+      placeholder: "例如: /var/www"
+  empty-dir:
+    title: Empty Dir Volume
+  fc:
+    title: Fibre Channel
+  flex-volume:
+    title: Flex Volume
+  flocker:
+    title: Flocker
+  gce-pd:
+    title: Google Persistent Disk
+  glusterfs:
+    title: Gluster Volume
+  host-path:
+    kind:
+      Any: 不检查目标路径
+      BlockDevice: 现有 block 设备
+      CharDevice: 现有 character 设备
+      Directory: 现有目录
+      DirectoryOrCreate: "目录: 不存在则创建"
+      File: 现有文件
+      FileOrCreate: "文件: 不存在则创建"
+      Socket: 现有 socket 文件
+      label: 主机路径类型检查
+    path:
+      label: 主机路径
+      placeholder: "例如: /data"
+    title: HostPath
+  iscsi:
+    title: iSCSI Target
+  local:
+    title: Local
+  nfs:
+    title: NFS Share
+  photon:
+    title: Photon Volume
+  portworx:
+    title: Portworx Volume
+  quobyte:
+    title: Quobyte Volume
+  rbd:
+    title: Ceph RBD
+  scaleio:
+    title: ScaleIO Volume
+  secret:
+    title: Secret Volume
+  storageos:
+    title: StorageOS
+  vsphere-volume:
+    title: VMWare vSphere Volume
+waitKubernetes:
+  activateHost: 等待主机激活
+  addHost: 添加至少一台主机
+  createStack: 创建 Kubernetes 系统应用栈
+  startServices: 启动服务
+  waitApi: 等待 Kubernetes API
+yamlPage:
+  errors: yaml 文件中存在错误
