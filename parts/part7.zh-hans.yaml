@@ -689,7 +689,7 @@ ldap:
       uniqueId: "唯一标识:"
   customizeSchema:
     cert:
-      helpText: 粘贴证书，以 -----BEGIN CERTIFICATE----- 开始。
+      helpText: 如果需要，请输入 CA 证书。
       labelText: CA 证书
       placeholder: 粘贴证书，以 -----BEGIN CERTIFICATE----- 开始。
     groups:
@@ -825,7 +825,8 @@ modalAddCloudKey:
   digitalocean:
     accessToken:
       help: |
-        粘贴来自 DigitalOcean 的<a href="https://cloud.digitalocean.com/settings/api/tokens" target="_blank" rel="nofollow noreferrer noopener">Applications & API</a>。
+        粘贴来自 DigitalOcean 的
+        <a href="https://cloud.digitalocean.com/settings/api/tokens" target="_blank" rel="nofollow noreferrer noopener">Applications & API</a>。
       label: Access Token
       placeholder: 您的 DigitalOcean API 访问令牌。
   errors:
@@ -838,7 +839,8 @@ modalAddCloudKey:
     authAccountButton: "下一步: 实例配置"
     token:
       help: |
-        从 Linode 粘贴个人访问令牌<a href="https://cloud.linode.com/profile/tokens" target="_blank" rel="nofollow noreferrer noopener">API Tokens</a> screen
+        从 Linode 粘贴个人访问令牌
+        <a href="https://cloud.linode.com/profile/tokens" target="_blank" rel="nofollow noreferrer noopener">API Tokens</a> screen
       label: 访问令牌
       placeholder: 您的 Linode API 访问令牌
   name:
@@ -955,7 +957,7 @@ monitoringPage:
   clusterNotEnabled: 集群级别监控未启用。将只采集自定义指标。
   config:
     gpuMonitoring:
-      enable: Enable GPU Monitoring
+      enable: 启用 GPU 监控
     grafana:
       enablePersistence:
         label: 为 Grafana 启用持久化存储
@@ -1149,17 +1151,17 @@ tooltipExpire:
   link: 立即轮换证书
 volumeSource:
   aws-ebs:
-    title: Amazon EBS Disk
+    title: Amazon EBS 磁盘
   azure-disk:
-    title: Azure Disk
+    title: Azure 磁盘
   azure-file:
-    title: Azure Filesystem
+    title: Azure 文件系统
   cephfs:
-    title: Ceph Filesystem
+    title: Ceph 文件系统
   cinder:
     title: Openstack Cinder Volume
   config-map:
-    title: Config Map Volume
+    title: 配置卷映射
   csi:
     title: CSI
   csi-volume-longhorn:
@@ -1175,17 +1177,17 @@ volumeSource:
       label: 日志路径
       placeholder: "例如: /var/www"
   empty-dir:
-    title: Empty Dir Volume
+    title: emptyDir 卷
   fc:
-    title: Fibre Channel
+    title: 网状通道
   flex-volume:
-    title: Flex Volume
+    title: Flex 卷
   flocker:
     title: Flocker
   gce-pd:
-    title: Google Persistent Disk
+    title: Google 持久磁盘
   glusterfs:
-    title: Gluster Volume
+    title: Gluster 卷
   host-path:
     kind:
       Any: 不检查目标路径
@@ -1202,27 +1204,27 @@ volumeSource:
       placeholder: "例如: /data"
     title: HostPath
   iscsi:
-    title: iSCSI Target
+    title: iSCSI 目标
   local:
     title: Local
   nfs:
-    title: NFS Share
+    title: NFS 共享
   photon:
-    title: Photon Volume
+    title: Photon 卷
   portworx:
-    title: Portworx Volume
+    title: Portworx 卷
   quobyte:
-    title: Quobyte Volume
+    title: Quobyte 卷
   rbd:
     title: Ceph RBD
   scaleio:
-    title: ScaleIO Volume
+    title: ScaleIO 卷
   secret:
-    title: Secret Volume
+    title: Secret 卷
   storageos:
-    title: StorageOS
+    title: 存储操作系统
   vsphere-volume:
-    title: VMWare vSphere Volume
+    title: VMWare vSphere 卷
 waitKubernetes:
   activateHost: 等待主机激活
   addHost: 添加至少一台主机
