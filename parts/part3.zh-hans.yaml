@@ -51,7 +51,7 @@ action:
     label: 刷新组成员
     success:
       message: 已触发组成员刷新
-      title: Refresh Successful
+      title: 刷新成功
   registration: Registration Cmd
   remove: 删除
   replay: 重播
@@ -160,9 +160,9 @@ cruPersistentVolumeClaim:
     label: Volume Handle
 editCertificate:
   description:
-    placeholder: "例如: Mydomain.com 的 EV 证书。"
+    placeholder: "例如: mydomain.com 的 EV 证书。"
   name:
-    placeholder: e.g. mydomain.com
+    placeholder: '例如: mydomain.com'
   noteKeyWriteOnly: "注意: Private Key 部分为只写 (write only) 因而显示为空白。更新证书时您需要重新上传 Private Key，即便 Private Key 未发生变化。"
   title: 编辑证书
 editCluster:
@@ -299,7 +299,7 @@ formPorts:
     HostPort: HostPort (仅 Pod 所在主机端口可访问)
     HostPortDisbaled: HostPort
     LoadBalancer: L4 层负载均衡器 (对接公有云负载均衡服务)
-    LoadBalancerDisbaled: Layer-4 Load Balancer
+    LoadBalancerDisbaled: 'L4 层负载均衡器 (禁用)'
     NodePort: NodePort (所有主机端口均可访问)
     label: 网络模式
   name:
@@ -387,7 +387,7 @@ formScheduling:
     minMaxDetail: 如果设置，用户将无法通过界面或 API 请求使容器数量低于最小数量或超过最大数量。
   scheduler:
     label: 调度
-    placeholder: e.g. myScheduler
+    placeholder: '例如: myScheduler'
   status: "{count, plural,\n=0{ 无规则 }\n=1{#条规则 }\nother {#条规则 }\n}\n"
   time: 时间
   title: 主机调度
@@ -507,7 +507,7 @@ k8sImport:
     placeholder: 导入或粘贴集群的 Kubeconfig 文件以供使用。
   name:
     label: 集群名称
-    placeholder: e.g. my-imported-cluster
+    placeholder: '例如：my-imported-cluster'
 loginShibboleth:
   buttonText: 用 Shibboleth 登录
 managedImportClusterInfo:
@@ -811,9 +811,9 @@ pagination:
   catalog: "{pages, plural,\n=0{ 无应用商店 }\n=1{ 选中 {count}{count, plural,=1{ 个应用商店 } other { 个应用商店 }}}\nother { 当前显示 {count} 个应用商店中的 {from} 到 {to} 个 }}\n"
   certificate: "{pages, plural,\n=0{ 无证书 }\n=1{ 选中 {count}{count, plural,=1{ 个证书 } other { 个证书 }}}\nother { 当前显示 {count} 个证书中的 {from} 到 {to} 个 }}\n"
   cluster: "{pages, plural,\n=0{ 没有集群 }\n=1{ 选中 {count}{count, plural,=1{ 个集群 } other { 个集群 }}}\nother { 当前显示 {count} 个集群中的 {from} 到 {to} 个 }}\n"
-  clusterTemplates: "{pages, plural,\n=0 {No Template Revisions}\n=1 {{count} {count, plural, =1 {Template Revision} other {Template Revisions}}}\nother {{from} - {to} of {count} Template Revisions}}\n"
+  clusterTemplates: "{pages, plural,\n=0 { 无模板 }\n=1 { 选中 {count} {count, plural, =1 { 个模板 } other { 个模板 }}}\nother { 当前显示 {count} 个模板中的 {from} 到 {to} 个 }}\n"
   container: "{pages, plural,\n=0 { 无容器 }\n=1{ 选中 {count} {count, plural, =1{ 个容器 } other { 个容器 }}}\nother { 当前显示 {count} 个容器中的 {from} 到 {to} 个 }}\n"
-  destinationRules: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Destination Rule} other {Destination Rules}}}\nother {{from} - {to} of {count} Destination Rules}}\n"
+  destinationRules: "{pages, plural,\n=0 { 无选项 }\n=1 { 选中 {count} {count, plural, =1 { 条目标规则 } other { 条目标规则 }}}\nother { 当前显示 {count} 条目标规则中的 {from} 到 {to} 条}}\n"
   dnsProvider: "{pages, plural,\n=0{ 无 DNS 提供商 }\n=1{ 选中 {count}{count, plural,=1{ 条 DNS 提供商 } other { 条 DNS 提供商 }}}\nother { 当前显示 {count} 条 DNS 提供商 中的 {from} 到 {to} 条 }}\n"
   dnsRecord: "{pages, plural,\n=0{ 无 DNS 记录 }\n=1{ 选中 {count}{count, plural,=1{ 条 DNS 记录 } other { 条 DNS 记录 }}}\nother { 当前显示 {count} 条 DNS Records 中的 {from} 到 {to} 条 }}\n"
   driver: "{pages, plural,\n=0{ 无驱动 }\n=1{ 选中 {count}{count, plural,=1{ 个驱动 } other { 个驱动 }}}\n  other { 当前显示 {count} 个驱动中的 {from} 到 {to} 个 }}\n"
@@ -822,13 +822,13 @@ pagination:
   event: "{pages, plural,\n=0{ 无事件 }\n=1{ 选中 {count}{count, plural,=1{ 个事件 } other { 个事件 }}}\nother { 当前显示 {count} 个事件中的 {from} 到 {to} 个 }}\n"
   f5Ctl: "{pages, plural,\n=0{ 无 F5负载均衡}\n=1{ 选中 {count}{count, plural,=1{ 个 F5负载均衡} other { 个 F5负载均衡}}}\nother { 当前显示 {count} 个 F5负载均衡 中的 {from} 到 {to} 个 }}\n"
   f5Tls: "{pages, plural,\n=0{ 无 TLS证书}\n=1{ 选中 {count}{count, plural,=1{ 个 TLS证书} other { 个 TLS证书}}}\nother { 当前显示 {count} 个 TLS证书 中的 {from} 到 {to} 个 }}\n"
-  features: "{pages, plural,\n=0 {No Features}\n=1 {{count} {count, plural, =1 {Feature} other {Features}}}\nother {{from} - {to} of {count} Features}}\n"
-  gateways: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Gateway} other {Gateways}}}\nother {{from} - {to} of {count} Gateways}}\n"
+  features: "{pages, plural,\n=0 { 无功能选项 }\n=1 { 选中 {count} {count, plural, =1 { 个功能选项 } other { 个功能选项 }}}\nother { 当前显示 {count} 个功能选项中的 {from} 到 {to} 个 }}\n"
+  gateways: "{pages, plural,\n=0 { 无选项 }\n=1 { 选中 {count} {count, plural, =1 { 个网关 } other { 个网关 }}}\nother { 当前显示 {count} 个网关中的 {from} 到 {to} 个 }}\n"
   generic: "{pages, plural,\n=0{ 无条目 }\n=1{ 选中 {count}{count, plural, =1{ 个条目 } other { 个条目 }}}\nother { 当前显示 {count} 个条目中的 {from} 到 {to} 个 }}\n"
   hpa: "{pages, plural,\n=0 { 没有 Pod 自动水平伸缩规则 }\n=1 { 选中 {count} {count, plural, =1 { 条 Pod 自动水平伸缩规则 } other { 条 Pod 自动水平伸缩规则 }}}\nother { 当前显示 {count} 条 Pod 自动水平伸缩规则中的 {from} 到 {to} 条 }}\n"
   image: "{pages, plural,\n=0{ 无镜像 }\n=1{ 选中 {count}{count, plural,=1{ 个镜像 } other { 个镜像 }}}\nother { 当前显示 {count} 个镜像中的 {from} 到 {to} 个 }}\n"
   ingress: "{pages, plural,\n=0{ 无 Ingresses}\n=1{ 选中 {count}{count, plural,=1{ 个 Ingresses} other { 个 Ingresses}}}\nother { 当前显示 {count} 个 Ingresses 中的 {from} 到 {to} 个 }}\n"
-  istioRule: "{pages, plural,\n=0 {No Traffic Rules}\n=1 {{count} {count, plural, =1 {Traffic Rule} other {Traffic Rules}}}\nother {{from} - {to} of {count} Traffic Rules}}\n"
+  istioRule: "{pages, plural,\n=0 { 无流量规则 }\n=1 { 选中 {count} {count, plural, =1 { 条流量规则 } other { 条流量规则 }}}\nother { 当前显示 {count} 条流量规则中的 {from} 到 {to} 条}}\n"
   link: "{pages, plural,\n=0{ 无链接 }\n=1{ 选中 {count}{count, plural,=1{ 个链接 } other { 个链接 }}}\nother { 当前显示 {count} 个 Links 中的 {from} 到 {to} 个 }}\n"
   loadBalancer: "{pages, plural,\n=0{ 无负载均衡 }\n=1{ 选中 {count}{count, plural,=1{ 条负载均衡 } other { 条负载均衡 }}}\nother { 当前显示 {count} 条负载均衡中的 {from} 到 {to} 条 }}\n"
   member: "{pages, plural,\n=0{ 无成员 }\n=1{ 选中 {count}{count, plural,=1{ 个成员 } other { 个成员 }}}\nother { 当前显示 {count} 个成员中的 {from} 到 {to} 个 }}\n"
@@ -847,7 +847,7 @@ pagination:
   rule: "{pages, plural,\n=0{ 无规则 }\n=1{ 选中 {count}{count, plural,=1{ 条规则 } other { 条规则 }}}\nother { 当前显示 {count} 条规则中的 {from} 到 {to} 条 }}\n"
   service: "{pages, plural,\n=0{ 无服务 }\n=1{ 选中 {count}{count, plural,=1{ 个服务 } other { 个服务 }}}\nother { 当前显示 {count} 个服务中的 {from} 到 {to} 个 }}\n"
   storageClass: "{pages, plural,\n=0{ 无存储类 }\n=1{ 选中 {count}{count, plural,=1{ 个存储类 } other { 个存储类 }}}\nother { 当前显示 {count} 个 Storage Classes 中的 {from} 到 {to} 个 }}\n"
-  virtualServices: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Virtual Service} other {Virtual Services}}}\nother {{from} - {to} of {count} Virtual Services}}\n"
+  virtualServices: "{pages, plural,\n=0 { 无选项 }\n=1 { 选中 {count} {count, plural, =1 { 个虚拟服务 } other { 个虚拟服务 }}}\nother { 当前显示 {count} 个虚拟服务中的 {from} 到 {to} 个 }}\n"
   volume: "{pages, plural,\n=0{ 没有卷 }\n=1{ 选中 {count}{count, plural,=1{ 个卷 } other { 个卷 }}}\nother { 当前显示 {count} 个数据卷中的 {from} 到 {to} 个 }}\n"
   workload: "{pages, plural,\n=0{ 无工作负载 }\n=1{ 选中 {count}{count, plural,=1{ 个工作负载 } other { 个工作负载 }}}\nother { 当前显示 {count} 个工作负载中的 {from} 到 {to} 个 }}\n\n"
 pipelineNotification:
@@ -955,15 +955,15 @@ servicePage:
   new:
     form:
       description:
-        placeholder: e.g. My application
+        placeholder: '例如: My application'
       name:
-        placeholder: e.g. myapp
+        placeholder: '例如: myapp'
   newBalancer:
     form:
       description:
         placeholder: "例如: Mycompany.com 的负载均衡"
       name:
-        placeholder: e.g. website
+        placeholder: '例如: website'
     upgradeImage: 负载均衡器镜像版本将由 <code>{from}</code> 升级到 <code>{to}</code>。
   newIngress:
     form:
@@ -972,7 +972,7 @@ servicePage:
       load:
         label: 扁平网络负载
       name:
-        placeholder: e.g. website
+        placeholder: '例如: website'
   portsTab:
     detail: 从主机 IP 映射到容器监听的端口
     notActive: 端口仅当服务处于活动状态时可见
