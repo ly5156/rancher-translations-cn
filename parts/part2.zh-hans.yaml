@@ -43,7 +43,7 @@ clusterTemplateQuestions:
     localClusterAuthEndpoint: 启用本地集群 Auth 端点
     monitoring: 监控配置
     network: 网络配置
-    prefixPath: Prefix Path
+    prefixPath: 路径前缀
     privateRegistries: 私有镜像库配置
     restore: 集群恢复
     rotateCertificates: 轮换证书
@@ -70,8 +70,8 @@ clustersPage:
     label: Kubernetes 版本
   launch:
     import: 导入集群
-    importEks: Import Amazon EKS
-    importGke: Import Google GKE
+    importEks: 导入 Amazon EKS
+    importGke: 导入 Google GKE
     new: 添加集群
     register: 注册集群
   memory:
@@ -789,7 +789,7 @@ globalRegistryPage:
   command:
     detail: 用于镜像库的 Docker 命令
     dockerLogin: 登录到镜像库
-    dockerPull: 从镜像库中提取图像
+    dockerPull: 从镜像库中拉取镜像
     dockerPush: 推送镜像到镜像库
     dockerTag: 重命名镜像库镜像
     title: Docker 命令
