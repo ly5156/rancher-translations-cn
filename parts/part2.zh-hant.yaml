@@ -1,13 +1,13 @@
 backupsPage:
-  detail: 如果启用 etcd 备份功能，将按预先配置的时间间隔周期获取集群快照，可用于集群灾难恢复。
-  header: Etcd 备份
+  detail: 如果啟用 etcd 備份功能，將按照預先配置的時間間隔週期來獲取集群快照，可用於集群災難恢復。
+  header: Etcd 備份
   table:
-    created: 创建时间
-    name: 备份名称
-    noData: 当前没有 Etcd 快照
-    state: 状态
+    created: 創建時間
+    name: 備份名稱
+    noData: 當前沒有 Etcd 快照
+    state: 狀態
     target:
-      label: 目标存储
+      label: 目標存儲
       local: Local
       s3: S3
 balancerPage:
@@ -16,52 +16,52 @@ balancerPage:
   table:
     target: 目標
 clusterTemplateQuestions:
-  detail: 希望为最终用户提供的默认应答参数和默认值。
-  label: 集群默认应答参数
+  detail: 希望為最終用戶提供的默認應答參數和默認值。
+  label: 集群默認應答參數
   schemaLabels:
-    addonJobTimeout: 附加组件安装超时
-    addons: 附加组件
+    addonJobTimeout: 附加組件安裝超時
+    addons: 附加組件
     addonsInclude: Addons Include
-    authentication: 身份验证
-    authorization: 授权
-    bastionHost: 堡垒主机
-    caCerts: CA 证书
-    cloudProvider: 云供应商
-    defaultClusterRoleForProjectMembers: 项目成员的默认集群角色
-    defaultPodSecurityPolicyTemplateId: 默认 Pod 安全策略模板 Id
-    desiredAgentImage: 需要的 Agent 镜像
-    desiredAuthImage: 需要的 Auth 镜像
+    authentication: 身份驗證
+    authorization: 授權
+    bastionHost: 堡壘主機
+    caCerts: CA 證書
+    cloudProvider: 雲提供商
+    defaultClusterRoleForProjectMembers: 項目成員的默認集群角色
+    defaultPodSecurityPolicyTemplateId: 默認 Pod 安全策略模板 Id
+    desiredAgentImage: 需要的 Agent 鏡像
+    desiredAuthImage: 需要的 Auth 鏡像
     dns: DNS 配置
-    dockerRootDir: Docker 根目录
-    enableClusterAlerting: 启用集群告警
-    enableClusterMonitoring: 启用集群监控
-    enableNetworkPolicy: 启用网络策略
+    dockerRootDir: Docker 根目錄
+    enableClusterAlerting: 啟用集群告警
+    enableClusterMonitoring: 啟用集群監控
+    enableNetworkPolicy: 啟用網絡策略
     fqdn: FQDN
     ignoreDockerVersion: 忽略 Docker 版本
     ingress: Ingress
     kubernetesVersion: Kubernetes 版本
-    localClusterAuthEndpoint: 启用本地集群 Auth 端点
-    monitoring: 监控配置
-    network: 网络配置
-    prefixPath: Prefix Path
-    privateRegistries: 私有镜像库配置
-    restore: 集群恢复
-    rotateCertificates: 轮换证书
+    localClusterAuthEndpoint: 啟用本地集群 Auth 端點
+    monitoring: 監控配置
+    network: 網絡配置
+    prefixPath: 路徑前綴
+    privateRegistries: 私有鏡像庫配置
+    restore: 集群恢復
+    rotateCertificates: 輪換證書
     services: Services
-    sshAgentAuth: 启用 SSH 代理认证
-    sshCertPath: SSH 证书路径
-    sshKeyPath: SH 密钥路径
+    sshAgentAuth: 啟用 SSH 代理認證
+    sshCertPath: SSH 證書路徑
+    sshKeyPath: SH 密鑰路徑
   table:
-    answer: 默认值
-    noData: 没有默认参数
-    noMatch: 没有默认参数匹配当前搜索
-    question: 参数
-    required: 必须
-    type: 类型
+    answer: 默認值
+    noData: 沒有默認參數
+    noMatch: 沒有默認參數匹配當前搜索
+    question: 參數
+    required: 必須
+    type: 類型
 clustersPage:
   cluster:
     label: 集群名稱
-  clusterLaunchDisabled: 没有授予您访问集群模板的权限。
+  clusterLaunchDisabled: 沒有授予您訪問集群模板的權限。
   cpu:
     label: 處理器
   editClusterName: "編輯集群: {name}"
@@ -69,13 +69,13 @@ clustersPage:
   kubernetesVersion:
     label: Kubernetes 版本
   launch:
-    import: 导入集群
-    importEks: Import Amazon EKS
+    import: 導入集群
+    importEks: 導入 Amazon EKS
     new: 添加集群
-    register: 注册集群
+    register: 註冊集群
   memory:
     label: 內存
-  metricsHeader: 指标
+  metricsHeader: 指標
   newCluster: 添加集群
   newClusterName: "添加集群: {name}"
   newTemplate: 添加模板
@@ -89,13 +89,13 @@ clustersPage:
     label: RKE 模板
   select:
     provider:
-      label: 添加集群——选择集群类型
+      label: 添加集群——選擇集群類型
     template:
-      label: 添加集群-选择集群模板
+      label: 添加集群-選擇集群模板
   storage:
     label: 磁盤
   templateRevision:
-    label: 模板/修订
+    label: 模板/修訂
   version:
     label: kubernetes版本
 cruPersistentVolume:
@@ -109,7 +109,7 @@ cruPersistentVolume:
     readOnly:
       label: 只讀
     volumeID:
-      label: 卷ID
+      label: 卷 ID
       placeholder: "例如: volume1"
   azureDisk:
     cachingMode:
@@ -147,7 +147,7 @@ cruPersistentVolume:
       placeholder: "例如: abc"
   capacity:
     label: 容量
-    protip: 更新PV容量可能不会更新关联的PVC大小（无论是否被挂载）。卷扩展流程因storage class，PV Provisioner 以及是否有任何工作负载附加的PVC而有所不同。在更改卷容量之前，强烈建议您访问<a href='https://rancher.com/docs/rancher/v2.x/en/cluster-admin/volumes-and-storage/' target='_blank' rel='nofollow noreferrer'>Rancher 存储文档</a> 和 <a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/' target='_blank' rel='nofollow noreferrer'>Kubernetes 持久卷文档</a>
+    protip: 更新PV容量可能不會更新關聯的PVC大小（無論是否被掛載）。卷擴展流程因storage class，PV Provisioner 以及是否有任何工作負載附加的PVC而有所不同。在更改卷容量之前，強烈建議您訪問<a href='https://rancher.com/docs/rancher/v2.x/en/cluster-admin/volumes-and-storage/' target='_blank' rel='nofollow noreferrer'>Rancher 存儲文檔</a> 和 <a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/' target='_blank' rel='nofollow noreferrer'>Kubernetes 持久卷文檔</a>
     unit: GiB
   cephfs:
     monitors:
@@ -215,10 +215,10 @@ cruPersistentVolume:
         label: Controller Publish Secret Namespace
         placeholder: e.g. default
     driver:
-      label: 驱动
+      label: 驅動
       placeholder: "例如: driver.longhorn.io"
     fsType:
-      label: 文件系统
+      label: 文件系統
       placeholder: "例如: ext4"
     nodePublishSecretRef:
       name:
@@ -235,10 +235,10 @@ cruPersistentVolume:
         label: Node Stage Secret Namespace
         placeholder: e.g. default
     readOnly:
-      label: 只读
+      label: 只讀
     volumeAttributes:
-      addActionLabel: 添加卷属性
-      label: 卷属性
+      addActionLabel: 添加卷屬性
+      label: 卷屬性
     volumeHandle:
       label: Volume Handle
       placeholder: e.g. pvc-xxxx
@@ -514,12 +514,12 @@ cruPersistentVolume:
       label: 卷路徑
       placeholder: "例如: /"
 customDrivers:
-  clusters: 集群驱动
-  nodes: 主机驱动
+  clusters: 集群驅動
+  nodes: 主机驅動
 editStack:
   autoInject:
-    label: Istio sidecar 自动注入。
-    warning: 命名空间中的现有工作负载都需要重新部署，以利用 sidecar 自动注入。
+    label: Istio sidecar 自動注入。
+    warning: 命名空間中的現有工作負載都需要重新部署，以利用 sidecar 自動注入。
   description:
     label: 描述
     placeholder: "例如: MyApp命名空間"
@@ -543,10 +543,10 @@ envCatalog:
   header: 管理應用商店
   subtext: "可以在這裡定義自定義的應用商店源，該應用商店僅對當前環境的用戶可見。全局應用商店對所有環境可見，僅能由管理員在管理設置中修改。應用商店需要一個唯一的名稱並且支持<code>git clone</code>的URL地址(參考 <a href=\"https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">文檔</a>以獲取更多信息)"
 f5CtlPage:
-  addCtl: 添加 F5 负载均衡
+  addCtl: 添加 F5 負載均衡
   form:
     domain:
-      label: 主机域名
+      label: 主機域名
       placeholder: "例如: example.com"
     http:
       label: Http 端口
@@ -555,19 +555,19 @@ f5CtlPage:
       label: Https 端口
       placeholder: "例如: 443"
     interval:
-      label: 间隔时间
+      label: 間隔時間
       placeholder: "例如: 20"
     mode: 模式
     monitor:
       disable: 禁用
-      enable: 启用
-      label: 启用监控
-    monitorType: 类型
+      enable: 啟用
+      label: 啟用監控
+    monitorType: 類型
     name:
-      label: 名称
+      label: 名稱
       placeholder: "例如: F5 Ingress Name"
     path:
-      label: 访问路径
+      label: 訪問路徑
     port:
       label: 端口
       placeholder: "例如: 8080"
@@ -581,21 +581,21 @@ f5CtlPage:
       label: Rewrite APP Root
       placeholder: "例如: /foo"
     send:
-      label: 发送
+      label: 發送
       placeholder: "例如: GET /"
     snat:
       label: SNAT
       placeholder: ""
     timeout:
-      label: 延迟时间
+      label: 延遲時間
       placeholder: "例如: 20"
     tls:
       label: TLS Profile
-      placeholder: 请选择
+      placeholder: 請選擇
     type:
-      label: F5负载均衡类型
-      transport: 4层负载均衡(TransportServer)
-      virtual: 7层负载均衡(VirtualServer)
+      label: F5 負載均衡類型
+      transport: 4層負載均衡(TransportServer)
+      virtual: 7層負載均衡(VirtualServer)
     url:
       label: 地址
       placeholder: "例如: 8.8.8.8"
@@ -603,30 +603,30 @@ f5CtlPage:
       label: WAF
       placeholder: ""
   globalDnsModel:
-    description: 保存成功后会添加 annotation <code>rancher.io/globalDNS.hostname='hostname'</code>（清空会删除这条 annotation )。
+    description: 保存成功後會添加 annotation <code>rancher.io/globalDNS.hostname='hostname'</code>（清空時會刪除這條 annotation )。
     label: 域名
     placeholder: e.g. VirtualServer host
   header:
-    edit: 编辑F5负载均衡
-    new: 添加F5负载均衡
-    view: "F5负载均衡: {name}"
-  notEnabled: F5 负载均衡服务尚未启用。点击 <a href="/c/{clusterId}/cis/f5">此处</a> 启用它。
+    edit: 編輯 F5 負載均衡
+    new: 添加 F5 負載均衡
+    view: "F5 負載均衡: {name}"
+  notEnabled: F5 負載均衡服務尚未啟用。點擊 <a href="/c/{clusterId}/cis/f5">此處</a> 啟用。
   table:
-    noData: 没有配置F5负载均衡
+    noData: 沒有配置 F5 負載均衡
   validation:
     path:
-      duplicated: 规则中的访问路径必须唯一
-      relative: "规则[{index}]: \"访问路径必须是绝对路径\""
-      relativeInPool: 访问路径必须是绝对路径
-    pool: "规则[{index}]: \"{key}\" 必须设置"
-    waf: "\"WAF\" 必须以 / 开始"
+      duplicated: 規則中的訪問路徑必須唯一
+      relative: "規則[{index}]: \"訪問路徑必須是絕對路徑\""
+      relativeInPool: 訪問路徑必須是絕對路徑
+    pool: "規則[{index}]: \"{key}\" 必須設置"
+    waf: "\"WAF\" 必須以 / 開始"
 formContainerLog:
-  detail: 配置容器日志
+  detail: 配置容器日誌
   excludeContainer:
-    "false": 启用
-    label: 采集容器标准输出日志
+    "false": 啟用
+    label: 採用容器標準輸出日誌
     "true": 禁用
-  title: 容器日志
+  title: 容器日誌
 formSslTermination:
   addAlternate: 添加備選證書
   addCertLabel: 添加證書
@@ -675,60 +675,60 @@ formSupplementalGroupsPodSecurityPolicy:
 globalDnsPage:
   entriesPage:
     access:
-      noAccessAddProvider: 您没有权限添加供应商
-      noAccessMulti: 您无法访问目标应用程序
-      noAccessProject: 您无法访问目标项目
-      noAccessProvider: 您没有权限访问此供应商
+      noAccessAddProvider: 您沒有權限添加供應商
+      noAccessMulti: 您無法訪問目標應用程序
+      noAccessProject: 您無法訪問目標項目
+      noAccessProvider: 您沒有權限訪問此供應商
     config:
       configType: 解析到
-      detail: 提供配置细节以添加新的全局 DNS 条目
+      detail: 提供配置細節以添加新的全局 DNS 條目
       fqdn:
         label: FQDN (域名)
         placeholder: dev.example.com
-      multi: 多集群应用
+      multi: 多集群應用
       multiCluster:
         add:
-          label: 添加目标
-        label: 目标应用
-        placeholder: 没有选择多集群应用
-      project: 项目
+          label: 添加目標
+        label: 目標應用
+        placeholder: 沒有選擇多集群應用
+      project: 項目
       projects:
-        label: 目标项目
+        label: 目標項目
       provider:
         label: 提供商
-        placeholder: 选择提供商
-      title: 配置 DNS 条目
+        placeholder: 選擇提供商
+      title: 配置 DNS 條目
       ttl:
-        label: DNS TTL(DNS 解析记录缓存有效期，阿里云 DNS TTL 最少 600)
+        label: DNS TTL(DNS 解析紀錄緩存有效期，阿里雲 DNS TTL 最少 600)
     header:
-      edit: 编辑全局 DNS 记录
-      new: 添加全局 DNS 记录
-    istioHelp: 要使模板在流量规则商店中可见，必须在应用商店模板<code>questions.yaml</code>文件中添加标签( <code>io.rancher.istio=true</code> )
+      edit: 編輯全局 DNS 紀錄
+      new: 添加全局 DNS 紀錄
+    istioHelp: 要使模板在流量規則商店中可見，必須在應用商店模板<code>questions.yaml</code>文件中添加標籤( <code>io.rancher.istio=true</code> )
     options:
-      detail: 自定义 DNS 记录选项
-      title: 配置选项
-    projectF5bigipHelp: 您选择的是 F5bigip 的供应商，F5bigip 负载均衡是由自定义 CRD VirtualServer 来完成，要完成项目的全局 DNS 记录设置，必须在应用或项目的 VirtualServer 规则中添加注释(<code>rancher.io/globalDNS.hostname='hostname'</code>)，其中<code>'hostname'</code>是路由规则中使用的主机名，这个<code>'hostname'</code>也必须匹配这个全局 DNS 条目的 FQDN。
-    projectHelp: 要完成项目的全局 DNS 记录设置，必须在应用或项目的 ingress 规则中添加注释(<code>rancher.io/globalDNS.hostname='hostname'</code>)，其中<code>'hostname'</code>是路由规则中使用的主机名，这个<code>'hostname'</code>也必须匹配这个全局 DNS 条目的 FQDN。
+      detail: 自定義 DNS 紀錄選項
+      title: 配置選項
+    projectF5bigipHelp: 您選擇的是 F5bigip 的供應商，F5bigip 負載均衡是由 CRD VirtualServer 來完成，要完成項目的全局 DNS 紀錄設置，必須在應用或項目的 VirtualServer 規則中添加注釋(<code>rancher.io/globalDNS.hostname='hostname'</code>)，其中<code>'hostname'</code>是路由規則中使用的主機名，这个<code>'hostname'</code>也必須匹配這個全局 DNS 條目的 FQDN。
+    projectHelp: 要完成項目的全局 DNS 紀錄設置，必須在應用或項目的 ingress 規則中添加注釋(<code>rancher.io/globalDNS.hostname='hostname'</code>)，其中<code>'hostname'</code>是路由規則中使用的主機名，這個<code>'hostname'</code>也必須匹配這個全局 DNS 條目的 FQDN。
     table:
       fqdn: FQDN (域名)
-      name: 名称
+      name: 名稱
       provider: 提供商 ID
-      target: 目标
-  header: 全局 DNS 记录列表
-  newDns: 添加 DNS 记录
+      target: 目標
+  header: 全局 DNS 紀錄列表
+  newDns: 添加 DNS 紀錄
   newProvider: 添加 DNS 提供商
-  noApps: 没有可访问的多集群应用
-  noDnsData: 当前没有全局 DNS 条目。
-  noDnsMatch: 没有 DNS 条目匹配当前搜索。
-  noDnsProviderData: 当前没有全局 DNS 提供商。
-  noDnsProviderMatch: 没有 DNS 提供商匹配当前搜索。
-  noProjects: 没有要选择的项目
-  noProviders: 没有选择 DNS 提供商
+  noApps: 沒有可訪問的多集群應用
+  noDnsData: 當前沒有全局 DNS 條目。
+  noDnsMatch: 沒有 DNS 條目匹配當前的搜索。
+  noDnsProviderData: 當前沒有全局 DNS 提供商。
+  noDnsProviderMatch: 沒有 DNS 提供商匹配當前搜索。
+  noProjects: 沒有要選擇的項目
+  noProviders: 沒有選擇 DNS 提供商
   providersPage:
     additionalOptions:
-      button: 添加设置
-      detail: 为 UI 中不可用的提供程序配置添加额外选项。
-      title: 附加选项
+      button: 添加設置
+      detail: 為 UI 中不可用的提供程序配置添加額外選項。
+      title: 附加選項
     config:
       accessKey:
         label: Access Key
@@ -741,21 +741,21 @@ globalDnsPage:
         placeholder: Your API Key
       bigip:
         addDeviceIP: 添加 Device IP
-        datacenterDescription: Datacenter F5文档链接
-        deviceIPDescription: Device IP F5文档链接
-        deviceNameDescription: Device Name F5文档链接
-        deviceTranslationDescription: Device Translation F5文档链接
-        serverDescription: Server F5文档链接
+        datacenterDescription: Datacenter F5 文檔鏈接
+        deviceIPDescription: Device IP F5 文檔鏈接
+        deviceNameDescription: Device Name F5 文檔鏈接
+        deviceTranslationDescription: Device Translation F5 文檔鏈接
+        serverDescription: Server F5 文檔鏈接
         validation:
-          deviceIPFormatError: Device IP 格式错误
-          deviceIPMustUnique: Device IP 必须唯一
-          mustHasDeviceIP: Device IP/Device Name 不能为空
-          translationFormatError: Device Translation 格式错误
+          deviceIPFormatError: Device IP 格式錯誤
+          deviceIPMustUnique: Device IP 必須唯一
+          mustHasDeviceIP: Device IP/Device Name 不能為空
+          translationFormatError: Device Translation 各式錯誤
       credentialsPath:
-        label: SSH 证书路径
+        label: SSH 證書路徑
         placeholder: /.aws
       proxySetting:
-        label: 代理设置
+        label: 代理設置
       region:
         label: Region
         placeholder: us-west-2
@@ -766,33 +766,33 @@ globalDnsPage:
         label: 根域名
         placeholder: 根域名
       secretKey:
-        info: 密钥已经提供, 只有在更新密钥本身时才需要它。
+        info: 密鑰已經提供, 只有在更新密鑰本身時才需要它。
         label: Secret Key
         placeholder: Your secret key
       zone:
         label: Zone
         placeholder: public
     header:
-      edit: 编辑全局 DNS 提供商
+      edit: 編輯全局 DNS 提供商
       new: 添加全局 DNS 提供商
     members:
-      detail: 控制谁有权访问资源
-      title: 成员访问
+      detail: 控制誰有權限訪問資源
+      title: 成員訪問
     options:
-      detail: 自定义 DNS 提供商设置
-      title: DNS 提供商设置
+      detail: 自定義 DNS 提供商設置
+      title: DNS 提供商設置
     table:
-      name: 名称
-      provider: 提供商名称
+      name: 名稱
+      provider: 提供商名稱
       rootDomain: 根域名
     title: 全局 DNS 提供商列表
 globalRegistryPage:
   command:
-    detail: 用于镜像库的 Docker 命令
-    dockerLogin: 登录到镜像库
-    dockerPull: 从镜像库中提取图像
-    dockerPush: 推送镜像到镜像库
-    dockerTag: 重命名镜像库镜像
+    detail: 用於鏡像庫的 Docker 命令
+    dockerLogin: 登錄到鏡像庫
+    dockerPull: 從鏡像庫中拉取鏡像
+    dockerPush: 推送鏡像到鏡像庫
+    dockerTag: 重命名鏡像庫鏡像
     title: Docker 命令
   config:
     clairEnabled:
@@ -817,7 +817,7 @@ globalRegistryPage:
           label: Notary Signer Database
           placeholder: "例如: notary_signer"
         password:
-          label: PostgreSQL 密码
+          label: PostgreSQL 密碼
           placeholder: "例如: password"
         port:
           label: PostgreSQL 端口
@@ -825,7 +825,7 @@ globalRegistryPage:
         sslmode:
           label: SSL Mode for PostgreSQL
         username:
-          label: PostgreSQL 用户名
+          label: PostgreSQL 用戶名
           placeholder: "例如: user"
     databaseLimitCpu:
       label: Database CPU 限制
@@ -834,15 +834,15 @@ globalRegistryPage:
       label: Database Memory 限制
       placeholder: "例如: 1000"
     databaseRequestCpu:
-      label: Database CPU 预留
+      label: Database CPU 預留
       placeholder: "例如: 1000"
     databaseRequestMemory:
-      label: Database Memory 预留
+      label: Database Memory 預留
       placeholder: "例如: 1000"
     databaseType:
-      label: 配置数据库类型
+      label: 配置數據庫類型
     exposeIngressHost:
-      error: "\"{hostName}\" 是一个主机名，需要使用类似 expose.ingress.host 这样的域名。"
+      error: "\"{hostName}\" 是一個主機名，需要使用類似 expose.ingress.host 這樣的域名。"
     header:
       clair: Clair
       notary: Notary
@@ -859,14 +859,14 @@ globalRegistryPage:
           label: Core Database Index
           placeholder: "例如: 0"
         host:
-          label: Redis 主机
+          label: Redis 主機
           placeholder: "例如: 192.168.0.2"
         jobserviceDatabaseIndex:
           label: Jobservice Database Index
           placeholder: "例如: 1"
         password:
-          label: Redis 密码
-          placeholder: redis 密码
+          label: Redis 密碼
+          placeholder: redis 密碼
         port:
           label: Redis 端口
           placeholder: "例如: 6379"
@@ -880,16 +880,16 @@ globalRegistryPage:
       label: Redis Memory 限制
       placeholder: "例如: 1000"
     redisRequestCpu:
-      label: Redis CPU 预留
+      label: Redis CPU 預留
       placeholder: "例如: 1000"
     redisRequestMemory:
-      label: Redis Memory 预留
+      label: Redis Memory 預留
       placeholder: "例如: 1000"
     redisType:
-      label: 配置 Redis 类型
+      label: 配置 Redis 類型
     registryExistingClaim:
-      label: 现有 PVC
-      prompt: 选择现有 PVC...
+      label: 現有 PVC
+      prompt: 選擇現有 PVC...
     registryPVSize:
       label: 持久卷大小
     s3:
@@ -909,51 +909,51 @@ globalRegistryPage:
         label: S3 Secret Key
         placeholder: Your S3 Secret Key
     secretKey:
-      description: 用于加密的密钥，必须是 16 位字符串。
-      error: "\"Harbor 加密密钥\" 必须是 16 位字符串。"
+      description: 用於加密的密鑰，必須是 16 位字符串。
+      error: "\"Harbor 加密密鑰\" 必須是 16 位字符串。"
       label: Encryption Key For Harbor
     source:
-      pvc: 使用现有的 PVC
+      pvc: 使用現有的 PVC
     storageClass:
-      emptyError: 在 local 集群中至少需要一个默认存储类
-      sizeRequired: "\"{component} 持久卷大小需要设置"
+      emptyError: 在 local 集群中至少需要一個默認存儲類
+      sizeRequired: "\"{component} 持久卷大小需要設置"
     storageType:
-      label: 存储后端类型
-  confirmDisable: 再次单击将禁用全局镜像库
-  disable: 禁用镜像库
-  disabled: 镜像库尚未启用。
-  enableActionLabel: 启用
-  enabled: 镜像库已启用。点击 <a href="{url}/registry" target="_blank" rel="nofollow noopener noreferrer">此处</a> 将在新页面中打开 Harbor UI。
+      label: 存儲後端類型
+  confirmDisable: 再次點擊將禁用全局鏡像庫
+  disable: 禁用鏡像庫
+  disabled: 鏡像庫尚未啟用。
+  enableActionLabel: 啟用
+  enabled: 鏡像庫已啟用。點擊 <a href="{url}/registry" target="_blank" rel="nofollow noopener noreferrer">此處</a> 將在新頁面中打開 Harbor UI。
   globalRegistryEnabled:
-    error: 保存 global-registry-enabled 错误
-  header: 全局镜像库
+    error: 保存 global-registry-enabled 錯誤
+  header: 全局鏡像庫
   insufficientSize:
     selectors:
-      all: 请确保至少有一个节点与 {cpu} milli CPUs 和 {memory} MiB 内存匹配，以启用 {component} 工作负载。
-      cpu: 请确保至少有一个节点将节点选择器与 {cpu} milli CPUs 匹配，以启用 {component} 工作负载。
-      memory: 请确保至少有一个节点将节点选择器与 {memory} MiB 内存匹配，以启用 {component} 工作负载。
+      all: 請確保至少有一個節點與 {cpu} milli CPUs 和 {memory} MiB 內存匹配，以啟用 {component} 工作負載。
+      cpu: 請確保至少有一個節點將節點選擇器與 {cpu} milli CPUs 匹配，以啟用 {component} 工作負載。
+      memory: 請確保至少有一個節點將點選擇器與 {memory} MiB 內存匹配，以啟用 {component} 工作負載。
     total:
-      all: 请确保至少有 {minCpu} milli CPUs 和 {minMemory} MiB 内存可供 {action} registry 使用。
-      cpu: 请确保至少有 {minCpu} milli CPUs 供 {action} registry 使用。
-      memory: 请确保至少有 {minMemory} MiB 的内存供 {action} registry 使用。
+      all: 請確保至少有 {minCpu} milli CPUs 和 {minMemory} MiB 內存可供 {action} registry 使用。
+      cpu: 請確保至少有 {minCpu} milli CPUs 供 {action} registry 使用。
+      memory: 請確保至少有 {minMemory} MiB 的內存供 {action} registry 使用。
     workload:
-      all: 请确保至少有一个节点具有 {cpu} milli CPUs 和 {memory} MiB 内存用来启用 {component} 工作负载。
-      cpu: 请确保至少有一个具有 {cpu} milli CPUs 的节点来启用 {component} 工作负载。
-      memory: 请确保至少有一个具有 {memory} MiB 内存的节点来启用 {component} 工作负载。
+      all: 請確保至少有一個節點具有 {cpu} milli CPUs 和 {memory} MiB 內存用來啟用 {component} 工作負載。
+      cpu: 請確保至少有一个具有 {cpu} milli CPUs 的節點來啟用 {component} 工作負載。
+      memory: 請確保至少有一个具有 {memory} MiB 內存的節點來啟用 {component} 工作負載。
   nodeSelector:
-    addSelectorLabel: 添加选择器
-    helpText: 选择要运行 {component} 工作负载的节点。
-  notReady: 在 local 集群的系统项目中安装镜像库…
+    addSelectorLabel: 添加選擇器
+    helpText: 選擇要運行 {component} 工作負載的節點。
+  notReady: 在 local 集群的系統項目中安裝鏡像庫…
   notaryAndSigner: Notary server and Notary signer。
   setting:
     adminPassword:
-      helpText: 如果您使用具有初始化端口数据的现有 PVC，密码将不会生效。
-      label: 管理员密码
-      placeholder: Harbor 管理员密码
+      helpText: 如果您使用具有初始化端口數據的現有 PVC，密碼將不會生效。
+      label: 管理員密碼
+      placeholder: Harbor 管理員密碼
 growl:
   autoLogout:
-    message: 您在最近{autoLogoutTime}分钟内没有操作，因此我们将自动注销
-    title: 自动注销
+    message: 您在最近{autoLogoutTime}分鐘內沒有操作，因此我們將自動註銷
+    title: 自動註銷
   dismiss: 禁止所有通知
   webSocket:
     connecting:
@@ -967,48 +967,48 @@ hostPod:
     stack: "應用:"
     standalone: 獨立容器
   supportState:
-    unsupported: 不支持的Docker版本
-    untested: 未測試的Docker版本
+    unsupported: 不支持的 Docker 版本
+    untested: 未測試的 Docker 版本
 ingressResponse:
-  detail: upstream 响应时长（排序前十位）
-  host: 主机
-  noData: 没有数据
-  noMatch: 没有记录匹配当前搜索
-  path: 路径
-  responseTime: 响应时间
-  title: Ingress Upstream 响应时长
+  detail: upstream 響應時長（排序前十位）
+  host: 主機
+  noData: 沒有數據
+  noMatch: 沒有紀錄匹配當前搜索
+  path: 路徑
+  responseTime: 響應時間
+  title: Ingress Upstream 響應時長
 istio:
   kiali: 由 Kiali 提供支持
   nav:
     destinationRules:
-      add: 添加目标规则
-      label: 目标规则
+      add: 添加目標規則
+      label: 目標規則
     gateways:
-      add: 添加网关
-      label: 网关
-    graph: 流量图
-    metrics: 流量指标
-    rules: 流量规则
+      add: 添加網關
+      label: 網關
+    graph: 流量圖
+    metrics: 流量指標
+    rules: 流量規則
     virtualServices:
-      add: 添加虚拟服务
-      label: 虚拟服务
-  noData: 没有足够的数据来绘制图表
+      add: 添加虛擬服務
+      label: 虛擬服務
+  noData: 沒有足夠的數據來繪製圖表
   period: Period
-  refreshGraph: 刷新视图
+  refreshGraph: 刷新視圖
   table:
     host: Host
     template: 模板
   trafficMonitoring:
     duration: Last {time}
 loginGoogle:
-  buttonText: 用 Google 登录
+  buttonText: 用 Google 登錄
 loginPage:
   error:
-    authFailed: "登錄失敗: 帳戶可能無權登錄"
-    authFailedCreds: "登錄失敗: 檢查憑據，或者帳戶可能無權登錄"
-    invalidSamlAttrs: 无效的 saml 属性
-    noResponse: 没有响应
-    unknown: 尝试登录时发生未知错误，请与系统管理员联系。
+    authFailed: "登入失敗: 帳戶可能無權登錄"
+    authFailedCreds: "登入失敗: 檢查憑據，或者帳戶可能無權登錄"
+    invalidSamlAttrs: 無效的 saml 屬性
+    noResponse: 沒有響應
+    unknown: 嘗試登錄時發生未知錯誤，請與系統管理員聯繫。
   githubMessage: "{appName}使用GitHub管理賬號和團隊。點擊以下按鈕以登錄，我們將僅使用基本的GitHub賬號信息。"
   greeting: 您好！<br>歡迎使用{appName}
   insecure: "{appName}僅支持<code>https://</code>連接，您必須:<br><br>使用服務器內置的TLS支持,或者<br><br>在容器前面提供自己的TLS終端。"
@@ -1048,130 +1048,130 @@ modalEditDriver:
     label: 域名白名單
     noData: 沒有域名
 modalRotateCertificates:
-  caCerts: 更新集群 CA 证书和所有服务证书
-  dropdownLabel: 服务
+  caCerts: 更新集群 CA 證書和所有服務證書
+  dropdownLabel: 服務
   expiring:
     from: "{ cert } (expired { expiresIn })"
     until: "{ cert } (expires { expiresIn })"
   select:
-    all: 选择服务...
-  services: 更新所有服务证书(CA 证书不变)
-  servicesCa: 更新所有服务证书(CA 证书不变)
-  single: 更新单个服务(CA 证书不变)
-  title: 更新集群证书
+    all: 選擇服務...
+  services: 更新所有服務證書(CA 證書不變)
+  servicesCa: 更新所有服務證書(CA 證書不變)
+  single: 更新單個服務(CA 證書不變)
+  title: 更新集群證書
 newMultiClusterApp:
   access:
-    noAccessLink: 您无法访问目标项目
+    noAccessLink: 您無法訪問目標項目
   answers:
-    addAction: 添加应答
-    label: 应答
-  appInfo: 详细描述
-  appInfoDetail: 应用程序信息和用户指南。
-  catalog: "应用商店: "
-  category: "类型:"
-  config: 配置选项
-  customizeNamespace: 此应用程序将部署到 <code>{namespaceId}</code> 命名空间中。
+    addAction: 添加應答
+    label: 應答
+  appInfo: 詳細描述
+  appInfoDetail: 應用程序信息和用戶指南。
+  catalog: "應用商店: "
+  category: "類型:"
+  config: 配置選項
+  customizeNamespace: 此應用程序將部署到 <code>{namespaceId}</code> 命名空間中。
   helm:
-    label: 配置选项
-    protip: Helm 模板接受逗号分隔的字符串列表。
-  kind: "商店类型:"
-  license: "许可:"
-  maintainedBy: 由社区成员维护
-  maintainer: "维护人员:"
+    label: 配置選項
+    protip: Helm 模板接受逗號分隔的字符串列表。
+  kind: "商店類型:"
+  license: "許可:"
+  maintainedBy: 由社區成員維護
+  maintainer: "維護人員:"
   members:
-    detail: 选择可以查看此应用程序的成员
+    detail: 選擇可以查看此應用程序的成員
     table:
-      accessType: 访问类型
-      name: 名称
-      noData: 目前还没有成员
-      noMatch: 没有成员匹配当前搜索
-      prompt: 选择值…
-      type: 成员类型
-    title: 成员
-  newAppDetail: 为应用程序选择应用程序版本和名称空间。
-  newNamespace: 新的命名空间
-  noConfig: 此模板没有配置选项。
-  official: 官方认证
+      accessType: 訪問類型
+      name: 名稱
+      noData: 目前還沒有成員
+      noMatch: 沒有成員匹配當前搜索
+      prompt: 選擇值…
+      type: 成員類型
+    title: 成員
+  newAppDetail: 為應用程序選擇應用程序版本和命名空間。
+  newNamespace: 新的命名空間
+  noConfig: 此模板沒有配置選項。
+  official: 官方認證
   overrides:
     add:
-      label: 添加应答参数
+      label: 添加應答參數
     answerOverride:
-      placeholder: 问题需求
-    detail: 在每个集群/项目的基础上覆盖单个应答参数。
+      placeholder: 問題需求
+    detail: 在每個集群/項目的基礎上覆蓋單個應答參數。
     dropdown:
-      allProjects: 集群 {clusterName} 中的所有项目。
+      allProjects: 集群 {clusterName} 中的所有項目。
       clusterGroup: "集群: {clusterName}"
-    label: 应答参数
+    label: 應答參數
     questionOverride:
-      placeholder: 选择问题
+      placeholder: 選擇問題
     scopeOverride:
-      placeholder: 选择区域
+      placeholder: 選擇區域
     table:
       answer: 回答
-      noData: 当前没有应答参数
-      noMatch: 没有应答参数匹配当前搜索
-      question: 问题
-      scope: 区域
-  preview: 预览
+      noData: 當前沒有應答參數
+      noMatch: 沒有應答參數匹配當前搜索
+      question: 問題
+      scope: 區域
+  preview: 預覽
   roles:
-    additionalRoles: 现有的角色
-    detail: 选择查看此应用程序所需的角色
-    help: "注意: 这可能不是完整的角色列表。该列表仅限于用户可用的角色。如果您缺少所需的角色，请询问您的系统管理员。"
+    additionalRoles: 現有的角色
+    detail: 選擇查看此應用程序所需的角色
+    help: "注意: 這可能不是完整的角色列表。該列表僅限於用戶可用的角色。如果您缺少所需的角色，請詢問您的系統管理員。"
     label: 可用的角色
-    noRoles: 您不能添加新角色，因为您没有任何可用的角色。请联系系统管理员获得角色访问权。
+    noRoles: 您不能添加新角色，因為您沒有任何可用的角色。請聯繫系統管理員獲得角色訪問權。
     radios:
-      cluster: 集群 - 该应用程序将能够访问和管理部署在集群中的所有资源。
-      project: 项目 - 该应用程序将能够访问和管理它所部署的项目中的资源。
+      cluster: 集群 - 該應用程序將能夠訪問和管理部署在集群中的所有資源。
+      project: 項目 - 該應用程序將能夠訪問和管理它所部署的項目中的資源。
     table:
-      builtIn: 内置
-      external: 扩展
-      name: 名称
-      noData: 当前没有角色
-      noMatch: 没有角色匹配当前搜索
-      prompt: 选择角色...
+      builtIn: 內置
+      external: 擴展
+      name: 名稱
+      noData: 當前沒有角色
+      noMatch: 沒有角色匹配當前搜索
+      prompt: 選擇角色...
       role: 角色
     title: 角色
   rolesDivider:
     label: 角色
   saveConfigure: 配置
-  saveNew: 执行
-  saveUpgrade: 升级
+  saveNew: 執行
+  saveUpgrade: 升級
   seeMore: 更多信息...
-  selectVersionAdd: 选择要部署的模板的版本。
-  selectVersionConfigure: 选择要配置的模板的版本。
-  selectVersionUpgrade: 选择要升级到的模板版本。
-  startService: 创建后启动服务
+  selectVersionAdd: 選擇要部署的模板的版本。
+  selectVersionConfigure: 選擇要配置的模板的版本。
+  selectVersionUpgrade: 選擇要升級到的模板版本。
+  startService: 創建後啟動服務
   support: "支持: "
   targetDivider:
-    label: 目标驱动
+    label: 目標驅動
   targets:
-    add: 添加目标
+    add: 添加目標
     cluster: 集群
-    label: 目标项目
-    noData: 当前没有目标
-    project: 项目
-    prompt: 添加目标项目
-    target: 目标
+    label: 目標項目
+    noData: 當前沒有目標
+    project: 項目
+    prompt: 添加目標項目
+    target: 目標
   templateFiles: 模板文件
   templateVersion: 模板版本
   titleAdd: 添加 {name} App
   titleConfigure: 配置 {name} App
-  titleUpgrade: 升级 {name} App
+  titleUpgrade: 升級 {name} App
   txt: answers.txt
-  unknownType: "无法识别的问题类型: "
-  upgrade: "升级:"
+  unknownType: "無法識別的問題類型: "
+  upgrade: "升級:"
   upgradeApp:
     batch: 批量大小
-    disabled: 同时升级所有应用
-    enabled: 滚动更新(批量更新)
-    interval: 时间间隔
-    title: 升级策略
+    disabled: 同時升級所有應用
+    enabled: 滾動更新(批量更新)
+    interval: 時間間隔
+    title: 升級策略
   upgradeDivider:
     label: 更新
   url: "Project URL:"
   version:
-    default: 当时的默认值 (当前 {version})
-    prompt: 选择版本...
+    default: 當時的默認值 (當前 {version})
+    prompt: 選擇版本...
 newSecret:
   addActionLabel: 添加密文
   description:
@@ -1189,16 +1189,16 @@ podsSection:
   title: Pods
 ruleDetailPage:
   answers:
-    detail: 自定义流量规则应答
-    title: 应答
-    variable: 变量
-  header: "流量规则: {appName}"
+    detail: 自定義流量規則應答
+    title: 應答
+    variable: 變量
+  header: "流量規則: {appName}"
   rules:
-    destinationrules: 目标规则
+    destinationrules: 目標規則
     envoyfilters: Envoy Filters
-    gateways: 网关
-    serviceentries: 服务条目
-    virtualservices: 虚拟服务
+    gateways: 網關
+    serviceentries: 服務條目
+    virtualservices: 虛擬服務
 secretsPage:
   index:
     header: 密文

@@ -1,11 +1,11 @@
 backupsPage:
-  detail: 如果啟用etcd快照功能，將按預定必的時間間隔周期性地獲取的叢集快照，可用於叢集灾难恢復。
-  header: Etcd 快照
+  detail: 如果啟用etcd備份功能，將按預定必的時間間隔周期性地獲取的叢集快照，可用於叢集灾难恢復。
+  header: Etcd 備份
   table:
-    created: 創建时间
+    created: 創建時間
     name: 名稱
     noData: 當前没有Etcd快照
-    state: 状态
+    state: 狀態
     target:
       label: 目標
       local: Local
@@ -64,18 +64,18 @@ clustersPage:
   clusterLaunchDisabled: 沒有授予您訪問叢集模板的權限。
   cpu:
     label: 處理器
-  editClusterName: "升级叢集: {name}"
+  editClusterName: "升級叢集: {name}"
   header: 叢集列表
   kubernetesVersion:
     label: Kubernetes 版本
   launch:
-    import: 导入集群
-    importEks: Import Amazon EKS
+    import: 導入叢集
+    importEks: 導入 Amazon EKS
     new: 添加叢集
-    register: 注册集群
+    register: 註冊叢集
   memory:
     label: 記憶體
-  metricsHeader: 指标
+  metricsHeader: 指標
   newCluster: 添加叢集
   newClusterName: "添加叢集: {name}"
   newTemplate: 添加模板
@@ -147,7 +147,7 @@ cruPersistentVolume:
       placeholder: "例如: abc"
   capacity:
     label: 容量
-    protip: 更新PV容量可能不会更新关联的PVC大小（无论是否被挂载）。卷扩展流程因storage class，PV Provisioner 以及是否有任何工作负载附加的PVC而有所不同。在更改卷容量之前，强烈建议您访问<a href='https://rancher.com/docs/rancher/v2.x/en/cluster-admin/volumes-and-storage/' target='_blank' rel='nofollow noreferrer'>Rancher 存储文档</a> 和 <a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/' target='_blank' rel='nofollow noreferrer'>Kubernetes 持久卷文档</a>
+    protip: 更新PV容量可能不會更新關聯的PVC大小（無論是否被掛載）。卷擴展流程因storage class，PV Provisioner 以及是否有任何工作負載附加的PVC而有所不同。在更改卷容量之前，強烈建議您訪問<a href='https://rancher.com/docs/rancher/v2.x/en/cluster-admin/volumes-and-storage/' target='_blank' rel='nofollow noreferrer'>Rancher 存儲文檔</a> 和 <a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/' target='_blank' rel='nofollow noreferrer'>Kubernetes 持久卷文檔</a>
     unit: GiB
   cephfs:
     monitors:
@@ -518,8 +518,8 @@ customDrivers:
   nodes: 主機驅動
 editStack:
   autoInject:
-    label: Istio sidecar 自动注入。
-    warning: 命名空间中的现有工作负载都需要重新部署，以利用 sidecar 自动注入。
+    label: Istio sidecar 自動注入。
+    warning: 命名空間中的現有工作負載都需要重新部署，以利用 sidecar 自動注入。
   description:
     label: 描述
     placeholder: "例如: MyApp命名空間"
@@ -543,10 +543,10 @@ envCatalog:
   header: 管理應用商店
   subtext: "可以在這裡定義自定義的應用商店源，該應用商店僅對當前環境的用戶可見。全域應用商店對所有環境可見，僅能由管理員在管理設置中修改。應用商店需要一個唯一的名稱並且支持<code>git clone</code>的URL地址(參考 <a href=\"https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">文檔</a>以獲取更多資訊)"
 f5CtlPage:
-  addCtl: 添加 F5 负载均衡
+  addCtl: 添加 F5 負載均衡
   form:
     domain:
-      label: 主机域名
+      label: 主機域名
       placeholder: "例如: example.com"
     http:
       label: Http 端口
@@ -555,19 +555,19 @@ f5CtlPage:
       label: Https 端口
       placeholder: "例如: 443"
     interval:
-      label: 间隔时间
+      label: 間隔時間
       placeholder: "例如: 20"
     mode: 模式
     monitor:
       disable: 禁用
-      enable: 启用
-      label: 启用监控
-    monitorType: 类型
+      enable: 啟用
+      label: 啟用監控
+    monitorType: 類型
     name:
-      label: 名称
+      label: 名稱
       placeholder: "例如: F5 Ingress Name"
     path:
-      label: 访问路径
+      label: 訪問路徑
     port:
       label: 端口
       placeholder: "例如: 8080"
@@ -581,21 +581,21 @@ f5CtlPage:
       label: Rewrite APP Root
       placeholder: "例如: /foo"
     send:
-      label: 发送
+      label: 發送
       placeholder: "例如: GET /"
     snat:
       label: SNAT
       placeholder: ""
     timeout:
-      label: 延迟时间
+      label: 延遲時間
       placeholder: "例如: 20"
     tls:
       label: TLS Profile
-      placeholder: 请选择
+      placeholder: 請選擇
     type:
-      label: F5负载均衡类型
-      transport: 4层负载均衡(TransportServer)
-      virtual: 7层负载均衡(VirtualServer)
+      label: F5負載均衡類型
+      transport: 4層負載均衡(TransportServer)
+      virtual: 7層負載均衡(VirtualServer)
     url:
       label: 地址
       placeholder: "例如: 8.8.8.8"
@@ -603,30 +603,30 @@ f5CtlPage:
       label: WAF
       placeholder: ""
   globalDnsModel:
-    description: 保存成功后会添加 annotation <code>rancher.io/globalDNS.hostname='hostname'</code>（清空会删除这条 annotation )。
+    description: 保存成功後會添加 annotation <code>rancher.io/globalDNS.hostname='hostname'</code>（清空時會刪除這條 annotation )。
     label: 域名
     placeholder: e.g. VirtualServer host
   header:
-    edit: 编辑F5负载均衡
-    new: 添加F5负载均衡
-    view: "F5负载均衡: {name}"
-  notEnabled: F5 负载均衡服务尚未启用。点击 <a href="/c/{clusterId}/cis/f5">此处</a> 启用它。
+    edit: 編輯F5負載均衡
+    new: 添加F5負載均衡
+    view: "F5負載均衡: {name}"
+  notEnabled: F5 負載均衡服務尚未啟用。點擊 <a href="/c/{clusterId}/cis/f5">此處</a> 啟用它。
   table:
-    noData: 没有配置F5负载均衡
+    noData: 沒有配置F5負載均衡
   validation:
     path:
-      duplicated: 规则中的访问路径必须唯一
-      relative: "规则[{index}]: \"访问路径必须是绝对路径\""
-      relativeInPool: 访问路径必须是绝对路径
-    pool: "规则[{index}]: \"{key}\" 必须设置"
-    waf: "\"WAF\" 必须以 / 开始"
+      duplicated: 規則中的訪問路徑必須唯一
+      relative: "規則[{index}]: \"訪問路徑必須是絕對路徑\""
+      relativeInPool: 訪問路徑必須是絕對路徑
+    pool: "規則[{index}]: \"{key}\" 必須設置"
+    waf: "\"WAF\" 必須以 / 開始"
 formContainerLog:
-  detail: 配置容器日志
+  detail: 配置容器日誌
   excludeContainer:
-    "false": 启用
-    label: 采集容器标准输出日志
+    "false": 啟用
+    label: 採用容器標準輸出日誌
     "true": 禁用
-  title: 容器日志
+  title: 容器日誌
 formSslTermination:
   addAlternate: 新增備選證書
   addCertLabel: 新增證書
@@ -634,7 +634,7 @@ formSslTermination:
   alternateCertificate:
     prompt: 選擇一個證書...
   alternateCerts: 備選證書
-  certNotMatch: 检测到证书域名与规则域名不匹配，请确认选取的是否为有效证书
+  certNotMatch: 檢測到證書域名與規則域名不匹配，請確認是否選取了有效證書
   certificate: 證書
   custom:
     label: 選擇一個證書
@@ -681,7 +681,7 @@ globalDnsPage:
       noAccessProvider: 您没有全線訪問此供應商
     config:
       configType: 解析到
-      detail: 提供配置细节以添加新的全域DNS項目
+      detail: 提供配置細節以添加新的全域DNS項目
       fqdn:
         label: FQDN (域名)
         placeholder: "例如: dev.example.com"
@@ -706,8 +706,8 @@ globalDnsPage:
     istioHelp: 要使模板在流量規則商店中可見，必須在應用商店模板<code>questions.yaml</code>文件中添加標籤( <code>io.rancher.istio=true</code> )
     options:
       detail: 自定義DNS紀錄选項
-      title: 配置选项
-    projectF5bigipHelp: 您选择的是 F5bigip 的供应商，F5bigip 负载均衡是由自定义 CRD VirtualServer 来完成，要完成项目的全局 DNS 记录设置，必须在应用或项目的 VirtualServer 规则中添加注释(<code>rancher.io/globalDNS.hostname='hostname'</code>)，其中<code>'hostname'</code>是路由规则中使用的主机名，这个<code>'hostname'</code>也必须匹配这个全局 DNS 条目的 FQDN。
+      title: 配置選項
+    projectF5bigipHelp: 您選擇的是 F5bigip 的供應商，F5bigip 負載均衡是由自定義的 CRD VirtualServer 來完成，要完成項目的全域 DNS 紀錄設置，必須在應用或項目的 VirtualServer 規則中添加注釋(<code>rancher.io/globalDNS.hostname='hostname'</code>)，其中<code>'hostname'</code>是路由規則中使用的主機名，這個<code>'hostname'</code>也必須匹配這個全域 DNS 條目的 FQDN。
     projectHelp: 要完成項目的全域DNS紀錄設置，必須在應用或項目的ingress規則中添加註解(<code>rancher.io/globalDNS.hostname='hostname'</code>)，其中<code>'hostname'</code>是路由規則中使用註解机名，這個<code>'hostname'</code>也必須匹配這個全域DNS項目的FQDN。
     table:
       fqdn: FQDN (域名)
@@ -726,8 +726,8 @@ globalDnsPage:
   noProviders: 没有選擇DNS提供商
   providersPage:
     additionalOptions:
-      button: 添加设置
-      detail: 为 UI 中不可用的提供程序配置添加额外选项。
+      button: 添加設置
+      detail: 为 UI 中不可用的提供程序配置添加額外選項。
       title: 附加选项
     config:
       accessKey:
@@ -741,21 +741,21 @@ globalDnsPage:
         placeholder: Your API Key
       bigip:
         addDeviceIP: 添加 Device IP
-        datacenterDescription: Datacenter F5文档链接
-        deviceIPDescription: Device IP F5文档链接
-        deviceNameDescription: Device Name F5文档链接
-        deviceTranslationDescription: Device Translation F5文档链接
-        serverDescription: Server F5文档链接
+        datacenterDescription: Datacenter F5文檔鏈接
+        deviceIPDescription: Device IP F5文檔鏈接
+        deviceNameDescription: Device Name F5文檔鏈接
+        deviceTranslationDescription: Device Translation F5文檔鏈接
+        serverDescription: Server F5文檔鏈接
         validation:
-          deviceIPFormatError: Device IP 格式错误
-          deviceIPMustUnique: Device IP 必须唯一
-          mustHasDeviceIP: Device IP/Device Name 不能为空
-          translationFormatError: Device Translation 格式错误
+          deviceIPFormatError: Device IP 格式錯誤
+          deviceIPMustUnique: Device IP 必須唯一
+          mustHasDeviceIP: Device IP/Device Name 不能為空
+          translationFormatError: Device Translation 格式錯誤
       credentialsPath:
-        label: SSH 证书路径
+        label: SSH 證書路徑
         placeholder: /.aws
       proxySetting:
-        label: 代理设置
+        label: 代理設置
       region:
         label: Region
         placeholder: us-west-2
@@ -773,7 +773,7 @@ globalDnsPage:
         label: Zone
         placeholder: public
     header:
-      edit: 编辑全域DNS提供商
+      edit: 編輯全域DNS提供商
       new: 添加全域DNS提供商
     members:
       detail: 控制谁有权訪問资源
@@ -790,7 +790,7 @@ globalRegistryPage:
   command:
     detail: 用於鏡像庫的Docker命令
     dockerLogin: 登入到鏡像庫
-    dockerPull: 從鏡像庫中提取圖像
+    dockerPull: 從鏡像庫中提取鏡像
     dockerPush: 推送鏡像到鏡像庫
     dockerTag: 重命名鏡像庫鏡像
     title: Docker命令
@@ -952,8 +952,8 @@ globalRegistryPage:
       placeholder: Harbor管理員密碼
 growl:
   autoLogout:
-    message: 您在最近{autoLogoutTime}分钟内没有操作，因此我们将自动注销
-    title: 自动注销
+    message: 您在最近{autoLogoutTime}分鐘內沒有操作，因此我們將自動註銷
+    title: 自動註銷
   dismiss: 禁止所有通知
   webSocket:
     connecting:
