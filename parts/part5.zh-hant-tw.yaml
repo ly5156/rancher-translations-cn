@@ -124,33 +124,45 @@ authPage:
   cas:
     authenticated:
       disableAccess:
-        disable: 禁用 CAS 访问
+        disable: 禁用 CAS 訪問
     header:
       disabled:
-        label: CAS 没有配置
+        label: CAS 沒有配置
     notAuthenticated:
       form:
         callbackURL:
-          label: 服务回调地址
-          placeholder: CAS 服务回调地址
+          label: 服務回調地址
+          placeholder: CAS 服務回調地址
         connectionTimeout:
-          label: 服务连接超时时间
+          label: 服務連接超時時間
           placeholder: 例如：5000
-        header: 配置 Rancher 以使用 CAS 进行身份验证
+        header: 配置 Rancher 以使用 CAS 進行身份驗證
         hostUrl:
-          label: CAS 主机
+          label: CAS 主機
           placeholder: 例如：cas-server.com
+        loginEndpoint:
+          label: Login Endpoint
+          placeholder: e.g. /cas/login
+        logoutEndpoint:
+          label: Logout Endpoint
+          placeholder: e.g. /cas/logout
+        passwordField:
+          label: Password Field
+          placeholder: e.g. password
         port:
           label: 端口
           placeholder: 例如： 6379
+        usernameField:
+          label: User Name Field
+          placeholder: e.g. username
     testAuth:
-      authError: 未授权访问 CAS
+      authError: 未授權訪問 CAS
       buttonText:
-        post: 等待 CAS 响应
-        pre: 通过 CAS 验证配置
-      header: 测试并启用身份验证
-      popupError: 请禁用弹出窗口阻止程序，然后再次单击“验证”。
-      subtext: 通过测试应用程序的身份验证，来检查应用程序配置是否正确：
+        post: 等待 CAS 響應
+        pre: 通過 CAS 驗證配置
+      header: 測試並啟用身份驗證
+      popupError: 請禁用彈出窗口阻止程序，然後再次單擊“驗證”。
+      subtext: 通過測試應用程序的身份驗證，來檢查應用程序配置是否正確：
   form:
     enterprise:
       labelText: 使用私有{type}企業版部署
@@ -178,9 +190,9 @@ authPage:
     enterpriseAuth: "企业版GitHub: 通过企业版GitHub地址访问開登陆企业版GitHub，然后点击Settings，再点击Applications进行设置。"
     form:
       clientId:
-        labelText: 客户端ID
+        labelText: 客戶端ID
       clientSecret:
-        labelText: 客户端秘钥
+        labelText: 客戶端秘鑰
       subtextVariable: 将新創建应用的Client ID和Client Secret复制粘贴到对应的输入框中。
     header:
       disabled:
@@ -226,14 +238,14 @@ authPage:
       subtext: 測試以確認設定是否正確
     ul:
       li2:
-        text: "点击 \"注册新应用\" 開填写表单内容:"
+        text: "點擊 \"註冊新應用\" 開填寫表單內容:"
         ul:
-          li1: "<b>应用名稱: </b><span class=\"text-muted\">任意名稱，例如: My Pipeline。</span>"
-          li2: "主页URL: "
-          li3: "<b>应用描述: </b><span class=\"text-muted\">应用描述，可選。</span>"
-          li4: "授权回调URL: "
+          li1: "<b>應用名稱: </b><span class=\"text-muted\">任意名稱，例如: My Pipeline。</span>"
+          li2: "主頁URL: "
+          li3: "<b>應用描述: </b><span class=\"text-muted\">應用描述，可選。</span>"
+          li4: "授權回調URL: "
       li3:
-        text: 点击 注册应用
+        text: 點擊 註冊應用
   gitlab:
     auth: "標準GitLab: <a href=\"https://gitlab.com/profile/applications\" target=\"_blank\" rel=\"nofollow noreferrer\">點擊此處</a>訪問並登陸GitLab，在彈出的新窗口中進行應用設置。 "
     enterpriseAuth: "企業版GitLab: 通過企業版GitLab地址訪問並登陸GitLab，然後點擊Settings，再點擊Applications進行設置。"
@@ -676,9 +688,6 @@ cruStorageClass:
     adminId:
       label: 管理員帳號(ID)
       placeholder: "例如: kube"
-    adminSecret:
-      label: 管理密文
-      placeholder: "例如: secret"
     adminSecretName:
       label: 管理密文
       placeholder: "例如: secret"
@@ -786,11 +795,11 @@ cruStorageClass:
       label: 儲存策略名稱
       placeholder: "例如: gold"
 f5CISPage:
-  authError: local集群不支持F5 CIS 服务
-  confirmDisable: 你确定吗？再次点击将会禁用 F5 负载均衡服务。
+  authError: local集群不支持F5 CIS 服務
+  confirmDisable: 你確定嗎？再次點擊將會禁用 F5 負載均衡服務。
   disable: 禁用
-  disabled: F5 负载均衡服务在当前集群中尚未开启。
-  enableActionLabel: 启用
+  disabled: F5 負載均衡服務在當前集群中尚未開啟。
+  enableActionLabel: 啟用
   form:
     flannelName:
       label: Flannel Name
@@ -799,21 +808,21 @@ f5CISPage:
       label: BIG-IP Partition
       placeholder: "例如: Common"
     password:
-      label: BIG-IP 密码
-      placeholder: 密码
-    pool: Pool 成员类型
-    type: 集群网络
+      label: BIG-IP 密碼
+      placeholder: 密碼
+    pool: Pool 成員類型
+    type: 集群網絡
     url:
       label: BIG-IP URL
       placeholder: "例如: http://example.com"
     username:
-      label: BIG-IP 用户名
+      label: BIG-IP 用戶名
       placeholder: "例如: John"
-    version: F5 负载均衡服务组件版本
-  notReady: 未找到F5负载均衡服务Chart, 请确认系统<a href="/g/catalog">应用商店</a>配置是否正确。
-  title: F5 负载均衡服务
-  toUpdate: F5 负载均衡服务已启动。
-  warning: 请注意，当 Pool成员类型 选择 Cluster 时，每个集群需要使用独立的 F5 BIG IP，无法与其它集群共享 F5 BIG IP。
+    version: F5 負載均衡服務組件版本
+  notReady: 未找到F5負載均衡服務Chart, 請確認系統<a href="/g/catalog">應用商店</a>配置是否正確。
+  title: F5 負載均衡服務
+  toUpdate: F5 負載均衡服務已啟動。
+  warning: 請注意，當 Pool成員類型 選擇 Cluster 時，每個集群需要使用獨立的 F5 BIG IP，無法與其它集群共享 F5 BIG IP。
 formCommand:
   autoRestart:
     always: 總是
@@ -828,7 +837,7 @@ formCommand:
   console:
     both: 交互&amp;TTY終端<span class="text-muted">(-i -t)</span>
     interactive: 交互<span class="text-muted">(-i)</span>
-    label: 控制台
+    label: 控制檯
     none: 無
     terminal: TTY終端<span class="text-muted">(-t)</span>
   detail: 設定容器啟動時將運行的可執行文件。
@@ -854,31 +863,31 @@ formContainerLifecycle:
   command:
     label: 命令
     placeholder: "例如: pre-stop.sh"
-  detail: 回调使容器能够了解其管理生命周期中的事件，并在执行相应的生命周期回调时运行在处理程序中实现的代码。
+  detail: 回調使容器能夠了解其管理生命週期中的事件，並在執行相應的生命週期回調時運行在處理程序中實現的代碼。
   hookType:
-    command: 在容器的 cgroups 和名称空间中执行特定的命令
-    http: 对容器上的特定端点执行 HTTP 请求
-    https: 对容器上的特定端点执行 HTTPS 请求
-    none: 无
-    tcp: TCP 端口检查
+    command: 在容器的 cgroups 和名稱空間中執行特定的命令
+    http: 對容器上的特定端點執行 HTTP 請求
+    https: 對容器上的特定端點執行 HTTPS 請求
+    none: 無
+    tcp: TCP 端口檢查
   host:
     label: Host Header
     placeholder: "例如: example.com"
   httpHeaders:
     addActionLabel: 添加 Headers
-    keyLabel: Http 头字段
+    keyLabel: Http 頭字段
     keyPlaceholder: "例如: User-Agent"
     label: 其他的 HTTP Headers
     valuePlaceholder: "例如: value"
   path:
-    label: HTTP(S)服务器上的访问路径
+    label: HTTP(S)服務器上的訪問路徑
     placeholder: "例如: /test"
   port:
     label: 容器端口
     placeholder: "例如: 80"
   postStartHook: PostStart
   preStopHook: PreStop
-  title: 容器生命周期回调
+  title: 容器生命週期回調
 formIngress:
   addRuleLabel: 新增規則
   backendType:
@@ -951,9 +960,9 @@ formSecurity:
     label: NVIDIA GPU預留
     memUnit: GiB
     placeholder: "例如: 1"
-    set: 限制为
-    shared: 共享 GPU 内存
-    sharedTips: 设置共享 GPU 内存的同时，Rancher 会自动为工作负载设定 GPU 调度器名称
+    set: 限制爲
+    shared: 共享 GPU 內存
+    sharedTips: 設置共享 GPU 內存的同時，Rancher 會自動為工作負載設定 GPU 調度器名稱
     unit: GPUs
   hostIPC:
     label: 使用主機的IPC命名空間
@@ -1006,7 +1015,7 @@ formSecurity:
     set: 自定義(1-100)
   title: 安全/主機設置
   vGpuReservation:
-    label: Orion X GPU 预留
+    label: Orion X GPU 預留
     placeholder: "例如: 1"
     unit: vGPUs
 formVolumeRow:
@@ -1082,7 +1091,7 @@ metricsAction:
   to:
     label: 结束時間
 modalConfirmYamlMonitoring2Form:
-  helpText: 请注意，当切换回表单编辑时，非表单数据可能会发生数据丢失。在点击确认之前，请确认不会受影响。
+  helpText: 請注意，當切換回表單編輯時，非表單數據可能會發生數據丟失。在點擊確認之前，請確認不會受影響。
 modalRevertSettings:
   current: 當前值
   default: 默認值
@@ -1138,35 +1147,65 @@ newContainer:
     sidekickName: 升級{name}的Sidecar
   windows: Windows
 nodeGroupRow:
+  additional:
+    button: Add Type
+    label: Spot Instance Types
   desired:
     label: Desired ASG Size
   gpu:
-    label: 启用GPU实例
+    help: This option will be ignored because the selected launch template includes a custom AMI.
+    label: 啟用GPU實例
+  groups:
+    label: Group Details
+  images:
+    help: Custom AMIs is an advanced use case. We highly recommended that you read and fully understand the requirements for creating custom EKS AMIs <a href="https://aws.amazon.com/premiumsupport/knowledge-center/eks-custom-linux-ami/" target="_blank">here</a>.
+    label: AMI ID
   instance:
-    label: 实例类型
+    help: "Warning: Instance Type will not be sent when requesting spot instances. You must include Spot Instance types instead."
+    label: 實例類型
+    prompt: Select Instance Type
   labels:
-    addLabel: 添加标签
-    label: 标签
+    addLabel: 添加標籤
+    label: 標籤
+  launchTemplates:
+    label: Launch Template
+    managed: Rancher Managed Launch Template
+    managedVersion: Managed Version
+    prompt: Select Launch Template
   max:
     label: Maximum ASG Size
   min:
     label: Minimum ASG Size
   name:
-    label: 节点组名称
+    label: 節點組名稱
   nodeVolumeSize:
     label: Node Volume Size
     placeholder: e.g. 20
+  nodes:
+    label: Node Details
   remove:
-    label: 删除节点组
+    label: 刪除節點組
+  requestSpot:
+    help: Amazon recommends using spot instances in EKS with multiple instance types. Since the selected template can have at most one instance type, your nodes may be interrupted more often.
+    label: Request Spot Instances
+  resourceTags:
+    label: Instance Resource Tags
   ssh:
     label: SSH Key
   tags:
     addLabel: Add Tag
     label: Tags
+  templateVersions:
+    label: Template Version
+    prompt: Select Version
+  userData:
+    help: "Pass user data to <a href='https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html#launch-template-user-data' target='_blank'>Amazon using cloud-init</a> to automate common operations."
+    label: User Data
+    placeholder: Paste in the script
   version:
     label: Kubernetes 版本
-    upgrade: 将节点组版本从 { from } 升级到 { version }。
-    warning: 选择了一个新的集群版本。一旦完成，您可以返回并升级节点组版本。
+    upgrade: 將節點組版本從 { from } 升級到 { version }。
+    warning: 選擇了一個新的集群版本。一旦完成，您可以返回並升級節點組版本。
 optionallyNamespaced:
   scope:
     label: 作用域
@@ -1194,14 +1233,14 @@ persistentVolumePage:
   source:
     label: 儲存源
 tooltipNodeGroupUpdate:
-  label: 一个节点组 Kubernetes 版本可以更新。
-  link: 编辑版本
+  label: 一個節點組 Kubernetes 版本可以更新。
+  link: 編輯版本
 vmConsole:
   canvas: 暫不提供Canvas支持
   footerActions:
     buttonCancel: 關閉
     buttonSend: 發送Ctrl-Alt-Delete
-  header: "控制台:"
+  header: "控制檯:"
   protip: 高級技巧:啟動命令行時按下{key}鍵可在新視窗中打開
 volumeRow:
   mounts:
