@@ -1,68 +1,68 @@
 alertPage:
   addSelectorLabel: 添加選擇器
-  alertGroups: 告警组
+  alertGroups: 告警組
   alerts: 告警
   cluster: 集群
   commonRules:
     cpuUsagePercent: CPU 使用率
-    customClusterBackupFailed: 自定义集群 Etcd 备份失败告警
-    databaseUsage: 数据库使用率接近配额 500M
-    diskReadDelay: 磁盘读取延迟
-    diskReadIOPS: 磁盘读取 IOPS
-    diskReadThroughput: 磁盘读取吞吐量
-    diskRemainingPercent: 磁盘剩余可用率
-    diskWriteIOPS: 磁盘写入 IOPS
-    diskWriteThroughput: 磁盘写入吞吐量
+    customClusterBackupFailed: 自定義集群 Etcd 備份失敗告警
+    databaseUsage: 數據庫使用率接近配額 500M
+    diskReadDelay: 磁盤讀取延遲
+    diskReadIOPS: 磁盤讀取 IOPS
+    diskReadThroughput: 磁盤讀取吞吐量
+    diskRemainingPercent: 磁盤剩余可用率
+    diskWriteIOPS: 磁盤寫入 IOPS
+    diskWriteThroughput: 磁盤寫入吞吐量
     etcdDiskBackend: Etcd latency distributions of commit called by backend
     etcdDiskWal: Etcd latency distributions of fsync called by wal
-    etcdSnapDelay: etcd 快照延迟时间
+    etcdSnapDelay: Etcd 快照延遲時間
     fileDescriptorUsagePercent: 文件描述符使用率
-    highCpuLoad: 高 CPU 负载
-    highNodeMemoryUtilization: 节点内存利用率高
+    highCpuLoad: 高 CPU 負載
+    highNodeMemoryUtilization: 節點內存利用率高
     inodesUsagePercent: inodes 使用率
-    leaderChanges: etcd 集群中正在发生大量的 leader 变更
-    noDiskIsRunning: 节点磁盘在 24 小时内已满载
-    podRebootTimes: POD 重启次数
+    leaderChanges: Etcd 集群中正在發生大量的 leader 變更
+    noDiskIsRunning: 節點磁盤在 24 小時內已滿載
+    podRebootTimes: POD 重啟次數
     ramUsagePercent: 内存使用率
   comparison:
-    equal: 等于
-    greater-or-equal: 大于或等于
-    greater-than: 大于
-    has-value: 不为空
-    less-or-equal: 小于或等于
-    less-than: 小于
-    not-equal: 不等于
+    equal: 等於
+    greater-or-equal: 大於或等於
+    greater-than: 大於
+    has-value: 不為空
+    less-or-equal: 小於或等於
+    less-than: 小於
+    not-equal: 不等於
   config:
     reset: 重置配置
     save: 保存
   create: 創建
   customLabel:
-    addText: 添加标签和注释
+    addText: 添加標簽和註釋
     customStepOneOption:
-      label: 标签
-      message: 注释
+      label: 標簽
+      message: 註釋
     customStepTwoOption:
-      annotations: 注释
-      custom: 自定义
-      label: 标签
+      annotations: 註釋
+      custom: 自定義
+      label: 標簽
     error:
-      key: 不符合自定义标签 '键' 规则
-      uneq: 相同类型的自定义消息 '键' 不能相同
-      value: 自定义标签 '值' 不能为空
-    note: "注意: notification.tmpl 模板目前不支持webhook，如需配置自动告警标签和消息请前往“工具->告警”添加相关配置。"
+      key: 不符合自定義標簽 '鍵' 規則
+      uneq: 相同類型的自定義消息 '鍵' 不能相同
+      value: 自定義標簽 '值' 不能為空
+    note: "註意: notification.tmpl 模板目前不支持webhook，如需配置自動告警標簽和消息請前往“工具->告警”添加相關配置。"
     placeholder:
-      key: 键
+      key: 鍵
       value: 值
     table:
-      stepOne: 添加自定义
+      stepOne: 添加自定義
       stepThree: 添加
-      stepTwo: 选择
-    title: 自定义告警标签和注释
+      stepTwo: 選擇
+    title: 自定義告警標簽和註釋
   index:
     addAlert: 添加告警
-    addAlertGroup: 添加告警组
+    addAlertGroup: 添加告警組
     config: 告警配置
-    noAlerts: 当前没有配置告警规则。
+    noAlerts: 當前沒有配置告警規則。
     table:
       condition: 條件
       displayCondition:
@@ -87,43 +87,43 @@ alertPage:
   na: 未配置
   new:
     addHeader: 添加告警
-    addRuleHeader: 添加告警规则
+    addRuleHeader: 添加告警規則
     editHeader: 編輯告警
-    editRuleHeader: 编辑告警规则
+    editRuleHeader: 編輯告警規則
   newOrEdit:
     addRecipient: 添加接收者
     alert: 告警
-    alertRule: 告警规则
+    alertRule: 告警規則
     and: 和
     available: 可用
     commonRules:
-      error: 获取图表数据失败
-      label: 常用规则
-      noData: 图表无数据
-      placeholder: 选择告警规则
-      podRebootTimesTips: 请将键 (Key) 中的特殊符号转换为下划线 (_)
+      error: 獲取圖表數據失敗
+      label: 常用規則
+      noData: 圖表無數據
+      placeholder: 選擇告警規則
+      podRebootTimesTips: 請將鍵 (Key) 中的特殊符號轉換為下劃線 (_)
     cpuUsage: CPU預留超過
     createOne: 創建壹條
     critical: 危險
-    enableMonitoring: 启用监控
+    enableMonitoring: 啟用監控
     expression:
-      error: 获取图表数据失败
-      label: 表达式
-      noData: 图表无数据
-      placeholder: 输入表达式
-    failed: 扫描失败
-    for: 持续
+      error: 獲取圖表數據失敗
+      label: 表達式
+      noData: 圖表無數據
+      placeholder: 輸入表達式
+    failed: 掃描失敗
+    for: 持續
     groupIntervalSeconds:
-      helpText: 添加触发报警的规则进组后，发送告警的间隔。
-      label: 告警组间隔时长
+      helpText: 添加觸發報警的規則進組後，發送告警的間隔。
+      label: 告警組間隔時長
     groupWaitSeconds:
-      helpText: 告警触发后发送的等待时长。
-      label: 告警组等待时长
+      helpText: 告警觸發後發送的等待時長。
+      label: 告警組等待時長
     happens: 發生
     info: 信息
     inherited:
-      enabled: 启用 - 从组继承高级选项
-      label: 组继承
+      enabled: 啟用 - 從組繼承高級選項
+      label: 組繼承
     initialWait: 等待時間
     initialWaitHelpText: 在觸發告警到發送通知需要等待多長時間
     interval: 時間間隔
@@ -131,9 +131,9 @@ alertPage:
     lessThan: 少於
     memUsage: 內存預留超過
     minutes: 分鐘
-    monitoringDisabled: 表达式类型不可用，点击
-    moreTarget: 更多的规则类型
-    nameRequired: 需要填写告警标题
+    monitoringDisabled: 表達式類型不可用，點擊
+    moreTarget: 更多的規則類型
+    nameRequired: 需要填寫告警標題
     noNotifierHelpText: 沒有定義通知規則，去
     nodePlaceholder: 選擇主機
     nodeRequired: 需要選擇主機
@@ -145,16 +145,16 @@ alertPage:
     notifierPlaceholder: 選擇通知
     podPlaceholder: 選擇壹個Pod
     recipient:
-      helpText: 默认情况下使用通知程序中设置的值，您可以用另一个值覆盖它。
-    removeAlert: 删除告警规则
+      helpText: 默認情況下使用通知程序中設置的值，您可以用另一個值覆蓋它。
+    removeAlert: 刪除告警規則
     repeatIntervalHelpText: 當告警處於活動狀態時，重復發送通知的時間間隔
     repeatIntervalSeconds:
-      helpText: 告警发送后再次发送的间隔
-      label: 重复间隔
+      helpText: 告警發送後再次發送的間隔
+      label: 重復間隔
     resourcePlaceholder: 選擇資源
     restarted: 重啟
     restartedTimes: 次在最近的
-    run: 扫描完成
+    run: 掃描完成
     sendA: 發送
     showAdvanced: 顯示高級選項
     systemServicePlaceholder: 選擇系統服務
@@ -181,7 +181,7 @@ alertPage:
     StatefulSet: 狀態集
   save: 保存
   targetTypes:
-    cisScan: CIS 扫描
+    cisScan: CIS 掃描
     daemonset: Daemonset
     deployment: 部署
     event: 事件
@@ -189,7 +189,7 @@ alertPage:
     node: 主機
     nodeSelector: 主機選擇
     pod: Pod
-    podRebootTimes: Pod 重启次数
+    podRebootTimes: Pod 重啟次數
     statefulset: 狀態集
     systemService: 系統服務
     undefined: 无
@@ -239,15 +239,15 @@ appDetailPage:
     title: 工作負載
 authorizedEndpoint:
   enabled:
-    label: 此地址必须是能够访问 k8s api-server 的域名或者 IP。在 Rancher Server 不可用时，可使用包含此地址的 kubecfg 文件，通过命令 kubectl --context 直接访问 k8s 集群。
+    label: 此地址必須是能夠訪問 k8s api-server 的域名或者 IP。在 Rancher Server 不可用時，可使用包含此地址的 kubecfg 文件，通過命令 kubectl --context 直接訪問 k8s 集群。
   fqdn:
-    label: FQDN（此域名和右侧的 CA 证书可不用填写）
+    label: FQDN（此域名和右側的 CA 證書可不用填寫）
 conditionSections:
   detail: 當前{resourceType}運行狀態
   noData: 沒有條件
   noMatch: 沒有條件與當前搜索匹配
   table:
-    lastState: 上一次状态
+    lastState: 上一次狀態
     lastUpdate: 最後更新
     message: 消息
     reason: 狀態原因
@@ -280,20 +280,20 @@ containerLogs:
   wrapLines: 自動換行
 cruClusterTemplate:
   default:
-    label: 默认修订版本
+    label: 默認修訂版本
   edit:
-    label: 编辑集群模板
-  infoBanner: 模板只允许为 RKE 集群保存和重用配置选项。
+    label: 編輯集群模板
+  infoBanner: 模板只允許為 RKE 集群保存和重用配置選項。
   members:
-    detail: 与单个成员共享此集群模板，或将其公开给组织。这将影响此集群模板中的所有模板修订。
+    detail: 與單個成員共享此集群模板，或將其公開給組織。這將影響此集群模板中的所有模板修訂。
     label: 共享模板
   name:
-    label: 模板名称
+    label: 模板名稱
   revisionName:
-    help: 不是必须，但建议使用描述性名称，以帮助轻松定位正确的修订。
-    label: 模板修订名称
+    help: 不是必須，但建議使用描述性名稱，以幫助輕松定位正確的修訂。
+    label: 模板修訂名稱
   selectRevision:
-    label: 选择默认修订
+    label: 選擇默認修訂
   source:
     label: Source Revision
 cruVolume:
@@ -312,7 +312,7 @@ cruVolume:
 deleteEksCluster:
   accessKey:
     label: Access Key
-    placeholder: Your AWS access key
+    placeholder: AWS access key
   deleteCluster: 刪除集群
   deletingCluster: 集群刪除中...
   error:
@@ -322,12 +322,12 @@ deleteEksCluster:
   help: 此集群是通過臨時令牌創建的，請提供一個新的令牌來刪除它。
   secretKey:
     label: Secret Key
-    placeholder: Your AWS secret key
+    placeholder: AWS secret key
     provided: Provided
   sessionToken:
     deleteLabel: Session Token
     label: Session Token  <em class='text-muted'>Optional</em>
-    placeholder: Your AWS session token
+    placeholder: AWS session token
     provided: Provided
   title: 確定刪除集群{clusterName}嗎?
   updateKeys: Update Keys
@@ -368,22 +368,22 @@ editDns:
     label: 外部流量策略
     local: Local
   healthCheckNodePort:
-    label: 健康检查节点端口
+    label: 健康檢查節點埠
     placeholder: "例如: 8080"
   kind:
-    clusterIP: Cluster IP(仅集群内部通信)
+    clusterIP: Cluster IP(僅集群內部通信)
     externalName: ExternalName
     headless: Headless Service
-    label: 类型
-    loadBalancer: L4 负载均衡器
-    nodePort: NodePort(所有主机端口均可访问)
+    label: 類型
+    loadBalancer: L4 負載均衡器
+    nodePort: NodePort(所有主機端口均可訪問)
   loadBalancerIP:
     label: Load Balancer IP
     placeholder: "例如: 78.11.24.19"
   loadBalancerSourceRanges:
-    addActionLabel: 添加 ip 源范围
+    addActionLabel: 添加 ip 源範圍
     placeholder: "例如: 143.231.0.0/16"
-    value: 负载均衡器 ip 源范围
+    value: 負載均衡器 ip 源範圍
   name:
     placeholder: "例如: Myapp"
   placeholder:
@@ -393,9 +393,9 @@ editDns:
     alias: 選擇目標服務...
     workload: 選擇工作負載...
   publishNotReadyAddresses:
-    all: 所有接入点
-    label: 对外发布的地址
-    readyOnly: 仅就绪接入点
+    all: 所有接入點
+    label: 對外發布的地址
+    readyOnly: 僅就緒接入點
   recordType:
     alias: 服務別名
     arecord: 外部IP地址
@@ -409,11 +409,11 @@ editDns:
     keyLabel: 標籤
     label: 容器選擇器
   sessionAffinity:
-    detail: 根据源 IP 将连接映射到一致的目标
-    label: 启用会话保持
-    title: 会话保持
+    detail: 根據源 IP 將連接映射到一致的目標
+    label: 啟用會話保持
+    title: 會話保持
   sessionAffinityConfig:
-    label: Session 保持时间
+    label: Session 保持時間
     placeholder: "例如: 10800"
   target:
     alias: 目標DNS記錄
@@ -426,7 +426,7 @@ editDns:
     new: 添加DNS記錄
     view: "記錄: {name}"
 f5TLSPage:
-  addTLS: 添加证书
+  addTLS: 添加證書
   form:
     clientSSL:
       label: Client SSL
@@ -440,29 +440,29 @@ f5TLSPage:
       placeholder: "例如: /Common/serverssl"
     termination:
       label: Termination
-      placeholder: 请选择...
+      placeholder: 請選擇...
   header:
-    edit: 编辑证书
-    new: 添加证书
-    view: "证书: {name}"
+    edit: 編輯證書
+    new: 添加證書
+    view: "證書: {name}"
   table:
-    noData: 没有配置TLS证书
+    noData: 沒有配置TLS證書
 featureFlags:
   features:
     fleet: 啟動 Rancher 時，安裝 Fleet
-    istioVirtualServiceUi: 启用此功能将为Istio公开其他UI页面。
+    istioVirtualServiceUi: 啟用此功能將為Istio公開其他UI頁面。
     projectPipelineServiceUI: 啟用此功能將顯示項目流水線導航菜單
     proxy: 對 Kubernetes API 請求使用新的實驗性代理。
-    unsupportedStorageDrivers: 启用此功能将为持久卷和存储类公开不受支持的存储驱动程序选项。
+    unsupportedStorageDrivers: 啟用此功能將為持久卷和存儲類公開不受支持的存儲驅動程序選項。
     virtaitechGpuServiceUI: 啟用此功能將在部署服務時允許用戶設置 vGpus 的預留實例數量
   table:
     description: 描述
     name: 名稱
     noData: 沒有特征數據
     noMatch: 沒有与当前搜索匹配的功能數據
-    restart: 重启生效
+    restart: 重啟生效
     state: 狀態
-  warningHeader: Feature flags允许rancher某些功能的使用。您应该谨慎地启用这些功能，它们应该被视为beta功能，这可能会给您的系统带来问题。
+  warningHeader: Feature flags允許rancher某些功能的使用。您應該謹慎地啟用這些功能，它們應該被視為beta功能，這可能會給您的系統帶來問題。
 formBasicPodSecurityPolicy:
   allowPrivilegeEscalation:
     disable: 否
@@ -526,12 +526,12 @@ formResourceQuota:
   errors:
     invalidLimit: "{resource}配額總共{total}，已使用{used}。該已使用應小於或等於{left}。"
     limitRequired: "{resource}需要設置。"
-    nsDefaultLimitRequired: 命令空間中{resource}默認限制必需設置。
+    nsDefaultLimitRequired: 命令空間中{resource}默認限製必需設置。
     projectLimitRequired: 項目中{resource}必須設置
   resources:
     configMaps: Config Maps
-    limitsCpu: CPU限制
-    limitsMemory: 內存限制
+    limitsCpu: CPU限製
+    limitsMemory: 內存限製
     persistentVolumeClaims: Persistent Volume Claims
     pods: Pods
     replicationControllers: Replication Controllers
@@ -548,13 +548,13 @@ formResourceQuota:
     servicesNodePorts: 服務節點端口
   table:
     namespaceLimit:
-      label: 命名空間默認限制
+      label: 命名空間默認限製
       memoryPlaceholder: "例如: 1024"
       milliCpuPlaceholder: "例如: 500"
       placeholder: "例如: 10"
     noData: 沒有定義資源配額
     projectLimit:
-      label: 項目限制
+      label: 項目限製
       memoryPlaceholder: "例如: 2048"
       milliCpuPlaceholder: "例如: 2000"
       placeholder: "例如: 50"
@@ -568,7 +568,7 @@ formResourceQuota:
     type:
       label: 資源類型
     value:
-      label: 限制
+      label: 限製
       memoryPlaceholder: "例如: 1Gi"
       milliCpuPlaceholder: "例如: 500"
       placeholder: "例如: 10"
@@ -634,15 +634,15 @@ formUserData:
   isVmPlaceholder: "例如: 虛擬機的配置信息"
   placeholder: "例如: 容器的配置信息"
 formVersions:
-  dotx: Latest {minor} (允许补丁版本升级)
-  downgrade: (不能降级)
+  dotx: Latest {minor} (允許補丁版本升級)
+  downgrade: (不能降級)
   eks:
-    helpBlock: 因为 Amazon EKS 运行一个高可用的控制平面，所以您一次只能更新一个小版本。
-    label: (EKS 不允许次要版本 > 1 )
-  experimental: (实验)
+    helpBlock: 因為 Amazon EKS 運行一個高可用的控製平面，所以您一次只能更新一個小版本。
+    label: (EKS 不允許次要版本 > 1)
+  experimental: (實驗)
   helpBlock:
-    label: "升级 Kubernetes 版本时，请查看<a href=\"https://groups.google.com/forum/#!forum/kubernetes-announce\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">Kubernetes release notes</a>了解功能变化。"
-  notallowed: (模板不允许)
+    label: "升級 Kubernetes 版本時，請查看<a href=\"https://groups.google.com/forum/#!forum/kubernetes-announce\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">Kubernetes release notes</a>了解功能變化。"
+  notallowed: (模板不允許)
   unsupported: (不支持)
 generic:
   Gibibyte: GiB
@@ -662,7 +662,7 @@ generic:
   cancel: 取消
   closeModal: 關閉
   cluster: 集群
-  collapse: 折叠
+  collapse: 折疊
   collapseAll: 摺疊全部
   comingSoon: 即將推出
   command: 命令
@@ -693,7 +693,7 @@ generic:
   environment: 環境
   expand: 展开
   expandAll: 全部展開
-  experimental: (实验)
+  experimental: (實驗)
   "false": "False"
   from: 來自
   full: 完整
@@ -716,12 +716,12 @@ generic:
   internal: 內部
   ipAddress: Pod IP
   is: 是
-  isRequired: 必须填写
-  istioHostPlaceholder: 选择或输入主机
-  istioRule: 流量规则
+  isRequired: 必須填寫
+  istioHostPlaceholder: 選擇或輸入主機
+  istioRule: 流量規則
   key: 鍵
-  limit: 限制
-  limits: 限制
+  limit: 限製
+  limits: 限製
   linux: Linux
   loading: 加載中...
   loggingOut: 註銷...
@@ -741,8 +741,8 @@ generic:
   namespaces: 命名空間
   never: 從不
   no: 否
-  noBranch: 该代码库中没有任何分支。
-  noData: 没有数据
+  noBranch: 該代碼庫中沒有任何分支。
+  noData: 沒有數據
   noRating: 無評價
   node: 主機
   none: 無
@@ -764,10 +764,10 @@ generic:
   registry: 鏡像庫
   remove: 移除
   repository: 代碼庫
-  required: "{key} 为必填项。"
+  required: "{key} 為必填項。"
   restarts: 重啟次數
   role: 角色
-  run: 运行
+  run: 運行
   save: 保存
   saved: 已保存
   saving: 保存中
@@ -797,7 +797,7 @@ generic:
   value: 值
   version: 版本
   windows: Windows
-  writeOnly: 只写
+  writeOnly: 只寫
   yes: 是
 haPage:
   header: 高可用性(HA)
@@ -813,11 +813,11 @@ haPage:
 inputTextFile:
   tooltip: 從文件讀取
 k3sNodeEnvVarSection:
-  detail: 只读取此 K3S 节点的环境变量列表。
+  detail: 只讀取此 K3S 節點的環境變量列表。
   key: Key
-  noData: 没有环境变量
-  noMatch: 没有环境变量与当前搜索匹配
-  title: K3S 节点环境变量
+  noData: 沒有環境變量
+  noMatch: 沒有環境變量與當前搜索匹配
+  title: K3S 節點環境變量
   value: Value
 kontainerDriver:
   displayName:
@@ -842,11 +842,11 @@ machinePage:
   url: 位置
 modalShowCommand:
   errors:
-    token: 获取集群注册令牌错误 - {err}
-  success: 主机已注册!
-  title: 集群注册命令
+    token: 獲取集群註冊令牌錯誤 - {err}
+  success: 主機已註冊!
+  title: 集群註冊命令
 modalYaml:
-  noData: 没有 {name} 资源。
+  noData: 沒有 {name} 資源。
   title:
     edit: "編輯YAML: {name}"
     new: 導入{type}YAML
@@ -858,7 +858,7 @@ newCertificate:
     placeholder: 粘貼或導入證書，以-----BEGIN CERTIFICATE-----開頭
     protip: 包括全部所需的證書鏈
     required: 必須填寫證書
-    tooltip: "粘贴用于验证 server 证书的 CA 证书，它将生成在 kubecfg 文件中。 具体请参考 <a href=\"https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#authorized-cluster-endpoint\" target=\"blank\" >更多信息</a>。"
+    tooltip: "粘貼用於驗證 server 證書的 CA 證書，它將生成在 kubecfg 文件中。 具體請參考 <a href=\"https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/rke-clusters/options/#authorized-cluster-endpoint\" target=\"blank\" >更多信息</a>。"
   certChain:
     label: 證書鏈
     placeholder: 粘貼或導入證書，以-----BEGIN CERTIFICATE-----開頭
@@ -879,10 +879,10 @@ newCertificate:
     label: 元數據XML
     placeholder: 粘貼IDP Metadata XML
   publicKey:
-    invalidFormat: 公钥无效
-    label: SSH 公钥
-    placeholder: 粘贴或导入证书，以'ssh-rsa', 'ssh-dss', 'ssh-ed25519', 'ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', or 'ecdsa-sha2-nistp521'开头。
-    required: 必须填写公钥
+    invalidFormat: 公鑰無效
+    label: SSH 公鑰
+    placeholder: 粘貼或導入證書，以'ssh-rsa', 'ssh-dss', 'ssh-ed25519', 'ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', or 'ecdsa-sha2-nistp521'開頭。
+    required: 必須填寫公鑰
   title:
     edit: "編輯證書: {name}"
     new: 添加證書
@@ -1038,7 +1038,7 @@ validation:
     max: "\"{key}\"應當至多為{count}{count, plural,=1{個字符}other{個字符}}"
     min: "\"{key}\"應當至少為{count}{count, plural,=1{個字符}other{個字符}}"
   targets:
-    missingProjectId: 必须选择目标项目。
+    missingProjectId: 必須選擇目標項目。
 verifyPage:
   account:
     header: 賬號創建完成

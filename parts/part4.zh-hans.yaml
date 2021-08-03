@@ -311,7 +311,7 @@ cruVolume:
 deleteEksCluster:
   accessKey:
     label: Access Key
-    placeholder: Your AWS access key
+    placeholder: AWS access key
   deleteCluster: 删除集群
   deletingCluster: 集群删除中...
   error:
@@ -326,7 +326,7 @@ deleteEksCluster:
   sessionToken:
     deleteLabel: Session Token
     label: Session Token <em class='text-muted'>可选</em>
-    placeholder: Your AWS session token
+    placeholder: AWS session token
     provided: Provided
   title: 确定删除集群 {clusterName} 吗?
   updateKeys: 更新 Keys
