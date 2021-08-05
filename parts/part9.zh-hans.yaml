@@ -258,7 +258,7 @@ cruDestinationRule:
         placeholder: "例如: end-user"
       label: 使用一致的基于散列的负载平衡实现软会话关联
       minimumRingSize:
-        label: Minimum Ring Size
+        label: 最小 Ring
         placeholder: "例如: 1024"
       mode:
         cookie:
@@ -284,7 +284,7 @@ cruDestinationRule:
     placeholder: "例如: myrule"
   outlierDetection:
     baseEjectionTime:
-      help: 最小驱逐时间. A host will remain ejected for a period equal to the product of minimum ejection duration and the number of times the host has been ejected.
+      help: 最小驱逐时间. 主机将保持被弹出的时间等于最小弹出持续时间和主机被弹出的次数的乘积。
       label: 基本驱逐时间
       placeholder: "例如: 30s"
     consecutiveErrors:
@@ -349,8 +349,8 @@ cruDestinationRule:
       label: SNI
       placeholder: "例如: nginx.example.com"
     subjectAltNames:
-      add: Add Subject Alternative Name
-      label: Subject Alternative Names
+      add: 添加主题备选名称
+      label: 主题的备选名称
       placeholder: "例如: example.com"
 cruVirtualService:
   gateways:

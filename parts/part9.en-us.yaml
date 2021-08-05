@@ -521,7 +521,7 @@ dangerZone:
     engine-supported-range: Semver range for supported Docker engine versions.  Versions which do not satisfy this range will be marked unsupported in the UI.
     extra-menus: Configure custom menus.
     ingress-ip-domain: Wildcard DNS domain to use for automatically generated Ingress hostnames. <ingress-name>.<namespace-name>.<ip address of ingress controller> will be added to the domain.
-    none-operate-session-time: 用户超过配置时间没有任何操作将自动注销(以秒为单位)
+    none-operate-session-time: The user will automatically log out if there is no operation beyond the configured time (in seconds)
     rdns-base-url: Configure the rdns service url.
     rke-metadata-config: Configure RKE metadata refresh parameters.
     server-url: Default {appName} install url. Must be HTTPS. All nodes in your cluster must be able to reach this.
