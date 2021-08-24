@@ -1,20 +1,20 @@
 action:
   activate: 啟動
   addContainer: 部署Pod
-  addHost: 添加主机
+  addHost: 添加主機
   addSidekick: 新增Sidecar
-  auditlog: 审计日志
+  auditlog: 審計日誌
   backupEtcd: 備份
   backupEtcdMessage:
     fail:
-      message: 备份{ clusterId }到{ backupType }存储
-      title: 备份失败
+      message: 備份{ clusterId }到{ backupType }存儲
+      title: 備份失败
     success:
       message: "{ clusterId }已備份到{ backupType }provider"
-      start: 开始备份
+      start: 开始備份
       title: 備份成功
   clone: 克隆
-  cloneCrossCluster: 跨集群克隆
+  cloneCrossCluster: 跨叢集克隆
   cloneRevision: 克隆修訂
   console: 打開控制台
   convertToService: 轉換為服務
@@ -22,24 +22,24 @@ action:
   deactivate: 停用
   disableAutoInject: 禁用Istio自動注入
   download: 下載
-  downloadFile: 下载文件
+  downloadFile: 下載文件
   downloadYaml: 下載YAML
   drain: 驅散
   edit: 編輯
   editConfig: 編輯設定檔
   editService: 編輯服務
-  editVsAnnotaionForGlobalDns: 添加/删除 Global DNS Record
+  editVsAnnotaionForGlobalDns: 添加/刪除 Global DNS Record
   editYaml: 查看/編輯YAML
   enableAutoInject: 啟用Istio自動注入
-  evacuate: evacuate
+  evacuate: 疏散
   execute: 執行命令行
   exportConfig: 導出設定
   garbageCollect: 清理
-  importHost: 导入主机
+  importHost: 導入主機
   logs: 查看日誌
   makeDefault: 設置為缺省
   move: 移動
-  mute: mute
+  mute: 靜默
   nodeConfig: 下載密鑰
   pause: 暫停編排
   pauseAll: 全部暫停
@@ -50,27 +50,29 @@ action:
       title: 刷新成功
     label: 刷新組成員
     success:
-      message: 已觸發組成員更新
+      message: 已觸發組成員刷新
       title: 刷新成功
+  registration: Registration Cmd
   remove: 刪除
   replay: 重播
   rerun: 重新運行
-  resetDefault: 恢復默認質
-  resize: 扩容
-  restart: 重启
+  resetDefault: 恢復默認值
+  resize: 擴容
+  restart: 重啟
   restoreFromEtcdBackup: 恢復
   resume: 恢復編排
   resumeCronjob: 重新開始
   retry: 重試
-  revert: 恢復默認質
-  revision: 新修訂的默認質
-  rollback: 回復
+  revert: 恢復默認值
+  revision: 新修訂的默認值
+  rollback: 回滾
   rotate: 更新證書
-  rotateEncryption: 轮换加密密钥
+  rotateEncryption: 輪換加密密鑰
   run: 運行
   runCISScan: 運行CIS掃描
   saveAsTemplate: 另存為RKE模板
-  setDefault: 設置為默認質
+  scaledown: Scale Down
+  setDefault: 設置為默認值
   setDefaultRevision:
     success:
       message: 已在{ctName}的默認修訂中設置了{name}。
@@ -80,7 +82,7 @@ action:
   startAll: 全部開始
   stop: 停止
   stopAll: 全部停止
-  stopDrain: 停止Drain
+  stopDrain: 停止驅散
   suspend: 暫停
   test: 測試
   uncordon: 啟動
@@ -104,7 +106,7 @@ clusterTemplateRevisionUpgradeNotification:
   tooltip: 修訂 {revision} 可用於升級。
 clusterTemplatesPage:
   headers:
-    created: 創建时间
+    created: 創建時間
     defaultRevisionId: 默認修訂
     revisionsCount: 修訂版本
   index:
@@ -120,7 +122,7 @@ clusterTemplatesPage:
     name: 修訂版本名稱
 containersSection:
   detail: Pod中的容器
-  initContainer: Init Container
+  initContainer: Init 容器
   noData: 没有容器
   noMatch: 没有容器匹配當前搜索
   title: 容器
@@ -129,7 +131,7 @@ copyToClipboard:
   tooltip: 複製到剪貼板
 cruPersistentVolumeClaim:
   capacity:
-    help: 帮助
+    help: 幫助
     label: 容量
     unit: GiB
   define:
@@ -137,23 +139,23 @@ cruPersistentVolumeClaim:
   name:
     placeholder: "例如: myvol"
   pv:
-    label: persistent volume
-    prompt: 選擇 persistent volume …
+    label: 持久卷 (PV)
+    prompt: 選擇持久卷 (PV) …
   secretRequired:
     name: 密文名稱
     namespace: 密文命名空間
   source:
-    label: source
-    pv: 使用現有的 persistent volume
-    storageClass: 使用儲存類別來創建新的 persistent volume
+    label: 來源
+    pv: 使用現有的持久卷 (PV)
+    storageClass: 使用存儲類創建新的持久卷 (PV)
   storageClass:
-    label: 儲存類別
-    prompt: 使用默認 class
+    label: 存儲類 (Storage Class)
+    prompt: 使用默認 storage class
   title:
     define: 定義 volumes 聲明
     edit: "編輯 volumes 聲明: {name}"
     new: 新增 volumes 聲明
-    view: "persistent volume : {name}"
+    view: "PVC : {name}"
   volumeHandleRequired:
     label: Volume Handle
 editCertificate:
@@ -231,10 +233,10 @@ formHealthCheck:
     label: 不健康閾值
     unit: 失敗
   host:
-    label: 主機 Headers
+    label: 主機 Header
     placeholder: "例如: example.com"
   httpHeaders:
-    addActionLabel: 新增Headers
+    addActionLabel: 新增Header
     keyLabel: Http頭字段
     keyPlaceholder: "例如: 用戶代理"
     label: 其他的HTTP Headers
@@ -297,7 +299,7 @@ formPorts:
     HostPort: HostPort(僅Pod所在主機埠可訪問)
     HostPortDisbaled: HostPort(禁用)
     LoadBalancer: L4層負載均衡器(對接公有雲負載均衡服務)
-    LoadBalancerDisbaled: Layer-4 Load Balancer (disabled)
+    LoadBalancerDisbaled: L4 層負載均衡器 (禁用)
     NodePort: NodePort(所有主機埠均可訪問)
     label: 網路模式
   name:
@@ -433,7 +435,7 @@ formServicePorts:
     label: 協議
   targetPort:
     default: 與服務埠相同
-    label: 目標埠
+    label: 目標埠（容器埠）
     placeholder: "例如: 80"
 formShareMember:
   add: 添加成員
@@ -462,7 +464,7 @@ hostSettings:
   helpText:
     isRancher: <a href="{docsBase}/installing-rancher/installing-server/basic-ssl-config/" target="_blank">SSL Termination</a>
     sslTerm: SSL終止
-    static1: 不要包含<code>/v1</code>或任何其他路徑��但如果您設置了
+    static1: 不要包含<code>/v1</code>或任何其他路徑，但如果您設置了
     static2: 在{appName}前面，請確保使用<code>https://</code>.
   hostUrl:
     local: "當前站點地址:"
@@ -507,13 +509,13 @@ k8sImport:
     label: 叢集名稱
     placeholder: "例如: My-imported-cluster"
 loginShibboleth:
-  buttonText: 用Shibboleth登入
+  buttonText: 用Shibboleth登錄
 managedImportClusterInfo:
   detail: 自定義K3S叢集選項
-  drainServerNodes: Drain Control Plane Nodes
-  drainWorkerNodes: Drain Worker Nodes
+  drainServerNodes: 驅散 Control Plane 節點
+  drainWorkerNodes: 驅散 Worker 節點
   error:
-    int: 并发数必须是整数值
+    int: 並發數必須是整數值
   kubernetesVersion: Kubernetes 版本
   nodeInfo:
     datail: 附加的K3S主節點詳細信息
@@ -552,17 +554,17 @@ metrics:
   fluentd-input-record-number: Fluentd輸入速率
   fluentd-output-errors: Fluentd輸出錯誤速率
   fluentd-output-record-number: Fluentd輸出速率
-  global-cluster-cpu-usage: 集群 CPU 使用量 Top 5
-  global-cluster-disk-usage: 集群磁盘使用量 Top 5
-  global-cluster-memory-usage: 集群内存使用量 Top 5
-  global-node-cpu-usage: 节点 CPU 使用量 Top 5
-  global-node-disk-usage: 节点磁盘使用量 Top 5
-  global-node-memory-usage: 节点内存使用量 Top 5
+  global-cluster-cpu-usage: 叢集 CPU 使用量 Top 5
+  global-cluster-disk-usage: 叢集硬碟使用量 Top 5
+  global-cluster-memory-usage: 叢集內存使用量 Top 5
+  global-node-cpu-usage: 節點 CPU 使用量 Top 5
+  global-node-disk-usage: 節點硬碟使用量 Top 5
+  global-node-memory-usage: 節點內存使用量 Top 5
   global-pod-cpu-usage: Pod CPU 使用量 Top 5
-  global-pod-memory-usage: Pod 内存使用量 Top 5
-  global-pod-restart: 集群 Pod 重启次数 Top 5
-  global-pod-unhealthy: 集群异常 Pod 数量 Top 5
-  global-pod-unschedulable: 集群不可调度 Pod 数量 Top 5
+  global-pod-memory-usage: Pod 內存使用量 Top 5
+  global-pod-restart: 叢集 Pod 重啟次數 Top 5
+  global-pod-unhealthy: 叢集異常 Pod 數量 Top 5
+  global-pod-unschedulable: 叢集不可調度 Pod 數量 Top 5
   ingresscontroller-nginx-connection: Ingress控制器連接數
   ingresscontroller-request-process-time: Ingress控制器請求處理時長
   istio-4xxs: 項目4xx錯誤代碼計數
@@ -656,14 +658,14 @@ nav:
     globalDns: 全局DNS服務
     globalDnsEntries: 全局DNS服務
     globalDnsProviders: 全局DNS提供商
-    globalMonitoring: 全局监控
+    globalMonitoring: 全局監控
     globalRegistry: 全局鏡像庫
     imageRepo:
       config: Harbor 配置
-      logs: 日志
-      projects: 镜像管理
-      registries: 仓库管理
-      tab: 镜像仓库
+      logs: 日誌
+      projects: 鏡像管理
+      registries: 倉庫管理
+      tab: 鏡像倉庫
     machines: 主機
     multiClusterApps: 多叢集應用
     security:
@@ -691,7 +693,7 @@ nav:
     noMatch: 沒有應用程序匹配當前搜索
     tab: 應用商店
   auditLog:
-    tab: 审计日志
+    tab: 審計日誌
   catalog:
     all: 全部
     community: 社區貢獻
@@ -706,8 +708,8 @@ nav:
     storage:
       classes: 儲存類
       tab: 儲存
-      volumes: persistent volume
-    vlansubnet: 扁平网络
+      volumes: 持久卷
+    vlansubnet: 扁平網絡
   clusterTemplates:
     link: 叢集模板
   containers:
@@ -730,7 +732,7 @@ nav:
   dashboard:
     try: 儀錶板
   f5:
-    controllers: F5 负载均衡
+    controllers: F5 負載均衡
     tls: TLS
   group:
     namespace: 按名稱空間分組
@@ -744,7 +746,7 @@ nav:
   infra:
     certificates: 證書
     configMaps: 設定映射
-    f5Ingresses: F5 负载均衡
+    f5Ingresses: F5 負載均衡
     hpa: HPA
     members: 成員
     pipelines: 流水線
@@ -776,12 +778,12 @@ nav:
   srToggleDropdown: 切換下拉菜單
   tools:
     alerts: 警告
-    backup: Rancher 备份
+    backup: Rancher 備份
     backups: 快照
     catalogs: 應用商店
-    cisF5: F5 负载均衡服务
+    cisF5: F5 負載均衡服務
     cisScans: CIS掃描
-    fleet: 持续交付
+    fleet: 持續交付
     gatekeeper: OPA Gatekeeper
     istio: Istio
     logging: 日誌
@@ -815,24 +817,24 @@ pagination:
   catalog: "{pages, plural,\n=0{無應用商店}\n=1{選中{count}{count, plural,=1{個應用商店}other{個應用商店}}}\nother{當前顯示{count}個應用商店中的{from}到{to}個}}\n"
   certificate: "{pages, plural,\n=0{無證書}\n=1{選中{count}{count, plural,=1{個證書}other{個證書}}}\nother{當前顯示{count}個證書中的{from}到{to}個}}\n"
   cluster: "{pages, plural,\n=0{沒有叢集}\n=1{選中{count}{count, plural,=1{個叢集}other{個叢集}}}\nother{當前顯示{count}個叢集中的{from}到{to}個 }}\n"
-  clusterTemplates: "{pages, plural,\n=0 {No Template Revisions}\n=1 {{count} {count, plural, =1 {Template Revision} other {Template Revisions}}}\nother {{from} - {to} of {count} Template Revisions}}\n"
+  clusterTemplates: "{pages, plural,\n=0 { 無模板 }\n=1 { 選中 {count} {count, plural, =1 { 個模板 } other { 個模板 }}}\nother { 當前顯示 {count} 個模板中的 {from} 到 {to} 個 }}\n"
   container: "{pages, plural,\n=0 {無容器}\n=1{選中{count} {count, plural, =1{個容器}other{個容器}}}\nother{當前顯示{count}個容器中的{from}到{to}個 }}\n"
-  destinationRules: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Destination Rule} other {Destination Rules}}}\nother {{from} - {to} of {count} Destination Rules}}\n"
-  dnsProvider: "{pages, plural,\n=0{ 无 DNS 提供商 }\n=1{ 选中 {count}{count, plural,=1{ 条 DNS 提供商 } other { 条 DNS 提供商 }}}\nother { 当前显示 {count} 条 DNS 提供商 中的 {from} 到 {to} 条 }}\n"
+  destinationRules: "{pages, plural,\n=0 { 無選項 }\n=1 { 選中 {count} {count, plural, =1 { 條目標規則 } other { 條目標規則 }}}\nother { 當前顯示 {count} 條目標規則中的 {from} 到 {to} 條}}\n"
+  dnsProvider: "{pages, plural,\n=0{ 無 DNS 提供商 }\n=1{ 選中 {count}{count, plural,=1{ 條 DNS 提供商 } other { 條 DNS 提供商 }}}\nother { 當前顯示 {count} 條 DNS 提供商 中的 {from} 到 {to} 條 }}\n"
   dnsRecord: "{pages, plural,\n=0{無DNS記錄}\n=1{選中{count}{count, plural,=1{條DNS記錄}other{條DNS記錄}}}\nother {當前顯示{count}條DNS Records中的{from}到{to}條}}\n"
   driver: "{pages, plural,\n=0{無驅動}\n=1{選中{count}{count, plural,=1{個驅動}other{個驅動}}}\n  other {當前顯示{count}個驅動中的{from}到{to}個}}\n"
   driverOptions: "{pages, plural,\n=0{無驅動選項}\n=1{選中{count}{count, plural,=1{個驅動選項}other{個驅動選項}}}\nother {當前顯示{count}個驅動選項中的{from}到{to}個}}\n"
   entry: "{pages, plural,\n=0{無條目}\n=1{選中{count}{count, plural,=1{個條目}other{個條目}}}\nother {當前顯示{count}個條目中的{from}到{to}個 }}\n"
   event: "{pages, plural,\n=0{無事件}\n=1{選中{count}{count, plural,=1{個事件}other{個事件}}}\nother{當前顯示{count}個事件中的{from}到{to}個}}\n"
-  f5Ctl: "{pages, plural,\n=0{ 无 F5负载均衡}\n=1{ 选中 {count}{count, plural,=1{ 个 F5负载均衡} other { 个 F5负载均衡}}}\nother { 当前显示 {count} 个 F5负载均衡 中的 {from} 到 {to} 个 }}\n"
-  f5Tls: "{pages, plural,\n=0{ 无 TLS证书}\n=1{ 选中 {count}{count, plural,=1{ 个 TLS证书} other { 个 TLS证书}}}\nother { 当前显示 {count} 个 TLS证书 中的 {from} 到 {to} 个 }}\n"
-  features: "{pages, plural,\n=0 {No Features}\n=1 {{count} {count, plural, =1 {Feature} other {Features}}}\nother {{from} - {to} of {count} Features}}\n"
-  gateways: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Gateway} other {Gateways}}}\nother {{from} - {to} of {count} Gateways}}\n"
+  f5Ctl: "{pages, plural,\n=0{ 無 F5負載均衡}\n=1{ 選中 {count}{count, plural,=1{ 個 F5負載均衡} other { 個 F5負載均衡}}}\nother { 當前顯示 {count} 個 F5負載均衡 中的 {from} 到 {to} 個 }}\n"
+  f5Tls: "{pages, plural,\n=0{ 無 TLS證書}\n=1{ 選中 {count}{count, plural,=1{ 個 TLS證書} other { 個 TLS證書}}}\nother { 當前顯示 {count} 個 TLS證書 中的 {from} 到 {to} 個 }}\n"
+  features: "{pages, plural,\n=0 { 無功能選項 }\n=1 { 選中 {count} {count, plural, =1 { 個功能選項 } other { 個功能選項 }}}\nother { 當前顯示 {count} 個功能選項中的 {from} 到 {to} 個 }}\n"
+  gateways: "{pages, plural,\n=0 { 無選項 }\n=1 { 選中 {count} {count, plural, =1 { 個網關 } other { 個網關 }}}\nother { 當前顯示 {count} 個網關中的 {from} 到 {to} 個 }}\n"
   generic: "{pages, plural,\n=0{無條目}\n=1{選中{count}{count, plural, =1{個條目}other{個條目}}}\nother{當前顯示{count}個條目中的{from}到{to}個}}\n"
   hpa: "{pages, plural,\n=0 {沒有Pod自動水平伸縮規則}\n=1 {選中{count} {count, plural, =1 {條Pod自動水平伸縮規則} other {條Pod自動水平伸縮規則}}}\nother {當前顯示{count}條Pod自動水平伸縮規則中的{from}到{to}條}}\n"
   image: "{pages, plural,\n=0{無鏡像}\n=1{選中{count}{count, plural,=1{個鏡像}other{個鏡像}}}\nother {當前顯示{count}個鏡像中的{from}到{to}個 }}\n"
   ingress: "{pages, plural,\n=0{無Ingresses}\n=1{選中{count}{count, plural,=1{個Ingresses}other{個Ingresses}}}\nother {當前顯示{count}個Ingresses中的{from}到{to}個 }}\n"
-  istioRule: "{pages, plural,\n=0 {No Traffic Rules}\n=1 {{count} {count, plural, =1 {Traffic Rule} other {Traffic Rules}}}\nother {{from} - {to} of {count} Traffic Rules}}\n"
+  istioRule: "{pages, plural,\n=0 { 無流量規則 }\n=1 { 選中 {count} {count, plural, =1 { 條流量規則 } other { 條流量規則 }}}\nother { 當前顯示 {count} 條流量規則中的 {from} 到 {to} 條}}\n"
   link: "{pages, plural,\n=0{無連結}\n=1{選中{count}{count, plural,=1{個連結}other{個連結}}}\nother {當前顯示{count}個Links中的{from}到{to}個 }}\n"
   loadBalancer: "{pages, plural,\n=0{無負載均衡}\n=1{選中{count}{count, plural,=1{條負載均衡}other{條負載均衡}}}\nother {當前顯示{count}條負載均衡中的{from}到{to}條 }}\n"
   member: "{pages, plural,\n=0{無成員}\n=1{選中{count}{count, plural,=1{個成員}other{個成員}}}\nother {當前顯示{count}個成員中的{from}到{to}個}}\n"
@@ -951,9 +953,9 @@ servicePage:
     namespace: "命名空間:"
     podNum:
       error:
-        required: pod 个数不能为空
-        typeError: pod 个数值为大于 0 的整数
-      label: pod 个数
+        required: pod 個數不能為空
+        typeError: pod 個數值為大於 0 的整數
+      label: pod 個數
     scale: "Pod副本數:"
     type: "類型:"
   new:
@@ -974,7 +976,7 @@ servicePage:
       description:
         placeholder: "例如: Mycompany.com的Ingress"
       load:
-        label: 扁平网络负载
+        label: 扁平網絡負載
       name:
         placeholder: "例如: website"
   portsTab:
@@ -1085,20 +1087,20 @@ viewEditDescription:
     name:
       placeholder: "例如: lab"
 virtualServicePage:
-  noData: 没有定義虛擬服務
-  noMatch: 没有虛擬服務匹配當前搜索
+  noData: 沒有定義虛擬服務
+  noMatch: 沒有虛擬服務匹配當前搜索
   notSupported: networking.istio.io/v1alpha3 API在叢集中不可用。
   table:
     hosts:
-      label: 主机
+      label: 主機
 volumesPage:
   addActionLabel: 添加 PVC
   claimName:
-    label: PVC 名称
-  noData: 没有配置 PVC
-  noMatch: 没有符合当前搜索的持久卷 (PV)
+    label: PVC 名稱
+  noData: 沒有配置 PVC
+  noMatch: 沒有符合當前搜索的持久卷 (PV)
   storageClass:
-    label: 存储类
+    label: 存儲類
   title: PVC
   volume:
     label: 持久卷(PV)
