@@ -1,41 +1,41 @@
 action:
   activate: 激活
-  addContainer: 部署Pod
-  addHost: 添加主机
-  addSidekick: 添加Sidecar
-  auditlog: 审计日志
-  backupEtcd: 备份
+  addContainer: 部署 Pod
+  addHost: 添加主機
+  addSidekick: 添加 Sidecar
+  auditlog: 審計日誌
+  backupEtcd: 備份
   backupEtcdMessage:
     fail:
-      message: 备份{ clusterId }到{ backupType }存储
-      title: 备份失败
+      message: 備份{ clusterId }到{ backupType }存儲
+      title: 備份失敗
     success:
-      message: 已备份 { clusterId } 到 { backupType } 存储。
-      start: 开始备份
-      title: 备份成功
+      message: 已備份 { clusterId } 到 { backupType } 存儲。
+      start: 開始備份
+      title: 備份成功
   clone: 克隆
   cloneCrossCluster: 跨集群克隆
-  cloneRevision: 克隆修订
+  cloneRevision: 克隆修訂
   console: 打開控制台
   convertToService: 轉換為服務
   cordon: 暫停
   deactivate: 停用
-  disableAutoInject: 禁用 Istio 自动注入
-  download: 下载
-  downloadFile: 下载文件
-  downloadYaml: 下載YAML
+  disableAutoInject: 禁用 Istio 自動注入
+  download: 下載
+  downloadFile: 下載文件
+  downloadYaml: 下載 YAML
   drain: 驅散
   edit: 編輯
   editConfig: 編輯配置
   editService: 編輯服務
-  editVsAnnotaionForGlobalDns: 添加/删除 Global DNS Record
-  editYaml: 查看/編輯YAML
-  enableAutoInject: 启用 Istio 自动注入
+  editVsAnnotaionForGlobalDns: 添加/刪除 Global DNS Record
+  editYaml: 查看/編輯 YAML
+  enableAutoInject: 啟用 Istio 自動注入
   evacuate: 疏散
   execute: 執行命令行
   exportConfig: 導出配置
   garbageCollect: 清理
-  importHost: 导入主机
+  importHost: 導入主機
   logs: 查看日誌
   makeDefault: 設置為缺省
   move: 移動
@@ -46,42 +46,44 @@ action:
   redeploy: 重新部署
   refreshAuthProviderAccess:
     allSuccess:
-      message: 已为所有用户触发组成员更新。
+      message: 已為所有用戶觸發組成員更新。
       title: 更新成功
-    label: 刷新组成员
+    label: 刷新組成員
     success:
-      message: 已触发组成员刷新
-      title: Refresh Successful
+      message: 已觸發組成員刷新
+      title: 刷新成功
+  registration: Registration Cmd
   remove: 刪除
   replay: 重播
   rerun: 重新運行
   resetDefault: 重置默認設置
-  resize: 扩容
+  resize: 擴容
   restart: 重啟
-  restoreFromEtcdBackup: 恢复
+  restoreFromEtcdBackup: 恢復
   resume: 恢復編排
-  resumeCronjob: 重新开始
+  resumeCronjob: 重新開始
   retry: 重試
   revert: 恢復默認值
-  revision: 新修订的默认值
+  revision: 新修訂的默認值
   rollback: 回滾
-  rotate: 更新证书
-  rotateEncryption: 轮换加密密钥
+  rotate: 更新證書
+  rotateEncryption: 輪換加密密鑰
   run: 運行
-  runCISScan: 运行 CIS 扫描
-  saveAsTemplate: 另存为 RKE 模板
+  runCISScan: 運行 CIS 掃描
+  saveAsTemplate: 另存為 RKE 模板
+  scaledown: Scale Down
   setDefault: 設置為缺省
   setDefaultRevision:
     success:
-      message: 已在 {ctName} 的默认修订中设置了 {name}。
+      message: 已在 {ctName} 的默認修訂中設置了 {name}。
       title: 成功
   setting: 設置
   start: 啟動
   startAll: 全部開始
   stop: 停止
   stopAll: 全部停止
-  stopDrain: 停止Drain
-  suspend: 暂停
+  stopDrain: 停止驅散
+  suspend: 暫停
   test: 測試
   uncordon: 激活
   unmute: 取消靜默
@@ -94,42 +96,42 @@ action:
   viewInstance: 查看實例
   viewYaml: 查看YAML
 clusterDrivers:
-  add: 添加集群驱动
-  builtIn: 内置
-  refresh: 刷新 Kubernetes 元数据
+  add: 添加集群驅動
+  builtIn: 內置
+  refresh: 刷新 Kubernetes 元數據
   table:
-    noData: 当前集群没有配置任何节点
-    noMatch: 没有节点匹配当前搜索
+    noData: 當前集群沒有配置任何節點
+    noMatch: 沒有節點匹配當前搜索
 clusterTemplateRevisionUpgradeNotification:
-  tooltip: 修订 {revision} 可用于升级。
+  tooltip: 修訂 {revision} 可用於升級。
 clusterTemplatesPage:
   headers:
-    created: 创建时间
-    defaultRevisionId: 默认修订
-    revisionsCount: 修订版本
+    created: 創建時間
+    defaultRevisionId: 默認修訂
+    revisionsCount: 修訂版本
   index:
     header: RKE 集群模板列表
     newTemplate: 添加模板
   new:
     header: 添加模板
   newRevision:
-    header: 新集群模板修订
+    header: 新集群模板修訂
   select:
-    label: 从模板修订克隆
+    label: 從模板修訂克隆
   table:
-    name: 修订版本名称
+    name: 修訂版本名稱
 containersSection:
   detail: Pod 中的容器
   initContainer: Init 容器
-  noData: 没有容器
-  noMatch: 没有容器与当前搜索匹配
+  noData: 沒有容器
+  noMatch: 沒有容器與當前搜索匹配
   title: 容器
 copyToClipboard:
   copied: 已複製
   tooltip: 複製到剪貼板
 cruPersistentVolumeClaim:
   capacity:
-    help: 帮助
+    help: 幫助
     label: 容量
     unit: GiB
   define:
@@ -140,8 +142,8 @@ cruPersistentVolumeClaim:
     label: 持久卷
     prompt: 選擇一個持久卷...
   secretRequired:
-    name: 密文名称
-    namespace: 密文命名空间
+    name: 密文名稱
+    namespace: 密文命名空間
   source:
     label: 源
     pv: 使用已有的持久卷
@@ -193,7 +195,7 @@ enablePipeline:
   configNow: 立即設置
   header: 啟用代碼庫認證
   helpText: 代碼庫認證尚未開啟,需要先開啟代碼庫認證。
-  noPermission: 代碼庫認證尚未開啟,需要聯系項目管理員設置認證。
+  noPermission: 代碼庫認證尚未開啟,需要聯繫項目管理員設置認證。
 formBalancerListeners:
   access:
     internal: 內部
@@ -261,15 +263,15 @@ formHealthCheck:
     label: 檢查超時
   title: 健康檢查
 formNodeTaints:
-  addAction: 添加污点（Taint）
-  detail: 污点标记的节点不接受未配置容忍（tolerate）的 Pods 调度。
+  addAction: 添加污點（Taint）
+  detail: 污點標記的節點不接受未配置容忍（tolerate）的 Pods 調度。
   effect:
-    label: 影响
+    label: 影響
   key:
-    label: 键
+    label: 鍵
     placeholder: "例如: foo"
-  protip: 必须是唯一的键值对
-  title: 污点（Taints）
+  protip: 必須是唯一的鍵值對
+  title: 污點（Taints）
   value:
     label: 值
     placeholder: "例如: bar"
@@ -291,13 +293,13 @@ formPorts:
     privateRequired: 每條映射規則必須設置容器端口。
     publicRequired: 如果指定了主機IP，則需要源端口。
   header: 端口映射
-  hostPortWarning: "Host Port 模式不支持 Windows 节点。了解更多关于 Windows 在 Kubernetes 中的<a href=\"https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#limitations\" target=\"_blank\">支持限制</a>。"
+  hostPortWarning: "Host Port 模式不支持 Windows 節點。了解更多關於 Windows 在 Kubernetes 中的<a href=\"https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#limitations\" target=\"_blank\">支持限制</a>。"
   kind:
     ClusterIP: 集群IP(集群內部訪問)
     HostPort: HostPort(僅Pod所在主機端口可訪問)
     HostPortDisbaled: HostPort
     LoadBalancer: L4層負載均衡器(對接公有雲負載均衡服務)
-    LoadBalancerDisbaled: Layer-4 Load Balancer
+    LoadBalancerDisbaled: 'L4 層負載均衡器 (禁用)'
     NodePort: NodePort(所有主機端口均可訪問)
     label: 網絡模式
   name:
@@ -306,7 +308,7 @@ formPorts:
   noPorts: 當前Pod沒有映射端口
   nodePort:
     customPortRangePlaceholder: "端口範圍{range}，例如: {port}"
-    placeholder: "默認端口範圍30000-32768，例如: 30000"
+    placeholder: "默認端口範圍 30000-32767，例如: 30000"
   protocol:
     label: 協議
   showAdvanced: 顯示端口命名選項
@@ -324,10 +326,10 @@ formReservation:
     label: "{component} Memory 限制"
     placeholder: "例如: 1000"
   requestCpu:
-    label: "{component} CPU 预留"
+    label: "{component} CPU 預留"
     placeholder: "例如: 1000"
   requestMemory:
-    label: "{component} Memory 预留"
+    label: "{component} Memory 預留"
     placeholder: "例如: 1000"
 formScheduling:
   addCustom: 添加自定義規則
@@ -422,29 +424,29 @@ formServicePorts:
   name:
     label: 端口名称
     placeholder: "例如: myport"
-  noPorts: 此服务没有端口映射。
+  noPorts: 此服務沒有端口映射。
   nodePort:
-    label: 主机端口
+    label: 主機端口
     placeholder: "例如: 30000"
   port:
-    label: 服务端口
+    label: 服務端口
     placeholder: "例如: 8088"
   protocol:
-    label: 协议
+    label: 協議
   targetPort:
-    default: 默认与服务端口相同
-    label: 目标端口（容器端口）
+    default: 默認與服務端口相同
+    label: 目標端口（容器端口）
     placeholder: "例如: 80"
 formShareMember:
-  add: 添加成员
-  helpText: 在分配所有者时，用户必须具有<a href="/g/security/roles">Create Cluster Template</a>全局角色，以便创建新的修订。这些权限可以由管理员授予。
-  public: 转换为公有 (只读)
+  add: 添加成員
+  helpText: 在分配所有者時，用戶必須具有<a href="/g/security/roles">Create Cluster Template</a>全局角色，以便創建新的修訂。這些權限可以由管理員授予。
+  public: 轉換為公有 (只讀)
   table:
     headers:
-      accessType: 访问类型
-      name: 名称
-    noData: 您没有与任何人共享此集群模板。
-    noMatch: 没有成员匹配您的搜索
+      accessType: 訪問類型
+      name: 名稱
+    noData: 您沒有與任何人共享此集群模板。
+    noMatch: 沒有成員匹配您的搜索
 formValueArray:
   addActionLabel: 添加值
   noData: 沒有數據
@@ -509,98 +511,98 @@ k8sImport:
 loginShibboleth:
   buttonText: 用Shibboleth登錄
 managedImportClusterInfo:
-  detail: 自定义 {provider} 集群选项
-  drainServerNodes: 驱散 Control Plane 节点
-  drainWorkerNodes: 驱散 Worker 节点
+  detail: 自定義 {provider} 集群選項
+  drainServerNodes: 驅散 Control Plane 節點
+  drainWorkerNodes: 驅散 Worker 節點
   error:
-    int: 并发数必须是整数值
+    int: 並發數必須是整數值
   kubernetesVersion: Kubernetes 版本
-  serverConcurrency: Control Plane 并发数
-  title: "{provider} 选项"
-  workerConcurrency: Worker 并发数
+  serverConcurrency: Control Plane 並發數
+  title: "{provider} 選項"
+  workerConcurrency: Worker 並發數
 metrics:
-  apiserver-request-count: API Server 请求速率
-  apiserver-request-latency: API Server 请求延迟
-  cluster-cpu-load: 集群负载
+  apiserver-request-count: API Server 請求速率
+  apiserver-request-latency: API Server 請求延遲
+  cluster-cpu-load: 集群負載
   cluster-cpu-usage: CPU 使用率
-  cluster-disk-io: 磁盘 I/O
-  cluster-fs-usage-percent: 磁盘使用率
-  cluster-gpu-memory-usage: GPU 内存使用率
-  cluster-memory-usage: 内存使用率
-  cluster-network-io: 网络 I/O
-  cluster-network-packet: 网络数据包
+  cluster-disk-io: 磁盤 I/O
+  cluster-fs-usage-percent: 磁盤使用率
+  cluster-gpu-memory-usage: GPU 內存使用率
+  cluster-memory-usage: 內存使用率
+  cluster-network-io: 網絡 I/O
+  cluster-network-packet: 網絡數據包
   container-cpu-usage: CPU
-  container-disk-io: 磁盘 I/O
-  container-memory-usage-bytes-sum: 内存
-  controllermanager-queue-depth: 控制器队列深度
-  etcd-db-bytes-sum: 数据库大小
-  etcd-disk-operate: 磁盘操作
-  etcd-grpc-client: GRPC 客户端流量
-  etcd-leader-change: Leader 变更
-  etcd-peer-traffic: 传输流量
-  etcd-raft-proposals: Raft 提议
+  container-disk-io: 磁盤 I/O
+  container-memory-usage-bytes-sum: 內存
+  controllermanager-queue-depth: 控制器隊列深度
+  etcd-db-bytes-sum: 數據庫大小
+  etcd-disk-operate: 磁盤操作
+  etcd-grpc-client: GRPC 客戶端流量
+  etcd-leader-change: Leader 變更
+  etcd-peer-traffic: 傳輸流量
+  etcd-raft-proposals: Raft 提議
   etcd-rpc-rate: RPC 速率
-  etcd-stream: 活动流
-  etcd-sync-duration: 磁盘同步周期
-  fluentd-buffer-queue-length: Fluentd 缓存区队列长度
-  fluentd-input-record-number: Fluentd 输入速率
-  fluentd-output-errors: Fluentd 输出错误速率
-  fluentd-output-record-number: Fluentd 输出速率
+  etcd-stream: 活動流
+  etcd-sync-duration: 磁盤同步周期
+  fluentd-buffer-queue-length: Fluentd 緩存區隊列長度
+  fluentd-input-record-number: Fluentd 輸入速率
+  fluentd-output-errors: Fluentd 輸出錯誤速率
+  fluentd-output-record-number: Fluentd 輸出速率
   global-cluster-cpu-usage: 集群 CPU 使用量 Top 5
-  global-cluster-disk-usage: 集群磁盘使用量 Top 5
-  global-cluster-memory-usage: 集群内存使用量 Top 5
-  global-node-cpu-usage: 节点 CPU 使用量 Top 5
-  global-node-disk-usage: 节点磁盘使用量 Top 5
-  global-node-memory-usage: 节点内存使用量 Top 5
+  global-cluster-disk-usage: 集群磁盤使用量 Top 5
+  global-cluster-memory-usage: 集群內存使用量 Top 5
+  global-node-cpu-usage: 節點 CPU 使用量 Top 5
+  global-node-disk-usage: 節點磁盤使用量 Top 5
+  global-node-memory-usage: 節點內存使用量 Top 5
   global-pod-cpu-usage: Pod CPU 使用量 Top 5
-  global-pod-memory-usage: Pod 内存使用量 Top 5
-  global-pod-restart: 集群 Pod 重启次数 Top 5
-  global-pod-unhealthy: 集群异常 Pod 数量 Top 5
-  global-pod-unschedulable: 集群不可调度 Pod 数量 Top 5
-  ingresscontroller-nginx-connection: Ingress 控制器连接数
-  ingresscontroller-request-process-time: Ingress 控制器请求处理时长
-  istio-4xxs: 项目 4xx 错误代码计数
-  istio-4xxs-top10: 服务 4xx 错误代码计数
-  istio-5xxs: 项目 5xx 错误代码计数
-  istio-5xxs-top10: 服务 5xx 错误代码计数
+  global-pod-memory-usage: Pod 內存使用量 Top 5
+  global-pod-restart: 集群 Pod 重啟次數 Top 5
+  global-pod-unhealthy: 集群異常 Pod 數量 Top 5
+  global-pod-unschedulable: 集群不可調度 Pod 數量 Top 5
+  ingresscontroller-nginx-connection: Ingress 控制器連接數
+  ingresscontroller-request-process-time: Ingress 控制器請求處理時長
+  istio-4xxs: 項目 4xx 錯誤代碼計數
+  istio-4xxs-top10: 服務 4xx 錯誤代碼計數
+  istio-5xxs: 項目 5xx 錯誤代碼計數
+  istio-5xxs-top10: 服務 5xx 錯誤代碼計數
   istio-global-request-volume: Project Request Volume
   istio-global-request-volume-top10: Request Volume by Service
   istio-global-success-rate: Project Success Rate
   istio-request-duration-p50-top10: P50 Request Latency by Service
   istio-request-duration-p90-top10: P90 Request Latency by Service
   istio-request-duration-p99-top10: P99 Request Latency by Service
-  node-cpu-load: 节点负载
+  node-cpu-load: 節點負載
   node-cpu-usage: CPU 使用率
-  node-disk-io: 磁盘 I/O
-  node-fs-usage-percent: 磁盘使用率
-  node-gpu-memory-total: GPU 内存总量
-  node-gpu-memory-usage: GPU 内存使用率
-  node-memory-usage: 内存使用率
-  node-network-io: 网络 I/O
-  node-network-packet: 网络数据包
+  node-disk-io: 磁盤 I/O
+  node-fs-usage-percent: 磁盤使用率
+  node-gpu-memory-total: GPU 內存總量
+  node-gpu-memory-usage: GPU 內存使用率
+  node-memory-usage: 內存使用率
+  node-network-io: 網絡 I/O
+  node-network-packet: 網絡數據包
   pod-cpu-usage: CPU
-  pod-disk-io: 磁盘 I/O
-  pod-memory-usage-bytes-sum: 内存
-  pod-network-io: 网络 I/O
-  pod-network-packet: 网络数据包
-  scheduler-e-2-e-scheduling-latency-seconds-quantile: 调度器 e2e 调度延迟
-  scheduler-pod-unscheduler: 调度失败的 Pod
-  scheduler-total-preemption-attempts: 调度器尝试调度次数
+  pod-disk-io: 磁盤 I/O
+  pod-memory-usage-bytes-sum: 內存
+  pod-network-io: 網絡 I/O
+  pod-network-packet: 網絡數據包
+  scheduler-e-2-e-scheduling-latency-seconds-quantile: 調度器 e2e 調度延遲
+  scheduler-pod-unscheduler: 調度失敗的 Pod
+  scheduler-total-preemption-attempts: 調度器嘗試調度次數
   workload-cpu-usage: CPU
-  workload-disk-io: 磁盘 I/O
-  workload-memory-usage-bytes-sum: 内存
-  workload-network-io: 网络 I/O
-  workload-network-packet: 网络数据包
+  workload-disk-io: 磁盤 I/O
+  workload-memory-usage-bytes-sum: 內存
+  workload-network-io: 網絡 I/O
+  workload-network-packet: 網絡數據包
 modalDeleteGroupRoleBinding:
-  createLabel: 确定删除
-  header: "您确定要删除组的所有权限吗: {groupName}"
+  createLabel: 確定刪除
+  header: "您確定要刪除組的所有權限嗎: {groupName}"
 modalDeleteIstio:
   disable: 禁用
   disabling: 禁用中
   onlyIstio:
     "false": 包括 Istio 和 Monitoring
-    "true": 仅 Istio
-  title: "您确定要禁用:"
+    "true": 僅 Istio
+  title: "您確定要禁用:"
 modalFeedback:
   header: 歡迎使用{appName}!
   send: 開始使用
@@ -647,12 +649,12 @@ nav:
     clusters:
       rkeTemplate: RKE 集群模板
       tab: 集群
-    drivers: 驱动管理
-    globalDns: 全局 DNS 服务
-    globalDnsEntries: 全局 DNS 服务
+    drivers: 驅動管理
+    globalDns: 全局 DNS 服務
+    globalDnsEntries: 全局 DNS 服務
     globalDnsProviders: 全局 DNS 提供商
-    globalMonitoring: 全局监控
-    globalRegistry: 全局镜像库
+    globalMonitoring: 全局監控
+    globalRegistry: 全局鏡像庫
     imageRepo:
       config: Harbor 配置
       logs: 日誌
@@ -660,14 +662,14 @@ nav:
       registries: 倉庫管理
       tab: 鏡像倉庫
     machines: 主機
-    multiClusterApps: 多集群应用
+    multiClusterApps: 多集群應用
     nodeDrivers: 主機驅動
     security:
       accounts: 用户
       authWarning: 注意:除本地身份驗證之外，在任何時候只能啟用單個身份驗證提供者。如果在2.1之前啟用了多個身份驗證提供者，則仍然可以編輯或禁用這些提供者，但不能啟用其他提供者。您也不能重新啟用以前禁用的提供者。禁用時要小心，禁用後配置無法恢復。
       authentication: 認證
-      cloudCredentials: 云凭证
-      groupAccounts: 用户组
+      cloudCredentials: 雲憑證
+      groupAccounts: 用戶組
       members: 成員
       podSecurityPolicies: Pod安全策略
       roles: 角色
@@ -684,11 +686,11 @@ nav:
     apps: 應用商店
     launch: 啟動
     manage: 管理
-    noData: 目前没有运行应用程序
-    noMatch: 没有应用程序匹配当前搜索
+    noData: 目前沒有運行應用程序
+    noMatch: 沒有應用程序匹配當前搜索
     tab: 應用商店
   auditLog:
-    tab: 审计日志
+    tab: 審計日誌
   catalog:
     all: 全部
     community: 社區貢獻
@@ -725,9 +727,9 @@ nav:
     tab: 工作負載
     volumes: 數據卷
   dashboard:
-    try: 仪表盘
+    try: 儀錶盤
   f5:
-    controllers: F5 负载均衡
+    controllers: F5 負載均衡
     tls: TLS
   group:
     namespace: 按名稱空間分組
@@ -741,10 +743,10 @@ nav:
   infra:
     certificates: 證書
     configMaps: 配置映射
-    f5Ingresses: F5 负载均衡
+    f5Ingresses: F5 負載均衡
     hpa: HPA
     members: 成員
-    pipelines: 流水线
+    pipelines: 流水線
     registries: 鏡像庫憑證
     secrets: 密文
     storagePage: 存儲
@@ -773,16 +775,16 @@ nav:
   srToggleDropdown: 切換下拉菜單
   tools:
     alerts: 告警
-    backup: Rancher 备份
-    backups: 备份
-    catalogs: 商店设置
-    cisF5: F5 负载均衡服务
-    cisScans: CIS 扫描
-    fleet: 持续交付
+    backup: Rancher 備份
+    backups: 備份
+    catalogs: 商店設置
+    cisF5: F5 負載均衡服務
+    cisScans: CIS 掃描
+    fleet: 持續交付
     gatekeeper: OPA Gatekeeper
     istio: Istio
     logging: 日誌
-    monitoring: 监控
+    monitoring: 監控
     notifiers: 通知
     pipeline: 流水線
     rio: Rio
@@ -812,24 +814,24 @@ pagination:
   catalog: "{pages, plural,\n=0{無應用商店}\n=1{選中{count}{count, plural,=1{個應用商店}other{個應用商店}}}\nother{當前顯示{count}個應用商店中的{from}到{to}個}}\n"
   certificate: "{pages, plural,\n=0{無證書}\n=1{選中{count}{count, plural,=1{個證書}other{個證書}}}\nother{當前顯示{count}個證書中的{from}到{to}個}}\n"
   cluster: "{pages, plural,\n=0{沒有集群}\n=1{選中{count}{count, plural,=1{個集群}other{個集群}}}\nother{當前顯示{count}個集群中的{from}到{to}個 }}\n"
-  clusterTemplates: "{pages, plural,\n=0 {No Template Revisions}\n=1 {{count} {count, plural, =1 {Template Revision} other {Template Revisions}}}\nother {{from} - {to} of {count} Template Revisions}}\n"
+  clusterTemplates: "{pages, plural,\n=0 { 無模板 }\n=1 { 選中 {count} {count, plural, =1 { 個模板 } other { 個模板 }}}\nother { 當前顯示 {count} 個模板中的 {from} 到 {to} 個 }}\n"
   container: "{pages, plural,\n=0 {無容器}\n=1{選中{count} {count, plural, =1{個容器}other{個容器}}}\nother{當前顯示{count}個容器中的{from}到{to}個 }}\n"
-  destinationRules: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Destination Rule} other {Destination Rules}}}\nother {{from} - {to} of {count} Destination Rules}}\n"
-  dnsProvider: "{pages, plural,\n=0{ 无 DNS 提供商 }\n=1{ 选中 {count}{count, plural,=1{ 条 DNS 提供商 } other { 条 DNS 提供商 }}}\nother { 当前显示 {count} 条 DNS 提供商 中的 {from} 到 {to} 条 }}\n"
+  destinationRules: "{pages, plural,\n=0 { 無選項 }\n=1 { 選中 {count} {count, plural, =1 { 條目標規則 } other { 條目標規則 }}}\nother { 當前顯示 {count} 條目標規則中的 {from} 到 {to} 條}}\n"
+  dnsProvider: "{pages, plural,\n=0{ 無 DNS 提供商 }\n=1{ 選中 {count}{count, plural,=1{ 條 DNS 提供商 } other { 條 DNS 提供商 }}}\nother { 當前顯示 {count} 條 DNS 提供商 中的 {from} 到 {to} 條 }}\n"
   dnsRecord: "{pages, plural,\n=0{無DNS記錄}\n=1{選中{count}{count, plural,=1{條DNS記錄}other{條DNS記錄}}}\nother {當前顯示{count}條DNS Records中的{from}到{to}條}}\n"
   driver: "{pages, plural,\n=0{無驅動}\n=1{選中{count}{count, plural,=1{個驅動}other{個驅動}}}\n  other {當前顯示{count}個驅動中的{from}到{to}個}}\n"
   driverOptions: "{pages, plural,\n=0{無驅動選項}\n=1{選中{count}{count, plural,=1{個驅動選項}other{個驅動選項}}}\nother {當前顯示{count}個驅動選項中的{from}到{to}個}}\n"
   entry: "{pages, plural,\n=0{無條目}\n=1{選中{count}{count, plural,=1{個條目}other{個條目}}}\nother {當前顯示{count}個條目中的{from}到{to}個 }}\n"
   event: "{pages, plural,\n=0{無事件}\n=1{選中{count}{count, plural,=1{個事件}other{個事件}}}\nother{當前顯示{count}個事件中的{from}到{to}個}}\n"
-  f5Ctl: "{pages, plural,\n=0{ 无 F5负载均衡}\n=1{ 选中 {count}{count, plural,=1{ 个 F5负载均衡} other { 个 F5负载均衡}}}\nother { 当前显示 {count} 个 F5负载均衡 中的 {from} 到 {to} 个 }}\n"
-  f5Tls: "{pages, plural,\n=0{ 无 TLS证书}\n=1{ 选中 {count}{count, plural,=1{ 个 TLS证书} other { 个 TLS证书}}}\nother { 当前显示 {count} 个 TLS证书 中的 {from} 到 {to} 个 }}\n"
-  features: "{pages, plural,\n=0 {No Features}\n=1 {{count} {count, plural, =1 {Feature} other {Features}}}\nother {{from} - {to} of {count} Features}}\n"
-  gateways: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Gateway} other {Gateways}}}\nother {{from} - {to} of {count} Gateways}}\n"
+  f5Ctl: "{pages, plural,\n=0{ 無 F5負載均衡}\n=1{ 選中 {count}{count, plural,=1{ 個 F5負載均衡} other { 個 F5負載均衡}}}\nother { 當前顯示 {count} 個 F5負載均衡 中的 {from} 到 {to} 個 }}\n"
+  f5Tls: "{pages, plural,\n=0{ 無 TLS證書}\n=1{ 選中 {count}{count, plural,=1{ 個 TLS證書} other { 個 TLS證書}}}\nother { 當前顯示 {count} 個 TLS證書 中的 {from} 到 {to} 個 }}\n"
+  features: "{pages, plural,\n=0 { 無功能選項 }\n=1 { 選中 {count} {count, plural, =1 { 個功能選項 } other { 個功能選項 }}}\nother { 當前顯示 {count} 個功能選項中的 {from} 到 {to} 個 }}\n"
+  gateways: "{pages, plural,\n=0 { 無選項 }\n=1 { 選中 {count} {count, plural, =1 { 個網關 } other { 個網關 }}}\nother { 當前顯示 {count} 個網關中的 {from} 到 {to} 個 }}\n"
   generic: "{pages, plural,\n=0{無條目}\n=1{選中{count}{count, plural, =1{個條目}other{個條目}}}\nother{當前顯示{count}個條目中的{from}到{to}個}}\n"
-  hpa: "{pages, plural,\n=0 { 没有 Pod 自动水平伸缩规则 }\n=1 { 选中 {count} {count, plural, =1 { 条 Pod 自动水平伸缩规则 } other { 条 Pod 自动水平伸缩规则 }}}\nother { 当前显示 {count} 条 Pod 自动水平伸缩规则中的 {from} 到 {to} 条 }}\n"
+  hpa: "{pages, plural,\n=0 { 沒有 Pod 自動水平伸縮規則 }\n=1 { 選中 {count} {count, plural, =1 { 條 Pod 自動水平伸縮規則 } other { 條 Pod 自動水平伸縮規則 }}}\nother { 當前顯示 {count} 條 Pod 自動水平伸縮規則中的 {from} 到 {to} 條 }}\n"
   image: "{pages, plural,\n=0{無鏡像}\n=1{選中{count}{count, plural,=1{個鏡像}other{個鏡像}}}\nother {當前顯示{count}個鏡像中的{from}到{to}個 }}\n"
   ingress: "{pages, plural,\n=0{無Ingresses}\n=1{選中{count}{count, plural,=1{個Ingresses}other{個Ingresses}}}\nother {當前顯示{count}個Ingresses中的{from}到{to}個 }}\n"
-  istioRule: "{pages, plural,\n=0 {No Traffic Rules}\n=1 {{count} {count, plural, =1 {Traffic Rule} other {Traffic Rules}}}\nother {{from} - {to} of {count} Traffic Rules}}\n"
+  istioRule: "{pages, plural,\n=0 { 無流量規則 }\n=1 { 選中 {count} {count, plural, =1 { 條流量規則 } other { 條流量規則 }}}\nother { 當前顯示 {count} 條流量規則中的 {from} 到 {to} 條}}\n"
   link: "{pages, plural,\n=0{無鏈接}\n=1{選中{count}{count, plural,=1{個鏈接}other{個鏈接}}}\nother {當前顯示{count}個Links中的{from}到{to}個 }}\n"
   loadBalancer: "{pages, plural,\n=0{無負載均衡}\n=1{選中{count}{count, plural,=1{條負載均衡}other{條負載均衡}}}\nother {當前顯示{count}條負載均衡中的{from}到{to}條 }}\n"
   member: "{pages, plural,\n=0{無成員}\n=1{選中{count}{count, plural,=1{個成員}other{個成員}}}\nother {當前顯示{count}個成員中的{from}到{to}個}}\n"
@@ -844,38 +846,38 @@ pagination:
   podNoSubset: 0 of {count} Pods
   port: "{pages, plural,\n=0{無端口}\n=1{選中{count}{count, plural,=1{個端口}other{個端口}}}\nother{當前顯示{count}個端口中的{from}到{to}個}}\n"
   project: "{pages, plural,\n=0{無項目}\n=1{選中{count}{count, plural,=1{個項目}other{個項目}}}\nother {當前顯示{count}個項目中的{from}到{to}個 }}\n"
-  role: "{pages, plural,\n=0 { 没有角色 }\n=1 { 选中 {count} {count, plural, =1 { 条角色 } other { 条角色 }}}\nother { 当前显示 {count} 条角色中的 {from} 到 {to} 条 }}\n"
+  role: "{pages, plural,\n=0 { 沒有角色 }\n=1 { 選中 {count} {count, plural, =1 { 條角色 } other { 條角色 }}}\nother { 當前顯示 {count} 條角色中的 {from} 到 {to} 條 }}\n"
   rule: "{pages, plural,\n=0{無規則}\n=1{選中{count}{count, plural,=1{條規則}other{條規則}}}\nother {當前顯示{count}條規則中的{from}到{to}條 }}\n"
   service: "{pages, plural,\n=0{無服務}\n=1{選中{count}{count, plural,=1{個服務}other{個服務}}}\nother {當前顯示{count}個服務中的{from}到{to}個}}\n"
   storageClass: "{pages, plural,\n=0{無存儲類}\n=1{選中{count}{count, plural,=1{個存儲類}other{個存儲類}}}\nother{當前顯示{count}個Storage Classes中的{from}到{to}個}}\n"
-  virtualServices: "{pages, plural,\n=0 {No Options}\n=1 {{count} {count, plural, =1 {Virtual Service} other {Virtual Services}}}\nother {{from} - {to} of {count} Virtual Services}}\n"
+  virtualServices: "{pages, plural,\n=0 { 無選項 }\n=1 { 選中 {count} {count, plural, =1 { 個虛擬服務 } other { 個虛擬服務 }}}\nother { 當前顯示 {count} 個虛擬服務中的 {from} 到 {to} 個 }}\n"
   volume: "{pages, plural,\n=0{沒有卷}\n=1{選中{count}{count, plural,=1{個卷}other{個卷}}}\nother {當前顯示{count}個數據卷中的{from}到{to}個}}\n"
   workload: "{pages, plural,\n=0{無工作負載}\n=1{選中{count}{count, plural,=1{個工作負載}other{個工作負載}}}\nother {當前顯示{count}個工作負載中的{from}到{to}個 }}\n\n"
 pipelineNotification:
-  asMessage: 发送信息到
+  asMessage: 發送信息到
   condition:
     changed:
-      label: 改变
+      label: 改變
     failed:
-      label: 失败
-    required: 构建状态必选
+      label: 失敗
+    required: 構建狀態必選
     success:
       label: 成功
   header: 通知
   recipients:
     required: 接受者必填
-  when: 当构建状态为
+  when: 當構建狀態為
 projectIstioPage:
   info:
-    noPermission: 您没有配置 Istio 的权限。
-    notEnabled: Istio 尚未启用。点击 <a href="/c/{clusterId}/istio/cluster-setting">此处</a> 启用它。
-    notOwner: Istio 尚未启用，请与集群管理员联系。
+    noPermission: 您沒有配置 Istio 的權限。
+    notEnabled: Istio 尚未啟用。點擊 <a href="/c/{clusterId}/istio/cluster-setting">此處</a> 啟用它。
+    notOwner: Istio 尚未啟用，請與集群管理員聯繫。
 registriesPage:
   index:
     header: 鏡像庫憑證
     linkTo: 添加鏡像庫憑證
-    noData: 没有镜像库凭证
-    noMatch: 没有镜像库凭据匹配当前搜索
+    noData: 沒有鏡像庫憑證
+    noMatch: 沒有鏡像庫憑據匹配當前搜索
     table:
       body:
         noData: 當前沒有任何鏡像倉庫
@@ -942,17 +944,17 @@ servicePage:
     title: 服務日誌
   multistat:
     created: "創建時間: "
-    cronSchedule: 定时调度
-    currentScale: "Pod 可用副本数: {count}"
+    cronSchedule: 定時調度
+    currentScale: "Pod 可用副本數: {count}"
     daemonSetScale: 每主機1個Pod
     fqdn: "FQDN:"
     image: "鏡像名: "
     namespace: "命名空間:"
     podNum:
       error:
-        required: pod個数不能為空
-        typeError: pod個数值為大于0的整数
-      label: pod個数
+        required: pod 個數不能為空
+        typeError: pod 個數值為大於 0 的整數
+      label: pod 個數
     scale: "Pod副本數:"
     type: "類型:"
   new:
@@ -1008,16 +1010,16 @@ servicePage:
     storagedriverservice: 存儲服務
 settingsPage:
   tabs:
-    feature: Feature Flags
+    feature: 功能選項
     settings: 高級設置
 shareMemberRow:
   accessType:
-    member: 成员
+    member: 成員
     owner: 所有者
-    read-only: 只读用户
+    read-only: 只讀用戶
   table:
     public:
-      accessType: 只读
+      accessType: 只讀
       name: 公有 (all members & groups)
 stackHeader:
   outputs: 輸出
@@ -1055,7 +1057,7 @@ stackPage:
       writable: 可寫
 telemetryOpt:
   eula:
-    link: 条款和条件
+    link: 條款和條件
     prefix: 我同意
     suffix: ""
   header: 信息統計
@@ -1070,7 +1072,7 @@ time:
   now: 現在
   secsAgo: "{secs, plural,\n=1{#秒前}\nother{#秒前}\n}\n\n"
 tooltipToggleOverride:
-  label: 是否允许用户修改当前参数?
+  label: 是否允許用戶修改當前參數?
 tooltipWarning:
   dismiss: 取消
   notConfigured: 未設置訪問控制
@@ -1084,12 +1086,12 @@ viewEditDescription:
     name:
       placeholder: "例如: lab"
 virtualServicePage:
-  noData: 没有定义虚拟服务
-  noMatch: 没有虚拟服务匹配当前搜索
+  noData: 沒有定義虛擬服務
+  noMatch: 沒有虛擬服務匹配當前搜索
   notSupported: networking.istio.io/v1alpha3 API 在集群中不可用。
   table:
     hosts:
-      label: 主机
+      label: 主機
 volumesPage:
   addActionLabel: 添加Volume Claim
   claimName:
@@ -1104,8 +1106,8 @@ volumesPage:
 windowsCluster:
   istio: 在 Windows 集群中不支持 Istio。
   logging:
-    helpText: 我们将使用 fluentd 从每个容器中收集 stdout/stderr 日志，以及收集每个 <b>Linux</b> 主机 <code >/var/log/containers/</code> 路径和每个<b>Windows</b>主机<code >c:/var/log/containers/</code>路径下的日志文件，并且可以将日志发送到下面配置的目标日志收集服务。
+    helpText: 我們將使用 fluentd 從每個容器中收集 stdout/stderr 日誌，以及收集每個 <b>Linux</b> 主機 <code >/var/log/containers/</code> 路徑和每個<b>Windows</b>主機<code >c:/var/log/containers/</code>路徑下的日誌文件，並且可以將日誌發送到下面配置的目標日誌收集服務。
     kafka:
-      brokerTypeHelpText: 使用 Broker 列表作为 Kafka 连接入口点。
-    vxlanWarning: "由于 <a href=\"https://github.com/kubernetes/kubernetes/issues/79359\" target=\"_blank\">kubernetes/kubernetes#79359</a> 这个问题，{appName} Logging 目前无法运行在 VxLan 模式下。我们正在与微软合作， 以修复 Kubernetes 相关的问题。\n"
+      brokerTypeHelpText: 使用 Broker 列表作為 Kafka 連接入口點。
+    vxlanWarning: "由於 <a href=\"https://github.com/kubernetes/kubernetes/issues/79359\" target=\"_blank\">kubernetes/kubernetes#79359</a> 這個問題，{appName} Logging 目前無法運行在 VxLan 模式下。我們正在與微軟合作， 以修復 Kubernetes 相關的問題。\n"
   pipelines: 在 Windows 集群中不支持 pipelines。
