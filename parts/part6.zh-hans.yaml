@@ -79,7 +79,7 @@ catalogSettings:
       native: 原生
     name:
       label: 名称
-      placeholder: e.g. mycatalog
+      placeholder: "例如: Mycatalog"
     noData: 没有自定义应用商店
     noMatch: 没有与当前搜索匹配的应用商店
     password:
@@ -97,9 +97,9 @@ catalogSettings:
   notAvailable: "不可用: 这是名为<code>{name}</code>的自定义商店"
 editContainer:
   description:
-    placeholder: "例如: 我的应用"
+    placeholder: "例如: My Application"
   name:
-    placeholder: e.g. myapp
+    placeholder: "例如: myapp"
   title:
     container: 编辑容器
     vm: 编辑虚拟机
@@ -150,7 +150,7 @@ formKeyValue:
     placeholder: 值
 formNamespace:
   create:
-    placeholder: e.g. myapp
+    placeholder: "例如： myapp"
   errors:
     noneChosen: 您必须选择命名空间。
     validation: "命名空间: {error}"
@@ -220,11 +220,11 @@ formNetwork:
   requestedIp:
     help: 从 10.42.0.0/16 网段中请求指定的 IP 地址，如果此 IP 地址已经被使用则会分配随机 IP。
     label: 请求 IP
-    placeholder: "例如: 10.42.2.24"
+    placeholder: 可选，"例如: 10.42.2.24"
   resolvingServers:
     addActionLabel: 添加服务器
     label: 解析服务器
-    placeholder: "例如: 114.114.114.114"
+    placeholder: "例如: 8.8.4.4"
   retainIp:
     label: 保持 IP
     reuse: 当升级或替换不健康的容器实例时保持 IP 地址不变。
@@ -239,10 +239,10 @@ formNetwork:
     form:
       ip:
         label: IP
-        placeholder: 例如：192.168.1.100,多个 IP 用逗号连接
+        placeholder: "例如: 192.168.1.100，多个 IP 用逗号连接"
       mac:
         label: MAC
-        placeholder: "例如: 0a:00:27:00:00:00, 多个 MAC 用逗号连接"
+        placeholder: "例如: 0a:00:27:00:00:00，多个 MAC 用逗号连接"
       subnet:
         label: Subnet
         placeholder: 请选择一个 MacvlanSubnet
@@ -254,10 +254,10 @@ formRunAsGroupPodSecurityPolicy:
     addLabel: 添加范围
     max:
       label: 最大
-      placeholder: e.g. 65535
+      placeholder: "例如: 65535"
     min:
       label: 最小
-      placeholder: e.g. 1
+      placeholder: "例如: 1"
   rule:
     mayRunAs: MayRunAs - 不需要指定 RunAsGroup。但是，当指定 RunAsGroup 时，它们必须位于定义的范围内。
     mustRunAs: MustRunAs - 需要配置一个范围。使用范围的第一个值作为默认值。根据配置的范围进行验证。
@@ -479,41 +479,41 @@ nodeDriver:
       detail: 选择将用于启动 EC2 实例的区域和 API 密钥
       help: 在这里粘贴您的 AWS 密钥对。我们将使用此密钥创建新实例。
       loading: 从 EC2 加载可用性区域和 VPC 信息…
-      next: 下一步:对节点进行身份验证和配置
+      next: "下一步: 认证 & 配置节点"
       title: 1. 帐户访问
     accessKey:
-      label: Access Key
+      label: 访问密钥
       placeholder: Your AWS access key
     ami:
       label: AMI
       placeholder: An Ubuntu AMI
-      rancherList: RancherOS AMI List
+      rancherList: RancherOS AMI 列表
     availabilityZone: 可用性区域
     encryptEbsVolume:
-      label: Encryption
-      radioLabel: Encrypt EBS Volume
+      label: 加密
+      radioLabel: 加密 EBS 卷
     iam:
       label: IAM 配置文件
       placeholder: my-k8s-profile
     instance:
-      detail: 定制将要创建的EC2实例。
+      detail: 定制将要创建的 EC2 实例。
       title: 4. 实例
     instanceType:
       label: 实例类型
     metadata:
       httpEndpoint:
-        disabled: Disabled
-        enabled: Enabled
-        label: HTTP Endpoint
-        protip: 启用或禁用实例上的HTTP元数据端点。
+        disabled: 禁用
+        enabled: 启用
+        label: HTTP 端点
+        protip: 启用或禁用实例上的 HTTP 元数据端点。
       httpTokens:
-        label: HTTP Tokens
+        label: HTTP 令牌
         optional: 可选
         protip: 对实例元数据请求使用 HTTP 令牌
         required: 必须
     needs:
-      item1: From the {appName} server to <code>TCP</code> port <code>22</code> <span class="text-muted">(SSH to install and configure Docker)</span>
-      item2: From and To all other hosts on <code>UDP</code> ports <code>500</code> and <code>4500</code> <span class="text-muted">(for IPsec networking)</span></li>
+      item1: 从 {appName} 到主机的 <code>TCP</code> 端口 <code>22</code> <span class="text-muted">(SSH 连接用于安装 docker)</span>
+      item2: 主机之间需要开放 <code>UDP</code> 端口 <code>500</code> 和 <code>4500</code><span class="text-muted">(IPsec 网络)</span></li>
       item3: 这些规则 <b>不会</b> 自动添加。
       label: "要使 {appName} 正常访问，您的安全组将需要允许流量:"
     noSubnet: 没有子网可供选择
@@ -527,15 +527,15 @@ nodeDriver:
     region:
       label: 区域
     requestSpotInstance:
-      enable: Request spot instance
+      enable: 请求 spot 实例
       label: Spot 实例
     rootSize:
       label: 根磁盘大小
       unit: GB
     secretKey:
-      label: Secret Key
+      label: 加密密钥
       placeholder: Your AWS secret key
-      provided: Provided
+      provided: 已提供
     securityGroup:
       choose: 选择一个或多个现有组
       defaultCreate: "标准: 自动创建 <code>{groupName}</code> 组"
@@ -545,16 +545,16 @@ nodeDriver:
       next: "下一步: 设置实例选项"
       title: 3. 安全组
     spotPrice:
-      label: Spot Price
+      label: Spot 价格
       unit: $
     sshUser:
-      label: SSH User
-      placeholder: e.g. ubuntu
+      label: SSH 用户
+      placeholder: "例如: ubuntu"
     subnet: VPC/子网
     tags:
-      addActionLabel: Add AWS Tag
-      placeholder: e.g. dev
-      valueLabel: Tags
+      addActionLabel: 新增 AWS 标签
+      placeholder: "例如: dev"
+      valueLabel: 标签
     useEbsOptimizedInstance:
       label: 优化实例
       radioLabel: 创建 EBS 优化的实例
@@ -571,7 +571,7 @@ nodeDriver:
       loading: 从亚马逊加载集群选项...
       next: "下一步: 配置集群"
     accessKey:
-      label: Access Key
+      label: 访问密钥
       placeholder: Your AWS access key
     ami:
       help: 您可以覆盖 Rancher 基于区域选择的默认 AMI。
@@ -588,7 +588,7 @@ nodeDriver:
       label: 预期 ASG 大小
     encryptEbs:
       detail: 在工作节点上启用EBS加密。
-      label: EBS Encryption
+      label: EBS 加密
     keyPairs:
       label: SSH Key
       prompt: 没有选择
@@ -615,9 +615,9 @@ nodeDriver:
         custom: "自定义: 从现有服务角色中选择。"
         default: "标准: Rancher 生成的服务角色。"
     secretKey:
-      label: Secret Key
+      label: 加密密钥
       placeholder: Your AWS secret key
-      provided: Provided
+      provided: 已提供
     securityGroup:
       choose: 选择一个或多个现有安全组
       defaultCreate: "标准: 自动创建新的安全组。"
@@ -629,7 +629,7 @@ nodeDriver:
     sessionToken:
       label: Session Token<em class='text-muted'> 可选</em>
       placeholder: Your AWS session token
-      provided: Provided
+      provided: 已提供
     subnet:
       help: 2 必须选择子网
       loading: 从 Amazon 加载安全组...
@@ -674,7 +674,7 @@ nodeDriver:
       placeholder: Azure 公共云
     faultDomainCount:
       helpText: 如果已经创建了可用性集，则将忽略故障域计数。
-      label: Fault Domain Count
+      label: 故障域计数
       placeholder: "例如: 3"
     image:
       helpText: 提供 ARM 资源标识符需要使用托管磁盘。
@@ -697,7 +697,7 @@ nodeDriver:
       helpText: 当使用一个由 Rancher 管理的或提供一个现有的 NSG 时，使用此模板的所有节点将使用提供的 NSG。如果没有提供 NSG，将为每个节点创建一个新的 NSG。
       label: 网络安全组
       openPorts: 当使用一个现有的 NSG 时，打开的端口被忽略。
-      placeholder: e.g. AllowVnetOutBound
+      placeholder: "例如: AllowVnetOutBound"
     openPort:
       label: 开放端口
       placeholder: "使用逗号分隔符，例如: 80，443"
@@ -738,7 +738,7 @@ nodeDriver:
       placeholder: Azure 订阅 ID
     updateDomainCount:
       helpText: 如果已经创建了可用性集，更新域计数将被忽略。
-      label: Update Domain Count
+      label: 更新域计数
       placeholder: "例如: 5"
     usePrivateIp:
       label: 使用私有 IP 连接
@@ -878,7 +878,7 @@ nodeDriver:
     faultDomainCount:
       helpText: 每个可用性域包含三个故障域
       label: 故障域
-      placeholder: e.g. 3
+      placeholder: "例如: 3"
     image:
       label: 系统镜像
       placeholder: Oracle-Linux-7.7-2020.02.21-0
@@ -889,23 +889,23 @@ nodeDriver:
       detail: 为这个模板创建的计算实例配置 VCN
       title: 虚拟云网络详细信息
     nodeCompartment:
-      label: OCID of compartment where compute instance(s) will be created
+      label: 将在其中创建计算实例的分区的 OCID
       placeholder: ocid1.compartment.oc1....
     openPort:
       label: 开放端口
-      placeholder: 逗号分隔, e.g. 80,443
+      placeholder: 逗号分隔, 例如: 80,443
     placement:
       detail: 选择此模板创建的计算实例的位置
       title: Placement
     region:
       label: 区域
-      placeholder: select cloud credential to populate options...
+      placeholder: 选择云凭据以填充选项...
     shape:
       label: Shape
-      placeholder: enter valid compartment to populate options...
+      placeholder: 输入有效分区以填充选项...
     subnet:
-      helpText: If subnet is AD-specific, it must match the AD of the node(s) created by this template.
-      label: OCID of subnet (accessible to Rancher) that compute instance(s) will use
+      helpText: 如果子网是特定于AD的，则它必须与此模板创建的节点的AD匹配。
+      label: 计算实例将使用的子网（Rancher 可访问）的 OCID
       placeholder: ocid1.subnet.oc1....
     usePrivateIp:
       label: 使用私有 IP 地址连接到计算实例
@@ -913,14 +913,14 @@ nodeDriver:
       label: 启动计算实例 VCN 的 OCID
       placeholder: ocid1.vcn.oc1....
     vcnCompartment:
-      label: OCID of compartment where VCN and subnet reside (if different than above)
+      label: VCN 和子网所在分区的 OCID（如果与上述不同）
       placeholder: ocid1.compartment.oc1....
   packet:
     accountSection: 账户访问
     apiKey:
       label: Account API Key
       placeholder: Your Packet API key
-    apiKeyHelp: 从 Packet 的 <a href="https://app.packet.net/users/0/api-keys" target="_blank">API Keys</a> 页面获取。
+    apiKeyHelp: "从 Packet 的 <a href="https://app.packet.net/users/0/api-keys" target="_blank">API Keys</a> 页面获取。"
     authentication: 验证
     image:
       label: 镜像
@@ -944,27 +944,27 @@ nodeDriver:
       label: 规格
   pnap:
     access:
-      detail: API Credentials will be used to launch phoenixNAP servers.
-      title: Account Access
+      detail: API 凭据将用于启动 phoenixNAP 服务器。
+      title: 访问账号
     errors:
-      clientIDRequired: Client ID is required.
-      clientSecretRequired: Client Secret is required.
-      hostnameRequired: Hostname is required.
-      locationRequired: Location is required.
-      osRequired: Operating System is required.
-      typeRequired: Server type is required.
+      clientIDRequired: Client ID 是必须的
+      clientSecretRequired: Client Secret 是必须的
+      hostnameRequired: Hostname 是必须的
+      locationRequired: Location 是必须的
+      osRequired: Operating System 是必须的
+      typeRequired: Server type 是必须的
     location:
-      label: Location
-      placeholder: Please select server location.
+      label: 位置
+      placeholder: 请选择服务器位置。
     os:
       label: OS
-      placeholder: Please select Operating System.
+      placeholder: 请选择操作系统。
     serverDetails:
-      detail: Select details of the instances that will be created by this template.
-      title: Server Details
+      detail: 选择将由此模板创建的实例的详细信息。
+      title: 服务器详情
     type:
-      label: Type
-      placeholder: Please select type of server to provision.
+      label: 类型
+      placeholder: 请选择要配置的服务器类型。
   rackspace:
     account:
       detail: 用来创建 RackSpace 实例的用户名和 API Key。
@@ -994,7 +994,7 @@ nodeDriver:
     cfgparam:
       addActionLabel: 添加参数
       key:
-        placeholder: e.g. guestinfo.hostname
+        placeholder: "例如: guestinfo.hostname"
       label: 用于 guestinfo 的配置参数
       value:
         placeholder: "例如: Myrancherhost"
@@ -1017,10 +1017,10 @@ nodeDriver:
       label: CPUs
       unit: "{cores, plural, =1 {Core} other {Cores}}"
     creationMethod:
-      cloneAnExistingVirtualMachine: Clone an existing virtual machine
-      deployFromTemplateContentLibrary: "Deploy from template: Content Library"
-      deployFromTemplateDataCenter: "Deploy from template: Data Center"
-      label: Creation method
+      cloneAnExistingVirtualMachine: 克隆现有虚拟机
+      deployFromTemplateContentLibrary: "模板部署: Content Library"
+      deployFromTemplateDataCenter: "模板部署: Data Center"
+      label: 创建方法
       rancherOsIso: RancherOS ISO (Deprecated)
     creationType:
       label: 创建方法
@@ -1039,16 +1039,16 @@ nodeDriver:
     dataStore:
       cluster:
         help: 在数据存储集群上创建 VM
-        tooltip: 使用数据存储集群?
+        tooltip: 使用数据存储集群
       help: 创建 VM 磁盘的数据存储
       label: 数据存储
-      placeholder: 例如：datastore_cluster_name/datastore_name
+      placeholder: "例如：datastore_cluster_name/datastore_name"
     diskSize:
       label: 磁盘
       unit: MB
     folder:
       help: VM 的文件夹。该文件夹必须已经存在于数据中心中
-      label: Folder
+      label: 文件夹
       placeholder: "例如: /folder"
     host:
       help: 用于创建虚拟机的特定主机(对于独立 ESXi 或具有 DRS 的集群留空)。
@@ -1056,7 +1056,7 @@ nodeDriver:
       placeholder: "例如: cluster_name/host_name"
     hostOptions:
       any:
-        label: Any
+        label: 任何
     instance:
       detail: 选择虚拟机的大小和操作系统
       title: 3. 实例配置
@@ -1073,7 +1073,7 @@ nodeDriver:
       addActionLabel: 添加网络
       help: 连接 VM 的网络
       valueLabel: 网络
-      valuePlaceholder: 例如：VM Network
+      valuePlaceholder: "例如：VM Network"
     password:
       label: 密码
     pool:
@@ -1085,7 +1085,7 @@ nodeDriver:
       title: 2. 调度
     schedulingSection: Scheduling
     tags:
-      addActionLabel: Add tag
+      addActionLabel: 添加标签
       detail: 标签允许您将元数据附加到 vSphere 目录中的对象，以便更容易地对这些对象进行排序和搜索。
       title: 4. 标签
     template: "模板:"
@@ -1110,14 +1110,14 @@ nodeDriver:
     vappProperty:
       addActionLabel: 添加参数
       key:
-        placeholder: e.g. guestinfo.interface.0.ip.0.address
+        placeholder: "例如: guestinfo.interface.0.ip.0.address"
       label: vApp 属性
       value:
         placeholder: "例如: ip:VM Network, expression 或 string"
     vappTransport:
       help: com.vmware.guestInfo 或 iso
       label: OVF environment transport
-      placeholder: e.g. com.vmware.guestInfo
+      placeholder: "例如: com.vmware.guestInfo"
     vcenter:
       label: vCenter 或 ESXi 服务器
       placeholder: vCenter 或者 ESXi 主机名/IP

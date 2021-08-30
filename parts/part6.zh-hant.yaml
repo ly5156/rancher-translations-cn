@@ -6,13 +6,13 @@ accordionRow:
     custom: 自定義
     error: 錯誤
     incomplete: 未完成
-    none: 無
+    none: None
     notConfigured: 未配置
     rule: "{count, plural,=1{#條規則}other{#條規則}}"
     specific: 具體
     standard: 默認
 batchDelete:
-  headerSuffix: 名称
+  headerSuffix: 名稱
 billingInfo:
   addNew: 添加支付方式
   card: "{brand}: ...{last}"
@@ -44,7 +44,7 @@ catalogSettings:
   currentProject: 當前項目
   errors:
     nameInExists: 在啟用{key}之前，請移除名稱為{key}的應用商店。
-  globalCatalog: 全局
+  globalCatalog: 全域
   header: 應用商店
   helm:
     incubator:
@@ -69,7 +69,6 @@ catalogSettings:
       label: Helm 版本
     helpText:
       header: "您可以自定義應用商店，每個自定義商店需滿足以下要求:"
-      help-branch: "可選: 如果使用基於Git的應用商店，可能需要設置分支名稱，不指定默認拉取master分支。"
       help-chart: "Helm Charts server URL，例如: https://kubernetes-charts.storage.googleapis.com/，詳細信息可查看<a href=\"https://docs.helm.sh/developing_charts/#hosting-chart-repositories\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Chart託管倉庫</a>。"
       help-git: "基於Git的商店地址，例如: https://github.com/{appName}/charts.git。"
       help-name: 唯一的名稱
@@ -85,7 +84,7 @@ catalogSettings:
     noMatch: 沒有與當前搜索匹配的應用商店
     password:
       label: 密碼
-      placeholder: password
+      placeholder: 輸入密碼
       required: 密碼必須填寫
     private:
       label: 使用私有應用商店
@@ -124,15 +123,15 @@ formJobConfig:
     label: 完成
   detail: 配置Job需要的參數。
   failedJobsHistoryLimit:
-    detail: 要保留的未完成 JOBs 的数量。
-    label: 历史失败 Jobs 限制
+    detail: 要保留的未完成 JOBs 的數量。
+    label: 歷史失敗 Jobs 限制
   parallelism:
     detail: Job在給定時間內應運行的最大Pod數。
-    label: Parallelism
+    label: 並行數
   seconds: "{count, plural,\n  =1{Second}\n  other{Seconds}\n}\n"
   successfulJobsHistoryLimit:
-    detail: 要保留多少个成功完成的 JOBs。
-    label: 历史成功 Jobs 限制
+    detail: 要保留多少個成功完成的 JOBs。
+    label: 歷史成功 Jobs 限制
   suspend:
     label: 暫停
   times: "{count, plural,\n  =1{Time}\n  other{Times}\n}\n"
@@ -240,44 +239,44 @@ formNetwork:
     form:
       ip:
         label: IP
-        placeholder: 例如：192.168.1.100,多個IP用逗號連接
+        placeholder: "例如：192.168.1.100，多個IP用逗號連接"
       mac:
         label: MAC
-        placeholder: "例如: 0a:00:27:00:00:00, 多个MAC用逗號連接"
+        placeholder: "例如: 0a:00:27:00:00:00，多個MAC用逗號連接"
       subnet:
         label: Subnet
         placeholder: 请選擇一個MacvlanSubnet
     msg: "因扁平網絡使用方式限制，Pod 縮放/升級策略已改為: 先停止舊的Pod，再啟動新的Pod"
   title: 網絡
 formRunAsGroupPodSecurityPolicy:
-  detail: 控制与容器一起运行的用户组 ID。
+  detail: 控制與容器一起運行的用戶組 ID。
   range:
-    addLabel: 添加范围
+    addLabel: 添加範圍
     max:
       label: 最大
-      placeholder: e.g. 65535
+      placeholder: "例如：65535"
     min:
       label: 最小
-      placeholder: e.g. 1
+      placeholder: "例如：1"
   rule:
-    mayRunAs: MayRunAs - 不需要指定 RunAsGroup。但是，当指定 RunAsGroup 时，它们必须位于定义的范围内。
-    mustRunAs: MustRunAs - 需要配置一个范围。使用范围的第一个值作为默认值。根据配置的范围进行验证。
-    runAsAny: RunAsAny - 没有提供默认值，允许指定任意 runAsGroup。
-  title: 作为组策略运行
+    mayRunAs: MayRunAs - 不需要指定 RunAsGroup。但是，當指定RunAsGroup 時，它們必須位於定義的範圍內。
+    mustRunAs: MustRunAs - 需要配寘一個範圍。使用範圍的第一個值作為預設值。根據配寘的範圍進行驗證。
+    runAsAny: RunAsAny - 沒有提供預設值，允許指定任意 runAsGroup。
+  title: 作為群組原則運行
 formScale:
-  label: 類型
+  label: 工作負載類型
   scaleMode:
-    cronJob: Cron定時運行
-    daemonSet: 每台主機部署1個Pod(DaemonSet)
-    deploymentPrefix: 部署
-    job: Job
+    cronJob: "CronJob: 定時運行Pod"
+    daemonSet: "DaemonSet： 每臺主機部署1個Pod"
+    deploymentPrefix: "Deployment: 部署無狀態應"
+    job: "Job: 一次性運行Pod"
     replicaSetPrefix: 副本集
     replicationControllerPrefix: 複製控制器
     scaleSuffix: "{scale, plural,\n=1{個Pod}\nother{個Pods}\n}\n"
     sidekickInactive: "Sidecar: 將容器添加到現有工作負載"
     sidekickPrefix: "Sidecar: 添加容器到"
     sidekickSuffix: ""
-    statefulSetPrefix: 有狀態(StatefulSet)部署
+    statefulSetPrefix: "StatefulSet: 部署有狀態應用"
   showAdvanced: 更多選項
 formUserLabels:
   addAction: 添加標籤
@@ -305,7 +304,7 @@ formVolumes:
     newVolume: 添加一個臨時卷
     secret: 密文卷
     tmpfs: 添加一個內存中的tmpfs
-    vct: 添加 PVC 模板
+    vct: 添加 PVC 範本
   detail: 持久化及共享數據並與獨立容器的生命周期分離。
   errors:
     absoluteMountPoint: 卷掛載點必須使用絕對路徑。
@@ -326,7 +325,7 @@ formVolumes:
     placeholder: "例如: rancher-nfs，默認: local"
     suggestion: "使用的存儲驅動:"
   volumes: 卷
-  volumesFrom: 捲來自
+  volumesFrom: 卷來自
 k8sPage:
   configFile:
     button: Kubeconfig文件
@@ -400,18 +399,18 @@ modalAddPayment:
   header: 添加新的付款方式
   save: 保存
 modalRotateEncryption:
-  backupWarning: 在继续之前，请确保集群的 ETCD 备份已经成功完成。
-  lastBackup: 最后一次备份 {backupName} 在 {backupTime} 时执行。
-  title: 轮换加密密钥
+  backupWarning: 在繼續之前，請確保集群的 ETCD 備份已經成功完成。
+  lastBackup: 最後一次備份 {backupName} 在 {backupTime} 時執行。
+  title: 輪換加密密鑰
 modalWelcome:
   closeModal: 確認
   header: 歡迎使用{appName}!
 multiClusterAppsPage:
   error:
-    appData: 加载全局应用程序数据出错
-  header: 应用列表
-  noData: 没有启动多集群应用程序
-  noMatch: 没有多集群应用程序匹配当前搜索
+    appData: 加載全局應用程序數據出錯
+  header: 應用列表
+  noData: 沒有啟動集群應用程序
+  noMatch: 沒有多集群應用程序匹配當前搜索
 newCatalog:
   answers:
     addAction: 添加應答
@@ -423,24 +422,24 @@ newCatalog:
   config: 配置選項
   customizeNamespace: 此應用程序將被部署到<code>{namespaceId}</code>命名空間
   error:
-    appData: 数据加载错误
-  forceRollback: 如果在回滚期间需要，删除和重新创建资源。
-  forceUpgrade: 如果升级过程中需要，删除和重新创建资源。
+    appData: 數據加載錯誤
+  forceRollback: 如果在回滾期間需要，刪除和重新創建資源。
+  forceUpgrade: 如果升級過程中需要，刪除和重新創建資源。
   helm:
     label: 配置選項
     options:
-      label: Helm 选项
+      label: Helm 選項
       timeout:
-        help: 等待 Kubernetes 命令完成的超时时间。
-        label: Helm 超时
+        help: 等待 Kubernetes 命令完成的超時時間。
+        label: Helm 超時
       wait:
-        help: 在将应用程序标记为激活之前，等待所有的 Kubernetes 资源准备完成，如果超过超时时间，应用程序安装将失败。
+        help: 在將應用程序標記為激活之前，等待所有的 Kubernetes 資源準備完成，如果超過超時時間，應用程序安裝將失敗。
         label: Helm 等待
     protip: Helm模板接受逗號做為分隔符的字符串列表
   istio:
     catalog: "Traffic Rules Catalog:"
-    saveNew: 创建
-  kind: "應用分類: "
+    saveNew: 創建
+  kind: "應用商店類型: "
   license: "授權:"
   maintainedBy: 由社區成員維護
   maintainer: "維護者:"
@@ -449,7 +448,7 @@ newCatalog:
   noConfig: 該模板沒有配置選項
   official: 官方認證
   preview: 預覽
-  requiredNamespace: 需要指定命名空间
+  requiredNamespace: 需要指定命名空間
   saveConfigure: 設置
   saveNew: 啟動
   saveUpgrade: 升級
@@ -472,109 +471,9 @@ newCatalog:
     default: 當前默認(當前版本{version})
     prompt: 選擇版本...
   warning:
-    monitoring: 进行监控相关内容的配置请前往 <b>集群->工具->监控</b>，在当前页面做的修改可能会被覆盖。
+    monitoring: 進行監控相關內容的配置請前往 <b>集群->工具->監控</b>，在當前頁面做的修改可能會被覆蓋。
 nodeDriver:
   addTemplate: 添加主機模板
-  aliyunecs:
-    accessKey:
-      label: 訪問秘鑰
-      placeholder: 阿里雲訪問秘鑰
-    accessKeySecret:
-      label: 訪問秘鑰令牌
-      placeholder: 阿里雲訪問秘鑰所對應的令牌
-      provided: 已提供
-    accountSection:
-      detail: 配置用於創建阿里雲主機的訪問令牌
-      label: 1. 訪問令牌
-      loading: 正在獲取阿里雲區域信息...
-      next: "下一步: 認證&配置網絡"
-    aliyunSLB:
-      label: 阿里雲SLB ID
-      placeholder: 阿里雲SLB ID
-    apiEndpoint:
-      label: (可選)阿里雲私有部署API地址
-      placeholder: 阿里雲私有部署API地址
-    dataDiskCategory:
-      label: 數據盤種類
-    dataDiskSize:
-      label: 數據磁盤大小
-      placeholder: 磁盤大小
-    errors:
-      accessKeyRequired: 請輸入訪問秘鑰
-      accessSecretRequired: 請輸入訪問秘鑰令牌
-      nameNotValidForApp: 根據{appName}主機名規則該名稱無效。
-      sshPasswordFormatError: SSH密碼必須至少包括大寫字符，小寫字符，數字和特殊字符中的三種
-      sshPasswordInvalidCharacter: SSH密碼包含非法字符
-      sshPasswordLengthNotValid: SSH密碼的長度應為8至30之間
-      vpcIdRequired: 請選擇專有網絡
-      vswitchIdRequired: 請選擇交換機
-    instanceDescription:
-      label: 實例描述
-      placeholder: 該實例的描述
-    instanceOptionsSection:
-      detail: 設置即將創建的阿里雲實例
-      label: 實例
-    instanceType:
-      label: 實例類型
-      placeholder: 實例類型
-    internetMaxBandwidth:
-      label: 最大網絡帶寬
-      placeholder: 1到100
-    ioOptimized:
-      label: 存儲IO優化
-      none: 不優化
-      optimized: 優化
-    networkSection:
-      detail: 配置通過該模版創建的實例的網絡選項
-      label: 網絡
-      loading: 正在獲取阿里雲存儲類型...
-      next: "下一步: 配置存儲選項"
-    privateAddressOnly:
-      label: 僅私網IP
-    privateIp:
-      label: 私有IP
-      placeholder: 專用網絡中的私有IP
-    region:
-      label: 區域
-      placeholder: 區域
-    routeCIDR:
-      label: 路由CIDR
-      placeholder: "例如: 192.168.1.0/24"
-    securityGroup:
-      defaultCreate: 自動創建<code>{groupName}</code>安全組
-      label: 安全組
-      placeholder: 安全組
-      prompt: 選擇安全組...
-    securitySection:
-      detail: 選擇實例所需要配置的安全組。
-      label: 安全
-    sshPassword:
-      label: SSH密碼
-      placeholder: 創建實例後SSH遠程登錄密碼(非必填)
-      provided: 已提供
-    storageSection:
-      detail: 配置通過該模版創建的實例的存儲選項
-      label: 存儲
-      loading: 正在獲取主機類型和系統鏡像...
-      next: "下一步: 配置阿里雲實例選項"
-    systemDiskCategory:
-      label: 系統盤種類
-    systemImage:
-      label: 系統鏡像
-      placeholder: 系統鏡像
-    tags:
-      addActionLabel: 添加實例標籤
-      placeholder: "例如: dev"
-      valueLabel: 標籤
-    vpcId:
-      label: 專有網絡
-      prompt: 選擇專有網絡...
-    vswitchId:
-      label: 交換機
-      prompt: 選擇交換機...
-    zone:
-      label: 可用區
-      prompt: 選擇可用區...
   amazonec2:
     access:
       detail: 選擇將用於啟動EC2實例的區域和API密鑰
@@ -591,8 +490,8 @@ nodeDriver:
       rancherList: RancherOS AMI列表
     availabilityZone: 可用區域
     encryptEbsVolume:
-      label: Encryption
-      radioLabel: Encrypt EBS Volume
+      label: 加密
+      radioLabel: 加密 EBS 卷
     iam:
       label: IAM配置文件
       placeholder: my-k8s-profile
@@ -603,33 +502,33 @@ nodeDriver:
       label: 實例類型
     metadata:
       httpEndpoint:
-        disabled: Disabled
-        enabled: Enabled
-        label: HTTP Endpoint
-        protip: 启用或禁用实例上的HTTP元数据端点。
+        disabled: 禁用
+        enabled: 啟用
+        label: HTTP 端點
+        protip: 啟用或禁用實例上的HTTP元數據端點。
       httpTokens:
-        label: HTTP Tokens
-        optional: 可选
-        protip: 对实例元数据请求使用 HTTP 令牌
-        required: 必须
+        label: HTTP 令牌
+        optional: 可選
+        protip: 對實例元數據請求使用 HTTP 令牌
+        required: 必須
     needs:
       item1: 從{appName} 服務器到主機的<code>TCP</code>端口<code>22</code><span class="text-muted">(SSH連接用於安裝docker)
       item2: 主機之間需要開放<code>UDP</code>端口<code>500</code>和<code>4500</code><span class="text-muted">(ipsec網絡)</span></li>
       item3: 這些規則<b>不會</b>自動添加
       label: "為了使{appName}正常使用，安全組需要配置允許以下流量通過:"
-    noSubnet: 没有子网可供选择
+    noSubnet: 沒有子網可供選擇
     onlyPrivate:
       label: 僅使用私有IP地址
     portHelp:
-      link: 了解更多
+      link: 瞭解更多
       text: 將要開放端口的詳細信息
     privateIp:
       label: 私有IP
     region:
       label: 區域
     requestSpotInstance:
-      enable: 請求競價實例
-      label: 競價實例
+      enable: 請求 spot 實例
+      label: spot 實例
     rootSize:
       label: 根磁盤大小
       unit: GB
@@ -646,21 +545,21 @@ nodeDriver:
       next: "下一步: 設置實例選項"
       title: 3. 安全組
     spotPrice:
-      label: 競價價格
+      label: spot 價格
       unit: $
     sshUser:
       label: SSH 用戶
       placeholder: "例如: ubuntu"
-    subnet: VPC/Subnet
+    subnet: VPC/子網
     tags:
       addActionLabel: 添加AWS標籤
       placeholder: "例如: dev"
       valueLabel: 標籤
     useEbsOptimizedInstance:
-      label: 优化实例
-      radioLabel: 创建 EBS 优化的实例
+      label: 優化實例
+      radioLabel: 創建 EBS 優化的實例
     volumeType:
-      label: Amazon EBS 卷类型
+      label: Amazon EBS 卷類型
     zone:
       detail: 為實例選擇可用區和VPC/子網
       loading: 從EC2加載安全組信息...
@@ -668,11 +567,11 @@ nodeDriver:
       title: 2. 區域和網絡
   amazoneks:
     access:
-      help: 在此处粘贴 AWS 密钥对，只使用 IAM 访问键，使用根用户生成的键将使集群不可访问。
+      help: 在此處粘貼 AWS 密鑰對，只使用 IAM 訪問鍵，使用根用戶生成的鍵將使集群不可訪問。
       loading: 從亞馬遜加載服務角色...
       next: "下一步: 選擇服務角色"
     accessKey:
-      label: Access Key
+      label: 訪問密鑰
       placeholder: Your AWS access key
     ami:
       help: 您可以覆蓋Rancher基於區域選擇的默認AMI
@@ -683,31 +582,30 @@ nodeDriver:
         off: "否: 僅私有ip"
       title: Worker節點的公網IP
     clusterOption:
-      detail: 为集群自定义 Kubernetes 选项
-      title: 集群选项
+      detail: 為集群自定義 Kubernetes 選項
+      title: 集群選項
     desired:
-      label: 预期 ASG 大小
+      label: 預期 ASG 大小
     encryptEbs:
-      detail: 在工作节点上启用EBS加密。
-      label: EBS Encryption
+      detail: 在工作節點上啟用EBS加密。
+      label: EBS 加密
     keyPairs:
       label: SSH Key
-      prompt: 没有选择
-      tooltip: 您可能需要编辑安全组的入站规则来启用 22 端口。
+      prompt: 沒有選擇
+      tooltip: 您可能需要編輯安全組的入站規則來啟用 22 端口。
     kubernetesVersion:
       label: Kubernetes 版本
-      placeholder: 选择要安装的 Kubernetes 版本
+      placeholder: 選擇要安裝的 Kubernetes 版本
     max:
       label: 最大平均比重
     min:
       label: 最小平均比重
     nodeVolumeSize:
-      label: 主机卷大小
+      label: 主機卷大小
       placeholder: "例如: 20"
     region:
-      label: Region
+      label: 區域
     role:
-      detail: 選擇將用於啟動EKS實例的服務角色
       help: 您可以不選擇服務角色，而Rancher會為您自動創建一個。
       label: 服務角色
       loading: 從Amazon加載VPCs...
@@ -716,11 +614,10 @@ nodeDriver:
       radio:
         custom: "自定義: 從現有服務角色中選擇"
         default: "標準: Rancher生成的服務角色"
-      title: 服務角色
     secretKey:
-      label: Secret Key
+      label: 加密密鑰
       placeholder: Your AWS secret key
-      provided: Provided
+      provided: 已提供
     securityGroup:
       choose: 選擇一個或多個現有安全組
       defaultCreate: "標準: 自動創建新的安全組"
@@ -732,21 +629,21 @@ nodeDriver:
     sessionToken:
       label: Session Token<em class='text-muted'>可選</em>
       placeholder: Your AWS session token
-      provided: Provided
+      provided: 已提供
     subnet:
-      help: 2 必须选择子网
+      help: 2 必須選擇子網
       loading: 加載安全組...
       next: "下一步: 選擇安全組"
-      title: Subnet
+      title: 子網
     userData:
-      help: 将用户数据传递给节点以执行自动配置任务
-      label: 用户数据
-      placeholder: 粘贴脚本
+      help: 將用戶數據傳遞給節點以執行自動配置任務
+      label: 用戶數據
+      placeholder: 粘貼腳本
     vpc:
       detail: 選擇將用於EKS實例的VPC
       loading: 加載Subnets...
       loadingRancherDefault: 加載實例選項...
-      next: "下一步: Subnet"
+      next: "下一步: 選擇Subnet"
       nextRancherDefault: "下一步: 選擇實例選項"
       noneSelected: Rancher創建VPC和Subnet
       radio:
@@ -774,33 +671,33 @@ nodeDriver:
       placeholder: "2376"
     environment:
       label: 環境
-      placeholder: AzurePublicCloud
+      placeholder: Azure 公有云
     faultDomainCount:
-      helpText: 如果已经创建了可用性集，则将忽略故障域计数。
-      label: Fault Domain Count
+      helpText: 如果已經創建了可用性集，則將忽略故障域計數。
+      label: 故障域計數
       placeholder: "例如: 3"
     image:
-      helpText: 提供 ARM 资源标识符需要使用托管磁盘。
+      helpText: 提供 ARM 資源標識符需要使用托管磁盤。
       label: 鏡像
       placeholder: 推薦:UbuntuServer:16.04.0-LTS:latest
     instance:
       detail: 自定義將要創建的Azure實例
       title: 實例
     managedDisks:
-      helpText: 创建一个 {type} 可用性集。在创建可用性集后更改此值可能会导致错误。
-      label: 磁盘类型
-      managed: 托管的磁盘
-      unmanaged: 非托管的磁盘
+      helpText: 創建一個 {type} 可用性集。在創建可用性集後更改此值可能會導致錯誤。
+      label: 磁盤類型
+      managed: 託管的磁盤
+      unmanaged: 非託管的磁盤
     network:
       detail: 為此模板創建的實例配置網絡
       title: 網絡
     noPublicIp:
       label: 無公網IP
     nsg:
-      helpText: 当使用一个由 Rancher 管理的或提供一个现有的 NSG 时，使用此模板的所有节点将使用提供的 NSG。如果没有提供 NSG，将为每个节点创建一个新的 NSG。
-      label: 网络安全组
-      openPorts: 当使用一个现有的 NSG 时，打开的端口被忽略。
-      placeholder: e.g. AllowVnetOutBound
+      helpText: 當使用一個由 Rancher 管理的或提供一個現有的 NSG 時，使用此模板的所有節點將使用提供的 NSG。如果沒有提供 NSG，將為每個節點創建一個新的 NSG。
+      label: 網絡安全組
+      openPorts: 當使用一個現有的 NSG 時，打開的端口被忽略。
+      placeholder: "例如: AllowVnetOutBound"
     openPort:
       label: 開放端口
       placeholder: "使用逗號分隔符，例如: 80，443"
@@ -840,21 +737,21 @@ nodeDriver:
       label: 訂閱ID
       placeholder: Azure訂閱ID
     updateDomainCount:
-      helpText: 如果已经创建了可用性集，更新域计数将被忽略。
-      label: Update Domain Count
+      helpText: 如果已經創建了可用性集，更新域計數將被忽略。
+      label: 更新域計數
       placeholder: "例如: 5"
     usePrivateIp:
       label: 使用私有IP連接
     vnet:
       label: VNet
       placeholder: "[資源組: ]名稱"
-  cloneTemplate: 从 {name} 克隆主机模板
-  cloudCredentialError: 云凭证必须设置。
+  cloneTemplate: 從 {name} 克隆主機模板
+  cloudCredentialError: 雲憑證必須設置。
   digitalocean:
     accessToken:
       help: "'從<a href=\"https://cloud.digitalocean.com/settings/api/tokens\" target=\"_blank\" rel=\"nofollow noreferrer noopener\">Applications&API</a>頁面獲取DigitalOcean的個人訪問token'\n"
       label: 訪問令牌
-      placeholder: DigitalOceanAPI訪問令牌
+      placeholder: DigitalOcean API訪問令牌
     authAccountButton: "下一步: 配置Droplet"
     backups:
       label: 啟用備份
@@ -862,7 +759,7 @@ nodeDriver:
       detail: 配置將由此模板創建的Droplets的選項
       title: Droplet選項
     errors:
-      hostnamePrefix: 名称前缀不能包含 "_"
+      hostnamePrefix: 名稱前綴不能包含 "_"
     image:
       label: 鏡像
     ipv6:
@@ -897,6 +794,7 @@ nodeDriver:
     digitalocean: DigitalOcean
     exoscale: Exoscale
     googlegke: Google GKE
+    googlegkev2: Google GKE
     huawei: Huawei CCE
     huaweicce: Huawei CCE
     import: Other
@@ -910,6 +808,7 @@ nodeDriver:
     otccce: Open Telekom Cloud CCE
     packet: Packet
     pinganyunecs: Pinganyun ECS
+    pnap: phoenixNAP
     rackspace: RackSpace
     rancherkubernetesengine: RKE
     softlayer: SoftLayer
@@ -942,7 +841,7 @@ nodeDriver:
       item3: 這些規則<b>不會</b>自動添加
       label: "{appName}正常工作需要安全組允許以下通訊: "
     portHelp:
-      link: 了解更多
+      link: 瞭解更多
       text: 關於將要開放的端口信息
     secretKey:
       label: 加密秘鑰
@@ -966,54 +865,55 @@ nodeDriver:
     zone:
       label: 區域
     zoneSection: 區域
-  externalError: 尝试加载自定义驱动 { driverName } 出错，请验证自定义节点驱动配置。
-  nameError: 名称必须设置。
+  externalError: 嘗試加載自定義驅動 { driverName } 出錯，請驗證自定義節點驅動配置。
+  nameError: 名稱必須設置。
   oci:
     access:
-      detail: 用户凭证将用于启动 OCI 实例
-      title: 帐户访问
+      detail: 用戶憑證將用於啓動 OCI 實例
+      title: 帳戶訪問
     availabilityDomain:
-      helpText: 如果使用特定于 ad 的子网，则必须匹配子网的可用域。
+      helpText: 如果使用特定於 ad 的子網，則必須匹配子網的可用域。
       label: 可用性域
       placeholder: availability-domain-name
     faultDomainCount:
-      helpText: 每个可用性域包含三个故障域
+      helpText:每個可用性域包含三個故障域
       label: 故障域
-      placeholder: e.g. 3
+      placeholder: "例如: 3"
     image:
-      label: 系统镜像
+      label: 系統鏡像
       placeholder: Oracle-Linux-7.7-2020.02.21-0
     instance:
-      detail: 配置和定制将要创建的计算实例
-      title: 实例详情
+      detail: 配置和定制將要創建的計算實例
+      title: 實例詳情
     network:
-      detail: 为这个模板创建的计算实例配置 VCN
-      title: 虚拟云网络详细信息
+      detail: 為這個模板創建的計算實例配置 VCN
+      title: 虛擬雲網絡詳細信息
     nodeCompartment:
-      label: OCID of compartment where compute instance(s) will be created
+      label: 將在其中創建計算實例的分區的 OCID
       placeholder: ocid1.compartment.oc1....
     openPort:
-      label: 开放端口
-      placeholder: 逗号分隔, e.g. 80,443
+      label: 開放端口
+      placeholder: 逗号分隔, 例如: 80,443
     placement:
-      detail: 选择此模板创建的计算实例的位置
+      detail: 選擇此模板創建的計算實例的位置
       title: Placement
     region:
-      label: 区域
-      placeholder: select cloud credential to populate options...
+      label: 區域
+      placeholder: 選擇雲憑據以填充選項...
     shape:
       label: Shape
+      placeholder: 輸入有效分區以填充選項...
     subnet:
-      helpText: If subnet is AD-specific, it must match the AD of the node(s) created by this template.
-      label: OCID of subnet (accessible to Rancher) that compute instance(s) will use
+      helpText: 如果子網是特定於AD的，則它必須與此模板創建的節點的AD匹配。
+      label: 計算實例將使用的子網（Rancher 可訪問）的 OCID
       placeholder: ocid1.subnet.oc1....
     usePrivateIp:
-      label: 使用私有 IP 地址连接到计算实例
+      label: 使用私有 IP 地址連接到計算實例
     vcn:
-      label: 启动计算实例 VCN 的 OCID
+      label: 啓動計算實例 VCN 的 OCID
       placeholder: ocid1.vcn.oc1....
     vcnCompartment:
-      label: OCID of compartment where VCN and subnet reside (if different than above)
+      label: VCN 和子網所在分區的 OCID（如果與上述不同）
       placeholder: ocid1.compartment.oc1....
   packet:
     accountSection: 賬戶訪問
@@ -1042,6 +942,29 @@ nodeDriver:
     regionSection: 區域
     size:
       label: 規格
+  pnap:
+    access:
+      detail: API 憑據將用於啟動 phoenixNAP 服務器。
+      title: 訪問賬號
+    errors:
+      clientIDRequired: Client ID 是必須的
+      clientSecretRequired: Client Secret 是必須的
+      hostnameRequired: Hostname 是必須的
+      locationRequired: Location 是必須的
+      osRequired: Operating System 是必須的
+      typeRequired: Server type 是必須的
+    location:
+      label: 位置
+      placeholder: 請選擇服務器位置。
+    os:
+      label: OS
+      placeholder: 請選擇操作系統。
+    serverDetails:
+      detail: 選擇將由此模板創建的實例的詳細信息。
+      title: 服務器詳情
+    type:
+      label: 類型
+      placeholder: 請選擇要配置的服務器類型。
   rackspace:
     account:
       detail: 用來創建RackSpace實例的用戶名和API Key
@@ -1093,24 +1016,30 @@ nodeDriver:
     cpuCount:
       label: CPUs
       unit: "{cores, plural, =1 {Core} other {Cores}}"
+    creationMethod:
+      cloneAnExistingVirtualMachine: 克隆現有虛擬機
+      deployFromTemplateContentLibrary: "模板部署: Content Library"
+      deployFromTemplateDataCenter: "模板部署: Data Center"
+      label: 創建方法
+      rancherOsIso: RancherOS ISO (Deprecated)
     creationType:
-      label: 创建方法
-      legacy: 从 boot2docker ISO 安装 (Legacy)
+      label: 創建方法
+      legacy: 從 boot2docker ISO 安裝 (Legacy)
       library: "模板部署: Content Library"
       template: "模板部署: Data Center"
-      vm: 克隆一个现有的虚拟机
+      vm: 克隆一個現有的虛擬機
     customAttributes:
-      addActionLabel: 添加自定义属性
-      detail: 自定义属性允许您将元数据附加到 vSphere 目录中的对象，以便更容易地对这些对象进行排序和搜索。
-      title: 5. 自定义属性 (legacy)
+      addActionLabel: 添加自定義屬性
+      detail: 自定義屬性允許您將元數據附加到 vSphere 目錄中的對象，以便更容易地對這些對象進行排序和搜索。
+      title: 5. 自定義屬性 (legacy)
     dataCenter:
       help: 用於創建虛擬機的數據中心（對於獨立ESXi保留空白）
       label: 數據中心
       placeholder: "例如: datacenter_name"
     dataStore:
       cluster:
-        help: 在数据存储集群上创建 VM
-        tooltip: 使用数据存储集群?
+        help: 在數據存儲集群上創建 VM
+        tooltip: 使用數據存儲集群
       help: 創建VM磁盤的數據存儲
       label: 數據存儲
       placeholder: "例如: datastore_cluster_name/datastore_name"
@@ -1118,8 +1047,8 @@ nodeDriver:
       label: 磁盤
       unit: MB
     folder:
-      help: Folder for the VM. This folder must already exist in the datacenter
-      label: Folder
+      help: VM 的文件夾。該文件夾必須已經存在於數據中心中
+      label: 文件夾
       placeholder: "例如: /folder"
     host:
       help: 用於創建虛擬機的特定主機(對於獨立ESXi或具有DRS的集群留空)
@@ -1127,7 +1056,7 @@ nodeDriver:
       placeholder: "例如: cluster_name/host_name"
     hostOptions:
       any:
-        label: Any
+        label: 任何
     instance:
       detail: 選擇虛擬機的大小和操作系統
       title: 2. 實例選項
@@ -1141,10 +1070,8 @@ nodeDriver:
       label: 內存
       unit: MB
     network:
-      addActionLabel: 添加网络
+      addActionLabel: 添加網絡
       help: VM連接到的網絡
-      label: 網絡
-      placeholder: "例如: VM網絡"
       valueLabel: 网络
       valuePlaceholder: 例如：VM Network
     password:
@@ -1158,45 +1085,45 @@ nodeDriver:
       title: 3. 調度
     schedulingSection: 調度
     tags:
-      addActionLabel: Add tag
-      detail: 标签允许您将元数据附加到 vSphere 目录中的对象，以便更容易地对这些对象进行排序和搜索。
-      title: 4. 标签
+      addActionLabel: 添加標籤
+      detail: 標籤允許您將元數據附加到 vSphere 目錄中的對象，以便更容易地對這些對象進行排序和搜索。
+      title: 4. 標籤
     template: "模板:"
     username:
       label: 用戶名
-    vappHelp: "注意: 独立的 ESXI 不支持 vApp 选项和网络协议配置文件"
+    vappHelp: "注意: 獨立的 ESXI 不支持 vApp 選項和網絡協議配置文件"
     vappIpallocationpolicy:
       help: dhcp, fixed, transient 或 fixedAllocated
       label: vApp IP 分配策略
       placeholder: "例如: fixedAllocated"
     vappIpprotocol:
       help: IPv4 或 IPv6
-      label: vApp IP 协议
+      label: vApp IP 協議
       placeholder: "例如: IPv4"
     vappMode:
-      auto: 使用 vApp 网络协议配置文件去配置网络
+      auto: 使用 vApp 網絡協議配置文件去配置網絡
       disabled: 不使用 vApp
-      manual: 使用自定义 vApp 配置
+      manual: 使用自定義 vApp 配置
     vappOptions:
-      detail: 选择 OVF 环境属性
-      title: 6. vApp 选项
+      detail: 選擇 OVF 環境屬性
+      title: 6. vApp 選項
     vappProperty:
-      addActionLabel: 添加参数
+      addActionLabel: 添加參數
       key:
-        placeholder: e.g. guestinfo.interface.0.ip.0.address
-      label: vApp 属性
+        placeholder: "例如: guestinfo.interface.0.ip.0.address"
+      label: vApp 屬性
       value:
         placeholder: "例如: ip:VM Network, expression 或 string"
     vappTransport:
       help: com.vmware.guestInfo 或 iso
       label: OVF environment transport
-      placeholder: e.g. com.vmware.guestInfo
+      placeholder: "例如: com.vmware.guestInfo"
     vcenter:
       label: vCenter或ESXi服務器
       placeholder: vCenter或者ESXi主機名/IP
     vcenterPort:
       label: 端口
-    virtualMachine: "虚拟机:"
+    virtualMachine: "虛擬機:"
   zstack:
     access:
       detail: 選擇將用於啟動ZStack實例的endpoint，帳戶名稱和帳戶密碼
@@ -1229,7 +1156,7 @@ nodeDriver:
       defaultCreate: "標準: 自動創建<code>{groupName}</code>安全組"
       label: 網絡
     portHelp:
-      link: 了解更多
+      link: 瞭解更多
       text: 將要開放的端口的詳細信息
     systemDiskOffering:
       label: 系統磁盤
@@ -1240,5 +1167,5 @@ nodeDriver:
       next: "下一步: 設置實例選項"
       title: 2. 區域、集群和網絡
 podSection:
-  detail: 当前主机的 Pods
+  detail: 當前主機的 Pods
   title: Pods
