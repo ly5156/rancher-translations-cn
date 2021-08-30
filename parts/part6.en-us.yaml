@@ -242,7 +242,7 @@ formNetwork:
         placeholder: e.g. 192.168.1.100,Multiple ips are connected by commas
       mac:
         label: MAC
-        placeholder: "例如: 0a:00:27:00:00:00, Multiple MACs are connected by commas"
+        placeholder: e.g. 0a:00:27:00:00:00, Multiple MACs are connected by commas
       subnet:
         label: Subnet
         placeholder: Please choose a MacvlanSubnet
