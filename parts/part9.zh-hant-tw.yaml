@@ -1,47 +1,47 @@
 accountsPage:
   detail:
-    header: 用戶資訊
+    header: 用戶信息
     table:
       cluster:
-        description: 授予此用戶的單個叢集的角色
-        noRoles: 此用戶沒有叢集角色
-        title: 叢集角色
+        description: 授予此用戶的單個集群的角色
+        noRoles: 此用戶沒有集群角色
+        title: 集群角色
       global:
         admin: 此用戶是管理員並擁有所有權限
         description: 訪問管理影響整個安裝的事情
-        noRoles: 此用戶沒有全域角色
-        readOnlyAdmin: 此用户是只读管理员并对下级集群对象拥有只读权限
-        title: 全域權限
+        noRoles: 此用戶沒有全局角色
+        readOnlyAdmin: 此用戶是隻讀管理員並對下級集群對象擁有隻讀權限
+        title: 全局角色
       headers:
-        active: 啟動
-        clusterName: 叢集
+        active: 激活
+        clusterName: 集群
         created: 已授權
-        group: 使用者群組
+        group: 用戶組
         permission: 權限
-        projectName: 專案
+        projectName: 項目
         role: 角色
       project:
-        description: 授予此用戶的單個專案的角色
-        noRoles: 此用戶沒有專案角色
-        title: 專案角色
+        description: 授予此用戶的單個項目的角色
+        noRoles: 此用戶沒有項目角色
+        title: 項目角色
       roles:
         title: 角色
   editGroup:
-    header: 編輯群組
+    header: 編輯組
   groups:
-    header: 使用者群組
+    header: 用戶組
     table:
       globalRole: 全局角色名稱
-      groupName: 群組名稱
-      noData: 没有定義群組。
-      noMatch: 没有群組匹配當前搜索
+      groupName: 組名稱
+      noData: 沒有定義組。
+      noMatch: 沒有組匹配當前搜索
       noName: None
   index:
-    groupLink: 分配全域角色
-    header: 用戶
-    localLink: 新增用戶
+    groupLink: 分配全局角色
+    header: 用戶列表
+    localLink: 添加用戶
     table:
-      id: 用戶ID
+      id: 用戶 ID
       identity: 標識
       kind: 類型
       noData: 目前還沒有用戶
@@ -49,38 +49,38 @@ accountsPage:
       noName: 無
       username: 本地用戶名
   modal:
-    password: 修改密码
+    password: 修改密碼
   new:
     errors:
-      pwReq: 密碼必須設置
-      role: 新用戶需要具備角色。從列表中選擇一個角色
-      strengthError: 密码强度弱
-      usernameInExists: 用戶名已存在，請選擇一個新的用戶名
-      usernameReq: 必須填寫用戶名
+      pwReq: 必須設置密碼。
+      role: 新用戶需要具備角色，從列表中選擇角色。
+      strengthError: 密碼強度弱
+      usernameInExists: 用戶名已存在，請設置新的用戶名。
+      usernameReq: 必須填寫用戶名。
     form:
       description:
         labelText: 描述
-        placeholder: "例如: 這是John Smith的帳號"
+        placeholder: "例如: 這是 John Smith 的賬號"
       name:
         labelText: 顯示名稱
         placeholder: "例如: John Smith"
       password:
         labelText: 密碼
       type:
-        labelText: 帳號類型
+        labelText: 賬號類型
       username:
         labelText: 用戶名
         placeholder: "例如: jsmith"
-    header: 新增用戶
+    header: 添加用戶
   newGroup:
     errors:
-      group: 需要指定群組。
+      group: 需要指定組。
       role: 需要指定角色
     form:
       group:
-        labelText: 選擇要添加的群組
-    header: 將全局角色分配給群組
-    warning: 為群組分配全局角色只能與支持群組的外部auth提供程序一起工作。本地授權不支持群組。
+        labelText: 選擇要添加的組
+    header: 將全局角色分配給組
+    warning: 為組分配全局角色只能與支持組的外部 auth 提供程序一起工作。本地授權不支持組。
 buildDetailPage:
   duration: 構建時間
   header: "流水線運行: #{name}"
@@ -94,147 +94,147 @@ clusterCatalogPage:
   header: 應用商店
 clusterDashboard:
   alert:
-    component: "警告: 組件{component}不健康"
-    node: "警告: 節點{node}未啟用"
+    component: "警告: 組件 {component} 不健康。"
+    node: "警告: 節點 {node} 未激活。"
     nodeCondition:
-      diskPressure: "警告: 節點 {node} 有硬碟壓力。"
-      memoryPressure: "警告: 節點 {node} 有記憶體壓力。"
-      outOfDisk: "警告: 節點 {node} 硬碟空間不足。"
-  clusterHasNoNodes: 添加节点
-  clusterNotReady: 叢集中的圖形訊息目前不可用。
+      diskPressure: "警告: 節點 {node} 有磁盤壓力。"
+      memoryPressure: "警告: 節點 {node} 有內存壓力。"
+      outOfDisk: "警告: 節點 {node} 磁盤空間不足。"
+  clusterHasNoNodes: 添加節點
+  clusterNotReady: 集群中的圖形信息當前不可用
   controllerManager: Controller Manager
   controllerManagerUnavailable: Controller Manager 不可用
   cpu: CPU
-  enableMonitoring: 啟用監控並查看實時監控指標
+  enableMonitoring: 啟用監控以查看實時監控
   etcd: Etcd
   etcdUnavailable: Etcd 不可用
-  importHost: 导入节点
+  importHost: 導入節點
   k3sInfo:
-    detail: 導入的K3S叢集節點系統訊息。
+    detail: 導入的 K3S 集群節點系統信息。
     nodeArgs:
-      detail: 當前節點的K3S參數的只讀列表。
+      detail: 此節點的 K3s 啟動參數的只讀列表。
       noArgs: 沒有節點參數
-      title: k3S節點參數
-    title: k3S相關訊息
-  liveTitle: 已使用{total}中的{used}
+      title: k3s 節點參數
+    title: k3s 集群信息
+  liveTitle: 已使用 {total} 中的 {used}
   memory: Memory
-  monitoringNotReady: 監控API未就緒
+  monitoringNotReady: 監控 API 未就緒
   more: 更多
-  noRancherComponents: "{appName}日誌功能未啟用或者沒有足夠的數據繪製圖表。 "
+  noRancherComponents: 在此集群中沒有啟用 {appName} 日誌收集，或者沒有足夠的數據用於圖形展示。
   node: Nodes
-  notActive: 當前叢集<b>{state}</b>中...
-  notReady: 當前叢集<b>{state}</b>中...，在API準備就緒之前，直接與API交互的功能將不可用。
+  notActive: 當前集群狀態 <b>{state}</b>.
+  notReady: 當前集群 <b>{state}</b> 中...，在 API 準備就緒之前，直接與 API 交互的功能將不可用。
   pods: Pods
   reserved: 已預留
   scheduler: Scheduler
   schedulerUnavailable: Scheduler 不可用
   sections:
-    cluster: 叢集監控
-    etcd: Etcd監控
-    k8s: Kubernetes組件監控
+    cluster: 集群監控
+    etcd: Etcd 監控
+    k8s: Kubernetes 組件監控
     node: 節點監控
-    rancher: "{appName}日誌功能監控"
+    rancher: "{appName} 日誌收集功能監控"
   subtitle:
-    reserved: 已預留{total}中的{used}
-    used: 已使用{total}中的{used}
-  systemProject: 這是具有所有Kubernetes和{appName}系统命名空間的系统項目，修改系统項目中的资源可能會導致系统無法正常運行。
-  title: 儀錶盤
-  upgradeAvailable: 升級監控組件到{version}版本
-  used: 使用值
+    reserved: 已預留 {total} 中的 {used}
+    used: 已使用 {total} 中的 {used}
+  systemProject: 這是包含所有 Kubernetes 和 {appName} 系統命名空間的系統項目，修改當前項目中的資源配置可能會導致系統無法正常運行。
+  title: 儀表盤
+  upgradeAvailable: 監控有新版本 {version} 可用升級
+  used: 已使用
   value: 值
 clusterRibbonNav:
-  title: 最近創建的叢集
+  title: 最近創建的集群
 confirmDelete:
   cancelAction: 取消
-  clearHarborConfig: 你确认要移除 Harbor 配置吗？
-  clusterNote: "注意: 通過雲提供商驅動創建的相關資源(如卷、負載均衡器和網絡)不會自動刪除。 "
-  clusterRoleTemplateBindingNote: "注意: 不會刪除用戶的項目權限。 "
+  clearHarborConfig: 你確認要移除 Harbor 配置嗎？
+  clusterNote: "注意: 通過雲提供商驅動創建的相關資源(如卷、負載均衡器和網絡)不會自動刪除。"
+  clusterRoleTemplateBindingNote: "注意: 不會刪除用戶的項目權限。"
   confirmAction: 刪除
-  emptyPod: 0 个 pod
-  environmentNote: "注意: 該項目中的所有資源都將被永久刪除，包括通過{appName}創建的所有命名空間。 "
+  emptyPod: 0 個 pod
+  environmentNote: "注意: 該項目中的所有資源都將被永久刪除，包括通過 {appName} 創建的所有命名空間。"
   forceDelete:
     label: 強制刪除
-    warning: 強制刪除Pod並不等待確認Pod中的進程是否終止，這可能導致這些進程一直運行，直到節點檢測到並完成優雅的刪除。如果您的進程使用共享存儲或與遠程API通信，並且依賴於pod的名稱來標識自己，那麼強制刪除這些pod可能導致多個進程使用相同的標識運行在不同的機器上，這可能導致數據損壞或不一致。只有在確定Pod已終止，或者應用程序可以同時運行同一pod的多個副本時，才強制刪除pod。此外，如果強制刪除Pod，調度器可能會在節點釋放這些資源之前在這些節點上運行新的Pod，並導致這些Pod立即被驅逐。
+    warning: "重要提示: 強制刪除 Pod 並不等待確認 Pod 中的進程是否終止，這可能導致這些進程一直運行，直到節點檢測到並完成優雅的刪除。如果您的進程使用共享存儲或與遠程 API 通信，並且依賴於 pod 的名稱來標識自己，那麼強制刪除這些 pod 可能導致多個進程使用相同的標識運行在不同的機器上，這可能導致數據損壞或不一致。只有在確定 Pod 已終止，或者應用程序可以同時運行同一 pod 的多個副本時，才強制刪除 pod。此外，如果強制刪除 Pod，調度器可能會在節點釋放這些資源之前在這些節點上運行新的 Pod，並導致這些 Pod 立即被驅逐。"
   globalRoleNote: "{count, plural,\n=0 {No users are assigned this role.}\n=1 {# user is assigned this role.}\nother {# users are assigned this role.}\n}\n"
-  largeDeleteText: "{key} and {othersCount} others"
-  protip: "提示: 按住{key}鍵，同時點擊Delete以繞過此確認。 "
+  largeDeleteText: "\"{key}\" 及 {othersCount} 其他"
+  protip: "提示: 按住 {key} 鍵，同時點擊 Delete 以繞過此確認。"
   resourceType:
-    cluster: 叢集
+    cluster: 集群
     ip: IP
     namespace: 命名空間
     project: 項目
     subnet: Subnet
-    workload: 工作负载
-  systemChartNote: 您正在刪除一個系統應用程序。如果刪除該應用程序，可能會導致叢集出現問題。
-  systemProjectNamespaceNote: "注意: 您正在刪除系統項目下的命名空間。如果將其移除，可能會導致叢集不能正常運行。 "
-  systemProjectNote: "注意: 您正在刪除系統項目。如果將其移除，可能會導致叢集不能正常運行"
-  titleWithResourceType: 您確定要刪除<b>{resourceType}</b>嗎？
+    workload: 工作負載
+  systemChartNote: 您正在刪除一個系統應用程序。如果刪除該應用程序，可能會導致集群出現問題。
+  systemProjectNamespaceNote: "注意: 您正在刪除系統項目下的命名空間。如果將其移除，可能會導致集群不能正常運行。"
+  systemProjectNote: "注意: 您正在刪除系統項目。如果將其移除，可能會導致集群不能正常運行"
+  titleWithResourceType: 您確定要刪除 <b>{resourceType}</b> 嗎？
   titleWithoutResourceType: 您確定要刪除嗎？
-  twoNodeEtcd: 从两个节点的集群中删除 ETCD 节点被认为是不安全的! 我们强烈建议您在删除一个节点之前将 ETCD 节点数增加到三个或更多节点。
+  twoNodeEtcd: 從兩個節點的集群中刪除 ETCD 節點被認為是不安全的! 我們強烈建議您在刪除一個節點之前將 ETCD 節點數增加到三個或更多節點。
 containerPage:
   envTab:
-    detail: 在創建容器時設定到容器內的環境變數。
-    header: 環境變數
+    detail: 在創建容器時配置到容器內的環境變量。
+    header: 環境變量
   header: "容器: {name}"
   initContainer:
     label: 初始化容器
   linksTab:
-    detail: 這些屬性顯示了其他容器和當前容器之間的連結。
-    header: 連結
-    noData: 當前容器沒有連結
+    detail: 這些屬性顯示了其他容器和當前容器之間的鏈接。
+    header: 鏈接
+    noData: 當前容器沒有鏈接
   pod: Pod
   portsTab:
-    detail: 容器監聽埠到主機公用IP地址埠的映射關係。
-    header: 埠
+    detail: 容器中進程監聽的端口與主機端口的映射關係。
+    header: 端口
     hostPrimaryIp: ({ip})
   volumesTab:
-    detail: 這些屬性顯示了附加到容器的數據 volumes 。
-    header: 數據 volumes
+    detail: 這些屬性顯示了附加到容器的數據卷。
+    header: 數據卷
     table:
       noContainers: 無其他容器
-      noData: 該容器未使用數據 volumes
-      noMatch: 沒有符合當前搜索的數據 volumes
+      noData: 該容器未使用數據卷
+      noMatch: 沒有符合當前搜索的數據卷
       path: 掛載點
       shared: 共享
       writable: 可寫
 containerShell:
-  permissionDenied: 无权访问
-  protip: "高級技巧: 點擊運行命令行時按住{key}鍵在新視窗中打開"
+  permissionDenied: 無權訪問
+  protip: "高級技巧: 點擊運行命令行時按住 {key} 鍵在新窗口中打開"
   status:
     closed: 已關閉
     code: " 狀態碼: {code}"
     connected: 已連接
     connecting: 連接中...
     disconnected: 已斷開
-    error: 錯誤:{error}
+    error: "錯誤: {error}"
     initializing: 初始化...
 cruDestinationRule:
   connectionPool:
     connectTimeout:
-      help: TCP連接超時。
-      label: TCP連接超時
+      help: TCP 連接超時。
+      label: TCP 連接超時
       placeholder: "例如: 30ms"
     detail: 配置到上游服務的連接量
     http1MaxPendingRequests:
       help: 到目標端的最大請求等待數
-      label: HTTP1最大等待請求
+      label: HTTP1 最大等待請求
       placeholder: "例如: 1024"
     http2MaxRequests:
       help: 到後端請求的最大數量。
-      label: HTTP2最大等待請求
+      label: HTTP2 最大等待請求
       placeholder: "例如: 1024"
     label: 連接池
     maxConnections:
-      help: 到目標主機的HTTP1/TCP連接的最大數量。
-      label: TCP最大連接數
+      help: 到目標主機的 HTTP1/TCP 連接的最大數量。
+      label: TCP 最大連接數
       placeholder: "例如: 1024"
     maxRequestsPerConnection:
-      help: 到後端連接的每個連接的最大請求數。將此參數設置為1將禁用keep alive。
-      label: 每個連接的HTTP最大請求
+      help: 到後端連接的每個連接的最大請求數。將此參數設置為 1 將禁用 keep alive。
+      label: 每個連接的 HTTP 最大請求
       placeholder: "例如: 10"
     maxRetries:
-      help: 在給定時間內，叢集中所有主機都可以執行的最大重試次數。
-      label: HTTP最大重試
+      help: 在給定時間內，集群中所有主機都可以執行的最大重試次數。
+      label: HTTP 最大重試
       placeholder: "例如: 1024"
   host:
     error: 主機是必需的。
@@ -242,32 +242,32 @@ cruDestinationRule:
     consistentHash:
       httpCookie:
         name:
-          error: 需要Cookie名稱。
+          error: 需要 Cookie 名稱。
           label: Cookie 名稱
           placeholder: "例如: username"
         path:
           label: Cookie 路徑
           placeholder: "例如: /"
         ttl:
-          error: TTL是必需的。
+          error: TTL 是必需的。
           label: TTL
           placeholder: "例如: 0s"
       httpHeaderName:
-        error: 必須設置HTTP Header名稱。
+        error: 必須設置 HTTP Header 名稱。
         label: HTTP Header 名稱
         placeholder: "例如: end-user"
       label: 使用一致的基於散列的負載平衡實現軟會話關聯
       minimumRingSize:
-        label: Minimum Ring Size
+        label: 最小 Ring
         placeholder: "例如: 1024"
       mode:
         cookie:
-          label: 基於HTTP cookie的Hash
+          label: 基於 HTTP cookie 的 Hash
         header:
-          label: 基於特定HTTP頭的哈希
+          label: 基於特定 HTTP 頭的哈希
         label: Hash 模式
         sourceIp:
-          label: 基於源IP地址的哈希
+          label: 基於源 IP 地址的哈希
     detail: 配置負載平衡器算法
     label: Load Balancer
     simple:
@@ -284,7 +284,7 @@ cruDestinationRule:
     placeholder: "例如: myrule"
   outlierDetection:
     baseEjectionTime:
-      help: 最小驅逐時間. A host will remain ejected for a period equal to the product of minimum ejection duration and the number of times the host has been ejected.
+      help: 最小驅逐時間. 主機將保持被彈出的時間等於最小彈出持續時間和主機被彈出的次數的乘積。
       label: 基本驅逐時間
       placeholder: "例如: 30s"
     consecutiveErrors:
@@ -293,12 +293,12 @@ cruDestinationRule:
       placeholder: "例如: 5"
     detail: 配置從負載平衡池中移除不健康主機
     interval:
-      help: Time interval between ejection sweep analysis.
+      help: 彈射掃描分析之間的時間間隔。
       label: 時間間隔
       placeholder: "例如: 10s"
     label: 異常值檢測
     maxEjectionPercent:
-      help: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
+      help: 負載均衡池中上游服務可被彈出的主機的最大百分比 %。
       label: 最大驅逐百分比
       placeholder: "例如: 10"
   port:
@@ -321,42 +321,42 @@ cruDestinationRule:
     view: "目標規則: {name}"
   tls:
     caCertificates:
-      label: CA證書(CA certificate)
+      label: CA 證書 (CA certificate)
       placeholder: "例如: /etc/certs/rootcacerts.pem"
     clientCertificate:
       error: 必須設置客戶端證書。
-      label: 客戶端證書(Client certificate)
+      label: 客戶端證書 (Client Certificate)
       placeholder: "例如: /etc/certs/myclientcert.pem"
-    detail: 為連接到上游服務配置TLS相關設置
+    detail: 為連接到上游服務配置 TLS 相關設置
     label: TLS
     mode:
       disable:
-        label: 禁用-不要設置到上游端點的TLS連接
+        label: 禁用-不要設置到上游端點的 TLS 連接
       istio:
-        label: Istio Mutual - 通過Istio實現與上游的雙向安全連接
-      label: TLS模式
+        label: Istio Mutual - 通過 Istio 實現與上游的雙向安全連接
+      label: TLS 模式
       mutual:
-        label: Mutual - 通過提供客戶端證書進行身份驗證，使用雙向TLS安全連接到上游
+        label: Mutual - 通過提供客戶端證書進行身份驗證，使用雙向 TLS 安全連接到上游
       none:
         label: 無
       simple:
-        label: 簡單-創建到上游端點的TLS連接
+        label: 簡單-創建到上游端點的 TLS 連接
     privateKey:
       error: 必須設置私鑰。
-      label: 私鑰(private key)
+      label: 私鑰 (Private Key)
       placeholder: "例如: /etc/certs/client_private_key.pem"
     sni:
       label: SNI
       placeholder: "例如: nginx.example.com"
     subjectAltNames:
-      add: Add Subject Alternative Name
-      label: Subject Alternative Names
+      add: 添加主題備選名稱
+      label: 主題的備選名稱
       placeholder: "例如: example.com"
 cruVirtualService:
   gateways:
     add: 添加網關
     label: 網關
-    placeholder: "例如: mygateway"
+    placeholder: 選擇或輸入網關
     prompt: 選擇網關...
   hosts:
     add: 添加主機
@@ -364,11 +364,11 @@ cruVirtualService:
     label: 主機
   http:
     routes:
-      addRouteLabel: 添加http路由
+      addRouteLabel: 添加 http 路由
       destination:
         addDestinationLabel: 增加目標地址
         host:
-          error: 必須設置Host。
+          error: 必須設置 Host。
           label: Host
         noDestinations: 沒有目標地址
         port:
@@ -398,7 +398,7 @@ cruVirtualService:
           percent:
             label: 百分比
             placeholder: "例如: 8"
-      label: HTTP路由
+      label: HTTP 路由
       matches:
         addLabel: 添加其他匹配規則
         addMatchLabel: 添加匹配條件
@@ -462,7 +462,7 @@ cruVirtualService:
           placeholder: "例如: v2"
       moveDown: 向下移動
       moveUp: 向上移動
-      noRoutes: 沒有http路由
+      noRoutes: 沒有 http 路由
       redirect:
         authority:
           label: Authority
@@ -472,7 +472,7 @@ cruVirtualService:
         uri:
           label: URI
           placeholder: "例如: /v1/bookRatings"
-      removeRouteLabel: 刪除http路由
+      removeRouteLabel: 刪除 http 路由
       retries:
         attempts:
           label: 重試次數
@@ -500,86 +500,86 @@ cruVirtualService:
     view: "虛擬服務: {name}"
 customMenus:
   index:
-    clusterMenu: 集群级别自定义菜单
-    globalMenu: 全局级别自定义菜单
-    header: 自定义菜单
-    projectMenu: 项目级别自定义菜单
-    protocalInvalid: "\"链接地址\"应该以\"http://\"或者\"https://\"开头。"
+    clusterMenu: 集群級別自定義菜單
+    globalMenu: 全局級別自定義菜單
+    header: 自定義菜單
+    projectMenu: 項目級別自定義菜單
+    protocalInvalid: "\"鏈接地址\"應該以\"http://\"或者\"https://\"開頭。"
 dangerZone:
   description:
-    auditlog-server-url: 配置审计日志服务地址。
-    auth-token-max-ttl-minutes: 自定义认证 token 最大 TTL 分钟数 。
-    auth-user-info-max-age-seconds: 在執行身份驗證提供者組成員身份同步之前，用戶身份驗證令牌的最大期限。
-    auth-user-info-resync-cron: 用於重新同步身份驗證提供者組成員關係的默認cron調度。
-    auth-user-session-ttl-minutes: 用戶驗證會話上的自定義TTL(以分鐘為單位)。
-    cacerts: 驗證ssl證書所需的CA證書，此CA證書僅適用於自簽名SSL證書。若SSL證書是權威CA機構所頒發，則要求刪除此CA證書。
-    cluster-defaults: 在創建新叢集時覆蓋RKE默認值。
-    cluster-template-enforcement: 非管理員只能通過預先批准的叢集模板啟動叢集。
-    engine-install-url: 默認的Docker引擎安裝URL(用於大多數Machine Drivers)。
-    engine-iso-url: 默認OS安裝URL(用於Machine vSphere Drivers)。
-    engine-newest-version: 當前Rancher Server支持的最新Docker版本，不支持的版本或比此Docker版本新的將被標記為未測試。
-    engine-supported-range: 當前Rancher Server支持的Docker版本範圍，不滿足此範圍的Docker版本將在UI中標記為不受支持。
-    extra-menus: 配置扩展菜单
-    ingress-ip-domain: 用於自動生成Ingress主機名的通配域名。<入口名>.<命名空間名>.<入口控制器的IP地址>將被新增到域名中。
-    none-operate-session-time: 用户超过配置时间没有任何操作将自动注销(以秒为单位)
-    rdns-base-url: 配置 RDNS 服务地址。
-    rke-metadata-config: 配置RKE元數據刷新參數。
-    server-url: 默認的{appName} Server訪問地址，必須是HTTPS。叢集中的所有主機都必須能夠訪問此地址。
-    system-default-registry: 用於RKE部署系統服務時鏡像的拉取，其他服務拉取鏡像不生效。
-    telemetry-opt: 遙測報告設置。
-    ui-banners: "分类横幅用于在页眉、页脚或同时在页眉、页脚显示自定义固定的横幅。该设置使用包含 3 个根参数的 JSON 对象: <code>banner、showHeader、showFooter</code>。banner 对象包含: <code>textColor、background、text</code>。 其中 <code>textColor 和 background</code> 是任意有效的 CSS 颜色值。"
+    auditlog-server-url: 配置審計日誌服務地址。
+    auth-token-max-ttl-minutes: 自定義認證 token 最大 TTL 分鐘數 。
+    auth-user-info-max-age-seconds: 在執行身份驗證提供者組成員同步之前，用戶身份驗證令牌的最大有效期。
+    auth-user-info-resync-cron: 用於重新同步身份驗證提供者組成員關係的默認 cron 調度。
+    auth-user-session-ttl-minutes: 用戶驗證會話上的自定義 TTL (以分鐘為單位)。
+    cacerts: 驗證 ssl 證書所需的 CA 證書，此 CA 證書僅適用於自簽名 SSL 證書。若 SSL 證書是權威 CA 機構所頒發，則要求刪除此 CA 證書。
+    cluster-defaults: 在創建新集群時覆蓋 RKE 默認值。
+    cluster-template-enforcement: 非管理員只能通過預先批准的集群模板啟動集群。
+    engine-install-url: 默認的 Docker 引擎安裝 URL (用於大多數 Machine Drivers)。
+    engine-iso-url: 默認 OS 安裝 URL (用於 Machine vSphere Drivers)。
+    engine-newest-version: 當前 Rancher Server 支持的最新 Docker 版本，不支持的版本或比此 Docker 版本新的將被標記為未測試。
+    engine-supported-range: 當前 Rancher Server 支持的 Docker 版本範圍，不滿足此範圍的 Docker 版本將在 UI 中標記為不受支持。
+    extra-menus: 配置擴展菜單
+    ingress-ip-domain: 用於自動生成 Ingress 主機名的通配域名。<code><入口名>.<命名空間名>.<入口控制器的 IP 地址> </code>將被添加到域名中。
+    none-operate-session-time: 用戶超過配置時間沒有任何操作將自動註銷(以秒為單位)
+    rdns-base-url: 配置 RDNS 服務地址。
+    rke-metadata-config: 配置 RKE 元數據刷新參數。
+    server-url: 默認的 {appName} Server 訪問地址，必須是 HTTPS。集群中的所有主機都必須能夠訪問此地址。
+    system-default-registry: 用於 RKE 部署系統服務時鏡像的拉取，其他服務拉取鏡像不生效。
+    telemetry-opt: 遙感報告設置。
+    ui-banners: "分類橫幅用於在頁眉、頁腳或同時在頁眉、頁腳顯示自定義固定的橫幅。該設置使用包含 3 個根參數的 JSON 對象: <code>banner、showHeader、showFooter</code>。banner 對象包含: <code>textColor、background、text</code>。 其中 <code>textColor 和 background</code> 是任意有效的 CSS 顏色值。"
     ui-dashboard-index: HTML index location for the Cluster Explorer UI.
-    ui-default-landing: 用户登录后访问的默认页面。
-    ui-footer-text: 额外的页脚内容
-    ui-footer-url: 额外页脚内容对应的链接
-    ui-index: UI的HTML索引位置。
-    ui-issues: 使用一个 url 地址发送新的 'File an Issue' 报告，而不是将用户发送到 Github Issue 页面。
+    ui-default-landing: 用戶登錄後訪問的默認頁面。
+    ui-footer-text: 額外的頁腳內容
+    ui-footer-url: 額外頁腳內容對應的鏈接
+    ui-index: UI HTML 索引位置。
+    ui-issues: 使用一個 url 地址發送新的 'File an Issue' 報告，而不是將用戶發送到 Github Issue 頁面。
     ui-offline-preferred: Controls whether UI assets are served locally by the server container or from the remote URL defined in the ui-index and ui-dashboard-index settings.
-    ui-pl: 公司名稱專用標籤。
-    ui-session-logout-minutes: 用户超过配置时间没有任何操作将自动注销(以分钟为单位)。
+    ui-pl: 企業名稱專用標籤
+    ui-session-logout-minutes: 用戶超過配置時間沒有任何操作將自動註銷(以分鐘為單位)。
   header: 高級設置
   hide: 隱藏
   show: 顯示
-  showLabel: 我已確認修改高級設置可能導致{appName}出問題。
-  subtext: 通常情況下用戶不需要修改以下設置。請謹慎操作，不正確的值可能導致{appName}無法正常運行。修改默認設置後將以<b>粗體</b>顯示設定名。
+  showLabel: 我已確認修改高級設置可能導致 {appName} 出問題。
+  subtext: 通常情況下用戶不需要修改以下設置。請謹慎操作，不正確的值可能導致 {appName} 無法正常運行。修改默認設置後將以 <b>粗體</b> 顯示配置名。
 drainNode:
-  action: 驱散
+  action: 驅散
   aggressive:
-    helpText: <b>永久删除</b> <ul class=m-0><li>独立 Pods 和它们的数据</li><li>配置了 Empty Dir 卷的 Pods 和它们的数据</li></ul>
-    label: 强制
-  deleteLocalData: 删除本地数据
-  force: 强制
+    helpText: <b>永久刪除</b> <ul class=m-0><li>獨立 Pods 和它們的數據</li><li>配置了 Empty Dir 卷的 Pods 和它們的數據</li></ul>
+    label: 強制
+  deleteLocalData: 刪除本地數據
+  force: 強制
   gracePeriod:
-    custom: 自定义延时终止时间
-    default: 使用每个 Pod 中设置的默认延时时间
+    custom: 自定義延時終止時間
+    default: 使用每個 Pod 中設置的默認延時時間
     placeholder: "例如: 30"
-    title: "Pod 终止延时时间: "
+    title: "Pod 終止延時時間: "
     view:
-      custom: 忽略默认值并给每个 pod 设置 {seconds} 秒
+      custom: 忽略默認值並給每個 pod 設置 {seconds} 秒
   safe:
-    helpText: 如果节点拥有独立的 Pod 或临时的数据，它将被隔离但不会被驱散。
+    helpText: 如果節點擁有獨立的 Pod 或臨時的數據，它將被隔離但不會被驅散。
     label: 安全
   timeout:
-    custom: "自定义超时时间: "
-    default: 一直重试
+    custom: "自定義超時時間: "
+    default: 一直重試
     placeholder: "例如: 60"
-    title: "驱散超时时间: "
+    title: "驅散超時時間: "
     view:
-      custom: "{seconds} 秒后放弃"
-  titleMultiple: 驱散 {count} 个节点
-  titleOne: "驱散节点: \"{name}\""
+      custom: "{seconds} 秒後放棄"
+  titleMultiple: 驅散 {count} 個節點
+  titleOne: "驅散節點: \"{name}\""
 editAccount:
   form:
     confirmPassword:
       label: 確認密碼
     description:
       label: 描述
-      placeholder: "例如: John Smith的帳號"
+      placeholder: "例如: John Smith 的賬號"
     identity:
       label: 標識
     kind:
-      admin: "管理員: 完全訪問管理所有叢集中的所有內容"
-      label: 帳號類型
+      admin: "管理員: 完全訪問管理所有集群中的所有內容"
+      label: 賬號類型
       user: 普通用戶
     name:
       label: 顯示名稱
@@ -590,121 +590,121 @@ editAccount:
       label: 當前密碼
     publicValue:
       label: 用戶名
-  title: 編輯帳號
+  title: 編輯賬號
 editYamlPipeline:
   branch:
     label: 分支
-  title: 查看/編輯YAML{name}
+  title: 查看/編輯 YAML {name}
 etcd:
   failedProposals:
     label: 失敗提議次數
   hasLeader:
-    label: Etcd是否有Leader
+    label: Etcd 是否有 Leader
   leaderChange:
-    label: Leader變更次數
+    label: Leader 變更次數
 formAnnotations:
-  addActionLabel: 新增註釋
-  detail: 設定容器的注釋(鍵/值元數據)。
+  addActionLabel: 添加註釋
+  detail: 配置容器的註釋(鍵/值元數據)。
   errors:
-    invalidJSON: JSON注釋格式無效。
-    topLevelValueInvalid: JSON注釋頂級值必須是對象。
-  title: 注釋
+    invalidJSON: JSON 註釋格式無效。
+    topLevelValueInvalid: JSON 註釋頂級值必須是對象。
+  title: 註釋
 formGlobalRoles:
-  description: 控制用戶管理整個{appName}安裝的訪問權限。
-  loginError: 用戶沒有登錄權限。 Administrator, Standard User或User-Base提供登錄權限。
+  description: 控制用戶管理整個 {appName} 安裝的訪問權限。
+  loginError: 用戶沒有登錄權限。管理員、標準用戶或基礎用戶提供登錄權限。
   mode:
     admin:
-      detail: 管理員完全控制所有叢集中的全部安裝和所有資源
+      detail: 管理員完全控制所有集群中的全部安裝和所有資源。
       label: 管理員
     custom:
-      detail: 為這個用戶選擇獨立的權限
-      label: 自定義
+      detail: 定義更細粒度權限的附加角色。
+      label: 內置
     readOnlyAdmin:
-      detail: 只讀管理員可以訪問所有下遊集群中的所有資源，但不能訪問local集群
+      detail: 只讀管理員可以訪問所有下游集群中的所有資源，但不能訪問local集群
       label: 只讀管理員
     restrictedAdmin:
-      detail: 受限制的管理员可以完全控制所有下游集群中的所有资源，但不能访问 local 集群。
-      label: 受限管理员
+      detail: 受限制的管理員可以完全控制所有下游集群中的所有資源，但不能訪問 local 集群。
+      label: 受限管理員
     user:
-      detail: 標準用戶可以創建新的叢集並管理他們已被授權訪問的叢集和專案。
+      detail: 標準用戶可以創建新的集群並管理他們已被授權訪問的集群和項目。
       label: 標準用戶
     userBase:
-      detail: User-Base 用戶只有登錄訪問權限。
-      label: User-Base
+      detail: 基礎用戶只有登錄訪問權限。
+      label: 基礎用戶
     userCreated:
-      detail: 非Rancher創建的角色。
+      detail: 非 Rancher 創建的角色。
       label: 自定義
       noDescription: 沒有提供描述。
   role:
     authn-manage:
-      detail: 允许用户启用，配置和禁用所有身份验证程序设置。
-      label: 配置身份验证
+      detail: 允許用戶啟用，配置和禁用所有身份驗證程序設置。
+      label: 配置身份驗證
     base:
-      label: 登录访问
+      label: 登錄訪問
     catalogs-manage:
-      detail: 允许用户添加，编辑和删除应用商店。
-      label: 配置应用商店
+      detail: 允許用戶添加，編輯和刪除應用商店。
+      label: 配置應用商店
     catalogs-use:
-      detail: 允许用户查看和应用商店中的模板。标准用户默认具有此权限。
-      label: 使用应用商店
+      detail: 允許用戶查看和應用商店中的模板。標準用戶默認具有此權限。
+      label: 使用應用商店
     clusters-create:
-      detail: 允许用户创建新的集群并成为它们的所有者，标准用户默认具有此权限。
-      label: 创建新的集群
+      detail: 允許用戶創建新的集群併成為它們的所有者，標準用戶默認具有此權限。
+      label: 創建新的集群
     clusters-manage:
-      detail: 允许用户管理全部集群，即使这个用户不是被管理集群中的成员也可以管理。
+      detail: 允許用戶管理全部集群，即使這個用戶不是被管理集群中的成員也可以管理。
       label: 管理所有集群
     clusterscans-manage:
-      detail: 允许用户启动新的并管理 CIS 集群扫描。
-      label: 管理 CIS 集群扫描
+      detail: 允許用戶啟動新的並管理 CIS 集群掃描。
+      label: 管理 CIS 集群掃描
     clustertemplates-create:
-      detail: 允许用户创建新的 RKE 集群模板并成为它们的所有者。
-      label: 创建新的 RKE 集群模板
+      detail: 允許用戶創建新的 RKE 集群模板併成為它們的所有者。
+      label: 創建新的 RKE 集群模板
     features-manage:
-      detail: 允许用户通过特性标志设置启用和禁用自定义特性。
-      label: 配置功能标志
+      detail: 允許用戶通過特性標誌設置啟用和禁用自定義特性。
+      label: 配置功能標誌
     kontainerdrivers-manage:
-      detail: 允许用户创建新的集群驱动程序并成为它们的所有者。
-      label: 创建新的集群驱动程序
+      detail: 允許用戶創建新的集群驅動程序併成為它們的所有者。
+      label: 創建新的集群驅動程序
     nodedrivers-manage:
-      detail: 允许用户启用，配置和移除所有主机驱动设置。
-      label: 配置主机驱动
+      detail: 允許用戶啟用，配置和移除所有主機驅動設置。
+      label: 配置主機驅動
     nodetemplates-manage:
-      detail: 允许用户配置，编辑和删除主机模板。
-      label: 管理主机模板
+      detail: 允許用戶配置，編輯和刪除主機模板。
+      label: 管理主機模板
     nodetemplates-use:
-      detail: 允许用户使用现有的主机模板部署新的主机。
-      label: 使用主机模板
+      detail: 允許用戶使用現有的主機模板部署新的主機。
+      label: 使用主機模板
     podsecuritypolicytemplates-manage:
-      detail: 允许用户定义、编辑和删除 PSPs。
+      detail: 允許用戶定義、編輯和刪除 PSPs。
       label: 管理 Pod 安全策略 (PSPs)
     roles-manage:
-      detail: 允许用户配置，编辑和删除角色。
+      detail: 允許用戶配置，編輯和刪除角色。
       label: 管理角色
     settings-manage:
-      detail: 允许用户管理 Rancher 设置。
-      label: 管理设置
+      detail: 允許用戶管理 Rancher 設置。
+      label: 管理設置
     users-manage:
-      detail: 允许用户为所有用户创建，删除和设置密码。
-      label: 管理用户
+      detail: 允許用戶為所有用戶創建，刪除和設置密碼。
+      label: 管理用戶
     view-rancher-metrics:
-      detail: 允许用户通过 API 查看指标。
-      label: 查看 Rancher 指标
-  title: 全域權限
+      detail: 允許用戶通過 API 查看指標。
+      label: 查看 Rancher 指標
+  title: 全局角色
 formHostPortsPodSecurityPolicy:
-  detail: 使用主機埠
+  detail: 使用主機端口
   port:
-    addLabel: 新增埠範圍
+    addLabel: 添加端口範圍
     max:
       label: 最大值
       placeholder: "例如: 7000"
     min:
       label: 最小值
       placeholder: "例如: 6000"
-  title: 主機埠策略
+  title: 主機端口策略
 formKeyToPath:
-  addAction: 新增專案
+  addAction: 添加項目
   default: 所有鍵
-  header: 專案
+  header: 項目
   key:
     label: 鍵
     placeholder: "例如: username"
@@ -738,9 +738,9 @@ fromSecret:
   valueLabel: 值
   valuePlaceholder: "例如: bar"
 hpaPage:
-  noData: 沒有配置HPA規則
-  noMatch: 沒有匹配當前搜索的HPA
-  notSupported: 叢集中autoscaling/v2beta2 API不可用。
+  noData: 沒有配置 HPA 規則
+  noMatch: 沒有匹配當前搜索的 HPA
+  notSupported: 集群中 autoscaling/v2beta2 API 不可用。
   table:
     lastScaleTime:
       label: 上次擴縮容時間
@@ -753,19 +753,19 @@ hpaPage:
 inputPassword:
   buttonText: 生成
 k3sClusterInfo:
-  detail: 自定义 K3S 集群选项
-  drainServerNodes: 升级前驱散 Control Plane 节点
-  drainWorkerNodes: 升级前驱散 Worker 节点
+  detail: 自定義 K3S 集群選項
+  drainServerNodes: 升級前驅散 Control Plane 節點
+  drainWorkerNodes: 升級前驅散 Worker 節點
   nodeInfo:
-    datail: 附加的 K3S 主节点详细信息
-    detail: K3S 主节点参数和环境变量的只读视图。
+    datail: 附加的 K3S 主節點詳細信息
+    detail: K3S 主節點參數和環境變量的只讀視圖。
     label: Control Plane Node
-    selectPrompt: 选择节点
-    title: K3s 节点信息
-  serverConcurrency: 同时升级几个 Control Plane 节点
-  title: K3S 选项
-  workerConcurrency: 同时升级几个 Worker 节点
-languageContribute: 幫助翻譯Rancher
+    selectPrompt: 選擇節點
+    title: K3s 節點信息
+  serverConcurrency: 同時升級幾個 Control Plane 節點
+  title: K3S 選項
+  workerConcurrency: 同時升級幾個 Worker 節點
+languageContribute: 幫助翻譯 Rancher
 modalConfirmDeactivate:
   buttons:
     default:
@@ -778,24 +778,24 @@ modalConfirmDeactivate:
       button: 停用
       message: 停用環境
   cancel: 取消
-  clusterDriver: 您將不能再使用此驅動程序編輯叢集配置。提供程序中的資源不會自動刪除。
-  header: 是否確認要
+  clusterDriver: 您將不能再使用此驅動程序編輯集群配置。提供程序中的資源不會自動刪除。
+  header: 是否確認？
   nodeDriver: 您將無法在使用此驅動程序的節點池中創建、替換或刪除節點。
-  protip: 高級技巧:在點擊{isServiceButton}時按住{key}鍵以跳過確認操作
+  protip: "高級技巧: 在點擊 {isServiceButton} 時按住 {key} 鍵以跳過確認操作。"
 modalConfirmYaml2Form:
   confirm: 確認
-  header: 您將從YAML編輯切換到表單編輯。
+  header: 您將從 YAML 編輯切換到表單編輯。
   helpText: 請注意，此列表並不包括所有的答案，您應該在保存前校驗您的配置。當切換回表單編輯時，可能會發生數據丟失，以下字段已被標識為將丟失的字段。在點擊確認之前，請確認丟失的字段不會受影響。
 modalDownLoadFileComponent:
   container: 容器
-  filePath: 文件路径
+  filePath: 文件路徑
   noSuchFile: 文件不存在
-  notice: 下载超过 600MiB 的文件有可能导致浏览器崩溃
-  placeholder: 请输入容器中的文件路径
-  serverError: 服务端发生错误
-  title: 容器文件下载
-  validateContainer: 请选择容器
-  validatePath: 请输入要下载文件的路径
+  notice: 下載超過 600MiB 的文件有可能導致瀏覽器崩潰
+  placeholder: 請輸入容器中的文件路徑
+  serverError: 服務端發生錯誤
+  title: 容器文件下載
+  validateContainer: 請選擇容器
+  validatePath: 請輸入要下載文件的路徑
 modalEditSetting:
   name:
     label: 名稱
@@ -804,35 +804,35 @@ modalEditSetting:
   title: 編輯高級設置
   value:
     label: 值
-    prompt: 選擇一個值...
+    prompt: 選擇值...
 modalImport:
   detail:
-    cluster1: 如果一個資源指定了命名空間，那麼會自動創建命名空間，但是不會自動加入到專案中
-    cluster2: 如果一個資源沒有指定一個命名空間，它將被匯入到default中
-    cluster3: "該模式還支持沒有命名空間的資源，例如: RoleTemplates"
-    namespace1: 所有資源將被匯入到選定的命名空間中
-    namespace2: 如果資源指定了不同的命名空間，則匯入將失敗
-    project1: 不指定命名空間的資源將被匯入到選定的默認命名空間中
-    project2: 如果一個資源指定了一個不存在的命名空間，此命名空間將被創建並新增到這個專案中
+    cluster1: 如果資源指定了命名空間，那麼會自動創建命名空間，但是不會自動加入到項目中。
+    cluster2: 如果資源沒有指定命名空間，它將被導入到 default 命名空間中。
+    cluster3: "該模式還支持沒有命名空間的資源，例如: RoleTemplates。"
+    namespace1: 所有資源將被導入到選定的命名空間中。
+    namespace2: 如果資源指定了不同的命名空間，則導入將失敗。
+    project1: 不指定命名空間的資源將被導入到選定的默認命名空間中。
+    project2: 如果資源指定了不存在的命名空間，此命名空間將被創建並添加到這個項目中。
   mode:
-    cluster: "叢集: 直接將資源匯入到此叢集中"
-    label: 匯入模式
-    namespace: "命名空間: 將資源匯入特定的命名空間"
-    project: "專案: 將資源匯入此專案"
-  title: 匯入YAML
+    cluster: "集群: 將資源導入到此集群中"
+    label: 導入模式
+    namespace: "命名空間: 將資源導入指定的命名空間"
+    project: "項目: 將資源導入此項目"
+  title: 導入 YAML
 modalResizePVC:
   currentValue:
-    label: 当前大小
-  protip: 卷扩容和调整大小是高级用例。强烈建议您阅读并充分了解存储提供商的要求。此外，在继续之前，您应该有一个灾难恢复计划。
+    label: 當前大小
+  protip: 卷擴容和調整大小是高級用例。強烈建議您閱讀並充分了解存儲提供商的要求。此外，在繼續之前，您應該有一個災難恢復計劃。
   requestedCapacity:
-    help: 更新PVCs容量可能不会在保存时立即反映出来。 卷扩容流程因storage class，PV Provisioner以及是否有任何工作负载附加到PVC而有所不同。在更改卷容量之前，强烈建议您访问<a href='https://rancher.com/docs/rancher/v2.x/en/cluster-admin/volumes-and-storage/' target='_blank' rel='nofollow noreferrer'>Rancher 存储文档</a> 和 <a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/' target='_blank' rel='nofollow noreferrer'>Kubernetes 持久卷文档</a>。
-    label: 存储
-  title: "扩容 PVC: {name}"
+    help: 更新PVCs容量可能不會在保存時立即反映出來。 卷擴容流程因storage class，PV Provisioner以及是否有任何工作負載附加到PVC而有所不同。在更改卷容量之前，強烈建議您訪問<a href='https://rancher.com/docs/rancher/v2.x/en/cluster-admin/volumes-and-storage/' target='_blank' rel='nofollow noreferrer'>Rancher 存儲文檔</a> 和 <a href='https://kubernetes.io/docs/concepts/storage/persistent-volumes/' target='_blank' rel='nofollow noreferrer'>Kubernetes 持久卷文檔</a>。
+    label: 存儲
+  title: "擴容 PVC: {name}"
 modalSaveRkeTemplate:
-  name: 叢集模板名稱
-  revName: 叢集模板修訂名稱
-  subtitle: 從當前叢集配置創建一個新的RKE叢集模板和初始修訂。這將修改當前叢集，設置叢集以使用新創建的叢集模板和修訂
-  title: 通過{clusterName}創建RKE模板
+  name: 集群模板名稱
+  revName: 集群模板修訂名稱
+  subtitle: 從當前集群配置創建一個新的 RKE 集群模板和初始修訂。這將修改當前集群，設置集群以使用新創建的集群模板和修訂。
+  title: 通過 {clusterName} 創建 RKE 模板
 newPipelineStep:
   header:
     create: 添加步驟
@@ -862,23 +862,23 @@ newPipelineStep:
         keyPlaceholder: IMAGE_TAG
       errors:
         path:
-          required: 請輸入YAML路徑。
-      label: 部署YAML
-      yaml: YAML路徑
+          required: 請輸入 YAML 路徑。
+      label: 部署 YAML
+      yaml: YAML 路徑
     build:
       buildContext: 構建上下文
-      dockerFilePath: Dockerfile路徑
+      dockerFilePath: Dockerfile 路徑
       errors:
         dockerfilePath:
-          required: 請輸入Dockerfile的路徑。
+          required: 請輸入 Dockerfile 的路徑。
         registry:
           required: 請選擇鏡像倉庫。
         tag:
           required: 請輸入鏡像名稱
       imageName:
         placeholder: "例如: example/app:v1"
-      label: 構建並發布鏡像
-      noRegistry: 沒有配置鏡像倉庫。您可以點擊<a href="{route}" target="_blank" rel="nofollow noreferrer">這裡</a>配置鏡像倉庫。
+      label: 構建併發布鏡像
+      noRegistry: 沒有配置鏡像倉庫。您可以點擊 <a href="{route}" target="_blank" rel="nofollow noreferrer">此處</a> 配置鏡像倉庫。
       pushRemote: 推送鏡像到遠端鏡像倉庫。
     enableBranch: 設置流水線
     env: 環境變量
@@ -886,10 +886,10 @@ newPipelineStep:
     label: 步驟類型
     publishCatalog:
       auth:
-        http: 密文中的<code>USERNAME</code>和<code>PASSWORD</code>將被作為用戶名和密碼。
-        ssh: 密文中的<code>DEPLOY_KEY</code>將被作為Deploy Key
+        http: 密文中的 <code>USERNAME</code> 和 <code>PASSWORD</code> 將被作為用戶名和密碼。
+        ssh: 密文中的 <code>DEPLOY_KEY</code> 將被作為 Deploy Key。
       catalogTemplate:
-        helpText: 所發布應用模版的名稱。
+        helpText: 所發佈應用模版的名稱。
         label: 應用模版名稱
         placeholder: "例如: wordpress"
       gitAuthor:
@@ -897,42 +897,42 @@ newPipelineStep:
         label: 作者
         placeholder: "例如: user"
       gitBranch:
-        helpText: 把應用模版發佈到這個Git分支。
-        label: Git分支
+        helpText: 把應用模版發佈到這個 Git 分支。
+        label: Git 分支
         placeholder: "例如: dev"
       gitEmail:
         helpText: 提交信息中所包含的作者郵箱信息。
         label: 作者郵箱
         placeholder: user@example.com
       gitUrl:
-        error: Git地址必須以http或https開頭。
-        helpText: 把應用模版發佈到這個Git地址。
-        label: Git地址
+        error: Git 地址必須以 http 或 https 開頭。
+        helpText: 把應用模版發佈到這個 Git 地址。
+        label: Git 地址
         placeholder:
           http: "例如: https://github.com/myrepo/charts.git"
           ssh: "例如: git@github.com:myrepo/charts.git"
-      label: 發布應用模版
+      label: 發佈應用模版
       path:
-        helpText: "代碼庫中<code style=\"padding: 2px 5px;\">Chart.yaml</code>所在的目錄"
-        label: Chart目錄
+        helpText: "代碼庫中 <code style=\"padding: 2px 5px;\">Chart.yaml</code> 所在的目錄。"
+        label: Chart 目錄
         placeholder: "例如: ./charts/wordpress/latest"
       secret:
         label: 密文
-        missingKey: 所選的密文沒有{key}字段.
-      stepName: 發布應用模版
+        missingKey: 所選的密文沒有 {key} 字段.
+      stepName: 發佈應用模版
       targets:
-        http: 通過HTTP協議發佈到Git
+        http: 通過 HTTP(S) 協議發佈到 Git
         label: 協議
-        ssh: 通過SSH協議發佈到Git
+        ssh: 通過 SSH 協議發佈到 Git
       version:
-        helpText: 所發布應用模版的版本。
+        helpText: 所發佈應用模版的版本。
         label: 應用模版版本
         placeholder: "例如: latest"
     scm:
       add: 選擇代碼庫
       demoGroup: 示例代碼庫
-      noWebhook: 沒有設置代碼庫Webhook的權限
-      noYaml: 代碼庫中沒有發現<code>.rancher-pipeline.yml</code>文件。
+      noWebhook: 沒有設置代碼庫 webhooks 的權限
+      noYaml: 代碼庫中沒有發現 <code>.rancher-pipeline.yml</code> 文件。
       refresh: 刷新代碼庫
       selectRepository: 代碼庫
       trigger: 流水線觸發
@@ -940,11 +940,11 @@ newPipelineStep:
     task:
       command:
         label: 命令
-        placeholder: EntryPoint的參數
-      customEntryPoint: 自定義EntryPoint
+        placeholder: EntryPoint 的參數
+      customEntryPoint: 自定義 EntryPoint
       entryPoint:
         label: EntryPoint
-        placeholder: 該項留空將使用默認的EntryPoint
+        placeholder: 該項留空將使用默認的 EntryPoint
       errors:
         image:
           required: 請輸入基礎鏡像。
@@ -953,7 +953,7 @@ newPipelineStep:
       label: 運行腳本
       privileged:
         label: 以特權模式運行該步驟。
-      secret: 從密文中註入環境變量
+      secret: 從密文中注入環境變量
       shell:
         label: 腳本
       shellScript: 腳本
@@ -991,78 +991,78 @@ pipelineSelector:
     value: 值
   tag: Tag
   title:
-    exclude: 當滿足條件時不運行該{type}
-    include: 當滿足條件時運行該{type}
+    exclude: 當滿足條件時不運行該 {type}
+    include: 當滿足條件時運行該 {type}
 pipelineSetting:
   title: "流水線設置: \"{name}\""
 projectsPage:
-  addProject: 新增專案
+  addProject: 添加項目
   annotationsDetail: 為項目配置標籤和註釋。
   containerDefaultLimit:
-    detail: 配置默認情况下容器可以消耗多少資源
+    detail: 配置默認情況下容器可以消耗多少資源.
     title: 容器默認限制
   created:
     label: 創建時間
-  editProject: 編輯專案
+  editProject: 編輯項目
   groups:
-    namespaces: 專案分組/命名空間分組
+    namespaces: 項目分組/命名空間分組
     none: 命名空間列表
-  header: 專案/命名空間
+  header: 項目/命名空間列表
   headerNS: 命名空間
   members:
-    addGroup: 新增組
-    addMember: 新增成員
-    addServiceAccount: 新增服務帳戶
-    addUser: 新增用戶
+    addGroup: 添加組
+    addMember: 添加成員
+    addServiceAccount: 添加服務帳戶
+    addUser: 添加用戶
     customRoles: 自定義角色
-    detail: 設定可以訪問該專案中資源的用戶以及用戶權限。
+    detail: 配置可以訪問該項目中資源的用戶以及用戶權限。
     errors:
-      memberNameReq: 成員名稱是必須的
-      memberRoleReq: 成員角色是必須的
-      nameInExists: 名稱已經存在，請使用新的專案名稱。
+      memberNameReq: 成員名稱必須設置。
+      memberRoleReq: 成員角色必須設置。
+      nameInExists: 名稱已經存在，請使用新的項目名稱。
       nameReq: 名稱(必填)
-    group: 組
+    group: 用戶組
     kind:
       label: 類型
     labelText: 成員
     multipleRoles: 多個角色
     name:
       label: 名稱
-    noAddUser: 您是唯一的活動註冊用戶
+    noAddUser: 您是唯一的活動註冊用戶.
     role:
       label: 角色
-    serviceaccount: 服務帳號
+    serviceaccount: 服務賬號
     title: 成員
     user: 用戶
   name:
-    label: 專案名稱
+    label: 項目名稱
     placeholder: "例如: lab"
-  noData: 此叢集沒有定義任何專案
-  noMatch: 沒有與當前搜索匹配的專案
+  noData: 此集群沒有配置任何項目。
+  noMatch: 沒有與當前搜索匹配的項目。
   ns:
     label: 命名空間
     placeholder: "例如: lab"
   psp:
-    label: Pod安全策略
+    label: Pod 安全策略
   quota:
     label: 資源配額
   resourceQuota:
-    detail: 設定整個專案可以使用多少資源。
+    detail: 配置整個項目可以使用多少資源。
     title: 資源配額
 rolesPage:
-  addRole: 新增角色
+  addRole: 添加角色
   editRole: 編輯角色
   headers:
-    cluster: 叢集
-    global: 全域
+    cluster: 集群
+    global: 全局
     project: 項目
   index:
     errors:
-      inherited: "角色{displayName}被: {roleNames}繼承"
-    localLink: 新增角色
+      inherited: "角色 {displayName} 被: {roleNames} 繼承"
+    localLink: 添加角色
     table:
       builtin: 內置
-      cluster: 新叢集默認角色
+      cluster: 新集群默認角色
       created: 創建時間
       enabled: 已啟用
       global: 新用戶默認角色
@@ -1070,68 +1070,68 @@ rolesPage:
       name: 名稱
       noData: 目前還沒有角色
       noMatch: 沒有與當前搜索匹配的角色
-      project: 新專案默認角色
+      project: 新項目默認角色
       showDefaults: 僅顯示默認角色
       subjectKind: 類型
       template: 模板
-    warning: 不存在在用戶首次登入時可能產生意外後果的默認角色。請將其中一個角色設置為新用戶默認值。
+    warning: 對於第三方登錄認證的用戶，需要配置一個角色作為新用戶首次登錄時默認的角色。當前環境未指定新用戶默認值，請將其中一個角色設置為新用戶默認值。
   inherit:
     detail: 繼承其他角色的所有權限
-    title: 繼承角色
+    title: 角色繼承
   new:
     errors:
-      memberReq: 成員是必需的
-      nameInExists: 名稱是已經存在， 請使用一個新的角色名稱。
-      nameReq: 名稱(必填)
+      memberReq: 成員必需設置
+      nameInExists: 名稱已存在，請使用新的角色名稱。
+      nameReq: 名稱 (必填)
       noSelectedRoles: 請為該用戶至少選擇一個角色。
-      roleAlreadyExists: 用戶已經具有"{key}"角色。
-      roleTemplate: 角色模板是必需的
-      ruleResourceReq: 資源是規則所必需的
+      roleAlreadyExists: 用戶已經具有 "{key}" 角色。
+      roleTemplate: 角色模板必須選擇
+      ruleResourceReq: 資源必須選擇
     form:
       allow:
-        addAction: 新增資源
-        apiGroups: API 组
+        addAction: 添加資源
+        apiGroups: API 組
         create: 創建
         delete: 刪除
         deletecollection: 刪除集合
         get: 獲取
         labelText: 允許
         list: 列表
-        nonResourceUrl: 非資源url(僅路徑)
-        patch: 修補程式
+        nonResourceUrl: 非資源 URLs (僅路徑)
+        patch: 修補程序
         resource: 資源
         update: 更新
         watch: 觀察
       context:
-        detail: 此角色的適用範圍適合在此展示
+        detail: 此角色的適用範圍適合在此展示。
         labelText: 上下文
       default:
-        cluster: 新叢集默認角色
+        cluster: 新集群默認角色
         disabled: 否
         enabled:
-          cluster: "是: 新叢集的默認角色"
+          cluster: "是: 新集群的默認角色"
           global: "是: 新用戶的默認角色"
-          project: "是: 新專案的默認角色"
+          project: "是: 新項目的默認角色"
         global: 新用戶默認角色
-        project: 新專案默認角色
+        project: 新項目默認角色
       locked:
         detail: 對已經綁定的用戶沒有影響
         disabled: 否
         enabled: "是: 不允許用戶再綁定此角色，已綁定的用戶不受影響。"
-        labelText: 已鎖定
+        labelText: 鎖定
       name:
-        labelText: 姓名
+        labelText: 名稱
         placeholder: "例如: 開發者"
       otherRole:
-        addAction: 新增角色
+        addAction: 添加角色
         labelText: 包含其他角色
         role: 角色
       policy:
-        addAction: 新增策略
+        addAction: 添加策略
         policy: 策略
   resources:
-    detail: 對Kubernetes資源的具體操作進行授權。
-    title: 授權資源
+    detail: 對 Kubernetes 資源的具體操作進行授權。
+    title: 資源授權
   saveEdit: 編輯
   saveNew: 創建
   title: 角色
@@ -1142,7 +1142,7 @@ schema:
   inputCertificate:
     prompt: 選擇證書...
   inputConfigMap:
-    prompt: 選擇ConfigMap
+    prompt: 選擇配置映射
   inputContainer:
     prompt: 選擇容器...
   inputDnsRecord:
@@ -1152,8 +1152,8 @@ schema:
   inputHost:
     label: 選擇主機...
   inputMacvlansubnet:
-    notSupport: 当前集群不支持 Macvlansubnet
-    prompt: 请选择 Macvlansubnet...
+    notSupport: 當前集群不支持 Macvlansubnet
+    prompt: 請選擇 Macvlansubnet...
   inputSecret:
     certificate: 選擇證書...
     secret: 選擇密文...
